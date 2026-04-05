@@ -1,0 +1,168 @@
+body {
+	font-family:Tahoma;
+	margin:auto;
+	width:45%;
+	text-align:justify;
+	text-justify:inter-word;
+	line-height:1.3em;
+}
+
+#center {
+	text-align:center;
+}
+
+header {
+	margin-bottom:2em;
+	text-align:left;
+	font-family:Georgia;
+}
+
+footer {
+	margin-top:3em;
+	text-align:right;
+	margin-bottom:2em;
+	font-family:Georgia;
+}
+
+nav {
+	line-height:1.3em;
+}
+
+h1 {
+	background-color:#EEEEEE;
+	margin-top:1.5em;
+	font-family:Georgia;
+	font-size:1.5em;
+	text-align:center;
+}
+
+h4 {
+	margin: 0px 0px 0.2em 0px;
+	font-family:Georgia;
+	font-size:1.1em;
+	line-height:1.1em;
+}
+
+.solution {
+	display:none;
+}
+
+h4 > button {
+	float:right;
+	background-color:#990000;
+	color:#FFFFFF;
+	border-radius:2px;
+	border-style:none;
+	cursor:pointer;
+}
+
+h4 > button:hover,
+h4 > button:focus  {
+	background-color:#d90000;
+}
+
+figure {
+	text-align:center;
+	margin-top:1.5em;
+	margin-bottom:0em;
+	display:block;
+}
+
+figure > img {
+	max-width:70%;
+}
+
+figurecaption {
+	font-style:italic;
+	font-size:0.8em;
+	text-align:center;
+	margin:auto;
+	display:block;
+	margin-bottom:1em;
+}
+
+example {
+	display:block;
+	background-color:#EEEEEE;
+	padding:6px;
+	margin: 1em 0px 1em 0px
+}
+
+term {
+	font-family:Georgia;
+	font-weight:bold;
+}
+
+eq {
+	text-align:center;
+	display:block;
+	line-height:2.2em;
+	margin: 0em 0px 0.5em 0px;
+}
+
+a {
+	text-decoration:none;
+}
+
+a:visited {
+	color:#990000;
+}
+
+a:link {
+	color:#990000;
+}
+
+a:hover,
+a:focus {
+	color:#d90000;
+}
+
+p {
+	margin: 0.5em 0 0.5em 0;
+}
+
+/* for tooltips */
+
+intext:hover,
+intext:focus {
+	color:#d90000
+}
+
+intext {
+	color:#990000;
+	text-decoration: underline dotted;
+	cursor: help;
+ 	position:relative
+}
+
+intext[tooltip]:hover::after,
+intext[tooltip]:focus::after {
+  content: attr(tooltip);
+  position: absolute;
+  left: 0;
+  top: 1.5em;
+  min-width: 8em;
+  text-align:left;
+  border: 2px #b90000 solid;
+  border-radius: 3px;
+  background-color: #fafafa;
+  padding: 0.2em;
+  color: #d90000;
+  font-size: 14px;
+  z-index: 1;
+}
+
+
+
+@media only screen and (max-width: 985px) {
+	body {
+		width:92%;
+		font-size:0.95em;
+		line-height: 1.2em;
+	}
+	
+	figure > img {
+		width:100%;
+		max-width:100%;
+	}
+}

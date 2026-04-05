@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kinematics - quantities</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Quantities of Motion</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<p>
+When describing a particle's motion, it is helpful to note that motion is just the change in a particle's position over a certain time.
+With this, we note the first quantity of use which is
+</p>
+
+<term>Position (<math><mover accent="true"><mrow><mi>r</mi></mrow><mo>&#x2192</mo></mover></math>)</term> – the place wherein a particle is in space
+
+<p>
+The symbol for position may vary based on the problem.
+Since there is a change in the particle’s position, it is helpful to quantify this as well. There are two ways to quantify this change.
+</p>
+
+<term>Displacement (<math><mi>&#x0394</mi><mi>r</mi></math>)</term>	– the change in position of a particle in its motion<br>
+<term>Distance (<math><mi>s</mi></math>)</term>	– the length of the path of a particle in its motion
+
+<p>
+Distance and displacement have similar definitions yet differ immensely. <br>
+Distance measures the <i>path</i> taken by the particle, which means it goes through the entire path, while displacement measures the <i>shortest distance</i> between the starting and ending position, which is a straight line.
+</p>
+
+<figure><img src="images/quan1.svg"></figure>
+<figurecaption>The displacement between the two points is much smaller than the distance travelled.</figurecaption>
+
+<p>
+Furthermore, distance is a <intext tabindex="0" tooltip="A quantity without direction">scalar,</intext> while displacement is a <intext tabindex="0" tooltip="A quantity with magnitude and direction">vector.</intext> One other property is that distance will always be greater than or equal to the displacement.
+</p>
+
+<example>
+<h4>Question 1</h4>
+(LSM CQ3.5) Does a car’s odometer measure distance traveled or displacement?<br><br>
+<h4>Answer<button onclick="toggle(this,'sol1')">v</button></h4>
+<section class="solution" id="sol1">
+A car's odometer measures <i>distance</i> travelled. If it measured displacement, it would be zero if you parked your car at the garage!
+</section>
+</example>
+
+<example>
+<h4>Exercise 1</h4>
+(HRK E2.11) A woman walks 250 m in the direction 35° east of north, then 170 m directly east. Compare the magnitude of her displacement with the distance she walked.<br><br>
+<h4>Solution<button onclick="toggle(this,'sol2')">v</button></h4>
+<section class="solution" id="sol2">
+The diagram can be drawn as below, with the original position at the origin.
+<figure><img src="images/quan2.svg"></figure>
+<figurecaption>The movement of the woman.</figurecaption>
+
+<p>
+It can be seen that the displacement is less than the distance. The distance is simply the sum of the lengths the woman walked, which is <math><mi>250m + 170m = 420m</mi></math>.<br><br>
+The displacement on the other hand can be calculated via the pythagorean theorem. To get the horizontal and vertical components of the 35° walk, we use trigonometry.
+</p>
+
+<eq>
+<math><mrow><mi>&#x0394</mi><mi>r</mi><mo>=</mo><mrow><msqrt><mrow><mrow><mo>[250</mo><mi>cos(35°)]&#x00B2</mi></mrow></mrow><mo>+</mo><mrow><mo>[250</mo><mi>sin(35°)</mi><mo>+</mo><mi>170]&#x00B2</mi></mrow></mrow></mrow></msqrt></mrow></mrow></math><br>
+<math><mrow><mi>&#x0394</mi><mi>r</mi><mo>&#x2248</mo><mi>370m</mi></mrow></math>
+</eq>
+
+This shows that the distance is greater than the displacement of the woman.
+</section>
+</example>
+
+<p>
+Recall that we noted that motion is the change of position over a certain time. With this, it is a necessity that we introduce time to quantify how slow or fast an object is moving.
+With this, we introduce two new quantities again.
+</p>
+
+<term>Velocity (<math><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math>)</term>	– the rate of change of position over time<br>
+<term>Speed (<math><mi>v</mi></math>)</term>	– the amount of distance travelled over time
+
+<p>
+To calculate the average velocity of a particle, just take the displacement and divide it by the time it took to travel that displacement.
+</p>
+
+<eq>
+<math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><mfrac><mrow><mi>&#x0394</mi><mi>x</mi></mrow><mrow><mi>&#x0394</mi><mi>t</mi></mrow></mfrac></math>
+</eq>
+
+<p>
+Here, <math><mi>&#x0394</mi><mi>x</mi></math> (read as "delta x") means the change in the value x, or position. It can be calculated below, which is the final position minus the initial position.
+</p>
+
+<eq>
+<math><mi>&#x0394</mi><mi>x</mi><mo>=</mo><mo>(</mo><msub><mi>x</mi><mi>f</mi></msub><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></math></eq>
+
+<p>
+As with displacement and distance, velocity and speed are different as well. Analogous to the two, speed is a <intext tabindex="0" tooltip="A quantity without direction">scalar,</intext> while velocity is a <intext tabindex="0" tooltip="A quantity with magnitude and direction">vector.</intext> Further, velocity measures the displacement done over a length of time, while speed measures the distance travelled.
+</p>
+
+<figure><img src="images/quan3.svg"></figure>
+<figurecaption>Running around a track means you have no velocity, but you do have speed.</figurecaption>
+
+<p>
+Just like distance may not equal displacement, velocity may not equal speed. If one goes around a circular track and ends up back where they started, their distance will be the circumference of the track, but their displacement will be zero.
+</p>
+
+<example>
+<h4>Question 2</h4>
+(LSM CQ3.8) Does the speedometer of a car measure speed or velocity?<br><br>
+<h4>Answer<button onclick="toggle(this,'sol3')">v</button></h4>
+<section class="solution" id="sol3">
+A car's speedometer measures the <i>speed</i> of travel. If it measured velocity, it would read negative when you start to turn around!
+</section>
+</example>
+
+<example>
+<h4>Exercise 2</h4>
+(LSM P3.30) A woodchuck runs 20 m to the right in 5 s, then turns and runs 10 m to the left in 3 s.<br>(a) What is the average velocity of the woodchuck?<br>(b) What is its average speed?<br><br>
+<h4>Solution<button onclick="toggle(this,'sol4')">v</button></h4>
+<section class="solution" id="sol4">
+The displacement of the woodchuck is <math><mi>20m</mi><mo>+</mo><mi>(−10m)</mi><mo>=</mo><mi>10m</mi></math>. The total time elapsed is then 8s. With this, we can calculate the velocity:
+
+<eq>
+<math><mrow><mfrac><mrow><mi>10m</mi></mrow><mrow><mi>8s</mi></mrow></mfrac><mo>=</mo><mi>1.25m/s</mi></mrow></math>
+</eq>
+
+For the speed, we add the two lengths together (since we need the distance), so we have <math><mi>20m</mi><mo>+</mo><mi>10m</mi><mo>=</mo><mi>30m</mi></math>. We can then calculate speed:
+
+<eq>
+<math><mrow><mfrac><mrow><mi>30m</mi></mrow><mrow><mi>8s</mi></mrow></mfrac><mo>=</mo><mi>3.75m/s</mi></mrow></math>
+</eq>
+</section>
+</example>
+
+Note that we can manipulate the equation to get the displacement travelled or the time taken. We use this to answer the following problem.
+
+<example>
+<h4>Problem 1</h4>
+(HRK Q2.11) Bob beats Judy by 10 m in a 100-m dash. Bob, claiming to give Judy an equal chance, agrees to race her again but to start from 10 m behind the starting line. Does this really give Judy an equal chance?<br><br>
+<h4>Answer<button onclick="toggle(this,'sol5')">v</button></h4>
+<section class="solution" id="sol5">
+
+No. 
+<p>For the sake of simplicity, let's say that Bob runs the 100-m dash in 10s. This means his speed is <math><mrow><mfrac><mrow><mi>100m</mi></mrow><mrow><mi>10s</mi></mrow></mfrac><mo>=</mo><mi>10m/s</mi></mrow></math>. Further, Judy should be able to run 90m in 10s, given that she was 10m away from him when he won, so her speed is <math><mrow><mfrac><mrow><mi>90m</mi></mrow><mrow><mi>10s</mi></mrow></mfrac><mo>=</mo><mi>9m/s</mi></mrow></math>.
+</p>
+
+<p>
+Having Bob start 10m before the starting line means he has to run 110m in total. With his speed of 10m/s, he will take <math><mrow><mfrac><mrow><mi>110m</mi></mrow><mrow><mi>10m/s</mi></mrow></mfrac><mo>=</mo><mi>11s</mi></mrow></math>.<br>
+In those 11s, Judy should be able to run <math><mrow><mi>(9m/s)(11s)</mi><mo>=</mo><mi>99m</mi></mrow></math>. However, that means that Judy still doesn't pass the 100m mark, meaning Bob will still win.
+</p>
+</section>
+</example>
+
+<p>
+Most particles don't have a constant velocity or speed. For example, gravity pulls us all down at a constant rate. This rate of change is helpful, so we should give a quantity to it.
+</p>
+
+<term>Acceleration (<math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover></math>)</term> – the rate of change of velocity over time
+
+<p>
+One thing to notice is that acceleration is a <intext tabindex="0" tooltip="A quantity with magnitude and direction">vector,</intext> so it can also be negative. Negative acceleration is also called deceleration. If acceleration is zero, it means that the velocity is constant. In other words, the change of velocity over time is zero.
+</p>
+
+<p>
+Calculating the average acceleration is similar to calculating the average velocity. It is the change in velocity over the time elapsed to change that velocity.
+</p>
+
+<eq>
+<math><mi>a</mi><mi>&#773;</mi><mo>=</mo><mfrac><mrow><mi>&#x0394</mi><mi>v</mi></mrow><mrow><mi>&#x0394</mi><mi>t</mi></mrow></mfrac></math>
+</eq>
+
+<example>
+<h4>Question 3</h4>
+(HRK Q2.15) Can the velocity of an object reverse direction when its acceleration is constant? If so, give an example; if not, explain why.<br><br>
+<h4>Answer<button onclick="toggle(this,'sol6')">v</button></h4>
+<section class="solution" id="sol6">
+Yes.<br>This is possible if the direction of acceleration is the opposite direction of the velocity. The particle slows down, then goes the other way, as the velocity is slowly going the other way.
+</section>
+</example>
+
+<example>
+<h4>Question 4</h4>
+(LSM CQ3.11) Is it possible for speed to be constant  while acceleration is not zero?<br><br>
+<h4>Answer<button onclick="toggle(this,'sol7')">v</button></h4>
+<section class="solution" id="sol7">
+Yes.
+
+<figure><img src="images/quan4.svg"></figure>
+<figurecaption>Your velocity changes when running around a circle.</figurecaption>
+
+One example of this is moving around in a circle, where while the speed is constant, the velocity constantly shifts (as the direction of motion changes). This change in velocity means there is acceleration.
+</section>
+</example>
+
+<footer>
+<a href="motion-graphs.html">Motion Graphs ></a>
+</footer>
+</body>
+</html>

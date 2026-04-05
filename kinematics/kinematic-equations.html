@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kinematics - kineeq</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Kinematic Equations</h1>
+<header>
+<a href="motion-graphs.html">< Motion Graphs</a>
+</header>
+<p>
+While it is useful to have the various quantities of motion, and know how they relate graphically, we don't know how to relate them altogether numerically with equations, and how they relate with the time elapsed. To remedy this, we first add a new quantity that we've been avoiding.
+</p>
+
+<term>Time (<math><mi>t</mi></math>)</term>	– the time elapsed<br>
+
+<p>
+So far, we've been using <math><mi>&#x0394</mi><mi>t</mi></math> for our calculations. However, we can simplify that to be a single variable if we use the assumption that we set the initial time to be at zero. 
+</p>
+
+<eq>
+<math><mi>&#x0394</mi><mi>t</mi><mo>=</mo><mo>(</mo><msub><mi>t</mi><mi>f</mi></msub><mo>−</mo><msub><mi>t</mi><mi>0</mi></msub><mo>)</mo></math><br>
+<math><mi>&#x0394</mi><mi>t</mi><mo>=</mo><mo>(</mo><msub><mi>t</mi><mi>f</mi></msub><mo>−</mo><mi>0</mi><mo>)</mo><mo>=</mo><msub><mi>t</mi><mi>f</mi></msub><mo>=</mo><mi>t</mi></math>
+</eq>
+
+<p>
+Another thing this does is we can drop the <math><mi>f</mi></math> subscript for both the change in velocity and change in position equations.
+</p>
+
+<eq>
+<math><mi>&#x0394</mi><mi>x</mi><mo>=</mo><mo>(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></math><br>
+<math><mi>&#x0394</mi><mi>v</mi><mo>=</mo><mo>(</mo><mi>v</mi><mo>−</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo></math>
+</eq>
+
+<p>
+One other assumption (that is very important!) is that we set the acceleration to be constant. This assumption greatly simplifies our equations, and overall will make our life a lot easier. This type of motion (where acceleration is constant) is called <i>uniformly accelerated motion</i>.
+</p>
+
+<eq>
+<math><mrow><mi>a</mi><mi>&#773;</mi></mrow>><mo>=</mo><mi>a</mi></math>
+</eq>
+
+<p>
+	Is this a big deal? Not really. Most objects can be modelled well (and with enough accuracy) with a particle under constant acceleration.
+</p>
+
+<p>
+With constant acceleration, that means that the average velocity is then just the average of the final and initial velocities. We know how constant acceleration looks <intext tabindex="0" tooltip="the graph of velocity under constant acceleration is a line">graphically</intext>, and so we can place it into an equation.
+</p>
+
+<figure><img src="images/graph7.svg"></figure>
+<figurecaption>The velocity-time graph of a particle under constant acceleration.</figurecaption>
+
+<eq>
+<math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><mfrac><mrow><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><mi>2</mi></mrow></mfrac></math>
+</eq>
+
+<p>
+To get our first equation, we manipulate our original equation for average velocity, <math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><mfrac><mrow><mi>&#x0394</mi><mi>x</mi></mrow><mrow><mi>&#x0394</mi><mi>t</mi></mrow></mfrac></math>.
+</p>
+
+<eq>
+	<math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><mfrac><mrow><mo>(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></mrow><mrow><mi>t</mi></mrow></mfrac></math><br>
+	<equation val="1.1"><math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><mi>v</mi><mi>&#773;</mi><msub><mi>t</mi></msub></math></equation>
+</eq>
+
+<p>
+This equation relates displacement, velocity, and time. We can use this equation to get the displacement of a particle given its initial and final velocities, or, if given the velocity is constant.
+</p>
+
+<example>
+<h4>Exercise 1</h4>
+(LSM P3.43) A particle moves in a straight line at a constant velocity of 30 m/s. What is its displacement between t = 0 and t = 5.0 s?
+<br><br>
+<h4>Solution<button onclick="toggle(this,'sol1')">v</button></h4>
+<section class="solution" id="sol1">
+<p>
+	Since the velocity is constant, the average velocity must just be <math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><mi>30m/s</mi></math>. The time starts at 0s and ends at 5s, which gives us <math><mi>t</mi><mo>=</mo><mi>5s</mi></math>. 
+	We can assume for that the initial position of the object is at 0m, given that it wasn't stated. With this, we can get the position of the object.
+</p>
+
+<eq>
+<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>(0)</mi><mo>+</mo><mi>(30m/s)</mi><mi>(5s)</mi></math><br>
+<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>150m</mi></math>
+</eq>
+This gives us our answer, being a displacement of 150m.
+</section>
+</example>
+
+<p>
+	We can also use our definition of average acceleration (being <math><mi>a</mi><mi>&#773;</mi><mo>=</mo><mfrac><mrow><mi>&#x0394</mi><mi>v</mi></mrow><mrow><mi>&#x0394</mi><mi>t</mi></mrow></mfrac></math>) to get another equation. We can drop the average acceleration as we assumed it to be constant.
+</p>
+
+<eq>
+	<math><mi>a</mi><mo>=</mo><mfrac><mrow><mo>(</mo><mi>v</mi><mo>−</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo></mrow><mrow><mi>t</mi></mrow></mfrac></math><br>
+	<math><mrow><mi>v</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math>
+</eq>
+
+<p>
+	This equation seems similar to the one we collected before, however it relates velocity, acceleration, and time.
+</p>
+
+<example>
+<h4>Exercise 2</h4>
+(HRK E2.45) A world’s land speed record was set by Colonel John P. Stapp when, on March 19, 1954, he rode a rocket-propelled sled that moved down a track at 1020 km/h (= 282 m/s). He and the sled were
+brought to a stop in 1.4 s. What acceleration did he experience? 
+<br><br>
+<h4>Solution<button onclick="toggle(this,'sol2')">v</button></h4>
+<section class="solution" id="sol2">
+<p>
+	It appears that we don't have enough information; we know <math><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mi>282m/s</mi></math> and <math><mi>t</mi><mo>=</mo><mi>1.4s</mi></math>, however it seems we don't know the final velocity.<br>
+	However, reading carefully, it is stated that he was "brought to a stop", which means that the final velocity is at rest, or <math><mi>v</mi><mo>=</mo><mi>0m/s</mi></math>. We can now solve for <math><mi>a</mi></math>:
+</p>
+
+<eq>
+<math><mrow><mi>(0m/s)</mi></mrow><mo>=</mo><mi>(282m/s)</mi><mo>+</mo><mi>a</mi><mi>(5s)</mi></math><br>
+<math><mfrac><mrow><mi>(−282m/s)</mi></mrow><mrow><mi>(5s)</mi></mrow></mfrac><mo>=</mo><mi>a</mi></math>
+</eq>
+This gives us our answer, being an acceleration of <math><mi>a</mi><mo>=</mo><mi>−56.4m/s²</mi></math>. Note the negative sign means it is opposite the direction where he was going; meaning this is a deceleration.
+</section>
+</example>
+
+<example>
+<h4>Exercise 3</h4>
+(LSM P3.48) At t = 10 s, a particle is moving from left to right with a speed of 5.0 m/s. At t = 20 s, the particle is moving right to left with a speed of 8.0 m/s.
+Assuming the particle’s acceleration is constant, determine <br>(a) its acceleration, <br>(b) its initial
+velocity, and <br>(c) the instant when its velocity is zero.<br><br>
+<h4>Solution<button onclick="toggle(this,'sol3')">v</button></h4>
+<section class="solution" id="sol3">
+<p>
+	Setting "going left to right" as positive, we get the initial velocity at 5m/s and final velocity at −8m/s. The time elapsed is also given, at 10s. This is enough to find the acceleration.
+</p>
+
+<eq>
+<math><mrow><mi>(−8m/s)</mi></mrow><mo>=</mo><mi>(5m/s)</mi><mo>+</mo><mi>a</mi><mi>(10s)</mi></math><br>
+<math><mfrac><mrow><mi>(−13m/s)</mi></mrow><mrow><mi>(10s)</mi></mrow></mfrac><mo>=</mo><mi>a</mi></math>
+</eq>
+
+<p>
+	This gives our constant acceleration at <math><mi>a</mi><mo>=</mo><mi>−1.3m/s²</mi></math>. We then use this to find the initial velocity. We use the first value of velocity (5m/s at t = 10s), however the other value should work fine as well.
+</p>
+
+<eq>
+<math><mrow><mi>(5m/s)</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>(−1.3m/s²)</mi><mi>(10s)</mi></math><br>
+<math><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mi>18m/s</mi></math>
+</eq>
+
+<p>
+	We can then use this to get the instant the velocity is zero.
+</p>
+
+<eq>
+<math><mrow><mi>(0m/s)</mi></mrow><mo>=</mo><mi>(18m/s)</mi><mo>+</mo><mi>(−1.3m/s²)</mi><mi>t</mi></math><br>
+<math><mfrac><mrow><mi>(−18m/s)</mi></mrow><mrow><mi>(−1.3m/s²)</mi></mrow></mfrac><mo>=</mo><mi>t</mi></math>
+</eq>
+
+<p>
+	Which gives us that the velocity is zero at approximately <math><mi>t</mi><mo>=</mo><mi>13.8s</mi></math>.
+</p>
+</section>
+</example>
+
+<p>
+	While it is useful to have these two equations, we still don't have any way to relate acceleration and displacement. We first try to replace the <math><mrow><mi>v</mi><mi>&#773;</mi></mrow></math> in the first equation.
+</p>
+
+<p>
+	We manipulate our second equation to find <math><mrow><mi>v</mi><mi>&#773;</mi></mrow></math>. To do this, we add <math><msub><mi>v</mi><mi>0</mi></msub></math> to both sides and divide both sides by two:
+</p>
+
+<eq>
+	<math><mrow><mi>v</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><msub><mi>t</mi></msub></math><br>
+	<math><mrow><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub></mrow><mo>=</mo><mi>2</mi><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
+	<math><mfrac><mrow><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><mi>2</mi></mrow></mfrac><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><mi>t</mi></math><br>
+	<math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><mi>t</mi></math>
+</eq>
+
+<p>
+	Substituting our new value gives us our third equation.
+</p>
+
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><mi>v</mi><mi>&#773;</mi><msub><mi>t</mi></msub></math><br>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><mo>(</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><mi>t</mi><mo>)</mo><mi>t</mi></math><br>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math>
+</eq>
+
+<p>
+	One thing to note that this equation is quadratic, which aligns with the <intext tabindex="0" tooltip="the graph of position under constant acceleration is parabolic">graph</intext> of position given constant acceleration. This equation relates acceleration, displacement, and time together. We also need the initial velocity to use this equation.
+</p>
+
+<figure><img src="images/graph8.svg"></figure>
+<figurecaption>The position-time graph of a particle under constant acceleration.</figurecaption>
+
+<example>
+<h4>Exercise 4</h4>
+(LSM P3.90a) An ambulance driver is rushing a patient to the hospital. While traveling at 72 km/h, she notices the traffic light at the upcoming intersections
+has turned amber. To reach the intersection before the light turns red, she must travel 50 m in 2.0 s. What minimum acceleration must the ambulance have to reach the intersection
+before the light turns red?
+<br><br>
+<h4>Solution<button onclick="toggle(this,'sol4')">v</button></h4>
+<section class="solution" id="sol4">
+<p>
+	We have enough information to use our third equation; the displacement 50m, the time 2s, and the initial velocity 72km/h. We first convert 72km/h to m/s:
+</p>
+
+<eq>
+	<math><mi>72km/h</mi><mo>&#x22C5</mo><mfrac><mi>1000m</mi><mi>1km</mi></mfrac><mo>&#x22C5</mo><mfrac><mi>1h</mi><mi>3600s</mi></mfrac><mo>=</mo><mi>20m/s</mi></math>
+</eq>
+
+<p>
+We can now use the third equation by plugging the values in. We note that the initial position can just be set to zero.
+</p>
+
+<eq>
+	<math><mrow><mi>(50m)</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><msub><mi>(20m/s)</mi></msub><mi>(2.0s)</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>(2.0s)</mi><mn>2</mn></msup></math><br>
+	<math><mfrac><mrow><mi>2(50m−20m/s²)</mi></mrow><mrow><mi>(4.0s²)</mi></mrow></mfrac><mo>=</mo><mi>a</mi></math>
+</eq>
+<p>
+	Which gives the value of <math><mi>a</mi><mo>=</mo><mi>15m/s²</mi></math>.
+</p>
+</section>
+</example>
+
+<example>
+<h4>Exercise 5</h4>
+(LSM P3.48a) A particle has a constant acceleration of 6.0 m/s². If its initial velocity is 2.0 m/s, at what time is its displacement 5.0 m?
+<br><br>
+<h4>Solution<button onclick="toggle(this,'sol5')">v</button></h4>
+<section class="solution" id="sol5">
+<p>
+	We are given three values, the acceleration at 6.0m/s², the initial velocity at 2.0m/s, and the displacement at 5.0m. This is enough to use our third equation to get the time:
+</p>
+
+<eq>
+<math><mrow><mi>(5m)</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><mi>(2.0m/s)</mi><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(6.0m/s²)</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+</eq>
+
+It's best if we drop all the units first to get the following quadratic equation.
+
+<eq>
+<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>3</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>2</mi><mi>t</mi><mo>−</mo><mi>5</mi></math><br>
+</eq>
+
+We can either factor this (it is factorable!) or use the quadratic equation. Either way, we get two values of <math><mi>t</mi></math>, giving <math><mi>t</mi><mo>=</mo><mi>1s</mi></math> and <math><mi>t</mi><mo>=</mo><mi>−1.67s</mi></math>. However, negative time is not possible, so we discard that value. <br>Thus, the answer is <math><mi>t</mi><mo>=</mo><mi>1s</mi></math>.
+</section>
+</example>
+
+<p>
+	While all three equations are good, we can extract one more. We don't have any equation which doesn't use time. To fix that, we can manipulate the same equation we manipulated last time again to find another value for time.
+</p>
+
+<eq>
+	<math><mrow><mi>v</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><msub><mi>t</mi></msub></math><br>
+	<math><mfrac><mrow><mi>v</mi><mo>−</mo><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><mi>a</mi></mrow></mfrac><mo>=</mo><mi>t</mi></math><br>
+</eq>
+
+<p>
+	We then substitute that value to our third equation to get an equation without <math><mi>t</mi></math>. To remove <math><mrow><mi>v</mi><mi>&#773;</mi></mrow></math>, we can just subtitute <math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><mfrac><mrow><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><mi>2</mi></mrow></mfrac></math>.
+</p>
+
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><mi>v</mi><mi>&#773;</mi><msub><mi>t</mi></msub></math><br>
+	<math><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub></mrow><mo>=</mo><mo>(</mo><mfrac><mrow><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><mi>2</mi></mrow></mfrac><mo>)</mo><mo>(</mo><mfrac><mrow><mi>v</mi><mo>−</mo><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><mi>a</mi></mrow></mfrac><mo>)</mo></math><br>
+</eq>
+
+<p>
+	Recall that <math><mi>&#x0394</mi><mi>x</mi><mo>=</mo><mo>(</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></math>, so we can simplify the left side. The right side is a <intext tabindex="0" tooltip="difference of two squares">special product</intext>.
+</p>
+
+<eq>
+	<math><mrow><mi>&#x0394</mi><mi>x</mi></mrow><mo>=</mo><mfrac><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>−</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>a</mi></mrow></mfrac></math><br>
+	<math><mrow><mi>2</mi><mi>a</mi><mi>&#x0394</mi><mi>x</mi></mrow><mo>=</mo><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>−</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup></mrow></math><br>
+	<math><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>a</mi><mi>&#x0394</mi><mi>x</mi></mrow></math>
+</eq>
+
+<p>
+	This equation is now time-independent. It can be used when we don't know how long something took to happen.
+</p>
+
+<example>
+<h4>Exercise 6</h4>
+(LSM P3.62a) An unwary football player collides with a padded goalpost while running at a velocity of 7.50 m/s and comes to a full stop after compressing the
+padding and his body 0.350 m. What is his acceleration? 
+<br><br>
+<h4>Solution<button onclick="toggle(this,'sol6')">v</button></h4>
+<section class="solution" id="sol6">
+<p>
+	We aren't given the time, so we should use the time-independent equation. We have a initial velocity of 7.50m/s, final velocity at rest, and a displacement of −0.350m (negative as it "compresses" the padding, so it moves back into the person).<br>This gives us enough information to get the acceleration.
+</p>
+
+<eq>
+	<math><msup><mi>(7.50m/s)</mi><mn>2</mn></msup><mo>=</mo><msup><mi>(0m/s)</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>a</mi><mi>(−0.350m)</mi></mrow></math><br>
+	<math><mfrac><mrow><msup><mi>(7.50m/s)</mi><mn>2</mn></msup></mrow><mrow><mi>2(−0.350m)</mi></mrow></mfrac><mo>=</mo><mi>a</mi></math>
+</eq>
+
+The deceleration is then <math><mi>a</mi><mo>=</mo><mi>−80.4m/s²</mi></math>.
+</section>
+</example>
+
+<p>
+	With the four kinematic equations, we can now solve problems numerically. However, one thing to note is that somethings in physics may not be said outright; "rest" meaning velocity is zero was an example in an exercise. Read the question carefully to gleam all the information within it!
+</p>
+
+<example>
+<h4>Question 1</h4>
+(LSM CQ3.16) When analyzing the motion of a single object, what is the required number of known physical variables that are needed to solve for the unknown quantities using the kinematic equations?
+<br><br>
+<h4>Answer<button onclick="toggle(this,'sol7')">v</button></h4>
+<section class="solution" id="sol7">
+<p>
+	We need three variables of the five (displacement, initial and final velocity, time, and acceleration) to solve the other two.
+</p>
+
+<eq>
+	<math><msup><mi>(7.50m/s)</mi><mn>2</mn></msup><mo>=</mo><msup><mi>(0m/s)</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>a</mi><mi>(−0.350m)</mi></mrow></math><br>
+	<math><mfrac><mrow><msup><mi>(7.50m/s)</mi><mn>2</mn></msup></mrow><mrow><mi>2(−0.350m)</mi></mrow></mfrac><mo>=</mo><mi>a</mi></math>
+</eq>
+
+The deceleration is then <math><mi>a</mi><mo>=</mo><mi>−80.4m/s²</mi></math>.
+</section>
+</example>
+
+<footer>
+<a href="free-fall.html">Free Fall ></a>
+</footer>
+</body>
+</html>
