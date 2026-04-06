@@ -93,11 +93,22 @@ term {
 	font-weight:bold;
 }
 
+termdecl {
+	margin: 1.2em 0 1.2em 0;
+	display:block;
+}
+
 eq {
 	text-align:center;
 	display:block;
 	line-height:2.2em;
 	margin: 0em 0px 0.5em 0px;
+}
+
+#half {
+	width:50%;
+	float:left;
+	text-align:left;
 }
 
 a {
@@ -139,24 +150,30 @@ intext[tooltip]:hover::after,
 intext[tooltip]:focus::after {
   content: attr(tooltip);
   position: absolute;
-  left: 0;
-  top: 1.5em;
-  min-width: 8em;
+  left: 0px;
+  width: 8em;
   text-align:left;
-  border: 2px #b90000 solid;
+  border: 2px #d90000 solid;
   border-radius: 3px;
   background-color: #fafafa;
   padding: 0.2em;
   color: #d90000;
-  font-size: 14px;
+  font-size: 1em;
   z-index: 1;
+  top:1.5em;
 }
 
+#unfinished{
+		color:#999999;
+}
 
+#unfinished:hover{
+		color:#d9d9d9;
+}
 
 @media only screen and (max-width: 985px) {
 	body {
-		width:92%;
+		width:90%;
 		font-size:0.95em;
 		line-height: 1.2em;
 	}
@@ -164,5 +181,26 @@ intext[tooltip]:focus::after {
 	figure > img {
 		width:100%;
 		max-width:100%;
+	}
+
+	intext[tooltip]:focus::after {
+		position:fixed;
+		width:50%;
+		min-width:50%;
+		margin-left:25%;
+		content:attr(tooltip);
+		float:left;
+		padding:0.2em;
+		top:1.5em;
+		opacity:1;
+		transition: opacity 0.2s;
+	}
+
+	#half {
+		width:100%;
+	}
+
+	intext[tooltip]::after {
+		opacity:0;
 	}
 }
