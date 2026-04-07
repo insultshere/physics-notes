@@ -13,6 +13,155 @@
 <header>
 <a href="index.html">< Return</a>
 </header>
-<p>Coming soon. Come back later</p>
+<p>Now that we are moving in two-dimensions, we need to deal with how we treat direction. We know that most quantities need direction, like velocity and acceleration.</p>
+
+<figure><img src="images/twod1.svg"></figure>
+<figurecaption>Two-dimensional motion.</figurecaption>
+
+<p>For this one-dimensional case, a simple flip of the signs works. For free falling objects, we almost always set "going up" as positive velocity and "going down" as negative velocity.</p>
+<p>These quantities that need direction are called <intext tabindex="0" tooltip="A quantity that has magnitude and direction">vectors</intext>, while those that don't need direction are called <intext tabindex="0" tooltip="A quantity that has magnitude, with no direction">scalars</intext>. For example, velocity is a vector, while speed is a scalar.</p>
+
+<figure><img src="images/circ1.svg"></figure>
+<figurecaption>The velocity of a person running around in a circle changes, but their speed is constant.</figurecaption>
+
+<p>The figure above shows a person running around in a circle. We can see that their velocity is changing direction, and thus changes. However, the <intext tabindex="0" tooltip="the length of a vector">magnitude</intext> doesn't change, thus their speed is constant.</p>
+<example>
+<h4>Question 1</h4>
+(HRK Q2.6) Can the speed of a particle ever be negative? If so, give an example; if not, explain why.<br><br>
+<h4>Answer<button onclick="toggle(this,'sol1')">v</button></h4>
+<section class="solution" id="sol1">
+No, it can't. Velocity can be negative, as we can either go left and right or go up and down, however speed must always be positive.
+</section>
+</example>
+<p>In two dimensions, we can't rely on changing signs. For example, in one-dimension, we can add vectors by just adding their magnitudes up. The vector we get from adding these up is called the <intext tabindex="0" tooltip="the result of summing multiple vectors">resultant</intext>.</p>
+
+<figure><img src="images/vec1.svg"></figure>
+<figurecaption>Graphically adding one-dimensional vectors.</figurecaption>
+
+<p>To add two-dimensional vectors however, we have to do a different way. Visually, we just add them up tip-to-tail.</p>
+
+<figure><img src="images/vec2.svg"></figure>
+<figurecaption>Graphically adding two-dimensional vectors.</figurecaption>
+
+<p>To add them numerically, we first need to break down the vectors. A vector can be broken down into its <intext tabindex="0" tooltip="the one-dimensional parts of a vector">components</intext>. To get these components, we need to use trigonometry with the angle of the vector.</p>
+
+<figure><img src="images/vec3.svg"></figure>
+<figurecaption>A vector can be broken down into its components.</figurecaption>
+
+<p>One must recall their trigonometry to deal with this; especially the <intext tabindex="0" tooltip="sin() gives the ratio of the opposite and hypotenuse sides given the measure of an angle">sin()</intext> and <intext tabindex="0" tooltip="cos() gives the ratio of the adjacent and hypotenuse sides given the measure of an angle">cos()</intext> functions.</p>
+<p>We can also use these components to get the magnitude and the angle of the vector via the pythagorean theorem and using the <intext tabindex="0" tooltip="arctan() gives the measure of the angle of a certain ratio of the opposite and adjacent sides">arctan()</intext> function respectively.</p>
+
+<example>
+<h4>Exercise 1</h4>
+(HRK E2.4a) What are the components of a vector <math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover></math> in the xy plane if
+its direction is 252° counterclockwise from the positive x axis
+and its magnitude is 7.34 units?<br><br>
+<h4>Solution<button onclick="toggle(this,'sol2')">v</button></h4>
+<section class="solution" id="sol2">
+The diagram below shows the vector. We then calculate its components.
+<figure><img src="images/vec4.svg"></figure>
+<figurecaption>The vector in the xy plane.</figurecaption>
+<p>The reference angle of 252° is 72°, we take the sine and cosine of that angle to get the magnitudes of the two components.</p>
+<eq>
+	<math><mover accent="true"><mrow><msub><mi>a</mi><mi>x</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>−7.34</mi><mi>cos</mi><mi>(</mi><mi>72°</mi><mi>)</mi></math><br>
+	<math><mover accent="true"><mrow><msub><mi>a</mi><mi>y</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>−7.34</mi><mi>sin</mi><mi>(</mi><mi>72°</mi><mi>)</mi></math>
+</eq>
+<p>This gives us the two component vectors.</p>
+</section>
+</example>
+
+<example>
+<h4>Exercise 2</h4>
+(HRK E2.3a) Vector <math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover></math> has a magnitude of 5.2 units and is directed east. Vector <math><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x2192</mo></mover></math> has a magnitude of 4.3 units and is directed 35° west of north. Find <math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x2192</mo></mover></math>.<br><br>
+<h4>Solution<button onclick="toggle(this,'sol3')">v</button></h4>
+<section class="solution" id="sol3">
+<figure><img src="images/vec5.svg"></figure>
+<figurecaption>The two vectors added up in the xy plane.</figurecaption>
+<p>We take the sine and cosine of the angle to get the two components of the angled vector.</p>
+<eq>
+	<math><mover accent="true"><mrow><msub><mi>b</mi><mi>x</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>−4.3</mi><mi>sin</mi><mi>(</mi><mi>35°</mi><mi>)</mi><mo>=</mo><mi>−2.47</mi></math><br>
+	<math><mover accent="true"><mrow><msub><mi>b</mi><mi>y</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>4.3</mi><mi>cos</mi><mi>(</mi><mi>35°</mi><mi>)</mi><mo>=</mo><mi>3.52</mi></math>
+</eq>
+<p>To get the magnitude, we use the pythagorean theorem.</p>
+<eq>
+	<math><mrow><mi>R</mi><mo>=</mo><mrow><msqrt><mrow><mi>[3.52]²</mi><mo>+</mo><mi>[5.2</mi><mo>−</mo><mi>2.47]²</mi></mrow></msqrt><mo>=</mo><mi>4.45</mi></math><br>
+</eq>
+<p>For the angle measure, we use the arctan() function.</p>
+<eq>
+	<math><mrow><mi>θ</mi><mo>=</mo><mi>arctan(</mi><mfrac><mi>3.52</mi><mrow><mi>5.2</mi><mo>−</mo><mi>2.47</mi></mrow></mfrac><mi>)</mi><mo>=</mo><mi>52.20&deg;</mi></math><br>
+</eq>
+<p>Thus, we get that <math><mover><mrow><mi>R</mi></mrow><mo>&#x2192</mo></mover></math> is a vector with magnitude 4.45 units and direction 52.20&deg; counterclockwise from the +x axis.</p>
+</section>
+</example>
+<p>One way to represent a vector is by using <intext tabindex="0" tooltip="vectors which have a length of 1, î is for the x-axis and ĵ for the y-axis">unit vectors</intext>. Here, we multiply a unit vector by the magnitude of the components. This effectively gives us the length and height of any given vector.</p>
+<figure><img src="images/vec6.svg"></figure>
+<figurecaption>A vector, defined by its unit vectors.</figurecaption>
+<example>
+<h4>Exercise 3</h4>
+(LSM P4.18)  The position of a particle changes from <math><mover accent="true"><mrow><msub><mi>r</mi><mi>1</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(2.0î + 3.0ĵ)</mi></math> to <math><mover accent="true"><mrow><msub><mi>r</mi><mi>2</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(−4.0î + 3.0ĵ)</mi></math>. What is the particle’s displacement?<br><br>
+<h4>Solution<button onclick="toggle(this,'sol4')">v</button></h4>
+<section class="solution" id="sol4">
+<p>We first parse what the two vectors mean. The first vector <math><mover accent="true"><mrow><msub><mi>r</mi><mi>1</mi></msub></mrow><mo>&#x2192</mo></mover></math> has a length of 2 going to the right and a height of 3 going up, while the other vector <mover accent="true"><mrow><msub><mi>r</mi><mi>2</mi></msub></mrow><mo>&#x2192</mo></mover> has a length of 4 going to the left (hence the negative sign) and a height of 3 going up also.</p>
+<figure><img src="images/vec7.svg"></figure>
+<figurecaption>The two positions.</figurecaption>
+<p>We got these values by looking at the unit vectors they are composed out of.<br>To do this formally, we use the distance formula, which is powered by the pythagorean theorem.</p>
+<eq>
+	<math><mrow><mi>d</mi><mo>=</mo><mrow><msqrt><mrow><mi>[2.0 − (−4.0)]²</mi><mo>+</mo><mi>[3.0 − 3.0]²</mi></mrow></msqrt><mo>=</mo><mi>6.0</mi></math><br>
+</eq>
+</section>
+</example>
+<p>One may notice that this shows that the x-component and y-component of a vector is separate; and thus we can separate motion in two dimensions to two cases of one-dimensional motion, which we've studied.</p>
+<figure><img src="images/twod2.svg"></figure>
+<figurecaption>Two-dimensional motion is two cases of one-dimensional motion.</figurecaption>
+<p>We can now deal with some problems about motion in two dimensions, where we just have to break down the vectors into its components and work at it from there.</p>
+<p>Be warned; this may seem like a large jump in complexity as there looks to be a lot of information, however just remember one thing: <i>two-dimensional motion is two cases of one-dimensional motion.</i></p>
+<example>
+<h4>Problem 1</h4>
+(LSM P4.18)  A boat heads out into a lake with an acceleration of <math><mi>(2.0î)</mi></math>m/s². A strong wind is pushing the boat, giving it an additional velocity of <math><mi>(2.0î + 1.0ĵ)</mi></math>m/s.<br>(a) What is the velocity of the boat at t = 10s? <br>(b) What is the position of the boat at t = 10s?<br><br>
+<h4>Solution<button onclick="toggle(this,'sol5')">v</button></h4>
+<section class="solution" id="sol5">
+<p>The acceleration appears to only move in the x-axis, so the velocity's y-component will not be affected. We can calculate the velocity by just using our kinematic equations. To make it less confusing, let's add a subscript of <math><mi>x</mi></math> and <math><mi>y</mi></math> to determine what dimension we are using.</p>
+<eq>
+	<math><mrow><msub><mi>v</mi><mi>x</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0x</mi></msub><mo>+</mo><msub><mi>a</mi><mi>x</mi></msub><mi>t</mi></math><br>
+	<math><mrow><msub><mi>v</mi><mi>x</mi></msub></mrow><mo>=</mo><mi>(2.0m/s)</mi><mo>+</mo><mi>(2m/s²)</mi><mi>(10s)</mi><mo>=</mo><mi>22m/s</mi></math>
+</eq>
+<p>This gives us that the velocity at 10s is <math><mi>(22.0î + 1.0ĵ)</mi></math>m/s. For position, we have to separate it first into the x-component and y-component. For the x-component, we have an initial velocity, acceleration, and time, so we use our third equation.</p>
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mi>a</mi><mi>x</mi></msub><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo>(2m/s)<mi>(10s)</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac>(2m/s²)<msup><mi>(10s)</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>60m</mi></math><br>
+</eq>
+<p>The y-component is much easier, as there is no acceleration to worry about. We use the first equation instead, as the velocity is constant.</p>
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0y</mi></msub><mi>t</mi></math><br>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><msub><mi>(1m/s)</mi></msub><mi>(10s)</mi></math><br>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><mi>10m</mi></math><br>
+</eq>
+<p>This gives us that the position at 10s is at <math><mi>(60î + 10ĵ)</mi></math>m.</p>
+</section>
+</example>
+<example>
+<h4>Problem 2</h4>
+(LSM P4.30) The acceleration of a particle is a constant. At t = 0s, the velocity of the particle is <math><mi>(10î + 20ĵ)</mi></math>m/s. At t = 4s, the velocity is <math><mi>(10ĵ)</mi></math>m/s. What is the particle’s acceleration?<br><br>
+<h4>Solution<button onclick="toggle(this,'sol6')">v</button></h4>
+<section class="solution" id="sol6">
+<p>The x-component of velocity has gone from 10m/s to 0m/s in four seconds. We can plug this into our second kinematic equation.</p>
+<eq>
+	<math><mrow><msub><mi>v</mi><mi>x</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0x</mi></msub><mo>+</mo><msub><mi>a</mi><mi>x</mi></msub><mi>t</mi></math><br>
+	<math><mrow><mi>(0m/s)</mi></mrow><mo>=</mo><mi>(10m/s)</mi><mo>+</mo><msub><mi>a</mi><mi>x</mi></msub><mi>(4s)</mi></math><br>
+	<math><mrow><mi>(−2.5m/s²)</mi></mrow><mo>=</mo><msub><mi>a</mi><mi>x</mi></msub></math><br>
+</eq>
+<p>Similarly, the y-component of velocity has gone from 20m/s to 10m/s in four seconds. Plugging this in gives us the y-component of the acceleration.</p>
+<eq>
+	<math><mrow><msub><mi>v</mi><mi>y</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0y</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><mi>t</mi></math><br>
+	<math><mrow><mi>(10m/s)</mi></mrow><mo>=</mo><mi>(20m/s)</mi><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><mi>(4s)</mi></math><br>
+	<math><mrow><mi>(−2.5m/s²)</mi></mrow><mo>=</mo><msub><mi>a</mi><mi>y</mi></msub></math><br>
+</eq>
+<p>We thus get that the acceleration vector is given by <math><mi>(−2.5î + −2.5ĵ)</mi></math>m/s².</p>
+</section>
+</example>
+<footer>
+<a id="unfinished" href="projectiles.html">Projectiles ></a>
+</footer>
 </body>
 </html>

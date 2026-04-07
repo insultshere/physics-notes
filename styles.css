@@ -63,7 +63,7 @@ h4 > button:focus  {
 
 figure {
 	text-align:center;
-	margin-top:1.5em;
+	margin-top:1em;
 	margin-bottom:0em;
 	display:block;
 }
@@ -88,6 +88,11 @@ example {
 	margin: 1em 0px 1em 0px
 }
 
+example[hard] {
+	background-color:#F5EAEA;
+}
+
+
 term {
 	font-family:Georgia;
 	font-weight:bold;
@@ -105,10 +110,14 @@ eq {
 	margin: 0em 0px 0.5em 0px;
 }
 
-#half {
-	width:50%;
+div > #side {
+	width:33%;
 	float:left;
 	text-align:left;
+}
+
+#navigation {
+	width:100%;
 }
 
 a {
@@ -155,7 +164,7 @@ intext[tooltip]:focus::after {
   text-align:left;
   border: 2px #d90000 solid;
   border-radius: 3px;
-  background-color: #fafafa;
+  background-color: #F5EAEA;
   padding: 0.2em;
   color: #d90000;
   font-size: 1em;
@@ -171,7 +180,7 @@ intext[tooltip]:focus::after {
 		color:#d9d9d9;
 }
 
-@media only screen and (max-width: 985px) {
+@media only screen and (max-width: 769px) {
 	body {
 		width:90%;
 		font-size:0.95em;
@@ -179,8 +188,8 @@ intext[tooltip]:focus::after {
 	}
 	
 	figure > img {
-		width:100%;
-		max-width:100%;
+		width:90%;
+		max-width:90%;
 	}
 
 	intext[tooltip]:focus::after {
@@ -196,8 +205,9 @@ intext[tooltip]:focus::after {
 		transition: opacity 0.2s;
 	}
 
-	#half {
+	div > #side {
 		width:100%;
+		margin-bottom:0.5em;
 	}
 
 	intext[tooltip]::after {
