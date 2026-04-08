@@ -13,6 +13,231 @@
 <header>
 <a href="index.html">< Return</a>
 </header>
-<p>Coming soon. Come back later</p>
+<p>One common type of two-dimensional motion is <i>projectile motion,</i> where a particle (named a projectile) moves in the air.</p>
+<p>While there are two types of projectile motion, we choose to condense them into one general case. Projectile motion is the motion of a particle with an initial velocity, afterwards being only under <intext tabindex="0" tooltip="a fundamental force which pulls objects together">gravity</intext>.</p>
+<p>As we've seen, the motion of an object in two-dimensions can be separated into two parts; the x-component and the y-component. This can greatly simplify our approach to projectiles.</p>
+
+<figure><img src="images/proj1.svg"></figure>
+<figurecaption>A particle with initial horizontal velocity falls at the same rate as one at rest.</figurecaption>
+
+<p>Since we can break down the velocity into its two components, we first analyze the horizontal component. Notice how there is no acceleration in the horizontal direction, thus the velocity of the horizontal component is constant.</p>
+<p>The vertical component however has an acceleration, which is the gravitational acceleration. Since this is the only acceleration which acts upon the projectile, we can use the equations we made for free falling objects on it.</p>
+
+<figure><img src="images/proj2.svg"></figure>
+<figurecaption>The horizontal component is constant, while the vertical component is under free fall.</figurecaption>
+
+<p>Analyzing the trajectory, we can see that the vertical component starts as positive (throwing the particle up) and becomes zero at the apex, then slowly goes negative. Also note that it is symmetric; the vertical velocity's magnitude is the same as the impact (the end) and at the initial hit.</p>
+<p>Right now, it is quite awkward to talk about some of the parts of projectile motion, such as how long the projectile flys or how far it reached. Thus, we define two new quantities.</p>
+<termdecl>
+	<term>Time of flight (<math><msub><mi>T</mi><mi>tof</mi></msub></math>)</term> - the time it takes for a projectile from initial hit to impact<br>
+	<term>Range (<math><mi>R</mi></math>)</term> - the distance from initial hit to the point of impact<br>
+</termdecl>
+
+<example>
+<h4>Question 1</h4>
+(LSM CQ4.7) Answer the following questions for projectile motion on level ground assuming negligible air resistance, with the initial angle being neither 0&deg; nor 90&deg;.<br>(a) Is the velocity ever zero?<br>(b) When is the velocity a minimum? A maximum?<br>(c) Can the velocity ever be the same as the initial
+velocity at a time other than at t = 0?<br>(d) Can the
+speed ever be the same as the initial speed at a
+time other than at t = 0? <br><br>
+<h4>Answer<button onclick="toggle(this,'sol1')">v</button></h4>
+<section class="solution" id="sol1">
+<p>As there is still a constant horizontal velocity, the velocity can never be zero, even at the apex, where the vertical velocity is zero. The velocity is at a minimum at the apex, as the vertical velocity is zero, and at a maximum at the start of the motion and the impact at the ground.</p>
+<p>The velocity at the start and at the impact differs as they have different directions. Meanwhile, the speed at the start and at the impact is the same. Recall that speed doesn't care about direction, so it only cares about magnitude.</p>
+</section>
+</example>
+<p>We now have a strategy to dealing with projectile motion. We first break down the initial velocity, then solve the horizontal component with constant velocity and the vertical component as an object in free fall.</p>
+<p>For now, we analyze problems wherein there is no vertical velocity.</p>
+
+<example>
+<h4>Exercise 1</h4>
+(LSM P4.33) A bullet is shot horizontally from shoulder height (1.5 m) with an initial speed 200 m/s.<br>(a) How much time elapses before the bullet hits the
+ground? <br>(b) How far does the bullet travel horizontally?
+<figure><img src="images/proj4.svg"></figure>
+<figurecaption>Exercise 1.</figurecaption>
+<h4>Solution<button onclick="toggle(this,'sol2')">v</button></h4>
+<section class="solution" id="sol2">
+<p>There is no initial vertical velocity, so it is zero. We first need to know how long it takes to hit the ground, given the initial vertical position. The acceleration acting on the object is the gravitational acceleration, so we use that in our equation.</p>
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0y</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mi>a</mi><mi>y</mi></msub><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><mi>(1.5m)</mi><mo>+</mo><mi>(0m/s)</mi><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(−9.8m/s²)</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>−4.9</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>1.5</mi></math><br>
+</eq>
+<p>Using the quadratic formula, we get two solutions, however one of them is negative, so we throw that one out. We get that the time elapsed is <math><msub><mi>T</mi><mi>tof</mi></msub><mo>=</mo><mi>0.55s</mi></math>.</p>
+<p>We then plug that time in to get the amount of horizontal displacement. We are given the initial velocity, and we know it is constant, so we can just use that.</p>
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>t</mi></math><br>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><mi>(200m/s)(0.55s)</mi></math><br>
+</eq>
+<p>Which gives us the total displacement horizontally was 110m.</p>
+</section>
+</example>
+<example>
+<h4>Exercise 2</h4>
+(HRK E4.13) A ball rolls off the edge of a horizontal tabletop, 4.23 ft (= 1.29m) high.
+It strikes the floor at a point 5.11 ft (= 1.56m) horizontally away from
+the edge of the table. <br>(a) For how long was the ball in the air?
+<br>(b) What was its speed at the instant it left the table?<br><br>
+<h4>Solution<button onclick="toggle(this,'sol3')">v</button></h4>
+<section class="solution" id="sol3">
+<p>We first need the time of flight, so we do the same thing as we did in the previous problem.</p>
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0y</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mi>a</mi><mi>y</mi></msub><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><mi>(1.29m)</mi><mo>+</mo><mi>(0m/s)</mi><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(−9.8m/s²)</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>−4.9</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>1.56</mi></math><br>
+</eq>
+<p>We get the time elapsed is <math><msub><mi>T</mi><mi>tof</mi></msub><mo>=</mo><mi>0.51s</mi></math>, throwing out the negative solution. We then use the constant velocity equation to get the initial speed.</p>
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>t</mi></math><br>
+	<math><mrow><mi>(1.56m)</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>(0.51s)</mi></math><br>
+	<math><mfrac><mi>1.56m</mi><mi>0.51s</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>0x</mi></msub></math><br>
+</eq>
+<p>Which gives us the total displacement horizontally was 3.06m/s.</p>
+</section>
+</example>
+<p>Let's now try an exercise where there is an initial vertical velocity. Here, we must use trigonometry to get the horizontal and vertical velocity.</p>
+
+<figure><img src="images/proj3.svg"></figure>
+<figurecaption>Resolving the initial horizontal and vertical component.</figurecaption>
+
+<p>This may change based on the problem, so be wary.</p>
+
+<example>
+<h4>Exercise 3</h4>
+(LSM E4.49a) An astronaut on Mars kicks a soccer ball at an angle of 45&deg; with an initial velocity of 15 m/s. If
+the acceleration of gravity on Mars is 3.7 m/s², what is the range of the soccer kick on a flat surface?
+<figure><img src="images/proj5.svg"></figure>
+<figurecaption>Exercise 3.</figurecaption>
+<h4>Solution<button onclick="toggle(this,'sol4')">v</button></h4>
+<section class="solution" id="sol4">
+<p>We first need the initial horizontal and vertical velocity. Using trigonometry, we can get them quite easily.</p>
+<eq>
+	<math><mrow><msub><mi>v</mi><mi>0x</mi></msub></mrow><mo>=</mo><mi>(15m/s)</mi><mi>cos</mi><mi>(</mi><mi>45°</mi><mi>)</mi><mo>=</mo><mi>10.61m/s</mi></math></math><br>
+	<math><mrow><msub><mi>v</mi><mi>0y</mi></msub></mrow><mo>=</mo><mi>(15m/s)</mi><mi>sin</mi><mi>(</mi><mi>45°</mi><mi>)</mi><mo>=</mo><mi>10.61m/s</mi></math></math>
+</eq>
+<p>The next course of action is to get the full time of flight. We know that the vertical velocity at impact is just the initial vertical velocity but negative, so we can use our equations to get the time for that to happen. Note the different value of <math><mi>g</mi></math>.</p>
+<eq>
+	<math><mrow><msub><mi>v</mi><mi>y</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0y</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><mi>t</mi></math><br>
+	<math><mi>(−10.61m/s)</mi><mo>=</mo><mi>(10.61m/s)</mi>=<mo>+</mo><mi>(−3.7m/s²)</mi><mi>t</mi></math><br>
+</eq>
+<p>Which gives us the total time of flight is 5.74s. Finally, we plug that into our constant horizontal velocity to get the total displacement, or the range.</p>
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>t</mi></math><br>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><mi>(10.61m/s)</mi><mi>(5.74s)</mi></math><br>
+</eq>
+<p>This gives us that the total range is 60.90m.</p>
+</section>
+</example>
+<p>While we can solve the previous problem, one thing you may have noticed that it takes quite long to get simple quantities such as the range or the time of flight. Further, some problems may give those quantities and ask us to find other quantities. This gives us motivation to find easier ways to find these quantities.</p>
+<p>The first thing we can do is find the time of flight. Since we know that the <math><mrow><msub><mi>v</mi><mi>0y</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math>, and we know that at impact the velocity is the negated version of the initial velocity, we can solve for <math><msub><mi>T</mi><mi>tof</mi></msub></math>.</p>
+
+<eq>
+	<math><mrow><msub><mi>v</mi><mi>y</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0y</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><mi>t</mi></math><br>
+	<math><mi>(</mi><mo>−</mo><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mi>)</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>−</mo><mi>g</mi><msub><mi>T</mi><mi>tof</mi></msub></math><br>
+	<math><mfrac><mrow><mi>2</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac><mo>=</mo><msub><mi>T</mi><mi>tof</mi></msub></math><br>
+</eq>
+
+<p>We now have an easy way to get the time of flight. We may also use a similar method to get the time until the maximum height, which is left as an exercise shown below.</p>
+<p>We may use the value we got for the time of flight to get the range, since it is just the horizontal displacement, which has a constant velocity. Since <math><mrow><msub><mi>v</mi><mi>0x</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math>,</p>
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>t</mi></math><br>
+	<math><mrow><mi>R</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msub><mi>T</mi><mi>tof</mi></msub></math><br>
+</eq>
+<p>Using our value for the time of flight, and simplifying based on a <intext tooltip="sine of twice an angle is equal to two times the product of the sine and cosine of the angle">trigonometric identity</intext>, we can get a relatively simple equation for the range.</p>
+<eq>
+	<math><mrow><mi>R</mi></mrow><mo>=</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mi>)</mi><mi>(</mi><mi>2</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mi>)</mi></mrow><mi>g</mi></mfrac></math><br>
+	<math><mrow><mi>R</mi></mrow><mo>=</mo><mfrac><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac></math><br>
+	<math><mrow><mi>R</mi></mrow><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mi>sin</mi><mi>(</mi><mi>2&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac></math><br>
+</eq>
+<p>This relatively simple equation thus gives us the range of the projectile just given its initial velocity and angle. Additionally, we can analyze it to see what angle gives us the maximum range. Plotting out the range shows the following graph.</p>
+
+<figure><img src="images/proj6.svg"></figure>
+<figurecaption>Plot of angle of initial velocity and range.</figurecaption>
+
+<p>Intuitively, throwing the particle with angle 0&deg; (straight down) and 90&deg; (straight up) gives no range, while it is seen that throwing the particle at 45&deg; gives us the maximum range.</p>
+<p>One thing to note is that these equations <i>only work</i> if the floor is completely flat. Thankfully, most of our problems are on flat flooring.</p>
+
+<example hard>
+<h4>Question 2</h4>
+(HRK Q4.13) A shot-putter heaves a shot from above ground level. The launch angle that will produce the longest range is less than 45°; that is, a flatter trajectory has a longer range. Explain why.<br><br>
+<h4>Solution<button onclick="toggle(this,'sol8')">v</button></h4>
+<section class="solution" id="sol8">
+<p>The reason why 45&deg; gives the highest range at flat floor is because it gives a balance to the horizontal and vertical velocity. With a given initial height, there need not be a balamce, as some of the vertical velocity can be substituted for horizontal velocity (given the height). Thus, the angle may be a little lower than 45&deg;.</p>
+</section>
+
+</example>
+<p>Here is a problem left for the most omniscient reader: Find the optimal angle for the farthest range given the initial height.</p>
+<example hard>
+<h4>Problem 1</h4>
+(HRK P4.8a) In Galileo’s Two New Sciences, the author states that “for elevations [angles of projection] which exceed or fall short of 45°
+by equal amounts, the ranges are equal.” Prove this statement.<br><br>
+<h4>Solution<button onclick="toggle(this,'sol7')">v</button></h4>
+<section class="solution" id="sol7">
+<p>Since <math><mi>sin</mi><mi>(</mi><mi>2&theta;</mi><mi>)</mi></math> is symmetrical about 45&deg;, it follows that the range is symmetrical about 45&deg;. In other words, given an angle &theta;, the complement of that angle will also give the same range.
+<p>Mathematically,</p>
+<eq>
+	<math><mrow><mi>sin</mi><mi>(</mi><mi>2&theta;</mi><mi>)</mi></mrow><mo>=</mo><mrow><mi>sin</mi><mi>(</mi><mi>2</mi><mi>(</mi><mi>90</mi><mo>−</mo><mi>&theta;</mi><mi>)</mi><mi>)</mi></mrow></math>
+</eq>
+</section>
+</example>
+<example>
+<h4>Exercise 4</h4>
+(LSM P4.53) Drew Brees of the New Orleans Saints can throw a football 23.0 m/s (50 mph). If he angles the throw at 10&deg; from the horizontal, what distance
+does it go if it is to be caught at the same elevation as it was thrown?<br><br>
+<h4>Solution<button onclick="toggle(this,'sol5')">v</button></h4>
+<section class="solution" id="sol5">
+<p>This is simply just the range of the projectile. We may use the formula we created.</p>
+<eq>
+	<math><mrow><mi>R</mi></mrow><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mi>sin</mi><mi>(</mi><mi>2&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac><mo>=</mo><mfrac><mrow><msup><mi>(23.0m/s)</mi><mn>2</mn></msup><mi>sin</mi><mi>(</mi><mi>20&deg;</mi><mi>)</mi></mrow><mi>(9.8m/s²)</mi></mfrac></math><br>
+</eq>
+<p>This gives us 18.46m.</p>
+</section>
+</example>
+
+<example>
+<h4>Exercise 5</h4>
+(LSM P4.57) In 1999, Robbie Knievel was the first to jump the Grand Canyon on a motorcycle. At a narrow part of the canyon (69.0 m wide) and traveling 35.8
+m/s off the takeoff ramp, he reached the other side. What was his launch angle?<br><br>
+<h4>Solution<button onclick="toggle(this,'sol6')">v</button></h4>
+<section class="solution" id="sol6">
+<p>We are given the range and the initial velocity, and now we want the launch angle. To do this, we must use the inverse sine function. First, we solve for the sine.</p>
+<eq>
+	<math><mrow><mi>R</mi></mrow><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mi>sin</mi><mi>(</mi><mi>2&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac></math><br>
+	<math><mrow><mi>sin</mi><mi>(</mi><mi>2&theta;</mi><mi>)</mi></mrow><mo>=</mo><mfrac><mrow><mi>R</mi><mi>g</mi></mrow><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup></mrow></mfrac></math><br>
+	<math><mrow><mi>2&theta;</mi></mrow><mo>=</mo><msup><mi>sin</mi><mn>−1</mn></msup><mo>(</mo><mfrac><mrow><mi>R</mi><mi>g</mi></mrow><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup></mrow></mfrac><mo>)</mo><mo>=</mo><msup><mi>sin</mi><mn>−1</mn></msup><mo>(</mo><mfrac><mrow><mi>(69.0m)</mi><mi>(9.8m/s²)</mi></mrow><mrow><msup><mi>(35.8m/s)</mi><mn>2</mn></msup></mrow></mfrac><mo>)</mo></math><br>
+</eq>
+<p>This gives us <math><mrow><mi>2&theta;</mi></mrow><mo>=</mo><mi>31.84&deg;</mi></math>, so the actual angle is 15.92&deg;.</p>
+</section>
+</example>
+
+<p>We may also use a similar method to get the time until the maximum height, which is left as an exercise shown below.</p>
+
+<example hard>
+<h4>Problem 2</h4>
+(HRK E4.49a) Show that the maximum height reached by a projectile is
+<eq>
+	<math><msub><mi>y</mi><mi>max</mi></msub><mo>=</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math>.
+</eq><br>
+<h4>Solution<button onclick="toggle(this,'sol7')">v</button></h4>
+<section class="solution" id="sol7">
+<p>Recall from our study of free falling objects that the maximum height is gained with velocity is zero. We use this fact again to get the time until the velocity is zero.</p>
+<eq>
+	<math><mrow><msub><mi>v</mi><mi>y</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0y</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><mi>t</mi></math><br>
+	<math><mi>(0)</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>−</mo><mi>g</mi><mi>t</mi></math><br>
+	<math><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac><mo>=</mo><mi>t</mi></math><br>
+</eq>
+<p>We then plug in this time into our equation for the height, given constant acceleration.</p>
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0y</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mi>a</mi><mi>y</mi></msub><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><msub><mi>y</mi><mi>max</mi></msub></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mi>)</mi><mi>(</mi><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac><mi>)</mi><mo>−</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mi>(</mi><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac><msup><mi>)</mi><mn>2</mn></msup></math><br>
+	<math><mrow><msub><mi>y</mi><mi>max</mi></msub></mrow><mo>=</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mi>g</mi></mfrac><mo>−</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mi>2g</mi></mfrac></math><br>
+	<math><msub><mi>y</mi><mi>max</mi></msub><mo>=</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math>
+</eq>
+
+<p>Which gives us the desired answer.</p>
+</section>
+</example>
+<footer>
+<a id="unfinished" href="circular-motion.html">Circular Motion ></a>
+</footer>
 </body>
 </html>
