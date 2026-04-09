@@ -1,5 +1,5 @@
 body {
-	font-family:Tahoma;
+	font-family:Tahoma, Geneva, Verdana, sans-serif;
 	margin:auto;
 	width:45%;
 	text-align:justify;
@@ -14,14 +14,14 @@ body {
 header {
 	margin-bottom:2em;
 	text-align:left;
-	font-family:Georgia;
+	font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 footer {
 	margin-top:3em;
 	text-align:right;
 	margin-bottom:2em;
-	font-family:Georgia;
+	font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 nav {
@@ -31,14 +31,14 @@ nav {
 h1 {
 	background-color:#EEEEEE;
 	margin-top:1.5em;
-	font-family:Georgia;
+	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-size:1.5em;
 	text-align:center;
 }
 
 h4 {
 	margin: 0px 0px 0.2em 0px;
-	font-family:Georgia;
+	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-size:1.1em;
 	line-height:1.1em;
 }
@@ -92,9 +92,8 @@ example[hard] {
 	background-color:#F5EAEA;
 }
 
-
 term {
-	font-family:Georgia;
+	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-weight:bold;
 }
 
@@ -212,5 +211,9 @@ intext[tooltip]:focus::after {
 
 	intext[tooltip]::after {
 		opacity:0;
+	}
+
+	math{
+		font-family:'Times New Roman', Times, serif
 	}
 }

@@ -17,16 +17,12 @@
 To tackle more difficult applications of kinematics, we first deal with motion in one-dimension; in other words, we limit particles to move in a line, as shown below.
 </p>
 
-<figure><img src="images/quan5.svg"></figure>
+<figure><img src="images/quan6.svg"></figure>
 <figurecaption>One dimensional motion is motion along a straight line.</figurecaption>
 
 <p>
-While it is useful to have the various quantities of motion, and know how they relate graphically, we don't know how to relate them altogether numerically with equations, and how they relate with the time elapsed. To remedy this, we first add a new quantity that we've been avoiding.
+With calculus, we have found ways to relate the time to the position, velocity, and acceleration. Now, we show how to derive these same equations using algebra, along with sample problems. To begin, we have to do some simplifications.
 </p>
-
-<termdecl>
-<term>Time (<math><mi>t</mi></math>)</term>	– the time elapsed<br>
-</termdecl>
 
 <p>
 So far, we've been using <math><mi>&#x0394</mi><mi>t</mi></math> for our calculations. However, we can simplify that to be a single variable if we use the assumption that we set the initial time to be at zero. 
@@ -86,8 +82,8 @@ This equation relates displacement, velocity, and time. We can use this equation
 <h4>Exercise 1</h4>
 (LSM P3.43) A particle moves in a straight line at a constant velocity of 30 m/s. What is its displacement between t = 0 and t = 5.0 s?
 <br><br>
-<h4>Solution<button onclick="toggle(this,'sol1')">v</button></h4>
-<section class="solution" id="sol1">
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>
 	Since the velocity is constant, the average velocity must just be <math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><mi>30m/s</mi></math>. The time starts at 0s and ends at 5s, which gives us <math><mi>t</mi><mo>=</mo><mi>5s</mi></math>. 
 	We can assume for that the initial position of the object is at 0m, given that it wasn't stated. With this, we can get the position of the object.
@@ -111,16 +107,20 @@ This gives us our answer, being a displacement of 150m.
 </eq>
 
 <p>
-	This equation seems similar to the one we collected before, however it relates velocity, acceleration, and time.
+	This equation seems similar to the one we collected before, however it relates velocity, acceleration, and time. Further, it aligns with what we got from integrating a constant acceleration.
 </p>
+<eq>
+	<math><mo>∫</mo><mi>a</mi><mi>dt</mi><mo>=</mo><mi>a</mi><mi>t</mi><mo>+</mo><mi>C</mi><mo>=</mo><mi>a</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</eq>
+
 
 <example>
 <h4>Exercise 2</h4>
 (HRK E2.45) A world’s land speed record was set by Colonel John P. Stapp when, on March 19, 1954, he rode a rocket-propelled sled that moved down a track at 1020 km/h (= 282 m/s). He and the sled were
 brought to a stop in 1.4 s. What acceleration did he experience? 
 <br><br>
-<h4>Solution<button onclick="toggle(this,'sol2')">v</button></h4>
-<section class="solution" id="sol2">
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>
 	It appears that we don't have enough information; we know <math><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mi>282m/s</mi></math> and <math><mi>t</mi><mo>=</mo><mi>1.4s</mi></math>, however it seems we don't know the final velocity.<br>
 	However, reading carefully, it is stated that he was "brought to a stop", which means that the final velocity is at rest, or <math><mi>v</mi><mo>=</mo><mi>0m/s</mi></math>. We can now solve for <math><mi>a</mi></math>:
@@ -139,8 +139,8 @@ This gives us our answer, being an acceleration of <math><mi>a</mi><mo>=</mo><mi
 (LSM P3.48) At t = 10 s, a particle is moving from left to right with a speed of 5.0 m/s. At t = 20 s, the particle is moving right to left with a speed of 8.0 m/s.
 Assuming the particle’s acceleration is constant, determine <br>(a) its acceleration, <br>(b) its initial
 velocity, and <br>(c) the instant when its velocity is zero.<br><br>
-<h4>Solution<button onclick="toggle(this,'sol3')">v</button></h4>
-<section class="solution" id="sol3">
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>
 	Setting "going left to right" as positive, we get the initial velocity at 5m/s and final velocity at −8m/s. The time elapsed is also given, at 10s. This is enough to find the acceleration.
 </p>
@@ -206,14 +206,20 @@ velocity, and <br>(c) the instant when its velocity is zero.<br><br>
 <figure><img src="images/graph8.svg"></figure>
 <figurecaption>The position-time graph of a particle under constant acceleration.</figurecaption>
 
+<p>
+	Further, this equation aligns with what we collected from integrating from constant acceleration twice; we have successfully derived it from algebraic principles. 
+</p>
+<eq>
+	<math><mo>∫</mo><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>dt</mi><mo>=</mo><mrow><mo>∫</mo><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><msub><mi>t</mi></msub><mi>)</mi><mi>dt</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>∫</mo><mi>dt</mi><mo>+</mo><mi>a</mi><mo>∫</mo><mi>t</mi><mi>dt</mi><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></math><br>
+</eq>
 <example>
 <h4>Exercise 4</h4>
 (LSM P3.90a) An ambulance driver is rushing a patient to the hospital. While traveling at 72 km/h, she notices the traffic light at the upcoming intersections
 has turned amber. To reach the intersection before the light turns red, she must travel 50 m in 2.0 s. What minimum acceleration must the ambulance have to reach the intersection
 before the light turns red?
 <br><br>
-<h4>Solution<button onclick="toggle(this,'sol4')">v</button></h4>
-<section class="solution" id="sol4">
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>
 	We have enough information to use our third equation; the displacement 50m, the time 2s, and the initial velocity 72km/h. We first convert 72km/h to m/s:
 </p>
@@ -240,8 +246,8 @@ We can now use the third equation by plugging the values in. We note that the in
 <h4>Exercise 5</h4>
 (LSM P3.48a) A particle has a constant acceleration of 6.0 m/s². If its initial velocity is 2.0 m/s, at what time is its displacement 5.0 m?
 <br><br>
-<h4>Solution<button onclick="toggle(this,'sol5')">v</button></h4>
-<section class="solution" id="sol5">
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>
 	We are given three values, the acceleration at 6.0m/s², the initial velocity at 2.0m/s, and the displacement at 5.0m. This is enough to use our third equation to get the time:
 </p>
@@ -297,8 +303,8 @@ We can either factor this (it is factorable!) or use the quadratic equation. Eit
 (LSM P3.62a) An unwary football player collides with a padded goalpost while running at a velocity of 7.50 m/s and comes to a full stop after compressing the
 padding and his body 0.350 m. What is his acceleration? 
 <br><br>
-<h4>Solution<button onclick="toggle(this,'sol6')">v</button></h4>
-<section class="solution" id="sol6">
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>
 	We aren't given the time, so we should use the time-independent equation. We have a initial velocity of 7.50m/s, final velocity at rest, and a displacement of −0.350m (negative as it "compresses" the padding, so it moves back into the person).<br>This gives us enough information to get the acceleration.
 </p>
@@ -320,8 +326,8 @@ The deceleration is then <math><mi>a</mi><mo>=</mo><mi>−80.4m/s²</mi></math>.
 <h4>Question 1</h4>
 (LSM CQ3.16) When analyzing the motion of a single object, what is the required number of known physical variables that are needed to solve for the unknown quantities using the kinematic equations?
 <br><br>
-<h4>Answer<button onclick="toggle(this,'sol7')">v</button></h4>
-<section class="solution" id="sol7">
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>
 	We need three variables of the five (displacement, initial and final velocity, time, and acceleration) to solve the other two.
 </p>
@@ -335,8 +341,10 @@ The deceleration is then <math><mi>a</mi><mo>=</mo><mi>−80.4m/s²</mi></math>.
 </section>
 </example>
 
+<p>Here is a fun fact: the velocities and accelerations used in the kinematic equations are instantaneous, as they are the velocities and accelerations at a given instance of time.</p>
+
 <footer>
-<a href="motion-graphs-II.html">Motion Graphs II ></a>
+<a href="free-fall.html">Free Fall ></a>
 </footer>
 </body>
 </html>

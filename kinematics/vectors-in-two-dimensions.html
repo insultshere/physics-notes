@@ -28,7 +28,7 @@
 <example>
 <h4>Question 1</h4>
 (HRK Q2.6) Can the speed of a particle ever be negative? If so, give an example; if not, explain why.<br><br>
-<h4>Answer<button onclick="toggle(this,'sol1')">v</button></h4>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution" id="sol1">
 No, it can't. Velocity can be negative, as we can either go left and right or go up and down, however speed must always be positive.
 </section>
@@ -56,7 +56,7 @@ No, it can't. Velocity can be negative, as we can either go left and right or go
 (HRK E2.4a) What are the components of a vector <math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover></math> in the xy plane if
 its direction is 252° counterclockwise from the positive x axis
 and its magnitude is 7.34 units?<br><br>
-<h4>Solution<button onclick="toggle(this,'sol2')">v</button></h4>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution" id="sol2">
 The diagram below shows the vector. We then calculate its components.
 <figure><img src="images/vec4.svg"></figure>
@@ -73,7 +73,7 @@ The diagram below shows the vector. We then calculate its components.
 <example>
 <h4>Exercise 2</h4>
 (HRK E2.3a) Vector <math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover></math> has a magnitude of 5.2 units and is directed east. Vector <math><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x2192</mo></mover></math> has a magnitude of 4.3 units and is directed 35° west of north. Find <math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x2192</mo></mover></math>.<br><br>
-<h4>Solution<button onclick="toggle(this,'sol3')">v</button></h4>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution" id="sol3">
 <figure><img src="images/vec5.svg"></figure>
 <figurecaption>The two vectors added up in the xy plane.</figurecaption>
@@ -99,7 +99,7 @@ The diagram below shows the vector. We then calculate its components.
 <example>
 <h4>Exercise 3</h4>
 (LSM P4.18)  The position of a particle changes from <math><mover accent="true"><mrow><msub><mi>r</mi><mi>1</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(2.0î + 3.0ĵ)</mi></math> to <math><mover accent="true"><mrow><msub><mi>r</mi><mi>2</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(−4.0î + 3.0ĵ)</mi></math>. What is the particle’s displacement?<br><br>
-<h4>Solution<button onclick="toggle(this,'sol4')">v</button></h4>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution" id="sol4">
 <p>We first parse what the two vectors mean. The first vector <math><mover accent="true"><mrow><msub><mi>r</mi><mi>1</mi></msub></mrow><mo>&#x2192</mo></mover></math> has a length of 2 going to the right and a height of 3 going up, while the other vector <mover accent="true"><mrow><msub><mi>r</mi><mi>2</mi></msub></mrow><mo>&#x2192</mo></mover> has a length of 4 going to the left (hence the negative sign) and a height of 3 going up also.</p>
 <figure><img src="images/vec7.svg"></figure>
@@ -118,7 +118,7 @@ The diagram below shows the vector. We then calculate its components.
 <example>
 <h4>Problem 1</h4>
 (LSM P4.18)  A boat heads out into a lake with an acceleration of <math><mi>(2.0î)</mi></math>m/s². A strong wind is pushing the boat, giving it an additional velocity of <math><mi>(2.0î + 1.0ĵ)</mi></math>m/s.<br>(a) What is the velocity of the boat at t = 10s? <br>(b) What is the position of the boat at t = 10s?<br><br>
-<h4>Solution<button onclick="toggle(this,'sol5')">v</button></h4>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution" id="sol5">
 <p>The acceleration appears to only move in the x-axis, so the velocity's y-component will not be affected. We can calculate the velocity by just using our kinematic equations. To make it less confusing, let's add a subscript of <math><mi>x</mi></math> and <math><mi>y</mi></math> to determine what dimension we are using.</p>
 <eq>
@@ -143,7 +143,7 @@ The diagram below shows the vector. We then calculate its components.
 <example>
 <h4>Problem 2</h4>
 (LSM P4.30) The acceleration of a particle is a constant. At t = 0s, the velocity of the particle is <math><mi>(10î + 20ĵ)</mi></math>m/s. At t = 4s, the velocity is <math><mi>(10ĵ)</mi></math>m/s. What is the particle’s acceleration?<br><br>
-<h4>Solution<button onclick="toggle(this,'sol6')">v</button></h4>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution" id="sol6">
 <p>The x-component of velocity has gone from 10m/s to 0m/s in four seconds. We can plug this into our second kinematic equation.</p>
 <eq>
@@ -158,6 +158,26 @@ The diagram below shows the vector. We then calculate its components.
 	<math><mrow><mi>(−2.5m/s²)</mi></mrow><mo>=</mo><msub><mi>a</mi><mi>y</mi></msub></math><br>
 </eq>
 <p>We thus get that the acceleration vector is given by <math><mi>(−2.5î + −2.5ĵ)</mi></math>m/s².</p>
+</section>
+</example>
+
+<example hard>
+<h4>Problem 3</h4>
+(LSM P4.27a) A particle’s acceleration is <math><mi>(4.0î + 3.0ĵ)</mi></math>m/s². At t = 0, its position and velocity are zero. What are the particle’s position and velocity as functions of time?<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution" id="sol6">
+<p>We must use calculus to get the velocity and position functions. Since the initial velocity and position is zero, we may drop the arbitrary constant.</p>
+<p>Starting with the x-component, we first get the velocity then position function.</p>
+<eq>
+	<math><mrow><mo>∫</mo><mi>(</mi><mi>4.0</mi><mi>)</mi><mi>dt</mi><mo>=</mo><mi>4.0</mi><mi>t</mi></math><br>
+	<math><mrow><mo>∫</mo><mi>(</mi><mi>4.0</mi><mi>t</mi><mi>)</mi><mi>dt</mi><mo>=</mo><mi>2.0</mi><msup><mi>t</mi><mn>2</mn></msup></math>
+</eq>
+<p>We follow a similar way for the vertical component.</p>
+<eq>
+	<math><mrow><mo>∫</mo><mi>(</mi><mi>3.0</mi><mi>)</mi><mi>dt</mi><mo>=</mo><mi>3.0</mi><mi>t</mi></math><br>
+	<math><mrow><mo>∫</mo><mi>(</mi><mi>3.0</mi><mi>t</mi><mi>)</mi><mi>dt</mi><mo>=</mo><mfrac><mrow><mi>3.0</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><mi>2</mi></mfrac></math>
+</eq>
+<p>This gives us the velocity function is <math><mi>(4.0tî + 3.0tĵ)</mi></math>m/s, while the position function is <math><mi>(</mi><mi>2.0</mi><msup><mi>t</mi><mn>2</mn></msup><mi>î</mi><mo>+</mo><mfrac><mrow><mi>3.0</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><mi>2</mi></mfrac><mi>ĵ</mi><mi>)</mi></math>m/s.</p>
 </section>
 </example>
 <footer>

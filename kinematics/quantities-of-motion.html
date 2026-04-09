@@ -43,8 +43,8 @@ One property is that distance will always be greater than or equal to the displa
 <example>
 <h4>Question 1</h4>
 (LSM CQ3.5) Does a car’s odometer measure distance traveled or displacement?<br><br>
-<h4>Answer<button onclick="toggle(this,'sol1')">v</button></h4>
-<section class="solution" id="sol1">
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 A car's odometer measures <i>distance</i> travelled. If it measured displacement, it would be zero if you parked your car at the garage!
 </section>
 </example>
@@ -52,8 +52,8 @@ A car's odometer measures <i>distance</i> travelled. If it measured displacement
 <example>
 <h4>Exercise 1</h4>
 (HRK E2.11) A woman walks 250 m in the direction 35° east of north, then 170 m directly east. Compare the magnitude of her displacement with the distance she walked.<br><br>
-<h4>Solution<button onclick="toggle(this,'sol2')">v</button></h4>
-<section class="solution" id="sol2">
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 The diagram can be drawn as below, with the original position at the origin.
 <figure><img src="images/quan2.svg"></figure>
 <figurecaption>The movement of the woman.</figurecaption>
@@ -74,7 +74,12 @@ Recall that displacement may be less than the distance; this shows this fact.
 
 <p>
 Recall that we noted that motion is the change of position over a certain time. With this, it is a necessity that we introduce time to quantify how slow or fast an object is moving.
-With this, we introduce two new quantities again.
+</p>
+<termdecl>
+<term>Time (<math><mi>t</mi></math>)</term>	– the time elapsed<br>
+</termdecl>
+<p>
+Now that we have added time, we can now analyze how fast or slow a certain motion occurs, which gives us two new quantities.
 </p>
 
 <termdecl>
@@ -95,7 +100,8 @@ Here, <math><mi>&#x0394</mi><mi>x</mi></math> (read as "delta x") means the chan
 </p>
 
 <eq>
-<math><mi>&#x0394</mi><mi>x</mi><mo>=</mo><mo>(</mo><msub><mi>x</mi><mi>f</mi></msub><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></math></eq>
+<math><mi>&#x0394</mi><mi>x</mi><mo>=</mo><mo>(</mo><msub><mi>x</mi><mi>f</mi></msub><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></math>
+</eq>
 
 <p>
 As with displacement and distance, velocity and speed are different as well. Velocity measures the displacement done over a length of time, while speed measures the distance travelled.
@@ -111,17 +117,17 @@ Just like distance may not equal displacement, velocity may not equal speed. If 
 <example>
 <h4>Question 2</h4>
 (LSM CQ3.8) Does the speedometer of a car measure speed or velocity?<br><br>
-<h4>Answer<button onclick="toggle(this,'sol3')">v</button></h4>
-<section class="solution" id="sol3">
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 A car's speedometer measures the <i>speed</i> of travel. If it measured velocity, it would read negative when you start to turn around!
 </section>
 </example>
 
 <example>
-<h4>Exercise 1</h4>
+<h4>Exercise 2</h4>
 (LSM P3.30) A woodchuck runs 20 m to the right in 5 s, then turns and runs 10 m to the left in 3 s.<br>(a) What is the average velocity of the woodchuck?<br>(b) What is its average speed?<br><br>
-<h4>Solution<button onclick="toggle(this,'sol4')">v</button></h4>
-<section class="solution" id="sol4">
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 The displacement of the woodchuck is <math><mi>20m</mi><mo>+</mo><mi>(−10m)</mi><mo>=</mo><mi>10m</mi></math>. The total time elapsed is then 8s. With this, we can calculate the velocity:
 
 <eq>
@@ -135,6 +141,49 @@ For the speed, we add the two lengths together (since we need the distance), so 
 </eq>
 </section>
 </example>
+<p>
+While it is useful to have the average velocity, we sometimes need the instantaneous velocity of a particle; in other words, the velocity of a particle at a given instance of time.
+</p>
+<p>
+To help find this, let's say we can get the position of a particle at any given time. For example, let's say the object is moving at a constant velocity, so at 1s it is at 1m, while at 2s it is at 2m. In other words, we can plug in time, and get a position value out.
+</p>
+
+<figure><img src="images/quan4.svg"></figure>
+<figurecaption>Position as a function of time.</figurecaption>
+
+<p>We can write this as a function, or <math><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi></math>. Now, let's imagine having a certain time <math><mi>t</mi></math> and adding a little more to it, let's call <math><mi>&Delta;</mi><mi>t</mi></math>.</p>
+
+<figure><img src="images/quan5.svg"></figure>
+<figurecaption>Position at time <math><mi>t</mi></math> and <math><mi>t</mi><mo>+</mo><mi>&Delta;</mi><mi>t</mi></math>.</figurecaption>
+
+<p>If we want the average velocity between these two values, we use our formula.</p>
+
+<eq>
+<math><mrow><mi>v</mi></mrow><mo>=</mo><mfrac><mrow><mi>&#x0394</mi><mi>x</mi></mrow><mrow><mi>&#x0394</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>(</mo><msub><mi>x</mi><mi>f</mi></msub><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></mrow><mrow><mo>(</mo><msub><mi>t</mi><mi>f</mi></msub><mo>−</mo><msub><mi>t</mi><mi>0</mi></msub><mo>)</mo></mrow></mfrac></math>
+</eq>
+
+<p>Now, let's subtitute in our two values.</p>
+
+<eq>
+<math><mrow><mi>v</mi></mrow><mo>=</mo><mfrac><mrow><mi>x(</mi><mi>t</mi><mo>+</mo><mi>&Delta;</mi><mi>t</mi><mi>)</mi><mo>−</mo><mi>x(</mi><mi>t</mi><mi>)</mi></mrow><mrow><mi>t</mi><mo>+</mo><mi>&Delta;</mi><mi>t</mi><mo>−</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>x(</mi><mi>t</mi><mo>+</mo><mi>&Delta;</mi><mi>t</mi><mi>)</mi><mo>−</mo><mi>x(</mi><mi>t</mi><mi>)</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math>
+</eq>
+
+<p>Does this look familiar? This looks like the equation for the limit-definition of a <intext tabindex="0" tooltip="the derivative of a function gives its slope with respect to a variable">derivative</intext>. Letting <math><mi>&Delta;</mi><mi>t</mi></math> approach zero, we get that the derivative of position is velocity.</p>
+
+<eq>
+	<math><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>v</mi></math>
+</eq>
+
+<p>How is this useful? We can now get the velocity of an object at any given time if we please. We examine this in more detail in our study of motion graphs.</p>
+
+<example hard>
+<h4>Question 3</h4>
+(HRK Q2.12) When the velocity is constant, can the average velocity over any time interval differ from the instantaneous velocity at any instant? If so, give an example; if not, explain why.<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+No. The instantaneous velocity must be the same for every single given time, and the average of a constant value is just the constant itself.
+</section>
+</example>
 
 <p>
 Most particles don't have a constant velocity or speed. For example, <intext tabindex="0" tooltip="a fundamental force which pulls objects together">gravity</intext> pulls us all down at a constant rate. This rate of change is helpful, so we should give a quantity to it.
@@ -146,6 +195,10 @@ Most particles don't have a constant velocity or speed. For example, <intext tab
 Note that unlike what you may think, acceleration can be negative, as it is a <intext tabindex="0" tooltip="A quantity with magnitude and direction">vector.</intext> Negative acceleration is also called deceleration. If acceleration is zero, it means that the velocity is constant. In other words, the change of velocity over time is zero.
 </p>
 
+<figure><img src="images/quan7.svg"></figure>
+<figurecaption>Acceleration can be negative, called deceleration.</figurecaption>
+
+<p>As can be seen, deceleration occurs when the velocity and acceleration don't share the same sign; here, positive means "going down", while negative means "going up".</p>
 <p>
 Calculating the average acceleration is similar to calculating the average velocity. It is the change in velocity over the time elapsed to change that velocity.
 </p>
@@ -157,11 +210,31 @@ Calculating the average acceleration is similar to calculating the average veloc
 <example>
 <h4>Question 3</h4>
 (HRK Q2.15) Can the velocity of an object reverse direction when its acceleration is constant? If so, give an example; if not, explain why.<br><br>
-<h4>Answer<button onclick="toggle(this,'sol5')">v</button></h4>
-<section class="solution" id="sol5">
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 Yes.<br>This is possible if the direction of acceleration is the opposite direction of the velocity. The particle slows down, then goes the other way, as the velocity is slowly going the other way.
 </section>
 </example>
+
+<example>
+<h4>Exercise 3</h4>
+(LSM P3.37) A cheetah can accelerate from rest to a speed of 30.0 m/s in 7.00 s. What is its acceleration?<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+While not stated, we can infer the initial velocity is 0m/s, as it was at rest. Then, it accelerated to 30m/s. The total time elapsed is then 7s. With this, we can calculate the acceleration:
+
+<eq>
+<math><mrow><mfrac><mrow><mi>(</mi><mi>30.0m/s − 0m/s</mi><mi>)</mi></mrow><mrow><mi>7.00s</mi></mrow></mfrac><mo>=</mo><mi>4.29m/s²</mi></mrow></math>
+</eq>
+</section>
+</example>
+
+<p>Recall what we did to get the instantaneous velocity; we can do the same argument to get the instantaneous acceleration. We will analyze this later.</p>
+
+<eq>
+	<math><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>a</mi></math>
+</eq>
+
 
 <p>One thing to note is that some of these quantities require a direction; for example, velocity doesn't make sense unless you tell which way you are going, and acceleration requires a direction to tell if it is decelerating or accelerating. Later, we will find out that these things which need direction are called <intext tabindex="0" tooltip="A quantity with magnitude and direction">vectors</intext>.</p>
 

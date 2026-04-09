@@ -13,8 +13,7 @@
 <header>
 <a href="index.html">< Return</a>
 </header>
-<p>With our kinematic equations, we can now relate the position and velocity of an object with respect to time.</p>
-<p>In our study of motion graphs, we saw that the slope of position is velocity, and the slope of velocity is acceleration. This "rate of change" corresponds to taking the <intext tabindex="0" tooltip="the derivative of a function gives its slope with respect to a variable">derivative</intext> of a function.</p>
+<p>In the previous tutorial, we saw that the slope of position is velocity, and the slope of velocity is acceleration. This "rate of change" corresponds to taking the <intext tabindex="0" tooltip="the derivative of a function gives its slope with respect to a variable">derivative</intext> of a function.</p>
 
 <figure><img src="images/func2.svg"></figure>
 <figurecaption>The slope of position is given by its velocity.</figurecaption>
@@ -25,7 +24,7 @@
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>t</mi><mo>=</mo><mi>1</mi></math>
 </eq>
 
-<p>Generalizing, we thus know that the derivative of position gives us the velocity. Note that we differentiate with respect to time; this means that we want to know how the position changes over time.</p>
+<p>This fact can be easily shown by this relation that we saw some time back; the derivative of postion with respect to time is velocity. We differentiate with respect to time as we want to find out how it changes with time.</p>
 
 <eq>
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi></math>
@@ -34,8 +33,8 @@
 <example hard>
 <h4>Exercise 1</h4>
 (LSM P3.34) An object has a position function <math><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>5</mi><mi>t</mi><mo>m</mo></math>. What is the velocity as a function of time? <br><br>
-<h4>Answer<button onclick="toggle(this,'sol1')">v</button></h4>
-<section class="solution" id="sol1">
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>To get the velocity function given the position function, we just take the derivative of it with respect to time.</p>
 <eq>
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>(</mi><mi>5</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>5</mi></math>
@@ -43,19 +42,7 @@
 </section>
 </example>
 
-<p>Analyzing the kinematic equation which relates velocity and position, it aligns with what we see. Constant velocity gives us a linear equation, with the velocity as the slope.</p>
-
-<eq>
-	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><mi>v</mi><mi>&#773;</mi><msub><mi>t</mi></msub></math>
-</eq>
-
-<p>How about velocity and acceleration? Analyzing our kinematic equation, we see that it is also linear.</p>
-
-<eq>
-	<math><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><msub><mi>t</mi></msub></math>
-</eq>
-
-<p>Recalling our motion graphs, we also saw that a constant acceleration gives a linear velocity. We also noted that the slope of velocity is the acceleration.</p>
+<p>How about velocity and acceleration? Recalling our motion graphs, we also saw that a constant acceleration gives a linear velocity. We also noted that the slope of velocity is the acceleration.</p>
 
 <figure><img src="images/func3.svg"></figure>
 <figurecaption>The slope of velocity is given by its acceleration.</figurecaption>
@@ -80,21 +67,21 @@
 <p>Then, taking the derivative again gives us the acceleration. This aligns with what we saw.</p>
 
 <eq>
-	<math><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>t</mi></mrow></mfrac><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>a</mi><mi>(</mi><mi>t</mi><mi>)</mi></math>
+	<math><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>a</mi><mi>(</mi><mi>t</mi><mi>)</mi></math>
 </eq>
 
 <example hard>
 <h4>Exercise 2</h4>
 (LSM P3.86) A particle moves along the x-axis according to the equation <math><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>2.0</mi><mo>−</mo><mi>4.0</mi><msup><mi>t</mi><mn>2</mn></msup><mo>m</mo></math>. What are the velocity and acceleration at 2.0s and 5.0s? <br><br>
-<h4>Answer<button onclick="toggle(this,'sol2')">v</button></h4>
-<section class="solution" id="sol2">
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>We first get the velocity function by differenatiating the position function with respect to time.</p>
 <eq>
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>(</mi><mi>2.0</mi><mo>−</mo><mi>4.0</mi><msup><mi>t</mi><mn>2</mn></msup><mi>)</mi><mo>=</mo><mo>−</mo><mi>8</mi><mi>t</mi></math>
 </eq>
 <p>This gives us the velocity at the given times is −16m/s and −40m/s respectively. Then, we differentiate this again to get our acceleration.</p>
 <eq>
-	<math><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>t</mi></mrow></mfrac><mi>(</mi><mi>2.0</mi><mo>−</mo><mi>4.0</mi><msup><mi>t</mi><mn>2</mn></msup><mi>)</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>(</mi><mo>−</mo><mi>8</mi><mi>t</mi><mi>)</mi><mo>=</mo><mo>−</mo><mi>8</mi></math>
+	<math><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mi>(</mi><mi>2.0</mi><mo>−</mo><mi>4.0</mi><msup><mi>t</mi><mn>2</mn></msup><mi>)</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>(</mi><mo>−</mo><mi>8</mi><mi>t</mi><mi>)</mi><mo>=</mo><mo>−</mo><mi>8</mi></math>
 </eq>
 <p>This shows that the acceleration is constant; it is −8m/s² for both given times.</p>
 </section>
@@ -124,8 +111,8 @@
 <h4>Exercise 3</h4>
 (LSM P3.78) The acceleration of a particle varies with time according to the equation <math><mi>a</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>p</mi><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mi>q</mi><msup><mi>t</mi><mn>3</mn></msup><mo>m</mo></math>. Initially, the velocity and position are zero. 
 <br>(a) What is the velocity as a function of time? <br>(b) What is the position as a function of time?<br><br>
-<h4>Answer<button onclick="toggle(this,'sol3')">v</button></h4>
-<section class="solution" id="sol3">
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
 <p>To get the velocity and position functions, we must integrate the acceleration function with respect to time.</p>
 <eq>
 	<math><mrow><mo>∫</mo><mi>(</mi><mi>p</mi><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mi>q</mi><msup><mi>t</mi><mn>3</mn></msup><mi>)</mi><mi>dt</mi><mo>=</mo><mi>(</mi><mfrac><mrow><mi>p</mi><msup><mi>t</mi><mn>3</mn></msup></mrow><mi>3</mi></mfrac><mo>−</mo><mfrac><mrow><mi>q</mi><msup><mi>t</mi><mn>4</mn></msup></mrow><mi>4</mi></mfrac><mi>)</mi><mo>+</mo><mi>C</mi></mrow></math>
@@ -145,14 +132,22 @@
 </eq>
 </section>
 </example>
-<p>One use of this fact is that we can integrate our equation for the velocity of an object given time to get the position of an object. Since we set acceleration as a constant, we can pull it out of the equation.</p>
+<p>We saw above how to use integrals to integrate with respect to changing acceleration. However, most of the time acceleration is constant. Let's try integrating a constant acceleration, as shown below.</p>
+
 <eq>
-<math><mrow><mo>∫</mo><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><msub><mi>t</mi></msub><mi>)</mi><mi>dt</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>∫</mo><mi>dt</mi><mo>+</mo><mi>a</mi><mo>∫</mo><mi>t</mi><mi>dt</mi><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></math>
+<math><mo>∫</mo><mi>a</mi><mi>dt</mi><mo>=</mo><mi>a</mi><mi>t</mi><mo>+</mo><mi>C</mi><mo>=</mo><mi>a</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+<math><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
 </eq>
-<p>As can be seen, this function is exactly the same as the one we found via manipulating our kinematic equations.</p>
+
+<p>Since we know the arbitrary constant <math><mi>C</mi></math> becomes the initial velocity, we set that as <math><msub><mi>v</mi><mi>0</mi></msub></math>. We can integrate this again to get our position function.</p>
+<eq>
+<math><mrow><mo>∫</mo><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><msub><mi>t</mi></msub><mi>)</mi><mi>dt</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>∫</mo><mi>dt</mi><mo>+</mo><mi>a</mi><mo>∫</mo><mi>t</mi><mi>dt</mi><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></math><br>
+<math><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math>
+</eq>
+<p>Now, we have two functions that can give us the position and velocity of a particle given constant acceleration. These two equations are part of a series of four equations called the kinematic equations, which we will derive with algebra in the next tutorial.</p>
 
 <footer>
-<a href="free-fall.html">Free Fall ></a>
+<a href="kinematic-equations.html">Kinematic Equations ></a>
 </footer>
 </body>
 </html>
