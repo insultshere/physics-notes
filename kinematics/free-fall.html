@@ -168,7 +168,53 @@ this height? <br>(c) How much higher will the ball go?
 <p>Which gives us the maximum height of 38.3m. Given its already gone up 36.8m, it has 1.50m left to go.</p>
 </section>
 </example>
-<p>Like before, you should be wary of values which are implied, and the correct sign conventions for the values. This is especially important when dealing with more complicated problems dealing with two objects in motion.</p>
+<example hard>
+<h4>Problem 1</h4>
+(LSM P3.111) An object is dropped from a roof of a building of height <math><mi>h</mi></math>. During the last second of its descent, it drops a distance <math><mi>h</mi><mo>/</mo><mi>3</mi></math>. Calculate the height of the building.
+<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>This problem is a lot harder than the other problems as it feels that we have too little information; we don't know how fast the object was going at impact, and how long it took to fall; we only thing we can glean is that started from rest.</p>
+<p>Let's just make up some values and see where that gets us. We know that the object hits the ground at some time we don't know, so let's let that time be <math><mi>T</mi></math>. It starts from max height, and ends at the ground. We drop the velocity term as it is zero (from rest).</p>
+
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>h</mi><mo>−</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>T</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>h</mi></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>T</mi><mn>2</mn></msup></math><br>
+</eq>
+
+<p>We also know that it descended the last third of the building in one second, so in the remaining <math><mi>(</mi><mi>T</mi><mo>−</mo><mi>1</mi><mi>)</mi></math>s it descended two thirds of the building. This gives us this equation.</p>
+
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mfrac><mi>1</mi><mi>3</mi></mfrac><mi>h</mi></mrow><mo>=</mo><mi>h</mi><mo>−</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mi>(</mi><mi>T</mi><mo>−</mo><mi>1</mi><msup><mi>)</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mfrac><mi>2</mi><mi>3</mi></mfrac><mi>h</mi></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mi>(</mi><mi>T</mi><mo>−</mo><mi>1</mi><msup><mi>)</mi><mn>2</mn></msup></math><br>
+</eq>
+
+<p>Now we are getting somewhere. We have two values for height, so we substitute the first value of height into the second equation.</p>
+
+<eq>
+	<math><mrow><mfrac><mi>2</mi><mi>3</mi></mfrac><mo>(</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>T</mi><mn>2</mn></msup><mo>)</mo></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mi>(</mi><mi>T</mi><mo>−</mo><mi>1</mi><msup><mi>)</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mfrac><mi>1</mi><mi>3</mi></mfrac><msup><mi>T</mi><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(</mi><msup><mi>T</mi><mn>2</mn></msup><mo>−</mo><mi>2</mi><mi>T</mi><mo>+</mo><mi>1</mi><mi>)</mi></math><br>
+	<math><mi>0</mi><mo>=</mo><msup><mi>T</mi><mn>2</mn></msup><mo>−</mo><mi>6</mi><mi>T</mi><mo>+</mo><mi>3</mi></math><br>
+</eq>
+
+<p>Using the quadratic equation, we get that t = 5.45s and t = 0.55s. We discard the time value less than one second since that violates the rules of the problem. Thus, we substitute t = 5.45s to our equation.</p>
+<eq>
+	<math><mrow><mi>h</mi></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>T</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>h</mi></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>(5.45s)</mi><mn>2</mn></msup></math><br>
+</eq>
+<p>Which gives us the height of the building is 145.5m.</p>
+</section>
+</example>
+<p>To end this tutorial on free fall, we show how we can get these equations via integrating with respect to the constant gravitational acceleration. Given that we set positive as "going up", the gravitational acceleration is thus <math><mo>−</mo><mi>g</mi></math>.</p>
+<eq>
+<math><mo>∫</mo><mi>(</mi><mo>−</mo><mi>g</mi><mi>)</mi><mi>dt</mi><mo>=</mo><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>−</mo><mi>g</mi><mi>t</mi></math><br>
+</eq>
+<p>Integrating this again gives us the position function.</p>
+<eq>
+<math><mrow><mo>∫</mo><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mo>−</mo><mi>g</mi><mi>t</mi><mi>)</mi><mi>dt</mi><mo>=</mo><mi>y</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>−</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></math><br>
+</eq>
 <footer>
 <a href="multiple-objects-in-motion.html">Multiple Objects in Motion ></a>
 </footer>

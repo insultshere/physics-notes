@@ -13,11 +13,47 @@
 <header>
 <a href="index.html">< Return</a>
 </header>
-<p>We observe things going around other things a lot in our lives. The Earth we stand on is going around the sun, while the moon goes around us. This type of motion is called circular motion.</p>
+<p>To conclude our brief overview on kinematics, we consolidate all that we have learned (with changing velocities and acceleration) with a study on things going around other things.</p>
+<p>We observe this phenomenon a lot in our lives. The Earth we stand on is going around the sun, while the moon goes around us; the blades on an electric fan move around its pivot. This type of motion is called circular motion.</p>
 <figure><img src="images/circ1.svg"></figure>
 <figurecaption>A particle going around in a circle.</figurecaption>
 <p>Circular motion is described as when a particle goes around in a circle. One may notice that in the above figure the speed is constant; the magnitude of how fast it is going around the circle is the same. However, the velocity changes, as the direction of movement changes.</p>
-<p>What is the direction of this velocity at any given time? We go back to how we defined <intext tooltip="velocity at a given instance of time; not an average">instantaneous</intext> velocity: let's analyze the velocity at two given positions, changing over time.</p>
+<example>
+<h4>Question 1</h4>
+(HRK Q4.29)  Is it possible to be accelerating if you are traveling at constant
+speed? Is it possible to round a curve with zero acceleration?
+With constant acceleration? <br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Yes, you can stay in constant speed while accelerating, given that the acceleration changes the velocity's direction and not the magnitude; like in circular motion.</p>
+<p>This reliance on acceleration means you can't turn or change direction unless there is an acceleration acting upon you. Further, while the magnitude of acceleration can be constant, the direction of acceleration also changes while turning, so it can't be constant.</p>
+</section>
+</example>
+<p>It is usually much easier to describe circular motion by how fast the object revolves around the center, or how long it takes to go around a circle. Thus, we define two new terms.</p>
+<termdecl>
+	<term>Period (<math><mi>T</mi></math>)</term> - the amount of time to do one revolution<br>
+	<term>Angular velocity (<math><mi>&omega;</mi></math>)</term> - how fast the angle of a particle changes
+</termdecl>
+<p>To get the period, recall the <intext tabindex="0" tooltip="the perimeter of a circle, given by 2&pi;r">circumference</intext> of a circle. Given the velocity, we can get the amount of time to go one circumference.</p>
+<eq>
+	<math><mi>v</mi><mo>=</mo><mfrac><mi>distance travelled</mi><mi>time elapsed</mi></mfrac><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>r</mi></mrow><mi>T</mi></mfrac></math><br>
+	<math><mi>T</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>r</mi></mrow><mi>v</mi></mfrac></math>
+</eq>
+<p>Another thing to note is that in this time <math><mi>T</mi></math>, the particle moves 360&deg; around the circle or in <intext tabindex="0" tooltip="1 rad = 180&deg;">radians,</intext> 2&pi; rad. We can use this to get the angular velocity, which is analogous to the velocity we know.</p>
+<eq>
+	<math><mi>&omega;</mi><mo>=</mo><mfrac><mi>angle travelled</mi><mi>time elapsed</mi></mfrac><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi></mrow><mi>T</mi></mfrac></math><br>
+</eq>
+<example>
+<h4>Exercise 1</h4>
+(LSM P4.60) A flywheel is rotating at 30 rev/s. What is the total angle, in radians, through which a point on the flywheel rotates in 40 s?
+ <br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We first note that one revolution is 360&deg; or 2&pi; rad. Thus, 30rev/s is 60&pi; rad/s.</p>
+<p>Given there is 40s, that means a total of 2400&pi; radians has been travelled.</p>
+</section>
+</example>
+<p>As said, the direction of the velocity of the particle changes over time. What is the direction of this velocity at any given time? We go back to how we defined <intext tabindex="0" tooltip="velocity at a given instance of time; not an average">instantaneous</intext> velocity: let's analyze the velocity at two given positions, changing over time.</p>
 <figure><img src="images/circ2.svg"></figure>
 <figurecaption>A particle and the direction of its velocity.</figurecaption>
 <p>As we can see, the velocity of the particle seems to go tangent to the circle as the time between the two instances (<math><mi>&Delta;</mi><mi>t</mi></math>) approaches zero. Thus, at any given instance, we can draw the velocity as tangent to the circle.</p>
@@ -29,6 +65,107 @@
 <termdecl>
 <term>Centripetal acceleration (<math><msub><mi>a</mi><mi>c</mi></msub></math>) </term>- an acceleration which occurs on objects undergoing circular motion
 </termdecl>
-<p>The name <i>centripetal</i> means "center seeking", which aligns with what we saw.</p>
+<p>The name <i>centripetal</i> means "center seeking", which aligns with what we saw. Of course, it would be nice if we can quantify this value. To get this, we must use our knowledge of geometry and similar triangles.</p>
+<p>Since we've got the direction down, we only now care about the magnitude of the acceleration. Thus, we can disregard the direction of each of the vectors.</p>
+<figure><img src="images/circ4.svg"></figure>
+<figurecaption>A particle, and its position and velocity at two separate instances of time.</figurecaption>
+<p>Looking at the figure, the left side shows how over a period <math><mi>&Delta;</mi><mi>t</mi></math>, the particle makes an angle &theta;. Further, since we rotated the velocity vector to just be tangent to the circle (adding 90&deg; to both angles), this angle &theta; also shows up when we analyze both velocities at the same time, on the right side.</p>
+<p>Also note one property of the circle: the two position vectors are just <intext tabindex="0" tooltip="the length of any radii of a circle is the same">radii</intext>. We also noted the speed is constant. This means the "position triangle" and the "velocity triangle" are <intext tabindex="0" tooltip="a triangle with two sides being the same length">isosceles</intext>.</p>
+<p>Via <intext tabindex="0" tooltip="in two triangles, if an angle is congruent and the sides making up that angle are proportional, then the two triangles are similar">SAS</intext> or Side-Angle-Side theorem, we then know that the two triangles are similar.</p>
+<figure><img src="images/circ5.svg"></figure>
+<figurecaption>Two similar triangles via SAS theorem.</figurecaption>
+<p>Writing out the proportions of the triangle gives us a useful thing to note. Noting that the &Delta;v and &Delta;r sides correspond to each other,</p>
+<eq>
+<math><mfrac><mrow><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>r</mi></mrow></mfrac><mo>=</mo><mfrac><mi>v</mi><mi>r</mi></mfrac></math><br>
+<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><mi>(</mi><mi>&Delta;</mi><mi>r</mi><mi>)</mi><mfrac><mi>v</mi><mi>r</mi></mfrac></math>
+</eq>
+<p>Now, recall the original definition we had for acceleration. We can substitute in our newfound value for &Delta;v to get a new value.</p>
+<eq>
+<math><mi>a</mi><mo>=</mo><mfrac><mrow><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math><br>
+<math><mi>a</mi><mo>=</mo><mo>(</mo><mfrac><mi>v</mi><mi>r</mi></mfrac><mo>)</mo><mo>(</mo><mfrac><mrow><mi>&Delta;</mi><mi>r</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac><mo>)</mo></math>
+</eq>
+<p>Notice the <math><mfrac><mrow><mi>&Delta;</mi><mi>r</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math>; as &Delta;t approaches zero, this becomes the instantaneous velocity, as we saw previously. This is the same as taking the derivative of position with respect to time, which is velocity. Thus, the centripetal acceleration can be computed via the following equation.</p>
+<eq>
+<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>r</mi></mfrac></math>
+</eq>
+<p>Analyzing the equation, there are two things we can see. The first is that as the speed of the object increases, more acceleration is needed to keep it in orbit; second, as the radius decreases, the more acceleration is needed to keep the object going around.</p>
+<example>
+<h4>Exercise 2</h4>
+(LSM P4.61) A particle travels in a circle of radius 10 m at a constant speed of 20 m/s. What is the magnitude of the acceleration?<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We are given the constant speed and the radius of motion, thus we can compute the acceleration quite easily.</p>
+<eq>
+<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>(20m/s)</mi><mn>2</mn></msup><mi>(10m)</mi></mfrac><mo>=</mo><mi>40m/s²</mi></math>
+</eq>
+</section>
+</example>
+<example>
+<h4>Exercise 3</h4>
+(LSM P4.97) A geosynchronous satellite orbits Earth at a distance of 42,250.0 km and has a period of 1 day. What is the centripetal acceleration of the
+satellite?<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The period is 1d, which is 86400s. We also have the distance in kilometers, which is 42,250,000m. We first get the speed.</p>
+<eq>
+	<math><mi>(86400s)</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>(42,250,000m)</mi></mrow><mi>v</mi></mfrac></math><br>
+	<math><mi>v</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>(42,250,000m)</mi></mrow><mi>(86400s)</mi></mfrac></math>
+</eq>
+<p>We get the speed is about 3072.51m/s. We then plug this into our equation to get the centripetal acceleration.</p>
+<eq>
+<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>(3072.51m/s)</mi><mn>2</mn></msup><mi>(42,250,000m)</mi></mfrac><mo>=</mo><mi>0.22m/s</mi></math><br>
+</eq>
+</section>
+</example>
+<example>
+<h4>Exercise 4</h4>
+(HRK E4.35) An astronaut is rotated in a centrifuge of radius 5.2 m. <br>(a) What is the speed if the acceleration is 6.8g?<br>(b) How many revolutions per minute are required to produce this acceleration?<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>This time, we are given the acceleration and radius, and need to find the velocity. Note that 6.8g means 6.8 times the gravitational acceleration, or 9.8m/s².</p>
+<eq>
+<math><mi>6.8(9.8m/s²)</mi><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>(5.2m)</mi></mfrac></math><br>
+<math><mi>v</mi><mo>=</mo><msqrt><mi>(5.2m)(6.8)(9.8m/s²)</mi></msqrt></math><br>
+</eq>
+<p>This gives us a speed of approximately 19m/s. Now, with the speed, we need to get the angular velocity. We first get the period using our equation.</p>
+<eq>
+	<math><mi>T</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>(5.2m)</mi></mrow><mi>(19m/s)</mi></mfrac><mo>=</mo><mi>1.72s</mi><mo>=</mo><mi>0.029min</mi></math>
+</eq>
+<p>With this period, we can get the angular speed. We need them in revolutions per second, and we know 2&pi; = 1 rev, so we just use that instead.</p>
+<eq>
+	<math><mi>&omega;</mi><mo>=</mo><mfrac><mrow><mi>1</mi><mi>rev</mi></mrow><mi>0.029min</mi></mfrac><mo>=</mo><mi>35rev/s</mi></math>
+</eq>
+</section>
+</example>
+<p>What could happen if there were no acceleration? Then, there would be nothing to stop the particle from just going straight forward, as seen in the following problem.</p>
+<example hard>
+<h4>Problem 1</h4>
+(HRK P4.21) A child whirls a stone in a horizontal circle 1.9 m above the ground by means of a string 1.4 m long. The string breaks, and the stone flies off horizontally, striking the ground 11 m
+away. What was the centripetal acceleration of the stone while in circular motion?
+<figure><img src="images/circ6.svg"></figure>
+<figurecaption>Problem 1.</figurecaption>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>While it may not be obvious, the first half of this problem is a projectile motion problem. We need the initial velocity, and we are given the initial height. We first get the time of flight.</p>
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0y</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mi>a</mi><mi>y</mi></msub><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><mi>(1.9m)</mi><mo>+</mo><mi>(0m/s)</mi><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(−9.8m/s²)</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>−4.9</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>1.9</mi></math><br>
+</eq>
+<p>We find out that the time elapsed is <math><msub><mi>T</mi><mi>tof</mi></msub><mo>=</mo><mi>0.62s</mi></math>. To get the initial velocity, we use the displacement.</p>
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>t</mi></math><br>
+	<math><mrow><mi>(11m)</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>(0.62s)</mi></math><br>
+	<math><mfrac><mi>11m</mi><mi>0.62s</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>0x</mi></msub></math><br>
+</eq>
+<p>Thus, we get the speed was 17.74m/s. Now, we can get the centripetal acceleration.</p>
+<eq>
+<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>(17.74m/s)</mi><mn>2</mn></msup><mi>(1.4m)</mi></mfrac><mo>=</mo><mi>220m/s²</mi></math>
+</eq>
+</section>
+</example>
+<footer style="color:#900">
+	∎
+</footer>
 </body>
 </html>
