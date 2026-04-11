@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dynamics - force</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Force</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<p>In kinematics, we discussed motion without dealing with why motion happens. Now, we discuss a fundamental quantity that affects how objects move.</p>
+<termdecl>
+<term>Force (<math><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math>)</term> – a push or pull that can affect the motion of an object
+</termdecl>
+<p>Right now, we should try to get a footing on what force really is. We should first list what properties it has.</p>
+<p>One way to describe force is that it is something which pushes on an object, or pulls on it. For example, you can push a box, or pull it with your hands.</p>
+<figure><img src="images/force1.svg"></figure>
+<figurecaption>Force can be described as pulling something, or pushing something.</figurecaption>
+<p>When a force does something on an object, it is said to "act upon" it.</p>
+<p>However, when we pull or push something, we can't guarantee that it can move; pushing a very heavy box doesn't necessarily mean it moves. Further, force can also slow down motion, just like how acceleration can slow down velocity.</p>
+<p>This shows another important property of force; it needs direction. This means it is a <intext tabindex="0" tooltip="A quantity with magnitude and direction">vector</intext>. For example, one can push a box to the left or to the right, and it moves in a different direction; force can cause something to slow down, speed up, or change direction based on the direction.</p>
+<example>
+<h4>Question 1</h4>
+(LSM CQ5.1) What properties do forces have that allow us to classify them as vectors?<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The main property that allows us to classify them as a vector is that they have direction. Further, we can add them together like vectors.</p>
+</section>
+</example>
+<p>Another thing you may notice is that force may or may not require contact. For example, you may have heard the term <intext tabindex="0" tooltip="a force which resists the attempted motion of an object">friction</intext> before, and you've certainly felt it. We know that we can't feel friction unless we rub against something. These forces that need contact are called <i>contact forces</i>.</p>
+<p>The other kind of force, called <i>field forces</i>, don't require contact. We've encountered this type of force before in our study of free fall and the acceleration due to <intext tabindex="0" tooltip="a fundamental force which pulls objects together">gravity</intext>.</p>
+<figure><img src="images/force8.svg"></figure>
+<figurecaption>The force of gravity pulls things down despite no contact; it is a field force.</figurecaption>
+<p>An object can have multiple forces act on it simultaneously. For example, you may push a box in one direction, while your friend pushes the box in another direction.</p>
+<figure><img src="images/force2.svg"></figure>
+<figurecaption>Multiple forces acting on an object.</figurecaption>
+<example>
+<h4>Question 2</h4>
+(HRK Q3.15) Two students try to break a rope. First they pull against each other and fail. Then they tie one end to a wall and pull together. Is this procedure better than the first? Explain your answer.<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Yes. In the first approach, their directions of pulling are opposite each other, and effectively cancel out. In the second approach, they both pull with the same direction, and thus have a larger pull.</p>
+</section>
+</example>
+<p>Since we stated force is a vector, we can add these two vectors together.</p>
+<figure><img src="images/force3.svg"></figure>
+<figurecaption>The two forces added together.</figurecaption>
+<p>The figure above shows that forces added together create a new resultant force. This resultant force is quite handy to use instead of analyzing individual forces, so we should give it a name.</p>
+<termdecl>
+<term>Net Force (<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub></math>)</term> – the resultant from adding individual forces
+</termdecl>
+<p>Mathematically, we can write the net force as the sum of all the individual forces.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mi>&Sigma;</mi><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>2</mi></msub><mo>+</mo><mo>&hellip;</mo></math>
+</eq>
+<p>Graphically, it is the same as adding each of the forces, tip to tail.</p>
+<figure><img src="images/force4.svg"></figure>
+<figurecaption>The net force from multiple forces.</figurecaption>
+<p>To add them numerically, we look back to what we did when we first discussed vectors in two-dimensions. That is, use the pythagorean theorem and inverse trigonometric functions to get the magnitude and direction respectively.</p>
+<example>
+<h4>Exercise 1</h4>
+(LSM E5.20b) A telephone pole has three cables pulling as
+shown from above, with <math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>=</mo><mi>(300.0î + 500.0ĵ)</mi></math>, <math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>2</mi></msub><mo>=</mo><mi>−200.0î</mi></math>, and
+<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>3</mi></msub><mo>=</mo><mi>−800.0ĵ</mi></math>. Find the
+magnitude and direction of the net force.<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<figure><img src="images/force5.svg"></figure>
+<figurecaption>Exercise 1.</figurecaption>
+<p>Like we did when we analyzed vectors in two dimensions, we first get the x-component and the y-component. The x-component is just −100î while the y-component is −300ĵ.</p>
+<p>To get the magnitude, we use the pythagorean theorem.</p>
+<eq>
+	<math><mrow><mi>R</mi><mo>=</mo><mrow><msqrt><mrow><mi>[−100]²</mi><mo>+</mo><mi>[−300]²</mi></mrow></msqrt><mo>=</mo><mi>316.23</mi></math><br>
+</eq>
+<p>For the angle measure, we use the arctan() function.</p>
+<eq>
+	<math><mrow><mi>θ</mi><mo>=</mo><mi>arctan(</mi><mfrac><mi>−300</mi><mi>−100</mi></mfrac><mi>)</mi><mo>=</mo><mi>71.57&deg;</mi></math><br>
+</eq>
+<p>Thus, we get that <math><msub><mover><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub></math> is a vector with magnitude 316.23 units and direction 71.57&deg; counterclockwise from the −x axis.</p>
+</section>
+</example>
+<p>When we analyzed projectile motion, it was much easier to analyze it by its individual components instead of the full initial velocity. We can apply this same thinking with force.</p>
+<p>To analyze the individual forces from the surroundings that act on an object, we use a <i>free body diagram</i>, which shows all the external forces that act on an object.</p>
+<figure><img src="images/force9.svg"></figure>
+<figurecaption>An object affected by multiple forces, and its free body diagram.</figurecaption>
+<p>To draw a free body diagram, one first needs to identify what forces act on the object. </p>
+<p>For example, when we stand on the ground, gravity pulls us down towards the Earth. However, something is stopping us from going straight down to the center of the Earth. This force is called the <intext tabindex="0" tooltip="a contact force that stops objects from passing through each other">normal force</intext>, which we will discuss later.</p>
+<p>When we float on the water, we are pulled down by gravity. However, we aren't pulled all the way down to the bottom of the pool. That means that the water is causing us to float, called <intext tabindex="0" tooltip="a force which a fluid exerts on objects submerged in it">bouyancy</intext>.</p>
+<p></p>
+<example>
+<h4>Question 3</h4>
+Draw the free body diagram of the following figure.
+<figure><img src="images/force6.svg"></figure>
+<figurecaption>Question 3.</figurecaption>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Below is the drawn free body diagram.</p>
+<figure><img src="images/force7.svg"></figure>
+</section>
+</example>
+<example>
+<h4>Question 4</h4>
+(LSM CQ5.18) How many forces should be shown in a free body diagram of a book in free fall? Describe them.<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We know that the only thing acting on an object in free fall is the gravitational acceleration. Since nothing else should happen, we assume that this is the only thing that should be drawn in the free body diagram. We usually set "going up" as positive, so in a free body diagram the force should point down.</p>
+</section>
+</example>
+<p>As of now, we have an qualitative definition of force. However, we haven't made a quantitative connection to how force actually affects motion. However, with the advent of Sir Isaac Newton's laws, we can begin to connect dynamics and kinematics in a more quantitative manner.</p>
+<footer>
+	<a unfinished> Law of Inertia ></a>
+</footer>
+</body>
+</html>

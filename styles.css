@@ -109,6 +109,11 @@ eq {
 	margin: 0em 0px 0.5em 0px;
 }
 
+body > eq {
+	color:#900;
+}
+
+
 div > #side {
 	width:33%;
 	float:left;
@@ -169,6 +174,7 @@ intext[tooltip]:focus::after {
   font-size: 1em;
   z-index: 1;
   top:1.5em;
+  font-style:normal;
 }
 
 a[unfinished]{
@@ -178,6 +184,10 @@ a[unfinished]{
 a[unfinished]:hover{
 		color:#d9d9d9;
 		cursor:not-allowed;
+}
+footer[next]{
+	font-style: italic;
+	font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media only screen and (max-width: 769px) {
