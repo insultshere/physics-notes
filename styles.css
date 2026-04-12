@@ -92,6 +92,16 @@ example[hard] {
 	background-color:#F5EAEA;
 }
 
+example[custom]::before {
+	content:"✎";
+	float:right;
+	text-orientation: sideways-right;
+	writing-mode:vertical-rl;
+	font-size:1.1em;
+	margin:0px;
+	display:block;
+}
+
 term {
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-weight:bold;
@@ -185,6 +195,7 @@ a[unfinished]:hover{
 		color:#d9d9d9;
 		cursor:not-allowed;
 }
+
 footer[next]{
 	font-style: italic;
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
