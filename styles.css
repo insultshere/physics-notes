@@ -95,11 +95,10 @@ example[hard] {
 example[custom]::before {
 	content:"✎";
 	float:right;
-	text-orientation: sideways-right;
-	writing-mode:vertical-rl;
 	font-size:1.1em;
 	margin:0px;
 	display:block;
+	color:#900;
 }
 
 term {
@@ -115,8 +114,7 @@ termdecl {
 eq {
 	text-align:center;
 	display:block;
-	line-height:2.2em;
-	margin: 0em 0px 0.5em 0px;
+	line-height:2em;;
 }
 
 body > eq {

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dynamics - acceleration</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Weight</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<example hard>
+<h4>Problem 3</h4>
+(LSM P5.76) A swimmer has a mass of 80.0 kg and jumps off a
+board 10.0 m above the water. Three seconds after entering the water, her downward motion is
+stopped. What average upward force did the water exert on her?
+<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Ultimately, we need the acceleration. To get that, we need the initial and final velocity of the swimmer in water. We know the final velocity (rest at 0m/s), but we don't know the initial velocity. To get that, we note that she fell from 10.0m; free fall.</p>
+<p>Starting from rest, we first get the time she took to hit the water.</p>
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>(0m)</mi></mrow><mo>=</mo><mi>(10.0m)</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(−9.8m/s²)</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>−4.9</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>10</mi></math>
+</eq>
+<p>The swimmer then took 1.43s to hit the ground. Thus, we get the velocity now.</p>
+<eq>
+	<math><mrow><mi>v</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
+	<math><mrow><mi>v</mi></mrow><mo>=</mo><mi>(0m/s)</mi><mo>+</mo><mi>(−9.8m/s²)</mi><mi>(1.43s)</mi></math><br>
+</eq>
+<p>Thus, the velocity at the water is −14.0m/s. We can now get the acceleration, given that it took three seconds to go to rest.</p>
+<eq>
+	<math><mrow><mi>v</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
+	<math><mrow><mi>(0m/s)</mi></mrow><mo>=</mo><mi>(−14.0m/s)</mi><mo>+</mo><mi>a</mi><mi>(3s)</mi></math><br>
+</eq>
+<p>Finally, we have the acceleration at 4.67m/s². We can finally get the force.</p>
+<eq>
+	<math><mi>F</mi><mo>=</mo><mi>(80.0kg)</mi><mi>(4.67m/s²)</mi></math><br>
+</eq>
+<p>Giving us that the force of water is 373.6N.</p>
+</section>
+</example>
+<footer>
+	<a unfinished> Law of Acceleration ></a>
+</footer>
+</body>
+</html>

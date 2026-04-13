@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dynamics - acceleration</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Law of Acceleration</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<p>Newton's first law shows us that an object with no net force acting on it will stay in the state that it is in, being in rest or in motion. Newton's second law describes what happens when there is a net force acting on the object.</p>
+<p>We know that when we push something, it moves. In our study of kinematics, we noted that movement is a change in position, or in other words there is velocity. When we change the velocity (from rest to moving or vice versa), we apply an acceleration.</p>
+<figure><img src="images/acceleration1.svg"></figure>
+<figurecaption>Applying a force causes an acceleration.</figurecaption>
+<p>If one person can push a box at some strength, what happens when two people push a box, at the same strength, in the same direction? In our experience, we know that together they can get the box moving from rest as fast; it can speed up twice as quickly. Thus, we can say that a higher force gives us a higher acceleration.</p>
+<p>Mathematically, we can write this as that acceleration is directly related to the net force.</p>
+<eq>
+	<math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mo>&propto;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub></math>
+</eq>
+<p>We also noted previously that there are objects which are harder to get moving or to stop moving; and we quantified this with mass.</p>
+<p>Which is easier to move: a 2kg box or a 1kg box? <br>Intuitively, the 1kg box is much easier to move; it has less inertia.</p>
+<p>In fact, we can approximate this with that the 1kg box should be about twice as easy to move than the 2kg box. If we push with the same force on both boxes, we can estimate that the 1kg box should accelerate twice as fast than the 2kg box. </p>
+<figure><img src="images/acceleration2.svg"></figure>
+<figurecaption>Mass affects acceleration.</figurecaption>
+<p>One may be confused on why we use acceleration instead of velocity. Recall that when we go from rest to moving, we change our velocity. This change in velocity is precisely acceleration.</p>
+<p>This can be written as an inverse relationship with acceleration.</p>
+<eq>
+	<math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mo>&propto;</mo><mfrac><mi>1</mi><mi>m</mi></mfrac></math>
+</eq>
+<p>We now have two relationships, and we can condense both of them into one relation.</p>
+<eq>
+	<math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mo>&propto;</mo><mfrac><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mi>m</mi></mfrac></math>
+</eq>
+<p>Rearranging this equation gives us one of the most important equations in physics, which governs basically everything from the movement of grains of rice to the orbiting of galaxies. This gives us (one of) the representations of the Law of Acceleration.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mi>m</mi><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover></math>
+</eq>
+<p>One thing to note with this equation is the use of direction; a force causes an acceleration in the direction of the force.</p>
+<example>
+<h4>Question 1</h4>
+(HRK Q3.10) What is the relation—if any—between the force acting on an object and the direction in which the object is moving?
+<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The force acting on an object causes an acceleration in the direction of the force. If it is acting in the same direction as which the object is moving, the object speeds up; if it is acting in the opposite direction, the object slows down.</p>
+</section>
+</example>
+<example hard>
+<h4>Question 2</h4>
+(LSM CQ5.5) A rock is thrown straight up. At the top of the trajectory, the velocity is momentarily zero. Does this imply that the force acting on the object is
+zero? Explain your answer.
+<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>In our study of free fall, we noted that the acceleration due to gravity is always present. Since there is an acceleration, there is still a force acting on it.</p>
+</section>
+</example>
+<example custom>
+<h4>Question 3</h4>
+A force is applied on an object, giving it an acceleration. Find the effects of the following on the acceleration if:
+<br>(a) the force is doubled
+<br>(b) the force is halved
+<br>(c) the mass is tripled<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Since we noted that force has a direct relation on the acceleration, if it is doubled or halved, the same effect happens on the acceleration; it is doubled (2x) and halved (1/2x) respectively.</p>
+<p>We also saw that the mass has an inverse relation. Thus, if the mass is tripled, the acceleration is cut in three (1/3x).</p>
+</section>
+</example>
+<p>Recall that force is measured in Newtons. Using our equation, we can see what the unit Newton really is.</p>
+<eq>
+	<math><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></math><br>
+	<math><mi>[N]</mi><mo>=</mo><mi>[kg]</mi><mi>[m/s²]</mi></math>
+</eq>
+<p>This shows that the unit Newton is actually just the combination of (kg)(m/s²).</p>
+<p>We can also use this law to "derive" the Law of Inertia. If the net force is zero, that means the acceleration must also be zero. We can't set mass as zero, as that is impossible.</p>
+<eq>
+	<math><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></math><br>
+	<math><mi>0N</mi><mo>=</mo><mi>m</mi><mi>(0m/s²)</mi></math>
+</eq>
+<example>
+<h4>Exercise 1</h4>
+(LSM CQ5.24) Andrea, a 63.0-kg sprinter, starts a race with an
+acceleration of 4.200m/s². What is the net external force on her?
+<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Computing the net force is simply just using the equation we are given. Plugging in the values gives us the net force.</p>
+<eq>
+	<math><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></math><br>
+	<math><mi>F</mi><mo>=</mo><mi>(63.0kg)</mi><mi>(4.200m/s²)</mi></math><br>
+</eq>
+<p>Which gives us the force is 264.6N.</p>
+</section>
+</example>
+<p>As force is a vector, it can have multiple directions; and can even be resisted by other multiple forces.</p>
+<example>
+<h4>Exercise 2</h4>
+(LSM E5.37) A particle of mass 2.0 kg is acted on by a single
+force, <math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>=</mo><mi>(18&icirc;)</mi></math>N.
+What is the particle’s acceleration?
+<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Now, we are obligated to include the direction of acceleration. Rearranging, we get the following equation, then we substitute.</p>
+<eq>
+	<math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mfrac><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>(18N)</mi><mi>(2kg)</mi></mfrac></math>
+</eq>
+<p>The acceleration is then 9&icirc;m/s².</p>
+</section>
+</example>
+<example>
+<h4>Exercise 3</h4>
+(LSM E5.38) Suppose that the particle of the previous problem also experiences forces <math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>2</mi></msub><mo>=</mo><mi>(−15&icirc;)</mi></math>N and <math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>3</mi></msub><mo>=</mo><mi>(6.0&jcirc;)</mi></math>N. What is its acceleration in this case?
+<figure><img src="images/acceleration3.svg"></figure>
+<figurecaption>Exercise 3.</figurecaption>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Now, we have to add direction into the problem. The first thing we should do is analyze the x-component and y-component separately. The x-component is simple enough; there's only two forces that act horizontally.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>2</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>=</mo><mi>(3&icirc;)</mi></math>N
+</eq>
+<p>Using our equation gives us the horizontal acceleration.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>=</mo><mfrac><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>(3N)</mi><mi>(2kg)</mi></mfrac></math>
+</eq>
+<p>We then get that the horizontal acceleration is (1.5&icirc;)m/s². Since there is only one vertical force, we can get the vertical acceleration quite quickly.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>=</mo><mfrac><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>(6N)</mi><mi>(2kg)</mi></mfrac></math>
+</eq>
+<p>With the vertical acceleration of (3.0&jcirc;)m/s², we can get the magnitude and direction of acceleration via what we used before: trigonometry and the pythagorean theorem.</p>
+<eq>
+	<math><mrow><mi>R</mi><mo>=</mo><mrow><msqrt><mrow><mi>[1.5]²</mi><mo>+</mo><mi>[3.0]²</mi></mrow></msqrt><mo>=</mo><mi>3.35</mi></math><br>
+</eq>
+<p>For the angle measure, we use the arctan() function, as we did before.</p>
+<eq>
+	<math><mrow><mi>θ</mi><mo>=</mo><mi>arctan(</mi><mfrac><mi>3.0</mi><mrow><mi>1.5</mi></mrow></mfrac><mi>)</mi><mo>=</mo><mi>63.43&deg;</mi></math><br>
+</eq>
+<p>We thus get that the acceleration of the particle now is 3.35m/s² at an angle of 63.43&deg; from the +x axis.</p>
+</section>
+</example>
+<p>We can now apply this principle to get the kinematic quantities that we discussed. Here, we may need to use the kinematic equations that we set up.</p>
+<example>
+<h4>Problem 1</h4>
+(LSM E5.34) A car with a mass of 1000.0 kg accelerates from
+0 to 90.0 km/h in 10.0 s. <br>(a) What is its
+acceleration? <br>(b) What is the net force on the
+car?
+<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The first part is simply using our kinematic equations. We first convert the 90km/h to m/s.</p>
+<eq>
+	<math><mi>90km/h</mi><mo>&#x22C5</mo><mfrac><mi>1000m</mi><mi>1km</mi></mfrac><mo>&#x22C5</mo><mfrac><mi>1h</mi><mi>3600s</mi></mfrac><mo>=</mo><mi>25m/s</mi></math>
+</eq>
+<p>We then use our kinematic equation to solve for the acceleration.</p>
+<eq>
+	<math><mrow><mi>v</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
+	<math><mrow><mi>(25m/s)</mi></mrow><mo>=</mo><mi>(0m/s)</mi><mo>+</mo><mi>a</mi><mi>(10.0s)</mi></math><br>
+	<math><mfrac><mi>(25m/s)</mi><mi>(10s²)</mi></mfrac><mo>=</mo><mi>a</mi></math>
+</eq>
+<p>Giving us 2.5m/s². We now use our equation for the net force.</p>
+<eq>
+	<math><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></math><br>
+	<math><mi>F</mi><mo>=</mo><mi>(1000.0kg)</mi><mi>(2.5m/s²)</mi></math><br>
+</eq>
+<p>Which equates to 2500N.</p>
+</section>
+</example>
+<example hard>
+<h4>Problem 2</h4>
+(HRK E3.2) A 5.5-kg block is initially at rest on a frictionless horizontal
+surface. It is pulled with a constant horizontal force of 3.8 N. <br>(a) What is its acceleration? <br>(b) How long must it be pulled
+before its speed is 5.2 m/s? <br>(c) How far does it move in this
+time?
+<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The acceleration can be gained by rearranging the equation.</p>
+<eq>
+	<math><mi>a</mi><mo>=</mo><mfrac><mi>F</mi><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>3.8N</mi><mi>5.5kg</mi></mfrac></math><br>
+</eq>
+<p>Which gives us the acceleration is 0.69m/s². For the next two questions, we return back to our kinematic equations. We note that the initial velocity is 0m/s at rest. Thus, we solve for the time given the final velocity.</p>
+<eq>
+	<math><mrow><mi>v</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
+	<math><mrow><mi>(5.2m/s)</mi></mrow><mo>=</mo><mi>(0m/s)</mi><mo>+</mo><mi>(0.69m/s²)</mi><mi>t</mi></math><br>
+	<math><mfrac><mi>(5.2m/s)</mi><mi>(0.69m/s²)</mi></mfrac><mo>=</mo><mi>t</mi></math>
+</eq>
+<p>Giving us 7.54s. Then, we can get the displacement by using the equation we had for constant acceleration.</p>
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(0.69m/s²)</mi><msup><mi>(7.54s)</mi><mn>2</mn></msup></math><br>
+</eq>
+<p>Which equates to 39.23m.</p>
+</section>
+</example>
+<p>Just like how if there is a net force, there is an acceleration, the converse is true; if there is an acceleration, there is a net force.</p>
+<p>Likewise, with the Law of Inertia, we show that if there is no acceleration, there is no net force. In other words, each force balances out. With this, we can now more easily identify what forces occur on various objects.</p>
+<p>Since we haven't studied the various forces, we can't give them special names yet. For now, we can use subscripts such as <math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>string</mi></msub></math>. Later, we will revisit these problems and use the correct symbols for the forces, if necessary.</p>
+<example>
+<h4>Question 4</h4>
+(LSM P5.68b) A ball of mass <math><mi>m</mi></math> hangs at rest, suspended by a
+string. Draw the free body diagram for the ball.
+<figure><img src="images/acceleration4.svg"></figure>
+<figurecaption>Question 4.</figurecaption>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Since we are on Earth, we are pulled towards the ground by gravity. Thus, our free body diagram should include this. However, we note that the ball is at rest, and isn't falling to the ground. This must mean that something is keeping it from moving; this is the string that the ball is attached to, which is pulling it.</p>
+<p>We then draw the two forces. Since the object is at rest, they should be the same magnitude.</p>
+<figure><img src="images/acceleration5.svg"></figure>
+</section>
+</example>
+<footer>
+	<a unfinished> Law of Action-Reaction ></a>
+</footer>
+</body>
+</html>
