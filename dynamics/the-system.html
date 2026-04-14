@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dynamics - systems</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>The System</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<p>Sometimes, we aren't dealing with a single object. We might deal with multiple objects.</p>
+<p>To deal with this, we have to separate each part in the system and think about them logically. </p>
+<example>
+<h4>Exercise 4</h4>
+(HRK E3.30) A 77-kg person is parachuting and experiencing a downward
+acceleration of 2.5m/s² shortly after opening the parachute.
+The mass of the parachute is 5.2kg. <br>(a) Find the upward
+force exerted on the parachute by the air. <br>(b) Calculate the
+downward force exerted by the person on the parachute.
+<figure><img src="images/weight1.svg"></figure>
+<figurecaption>Exercise 4.</figurecaption>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>If the rocket is hovering over the launch pad, that means it counteracts the weight. In other words, the net force of the thrust and the weight is zero. We can write this equation like this, setting weight as negative as it is going down.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math>
+</eq>
+<p>The weight is simple enough.</p>
+<eq>
+	<math><mi>w</mi><mo>=</mo><mi>(51000kg)</mi><mi>(9.8m/s²)</mi><mo>=</mo><mi>499800N</mi></math>	
+</eq>
+<p>Knowing the net force is zero, we can get the thrust quite easily.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>0</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub></math><br>
+</eq>
+<p>This shows that the thrust is equal to the weight if the rocket is just hovering. Makes sense; by the Law of Inertia, if it is at rest, all the forces balance out. For the 18m/s² scenario, there is now a net force.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mi>(51000kg)</mi><mi>(18m/s²)</mi><mo>=</mo><mi>918000N</mi></math>
+</eq>
+<p>Thus, we solve for thrust again.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>(918000N)</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mi>(499800N)</mi></math><br>
+	<math><mi>1417800N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub></math><br>
+</eq>
+</section>
+</example>
+<example hard>
+<h4>Exercise 4</h4>
+(HRK P3.7) The child’s toy below consists of three cars that are pulled in tandem
+on small frictionless rollers. Its cars have masses of 3.1 kg, 2.4 kg, and 1.2 kg respectively. They are
+pulled to the right with a horizontal force of 6.5 N.
+<br>(a) What is the acceleration of the system? <br>(b) What is the force exerted by the
+middle car on the leftmost car? <br>(c) What is the force exerted by the
+rightmost car on the middle car?
+<figure><img src="images/acceleration6.svg"></figure>
+<figurecaption>Exercise 4.</figurecaption>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The entire toy is affected by the force, so we need the entire mass of the toy. Afterwards, since we are given the force, we can use the Law of Acceleration to get the acceleration.</p>
+<eq>
+	<math><mi>a</mi><mo>=</mo><mfrac><mi>F</mi><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>6.5N</mi><mi>(3.1kg + 2.4kg + 1.2kg)</mi></mfrac></math><br>
+</eq>
+<p>The whole acceleration is then 0.97m/s².</p>
+<p>This means the entire toy (including each of the car) accelerates at 0.97m/s². The force exerted by the middle car on the leftmost car only has to pull the leftmost car, so the only mass it needs to pull is 1.2kg.</p>
+<eq>
+	<math><mi>F</mi><mo>=</mo><mi>(1.2kg)</mi><mi>(0.97m/s²)</mi><mo>=</mo><mi>1.16N</mi></math>
+</eq>
+<p>The force of the rightmost car needs to pull both the middle and the leftmost car.</p>
+<eq>
+	<math><mi>F</mi><mo>=</mo><mi>(1.2kg + 2.4kg)</mi><mi>(0.97m/s²)</mi><mo>=</mo><mi>3.49N</mi></math>
+</eq>
+</section>
+</example>
+<p>With the free body diagrams of the system, we can analyze how the force changes. One thing to note is the rightmost block has the only force pulling it to the right being the contact force.</p>
+<example hard>
+<h4>Problem 1</h4>
+(HRK P3.10a) Two blocks are in contact on a frictionless table. A horizontal
+force is applied to one block. If the masses of the boxes are 
+2.3kg and 1.2kg respectively, and the force is of magnitude 3.2N, find the force of
+contact between the two blocks. <figure><img src="images/interaction5.svg"></figure>
+<figurecaption>Problem 1.</figurecaption>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The total mass of the boxes is 3.5kg. We can get the acceleration by Newton's second law.</p>
+<eq>
+	<math><mi>a</mi><mo>=</mo><mfrac><mi>F</mi><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>3.2N</mi><mi>(2.3kg + 1.2kg)</mi></mfrac><mo>=</mo><mi>0.91m/s²</mi></math><br>
+</eq>
+<p>Both boxes then accelerate at a rate of 0.91m/s². The left box is moved by the force, pushing the right box. By Newton's third law, the right box pushes back at the same magnitude. Drawing the free body diagram shows this clearly.</p>
+<figure><img src="images/interaction9.svg"></figure>
+<p>The force of contact is the only thing pushing the right box. We can calculate it, given the mass of the right box and the acceleration.</p>
+<eq>
+	<math><mi>F</mi><mo>=</mo><mi>(1.2kg)</mi><mi>(0.91m/s²)</mi><mo>=</mo><mi>1.09N</mi></math>
+</eq>
+</section>
+</example>
+<example hard>
+<h4>Problem 2</h4>
+(HRK P3.10b) Show that if the same
+force is applied to the right block rather than on the left block, the force of contact
+between the blocks is 2.1N, which is not the same value derived in the previous problem. Explain.<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We still get the same acceleration of 0.91m/s². However, now we note that the left block is the one that is moved purely by the contact force. Thus, we use its mass now.</p>
+<eq>
+	<math><mi>F</mi><mo>=</mo><mi>(2.3kg)</mi><mi>(0.91m/s²)</mi><mo>=</mo><mi>2.1N</mi></math>
+</eq>
+<p>The force is larger because the small block has to push much harder to push the more massive block.</p>
+</section>
+</example>
+<footer>
+	<a href="law-of-inertia.html"> Law of Inertia ></a>
+</footer>
+</body>
+</html>

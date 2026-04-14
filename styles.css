@@ -114,22 +114,33 @@ termdecl {
 eq {
 	text-align:center;
 	display:block;
-	line-height:2em;;
+	line-height:2em;
 }
 
 body > eq {
 	color:#900;
 }
 
-
-div > #side {
-	width:33%;
-	float:left;
-	text-align:left;
+#navigation {
+	display:block;
+	height:auto;
+	background-color: #eee;
 }
 
-#navigation {
-	width:100%;
+div > #trio {
+	float:left;
+	text-align:left;
+	width:33.33%;
+	min-height:inherit;
+	padding-bottom:1.5em;
+}
+
+div > #duo {
+	float:left;
+	text-align:left;
+	width:50%;
+	min-height:inherit;
+	padding-bottom:1.5em;
 }
 
 a {
