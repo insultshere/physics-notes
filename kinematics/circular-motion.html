@@ -50,7 +50,7 @@ With constant acceleration? <br><br>
 <h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>We first note that one revolution is 360&deg; or 2&pi; rad. Thus, 30rev/s is 60&pi; rad/s.</p>
-<p>Given there is 40s, that means a total of 2400&pi; radians has been travelled.</p>
+<p>Given there is 40s, that means a total of 2400&pi; radians, or about 2000&pi; rad has been travelled.</p>
 </section>
 </example>
 <p>As said, the direction of the velocity of the particle changes over time. What is the direction of this velocity at any given time? We go back to how we defined <intext tabindex="0" tooltip="velocity at a given instance of time; not an average">instantaneous</intext> velocity: let's analyze the velocity at two given positions, changing over time.</p>
@@ -89,6 +89,25 @@ With constant acceleration? <br><br>
 <math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>r</mi></mfrac></math>
 </eq>
 <p>Analyzing the equation, there are two things we can see. The first is that as the speed of the object increases, more acceleration is needed to keep it in orbit; second, as the radius decreases, the more acceleration is needed to keep the object going around.</p>
+<example><mark custom></mark>
+<h4>Question 2</h4> 
+An object is spun around at a certain radius and at a constant speed. Find the effect on the centripetal acceleration if:
+<br>(a) the speed is doubled
+<br>(b) the speed is halved
+<br>(c) the radius is doubled
+<br>(d) the radius is halved<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Analyzing the equation for the centripetal acceleration, the speed has a direct relationship on the centripetal acceleration; if it goes up, the centripetal acceleration goes up.</p>
+<p>However, since the velocity is squared, the effect on the centripetal acceleration is also squared.</p>
+<eq>
+<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>r</mi></mfrac></math>
+</eq>
+<p>Thus, as the speed is doubled and halved, the centripetal acceleration is quadrupled (4x) and quartered (1/4x) respectively.</p>
+<p>For the radius, since it is in the denominator, it features an inverse relationship. Thus, as the radius is doubled and halved, the centripetal acceleration is halved (1/2x) and doubled (2x) respectively.</p>
+</section>
+</example>
+<p>Let's now try to apply this equation.</p>
 <example>
 <h4>Exercise 2</h4>
 (LSM P4.61) A particle travels in a circle of radius 10 m at a constant speed of 20 m/s. What is the magnitude of the acceleration?<br><br>
@@ -113,7 +132,7 @@ satellite?<br><br>
 </eq>
 <p>We get the speed is about 3072.51m/s. We then plug this into our equation to get the centripetal acceleration.</p>
 <eq>
-<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>(3072.51m/s)</mi><mn>2</mn></msup><mi>(42,250,000m)</mi></mfrac><mo>=</mo><mi>0.22m/s</mi></math><br>
+<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>(3072.51m/s)</mi><mn>2</mn></msup><mi>(42,250,000m)</mi></mfrac><mo>&approx;</mo><mi>0.2m/s</mi></math><br>
 </eq>
 </section>
 </example>
@@ -164,22 +183,49 @@ away. What was the centripetal acceleration of the stone while in circular motio
 </eq>
 </section>
 </example>
-<example custom>
-<h4>Question 2</h4>
-An object is spun around at a certain radius and at a constant speed. Find the effect on the centripetal acceleration if:
-<br>(a) the speed is doubled
-<br>(b) the speed is halved
-<br>(c) the radius is doubled
-<br>(d) the radius is halved<br><br>
+<p>We can also manipulate the previous equations to get the centripetal acceleration in terms of what we need.</p>
+<example><mark custom variable></mark>
+<h4>Problem 2</h4> 
+Determine an equation for the centripetal acceleration given the period <math><mi>T</mi></math> and radius of curvature <math><mi>r</mi></math>. <br><br>
 <h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
-<p>Analyzing the equation for the centripetal acceleration, the speed has a direct relationship on the centripetal acceleration; if it goes up, the centripetal acceleration goes up.</p>
-<p>However, since the velocity is squared, the effect on the centripetal acceleration is also squared.</p>
+<p>We have the current equation for centripetal acceleration given the speed and radius. We have to replace speed with the period instead.</p>
 <eq>
 <math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>r</mi></mfrac></math>
 </eq>
-<p>Thus, as the speed is doubled and halved, the centripetal acceleration is quadrupled (4x) and quartered (1/4x) respectively.</p>
-<p>For the radius, since it is in the denominator, it features an inverse relationship. Thus, as the radius is doubled and halved, the centripetal acceleration is halved (1/2x) and doubled (2x) respectively.</p>
+<p>We thankfully also have an equation which connects the period and the speed. Thus, we rearrange this equation to solve for the speed.</p>
+<eq>
+	<math><mi>T</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>r</mi></mrow><mi>v</mi></mfrac></math><br>
+	<math><mi>v</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>r</mi></mrow><mi>T</mi></mfrac></math>
+</eq>
+<p>Now, we substitute this expression in for the speed in our original equation.</p>
+<eq>
+<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><mrow><mi>(</mi><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>r</mi></mrow><mi>T</mi></mfrac><msup><mi>)</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><mfrac><mrow><mi>4&pi;²r</mi></mrow><msup><mi>T</mi><mn>2</mn></msup></mfrac></math>
+</eq>
+</section>
+</example>
+<example><mark custom variable></mark>
+<h4>Problem 3</h4> 
+Determine an equation for the centripetal acceleration given the angular velocity <math><mi>&omega;</mi></math> and radius of curvature <math><mi>r</mi></math>.<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We have this equation for centripetal acceleration given the speed and radius. We have to replace speed with the rotational speed instead.</p>
+<eq>
+<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>r</mi></mfrac></math>
+</eq>
+<p>Unlike for the period, we don't have an exact equation connecting the speed and the rotational speed. Thankfully, we can get one quite easily.</p>
+<eq>
+	<math><mi>T</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>r</mi></mrow><mi>v</mi></mfrac></math> and <math><mi>&omega;</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi></mrow><mi>T</mi></mfrac></math><br>
+</eq>
+<p>Substituting in the value for the period gives us an equation connecting the two.</p>
+<eq>
+	<math><mi>&omega;</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi></mrow><mrow><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>r</mi></mrow><mi>v</mi></mfrac></mrow></mfrac><mo>=</mo><mfrac><mi>v</mi><mi>r</mi></mfrac></math><br>
+	<math><mi>v</mi><mo>=</mo><mi>r</mi><mi>&omega;</mi></math>
+</eq>
+<p>Now we just subtitute this in.</p>
+<eq>
+	<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><mrow><mi>(</mi><mi>r</mi><mi>&omega;</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><msup><mi>&omega;</mi><mn>2</mn></msup><mi>r</mi></math>
+</eq>
 </section>
 </example>
 <footer style="color:#900">

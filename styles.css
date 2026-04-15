@@ -33,7 +33,9 @@ h1 {
 	margin-top:1.5em;
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-size:1.5em;
+	line-height:0.8em;
 	text-align:center;
+	align-content:center;
 }
 
 h4 {
@@ -69,7 +71,7 @@ figure {
 }
 
 figure > img {
-	max-width:70%;
+	max-width:80%;
 }
 
 figurecaption {
@@ -81,6 +83,8 @@ figurecaption {
 	margin-bottom:1em;
 }
 
+/*css for examples*/
+
 example {
 	display:block;
 	background-color:#EEEEEE;
@@ -88,16 +92,31 @@ example {
 	margin: 0.75em 0px 0.75em 0px
 }
 
+
 example[hard] {
 	background-color:#F5EAEA;
 }
 
-example[custom]::before {
-	content:"✎";
+example > h4 {
+	margin-bottom:0.3em;
+}
+
+example > mark {
 	float:right;
-	font-size:1.1em;
-	margin:0px;
 	display:block;
+	background-color:rgba(0,0,0,0);
+}
+
+mark[custom]::after {
+	content:"✎";
+	font-size:1.1em;
+	color:#900;
+	margin-left:0.1em;
+}
+
+mark[variable]::before {
+	content:"✀";
+	font-size:1em;
 	color:#900;
 }
 
@@ -109,38 +128,21 @@ term {
 termdecl {
 	margin: 1.2em 0 1.2em 0;
 	display:block;
+	text-align:left;
+	color:#900;
 }
 
 eq {
 	text-align:center;
 	display:block;
 	line-height:2em;
+	width:100%;
+	overflow-x:auto;
+	overflow-y:hidden;
 }
 
 body > eq {
 	color:#900;
-}
-
-#navigation {
-	display:block;
-	height:auto;
-	background-color: #eee;
-}
-
-div > #trio {
-	float:left;
-	text-align:left;
-	width:33.33%;
-	min-height:inherit;
-	padding-bottom:1.5em;
-}
-
-div > #duo {
-	float:left;
-	text-align:left;
-	width:50%;
-	min-height:inherit;
-	padding-bottom:1.5em;
 }
 
 a {
@@ -210,16 +212,38 @@ footer[next]{
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/*navigation*/
+
+#navigation {
+	display:block;
+	height:auto;
+	width:50%;
+	float:left;
+	counter-reset: count 0;
+}
+
+#navigation > nav {
+	width:100%;
+	margin-bottom:0.5em;
+}
+
+navlink {
+	display:flex;
+	text-align:left;
+	counter-increment: count 1;
+}
+
+navlink::before {
+	content:"(" counter(count,decimal) ")";
+	float:left;
+	margin-right:0.2em;
+}
+
 @media only screen and (max-width: 769px) {
 	body {
 		width:90%;
-		font-size:0.95em;
-		line-height: 1.2em;
-	}
-	
-	figure > img {
-		width:90%;
-		max-width:90%;
+		font-size:0.9em;
+		line-height: 1.23em;
 	}
 
 	intext[tooltip]:focus::after {
@@ -235,17 +259,32 @@ footer[next]{
 		transition: opacity 0.2s;
 	}
 
-	div > #side {
-		width:100%;
-		margin-bottom:0.5em;
-	}
-
 	intext[tooltip]::after {
 		opacity:0;
+	}
+
+	#navigation {
+	display:block;
+	min-height:fit-content;
+	width:49%;
+	float:left;
+	margin-right:1%;
+	text-align:left;
 	}
 
 	math{
 		font-size:1em;
 		font-family:Georgia, 'Times New Roman', Times, serif
+	}
+}
+
+@media only screen and (max-width: 426px) {
+	figure > img {
+		max-width:100%;
+	}
+
+	figure {
+		width:85%;
+		margin:0 7.5% 0 7.5%;
 	}
 }

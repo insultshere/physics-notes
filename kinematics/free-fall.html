@@ -90,7 +90,15 @@ Finally, we need to set our coordinate system; in other words, <i>if an object g
 <p>
 To make it simple, we set "going up" as positive and "going down" as negative. Since acceleration due to gravity pulls things down, it is right to set that as negative as well. Thus, we set <math><mi>a</mi><mo>=</mo><mi>−</mi><mi>g</mi><mo>=</mo><mi>−9.8m/s²</mi></math>. <br>Note that some problems benefit with "going down" as positive, which in that case <math><mi>a</mi><mo>=</mo><mi>g</mi></math>.
 </p>
-
+<example> <mark custom></mark>
+<h4>Question 4</h4>
+Is the gravitational acceleration (<math><mi>g</mi></math>) positive or negative?<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>It is positive.</p>
+</section>
+</example>
+<p>With this convention set, we can now try our hands with some exercises.</p>
 <example>
 <h4>Exercise 1</h4>
 (LSM P3.76) Standing at the base of one of the cliffs of Mt. Arapiles in Victoria, Australia, a hiker hears a rock break loose from a height of 105.0 m. He can’t see the rock right away, but then does,
@@ -123,7 +131,7 @@ To make it simple, we set "going up" as positive and "going down" as negative. S
 	<math><mrow><mi>(7.0m)</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><mi>(15.0m/s)</mi><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mo>(</mo><mi>−9.8m/s²</mi><mo>)</mo><msup><mi>t</mi><mn>2</mn></msup></math><br>
 	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>−4.9</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>15</mi><mi>t</mi><mo>−</mo><mi>7.0</mi></math><br>
 </eq>
-<p>We get that <math><mi>t</mi><mo>=</mo><mi>2.49s</mi></math> and <math><mi>t</mi><mo>=</mo><mi>0.57s</mi></math>. Their difference is then 1.91s.
+<p>We get that <math><mi>t</mi><mo>=</mo><mi>2.49s</mi></math> and <math><mi>t</mi><mo>=</mo><mi>0.57s</mi></math>. Their difference is then 1.9s.
 </section>
 </example>
 
@@ -140,7 +148,7 @@ To make it simple, we set "going up" as positive and "going down" as negative. S
 	<math><msup><mi>(0m/s)</mi><mn>2</mn></msup><mo>=</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mo>(</mo><mi>−9.8m/s²</mi><mo>)</mo><mi>(53.7m)</mi></mrow></math><br>
 	<math><mi>1052.52m²/s²</mi><mo>=</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup></math>
 </eq>
-<p>We get that <math><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mi>32.44m/s</mi></math>.
+<p>We get that <math><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mi>32.4m/s</mi></math>.
 </section>
 </example>
 
@@ -168,13 +176,13 @@ this height? <br>(c) How much higher will the ball go?
 <p>Which gives us the maximum height of 38.3m. Given its already gone up 36.8m, it has 1.50m left to go.</p>
 </section>
 </example>
-<example hard>
+<example hard> <mark variable></mark>
 <h4>Problem 1</h4>
 (LSM P3.111) An object is dropped from a roof of a building of height <math><mi>h</mi></math>. During the last second of its descent, it drops a distance <math><mi>h</mi><mo>/</mo><mi>3</mi></math>. Calculate the height of the building.
 <br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
-<p>This problem is a lot harder than the other problems as it feels that we have too little information; we don't know how fast the object was going at impact, and how long it took to fall; we only thing we can glean is that started from rest.</p>
+<p>This problem is a lot harder than the other problems as it feels that we have too little information; we don't know how fast the object was going at impact, and how long it took to fall; the only thing we can glean is that started from rest.</p>
 <p>Let's just make up some values and see where that gets us. We know that the object hits the ground at some time we don't know, so let's let that time be <math><mi>T</mi></math>. It starts from max height, and ends at the ground. We drop the velocity term as it is zero (from rest).</p>
 
 <eq>
@@ -205,6 +213,31 @@ this height? <br>(c) How much higher will the ball go?
 	<math><mrow><mi>h</mi></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>(5.45s)</mi><mn>2</mn></msup></math><br>
 </eq>
 <p>Which gives us the height of the building is 145.5m.</p>
+</section>
+</example>
+<p>If you've been following along, above was the first "scissors" problem. These problems require you to "cut-out" the answer from the toolbox of equations you have.</p>
+<p>Since there are no numbers, we'll have to rely on our manipulation skills to get the equation.</p>
+<example hard> <mark custom variable></mark>
+<h4>Problem 2</h4>
+Determine an equation for the maximum height of an object in free fall given the initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>. Set positive as "going up".<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The maximum height of an object is given when the velocity is equal to zero. We first need the time.</p>
+<eq>
+	<math><mrow><mi>v</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>−</mo><mi>g</mi><mi>t</mi></math><br>
+	<math><mfrac><msub><mi>v</mi><mn>0</mn></msub><mi>g</mi></mfrac><mo>=</mo><mi>t</mi></math><br>
+</eq>
+<p>Now we plug this into our equation for the position.</p>
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mi>(</mi><mfrac><msub><mi>v</mi><mn>0</mn></msub><mi>g</mi></mfrac><mi>)</mi><mo>−</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mi>(</mi><mfrac><msub><mi>v</mi><mn>0</mn></msub><mi>g</mi></mfrac><msup><mi>)</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><mfrac><msup><msub><mi>v</mi><mn>0</mn></msub><mn>2</mn></msup><mi>g</mi></mfrac><mo>−</mo><mfrac><msup><msub><mi>v</mi><mn>0</mn></msub><mn>2</mn></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math>
+</eq>
+<p>Simplifying gives us this equation.</p>
+<eq>
+	<math><mrow><mi>y</mi></mrow><mo>=</mo><mfrac><msup><msub><mi>v</mi><mn>0</mn></msub><mn>2</mn></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math>
+</eq>
 </section>
 </example>
 <p>To end this tutorial on free fall, we show how we can get these equations via integrating with respect to the constant gravitational acceleration. Given that we set positive as "going up", the gravitational acceleration is thus <math><mo>−</mo><mi>g</mi></math>.</p>
