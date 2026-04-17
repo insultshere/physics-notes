@@ -105,19 +105,27 @@ example > mark {
 	float:right;
 	display:block;
 	background-color:rgba(0,0,0,0);
+	width:2.4em;
+	height:1.1em;
 }
 
 mark[custom]::after {
-	content:"✎";
-	font-size:1.1em;
-	color:#900;
+	display:block;
+	content:url(icons/custom.svg);
+	width:1.1em;
+	height:1.1em;
 	margin-left:0.1em;
+	float:right;
+	rotate: 90deg;
 }
 
 mark[variable]::before {
-	content:"✀";
-	font-size:1em;
-	color:#900;
+	display:block;
+	content:url(icons/variable.svg);
+	width:1.1em;
+	height:1.1em;
+	float:right;
+	rotate: -90deg;
 }
 
 term {
@@ -126,7 +134,7 @@ term {
 }
 
 termdecl {
-	margin: 1.2em 0 1.2em 0;
+	margin: 0.5em 0 0.5em 0;
 	display:block;
 	text-align:left;
 	color:#900;

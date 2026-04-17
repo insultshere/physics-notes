@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dynamics - friction</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Friction</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<p>We saw that the normal force pushes up on objects. Likewise, we know that objects have various surfaces; some rougher than others. We know it feels harder to push on a rough surface than on a smooth surface. This leads us to another force that arises due to the contact of objects.</p>
+<termdecl>
+	<term>Friction </term>- a force that resists relative motion
+</termdecl>
+<p>Imagine a box on a rough surface. You push on it, but it doesn't seem to move. You push at it harder, and it still doesn't move. Finally, you push at it with all your might and it moves.</p>
+<figure><img src="images/friction1.svg"></figure>
+<figurecaption>Static friction at play.</figurecaption>
+<p>If the surface was frictionless, it should've moved when you pushed it, even at your weakest. It seems that friction has stopped the movement of the block. This type of friction attempts to keep objects stationary.</p>
+<termdecl>
+	<term>Static Friction (<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub></math>) </term>- friction which occurs between two objects that are stationary relative to one another
+</termdecl>
+<p>One may note the term "stationary relative to one another". Recall in our study of reference frames that moving objects can be stationary if the reference is moving.</p>
+<p>For example, two blocks on a truck are both moving, but since they are both moving at the same velocity, they are "at rest" relative to one another.</p>
+<figure><img src="images/friction2.svg"></figure>
+<figurecaption>Two objects, stationary relative to one another.</figurecaption>
+<p>We showed that when we pushed it without much strength, it didn't move, yet when we pushed it harder, it still didn't move. By Newton's first law, since the box is at rest, that means the forces are balanced. </p>
+<p>The only other force acting on the box must be static friction. From this, we see that the static friction is equal to the force that we push. We push weakly, static friction is weak. We push harder, static friction pushes harder to balance the forces.</p>
+<figure><img src="images/friction3.svg"></figure>
+<figurecaption>Static friction perfectly balanced out how much we push.</figurecaption>
+<p>In other words, static friction can be described as "lazy". It only pushes as much as it needs to.</p>
+<p>Since the normal force is the one causing the contact, it is the reason why there is friction. However, as we noted, some surfaces have lower friction while some have very high friction. For example, rough sandpaper has less friction than smooth ice. We can quantify this with a new variable.</p>
+<termdecl>
+	<term>Coefficient of Static Friction (<math><msub><mi>&mu;</mi><mi>s</mi></msub></math>) </term>- a constant that describes the ratio of static friction between two surfaces to the normal force
+</termdecl>
+<p>The term "ratio" here means that the higher the normal force, the higher the possible static friction. This makes sense; objects with more mass have more weight, and we noted that objects with more weight tend to have a higher normal force.</p>
+<p>We saw that when we pushed hard enough, we were able to get it moving. The coefficient of static friction gives us the maximum possible strength of the coefficient of static friction.</p>
+<eq>
+	<math><msub><mi>f</mi><mi>s</mi></msub><mo>&leq;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi></math>
+</eq>
+<p>This equation gives us the possible strength of static friction, and we see that the absolute maximum is when <math><msub><mi>f</mi><mi>s</mi></msub><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi></math>. After that, the box starts to move. Before that, static friction is equal to the force pushing the object to balance out the forces.</p>
+<figure><img src="images/friction4.svg"></figure>
+<figurecaption>A graph of the static friction and the pushing force. Static friction balances out the force.</figurecaption>
+<p>One thing to note is that friction and the normal force are perpendicular to one another. This may prove useful to us one day.</p>
+<example><mark custom></mark>
+<h4>Question 1</h4>
+As part of your job at the sandpaper factory, you push boxes covered in sandpaper. Written on the box, it says that the maximum static friction for this box is 50N. What is the strength of the static friction if you push at 10N? 25N? What occurs when you push at 51N?
+<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>At 10N, the strength of the static friction is also 10N to keep it at rest. At 25N, it continues to be 25N. However, at 51N, it exceeds the maximum static friction, and the box starts to move.</p>
+</section>
+</example>
+<example><mark custom></mark>
+<h4>Exercise 1</h4>
+Another part of your job is pushing jugs of water. You pick up a 10kg jug and place it on the floor. The label on the jug shows that <math><msub><mi>&mu;</mi><mi>s</mi></msub><mo>=</mo><mi>0.2</mi></math> for a jug on the sandpaper floor. What happens when you push at 10N? 25N? At what strength should you push to get the jug moving?
+<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The maximum strength of the static friction can be calculated by getting <math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math>. We don't know the normal force, but we can get it by noting the jug's weight.</p>
+<eq>
+	<math><mi>w</mi><mo>=</mo><mi>10kg</mi><mi>(9.8m/s²)</mi><mo>=</mo><mi>98N</mi></math>	
+</eq>
+<p>This means that the normal force is also 98N. Noting the coefficient of static friction, we can get the maximum strength of the static friction.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>=</mo><mi>(0.2)</mi><mi>(98N)</mi><mo>=</mo><mi>19.6N</mi></math>
+</eq>
+<p>This means that pushing it at 10N will do nothing, 25N will cause it to move, and we have to push with atleast 19.6N of force to start to move the box.</p>
+</section>
+</example>
+<p>From what you've seen, the static friction appears to be a nuisance. However, without it, we can't walk. We push against the floor, and the floor pushes against us by Newton's third law. Because of static friction, we can be confident that when we push on the floor, we won't start to slip and fall.</p>
+<figure><img src="images/friction6.svg"></figure>
+<figurecaption>Pushing on the floor allows us to walk and run.</figurecaption>
+<p>The above figure shows a person pushing on the floor. The foot attempts to slip backward, but static friction pushes back to keep it at rest. Likewise, when the person puts his foot down, it tries to slip forward, but static friction pushes it backward.</p>
+<figure><img src="images/friction5.svg"></figure>
+<figurecaption>Pushing on the floor allows us to walk and run.</figurecaption>
+<example><mark variable></mark>
+<h4>Exercise 2</h4>
+(HRK E5.11) What is the greatest acceleration that can be generated by a
+runner if the coefficient of static friction between shoes and
+road is 0.95?
+<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The foot pushes down on the floor, which gives it a force. Then, the floor pushes back on the foot, keeping it at rest, and not letting it slip. Since the two balance out, we can set them equal to each other, and then solve.</p>
+<p>We don't know the mass of the runner, so let's just call it <math><mi>M</mi></math>. We also assume its on a level surface, so the weight is equal to the normal force. The static friction is in opposite direction to the force, so we set it as negative.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub></math><br>
+	<math><mi>0N</mi><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
+</eq>
+<p>We can substitute the equation for the maximum static friction, then subtitute weight for the normal force since we stated it was equal.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
+</eq>
+<p>Now, using the Law of Acceleration, we substitute the force as <math><mi>M</mi><mi>a</mi></math> and the weight as <math><mi>M</mi><mi>g</mi></math>. We drop the vector notation here since we don't need direction anymore.</p>
+<eq>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>M</mi><mi>g</mi><mo>=</mo><mi>M</mi><mi>a</mi></math><br>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>g</mi><mo>=</mo><mi>a</mi></math><br>
+</eq>
+<p>We now have an equation for the acceleration. Calculating, <math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>g</mi><mo>=</mo><mi>(0.95)</mi><mi>(9.8m/s²)</mi><mo>&approx;</mo><mi>9.3m/s²</mi></math>.</p>
+</section>
+</example>
+<example>
+<h4>Question 2</h4>
+(HRK Q5.3) A crate, heavier than you are, rests on a rough floor. The coefficient of static friction between the crate and the floor is the
+same as that between the soles of your shoes and the floor.
+Can you push the crate across the floor?
+<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Since the box is heavier than you, the normal force for the box is larger than your normal force. This means your maximum static friction is less than that of the box; this means that when you push on the floor at the strength you need to push the box, you start to slip. Thus, it is impossible.</p>
+</section>
+</example>
+<p>We saw how friction works to stop us from moving something, however what happens when the object starts moving? We know that friction still plays a role; it is harder to push on a rough surface than a smooth surface.</p>
+<p>This friction helps to slow down things, and is the other type of friction. Just like static friction, there is also has a coefficient of kinetic friction,</p>
+<termdecl>
+	<term>Kinetic Friction (<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math>) </term>- friction which occurs between two objects that are moving relative to one another<br>
+	<term>Coefficient of Kinetic Friction (<math><msub><mi>&mu;</mi><mi>k</mi></msub></math>) </term>- a constant that describes the ratio of kinetic friction between two surfaces to the normal force
+</termdecl>
+<p>Just like static friction, it has a similar equation to it. However, this time, kinetic friction is near constant; it isn't lazy like static friction, it has a constant value depending on the normal force.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>=</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math>
+</eq>
+<p>You may have felt before that it is harder to get something moving then it is to get it to keep moving. This is true; the coefficient of static friction is usually higher than that of the kinetic friction.</p>
+<figure><img src="images/friction7.svg"></figure>
+<figurecaption>The full (simplified) graph of friction over the pushing force.</figurecaption>
+<example>
+<h4>Exercise 3</h4>
+(HRK E5.12) A baseball player with mass 79 kg, sliding into a base, is slowed by a force of friction of 470 N. What is the coefficient of kinetic friction between the player and the ground?
+<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We first get the weight of the player.</p>
+<eq>
+	<math><mi>w</mi><mo>=</mo><mi>79kg</mi><mi>(9.8m/s²)</mi><mo>=</mo><mi>774.2N</mi></math>	
+</eq>
+<p>The normal force is then 774.2N. The kinetic friction must then be 470 N, given that he was sliding (meaning he was moving relative to the ground). We then rearrange the equation.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>=</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mi>&mu;</mi><mi>k</mi></msub><mo>=</mo><mfrac><msub><mi>f</mi><mi>k</mi></msub><mi>N</mi></mfrac><mo>=</mo><mfrac><mi>470N</mi><mi>774.2N</mi></mfrac><mo>=</mo><mi>0.61</mi></math>
+</eq>
+</section>
+</example>
+<example hard><mark variable></mark>
+<h4>Problem 1</h4>
+(LSM P6.107) A box is dropped onto a conveyor belt moving at
+3.4 m/s. If the coefficient of friction between the
+box and the belt is 0.27, how long will it take
+before the box moves without slipping?
+<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The force of friction attempts to slow down the box going from rest to 3.4m/s. Thus, this is kinetic friction. We don't know the mass of the box, so let's say its <math><mi>M</mi></math>.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>M</mi><mi>a</mi><mo>=</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>M</mi><mi>g</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>g</mi></math>
+</eq>
+<p>We get that the acceleration is &minus;2.646m/s². We then use a kinematic equation to get the time.</p>
+<eq>
+	<math><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
+	<math><mi>(3.4m/s)</mi><mo>=</mo><mi>(2.646m/s²)</mi><mi>t</mi></math><br>
+</eq>
+<p>Giving us that the time taken is 1.3s.</p>
+</section>
+</example>
+<p>Let's now try problems where both types of friction might play a role.</p>
+<example>
+<h4>Exercise 5</h4>
+(HRK E5.14) A 53-lb (= 240 N) trunk rests on the floor. The coefficient of
+static friction between the trunk and the floor is 0.41, while
+the coefficient of kinetic friction is 0.32. <br>(a) What is the minimum horizontal force with which a person must push on the
+trunk to start it moving? <br>(b) Once moving, what horizontal
+force must the person apply to keep the trunk moving with
+constant velocity? <br>(c) If, instead, the person continued to push
+with the force used to start the motion, what would be the acceleration of the trunk?<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The weight is equal to the normal force, so we can use the weight of the trunk (240N). We first calculate the maximum force for the static friction.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>=</mo><mi>(0.41)</mi><mi>(240N)</mi><mo>=</mo><mi>98.4N</mi></math>
+</eq>
+<p>Which means one needs to push a little above 98.4N to get it moving. Now, to keep it moving at constant velocity, it has to have no acceleration; by the Law of Inertia, this means that the forces are balanced. This means that the pushing force is equal to the force of kinetic friction.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>=</mo><mi>(0.32)</mi><mi>(240N)</mi><mo>=</mo><mi>76.8N</mi></math>
+</eq>
+<p>Thus, once it gets moving, it has to be pushed at 76.8N to keep it at constant velocity. Now, pushing at the same 98.4N, there is now a net force, causing an acceleration. Letting the kinetic friction be negative as it is moving opposite to the motion, we can calculate the net force.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mi>98.4N</mi><mo>−</mo><mi>76.8N</mi></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mi>21.6N</mi></math><br>
+</eq>
+<p>We can now get the acceleration using the law of acceleration. However, we need the mass. We collect that first.</p>
+<eq>
+	<math>=<mi>m</mi><mo>=</mo><mfrac><mi>240N</mi><mi>9.8m/s²</mi></mfrac><mo>=</mo><mi>24.49kg</mi></math><br>
+</eq>
+<p>Finally, we get the acceleration.</p>
+<eq>
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>21.6N</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><mfrac><mi>21.6N</mi><mi>24.49kg</mi></mfrac><mo>=</mo><mi>0.88m/s²</mi></math><br>
+</eq>
+</section>
+</example>
+<p>Since the friction is connected to the normal force, one must have a good grasp of the normal force to deal with friction.</p>
+<example hard><mark variable></mark>
+<h4>Exercise 6</h4>
+(HRK E5.17b) A 136-kg crate is at rest on the floor. A worker attempts to
+push it across the floor by applying a 412-N force horizontally, with the coefficient of static friction between the crate and the floor being 0.37. A second worker helps by pulling up on the crate.
+What minimum vertical force must this worker apply so that
+the crate starts to move across the floor?<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The coworker pulling up reduces the normal force; recall that it is also a lazy force, like static friction.</p>
+<p>We first set up the equation for the worker pulling horizontally. The net force here must be zero, as this is the time the crate will start to move. Setting up the equation, setting the maximum static friction as negative gives us this.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub></math><br>
+	<math><mi>0N</mi><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi><mo>=</mo><msub><mi>F</mi></msub></math><br>
+</eq>
+<p>Now, solving for the normal force, we note three vertical forces; being the weight, the normal force, and the force that the coworker is pulling up. Since the coworker isn't pulling up the crate enough such that it starts to accelerate upwards, the net force is still zero.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>coworker</mi></msub><mo>+</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>0N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>coworker</mi></msub><mo>+</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>coworker</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>m</mi><mi>g</mi><mo>&minus;</mo><msub><mi>F</mi><mi>coworker</mi></msub><mo>=</mo><mi>N</mi></math><br>
+</eq>
+<p>Now, we substitute this equation for the normal force.</p>
+<eq>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi><mo>=</mo><mi>F</mi></math><br>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mo>(</mo><mi>m</mi><mi>g</mi><mo>&minus;</mo><msub><mi>F</mi><mi>coworker</mi></msub><mo>)</mo><mo>=</mo><mi>F</mi></math><br>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>m</mi><mi>g</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><msub><mi>F</mi><mi>coworker</mi></msub><mo>=</mo><mi>F</mi></math><br>
+	<math><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><msub><mi>F</mi><mi>coworker</mi></msub><mo>=</mo><mi>F</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>m</mi><mi>g</mi></math><br>
+	<math><msub><mi>F</mi><mi>coworker</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>&mu;</mi><mi>s</mi></msub><mi>m</mi><mi>g</mi><mo>&minus;</mo><mi>F</mi></mrow><msub><mi>&mu;</mi><mi>s</mi></msub></mfrac><mo>=</mo><mfrac><mi>(0.37)(136kg)(9.8m/s²) &minus; (412N)</mi><mi>(0.37)</mi></mfrac><mo>=</mo><mi>219N</mi></math><br>
+</eq>
+</section>
+</example>
+<example> <mark custom></mark>
+<h4>Question 3</h4>
+Draw a free body diagram for the following figure, portraying a box being pushed into a rough wall. The box is at rest relative to the wall.
+<figure><img src="images/friction8.svg"></figure>
+<figurecaption>Question 3.</figurecaption>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We draw the force pushing the box into the wall. Then, there is a normal force from the wall to the block. The block has a force of weight pulling it down. Given that the block wants to move down, friction points up to resist this relative motion.</p>
+<figure><img src="images/friction9.svg"></figure>
+</section>
+</example>
+<footer>
+	<a href="forces-at-an-angle.html"> Forces at an Angle ></a>
+</footer>
+</body>
+</html>
