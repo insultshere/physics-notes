@@ -33,7 +33,7 @@
 Observe the box on an inclined plane below. Show that <math><mi>x</mi><mo>=</mo><mi>&theta;</mi></math>.
 <figure><img src="images/inclined5.svg"></figure>
 <figurecaption>Problem 1.</figurecaption>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>Since the interior angles of a triangle add up to 180&deg;, we can solve for the value of &phi;.</p>
 <eq>
@@ -61,8 +61,8 @@ A 5.0kg box is placed on a frictionless inclined plane, angled at 30.0&deg;.
 <br>(a) What is the acceleration of the box?
 <br>(b) What is the magnitude of the normal force?
 <figure><img src="images/inclined6.svg"></figure>
-<figurecaption>Exercise 3.</figurecaption>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<figurecaption>Exercise 1.</figurecaption>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>Tilting the coordinate system, we see that the horizontal weight corresponds to the acceleration of the box along the inclined plane, and the vertical weight pushes on the surface, causing the normal force.</p>
 <figure><img src="images/inclined7.svg"></figure>
@@ -89,7 +89,7 @@ A 5.0kg box is placed on a frictionless inclined plane, angled at 30.0&deg;.
 (LSM P5.66) What force must be applied to a 100.0-kg crate
 on a frictionless plane inclined at 30&deg; to cause
 an acceleration of 2.0m/s² up the plane?<br><br>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>There are two horizontal forces acting in the tilted coordinate system; the force being applied, and the horizontal weight, which we set as negative as it pulls the crate down. Solving, we have the following.</p>
 <eq>
@@ -102,16 +102,6 @@ an acceleration of 2.0m/s² up the plane?<br><br>
 </section>
 </example>
 <p>Of course, inclined planes usually have friction as well. Since friction points perpendicular to the normal force, it points parallel to the surface; thus, there usually isn't any need to decompose friction.</p>
-<example>
-<h4>Question 1</h4>
-(HRK Q5.6) Why do tires grip the road better on level ground than they do when going uphill or downhill?<br><br>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
-<section class="solution">
-<p>The normal force on an inclined plane is based on the angle of the incline; this usually causes it to be less than if the surface was completely level.</p>
-</section>
-</example>
-<p>You may notice that the solutions now begin to involve more on manipulating equations instead of solving for each value one at a time.</p>
-<p>This method of solving makes it less likely to commit numerical mistakes (such as mistyping on a calculator) and makes it so that if the problem's values change, the answer can be collected much faster. This method should be adopted, as later branches feature a lot more of this manipulation.</p>
 <example>
 <h4>Exercise 3</h4>
 (HRK P5.5a) A 7.96-kg block rests on a plane inclined at 22.0° to the horizontal. The coefficient of static friction
@@ -162,7 +152,7 @@ an incline with friction is given by this equation.
 <eq>
 	<math><mi>a</mi><mo>=</mo><mi>g</mi><mi>(</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mi>)</mi></math>
 </eq>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>We note two forces which cause acceleration; the kinetic friction, and the weight of the object. Here, it is best to set the weight as positive and the kinetic friction as negative as this force attempts to stop the object from going down the plane.</p>
 <p>Thus, we can write out this equation. Another thing to note is that the normal force has the same magnitude as the vertical weight, so we substitute that in as well.</p>
@@ -180,13 +170,107 @@ an incline with friction is given by this equation.
 </eq>
 </section>
 </example>
-<p>Of course, we can relate these quantities back to kinematics using our kinematic equations.</p>
-<example hard> <mark variable></mark>
+<p>As of now, the only "angled" force we noted in our equations is the weight. However, other forces also occur that can be perpendicular to our coordinate system or even be angled. In these scenarios, you should try to imagine what they look like.</p>
+<p>One trick you can try is to "imagine" the original inclined plane and rotate or flip it into position. Of course, this trick works much better when you practice a lot!</p>
+<figure><img src="images/inclined9.svg"></figure>
+<figurecaption>Forces in our original coordinate system become angled forces.</figurecaption>
+<example>
+<h4>Exercise 5</h4>
+(HRK E4.10) A 110-kg crate is pushed at constant speed up the frictionless
+34° ramp. What is the magnitude of horizontal force shown?
+<figure><img src="images/inclined10.svg"></figure>
+<figurecaption>Exercise 5.</figurecaption>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>To keep the box moving at constant speed, the horizontal forces (in the titled reference plane) have to cancel out to zero. The only net forces in the horizontal direction is the horizontal weight and the horizontal component of the force.</p>
+<p>Looking at the figure, we see that the horizontal force is adjacent to the angle, so we use cosine.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
+	<math><mi>0N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
+	<math><mi>0N</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mfrac><mrow><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac><mo>=</mo><mi>m</mi><mi>g</mi><mi>tan</mi><mi>(&theta;)</mi><mo>=</mo><mi>F</mi></math><br>
+</eq>
+<p>Substituting the values, we get the magnitude of the force.</p>
+<eq>
+	<math><mi>(110kg)</mi><mi>(9.8m/s²)</mi><mi>tan</mi><mi>(34&deg;)</mi><mo>&approx;</mo><mi>730N</mi></math><br>
+</eq>
+</section>
+</example>
+<example hard>
+<h4>Exercise 6</h4>
+(HRK E5.23a) A 4.8-kg block on a 39° inclined plane is acted on by a horizontal force of 46 N. The coefficient of kinetic friction between block and plane is 0.33. What is
+the acceleration of the block if it is moving up the plane?<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The horizontal force exerts a vertical and horizontal component in our tilted coordinate system. The vertical component adds on to the normal force, so we compute that first. The vertical component is opposite to the angle, so we use sine.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mi>N</mi></math><br>
+</eq>
+<p>There are three forces acting on the horizontal direction, with the horizontal weight and the kinetic friction both opposing the acceleration.</p>
+<p>Noting the normal force is the same as the vertical weight, we make the equation for the net horizontal force.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>N</mi></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mo>(</mo><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>)</mo></math><br>
+	<math><mi>a</mi><mo>=</mo><mfrac><mrow><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mi>m</mi></mfrac></math><br>
+</eq>
+<p>Substituting the values, we get the acceleration, which is about &minus;3.2m/s².</p>
+</section>
+</example>
+<example>
+<h4>Question 1</h4>
+(HRK Q5.6) Why do tires grip the road better on level ground than they do when going uphill or downhill?<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The normal force on an inclined plane is based on the angle of the incline; this usually causes it to be less than if the surface was completely level.</p>
+</section>
+</example>
+<p>To end this flyby of the inclined plane, let's try some problems which require the use of kinematics. The kinematics part is usually just some algebraic manipulation and plugging, like the dessert after the main course.</p>
+<example>
 <h4>Problem 3</h4>
+(HRK E5.19) Frictional heat generated by the moving ski is the chief factor
+promoting sliding in skiing. The ski sticks at the start, but
+once in motion will melt the snow beneath it. Waxing the ski
+makes it water repellent and reduces friction with the film of
+water. A magazine reports that a new type of plastic ski is
+even more water repellent and that, on a gentle 203-m slope
+in the Alps, a skier reduced his time from 61 to 42 s with the
+new skis. Assuming a 3.0° slope, compute the coefficient of
+kinetic friction for each case.<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We don't know the mass, so let's set it as <math><mi>M</mi></math>. Then, the net horizontal force is the horizontal weight and the kinetic friction.</p>
+<eq>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
+	<math><mi>M</mi><mi>a</mi><mo>=</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>M</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><mi>g</mi><mi>(</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mi>)</mi></math><br>
+</eq>
+<p>Now, let's subtitute this value into our kinematic equations. Noting the initial velocity at rest, we solve for the coefficient of kinetic friction.</p>
+<eq>
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mi>x</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>g</mi><mi>(</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mi>)</mi></mrow><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><msup><mi>t</mi><mn>2</mn></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>g</mi><msub><mi>&mu;</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi></mrow><msup><mi>t</mi><mn>2</mn></msup><mo>&minus;</mo><mi>x</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>g</mi><msub><mi>&mu;</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi></mrow><msup><mi>t</mi><mn>2</mn></msup><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><msup><mi>t</mi><mn>2</mn></msup><mo>&minus;</mo><mi>x</mi></math><br>
+	<math><msub><mi>&mu;</mi><mi>k</mi></msub><mo>=</mo><mfrac><mrow><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>&minus;</mo><mi>x</mi></mrow><mrow><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></math><br>
+</eq>
+<p>We now have a convoluted equation for the coefficient of kinetic friction. Let's first compute for the 61s case.</p>
+<eq>
+	<math><msub><mi>&mu;</mi><mi>k</mi></msub><mo>=</mo><mfrac><mrow><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>(9.8m/s²)</mi><mi>sin</mi><mi>(3&deg;)</mi><msup><mi>(61s)</mi><mn>2</mn></msup></mrow><mo>&minus;</mo><mi>203m</mi></mrow><mrow><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(9.8m/s²)</mi><mi>cos</mi><mi>(3&deg;)</mi><msup><mi>(61s)</mi><mn>2</mn></msup></mrow></mfrac><mo>&approx;</mo><mi>0.041</mi></math><br>
+</eq>
+<p>Now, for the 42s case. This should be lower than the first scenario.</p>
+<eq>
+	<math><msub><mi>&mu;</mi><mi>k</mi></msub><mo>=</mo><mfrac><mrow><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>(9.8m/s²)</mi><mi>sin</mi><mi>(3&deg;)</mi><msup><mi>(42s)</mi><mn>2</mn></msup></mrow><mo>&minus;</mo><mi>203m</mi></mrow><mrow><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(9.8m/s²)</mi><mi>cos</mi><mi>(3&deg;)</mi><msup><mi>(42s)</mi><mn>2</mn></msup></mrow></mfrac><mo>&approx;</mo><mi>0.029</mi></math><br>
+</eq>
+</section>
+</example>
+<example hard> <mark variable></mark>
+<h4>Problem 4</h4>
 (HRK E5.20) A block slides down an inclined plane of slope angle &theta; with
 constant velocity. It is then projected up the same plane with
-an initial speed. <br>(a) How far up the incline will it move before coming to rest? <br>(b) Will it slide down again?<br><br>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
+an initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>. <br>(a) How far up the incline will it move before coming to rest, given &theta; and initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>? <br>(b) Will it slide down again?<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>Given that the block slides down at constant velocity, that means that they have the same magnitude.</p>
 <eq>
@@ -211,7 +295,7 @@ an initial speed. <br>(a) How far up the incline will it move before coming to r
 </section>
 </example>
 <footer>
-	<a unfinished> Tension ></a>
+	<a href="tension.html"> Tension ></a>
 </footer>
 </body>
 </html>

@@ -216,6 +216,7 @@ a[unfinished]:hover{
 }
 
 footer[next]{
+	margin-top:0.5em;
 	font-style: italic;
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -227,6 +228,10 @@ footer[next]{
 	height:auto;
 	width:50%;
 	float:left;
+	counter-reset: count 0;
+}
+
+#navigation > nav[reset] {
 	counter-reset: count 0;
 }
 
@@ -243,6 +248,12 @@ navlink {
 
 navlink::before {
 	content:"(" counter(count,decimal) ")";
+	float:left;
+	margin-right:0.2em;
+}
+
+navlink[lower-alpha]::before {
+	content:"(" counter(count,lower-alpha) ")";
 	float:left;
 	margin-right:0.2em;
 }
