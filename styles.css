@@ -1,7 +1,11 @@
+html {
+	scroll-behavior:smooth;
+}
+
 body {
-	font-family:Tahoma, Geneva, Verdana, sans-serif;
-	margin:auto;
 	width:45%;
+	margin:auto;
+	font-family:Tahoma, Geneva, Verdana, sans-serif;
 	text-align:justify;
 	text-justify:inter-word;
 	line-height:1.3em;
@@ -17,7 +21,7 @@ header {
 	font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-footer {
+body > footer {
 	margin-top:3em;
 	text-align:right;
 	margin-bottom:2em;
@@ -71,11 +75,12 @@ figure {
 }
 
 figure > img {
-	max-width:80%;
+	max-width: 70%;
+	min-width: 35%;
 }
 
-figurecaption {
-	font-style:italic;
+figure > figcaption {
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size:0.8em;
 	text-align:center;
 	margin:auto;
@@ -85,28 +90,32 @@ figurecaption {
 
 /*css for examples*/
 
-example {
+.examples {
 	display:block;
 	background-color:#EEEEEE;
 	padding:6px;
 	margin: 0.75em 0px 0.75em 0px
 }
 
-
-example[hard] {
+.examples[hard] {
 	background-color:#F5EAEA;
 }
 
-example > h4 {
+.examples > h4 {
 	margin-bottom:0.3em;
 }
 
-example > mark {
+.examples > mark {
 	float:right;
 	display:block;
 	background-color:rgba(0,0,0,0);
 	width:2.4em;
 	height:1.1em;
+}
+
+.examples > p {
+	margin-top:-0.3em;
+	margin-bottom:1em;
 }
 
 mark[custom]::after {
@@ -128,19 +137,23 @@ mark[variable]::before {
 	rotate: -90deg;
 }
 
-term {
+/* terms and equations */
+
+.terms > mark {
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-weight:bold;
+	background-color: rgba(0,0,0,0);
+	color:#900;
 }
 
-termdecl {
+.terms {
 	margin: 0.5em 0 0.5em 0;
 	display:block;
 	text-align:left;
 	color:#900;
 }
 
-eq {
+.equations {
 	text-align:center;
 	display:block;
 	line-height:2em;
@@ -149,9 +162,15 @@ eq {
 	overflow-y:hidden;
 }
 
-body > eq {
+math:has(mfrac) {
+	margin: 0.3em 0 0.3em 0
+}
+
+body > .equations {
 	color:#900;
 }
+
+/* links */
 
 a {
 	text-decoration:none;
@@ -223,43 +242,9 @@ footer[next]{
 
 /*navigation*/
 
-#navigation {
-	display:block;
-	height:auto;
-	width:50%;
-	float:left;
-	counter-reset: count 0;
-}
-
-#navigation > nav[reset] {
-	counter-reset: count 0;
-}
-
-#navigation > nav {
-	width:100%;
-	margin-bottom:0.5em;
-}
-
-navlink {
-	display:flex;
-	text-align:left;
-	counter-increment: count 1;
-}
-
-navlink::before {
-	content:"(" counter(count,decimal) ")";
-	float:left;
-	margin-right:0.2em;
-}
-
-navlink[lower-alpha]::before {
-	content:"(" counter(count,lower-alpha) ")";
-	float:left;
-	margin-right:0.2em;
-}
-
 @media only screen and (max-width: 769px) {
-	body {
+	
+	body{
 		width:90%;
 		font-size:0.9em;
 		line-height: 1.23em;

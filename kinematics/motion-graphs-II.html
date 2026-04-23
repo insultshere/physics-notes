@@ -4,7 +4,7 @@
 	<title>kinematics - graphsII</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<script src="../script.js"></script>
+	<script defer src="../script.js"></script>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,135 +15,135 @@
 </header>
 <p>In the previous tutorial, we saw that the slope of position is velocity, and the slope of velocity is acceleration. This "rate of change" corresponds to taking the <intext tabindex="0" tooltip="the derivative of a function gives its slope with respect to a variable">derivative</intext> of a function.</p>
 
-<figure><img src="images/func2.svg"></figure>
-<figurecaption>The slope of position is given by its velocity.</figurecaption>
+<figure><img src="images/func2.svg" fetchpriority="high" alt="">
+<figcaption>The slope of position is given by its velocity.</figcaption></figure>
 
 <p>In the above figure, it is seen that the position is given by a line. Taking the derivative of a line gives a constant, which aligns with what we know; a constant velocity gives a linear position.</p>
 
-<eq>
+<article class="equations">
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>t</mi><mo>=</mo><mi>1</mi></math>
-</eq>
+</article>
 
 <p>This fact can be easily shown by this relation that we saw some time back; the derivative of postion with respect to time is velocity. We differentiate with respect to time as we want to find out how it changes with time.</p>
 
-<eq>
+<article class="equations">
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi></math>
-</eq>
+</article>
 
-<example hard>
+<section class="examples" hard>
 <h4>Exercise 1</h4>
 (LSM P3.34) An object has a position function <math><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>5</mi><mi>t</mi><mo>m</mo></math>. What is the velocity as a function of time? <br><br>
 <h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>To get the velocity function given the position function, we just take the derivative of it with respect to time.</p>
-<eq>
+<article class="equations">
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>(</mi><mi>5</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>5</mi></math>
-</eq>
+</article>
 </section>
-</example>
+</section>
 
 <p>How about velocity and acceleration? Recalling our motion graphs, we also saw that a constant acceleration gives a linear velocity. We also noted that the slope of velocity is the acceleration.</p>
 
-<figure><img src="images/func3.svg"></figure>
-<figurecaption>The slope of velocity is given by its acceleration.</figurecaption>
+<figure><img src="images/func3.svg" alt="">
+<figcaption>The slope of velocity is given by its acceleration.</figcaption></figure>
 
 <p>With this, we can show that the derivative of velocity with respect to time gives us the acceleration.</p>
 
-<eq>
+<article class="equations">
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>a</mi><mi>(</mi><mi>t</mi><mi>)</mi></math>
-</eq>
+</article>
 
 <p>Now, we can relate acceleration and position. Since we know now that acceleration is the derivative of velocity, and velocity is the derivative of position, if we take the second derivative of position we can get the value of acceleration.</p>
 
-<figure><img src="images/func1.svg"></figure>
-<figurecaption>The second derivative of position is acceleration.</figurecaption>
+<figure><img src="images/func1.svg" alt="">
+<figcaption>The second derivative of position is acceleration.</figcaption></figure>
 
 <p>We can see that the graph of position under constant acceleration is a quadratic equation. Taking the derivative once of this equation gives us the velocity, which in the graph is <math><mi>t</mi></math>.</p>
 
-<eq>
+<article class="equations">
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>(</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><mi>t</mi><mn>2</mn></msup><mo>)</mo><mo>=</mo><mi>t</mi></math>
-</eq>
+</article>
 
 <p>Then, taking the derivative again gives us the acceleration. This aligns with what we saw.</p>
 
-<eq>
+<article class="equations">
 	<math><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>a</mi><mi>(</mi><mi>t</mi><mi>)</mi></math>
-</eq>
+</article>
 
-<example hard>
+<section class="examples" hard>
 <h4>Exercise 2</h4>
 (LSM P3.86) A particle moves along the x-axis according to the equation <math><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>2.0</mi><mo>−</mo><mi>4.0</mi><msup><mi>t</mi><mn>2</mn></msup><mo>m</mo></math>. What are the velocity and acceleration at 2.0s and 5.0s? <br><br>
 <h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>We first get the velocity function by differenatiating the position function with respect to time.</p>
-<eq>
+<article class="equations">
 	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>(</mi><mi>2.0</mi><mo>−</mo><mi>4.0</mi><msup><mi>t</mi><mn>2</mn></msup><mi>)</mi><mo>=</mo><mo>−</mo><mi>8.0</mi><mi>t</mi></math>
-</eq>
+</article>
 <p>This gives us the velocity at the given times is −16m/s and −40m/s respectively. Then, we differentiate this again to get our acceleration.</p>
-<eq>
+<article class="equations">
 	<math><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mi>(</mi><mi>2.0</mi><mo>−</mo><mi>4.0</mi><msup><mi>t</mi><mn>2</mn></msup><mi>)</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>(</mi><mo>−</mo><mi>8</mi><mi>t</mi><mi>)</mi><mo>=</mo><mo>−</mo><mi>8.0</mi></math>
-</eq>
+</article>
 <p>This shows that the acceleration is constant; it is −8.0m/s² for both given times.</p>
 </section>
-</example>
+</section>
 
 <p>How about going backwards? We saw that the sum of the area under the graph of velocity is the total displacement; this corresponds nicely to the <intext tabindex="0" tooltip="the definite integral of a function gives the area under the graph">definite integral</intext> of a function.</p>
 <p>This fact can be written as the following.</p>
 
-<eq>
+<article class="equations">
 <math><mrow><mo>∫</mo><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>dt</mi><mo>=</mo><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>+</mo><mi>C</mi></mrow></math>
-</eq>
+</article>
 
 <p>Since integration is the inverse operation of differentiation, if we take the derivative of a function and then integrate it, we should get the original function. This fact is preserved, as shown below.</p>
 
 
-<eq>
+<article class="equations">
 <math><mrow><mo>∫</mo><mo>(</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>)</mo><mi>dt</mi><mo>=</mo><mo>∫</mo><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi></mrow></math>
-</eq>
+</article>
 
 <p>We can also say this for acceleration and velocity, written below.</p>
 
-<eq>
+<article class="equations">
 <math><mrow><mo>∫</mo><mi>a</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>dt</mi><mo>=</mo><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>+</mo><mi>C</mi></mrow></math>
-</eq>
+</article>
 
-<example hard>
+<section class="examples" hard>
 <h4>Exercise 3</h4>
 (LSM P3.78) The acceleration of a particle varies with time according to the equation <math><mi>a</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>p</mi><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mi>q</mi><msup><mi>t</mi><mn>3</mn></msup><mo>m</mo></math>. Initially, the velocity and position are zero. 
 <br>(a) What is the velocity as a function of time? <br>(b) What is the position as a function of time?<br><br>
 <h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>To get the velocity and position functions, we must integrate the acceleration function with respect to time.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mo>∫</mo><mi>(</mi><mi>p</mi><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mi>q</mi><msup><mi>t</mi><mn>3</mn></msup><mi>)</mi><mi>dt</mi><mo>=</mo><mi>(</mi><mfrac><mrow><mi>p</mi><msup><mi>t</mi><mn>3</mn></msup></mrow><mi>3</mi></mfrac><mo>−</mo><mfrac><mrow><mi>q</mi><msup><mi>t</mi><mn>4</mn></msup></mrow><mi>4</mi></mfrac><mi>)</mi><mo>+</mo><mi>C</mi></mrow></math>
-</eq>
+</article>
 <p>The only problem we have now is the arbitrary constant <math><mi>C</mi></math>. To get this, note the mention that the initial velocity was zero. Setting the value of the velocity function to zero shows that the arbitrary constant has to be zero for this to be true.</p>
-<eq>
+<article class="equations">
 	<math><mi>v</mi><mi>(</mi><mi>0</mi><mi>)</mi><mo>=</mo><mi>0</mi><mo>−</mo><mi>0</mi><mo>+</mo><mi>C</mi><mo>=</mo><mi>0</mi></math><br>
 	<math><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mfrac><mrow><mi>p</mi><msup><mi>t</mi><mn>3</mn></msup></mrow><mi>3</mi></mfrac><mo>−</mo><mfrac><mrow><mi>q</mi><msup><mi>t</mi><mn>4</mn></msup></mrow><mi>4</mi></mfrac></math>
-</eq>
+</article>
 <p>We then integrate this again to get our position function.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mo>∫</mo><mi>(</mi><mfrac><mrow><mi>p</mi><msup><mi>t</mi><mn>3</mn></msup></mrow><mi>3</mi></mfrac><mo>−</mo><mfrac><mrow><mi>q</mi><msup><mi>t</mi><mn>4</mn></msup></mrow><mi>4</mi></mfrac><mi>)</mi><mi>dt</mi><mo>=</mo><mi>(</mi><mfrac><mrow><mi>p</mi><msup><mi>t</mi><mn>4</mn></msup></mrow><mi>12</mi></mfrac><mo>−</mo><mfrac><mrow><mi>q</mi><msup><mi>t</mi><mn>5</mn></msup></mrow><mi>20</mi></mfrac><mi>)</mi><mo>+</mo><mi>C</mi></mrow></math>
-</eq>
+</article>
 <p>Setting the arbitrary constant at zero based on the logic above, we have our final position function below.</p>
-<eq>
+<article class="equations">
 	<math><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mfrac><mrow><mi>p</mi><msup><mi>t</mi><mn>4</mn></msup></mrow><mi>12</mi></mfrac><mo>−</mo><mfrac><mrow><mi>q</mi><msup><mi>t</mi><mn>5</mn></msup></mrow><mi>20</mi></mfrac></math>
-</eq>
+</article>
 </section>
-</example>
+</section>
 <p>We saw above how to use integrals to integrate with respect to changing acceleration. However, most of the time acceleration is constant. Let's try integrating a constant acceleration, as shown below.</p>
 
-<eq>
+<article class="equations">
 <math><mo>∫</mo><mi>a</mi><mi>dt</mi><mo>=</mo><mi>a</mi><mi>t</mi><mo>+</mo><mi>C</mi><mo>=</mo><mi>a</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
 <math><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
-</eq>
+</article>
 
 <p>Since we know the arbitrary constant <math><mi>C</mi></math> becomes the initial velocity, we set that as <math><msub><mi>v</mi><mi>0</mi></msub></math>. We can integrate this again to get our position function.</p>
-<eq>
+<article class="equations">
 <math><mrow><mo>∫</mo><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><msub><mi>t</mi></msub><mi>)</mi><mi>dt</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>∫</mo><mi>dt</mi><mo>+</mo><mi>a</mi><mo>∫</mo><mi>t</mi><mi>dt</mi><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></math><br>
 <math><mi>x</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math>
-</eq>
+</article>
 <p>Now, we have two functions that can give us the position and velocity of a particle given constant acceleration. These two equations are part of a series of four equations called the kinematic equations, which we will derive with algebra in the next tutorial.</p>
 
 <footer>

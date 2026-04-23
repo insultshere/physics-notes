@@ -4,7 +4,7 @@
 	<title>dynamics - weight</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<script src="../script.js"></script>
+	<script defer src="../script.js"></script>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,24 +15,24 @@
 </header>
 <p>From Newton's second law, the Law of Acceleration, we get that an acceleration means there is a net force, and a net force means there is an acceleration.</p>
 <p>In our study of kinematics, we noted one type of motion is a particle in free fall, and more generally projectiles. We noted that they have a gravitational acceleration <math><mi>g</mi></math>. By Newton's second law, there is a force causing this acceleration.</p>
-<termdecl>
-	<term>Weight (<math><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math>)</term> - the force that causes the acceleration due to gravity
-</termdecl>
+<article class="terms">
+	<mark>Weight (<math><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math>)</mark> - the force that causes the acceleration due to gravity
+</article>
 <p>One may notice that we don't call this force "gravity". This is because this force is different from the fundamental force which is actually <intext tabindex="0" tooltip="a fundamental force which pulls objects together">gravity</intext>. Simply, weight is the force that causes the gravitational acceleration; it also is a measure of how strong the gravitational pull is.</p>
 <p>This is more seen in the equation to compute the weight. Using the formula for force, coming from Newton's second law gives us this.</p>
-<eq>
+<article class="equations">
 	<math><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>m</mi><mover accent="true"><mrow><mi>g</mi></mrow><mo>&#x2192</mo></mover></math>
-</eq>
+</article>
 <p>Let's analyze the units of weight and mass. Since weight is a force, it is written in Newtons. We defined mass to be written in kilograms. This shows a fundamental truth about weight and mass.</p>
 <p><i>Weight is not mass.</i></p>
-<eq>
+<article class="equations">
 	<math><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>&NotEqual;</mo><mi>m</mi></math>
-</eq>
+</article>
 <p>As said before, weight can be a measure of how strong the gravitational force is. In the formula above, we see that the gravity is part of the equation. This means that varying gravity means the weight varies. For example, your weight on the moon is about one sixth that of Earth because the gravity on the moon (1.67m/s²) is one sixth that of earth (9.8m/s²).</p>
-<figure><img src="images/weight2.svg"></figure>
-<figurecaption>Weight on Earth, the Moon, and Jupiter. Not drawn to scale.</figurecaption>
+<figure><img src="images/weight2.svg" alt="">
+<figcaption>Weight on Earth, the Moon, and Jupiter. Not drawn to scale.</figcaption></figure>
 <p>On the contrary, mass is an intrinsic part of an object that doesn't change no matter what the gravitational force is. Even if you're on the moon or on the Earth, your mass will still be constant.</p>
-<example>
+<section class="examples">
 <h4>Question 1</h4>
 (HRK Q3.18) Comment on the following statements about mass and weight
 taken from examination papers. <br>(a) Mass and weight are the
@@ -49,8 +49,8 @@ changes in its local weight.
 <p>True. In the equation, as mass goes up, the weight goes up.</p>
 <p>False. Mass is constant, no matter where the object is. However, weight varies based on the location and gravitational pull.</p>
 </section>
-</example>
-<example>
+</section>
+<section class="examples">
 <h4>Question 2</h4>
 (LSM CQ5.7) How much does a 70-kg astronaut weight in
 space, far from any celestial body? What is her
@@ -60,8 +60,8 @@ mass at this location?
 <section class="solution">
 <p>Far away from any celestial body, the astronaut practically doesn't feel any gravitational pull; she is weightless, or has no weight. Meanwhile, her mass is still 70 kg.</p>
 </section>
-</example>
-<example>
+</section>
+<section class="examples">
 <h4>Exercise 1</h4>
 (HRK E3.14) A space traveler whose mass is 75.0 kg leaves Earth. Compute his weight <br>(a) on Earth <br>(b) on Mars, where
 3.72m/s² <br>(c) in interplanetary space <br>What is his mass at
@@ -70,22 +70,22 @@ each of these locations?
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>On Earth, where the gravitational acceleration is 9.8m/s², his weight is the following.</p>
-<eq>
+<article class="equations">
 	<math><mi>w</mi><mo>=</mo><mi>m</mi><mi>g</mi></math><br>
 	<math><mi>w</mi><mo>=</mo><mi>(75.0kg)</mi><mi>(9.8m/s²)</mi><mo>=</mo><mi>735N</mi></math>	
-</eq>
+</article>
 <p>On Mars, his weight is a little lower due to the lower gravity.</p>
-<eq>
+<article class="equations">
 	<math><mi>w</mi><mo>=</mo><mi>(75.0kg)</mi><mi>(3.72m/s²)</mi><mo>=</mo><mi>279N</mi></math>	
-</eq>
+</article>
 <p>In interplanetary space, there is no gravity pulling him, thus he is weightless. In all of his locations, his mass is constant at 75.0kg.</p>
 </section>
-</example>
+</section>
 <p>The gravitational acceleration we experience accelerates us quite fast. This also means that we have a fair amount of weight.</p>
 <p>With this, sometimes we combat weight in order to go higher, or to slow us down. These forces that slow things down are collectively called <intext tabindex="0" tooltip="retard means to slow down; not the slur">retarding</intext> forces.</p>
-<example>
+<section class="examples">
 <h4>Exercise 2</h4>
-(HRK E3.14) A jet plane starts from rest on the runway and accelerates for
+(HRK E3.19) A jet plane starts from rest on the runway and accelerates for
 takeoff at 2.30m/s². It has two jet engines,
 each of which exerts a thrust of <math><mi>1.40</mi><mo>&times;</mo><msup><mi>10</mi><mn>5</mn></msup></math>N.
 What is the weight of the plane?
@@ -93,58 +93,56 @@ What is the weight of the plane?
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>To get the weight, we need the mass. Thankfully, we have the total acceleration and the force, so we can get the mass by rearranging equations. We note that there are two thrusters so we should double the force.</p>
-<eq>
+<article class="equations">
 	<math><mi>m</mi><mo>=</mo><mfrac><mi>F</mi><mi>a</mi></mfrac><mo>=</mo><mfrac><mrow><mi>2</mi><mi>(</mi><mi>1.40</mi><mo>&times;</mo><msup><mi>10</mi><mn>5</mn></msup><mi>)</mi><mi>N</mi></mrow><mi>(2.30m/s²)</mi></mfrac></math><br>
-</eq>
+</article>
 <p>We get the mass is 121,739.13kg, or around <math><mi>1.22</mi><mo>&times;</mo><msup><mi>10</mi><mn>5</mn></msup></math>kg. Now, we can easily get the weight by just using our equation.</p>
-<eq>
+<article class="equations">
 	<math><mi>w</mi><mo>=</mo><mi>(</mi><mi>1.22</mi><mo>&times;</mo><msup><mi>10</mi><mn>5</mn></msup><mi>)</mi><mi>(9.8m/s²)</mi><mo>=</mo><mi>1,193,043N</mi></math>	
-</eq>
+</article>
 <p>This gives us the weight is around <math><mi>1.19</mi><mo>&times;</mo><msup><mi>10</mi><mn>6</mn></msup></math>N.</p>
 </section>
-</example>
+</section>
 <p>Its important to recall that a force is a vector; meaning that it needs direction. Usually, we don't need it; we only need the magnitude. <br>However, if we do, like for example if there are multiple forces, one has to choose what direction is positive and negative. For simplicity, let's use the system we used for free fall: going up is positive.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>2</mi></msub><mo>+</mo><mo>&hellip;</mo></math><br>
-</eq>
+</article>
 <p>Here's a fun fact: a rocket can push towards the sky because of Newton's third law. The engine burns fuel and throws that fuel out. Throwing that fuel out (called the propellant) pushes the fuel, and by Newton's third law, the fuel pushes the rocket back.</p>
-<example>
+<section class="examples">
 <h4>Exercise 3</h4>
 (HRK E3.29) A rocket and its payload have a total mass of 51,000 kg. How
 large is the thrust of the rocket engine when <br>(a) the rocket is
 “hovering” over the launch pad, just after ignition <br>(b)
-when the rocket is accelerating upward at 18 m/s²
-<figure><img src="images/weight3.svg"></figure>
-<figurecaption>Exercise 3.</figurecaption>
+the rocket is accelerating upward at 18 m/s²<br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>If the rocket is hovering over the launch pad, that means it counteracts the weight. In other words, the net force of the thrust and the weight is zero. We can write this equation like this, setting weight as negative as it is going down.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math>
-</eq>
+</article>
 <p>The weight is simple enough.</p>
-<eq>
+<article class="equations">
 	<math><mi>w</mi><mo>=</mo><mi>(51000kg)</mi><mi>(9.8m/s²)</mi><mo>=</mo><mi>499800N</mi></math>	
-</eq>
+</article>
 <p>Knowing the net force is zero, we can get the thrust quite easily.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>0</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub></math><br>
-</eq>
+</article>
 <p>This shows that the thrust is equal to the weight if the rocket is just hovering. Makes sense; by the Law of Inertia, if it is at rest, all the forces balance out. For the 18m/s² scenario, there is now a net force.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mi>(51000kg)</mi><mi>(18m/s²)</mi><mo>=</mo><mi>918000N</mi></math>
-</eq>
+</article>
 <p>Thus, we solve for thrust again.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>(918000N)</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mi>(499800N)</mi></math><br>
 	<math><mi>1417800N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub></math><br>
-</eq>
+</article>
 </section>
-</example>
-<example hard>
+</section>
+<section class="examples" hard>
 <h4>Problem 1</h4>
 (HRK E3.27) Workers are loading equipment into a freight elevator at the
 top floor of a building. However, they overload the elevator
@@ -158,40 +156,40 @@ shaft 72 m below?
 <section class="solution">
 <p>To get the speed when we hit he bottom, we need how fast the elevator speeds up while falling. In other words, we need the acceleration. To get that, we need the net force.</p>
 <p>We have two forces; the weight, which we set as negative as it is pulling downwards, and the retarding force pushing upward. Writing the two gives us this equation.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>retarding</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math>
-</eq>
+</article>
 <p>We know the retarding force. The weight is simple enough to compute.</p>
-<eq>
+<article class="equations">
 	<math><mi>w</mi><mo>=</mo><mi>(1600kg)</mi><mi>(9.8m/s²)</mi><mo>=</mo><mi>15680N</mi></math>	
-</eq>
+</article>
 <p>We can now get the acceleration. Plugging in, we get the net force.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>retarding</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mi>3700N</mi><mo>−</mo><mi>15680N</mi></math><br>
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mo>−</mo><mi>11980N</mi></math>
-</eq>
+</article>
 <p>We can now get the acceleration.</p>
-<eq>
+<article class="equations">
 	<math><mi>a</mi><mo>=</mo><mfrac><mi>F</mi><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>(−11980N)</mi><mi>(1600kg)</mi></mfrac><mo>=</mo><mi>−7.49m/s²</mi></math><br>
-</eq>
+</article>
 <p>Now, moving away from our dynamics, we fall back to our kinematic equations. Instead of the gravitational acceleration, we have to use this new, slighlty slowed down acceleration.
 <p>The first part is getting the time to fall down 72m.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
 	<math><mrow><mi>(0m)</mi></mrow><mo>=</mo><mi>(72m)</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(−7.49m/s²)</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
 	<math><mi>0</mi><mo>=</mo><mi>−3.74</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>72</mi></math>
-</eq>
+</article>
 <p>We get the positive time solution to be 4.39s. Finally, we get the speed by noting the initial velocity is 0m/s.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>v</mi></mrow><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mi>a</mi><mi>t</mi></math><br>
 	<math><mrow><mi>v</mi></mrow><mo>=</mo><mi>(0m/s)</mi><mo>+</mo><mi>(−7.49m/s²)</mi><mi>(4.39s)</mi></math><br>
-</eq>
+</article>
 <p>Finally, the velocity is −32.89m/s.</p>
 </section>
-</example>
+</section>
 <p>You may have heard the term <i>weightlessness</i> being thrown around in this tutorial thus far. From the word itself, weightlessness is the feeling that one has no weight. An example of this is people in space, who can float.</p>
-<example>
+<section class="examples">
 <h4>Question 3</h4>
 (HRK Q3.24) In November 1984, astronauts Joe Allen and Dale Gardner
 salvaged a Westar-6 communications satellite from a faulty
@@ -203,7 +201,7 @@ said of the satellite, "It's not heavy; it's massive." What did he mean?
 <p>Things being heavy is because of their weight. An object with a high mass would have a high weight on Earth, and would need a lot of force to move.</p>
 <p>In space however, there is little to no weight as there is little to no gravity. Thus, it isn't heavy. However, it still contains a lot of mass (about 680 kg), thus it is really hard to move. Thus, it is massive.</p>
 </section>
-</example>
+</section>
 <p>What does it mean to have weight? While we have weight, we can't feel it ourselves. To feel our weight, we have to rely on other objects to apply force on us, by Newton's third law. This force is called the <intext tabindex="0" tooltip="a force that stops objects from passing through each other">normal force</intext>. To feel weightless, we mustn't feel the normal force.</p>
 <footer>
 	<a href="normal-force.html"> Normal Force ></a>

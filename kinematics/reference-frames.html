@@ -4,7 +4,7 @@
 	<title>kinematics - frames</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<script src="../script.js"></script>
+	<script defer src="../script.js"></script>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,27 +15,27 @@
 </header>
 <p>From our tutorial on multiple objects in motion, we saw that the world isn't just focused on one object but multiple. While nice, this gives us a minor problem.</p>
 <p>You may have looked out in a car and see trees moving past. If you hadn't known better, it could be that the trees were the ones moving and you were stationary. However, in a top-down view, the car is moving, and the trees are stationary.</p>
-<figure><img src="images/relative1.svg"></figure>
-<figurecaption>You in the car, and a non-moving top-down view.</figurecaption>
+<figure><img src="images/relative1.svg" alt="">
+<figcaption>You in the car, and a non-moving top-down view.</figcaption></figure>
 <p>Then, why does it look like the tree is moving in a different direction? This is because your viewpoint is moving. In other words, because you are moving, everything else appears to be moving relative to you. We call these "views" as frames of reference.</p>
-<termdecl>
-	<term>Frame of reference</term> -  a viewpoint of an observer in a scenario
-</termdecl>
+<article class="terms">
+	<mark>Frame of reference</mark> -  a viewpoint of an observer in a scenario
+</article>
 <p>Here, we show two frames of reference; your frame of reference, which is moving, and the frame of reference of a stationary observer.</p>
 <p>Let's observe another scenario. Imagine looking out the window of a car and seeing another car. In your frame of reference, it seems the car is stationary. However, a stationary observer will notice that both of your velocities are the same, and thus it looks like (in your view) that the car stays still.</p>
-<figure><img src="images/relative2.svg"></figure>
-<figurecaption>The car appears stationary, but is actually moving.</figurecaption>
+<figure><img src="images/relative2.svg" alt="">
+<figcaption>The car appears stationary, but is actually moving.</figcaption></figure>
 <p>One thing to note is that both of the frames of reference are correct. None of them is "more correct" than the other; it is just that sometimes it is easier to do Physics in one frame of reference than the other (usually the frame of reference of the stationary observer).</p>
 <p>What is this "stationary observer" reference frame, then? In reality, there are no "stationary" reference frames. The frame of reference of Earth, however, is near stationary. The spin of the Earth is slow enough that everything on it that appears to be at rest is basically at rest. We don't feel the Earth's spin.</p>
-<example><mark custom></mark>
+<section class="examples"><mark custom></mark>
 <h4>Question 1</h4>
 Imagine the car above slows down. What does it look like in your frame of reference?<br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>If the car starts to slow down, then its velocity will be a little lower than your velocity. The car will appear to go backward.</p>
 </section>
-</example>
-<example>
+</section>
+<section class="examples">
 <h4>Question 2</h4>
 (LSM CQ4.12) What frame or frames of reference do you use
 instinctively when driving a car? When flying in a
@@ -46,48 +46,48 @@ commercial jet?
 <p>When driving a car, we use the frame of reference of the car. In other words, everything in the car appears to be stationary. However, when we change lanes or gauge our distance from a stoplight, we use the frame of reference of the Earth, where we are the ones moving and the stoplight is stationary.</p>
 <p>When flying a jet, the frame of reference we use is moving, as the jet we are flying is moving. Thus, it would appear to us that the clouds are moving backwards.</p>
 </section>
-</example>
+</section>
 <p>Imagine your car speeds up. In Earth's frame of reference, your car speeds up, and the other car remains at the same velocity. However, as you look out, the other car now appears to be moving backwards; it has negative velocity.</p>
-<figure><img src="images/relative3.svg"></figure>
-<figurecaption>Your car speeds up.</figurecaption>
+<figure><img src="images/relative3.svg" alt="">
+<figcaption>Your car speeds up.</figcaption></figure>
 <p>Here, we note three velocities, the velocity of Your car relative to Earth <math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>YE</mi></msub></math>, the velocity of the other Car relative to Earth <math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>CE</mi></msub></math>, and the velocity of the other Car relative to You <math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>CY</mi></msub></math>.</p>
 <p>Looking at the velocities, we can make an assumption. If we know that we are going 12m/s, and the car is going backward −2m/s, then that should imply that the car is going a little slower than us, about 10m/s. Writing this out, we have this equation.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>CE</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>CY</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>YE</mi></msub></math>
-</eq>
+</article>
 <p>This equation helps give us how to get the motion of an object given how fast the frame of reference is moving and what the frame of reference observes. We can rewrite it to get how fast the frame of reference observes the car.</p>
 <p>One thing to note is the use of subscripts. Here, we note that "CE" = "CY" + "YE". Here, the "Y" is adjacent to the two velocities, and the two outer subscripts make up the velocity we want to get.</p>
-<figure><img src="images/relative4.svg"></figure>
-<figurecaption>The order of the subscripts can help make the equation.</figurecaption>
-<example><mark custom></mark>
+<figure><img src="images/relative4.svg" alt="">
+<figcaption>The order of the subscripts can help make the equation.</figcaption></figure>
+<section class="examples"><mark custom></mark>
 <h4>Exercise 1</h4>
 You are sitting in a plane. Over the intercom, you hear the pilot say that the airplane has reached cruising speed, or at around <math><mi>2.50</mi><mo>&times;</mo><msup><mi>10</mi><mn>2</mn></msup></math>m/s. Looking out your window, you see another plane flying parallel to you. The airplane appears to be moving backward at a rate of about 5.00m/s. What is the speed of the airplane in your window?
 <br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>The airplane moving backwards implies that it has negative velocity relative to you, and thus the velocity of the Plane to You is <math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PY</mi></msub><mo>=</mo><mi>−5m/s</mi></math>. We have the velocity of You to Earth as <math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>YE</mi></msub><mo>=</mo><mi>250m/s</mi></math>. We need the velocity of the Plane to Earth <math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PE</mi></msub></math>. Setting up the equation, we have this.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PE</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PY</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>YE</mi></msub></math><br>
 	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PE</mi></msub><mo>=</mo><mi>(−5m/s)</mi><mo>+</mo><mi>(250m/s)</mi></math>
-</eq>
+</article>
 <p>Giving us the speed of the airplane in the window is 245m/s.</p>
 </section>
-</example>
-<example><mark custom></mark>
+</section>
+<section class="examples"><mark custom></mark>
 <h4>Exercise 2</h4>
 A train company manufactures trains that go at a constant 20m/s. Aly, on a train, looks out the window and sees a train going in the opposite direction. She realizes that that train is the one that you are on. What is the apparent speed that your train appears to be going?
 <br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>The speed Aly is going is 20m/s, and the speed you are going is −20m/s. We need the speed Aly views You. Setting up the equation gives us this.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>AE</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>AY</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>YE</mi></msub></math><br>
 	<math><mi>(20m/s)</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>AY</mi></msub><mo>+</mo><mi>(−20m/s)</mi></math><br>
-</eq>
+</article>
 <p>This means that the apparent speed that Aly sees You is 40m/s. It appears your train is moving at 40m/s.</p>
 </section>
-</example>
-<example>
+</section>
+<section class="examples">
 <h4>Problem 1</h4>
 (HRK E4.39a) A person walks up a stalled 15-m-long escalator in 90 s.
 When standing on the same escalator, now moving, the person is carried up in 60 s. How much time would it take that
@@ -97,15 +97,15 @@ person to walk up the moving escalator?
 <section class="solution">
 <p>Walking, the person moves at <math><mfrac><mi>15m</mi><mi>90s</mi></mfrac><mo>=</mo><mfrac><mi>1</mi><mi>6</mi></mfrac><mi>m/s</mi></math>, while on the moving escalator he moves at <math><mfrac><mi>15m</mi><mi>60s</mi></mfrac><mo>=</mo><mfrac><mi>1</mi><mi>4</mi></mfrac><mi>m/s</mi></math>. These are both relative to Earth.</p>
 <p>For an observer on the escalator, the person walking up on the escalator has the same speed as him walking normally. This is the speed of person to observer, <math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PO</mi></msub></math>. We also know the speed of the observer to Earth, <math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>OE</mi></msub></math>. We need the speed of person to Earth, <math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PE</mi></msub></math>.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PE</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PO</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>OE</mi></msub></math><br>
 	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PE</mi></msub><mo>=</mo><mi>(</mi><mfrac><mi>1</mi><mi>6</mi></mfrac><mi>m/s)</mi><mo>+</mo><mi>(</mi><mfrac><mi>1</mi><mi>4</mi></mfrac><mi>m/s)</mi></math><br>
-</eq>
+</article>
 <p>Giving us that the speed of walking while going up is <math><mfrac><mi>5</mi><mi>12</mi></mfrac><mi>m/s</mi></math>. The time then to go up is <math><mfrac><mi>15m</mi><mi>(5/12)m/s</mi></mfrac><mo>&approx;</mo><mi>40s</mi></math>.</p>
 </section>
-</example>
+</section>
 <p>The above problem gives a length to the escalator. The problem below doesn't.</p>
-<example hard><mark variable></mark>
+<section class="examples" hard><mark variable></mark>
 <h4>Problem 2</h4>
 (HRK E4.40) The airport terminal in Geneva, Switzerland has a “moving
 sidewalk” to speed passengers through a long corridor. Peter,
@@ -121,14 +121,14 @@ speed.
 <p>We don't know the length, so let's just set it as some value <math><mi>L</mi></math>.</p>
 <p>Peter moves at <math><mfrac><mi>L</mi><mi>150s</mi></mfrac><mi>m/s</mi></math>, while Paul moves at <math><mfrac><mi>L</mi><mi>70s</mi></mfrac><mi>m/s</mi></math>. These are both relative to Earth.</p>
 <p>An observer on the sidewalk would see Mary at the same speed of Peter. The observer would move at the same speed as Paul with respect to Earth. Setting up the equation gives us this.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>ME</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>MO</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>OE</mi></msub></math><br>
 	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>ME</mi></msub><mo>=</mo><mi>(</mi><mfrac><mi>L</mi><mi>150s</mi></mfrac><mi>m/s</mi><mi>)</mi><mo>+</mo><mi>(</mi><mfrac><mi>L</mi><mi>70s</mi></mfrac><mi>m/s</mi><mi>)</mi></math><br>
-</eq>
+</article>
 <p>Giving us that the speed of walking while on the sidewalk is <math><mfrac><mrow><mi>11</mi><mi>L</mi></mrow><mi>525</mi></mfrac><mi>m/s</mi></math>. The time then to go across is <math><mfrac><mi>L</mi><mi>(11L/525)m/s</mi></mfrac><mo>&approx;</mo><mi>50s</mi></math>. Given we didn't set an exact value for the length, it means that no matter the length, this will be the time.</p>
 </section>
-</example>
-<example>
+</section>
+<section class="examples">
 <h4>Problem 3</h4>
 (LSM P4.73a) A seagull can fly at a velocity of 9.00 m/s in still
 air. If it takes the bird 20.0 min to travel 6.00
@@ -138,72 +138,19 @@ velocity of the wind?
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>To an observer in the wind, the seagull would fly in the wind at its normal speed of 9.00 m/s. This observer would have the same velocity as the wind relative to the Earth. We then need the speed of the bird relative to the Earth, which is given by the time it took to go 6km.</p>
-<eq>
+<article class="equations">
 	<math><mfrac><mi>6.00km</mi><mi>20.0min</mi></mfrac><mo>&sdot;</mo><mfrac><mi>1000m</mi><mi>1km</mi></mfrac><mo>&sdot;</mo><mfrac><mi>1min</mi><mi>60s</mi></mfrac><mo>=</mo><mi>5m/s</mi></math>
-</eq>
+</article>
 <p>We now set up our equation.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>SE</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>SO</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>OE</mi></msub></math><br>
 	<math><mi>(5.00m/s)</mi><mo>=</mo><mi>(9.00m/s)</mi><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>OE</mi></msub></math><br>
-</eq>
+</article>
 <p>Giving us the speed of the wind is −4.00m/s.</p>
 </section>
-</example>
-<p>The same approach works for motion in two dimensions. However, of course, now we have to deal with composition and decomposition. Eitherway, the same strategy still works.</p>
-<example>
-<h4>Exercise 3</h4>
-(LSM P4.76a) A small plane flies at 200 km/h in still air. If the
-wind blows directly out of the west at 50 km/h, in what direction must the pilot head her
-plane to move directly north across land?
-<figure><img src="images/relative5.svg"></figure>
-<figurecaption>Exercise 3.</figurecaption>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
-<section class="solution">
-<p>Here, we have two dimensions; north and west. We know the speed of the wind with respect to earth, and the speed of the plane with respect to earth. We need the speed of the plane with respect to the wind.</p>
-<eq>
-	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PE</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>PW</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>WE</mi></msub></math><br>
-</eq>
-<p>Since they are in perpendicular directions, we can't add them up like we did before. Now, we have to use the pythagorean theorem and trigonometry. However, since the question needs only the direction, we don't need to calculate the magnitude.</p>
-<p>We use an inverse trigonometric function to get the angle.</p>
-<eq>
-	<math><mrow><mi>θ</mi><mo>=</mo><mi>arcsin(</mi><mfrac><mi>−50km/h</mi><mi>200km/h</mi></mfrac><mi>)</mi><mo>=</mo><mi>14.48&deg;</mi></math><br>
-</eq>
-<p>Thus, the direction she needs to head is 14.48 degrees west from north.</p>
 </section>
-</example>
-<p>The figure above was created by me. In reality, it may not be as clear cut on what is the hypotenuse or legs. We must read the problem carefully.</p>
-<example>
-<h4>Exercise 4</h4>
-(LSM P4.77a)  A cyclist traveling southeast along a road at 15
-km/h feels a wind blowing from the southwest at
-25 km/h. To a stationary observer, what is the
-speed of the wind?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
-<section class="solution">
-<p>The velocity of the cyclist with respect to Earth is given, and the velocity of the wind with respect to the cyclist is given. We can then draw the following diagram.</p>
-<figure><img src="images/relative6.svg"></figure>
-<p>Here, we set the hypotenuse as the actual direction of the wind. This is because the direction of the wind being "southwest" is relative to the cyclist moving southeast.</p>
-<p>The speed is simply using the pythagorean theorem.</p>
-<eq>
-	<math><mrow><msub><mi>v</mi><mi>WE</mi></msub><mo>=</mo><mrow><msqrt><mrow><mi>(15km/h)² + (25km/h)²</mi></mrow></msqrt><mo>=</mo><mi>29km/h</mi></math><br>
-</eq>
-</section>
-</example>
-<example hard>
-<h4>Exercise 5</h4>
-(LSM P4.77b) Find the direction of the wind above relative to the stationary observer.<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
-<section class="solution">
-<figure><img src="images/relative7.svg"></figure>
-<p>Despite what the figure looks like, it isn't that complicated. First, we need to get the angle &theta;. This uses an inverse trigonometric function.</p>
-<eq>
-	<math><mrow><mi>θ</mi><mo>=</mo><mi>arctan(</mi><mfrac><mi>15km/h</mi><mi>25km/h</mi></mfrac><mi>)</mi><mo>=</mo><mi>30.96&deg;</mi></math><br>
-</eq>
-<p>Subtracting this angle from 45&deg; gives us the actual angle 14&deg;. The wind is 14&deg; north from east.</p>
-</section>
-</example>
 <footer>
-<a href="projectiles.html">Projectiles ></a>
+<a href="vectors-in-two-dimensions.html">Vectors in Two Dimensions ></a>
 </footer>
 </div>
 </body>

@@ -4,9 +4,8 @@
 	<title>dynamics - tension</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<script src="../script.js"></script>
+	<script defer src="../script.js"></script>
 	<meta charset="UTF-8">
-	<link rel="icon" type="image/x-icon" href="../favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -15,19 +14,19 @@
 <a href="index.html">< Return</a>
 </header>
 <p>When you push on something, it exerts a normal force to counteract your pushing. When you pull on something, you also exert a force. Take for example a box on a string. The box is pulled down by its weight, which in turn pulls down the rope.</p>
-<figure><img src="images/tension1.svg"></figure>
-<figurecaption>Pulling on a string. </figurecaption>
+<figure><img src="images/tension1.svg" fetchpriority="high" />
+<figcaption>Pulling on a string. </figcaption></figure>
 <p>Like with the normal force, the weight and this pulling force are not pairs; the pulling force's partner is the pull of the box on the rope. Further, the rope pulls on the ceiling, and the ceiling pulls back on the rope.</p>
 <p>This pulling force occurs on various objects that can stretch, like strings, ropes, or cords.</p>
-<termdecl>
-	<term>Tension (<math><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover></math>)</term> - a pulling force
-</termdecl>
+<article class="terms">
+	<mark>Tension (<math><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover></math>)</mark> - a pulling force
+</article>
 <p>Tension "transmits" force through its medium. In a tug of war, both teams pull on the rope. Even if they pull at different strengths, the tension within the rope is equal.</p>
-<figure><img src="images/tension2.svg"></figure>
-<figurecaption>A tug of war. The teams pull at different strengths, but the tension within is equal. </figurecaption>
+<figure><img src="images/tension2.svg" alt="">
+<figcaption>A tug of war. The teams pull at different strengths, but the tension within is equal. </figcaption></figure>
 <p>For example, let's say the teams pull at 50N and 100N. The tension in the rope is somewhere inbetween, but let's say its 75N. The two teams are kept in place by friction.</p>
 <p>By pushing on the floor, the normal force is increased, and thus the static friction is increased. Once this pulling force (tension) beats out this force, the team starts accelerating backwards, and will lose.</p>
-<example>
+<section class="examples">
 <h4>Question 1</h4>
 (HRK Q5.1) You can pull a wagon with a rope, but you can’t push it with a
 rope. Is there such a thing as a “negative” tension?<br><br>
@@ -35,8 +34,8 @@ rope. Is there such a thing as a “negative” tension?<br><br>
 <section class="solution">
 <p>No, there is no such thing as a negative tension. Tension is strictly a pulling force.</p>
 </section>
-</example>
-<example>
+</section>
+<section class="examples">
 <h4>Exercise 1</h4>
 (HRK E5.4) An elevator and its load have a combined mass of 1600 kg.
 Find the tension in the supporting cable when the elevator,
@@ -45,25 +44,25 @@ with constant acceleration in a distance of 42.0 m.<br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>The net force in the vertical direction is causing the deceleration. The two vertical forces are the weight and the tension of the rope pulling up. We set weight as negative.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>g</mi><mo>=</mo><mi>T</mi></math>
-</eq>
+</article>
 <p>We see here that we need the acceleration. This can be done via our kinematic equations, specifically our time-independent equation.</p>
-<eq>
+<article class="equations">
 	<math><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>a</mi><mi>&#x0394</mi><mi>y</mi></mrow></math><br>
 	<math><mi>(0m/s)</mi><mo>=</mo><msup><mi>(&minus;12m/s)</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>a</mi><mi>(42m)</mi></mrow></math><br>
 	<math><mi>(144m²/s²)</mi><mo>=</mo><mrow><mi>84</mi><mi>a</mi><mi>m</mi></mrow></math><br>
 	<math><mfrac><mi>(144m²/s²)</mi><mi>(84m)</mi></mfrac><mo>=</mo><mi>1.71m/s²</mi><mo>=</mo><mi>a</mi></math><br>
-</eq>
+</article>
 <p>Plugging in our values, we get that the tension is the following.</p>
-<eq>
+<article class="equations">
 	<math><mi>(1600kg)</mi><mi>(1.71m/s²)</mi><mo>+</mo><mi>(1600kg)</mi><mi>(9.8m/s²)</mi><mo>&approx;</mo><mi>18000N</mi><mo>=</mo><mi>T</mi></math>
-</eq>
+</article>
 </section>
-</example>
-<example>
+</section>
+<section class="examples">
 <h4>Exercise 2</h4>
 (HRK E5.7) The figure below shows a section of an alpine cable-car system.
 The maximum permitted mass of each car with occupants is
@@ -71,62 +70,62 @@ The maximum permitted mass of each car with occupants is
 second cable attached to each pylon. What is the difference in
 tension between adjacent sections of pull cable if the cars are
 accelerated up to 35° incline at 0.81 m/s²?
-<figure><img src="images/tension3.svg"></figure>
-<figurecaption>Exercise 2.</figurecaption>
+<figure><img src="images/tension3.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>There are three forces acting on the car pulling it up; the tension of the cable going up, the tension of the previous car pulling it down, and the weight of the car.</p>
 <p>Like in an inclined plane, we have to resolve the weight to be parallel to the incline. Further, while we can't know the tensions of the car pulling up and down, we only care about the difference. Thus, we write this equation.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>up</mi></msub><mo>−</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>down</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>=</mo><msub><mi>T</mi><mi>up</mi></msub><mo>&minus;</mo><msub><mi>T</mi><mi>down</mi></msub><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><msub><mi>T</mi><mi>up</mi></msub><mo>&minus;</mo><msub><mi>T</mi><mi>down</mi></msub></math><br>
-</eq>
+</article>
 <p>Substituting in the values, we get the value of the difference.</p>
-<eq>
+<article class="equations">
 	<math><mi>(2800kg)</mi><mi>(0.81m/s²)</mi><mo>+</mo><mi>(2800kg)</mi><mi>(9.8m/s²)</mi><mi>sin</mi><mi>(35&deg;)</mi><mo>&approx;</mo><mi>18000N</mi><mo>=</mo><msub><mi>T</mi><mi>up</mi></msub><mo>&minus;</mo><msub><mi>T</mi><mi>down</mi></msub></math><br>
-</eq>
+</article>
 </section>
-</example>
+</section>
 <p>We now tackle problems where tension pulls at an angle, meaning we need to decompose it. We also need to note the vertical and horizontal forces, like we did before.</p>
-<figure><img src="images/tension4.svg"></figure>
-<figurecaption>Tension pulling at an angle.</figurecaption>
-<example hard> <mark variable></mark>
+<figure><img src="images/tension4.svg" alt="">
+<figcaption>Tension pulling at an angle.</figcaption></figure>
+<section class="examples" hard> <mark variable></mark>
 <h4>Problem 1</h4>
 (LSM P5.62) Show that the tension in a flexible medium when a force exerted on its center and
 perpendicular to its length (such as in the figure above) is given by the following equation. All the forces are balanced.
-<eq>
+<article class="equations">
 	<math><mi>T</mi><mo>=</mo><mfrac><mi>F</mi><mrow><mi>2</mi><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac></math>
-</eq>
+</article>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>As we push on the rope, there is a tension at the point of contact pulling the rope up and to the left, and a tension at the right pulling the rope up and to the right.</p>
 <p>There are two forces acting in the horizontal direction, being the horizontal components of the left and right tensions. </p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Rx</mi></msub><mo>−</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Lx</mi></msub></math><br>
 	<math><mi>0N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Rx</mi></msub><mo>−</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Lx</mi></msub></math><br>
 	<math><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Lx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Rx</mi></msub></math><br>
-</eq>
+</article>
 <p>Now, we decompose the two tensions, noting that it is the adjacent side of the angle &theta;.</p>
-<eq>
+<article class="equations">
 	<math><msub><mi>T</mi><mi>L</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><msub><mi>T</mi><mi>R</mi></msub><mi>cos</mi><mi>(&theta;)</mi></math><br>
 	<math><msub><mi>T</mi><mi>L</mi></msub><mo>=</mo><msub><mi>T</mi><mi>R</mi></msub></math><br>
-</eq>
+</article>
 <p>This shows that the magnitude of tension in the left and right side is equal. For simplicity, let's just use the symbol <math><mi>T</mi></math>, given that both of them are equal anyway. For the vertical net force, we have the force pushing down, and the two vertical components of the left and right tension.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Ry</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Ly</mi></msub><mo>&minus;</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>0N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Ry</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Ly</mi></msub><mo>&minus;</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>F</mi><mo>=</mo><msub><mi>T</mi><mi>R</mi></msub><mi>sin</mi><mi>(&theta;)</mi><mo>+</mo><msub><mi>T</mi><mi>L</mi></msub><mi>sin</mi><mi>(&theta;)</mi></math><br>
-</eq>
+</article>
 <p>We now substitute in the value we have above, using the new symbol <math><mi>T</mi></math>.</p>
-<eq>
+<article class="equations">
 	<math><mi>F</mi><mo>=</mo><mi>T</mi><mi>sin</mi><mi>(&theta;)</mi><mo>+</mo><mi>T</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mi>F</mi><mo>=</mo><mi>2</mi><mi>T</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mfrac><mi>F</mi><mrow><mi>2</mi><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac><mo>=</mo><mi>T</mi></math><br>
-</eq>
+</article>
 </section>
-</example>
-<example> 
+</section>
+<section class="examples"> 
 <h4>Exercise 3</h4>
 (LSM P5.64) One end of a 30-m rope is tied to a tree; the
 other end is tied to a car stuck in the mud. The
@@ -138,56 +137,56 @@ determine the force exerted on the car.<br><br>
 <section class="solution">
 <p>We will opt to use the equation above. We have the force, but we need the angle. Thankfully, we can use trigonometry. By pushing it 2m at the midpoint, we create a triangle with a leg of 2m and a hypotenuse of 15m.</p>
 <p>Using arcsine, we get the angle.</p>
-<eq>
+<article class="equations">
 	<math><mi>&theta;</mi><mo>=</mo><msup><mi>sin</mi><mn>&minus;1</mn></msup><mo>(</mo><mfrac><mi>2m</mi><mi>15m</mi></mfrac><mo>)</mo></math>
-</eq>
+</article>
 <p>Giving us our tension, which is equal to the force pulling on the car.</p>
-<eq>
+<article class="equations">
 	<math><mi>T</mi><mo>=</mo><mfrac><mi>(80N)</mi><mrow><mi>2</mi><mi>sin</mi><mi>(</mi><msup><mi>sin</mi><mn>&minus;1</mn></msup><mo>(</mo><mfrac><mi>2m</mi><mi>15m</mi></mfrac><mo>)</mo><mi>)</mi></mrow></mfrac><mo>=</mo><mfrac><mi>1200N</mi><mi>4</mi></mfrac><mo>=</mo><mi>300N</mi></math><br>
-</eq>
+</article>
 </section>
-</example>
-<example> 
+</section>
+<section class="examples"> 
 <h4>Exercise 4</h4>
 (LSM P6.30) After a mishap, a 76.0-kg circus performer clings to
 a trapeze, which is being pulled to the side by
 another circus artist, as shown below. Calculate the
 tension in the two ropes if the person is momentarily
 motionless.
-<figure><img src="images/tension5.svg"></figure>
-<figurecaption>Exercise 4.</figurecaption>
+<figure><img src="images/tension5.svg" alt="">
+<figcaption>Exercise 4.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>There are two forces acting in the horizontal direction, being the horizontal components of the left and right tensions. </p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Rx</mi></msub><mo>−</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Lx</mi></msub></math><br>
 	<math><mi>0N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Rx</mi></msub><mo>−</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Lx</mi></msub></math><br>
 	<math><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Lx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Rx</mi></msub></math><br>
-</eq>
+</article>
 <p>Decomposing the two tensions, we have the following.</p>
-<eq>
+<article class="equations">
 	<math><msub><mi>T</mi><mi>L</mi></msub><mi>sin</mi><mi>(15&deg;)</mi><mo>=</mo><msub><mi>T</mi><mi>R</mi></msub></math><br>
 	<math><mfrac><mrow><msub><mi>T</mi><mi>L</mi></msub><mi>sin</mi><mi>(15&deg;)</mi></mrow><mrow><mi>cos</mi><mi>(10&deg;)</mi></mrow></mfrac><mo>=</mo><msub><mi>T</mi><mi>R</mi></msub></math><br>
-</eq>
+</article>
 <p>Unlike in the case where the angles are the same, the tension in the left and right aren't equal. You can either choose to solve with the tension in the right or the tension in the left, but we choose to start with the left tension. <br>For the vertical net force, we have the weight, and the two vertical components of the tensions. We also decompose the forces.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Ry</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>T</mi></mrow><mo>&#x2192</mo></mover><mi>Ly</mi></msub><mo>&minus;</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>0N</mi><mo>=</mo><msub><mi>T</mi><mi>R</mi></msub><mi>sin</mi><mi>(10&deg;)</mi><mo>+</mo><msub><mi>T</mi><mi>L</mi></msub><mi>cos</mi><mi>(15&deg;)</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
-</eq>
+</article>
 <p>We now substitute in our value for the right tension.</p>
-<eq>
+<article class="equations">
 	<math><mi>0N</mi><mo>=</mo><mo>(</mo><mfrac><mrow><msub><mi>T</mi><mi>L</mi></msub><mi>sin</mi><mi>(15&deg;)</mi></mrow><mrow><mi>cos</mi><mi>(10&deg;)</mi></mrow></mfrac><mo>)</mo><mi>sin</mi><mi>(10&deg;)</mi><mo>+</mo><msub><mi>T</mi><mi>L</mi></msub><mi>cos</mi><mi>(15&deg;)</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
 	<math><mi>m</mi><mi>g</mi><mo>=</mo><mfrac><mrow><msub><mi>T</mi><mi>L</mi></msub><mi>sin</mi><mi>(15&deg;)</mi><mi>sin</mi><mi>(10&deg;)</mi></mrow><mrow><mi>cos</mi><mi>(10&deg;)</mi></mrow></mfrac><mo>+</mo><msub><mi>T</mi><mi>L</mi></msub><mi>cos</mi><mi>(15&deg;)</mi></math><br>
 	<math><mi>m</mi><mi>g</mi><mo>=</mo><msub><mi>T</mi><mi>L</mi></msub><mo>(</mo><mrow><mi>sin</mi><mi>(15&deg;)</mi><mi>tan</mi><mi>(10&deg;)</mi></mrow><mo>+</mo><msub></msub><mi>cos</mi><mi>(15&deg;)</mi><mo>)</mo></math><br>
 	<math><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mo>(</mo><mrow><mi>sin</mi><mi>(15&deg;)</mi><mi>tan</mi><mi>(10&deg;)</mi></mrow><mo>+</mo><msub></msub><mi>cos</mi><mi>(15&deg;)</mi><mo>)</mo></mrow></mfrac><mo>=</mo><msub><mi>T</mi><mi>L</mi></msub></math><br>
-</eq>
+</article>
 <p>After plugging in the values, we get the tension in the left side is about 736N. To get the right side, we just return to our equation.</p>
-<eq>
+<article class="equations">
 	<math><mfrac><mrow><mi>(736.29N)</mi><mi>sin</mi><mi>(15&deg;)</mi></mrow><mrow><mi>cos</mi><mi>(10&deg;)</mi></mrow></mfrac><mo>&approx;</mo><mi>194N</mi><mo>=</mo><msub><mi>T</mi><mi>R</mi></msub></math><br>
-</eq>
+</article>
 </section>
-</example>
-<example> 
+</section>
+<section class="examples"> 
 <h4>Exercise 5</h4>
 (LSM P6.61b) Consider the 52.0-kg mountain climber shown
 below. Assume that the force is exerted
@@ -195,34 +194,34 @@ parallel to her legs. Also, assume negligible force
 exerted by her arms. What is the minimum
 coefficient of friction between her shoes and the
 cliff?
-<figure><img src="images/tension6.svg"></figure>
-<figurecaption>Exercise 5.</figurecaption>
+<figure><img src="images/tension6.svg" alt="">
+<figcaption>Exercise 5.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>To answer this question, you need not solve for the magnitude of the force of tension or the feet pushing.</p>
 <p>The normal force is the force pushing into the rock, or the horizontal component of the feet pushing. The force it is trying to oppose is the vertical component of the feet pushing. We set up the equation.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub></math><br>
 	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>F</mi><mi>cos</mi><mi>(15&deg;)</mi><mo>=</mo><mi>F</mi><mi>sin</mi><mi>(15&deg;)</mi></math><br>
 	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mo>=</mo><mi>tan</mi><mi>(15&deg;)</mi><mo>&approx;</mo><mi>0.268</mi></math><br>
-</eq>
+</article>
 </section>
-</example>
+</section>
 <p>How do ropes and other media transfer this force? To see this, imagine zooming into the string. Each part is pulled by the previous and next part, transmitting the force.</p>
 <p>This also shows one assumption that we've been making, and that is the rope has negligible mass. In other words, the entire string has uniform tension.</p>
-<example><mark custom></mark>
+<section class="examples"><mark custom></mark>
 <h4>Question 2</h4>
 A ball is tied to a string which is tied to the ceiling. The string has non-negligible mass. Is the tension uniform throughout the entire string? If not, which part would have the highest tension?
-<figure><img src="images/acceleration4.svg"></figure>
-<figurecaption>Question 2.</figurecaption>
+<figure><img src="images/acceleration4.svg" alt="">
+<figcaption>Question 2.</figcaption></figure>
 <h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>No, the tension is not uniform. The point with the highest tension would be the point at the ceiling, as it is pulled down by all of the other string plus the ball. The part with the least tension is the one connected to the ball, as all it needs to pull up is the ball, and none of the string.</p>
-</eq>
+</article>
 </section>
-</example>
+</section>
 <footer>
-	<a unfinished> The System ></a>
+	<a href="the-system.html"> The System ></a>
 </footer>
 </body>
 </html>

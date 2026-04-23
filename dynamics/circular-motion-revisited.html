@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dynamics - circular</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Circular Motion Revisited</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<p>To conclude our introduction to dynamics, we end on the where we ended in kinematics as well, by revisiting circular motion.</p>
+<p>We noted before that circular motion may have constant speed, but has changing velocity as the direction of velocity changes. Thus, there is an acceleration, which we computed to be the following.</p>
+<article class="equations">
+<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>r</mi></mfrac><mo>=</mo><mi>r</mi><msup><mi>&omega;</mi><mn>2</mn></msup></math>
+</article>
+<p>Given there is an acceleration, there must be a force acting on it. Since we called this acceleration the centripetal acceleration, we call this force like it.</p>
+<article class="terms">
+	<mark>Centripetal Force (<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>c</mi></msub></math>)</mark> - the force which causes the centripetal acceleration
+</article>
+<p>Unlike the forces we noted, like weight, the normal force, tension, or friction, the centripetal force isn't a "new force" but just a new name for the other forces we discussed. For example, when we swing a rock on a rope, the tension acts as the centripetal force.</p>
+<figure><img src="images/circular1.svg" alt="">
+<figcaption>The centripetal force here is the tension.</figcaption></figure>
+<p>From the Law of Acceleration, we can get the force given the acceleration. We have the acceleration, so we can get the force quite easily.</p>
+<article class="equations">
+<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>m</mi><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><mi>m</mi><mi>r</mi><msup><mi>&omega;</mi><mn>2</mn></msup></math>
+</article>
+<p>This is just the equation for the centripetal force given the constant speed, mass, and the radius.</p>
+<section class="examples">
+<h4>Exercise 1</h4>
+<p>(LSM P6.65a) A 22.0-kg child is riding a playground merrygo-round that is rotating at 40.0 rev/min. What
+centripetal force is exerted if he is 1.25 m from
+its center?</p>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We first convert the 40.0 rev/min to rad/s, as that is the units that we need.</p>
+<article class="equations">
+	<math><mi>40.0rev/min</mi><mo>&sdot;</mo><mfrac><mi>2&pi;</mi><mi>1rev</mi></mfrac><mo>&sdot;</mo><mfrac><mi>1min</mi><mi>60s</mi></mfrac><mo>=</mo><mi>4.1888rad/s</mi></math>
+</article>
+<p>Now, we use our formula.</p>
+<article class="equations">
+<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>(22.0kg)</mi><mi>(1.25m)</mi><msup><mi>(4.1888rad/s)</mi><mn>2</mn></msup><mo>&approx;</mo><mi>483N</mi></math>
+</article>
+</section>
+</section>
+<section class="examples"><mark variable></mark>
+<h4>Problem 1</h4>
+<p>(HRK E5.39) A disk of mass <math><mi>m</mi></math> on a frictionless table is attached to a hanging cylinder of mass <math><mi>M</mi></math> by a cord through a hole in the table. Find the speed with which the disk must
+move in a circle of radius  <math><mi>r</mi></math> for the cylinder to stay at rest.</p>
+<figure><img src="images/circular2.svg" alt="">
+<figcaption>Problem 1.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The two are connected by an inextensible string. We first analyze the more massive object, which the forces acting on it is the mass and the tension. To keep it at rest, its acceleration should be zero.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netM,y</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>0N</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>w</mi><mo>=</mo><mi>T</mi></math><br>
+	<math><mi>M</mi><mi>g</mi><mo>=</mo><mi>T</mi></math><br>
+</article>	
+<p>Now, there is a net force acting on the mass on the table, being the force that causes the centripetal acceleration. Looking at it, this force must be the tension. We substitute in our values for the centripetal force and the tension.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>T</mi></math><br>
+	<math><mfrac><mrow><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><mi>M</mi><mi>g</mi></math><br>
+	<math><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>M</mi><mi>g</mi><mi>r</mi></mrow><mi>m</mi></mfrac></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mo>(</mo><mfrac><mrow><mi>M</mi><mi>g</mi><mi>r</mi></mrow><mi>m</mi></mfrac><mo>)</mo></msqrt></math><br>
+</article>
+</section>
+</section>
+<p>The centripetal force is sometimes less obvious. For example, forces at an angle can be decomposed to get the vertical and the horizontal force; and sometimes, the horizontal force is the centripetal force.</p>
+<p>You may have seen roads that have a banking. These roads are angled in such a way that you can traverse them if you go at the correct speed. What is the centripetal force here, causing you to turn?</p>
+<section class="examples">
+<h4>Exercise 2a</h4>
+<p>(HRK E5.34a) A circular curve of highway is designed for traffic moving at
+60 km/h. If the radius of the curve is 150 m, what is the correct angle of banking of the road?</p>
+<figure><img src="images/circular6.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We find the centripetal force. Looking at the figure, it is on an inclined plane. Thus, the normal force is at an incline as well. This normal force has a horizontal component. This horizontal component points towards the center; this is the centripetal force.</p>
+<figure><img src="images/circular7.svg" alt=""></figure>
+<p>Unlike the inclined plane problems we analyzed, the vertical acceleration must be zero (since we don't move up or down), so instead of decomposing the weight, we decompose the normal force instead.</p>
+<article class="equations">
+	<math><mi>w</mi><mo>=</mo><msub><mi>N</mi><mi>y</mi></msub></math><br>
+	<math><mi>m</mi><mi>g</mi><mo>=</mo><mi>N</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac><mo>=</mo><mi>N</mi></math><br>
+</article>	
+<p>Now, we analyze the horizontal component, which is the centripetal force.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><msub><mi>N</mi><mi>x</mi></msub></math><br>
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>N</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+</article>	
+<p>We substitute the above for the normal force.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mo>(</mo><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac><mo>)</mo><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mfrac><mrow><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><mi>m</mi><mi>g</mi><mi>tan</mi><mi>(&theta;)</mi></math><br>
+	<math><mfrac><mrow><msup><mi>v</mi><mn>2</mn></msup></mrow><mrow><mi>r</mi><mi>g</mi></mrow></mfrac><mo>=</mo><mi>tan</mi><mi>(&theta;)</mi></math><br>
+	<math><msup><mi>tan</mi><mn>&minus;1</mn></msup><mo>(</mo><mfrac><mrow><msup><mi>v</mi><mn>2</mn></msup></mrow><mrow><mi>r</mi><mi>g</mi></mrow></mfrac><mo>)</mo><mo>=</mo><mi>&theta;</mi></math><br>
+</article>	
+<p>Substituting in the values we have, we get that the angle of the curve should be 10&deg;. Note that 60km/h is 16.67m/s.</p>
+</section>
+</section>
+<p>This banking helps us to traverse roads without friction. Recall that friction resists the relative motion of the object.</p>
+<p>Imagine biking on a flat road. When you need to turn, you lean. As you lean, the wheels grip onto the floor because of friction. This friction points towards the center, becoming the centripetal force.</p>
+<p>On a flat icy road, without friction, the wheels have nothing to stop them from slipping until you fall over. If you manage to catch yourself, you'll find that you'll keep moving in a straight line.</p>
+<section class="examples">
+<h4>Exercise 2b</h4>
+<p>(HRK E5.34b) Refer to the previous exercise. If the curve were not banked, what would be the minimum
+coefficient of friction between tires and road that would keep
+traffic from skidding at this speed?</p>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Since the curve isn't banked anymore, friction (specifically static friction, since it keeps the wheels at rest relative to the ground) is the centripetal force.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><msub><mi>f</mi><mi>s</mi></msub></math><br>
+	<math><mfrac><mrow><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi></math><br>
+	<math><mfrac><mrow><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>m</mi><mi>g</mi></math><br>
+	<math><mfrac><mrow><msup><mi>v</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>g</mi></math><br>
+	<math><mfrac><mrow><msup><mi>v</mi><mn>2</mn></msup></mrow><mrow><mi>r</mi><mi>g</mi></mrow></mfrac><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub></math><br>
+</article>	
+<p>Plugging in our values, we get that the coefficient of friction has to be about 0.19.</p>
+</section>
+</section>
+<section class="examples">
+<h4>Question 1</h4>
+<p>(HRK Q5.7) What is the purpose of curved surfaces, called spoilers, placed
+on the rear of sports cars? They are designed so that air flowing past exerts a downward force.</p>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Exerting a downward force allows the car to move faster along curves as it increases the normal force, thereby increasing the maximum amount of static friction that can oppose slipping.</p>
+</section>
+</section>
+<p>The problem below examines a conical pendulum, where a mass is attached to a string and made to spin in a circle.</p>
+<section class="examples">
+<h4>Problem 2</h4>
+<p>(HRK E5.39a) A conical pendulum is formed by attaching a 53-g pebble to a
+1.4-m string. The pebble swings around in a circle of radius
+25 cm. What is the speed of the pebble?</p>
+<figure><img src="images/circular3.svg" alt="">
+<figcaption>Problem 2.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The first thing we need to do is find the centripetal force. Seeing the string, there is tension at an angle. The horizontal tension must be the centripetal force, while the vertical tension keeps the mass staying at the same height.</p>
+<figure><img src="images/circular4.svg" alt=""></figure>
+<p>We get the vertical tension first. Since the mass isn't going up or down, the net force must be zero.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>nety</mi></msub><mo>=</mo><msub><mi>T</mi><mi>y</mi></msub><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>0N</mi><mo>=</mo><msub><mi>T</mi><mi>y</mi></msub><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>m</mi><mi>g</mi><mo>=</mo><msub><mi>T</mi><mi>y</mi></msub></math><br>
+</article>	
+<p>Now, we need the horizontal tension. The easiest way to get this is via using trigonometry. We first need the angle formed by the string and the radius, which is given by the length of the string and the radius.</p>
+<article class="equations">
+	<math><mi>&theta;</mi><mo>=</mo><msup><mi>cos</mi><mn>&minus;1</mn></msup><mo>(</mo><mfrac><mi>r</mi><mi>l</mi></mfrac><mo>)</mo></math><br>
+</article>	
+<p>We set up the trigonometry. The vertical tension and the horizontal tension are the opposite and the adjacent sides respectively.</p>
+<article class="equations">
+	<math><mi>tan</mi><mi>(&theta;)</mi><mo>=</mo><mfrac><msub><mi>T</mi><mi>y</mi></msub><msub><mi>T</mi><mi>x</mi></msub></mfrac></math><br>
+	<math><msub><mi>T</mi><mi>x</mi></msub><mo>=</mo><mfrac><msub><mi>T</mi><mi>y</mi></msub><mrow><mi>tan</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+</article>	
+<p>Now, since this horizontal tension is the centripetal force, we substitute it into this equation.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>tan</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+	<math><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>r</mi><mi>g</mi></mrow><mrow><mi>tan</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mo>(</mo><mfrac><mrow><mi>r</mi><mi>g</mi></mrow><mrow><mi>tan</mi><mo>(</mo><msup><mi>cos</mi><mn>&minus;1</mn></msup><mo>(</mo><mfrac><mi>r</mi><mi>l</mi></mfrac><mo>)</mo><mo>)</mo></mrow></mfrac><mo>)</mo></msqrt></math><br>
+</article>	
+<p>Once we input all our values, we get that the speed of the object is 0.67m/s.</p>
+</section>
+</section>
+<section hard class="examples">
+<h4>Problem 3a</h4>
+<p>(LSM P11.97a) A small ball is attached by a
+massless string to a vertical rod. When the rod has an angular
+velocity of 6.0 rad/s, the string makes an angle 30&deg;
+of with respect to the vertical. If the
+angular velocity is increased to 10.0 rad/s, what
+is the new angle of the string?</p>
+<figure><img src="images/circular5.svg" alt="">
+<figcaption>Problem 3.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The tension in the string causes the ball to stay at the same height and spin around in a circle. The ball being at the same height means that no acceleration occurs, thus the net force in the vertical direction is zero.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>nety</mi></msub><mo>=</mo><msub><mi>T</mi><mi>y</mi></msub><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>0N</mi><mo>=</mo><msub><mi>T</mi><mi>y</mi></msub><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>m</mi><mi>g</mi><mo>=</mo><msub><mi>T</mi><mi>y</mi></msub></math><br>
+</article>	
+<p>We rewrite the vertical tension. Looking at the diagram, we see that the vertical tension is adjacent to the 30&deg; angle, with the hypotenuse being the tension.</p>
+<article class="equations">
+	<math><msub><mi>T</mi><mi>y</mi></msub><mo>=</mo><mi>T</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>m</mi><mi>g</mi><mo>=</mo><mi>T</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac><mo>=</mo><mi>T</mi></math><br>
+</article>
+<p>The horizontal tension is the opposite side of the angle. Thus, we use sine. This is the centripetal force.</p>
+<p>What exactly are we solving here? Looking at the equation, the only thing we don't know is the radius, so we solve for that and see what we can do later.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><msub><mi>T</mi><mi>x</mi></msub></math><br>
+	<math><mi>m</mi><mi>r</mi><msup><mi>&omega;</mi><mn>2</mn></msup><mo>=</mo><mi>T</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>m</mi><mi>r</mi><msup><mi>&omega;</mi><mn>2</mn></msup><mo>=</mo><mo>(</mo><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac><mo>)</mo><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>r</mi><mo>=</mo><mfrac><mrow><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mrow><msup><mi>&omega;</mi><mn>2</mn></msup><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+</article>
+<p>While it is good we have this equation, the radius isn't really a useful thing to have. Something that is useful is the length of the string, since that will stay constant. Using trigonometry, the length is the hypotenuse, and the radius is the opposite side, so we use sine.</p>
+<article class="equations">
+	<math><mi>L</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mfrac><mrow><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mrow><msup><mi>&omega;</mi><mn>2</mn></msup><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+	<math><mi>L</mi><mo>=</mo><mfrac><mrow><mi>g</mi></mrow><mrow><msup><mi>&omega;</mi><mn>2</mn></msup><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+</article>
+<p>We will solve for this value, giving us the length of the string is about 0.32m.</p>
+<p>Since this is constant, we can rearrange this equation to get theta. Afterwards, we can just substitute in to get the value of theta for any speed.</p>
+<article class="equations">
+	<math><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mfrac><mrow><mi>g</mi></mrow><mrow><msup><mi>&omega;</mi><mn>2</mn></msup><mi>L</mi></mrow></mfrac></math><br>
+	<math><mi>&theta;</mi><mo>=</mo><msup><mi>cos</mi><mn>&minus;1</mn></msup><mo>(</mo><mfrac><mrow><mi>g</mi></mrow><mrow><msup><mi>&omega;</mi><mn>2</mn></msup><mi>L</mi></mrow></mfrac><mo>)</mo></math><br>
+</article>
+<p>Substituting this in, we get that the angle is 72&deg;.</p>
+<p>Fun fact about this problem; this problem is suggested to be solved using angular momenta, which is a topic we won't discuss for quite some time. However, we have shown how to solve it using dynamics only.</p>
+</section>
+</section>
+<section class="examples">
+<h4>Problem 3b</h4>
+<p>(LSM P11.97c) Can the rod spin fast enough so that the ball is
+horizontal?</p>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>For it to be horizontal, the angle must be 90&deg;. From our previous solution, we got the angle based on the angular velocity to be this equation.</p>
+<article class="equations">
+	<math><mi>&theta;</mi><mo>=</mo><msup><mi>cos</mi><mn>&minus;1</mn></msup><mo>(</mo><mfrac><mrow><mi>g</mi></mrow><mrow><msup><mi>&omega;</mi><mn>2</mn></msup><mi>L</mi></mrow></mfrac><mo>)</mo></math><br>
+</article>
+<p>If the angle is 90&deg;, that means the cosine of that angle must equal 0.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><mi>g</mi></mrow><mrow><msup><mi>&omega;</mi><mn>2</mn></msup><mi>L</mi></mrow></mfrac></math><br>
+</article>
+<p>This leaves us with a problem, however. Since the length is computed to be 0.32m, and the gravity certainly isn't zero, the angular velocity must bring the equation to zero. To get it to zero, the angular velocity must be &infin; m/s, which is impossible.</p>
+<p>Thus, the answer is it no; it is impossible.</p>
+</section>
+</section>
+<p>One caveat of the fact that the Earth spins is that people near the equator actually appear to have less weight than those on the poles. Of course, they still have the same weight, its just that the scales we use don't take this centripetal force into account.</p>
+<figure><img src="images/circular8.svg" alt="">
+<figcaption>The centripetal force pulls people more on the equator.</figcaption></figure>
+<p>This centripetal force is actually quite minuscule compared to the weight we have.</p>
+<section class="examples">
+<h4>Problem 4</h4>
+<p>(HRK E5.47b) Assume that the standard kilogram would weigh exactly
+9.80 N at sea level on the equator if the Earth did not rotate.
+Then take into account the fact that the Earth does rotate, so
+that this object moves in a circle of radius 6370 km (the
+Earth’s radius) in one day. Find the measure of the standard kilogram on a
+scale located at the equator.</p>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>Recall the equation for the centripetal acceleration given the radius and period.</p>
+<article class="equations">
+	<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><mrow><mi>(</mi><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>r</mi></mrow><mi>T</mi></mfrac><msup><mi>)</mi><mn>2</mn></msup></mrow><mi>r</mi></mfrac><mo>=</mo><mfrac><mrow><mi>4&pi;²r</mi></mrow><msup><mi>T</mi><mn>2</mn></msup></mfrac></math>
+</article>
+<p>Thus, the centripetal force is then this.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mfrac><mrow><mi>4m&pi;²r</mi></mrow><msup><mi>T</mi><mn>2</mn></msup></mfrac></math>
+</article>
+<p>There are two forces acting on the kilogram, being the normal and the weight. However, the net force must be the centripetal force to keep the object moving in a circle. The weight is the one acting as the centripetal force, so we set it as positive and the normal as negative.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>w</mi><mo>&minus;</mo><mi>N</mi></math><br>
+	<math><mi>N</mi><mo>=</mo><mi>w</mi><mo>&minus;</mo><msub><mi>F</mi><mi>c</mi></msub></math><br>
+</article>	
+<p>Since we know the weight is 9.80N, we just solve for the centripetal force and find that it is around 0.0337N. Thus, the recorded weight will be 9.77N.</p>
+</section>
+</section>
+<footer style="color:#900">
+	∎
+</footer>
+</body>
+</html>

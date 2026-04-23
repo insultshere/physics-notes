@@ -4,7 +4,7 @@
 	<title>dynamics - angled</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<script src="../script.js"></script>
+	<script defer src="../script.js"></script>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,103 +15,103 @@
 </header>
 <p>So far, all the forces we've been dealing with have all been vertical or horizontal. Further, all the surfaces we've dealt with have been completely horizontal and vertical.</p>
 <p>The first half of this sentence isn't that big of a deal; we've dealt with velocity at an angle before in our study of projectiles, so we just use the same strategy we did before to deal with problems of that sort.</p>
-<figure><img src="images/angled1.svg"></figure>
-<figurecaption>A force at an angle &theta; is acted onto the object.</figurecaption>
+<figure><img src="images/angled1.svg" alt="">
+<figcaption>A force at an angle &theta; is acted onto the object.</figcaption></figure>
 <p>You may notice something strange with the free body diagram; the normal force appears to be really large compared to the weight of the object.</p>
 <p>We can use vector decomposition (like we did in projectile motion) to get the magnitudes of the horizontal and vertical force of the diagonal force. Then, we can update the free body diagram with the components.</p>
-<figure><img src="images/angled2.svg"></figure>
-<figurecaption>The components of the angled force.</figurecaption>
+<figure><img src="images/angled2.svg" alt="">
+<figcaption>The components of the angled force.</figcaption></figure>
 <p>Here, we can see that the force has been "crossed out". When we draw free body diagrams, you should cross out or squiggle out a force if you have broken it down into its components. Here, we can also see why the normal force is so high; the vertical component of the diagonal force pushes the box into the ground as well.</p>
-<example> <mark custom></mark>
+<section class="examples"> <mark custom></mark>
 <h4>Question 1</h4>
 Draw a free body diagram for the following box pushed against a rough surface. The box is at rest relative to the surface.
-<figure><img src="images/angled5.svg"></figure>
-<figurecaption>Question 1.</figurecaption>
+<figure><img src="images/angled5.svg" alt="">
+<figcaption>Question 1.</figcaption></figure>
 <h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>We first decompose the force at an angle. The horizontal component of the force pushes the box against the wall, so we draw the normal force of the wall to the box.</p>
 <p>The vertical component pushes the box down, adding to its weight. Given that the surface is rough and the box is at rest relative to the surface, this means the static friction has to have the same magnitude as the weight and vertical component combined.</p>
-<figure><img src="images/angled3.svg"></figure>
+<figure><img src="images/angled3.svg" alt="">
 </section>
-</example>
+</section>
 <p>Recall in kinematics how it was helpful to separate the horizontal and vertical velocities. In dynamics, we can use this same strategy to solve more complex problems with forces at an angle.</p>
 <p>This may feel like a leap in difficulty, however just recall what we recalled when we jumped from one-dimensional motion to two-dimensional motion; this is just two cases of one-dimensional dynamics.</p>
-<example>
-<h4>Exercise 1</h4>
+<section class="examples">
+<h4>Exercise 1a</h4>
 (HRK E4.7a) A 5.1-kg block is pulled along a frictionless floor by a cord that
 exerts a 12N force at an angle 25° above the horizontal. What is the horizontal acceleration of the block?
-<figure><img src="images/angled4.svg"></figure>
-<figurecaption>Exercise 1.</figurecaption>
+<figure><img src="images/angled4.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>We first decompose the force at an angle. We know the horizontal component is the adjacent side of the 25&deg;, so we use cosine.</p>
-<eq>
+<article class="equations">
 	<math><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi></math>
-</eq>
+</article>
 <p>Now, we know there is no other net horizontal force. We can freely use this to get the acceleration, since we are given the mass. To not confuse ourselves, let's add a subscript "x".</p>
-<eq>
+<article class="equations">
 	<math><msub><mi>F</mi><mi>netx</mi></msub><mo>=</mo><mi>m</mi><msub><mi>a</mi><mi>x</mi></msub></math><br>
 	<math><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mi>m</mi><msub><mi>a</mi><mi>x</mi></msub></math><br>
 	<math><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>m</mi><msub><mi>a</mi><mi>x</mi></msub></math><br>
 	<math><mfrac><mrow><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi></mrow><mi>m</mi></mfrac><mo>=</mo><msub><mi>a</mi><mi>x</mi></msub></math><br>
-</eq>
+</article>
 <p>Substituting in the values, we have that the horizontal acceleration is 2.1m/s².</p>
 </section>
-</example>
-<example>
-<h4>Exercise 2</h4>
+</section>
+<section class="examples">
+<h4>Exercise 1b</h4>
 (HRK E4.7b) In the exercise above, the force is slowly increased. What is the magnitude of the force just before the block is lifted off the floor? <br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>There are two vertical forces currently acting on the box; that is the normal force, and the weight. As we pull the string upwards, the normal forces relaxes and weakens (recall that the normal force is a lazy force). The block starts to lift off one the normal force is zero.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
-</eq>
+</article>
 <p>From trigonometry, the vertical force is the opposite side of the 25&deg; angle, so we use sine.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>(0N)</mi><mo>=</mo><mi>0N</mi><mo>+</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>−</mo><mi>m</mi><mi>g</mi></math><br>
 	<math><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac><mo>=</mo><mi>F</mi></math><br>
-</eq>
+</article>
 <p>Plugging in our values, we get that the magnitude of the force has to be 120N.</p>
 </section>
-</example>
+</section>
 <p>Since now there are functions such as the sine and cosine function which something give irrational numbers, it is helpful to do <i>all the algebraic manipulation first</i> and then plug in the values.</p>
 <p>This method reduces errors to mistyping numbers and is generally more flexible. We should try to adopt this method, instead of relying on solving each value on at a time. <br>Of course, sometimes, this method is harder in problems that can be solved easier with the actual value, like in kinematic problems.</p>
-<example>
-<h4>Exercise 3</h4>
+<section class="examples">
+<h4>Exercise 2</h4>
 (LSM P6.62a) A contestant in a winter sporting event pushes a
 45.0-kg block of ice across a frozen lake, with a coefficient of static friction being 0.1, as shown in the figure below. Calculate the minimum force he
 must exert to get the block moving. 
-<figure><img src="images/angled6.svg"></figure>
-<figurecaption>Exercise 3.</figurecaption>
+<figure><img src="images/angled6.svg" alt="">
+<figcaption>Exercise 3.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>There are three vertical forces acting on the box. We have the vertical component of the contestant, the weight, and the normal force balancing both. Thus, the normal force here is not just the weight. All in all, the net vertical force is zero.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>0N</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>+</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mo>=</mo><mi>N</mi></math><br>
-</eq>
+</article>
 <p>We keep this for later. The horizontal component has two forces; the static force and the horizontal component of the contestant. We use the maximum strength of the static force. Setting the net horizontal force as zero gives us this equation.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>−</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub></math><br>
 	<math><mi>0N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>−</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub></math><br>
 	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
 	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi></math>
-</eq>
+</article>
 <p>Now we input the value we collected for the normal force above.</p>
-<eq>
+<article class="equations">
 	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mo>(</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mo>)</mo><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
 	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>+</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>m</mi><mi>g</mi><mo>&minus;</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>0</mi></math><br>
 	<math><mi>F</mi><mo>(</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>cos</mi><mi>(&theta;)</mi><mo>)</mo><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>m</mi><mi>g</mi></math><br>
 	<math><mi>F</mi><mo>=</mo><mfrac><mrow><msub><mi>&mu;</mi><mi>s</mi></msub><mi>m</mi><mi>g</mi></mrow><mrow><mo>(</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>cos</mi><mi>(&theta;)</mi><mo>)</mo></mrow></mfrac></math></math><br>
-</eq>
+</article>
 <p>We now have the equation for the minimum force. Plugging in all the values, we have that the minimum force needed is 51N.</p>
 </section>
-</example>
-<example hard> <mark variable></mark>
+</section>
+<section class="examples" hard> <mark variable></mark>
 <h4>Problem 1</h4>
 (HRK P5.7b) The handle of a floor mop makes an angle &theta; with
 the vertical direction. Let <math><msub><mi>&mu;</mi><mi>k</mi></msub></math> be the coefficient
@@ -120,40 +120,40 @@ of kinetic friction between mop and floor and <math><msub><mi>&mu;</mi><mi>s</mi
 than a certain angle &phi; the mop cannot be made to slide across
 the floor no matter how great a force is directed along the
 handle. What is the angle &phi;?
-<figure><img src="images/angled7.svg"></figure>
-<figurecaption>Problem 1.</figurecaption>
+<figure><img src="images/angled7.svg" alt="">
+<figcaption>Problem 1.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>Since we neglect the mass, the only vertical force causing the normal force is then the vertical component of the force pushing on the handle. Setting the net force to be zero, since the mop isn't moving upwards anyway, gives us this equation.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub></math><br>
 	<math><mi>0N</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub></math><br>
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>N</mi></math><br>
-</eq>
+</article>
 <p>The only horizontal forces are the static friction and the horizontal component of the handle's force. Now, the static friction has to be greater than the handle force so that the mop does not move. We write it down like below.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>&geq;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
 	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi><mo>&geq;</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi></math>
-</eq>
+</article>
 <p>We then substitute the value of the normal force we collected.</p>
-<eq>
+<article class="equations">
 	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mo>(</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>)</mo><mo>&geq;</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mo>&geq;</mo><mi>sin</mi><mi>(&theta;)</mi></math>
-</eq>
+</article>
 <p>Now, we use a definition for the tangent function.</p>
-<eq>
+<article class="equations">
 	<math><msub><mi>&mu;</mi><mi>s</mi></msub><mo>&geq;</mo><mfrac><mrow><mi>sin</mi><mi>(&theta;)</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac><mo>=</mo><mi>tan</mi><mi>(&theta;)</mi></math>
-</eq>
+</article>
 <p>Thus, using the arctangent function, we get this value. We note that this angle is the one that &theta; can't be less than.</p>
-<eq>
+<article class="equations">
 	<math><mi>&phi;</mi><mo>=</mo><msup><mi>tan</mi><mn>&minus;1</mn></msup><mo>(</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mo>)</mo><mo>&geq;</mo><mi>&theta;</mi></math>
-</eq>
+</article>
 </section>
-</example>
+</section>
 <p>With this knowledge, we can use dynamics to solve more complicated problems which relate to kinematics. We return once again to our kinematic equations.</p>
-<example>
-<h4>Problem 2</h4>
+<section class="examples">
+<h4>Problem 2a</h4>
 (HRK P4.3a) A rocket with mass 3030 kg is fired from rest from the ground
 at an elevation angle of 58.0°. The motor exerts a thrust of
 61.2 kN at a constant angle of 58.0° with the horizontal for
@@ -162,58 +162,58 @@ at an elevation angle of 58.0°. The motor exerts a thrust of
 <section class="solution">
 <p>To get the altitude, we need the vertical force, which should give us the vertical acceleration. Given the constant acceleration, we then use the kinematic equations to get the vertical displacement.</p>
 <p>Given 58&deg; from the horizontal, the vertical force is opposite to the angle. We use sine. There are two vertical forces; the vertical force component and the weight.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>m</mi><msub><mi>a</mi><mi>y</mi></msub><mo>=</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>−</mo><mi>m</mi><mi>g</mi></math><br>
 	<math><msub><mi>a</mi><mi>y</mi></msub><mo>=</mo><mfrac><mrow><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>−</mo><mi>m</mi><mi>g</mi></mrow><mi>m</mi></mfrac></math><br>
-</eq>
+</article>
 <p>Computing, we have the constant acceleration 7.329m/s². Now, we just use the kinematic equations to get the height. We know the initial velocity is at rest and the time.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0y</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mi>a</mi><mi>y</mi></msub><msup><mi>t</mi><mn>2</mn></msup></math><br>
 	<math><mrow><mi>y</mi></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(7.329m/s²)</mi><msup><mi>(48.0s)</mi><mn>2</mn></msup><mo>=</mo><mi>8440m</mi></math><br>
-</eq>
+</article>
 </section>
-</example>
-<example hard>
-<h4>Problem 3</h4>
+</section>
+<section class="examples" hard>
+<h4>Problem 2b</h4>
 (HRK P4.3b) Find the total distance from firing point to impact in the previous problem. <br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>The first portion of this problem is the distance travelled until motor cut-out. The second portion is a projectile motion problem with initial height.</p>
 <p>Let's begin by getting the horizontal acceleration.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
 	<math><mi>m</mi><msub><mi>a</mi><mi>x</mi></msub><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
-</eq>
+</article>
 <p>The acceleration is 10.70m/s². We then get the horizontal displacement.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mi>a</mi><mi>x</mi></msub><msup><mi>t</mi><mn>2</mn></msup></math><br>
 	<math><mrow><mi>x</mi></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(10.70m/s²)</mi><msup><mi>(48.0s)</mi><mn>2</mn></msup><mo>=</mo><mi>12326.4m</mi></math><br>
-</eq>
+</article>
 <p>Giving us the horizontal displacement until cut-out is 12326.4m. Now, we get the vertical velocity at cut-out; this becomes the initial vertical velocity for projectile motion.</p>
-<eq>
+<article class="equations">
 	<math><mrow><msub><mi>v</mi><mi>y</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0y</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><mi>t</mi></math><br>
 	<math><mrow><msub><mi>v</mi><mi>y</mi></msub></mrow><mo>=</mo><mi>(7.329m/s²)</mi><mi>(48.0s)</mi><mo>=</mo><mi>351.79m/s</mi></math><br>
-</eq>
+</article>
 <p>Now, given the height, we compute for the time it takes for the rocket to fall down to the ground.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>y</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0y</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mi>a</mi><mi>y</mi></msub><msup><mi>t</mi><mn>2</mn></msup></math><br>
 	<math><mrow><mi>(0m)</mi></mrow><mo>=</mo><mi>(8440m)</mi><mo>+</mo><mi>(351.79m/s)</mi><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(−9.8m/s²)</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
 	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>−4.9</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>351.79</mi><mi>t</mi><mo>+</mo><mi>8440</mi></math><br>
-</eq>
+</article>
 <p>Using the quadratic equation gives us the time taken is 90.77s. One more thing we need is the horizontal velocity at cut-out; this becomes the constant horizontal velocity in projectile motion.</p>
-<eq>
+<article class="equations">
 	<math><mrow><msub><mi>v</mi><mi>x</mi></msub></mrow><mo>=</mo><msub><mi>v</mi><mi>0x</mi></msub><mo>+</mo><msub><mi>a</mi><mi>x</mi></msub><mi>t</mi></math><br>
 	<math><mrow><msub><mi>v</mi><mi>x</mi></msub></mrow><mo>=</mo><mi>(10.70m/s²)</mi><mi>(48.0s)</mi><mo>=</mo><mi>513.6m/s</mi></math><br>
-</eq>
+</article>
 <p>Finally, we get the horizontal displacement for the projectile motion portion.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>x</mi></msub><mi>t</mi></math><br>
 	<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>(12326.4m)</mi><mo>+</mo><mi>(513.6m/s)</mi><mi>(90.77s)</mi><mo>=</mo><mi>58,945.87m</mi></math><br>
-</eq>
+</article>
 <p>Giving us our answer of 58900m.</p>
 </section>
-</example>
+</section>
 <footer>
 	<a href="the-inclined-plane.html"> The Inclined Plane ></a>
 </footer>

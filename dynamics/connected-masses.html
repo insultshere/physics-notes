@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dynamics - connected</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Connected Masses</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<p>In the previous tutorial, you may have noticed that the direction of acceleration for every exercise and problem is the same. This tutorial introduces systems which have different directions of acceleration. Even then, the same strategy applies.</p>
+<p>To make it simple, all strings in this tutorial are massless and inextensible, which means the tension is uniform throughout, and the magnitude of acceleration throughout the entire system is constant. Further, all pulleys are massless and frictionless.</p>
+<section class="examples">
+<h4>Exercise 1a</h4>
+<p>(LSM P6.43a) Two blocks are connected by a massless rope as
+shown below. The mass of the block on the table is
+4.0 kg and the hanging mass is 1.0 kg. The table
+and the pulley are frictionless. Find the
+acceleration of the system.</p>
+<figure><img src="images/connected1.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The vertical forces on the big block are balanced, thus the only net force must be the tension pulling the box. </p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netM,x</mi></msub><mo>=</mo><mi>T</mi></math><br>
+	<math><mi>M</mi><mi>a</mi><mo>=</mo><mi>T</mi></math><br>
+</article>	
+<p>Now, for the hanging mass, there are no horizontal forces, so we can ignore the horizontal motion. The acceleration of that block is affected by two forces, the weight, and the tension in the rope.</p>
+<p>Here, we set the acceleration as negative, since the block goes down.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netm,y</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>m</mi><mi>(&minus;a)</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
+</article>	
+<p>We have a value for the tension, so we substitute that in.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mi>m</mi><mi>a</mi><mo>=</mo><mi>M</mi><mi>a</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
+	<math><mi>m</mi><mi>g</mi><mo>=</mo><mi>M</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>a</mi></math><br>
+	<math><mi>m</mi><mi>g</mi><mo>=</mo><mi>a</mi><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi></math><br>
+	<math><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi></mrow></mfrac><mo>=</mo><mi>a</mi></math><br>
+</article>	
+<p>Substituting in our values, we can get the acceleration of the system.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(1.0kg)</mi><mi>(9.8m/s²)</mi></mrow><mrow><mi>(4.0kg)</mi><mo>+</mo><mi>(1.0kg)</mi></mrow></mfrac><mo>&approx;</mo><mi>2.0m/s²</mi><mo>=</mo><mi>a</mi></math><br>
+</article>	
+</section>
+</section>
+<section class="examples">
+<h4>Exercise 1b</h4>
+<p>(LSM P6.43b) Find the tension in the rope.</p>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We will use the acceleration solved in the previous part, albeit solved to more decimal places.</p>
+<article class="equations">
+	<math><mi>(4.0kg)</mi><mi>(1.96m/s²)</mi><mo>=</mo><mi>7.8N</mi><mo>=</mo><mi>T</mi></math><br>
+</article>	
+</section>
+</section>
+<section class="examples"> <mark variable></mark>
+<h4>Exercise 2</h4>
+<p>(LSM P6.42) The device shown below is the Atwood’s
+machine, with <math><mi>M</mi><mo>></mo><mi>m</mi></math>. Assuming that the masses of the string and the frictionless
+pulley are negligible, find an equation for the
+acceleration of the two blocks and an
+equation for the tension in the string. </p>
+<figure><img src="images/connected2.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We will assume that the bigger mass will go down (by intuition). Thus, its acceleration is negative.</p>	
+<p>There are no net horizontal forces, so we only care about the vertical direction. For the smaller mass, its acceleration is positive, with the two net forces being the tension and the weight itself.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netm,y</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>g</mi><mo>=</mo><mi>T</mi></math><br>
+</article>	
+<p>Now, we have an equation for the tension. For the bigger mass, it has the same two forces, but it has a negative acceleration.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netm,y</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mo>&minus;</mo><mi>M</mi><mi>a</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>M</mi><mi>g</mi></math><br>
+	<math><mi>M</mi><mi>g</mi><mo>=</mo><mi>T</mi><mo>+</mo><mi>M</mi><mi>a</mi></math><br>
+</article>	
+<p>Now, we substitute in the value of tension that we found.</p>
+<article class="equations">
+	<math><mi>M</mi><mi>g</mi><mo>=</mo><mi>(</mi><mi>m</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>)</mi><mo>+</mo><mi>M</mi><mi>a</mi></math><br>
+	<math><mi>M</mi><mi>g</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi><mo>=</mo><mi>M</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>a</mi></math><br>
+	<math><mi>g</mi><mi>(</mi><mi>M</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi><mo>=</mo><mi>a</mi><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi></math><br>
+	<math><mi>g</mi><mo>(</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><mo>=</mo><mi>a</mi></math><br>
+</article>	
+<p>We can now substitute this in to the former equation for the tension.</p>
+<article class="equations">
+	<math><mi>m</mi><mi>g</mi><mo>(</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><mo>+</mo><mi>m</mi><mi>g</mi><mo>=</mo><mi>T</mi></math><br>
+	<math><mfrac><mrow><mi>M</mi><mi>m</mi><mi>g</mi><mo>&minus;</mo><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>m</mi><mi>g</mi><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><mi>T</mi></math><br>
+	<math><mfrac><mrow><mi>M</mi><mi>m</mi><mi>g</mi><mo>&minus;</mo><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>M</mi><mi>m</mi><mi>g</mi><mo>+</mo><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><mi>T</mi></math><br>
+	<math><mi>g</mi><mo>(</mo><mfrac><mrow><mi>2</mi><mi>M</mi><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><mo>=</mo><mi>T</mi></math><br>
+</article>	
+</section>
+</section>
+<p>The above machine was named after George Atwood, who made the machine in 1784. Further, the above solution made use of solving for the acceleration by analyzing both masses separately. However, we may also do it by analyzing the entire system all at once.</p>
+<section class="examples">
+<h4>Exercise 3</h4>
+<p>(LSM P6.95) As shown below, if <math><mi>M</mi><mo>=</mo><mi>6.0 kg</mi></math>, what is the
+tension in the connecting string? The pulley and
+all surfaces are frictionless. </p>
+<figure><img src="images/connected3.svg" alt="">
+<figcaption>Exercise 3.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The block on the inclined plane is pulled by the tension of the rope and its weight. We have to resolve the weight into its horizontal and vertical components.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netI,x</mi></msub><mo>=</mo><mi>T</mi><mo>+</mo><msub><mi>w</mi><mi>x</mi></msub></math><br>
+	<math><mi>M</mi><mi>a</mi><mo>=</mo><mi>T</mi><mo>+</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><mfrac><mrow><mi>T</mi><mo>+</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mi>M</mi></mfrac></math><br>
+</article>	
+<p>The hanging block has negative acceleration, and two vertical forces, being that of the tension and the weight.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netm,y</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mo>&minus;</mo><mi>M</mi><mi>a</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>M</mi><mi>g</mi></math><br>
+</article>	
+<p>We substitute in our value for the acceleration.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mi>M</mi><mo>(</mo><mfrac><mrow><mi>T</mi><mo>+</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mi>M</mi></mfrac><mo>)</mo><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>M</mi><mi>g</mi></math><br>
+	<math><mo>&minus;</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>T</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>M</mi><mi>g</mi></math><br>
+	<math><mi>M</mi><mi>g</mi><mo>&minus;</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mi>T</mi><mo>+</mo><mi>T</mi></math><br>
+	<math><mi>M</mi><mi>g</mi><mi>(</mi><mi>1</mi><mo>&minus;</mo><mi>sin</mi><mi>(&theta;)</mi><mi>)</mi><mo>=</mo><mi>2</mi><mi>T</mi></math><br>
+	<math><mfrac><mrow><mi>M</mi><mi>g</mi><mi>(</mi><mi>1</mi><mo>&minus;</mo><mi>sin</mi><mi>(&theta;)</mi><mi>)</mi></mrow><mi>2</mi></mfrac><mo>=</mo><mi>T</mi></math><br>
+</article>	
+<p>This is the equation. Now, all we do is plug in our values.</p>
+<p>We substitute in our value for the acceleration.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(6kg)</mi><mi>(9.8m/s²)</mi><mi>(</mi><mi>1</mi><mo>&minus;</mo><mi>sin</mi><mi>(30&deg;)</mi><mi>)</mi></mrow>=<mi>2</mi></mfrac><mo>&approx;</mo><mi>15N</mi><mo>=</mo><mi>T</mi></math><br>
+</article>	
+</section>
+</section>
+<p>We now add friction into the mix, which makes it a little more complicated, but it should still be doable.</p>
+<section class="examples">
+<h4>Exercise 4</h4>
+<p>(HRK E5.22a) <math><mi>A</mi></math> is a 4.4-kg block and <math><mi>B</mi></math> is a 2.6-kg block. The
+coefficients of static friction between <math><mi>A</mi></math> and the
+table is 0.18. Determine the minimum mass of
+the block <math><mi>C</mi></math> that must be placed on <math><mi>A</mi></math> to keep it from sliding.</p>
+<figure><img src="images/connected4.svg" alt="">
+<figcaption>Exercise 4.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>If the block is kept at rest due to friction, that mean the acceleration of the whole system is zero.</p>
+<p>We will first analyze the forces on the hanging mass. The only forces acting on it are vertical forces, being the tension and the weight.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netB,y</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>w</mi><mi>B</mi></msub></math><br>
+	<math><mi>0N</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>m</mi><mi>B</mi></msub><mi>g</mi></math><br>
+	<math><msub><mi>m</mi><mi>B</mi></msub><mi>g</mi><mo>=</mo><mi>T</mi></math><br>
+</article>	
+<p>Now, we analyze the vertical forces of the block <math><mi>A</mi></math>. We have the force of block <math><mi>C</mi></math> on the block, which is its weight, the weight itself, and the normal force.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netA,y</mi></msub><mo>=</mo><mi>N</mi><mo>&minus;</mo><mi>w</mi><mo>&minus;</mo><msub><mi>w</mi><mi>C</mi></msub></math><br>
+	<math><mi>0N</mi><mo>=</mo><mi>N</mi><mo>&minus;</mo><msub><mi>w</mi><mi>A</mi></msub><mo>&minus;</mo><msub><mi>w</mi><mi>C</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>A</mi></msub><mi>g</mi><mo>+</mo><msub><mi>m</mi><mi>C</mi></msub><mi>g</mi><mo>=</mo><mi>N</mi></math><br>
+</article>	
+<p>The net horizontal force is zero, which is the tension and the static friction. We use the maximum static friction as we are trying to minimize the mass.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netB,y</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>w</mi><mi>B</mi></msub></math><br>
+	<math><mi>0N</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>m</mi><mi>B</mi></msub><mi>g</mi></math><br>
+	<math><msub><mi>m</mi><mi>B</mi></msub><mi>g</mi><mo>=</mo><mi>T</mi></math><br>
+</article>	
+<p>Now, we analyze the vertical forces of the block <math><mi>A</mi></math>. We have the force of block <math><mi>C</mi></math> on the block, which is its weight, the weight itself, and the normal force.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netA,x</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>f</mi><mi>s</mi></msub></math><br>
+	<math><msub><mi>F</mi><mi>netA,x</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi></math><br>
+</article>	
+<p>We now substitute both of our values for the tension and the normal force.</p>
+<article class="equations">
+	<math><mi>0N</mi><mo>=</mo><msub><mi>m</mi><mi>B</mi></msub><mi>g</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>(</mi><msub><mi>m</mi><mi>A</mi></msub><mi>g</mi><mo>+</mo><msub><mi>m</mi><mi>C</mi></msub><mi>g</mi><mi>)</mi></math><br>
+	<math><mi>0N</mi><mo>=</mo><msub><mi>m</mi><mi>B</mi></msub><mi>g</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><msub><mi>m</mi><mi>A</mi></msub><mi>g</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><msub><mi>m</mi><mi>C</mi></msub><mi>g</mi></math><br>
+	<math><msub><mi>&mu;</mi><mi>s</mi></msub><msub><mi>m</mi><mi>A</mi></msub><mi>g</mi><mo>&minus;</mo><msub><mi>m</mi><mi>B</mi></msub><mi>g</mi><mo>=</mo><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><msub><mi>m</mi><mi>C</mi></msub><mi>g</mi></math><br>
+	<math><mfrac><mrow><msub><mi>m</mi><mi>B</mi></msub><mi>g</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><msub><mi>m</mi><mi>A</mi></msub><mi>g</mi></mrow><mrow><msub><mi>&mu;</mi><mi>s</mi></msub><mi>g</mi></mrow></mfrac><mo>=</mo><msub><mi>m</mi><mi>C</mi></msub></math><br>
+</article>	
+<p>Plugging in, we get the answer is <math><mi>1.0</mi><mo>&times;</mo><mi>10</mi></math>kg.</p>
+</section>
+</section>
+<section class="examples">
+<h4>Exercise 5</h4>
+<p>(HRK E5.28a) Block <math><mi>M</mi></math> has a mass of 4.20 kg and block <math><mi>m</mi></math> has
+a mass of 2.30 kg. The coefficient of kinetic friction between
+<math><mi>m</mi></math> and the horizontal plane is 0.47. The inclined plane is frictionless. Find the acceleration of the blocks.
+<figure><img src="images/connected5.svg" alt="">
+<figcaption>Exercise 5.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The acceleration of the more massive block is negative, going down, with the little block having positive acceleration. We begin our analysis with the block on the incline, which has its forces be the tension and the horizontal weight.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netM,x</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>w</mi><mi>x</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>M</mi><mi>a</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>M</mi><mi>a</mi><mo>=</mo><mi>T</mi></math><br>
+</article>	
+<p>The block on the flat plane has two forces as well, being the kinetic friction which opposes the motion, and the tension. The normal force is just equal to the weight here.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netm,x</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi></math><br>
+</article>	
+<p>Substitute in our value for the tension.</p>
+<article class="equations">
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>M</mi><mi>a</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi></math><br>
+	<math><mi>M</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>a</mi><mo>=</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi></math><br>
+	<math><mi>a</mi><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi><mo>=</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><mfrac><mrow><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac></math><br>
+</article>	
+<p>When we input the values, we have the acceleration is about 1.2m/s².</p>
+</section>
+</section>
+<footer>
+	<a href="circular-motion-revisited.html"> Circular Motion Revisited ></a>
+</footer>
+</body>
+</html>

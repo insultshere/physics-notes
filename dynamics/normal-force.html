@@ -4,7 +4,7 @@
 	<title>dynamics - normal</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<script src="../script.js"></script>
+	<script defer src="../script.js"></script>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,29 +15,29 @@
 </header>
 <p>How do scales measure our weight? Why do we not phase through walls? Why doesn't anything phase through the Earth?</p>
 <p>To answer these questions, we introduce a new force, that stops things from going through each other.</p>
-<termdecl>
-	<term>Normal force (<math><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math>)</term> - a force that stops things from phasing through each other
-</termdecl>
+<article class="terms">
+	<mark>Normal force (<math><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math>)</mark> - a force that stops things from phasing through each other
+</article>
 <p>The normal force occurs as a consequence of the Law of Interaction. Recall the example of a box sitting on the floor. As it pushes on the floor, the floor pushes back to keep it at rest (by Newton's first law). This force pushing back is called the normal force.</p>
-<figure><img src="images/normal1.svg"></figure>
-<figurecaption>The object pushes on the floor; the floor pushes back.</figurecaption>
+<figure><img src="images/normal1.svg" alt="">
+<figcaption>The object pushes on the floor; the floor pushes back.</figcaption></figure>
 <p>The above figure shows the action-reaction pair that the normal force is part of. You may be inclined to believe that the force of the object pushing on the floor is the weight of the object; both pull down on the object.</p>
 <p><i>This is an incorrect conclusion.</i> While there are other reasons why this isn't the case, here is one: they are parts of different action-reaction pairs. The force of weight is part of the action-reaction pair involving the box and the Earth; not the box and the floor.</p>
-<figure><img src="images/normal2.svg"></figure>
-<figurecaption>The correct pairs.</figurecaption>
+<figure><img src="images/normal2.svg" alt="">
+<figcaption>The correct pairs.</figcaption></figure>
 <p>However, on a flat, non-accelerating horizontal surface, it is true that the weight and the normal force acting on an object is equal in magnitude, by Newton's first and second law. Since the object is at rest, we can equate both of them, setting the net force as zero.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>0</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math>
-</eq>
+</article>
 <p>How can we use this fact? Since the normal force is equal to weight (on a flat non-accelerating horizontal surface), if we can measure this normal force, we can get our weight. Thankfully, we can.</p>
 <p>While the discussion of how we can do this is postponed until dealing with oscillations (as it involves springs and <intext tabindex="0" tooltip="a law which states that the force of a spring is equal to the displacement times a constant">Hooke's law</intext>), the basic idea is that we can use the normal force to get the weight of a person.</p>
-<figure><img src="images/normal3.svg"></figure>
-<figurecaption>A scale, and the forces it experiences.</figurecaption>
+<figure><img src="images/normal3.svg" alt="">
+<figcaption>A scale, and the forces it experiences.</figcaption></figure>
 <p>Let's break down the above figure. The left side shows the forces acting on the box. We have the weight of the box, which is counteracted by the normal force of the scale.</p>
 <p>The scale side shows three forces; the weight of the scale, the force of the box on the scale, and the normal force of the floor keeping the scale at rest.</p>
-<example><mark custom></mark>
+<section class="examples"><mark custom></mark>
 <h4>Question 1</h4>
 You stand on a scale, and it gives you your weight. There are three main forces in play: your weight, the force from your feet on the scale, and the force of the scale on your feet. What force is the scale measuring?
 <br><br>
@@ -45,20 +45,20 @@ You stand on a scale, and it gives you your weight. There are three main forces 
 <section class="solution">
 <p>A scale measures the normal force of the scale on your feet.</p>
 </section>
-</example>
+</section>
 <p>You may have noticed the repetition of the term "non-accelerating horizontal surface". The first part of this statement is "non-accelerating". If you stood on a scale while accelerating, by Newton's second law, there is a net force acting on you.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>+</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math>
-</eq>
+</article>
 <p>Using the definitions for force and weight given by the Law of Acceleration, we have this equation.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>+</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>g</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>m</mi><mi>(</mi><mi>a</mi><mo>+</mo><mi>g</mi><mi>)</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
-</eq>
+</article>
 <p>Thus, it can be seen that weighing yourself on an accelerating surface will mess up the reading of your scale.</p>
-<example>
+<section class="examples">
 <h4>Question 2</h4>
 (HRK Q3.35) A woman stands on a spring scale in an elevator. In which of
 the following cases will the scale record the minimum and maximum reading: <br>(a) Elevator stationary <br>(b) Elevator cable breaks, free fall
@@ -69,33 +69,33 @@ downward <br>(e) Elevator moving at constant velocity
 <section class="solution">
 <p>Let's analyze each case. Case A and case E both are non-accelerating by Newton's first law. Case C has a positive acceleration, while case D has a negative acceleration. Case B has its acceleration as the gravitational acceleration.</p>
 <p>First of all, let's eliminate case A and E; they are baselines, and the reading can go higher of lower. Looking at case C with a positive acceleration, it is the same as this equation.</p>
-<eq>
+<article class="equations">
 	<math><mi>m</mi><mi>(</mi><mi>a</mi><mo>+</mo><mi>g</mi><mi>)</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
-</eq>
+</article>
 <p>Thus, the reading on the scale would be a little higher than if she was stationary. For case D, the acceleration is negative, so it would look like this.</p>
-<eq>
+<article class="equations">
 	<math><mi>m</mi><mi>(</mi><mi>g</mi><mo>&minus;</mo><mi>a</mi><mi>)</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
-</eq>
+</article>
 <p>The magnitude of acceleration then decreases the normal force, which decreases the reading. For example, if it were accelerating downward at 1m/s², the normal force would be a little lower.</p>
-<eq>
+<article class="equations">
 	<math><mi>m</mi><mi>(</mi><mi>g</mi><mo>&minus;</mo><mi>1</mi><mi>)</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
-</eq>
+</article>
 <p>Finally, in free fall, the downward acceleration is equal to our gravitational acceleration, so the normal force is practically zero.</p>
-<eq>
+<article class="equations">
 	<math><mi>m</mi><mi>(</mi><mi>g</mi><mo>&minus;</mo><mi>g</mi><mi>)</mi><mo>=</mo><mi>0N</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
-</eq>
+</article>
 <p>This gives us our answer. The minimum reading is attained in free fall, at case B, and the maximum reading is attained when the acceleration goes up, at case C.</p>
 </section>
-</example>
+</section>
 <p>This is one way to measure weight. Another way is by using a spring scale, in which an object is attached to one of its ends and the weight pulls a spring down, which is where it reads your weight.</p>
-<figure><img src="images/normal4.svg"></figure>
-<figurecaption>A spring scale.</figurecaption>
+<figure><img src="images/normal4.svg" alt="">
+<figcaption>A spring scale.</figcaption></figure>
 <p>This time, the force of the spring is the one that is being measured, pulled on by the weight. Just like a normal scale, the spring scale is also prone to breaking in an accelerating environment.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>spring</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>m</mi><mi>(</mi><mi>a</mi><mo>+</mo><mi>g</mi><mi>)</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>spring</mi></msub></math><br>
-</eq>
-<example>
+</article>
+<section class="examples">
 <h4>Question 3</h4>
 (HRK Q3.34) A weight hangs by a spring scale from the ceiling of an elevator. In which of the following cases will the reading of the
 spring scale be greatest and least: <br>(a) Elevator at rest <br>(b) Elevator rising
@@ -108,8 +108,8 @@ speed <br>(d) Elevator descending with increasing speed
 <p>Case A and B will give the true value as it isn't accelerating. Case C has deceleration, with the acceleration being positive; the elevator is going down, but is slowing down, thus the acceleration is opposite of the velocity. At a positive acceleration, we saw the scale shows a higher reading; the same is true with this spring scale.</p>
 <p>Case D has a negative acceleration, pointing downwards. The same logics applies here; the scale showed a decrease in the reading, thus the same occurs for the spring scale. Thus, the maximum reading is in case C, and the minimum reading is case D.</p>
 </section>
-</example>
-<example>
+</section>
+<section class="examples">
 <h4>Exercise 1</h4>
 (HRK E3.26) An object is hung from a spring scale attached to the ceiling
 of an elevator. The scale reads 65 N when the elevator is
@@ -123,45 +123,45 @@ with a speed of 7.6 m/s and decelerating at 2.4 m/s²?
 <p>The spring scale gives us that the weight of the object is 65N. In the first scenario, there isn't any acceleration, so there isn't any variation; still 65N.</p>
 <p>On the other hand, the second scenario has an acceleration, pointing downward. This is because it decelerates the upward velocity, and thus it is opposite to the velocity. By our intuition, this means the reading is a little lower.</p>
 <p>We first need the mass of the object, which is simple enough to get.</p>
-<eq>
+<article class="equations">
 	<math><mi>m</mi><mo>=</mo><mfrac><mi>w</mi><mi>g</mi></mfrac><mo>=</mo><mfrac><mi>65N</mi><mi>(9.8m/s²)</mi></mfrac><mo>=</mo><mi>6.63kg</mi></math><br>
-</eq>
+</article>
 <p>Now, we plug in our values.</p>
-<eq>
+<article class="equations">
 	<math><mi>m</mi><mi>(</mi><mi>a</mi><mo>+</mo><mi>g</mi><mi>)</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>spring</mi></msub></math><br>
 	<math><mi>(6.63kg)</mi><mi>(</mi><mi>−2.4m/s²</mi><mo>+</mo><mi>9.8m/s²</mi><mi>)</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>spring</mi></msub></math><br>
-</eq>
+</article>
 <p>Giving us the reading is about 49N.</p>
 </section>
-</example>
+</section>
 <p>You may have played with a scale before and realized that if you push hard on the scale, the reading increases, while if you push a little weaker, the reading decreases. This shows one property of the normal force.</p>
 <p>The normal force is <i>lazy.</i> It only has as much strength as needed to keep the object from going through each other.</p>
-<example> <mark custom></mark>
+<section class="examples"> <mark custom></mark>
 <h4>Exercise 2</h4>
 You place a 5kg box with a massless string on top of a scale. <br>(a) You pull the string up at a force of 20N. What is the reading on the scale, in Newtons? <br> (b) What is the minimum force do you need to pull the string to have the reading on the scale be zero?
 <br><br>
 <h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>The scale reads the normal force on the object. Setting the weight as negative, we note three forces; the normal force, the weight, and the pull that you apply.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>string</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math>
-</eq>
+</article>
 <p>The weight is simple enough. We note that the current pulling force is less than the weight, and thus it won't go up yet. The box is still at rest, so the net force is zero. We solve for the normal force.</p>
-<eq>
+<article class="equations">
 	<math><mi>0N</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><mi>20N</mi><mo>−</mo><mi>(5kg)(9.8m/s²)</mi></math><br>
 	<math><mo>−</mo><mi>20N</mi><mo>+</mo><mi>(5kg)(9.8m/s²)</mi><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
-</eq>
+</article>
 <p>Giving us the current normal force is 29N, so the reading is 29N. To have the scale be reading zero, the normal force must be zero. The minimum force then is when the box is about to accelerate upwards; still net force is zero.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>string</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>0N</mi><mo>=</mo><mi>0N</mi><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>string</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>string</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math>
-</eq>
+</article>
 <p>Giving us we must pull at a strength of 49N.</p>
 </section>
-</example>
+</section>
 <p>With the normal force, we can feel our weight. We know that weightlessness is the feeling that we have no weight. Thus, if we somehow remove the normal force, we will feel weightless.</p>
-<example>
+<section class="examples">
 <h4>Question 4</h4>
 (HRK Q3.21) Describe several ways in which you could, even briefly, experience weightlessness.
 <br><br>
@@ -170,8 +170,8 @@ You place a 5kg box with a massless string on top of a scale. <br>(a) You pull t
 <p>Here is one way to feel weightless. Bend your legs, then jump. As you jump you lose contact with the ground; this means the only force acting on you is basically your weight, which you can't feel since it has nothing to react to. Thus, you feel weightless.</p>
 <p>Another option is to go inside an elevator and ask your friend to cut the cable. As the elevator accelerates at the same speed as you are falling, your contact with the floor is cut off; you are basically floating now.</p>
 </section>
-</example>
-<example hard>
+</section>
+<section class="examples" hard>
 <h4>Question 5</h4>
 (HRK Q3.39) Consider a jump off a high dive. While waiting to get the
 courage to jump, your acceleration is zero, and you “feel” the
@@ -185,11 +185,11 @@ motion? How could you explain this to a non-physics student?
 <p>On the high dive, you feel the force of gravity because of the normal force which pushes up on you as you push on the high dive. While free falling, there isn't any force to push up on you; you don't feel your weight.</p>
 <p>We leave the second part of this question to the most omniscient reader.</p>
 </section>
-</example>
+</section>
 <p>You may wonder what the "normal" in the normal force means. To put it simply, the "normal" of a surface is a vector pointing perpendicular to the surface. In other words, the normal force always points perpendicular to the surface to which the object is in contact with.</p>
 <p>Thus, it is wrong to assume that the normal force always points up. In fact, it can point in any direction. If you push a block against a wall, the normal force will push back on the box to keep it from passing through. This demonstrates that the normal force isn't always upward.</p>
-<figure><img src="images/normal5.svg"></figure>
-<figurecaption>The normal force points perpendicular to the surface.</figurecaption>
+<figure><img src="images/normal5.svg" alt="">
+<figcaption>The normal force points perpendicular to the surface.</figcaption></figure>
 <footer>
 	<a href="friction.html"> Friction ></a>
 </footer>

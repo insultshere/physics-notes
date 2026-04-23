@@ -4,7 +4,7 @@
 	<title>kinematics - multiple</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<script src="../script.js"></script>
+	<script defer src="../script.js"></script>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -21,11 +21,11 @@ So far, we have been dealing with the motion of one object only. To conclude our
 While daunting, it is as simple as setting up multiple equations for each object, and seeing how they relate to each other. One must be wary of various factors, such as the signs of values, and any implied values.
 </p>
 
-<figure><img src="images/mult1.svg"></figure>
-<figurecaption>Pursuit problems feature two or more objects catching up to eachother.</figurecaption>
+<figure><img src="images/mult1.svg" fetchpriority="high" alt="">
+<figcaption>Pursuit problems feature two or more objects catching up to eachother.</figcaption></figure>
 
 <p>One common type of problem which involves multiple objects are pursuit problems, where one object catches up to another.</p>
-<example>
+<section class="examples">
 <h4>Exercise 1</h4>
 (LSM P3.95) A police car waits in hiding slightly off the highway. A speeding car is spotted by the police car doing 40 m/s. At the instant the speeding car
 passes the police car, the police car accelerates from rest at 4 m/s² to catch the speeding car. How long does it take the police car to catch the speeding car?
@@ -33,20 +33,20 @@ passes the police car, the police car accelerates from rest at 4 m/s² to catch 
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 	<p>The speeding car can be modelled by a particle undergoing constant velocity, while the police car has constant acceleration. With this, we can model the two with the following equations.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><mi>(40m/s)</mi><mi>t</mi></math><br>
 	<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><mi>(0m/s)</mi><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(4m/s²)</mi><msup><mi>t</mi><mn>2</mn></msup></math>
-</eq>
+</article>
 <p>The police car will catch up to the speeding car when their positions are equal, so we equate them, then solve for <math><mi>t</mi></math>.</p>
-<eq>
+<article class="equations">
 	<math><mi>(0m)</mi><mo>+</mo><mo>=</mo><mi>(0m)</mi><mo>+</mo><mi>(0m/s)</mi><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(4m/s²)</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
 	<math><mi>0</mi><mo>=</mo><mi>2</mi><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mi>40</mi><mi>t</mi></math><br>
-</eq>
+</article>
 <p>Discarding the <math><mi>t</mi><mo>=</mo><mi>0s</mi></math> solution, we have the other solution at <math><mi>t</mi><mo>=</mo><mi>20s</mi></math>.</p>
 </section>
-</example>
+</section>
 
-<example>
+<section class="examples">
 <h4>Exercise 2</h4>
 (LSM P3.93) Two trains are moving at 30 m/s in opposite directions on the same track. The engineers see simultaneously that they are on a collision course and apply the brakes when they are 1000
 m apart. Assuming both trains have the same acceleration, what must this acceleration be if the trains are to stop just short of colliding?
@@ -54,17 +54,17 @@ m apart. Assuming both trains have the same acceleration, what must this acceler
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 	<p>It sort of feels like we don't have enough information, however we must analyze the problem carefully. <br>With the same speed and acceleration, it means that they will hit at the 500-m mark, the exact middle of the 1000m. Further, since they are breaking, they have to come to rest at 500-m exactly. This gives us the final, initial, and displacement, which is enough for the fourth equation to work out.</p>
-<eq>
+<article class="equations">
 	<math><msup><mi>(0m/s)</mi><mn>2</mn></msup><mo>=</mo><msup><mi>(30m/s)</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>a</mi><mi>(500m)</mi></mrow></math><br>
 	<math><mfrac><mi>(−900m²/s²)</mi><mi>(1000m/s²)</mi></mfrac><mo>=</mo><mi>a</mi></math>
-</eq>
+</article>
 <p>This gives us that the deceleration has to be −0.9m/s² to avoid collision.</p>
 </section>
-</example>
+</section>
 
 <p>The rest of the problems below are varied in how they can be solved, and they are arranged in (supposedly) increasing difficulty.</p>
 
-<example>
+<section class="examples">
 <h4>Problem 1</h4>
 (LSM P3.112) In a 100-m race, the winner is timed at 11.2 s. The second-place finisher’s time is 11.6 s. How far is the second-place finisher behind the
 winner when she crosses the finish line? Assume the velocity of each runner is constant throughout the race.
@@ -73,16 +73,16 @@ winner when she crosses the finish line? Assume the velocity of each runner is c
 <section class="solution">
 <p>The speed of the second-placer is given by <math><mrow><mfrac><mrow><mi>100m</mi></mrow><mrow><mi>11.6</mi></mrow></mfrac><mo>=</mo><mi>8.62m/s</mi></mrow></math>.</p>
 <p>Since 11.2s is the fastest time, the distance the second-placer run can be computed.</p>
-<eq>
+<article class="equations">
 	<math><mi>8.62m/s</mi><mo>&#x22C5</mo><mi>11.2s</mi><mo>=</mo><mi>96.55m</mi></math>
-</eq>
+</article>
 <p>Which means that she was 3.45m behind the first-place winner. At one significant figure, this is 3m.</p>
 </section>
-</example>
+</section>
 
 <p>The next problem is a variation of the previous problem.</p>
 
-<example hard>
+<section class="examples" hard>
 <h4>Problem 2</h4>
 (HRK Q2.11) Bob beats Judy by 10 m in a 100-m dash. Bob, claiming to give Judy an equal chance, agrees to race her again but to start from 10 m behind the starting line. Does this really give Judy an equal chance?<br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
@@ -97,54 +97,54 @@ Having Bob start 10m before the starting line means he has to run 110m in total.
 In those 11s, Judy should be able to run <math><mrow><mi>(9m/s)(11s)</mi><mo>=</mo><mi>99m</mi></mrow></math>. However, that means that Judy still doesn't pass the 100m mark, meaning Bob will still win.
 </p>
 </section>
-</example>
+</section>
 
-<example>
+<section class="examples">
 <h4>Problem 3</h4>
 (HRK P2.20) While thinking of Isaac Newton, a person standing on a bridge overlooking a highway inadvertently drops an apple over the railing just as the front end of a truck passes directly
 below the railing. If the vehicle is moving at 55 km/h and is 12 m long, how far above the truck must the railing be if the apple just misses hitting the rear end of the truck?
-<figure><img src="images/mult2.svg"></figure>
-<figurecaption>Problem 3.</figurecaption>
+<figure><img src="images/mult2.svg" alt="">
+<figcaption>Problem 3.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>The first thing we need to find out is how long it takes for the truck to go 12m, or its entire length. Since it isn't accelerating, we can find it quite easily. We just need to convert 55km/h to m/s first.</p>
-<eq>
+<article class="equations">
 	<math><mi>55km/h</mi><mo>&#x22C5</mo><mfrac><mi>1000m</mi><mi>1km</mi></mfrac><mo>&#x22C5</mo><mfrac><mi>1h</mi><mi>3600s</mi></mfrac><mo>=</mo><mi>15.28m/s</mi></math>
-</eq>
+</article>
 <p>Now we set up the equation.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>(12m)</mi></mrow><mo>=</mo><mi>(0m)</mi><mo>+</mo><mi>(15.28m/s)</mi><mi>t</mi></math><br>
-</eq>
+</article>
 <p>This gives us <math><mi>t</mi><mo>=</mo><mi>0.79s</mi></math>. Now, we know the final height to be at the top of the truck, so let's set that as zero. It is also implied that it started at rest, so our initial velocity is 0m/s. We have enough information then to use our third equation.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>(0m)</mi></mrow><mo>=</mo><msub><mi>y</mi><mi>0</mi></msub><mo>+</mo><mi>(0m/s)</mi><mi>(0.79s)</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mo>(</mo><mi>−9.8m/s²</mi><mo>)</mo><msup><mi>(0.79s)</mi><mn>2</mn></msup></math>
-</eq>
+</article>
 <p>We get that the railing must be 3.1m from the top of the truck.</p>
 </section>
-</example>
+</section>
 <p>This question may seem familiar, however it is more complicated than Exercise 2. One technique you can employ is to try to digest the problem first; what things could be useful?</p>
 
-<example hard>
+<section class="examples" hard>
 <h4>Problem 4</h4>
 (HRK P2.7b) Two trains, each having a speed of 34 km/h, are headed toward each other on the same straight track. A bird that can fly 58 km/h flies off the front of one train when they are 102 km apart
 and heads directly for the other train. On reaching the other train it flies directly back to the first train, and so forth. What is the total distance the bird travels?<br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>We first need to get a footing with the problem. One way is to find out how long it takes for them to crash. Since both trains have constant velocity, they can be modelled by the following two equations, with the second train having an initial position of 102km.</p>
-<eq>
+<article class="equations">
 	<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>(0km)</mi><mo>+</mo><mi>(34km/h)</mi><mi>t</mi></math><br>
 	<math><mrow><mi>x</mi></mrow><mo>=</mo><mi>(102km)</mi><mo>+</mo><mi>(−34km/h)</mi><mi>t</mi></math>
-</eq>
+</article>
 <p>Equate the two equations:</p>
-<eq>
+<article class="equations">
 	<math><mi>(102km)</mi><mo>+</mo><mi>(−34km/h)</mi><mi>t</mi><mo>=</mo><mi>(0km)</mi><mo>+</mo><mi>(34km/h)</mi><mi>t</mi></math><br>
-</eq>
+</article>
 <p>This gives us that the time before the trains collide is <math><mi>t</mi><mo>=</mo><mi>1.5h</mi></math>. What now?<br> Now, note that this is the amount of time the bird is flying between the two planes. Since it is implied that the bird doesn't stop, it must mean it must've been flying for the whole 1.5h at a speed of 58km/h. Thus, we can easily get the distance it travelled.</p>
-<eq>
+<article class="equations">
 	<math><mi>58km/h</mi><mo>&#x22C5</mo><mi>1.5h</mi><mo>=</mo><mi>87km</mi></math>
-</eq>
+</article>
 </section>
-</example>
+</section>
 <p>As we conclude one-dimensional kinematics and step into the second dimension, most of the lessons we learned here will still hold true in the second dimension.</p>
 <footer>
 <a href="vectors-in-two-dimensions.html">Vectors in Two Dimensions ></a>

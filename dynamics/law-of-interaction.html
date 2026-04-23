@@ -4,7 +4,7 @@
 	<title>dynamics - interaction</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<script src="../script.js"></script>
+	<script defer src="../script.js"></script>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -20,24 +20,24 @@
 	<li>When a car crashes into a box, the car exerts a force on the box to accelerate it. Likewise, the box exerts a force on the car to decelerate it rapidly, usually causing rapid deformation of the car.</li>
 </ol>
 <p>Analyzing all three of these scenarios, you can note that there are two forces that are prevalent in each. The first scenario has the force of the box pushing on the floor, and the floor pushing on the box.</p>
-<figure><img src="images/interaction1.svg"></figure>
-<figurecaption>The box exerts a force on the floor; the floor pushes on the box.</figurecaption>
+<figure><img src="images/interaction1.svg" alt="">
+<figcaption>The box exerts a force on the floor; the floor pushes on the box.</figcaption></figure>
 <p>For the second scenario, when you exert a force on the wall, pushing on it. The reason why we go flying off is because the wall (counterintuitively) pushes you.</p>
-<figure><img src="images/interaction2.svg"></figure>
-<figurecaption>You push on the wall, the wall pushes on you.</figurecaption>
+<figure><img src="images/interaction2.svg" alt="">
+<figcaption>You push on the wall, the wall pushes on you.</figcaption></figure>
 <p>The third scenario also shows this phenomenon. The car pushes on the box, the box pushes on the car, destroying it.</p>
 <p>These three scenarios are all connected by what is Newton's Third Law, sometimes called the Law of Action and Reaction or the Law of Interaction.</p>
 <p><i>When an object <math><mi>A</mi></math> exerts a force on another object <math><mi>B</mi></math>, the other object <math><mi>B</mi></math> exerts a force of the same magnitude and opposite direction on object <math><mi>A</mi></math>.</i></p>
-<figure><img src="images/interaction3.svg"></figure>
-<figurecaption>A exerts a force on B; B exerts a force on A.</figurecaption>
+<figure><img src="images/interaction3.svg" alt="">
+<figcaption>A exerts a force on B; B exerts a force on A.</figcaption></figure>
 <p>No force works alone; they always work in these pairs, sometimes called action-reaction pairs. This gives us the other, more famous way of stating Newton's Third Law.</p>
 <p><i>For every action, there is an equal and opposite reaction.</i></p>
 <p>One flaw of this statement is that it implies that a reaction occurs because of an action. In reality, the reaction and action are interchangable; one doesn't cause the other.</p>
 <p>It does show one part of the definition though. "equal and opposite" means that their magnitude is the same, but in the opposite direction. We can write it like this.</p>
-<eq>
+<article class="equations">
 	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>AB</mi></msub><mo>=</mo><mo>−</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>BA</mi></msub></math>
-</eq>
-<example>
+</article>
+<section class="examples">
 <h4>Question 1</h4>
 (HRK Q3.14) The following statement is true; explain it. Two teams are
 having a tug of war; the team that pushes harder (horizontally) against the ground wins.<br><br>
@@ -46,25 +46,25 @@ having a tug of war; the team that pushes harder (horizontally) against the grou
 <p>The rope pulls the team towards the other team (courtesy of the other team pulling the rope). With this, they need to resist this force. To do this, they have to push hard on the ground. By the Law of Interaction, the ground pushes hard on them, which pushes them backward.</p>
 <p>If the force from the ground beats out the force of the rope, the team effectively accelerates backwards, which will lead to victory.</p>
 </section>
-</example>
-<example><mark custom></mark>
+</section>
+<section class="examples"><mark custom></mark>
 <h4>Question 2</h4>
 After hours, you sneak into an ice rink and somehow find yourself in the middle of the ice. As you try to walk, your shoes can't find any grip with the ice, thus you don't go anywhere. It seems that the ice is completely frictionless. Clumsily, you don't have anything else on you. What can you do to escape this predicament?<br><br>
 <h4>Answer<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>You can use Newton's third law to escape. Using the shoes you have, you can throw one of them in the opposite direction of where you want to go. As you exert a force on the shoe to throw it, the shoe exerts a force on you, pushing you towards freedom.</p>
 </section>
-</example>
+</section>
 <p>One may be confused with the third law and one of its implications. If a force exerted on an object has an equal and opposite reaction force, shouldn't that mean they both cancel out?</p>
 <p>This conclusion is incorrect. This is best shown with two free body diagrams. </p>
-<figure><img src="images/interaction4.svg"></figure>
-<figurecaption>The forces act on separate bodies.</figurecaption>
+<figure><img src="images/interaction4.svg" alt="">
+<figcaption>The forces act on separate bodies.</figcaption></figure>
 <p>The action and reaction force act on separate bodies. In other words, they can't cancel out because they don't act on the same body.</p>
 <p>Another misconception with the above is that the pull of Earth on the box is the reason the floor pushes up on the box. <i>This is wrong.</i> The correct pair would be that the box pushes on the floor, and the floor pushes on the box.</p>
-<figure><img src="images/interaction10.svg"></figure>
-<figurecaption>The correct action-reaction pairs.</figurecaption>
+<figure><img src="images/interaction10.svg" alt="">
+<figcaption>The correct action-reaction pairs.</figcaption></figure>
 <p>How about the other force we noted; the Earth pulling on the box? The pair of that force is that the box pulls the Earth. This sounds counterintuitive, but is true.</p>
-<example>
+<section class="examples">
 <h4>Question 3</h4>
 (HRK Q3.12) A horse is urged to pull a wagon. The horse refused to try,
 citing Newton’s third law as a defense: the pull of the horse
@@ -77,35 +77,35 @@ moving?” asks the horse. How would you reply?<br><br>
 <p>The horse is acting under the wrong notion that the force it exerts on the wagon (pulling forward) and the force the wagon exerts on it (pulling backward) both act on the wagon.</p>
 <p>In reality, the horse pulling on the wagon acts on the wagon, while the wagon pulling on the horse acts on the horse.</p>
 </section>
-</example>
-<example>
+</section>
+<section class="examples">
 <h4>Exercise 1</h4>
 (LSM P5.51b) A 1100.0-kg artillery shell fired from a battleship is accelerated at <math><mi>2.40</mi><mo>&times;</mo><msup><mi>10</mi><mn>4</mn></msup></math>m/s². What is the magnitude of the force exerted on
 the ship by the artillery shell?<br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>The force acting on the ship from the shell has the same magnitude as the force that the ship acted on the shell. Thus, we get the net force of the artillery shell first.</p>
-<eq>
+<article class="equations">
 	<math><mi>F</mi><mo>=</mo><mi>(1100.0kg)</mi><mi>(</mi><mi>2.40</mi><mo>&times;</mo><msup><mi>10</mi><mn>4</mn></msup><mi>m/s²</mi><mi>)</mi></math>
-</eq>
+</article>
 <p>This gives us the net force is 26400000 = <math><mi>2.64</mi><mo>&times;</mo><msup><mi>10</mi><mn>7</mn></msup></math>N. The force thus on the ship is the same as this force, but in the opposite direction: <math><mi>−</mi><mi>2.64</mi><mo>&times;</mo><msup><mi>10</mi><mn>7</mn></msup></math>N.</p>
 </section>
-</example>
+</section>
 <p>With the Law of Interaction, we can draw more complicated free body diagrams. Recall that we have to note every force acting on the object; thus, it is best to slow down and note each contact force.</p>
-<example><mark custom></mark>
+<section class="examples"><mark custom></mark>
 <h4>Question 4</h4>
 Two boxes below are placed on a frictionless surface, and a force pushes them to the right. Draw the free body diagrams for each of the boxes.
-<figure><img src="images/interaction6.svg"></figure>
-<figurecaption>Question 4.</figurecaption>
+<figure><img src="images/interaction6.svg" alt="">
+<figcaption>Question 4.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>The boxes both exhibit the force pulling them towards the Earth and the force the floor pushes up on them, so we should include that.</p>
 <p>Then, the left box is pushed by a force. We include that. Then, the left box pushes on the right box. By Newton's third law, the right box pushes back on the left box. This gives us four forces to draw, shown below.</p>
-<figure><img src="images/interaction7.svg"></figure>
+<figure><img src="images/interaction7.svg" alt="">
 <p>The right box is pushed by the force of the left box on the right box. There are no other forces.</p>
-<figure><img src="images/interaction8.svg"></figure>
+<figure><img src="images/interaction8.svg" alt="">
 </section>
-</example>
+</section>
 <footer>
 	<a href="weight.html"> Weight ></a>
 </footer>

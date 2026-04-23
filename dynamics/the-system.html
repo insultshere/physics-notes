@@ -4,7 +4,7 @@
 	<title>dynamics - systems</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<script src="../script.js"></script>
+	<script defer src="../script.js"></script>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -13,110 +13,199 @@
 <header>
 <a href="index.html">< Return</a>
 </header>
-<p>Sometimes, we aren't dealing with a single object. We might deal with multiple objects.</p>
-<p>To deal with this, we have to separate each part in the system and think about them logically. </p>
-<example>
-<h4>Exercise 4</h4>
+<p>From our previous studies of dynamics, we examined the motion of one object. For example, we examined the forces acting on a block, a box on a string, scales, and other particles that can be treated as one object.</p>
+<p>We can extend this approach by simplifying a group of objects as a singular object, wherein the motion of each of its parts is interdependent with each of its other parts.</p>
+<article class="terms">
+	<mark>System </mark>- the object or group of objects that one is interested in
+</article>
+<p>The system we choose is arbitrary, and we can choose the system that is the most beneficial to us. For example, if we examine two blocks connected by a string, we can choose the system below.</p>
+<figure><img src="images/system1.svg" alt="">
+<figcaption>A choice of a system, where we examine the whole entire group of objects.</figcaption></figure>
+<p>Recall that we draw the free body diagram with all the <i>external forces</i> acting on the system. Here, tension is an internal force. It happens within the system, and thus we don't include it.</p>
+<p>Meanwhile, the weight of the two blocks and the two normal forces acting on it are external forces acting on the system, along with the force pulling.</p>
+<p>However, since this choice of system to analyze is arbitrary, we could've equally chosen the system below to analyze, focusing on the forces acting on the right block specifically.</p>
+<figure><img src="images/system2.svg" alt="">
+<figcaption>Another arbitrary system of interest.</figcaption></figure>
+<p>One thing to ask is this: how does the acceleration of the entire system affect the acceleration of its parts?</p>
+<p>While complicated, here is a basic answer: since the parts don't extend and/or compress, the displacement of each of its individual parts is the same; thus, the velocity of each of the parts is the same, and thus the magnitude of acceleration of each of its parts must also be the same.</p>
+<p>Of course, the above assumes that the parts <i>don't extend/compress</i>. In the real world, strings aren't always <intext tabindex="0" tooltip="fully extended">taut</intext>, blocks will compress if you push them too hard, or ropes can even stretch if you pull them hard enough. However, the above is enough for us to get accurate answers.</p>
+<section class="examples">
+<h4>Exercise 1</h4>
 (HRK E3.30) A 77-kg person is parachuting and experiencing a downward
 acceleration of 2.5m/s² shortly after opening the parachute.
 The mass of the parachute is 5.2kg. <br>(a) Find the upward
 force exerted on the parachute by the air. <br>(b) Calculate the
 downward force exerted by the person on the parachute.
-<figure><img src="images/weight1.svg"></figure>
-<figurecaption>Exercise 4.</figurecaption>
+<figure><img src="images/system3.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
-<p>If the rocket is hovering over the launch pad, that means it counteracts the weight. In other words, the net force of the thrust and the weight is zero. We can write this equation like this, setting weight as negative as it is going down.</p>
-<eq>
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math>
-</eq>
-<p>The weight is simple enough.</p>
-<eq>
-	<math><mi>w</mi><mo>=</mo><mi>(51000kg)</mi><mi>(9.8m/s²)</mi><mo>=</mo><mi>499800N</mi></math>	
-</eq>
-<p>Knowing the net force is zero, we can get the thrust quite easily.</p>
-<eq>
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
-	<math><mi>0</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
-	<math><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub></math><br>
-</eq>
-<p>This shows that the thrust is equal to the weight if the rocket is just hovering. Makes sense; by the Law of Inertia, if it is at rest, all the forces balance out. For the 18m/s² scenario, there is now a net force.</p>
-<eq>
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mi>(51000kg)</mi><mi>(18m/s²)</mi><mo>=</mo><mi>918000N</mi></math>
-</eq>
-<p>Thus, we solve for thrust again.</p>
-<eq>
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover></math><br>
-	<math><mi>(918000N)</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub><mo>−</mo><mi>(499800N)</mi></math><br>
-	<math><mi>1417800N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>thrust</mi></msub></math><br>
-</eq>
+<p>We note that the acceleration of &minus;2.5m/s² is on the entire system, and because the parachute and persn doesn't extend or compress, we can assume that the acceleration of each of its parts is also the same.</p>
+<p>For the entire system, we have the force of air pushing up and the weight of both objects pulling down.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>air</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>parachute</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>person</mi></msub></math><br>
+	<math><msub><mi>M</mi><mi>total</mi></msub><mi>a</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>air</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>parachute</mi></msub><mi>g</mi><mo>&minus;</mo><msub><mi>m</mi><mi>person</mi></msub><mi>g</mi></math><br>
+	<math><msub><mi>M</mi><mi>total</mi></msub><mi>a</mi><mo>+</mo><mi>(</mi><msub><mi>m</mi><mi>parachute</mi></msub><mo>+</mo><msub><mi>m</mi><mi>person</mi></msub><mi>)</mi><mi>g</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>air</mi></msub></math><br>
+</article>
+<p>Substituting in, we have the following value for the force of air. The total mass of the system is 82.2kg.</p>
+<article class="equations">
+	<math><mi>(82.2kg)</mi><mi>(&minus;2.5m/s²)</mi><mo>+</mo><mi>(5.2kg + 77kg)</mi><mi>(9.8m/s²)</mi><mo>&approx;</mo><mi>6.0</mi><mo>&times;</mo><msup><mi>10</mi><mn>2</mn></msup><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>air</mi></msub></math><br>
+</article>
+<p>For the person, it accelerates downward at the same acceleration. The forces acting on it is the weight of the object and the tension of the parachute pulling the person up, which is equal to the tension of the person pulling down.</p>
 </section>
-</example>
-<example hard>
-<h4>Exercise 4</h4>
-(HRK P3.7) The child’s toy below consists of three cars that are pulled in tandem
-on small frictionless rollers. Its cars have masses of 3.1 kg, 2.4 kg, and 1.2 kg respectively. They are
-pulled to the right with a horizontal force of 6.5 N.
-<br>(a) What is the acceleration of the system? <br>(b) What is the force exerted by the
-middle car on the leftmost car? <br>(c) What is the force exerted by the
-rightmost car on the middle car?
-<figure><img src="images/acceleration6.svg"></figure>
-<figurecaption>Exercise 4.</figurecaption>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
-<section class="solution">
-<p>The entire toy is affected by the force, so we need the entire mass of the toy. Afterwards, since we are given the force, we can use the Law of Acceleration to get the acceleration.</p>
-<eq>
-	<math><mi>a</mi><mo>=</mo><mfrac><mi>F</mi><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>6.5N</mi><mi>(3.1kg + 2.4kg + 1.2kg)</mi></mfrac></math><br>
-</eq>
-<p>The whole acceleration is then 0.97m/s².</p>
-<p>This means the entire toy (including each of the car) accelerates at 0.97m/s². The force exerted by the middle car on the leftmost car only has to pull the leftmost car, so the only mass it needs to pull is 1.2kg.</p>
-<eq>
-	<math><mi>F</mi><mo>=</mo><mi>(1.2kg)</mi><mi>(0.97m/s²)</mi><mo>=</mo><mi>1.16N</mi></math>
-</eq>
-<p>The force of the rightmost car needs to pull both the middle and the leftmost car.</p>
-<eq>
-	<math><mi>F</mi><mo>=</mo><mi>(1.2kg + 2.4kg)</mi><mi>(0.97m/s²)</mi><mo>=</mo><mi>3.49N</mi></math>
-</eq>
 </section>
-</example>
-<p>With the free body diagrams of the system, we can analyze how the force changes. One thing to note is the rightmost block has the only force pulling it to the right being the contact force.</p>
-<example hard>
-<h4>Problem 1</h4>
+<p>If you're confused on how to get the magnitudes of certain forces, it might be useful to consult the free body diagrams of the individual parts of the system.</p>
+<section class="examples">
+<h4>Exercise 2a</h4>
 (HRK P3.10a) Two blocks are in contact on a frictionless table. A horizontal
 force is applied to one block. If the masses of the boxes are 
 2.3kg and 1.2kg respectively, and the force is of magnitude 3.2N, find the force of
-contact between the two blocks. <figure><img src="images/interaction5.svg"></figure>
-<figurecaption>Problem 1.</figurecaption>
+contact between the two blocks. <figure><img src="images/interaction5.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>The total mass of the boxes is 3.5kg. We can get the acceleration by Newton's second law.</p>
-<eq>
+<article class="equations">
 	<math><mi>a</mi><mo>=</mo><mfrac><mi>F</mi><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>3.2N</mi><mi>(2.3kg + 1.2kg)</mi></mfrac><mo>=</mo><mi>0.91m/s²</mi></math><br>
-</eq>
+</article>
 <p>Both boxes then accelerate at a rate of 0.91m/s². The left box is moved by the force, pushing the right box. By Newton's third law, the right box pushes back at the same magnitude. Drawing the free body diagram shows this clearly.</p>
-<figure><img src="images/interaction9.svg"></figure>
+<figure><img src="images/interaction9.svg" alt="">
 <p>The force of contact is the only thing pushing the right box. We can calculate it, given the mass of the right box and the acceleration.</p>
-<eq>
+<article class="equations">
 	<math><mi>F</mi><mo>=</mo><mi>(1.2kg)</mi><mi>(0.91m/s²)</mi><mo>=</mo><mi>1.09N</mi></math>
-</eq>
+</article>
 </section>
-</example>
-<example hard>
-<h4>Problem 2</h4>
+</section>
+<section class="examples">
+<h4>Exercise 2b</h4>
 (HRK P3.10b) Show that if the same
 force is applied to the right block rather than on the left block, the force of contact
 between the blocks is 2.1N, which is not the same value derived in the previous problem. Explain.<br><br>
 <h4>Solution<button onclick="toggle(this)">v</button></h4>
 <section class="solution">
 <p>We still get the same acceleration of 0.91m/s². However, now we note that the left block is the one that is moved purely by the contact force. Thus, we use its mass now.</p>
-<eq>
+<article class="equations">
 	<math><mi>F</mi><mo>=</mo><mi>(2.3kg)</mi><mi>(0.91m/s²)</mi><mo>=</mo><mi>2.1N</mi></math>
-</eq>
+</article>
 <p>The force is larger because the small block has to push much harder to push the more massive block.</p>
 </section>
-</example>
+</section>
+<section class="examples">
+<h4>Exercise 3</h4>
+(HRK P3.7) The child’s toy below consists of three cars that are pulled in tandem
+on small frictionless rollers. Its cars have masses of 3.1 kg, 2.4 kg, and 1.2 kg respectively. They are
+pulled to the right with a horizontal force of 6.5 N.
+<br>(a) What is the acceleration of the system? <br>(b) What is the force exerted by the
+middle car on the leftmost car? <br>(c) What is the force exerted by the
+rightmost car on the middle car?
+<figure><img src="images/acceleration6.svg" alt="">
+<figcaption>Exercise 3.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>The entire toy is affected by the force, so we need the entire mass of the toy. Afterwards, since we are given the force, we can use the Law of Acceleration to get the acceleration.</p>
+<article class="equations">
+	<math><mi>a</mi><mo>=</mo><mfrac><mi>F</mi><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>6.5N</mi><mi>(3.1kg + 2.4kg + 1.2kg)</mi></mfrac></math><br>
+</article>
+<p>The whole acceleration is then 0.97m/s².</p>
+<p>This means the entire toy (including each of the cars) accelerates at 0.97m/s². The force exerted by the middle car on the leftmost car only has to pull the leftmost car, so the only mass it needs to pull is 1.2kg.</p>
+<article class="equations">
+	<math><mi>F</mi><mo>=</mo><mi>(1.2kg)</mi><mi>(0.97m/s²)</mi><mo>=</mo><mi>1.16N</mi></math>
+</article>
+<p>The force of the rightmost car needs to pull both the middle and the leftmost car.</p>
+<article class="equations">
+	<math><mi>F</mi><mo>=</mo><mi>(1.2kg + 2.4kg)</mi><mi>(0.97m/s²)</mi><mo>=</mo><mi>3.49N</mi></math>
+</article>
+</section>
+</section>
+<p>Let's up the complexity a little by adding friction. The fundamental strategy still remains the same, however; choose the system you want to analyze, then analyze how the motion of the system affects each of its parts.</p>
+<section class="examples">
+<h4>Problem 1a</h4>
+(HRK P5.12a) A 4.40-kg block is put on top of a 5.50-kg block. In order to
+cause the top block to slip on the bottom one, held fixed, a
+horizontal force of 12.0 N must be applied to the top block.
+The assembly of blocks is now placed on a horizontal, frictionless table. Find the maximum horizontal force that can be applied to the lower block so that
+the blocks will move together.
+<figure><img src="images/system5.svg" alt="">
+<figcaption>Problem 1.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>To keep them moving as a single object, the force applied on the top block must not exceed the maximum force of the static friction. Thankfully, we are given this force, being the amount needed to slip which is 12.0N.</p>
+<p>Now, we first analyze the acceleration for the whole system. The only force acting on it is just the force pushing as well.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netSys,x</mi></msub><mo>=</mo><mi>F</mi></math><br>
+	<math><msub><mi>M</mi><mi>total</mi></msub><mi>a</mi><mo>=</mo><mi>F</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><mfrac><mi>F</mi><msub><mi>M</mi><mi>total</mi></msub></mfrac><mo>=</mo><mfrac><mi>F</mi><mi>M + m</mi></mfrac></math><br>
+</article>	
+<p>Now, analyzing the top block, the forces balance out.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netm,x</mi></msub><mo>=</mo><mi>F</mi><mo>&minus;</mo><msub><mi>f</mi><mi>s</mi></msub></math><br>
+	<math><mi>0N</mi><mo>=</mo><mi>F</mi><mo>&minus;</mo><msub><mi>f</mi><mi>s</mi></msub></math><br>
+	<math><msub><mi>f</mi><mi>s</mi></msub><mo>=</mo><mi>F</mi></math><br>
+	<math><msub><mi>f</mi><mi>s</mi></msub><mo>=</mo><mi>m</mi><mi>a</mi></math><br>
+</article>
+<p>Substituting in our value for the acceleration gives us this. We now simplify.</p>
+<article class="equations">
+	<math><msub><mi>f</mi><mi>s</mi></msub><mo>=</mo><mi>m</mi><mi>(</mi><mfrac><mi>F</mi><mi>M + m</mi></mfrac><mi>)</mi></math><br>
+	<math><mfrac><mrow><msub><mi>f</mi><mi>s</mi></msub><mi>(M + m)</mi></mrow><mi>m</mi></mfrac><mo>=</mo><mi>F</mi></math><br>
+</article>
+<p>We thus get the answer of 27.0N.</p>
+</section>
+</section>
+<section class="examples">
+<h4>Problem 1b</h4>
+(HRK P5.12c) Find the coefficient of static friction.<br><br>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>One doesn't need to compute anything but note that 12.0N is the maximum force.</p>
+<article class="equations">
+	<math><msub><mi>f</mi><mi>s</mi></msub><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi></math><br>
+	<math><mfrac><msub><mi>f</mi><mi>s</mi></msub><mi>N</mi></mfrac><mo>=</mo><mfrac><msub><mi>f</mi><mi>s</mi></msub><mrow><mi>m</mi><mi>g</mi></mrow></mfrac></mo><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub></math><br>
+</article>	
+<p>We get that the coefficient is just 0.278.</p>
+</section>
+</section>
+<section class="examples" hard>
+<h4>Problem 2</h4>
+(HRK P5.9) The two blocks, <math><mi>m</mi><mo>=</mo><mi>16kg</mi></math> and <math><mi>M</mi><mo>=</mo><mi>88kg</mi></math> respectively, shown below, are free to move. The coefficient of static friction between the blocks is <math><msub><mi>&mu;</mi><mi>s</mi></msub><mo>=</mo><mi>0.38</mi></math>, but the surface beneath <math><mi>M</mi></math> is
+frictionless. What is the magnitude of the force required to hold <math><mi>m</mi></math> against <math><mi>M</mi></math>?
+<figure><img src="images/system4.svg" alt="">
+<figcaption>Problem 2.</figcaption></figure>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We first analyze the entire system. The force causes the whole system to accelerate. Since the massive block has no friction, the only net horizontal force is the force itself.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netSys,x</mi></msub><mo>=</mo><mi>F</mi></math><br>
+	<math><msub><mi>M</mi><mi>total</mi></msub><mi>a</mi><mo>=</mo><mi>F</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><mfrac><mi>F</mi><msub><mi>M</mi><mi>total</mi></msub></mfrac><mo>=</mo><mfrac><mi>F</mi><mi>M + m</mi></mfrac></math><br>
+</article>	
+<p>Now, we analyze the system of the rightmost block. The force pushing it forward at that acceleration is that of the contact force of the leftmost block.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netM,x</mi></msub><mo>=</mo><msub><mi>F</mi><mi>m</mi></msub></math><br>
+	<math><mi>M</mi><mi>a</mi><mo>=</mo><mi>M</mi><mi>(</mi><mfrac><mi>F</mi><mi>M + m</mi></mfrac><mi>)</mi><mo>=</mo><msub><mi>F</mi><mi>m</mi></msub></math><br>
+</article>	
+<p>The two vertical forces acting on the left block is the force of weight, and the force of static friction. Setting weight as negative (going down) and setting the static friction to its maximum strength (which minimizes the normal force) gives us this equation.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netm,y</mi></msub><mo>=</mo><msub><mi>f</mi><mi>s</mi></msub><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>0N</mi><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
+</article>	
+<p>From the Law of Interaction, this push of the left block has its corresponding pair, being the normal force. Afterwards, we keep substituting in our old equations until we get an equation with only the magnitude of the force, the coefficient of static friction, and the masses of the two blocks.</p>
+<article class="equations">
+	<math><mi>0N</mi><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><msub><mi>F</mi><mi>m</mi></msub><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
+	<math><mi>0N</mi><mo>=</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>M</mi><mi>(</mi><mfrac><mi>F</mi><mi>M + m</mi></mfrac><mi>)</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
+</article>	
+<p>Now, we simplify.</p>
+<article class="equations">
+	<math><mi>m</mi><mi>g</mi><mo>=</mo><mfrac><mrow><msub><mi>&mu;</mi><mi>s</mi></msub><mi>M</mi><mi>F</mi></mrow><mi>M + m</mi></mfrac></math><br>
+	<math><mfrac><mrow><mi>(mg)</mi><mi>(M + m)</mi></mrow><mrow><msub><mi>&mu;</mi><mi>s</mi></msub><mi>M</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>m</mi><mi>M</mi><mi>g</mi><mo>+</mo><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi></mrow><mrow><msub><mi>&mu;</mi><mi>s</mi></msub><mi>M</mi></mrow></mfrac><mo>=</mo><mfrac></mfrac><mi>F</mi></math><br>
+</article>	
+<p>Finally, we plug in our values to get the magnitude of the force.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(16kg)</mi><mi>(88kg)</mi><mi>(9.8m/s²)</mi><mo>+</mo><msup><mi>(16kg)</mi><mn>2</mn></msup><mi>(9.8m/s²)</mi></mrow><mrow><mi>(0.38)</mi><mi>(88kg)</mi></mrow></mfrac><mo>&approx;</mo><mi>490N</mi><mo>=</mo><mi>F</mi></math><br>
+</article>	
+</section>
+</section>
 <footer>
-	<a href="law-of-inertia.html"> Law of Inertia ></a>
+	<a href="connected-masses.html"> Connected Masses ></a>
 </footer>
 </body>
 </html>
