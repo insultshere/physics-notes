@@ -80,8 +80,8 @@ figure > img {
 }
 
 figure > figcaption {
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-size:0.8em;
+	color:#900;
+	font-size:0.75em;
 	text-align:center;
 	margin:auto;
 	display:block;

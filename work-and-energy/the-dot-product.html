@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>workenergy - dotprod</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>The Dot Product</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<p>So far, we have only dealt with adding and subtracting vectors. This process has worked well for us so far, however to deal with work and energy we'll need to introduce a new operation, called the dot product.</p>
+<article class="terms">
+	<mark>Dot product</mark> - an operation on two vectors that gives a scalar
+</article>
+<p>Another term for the dot product is the <i>scalar product</i>, as the value it gives off is a <intext tabindex="0" tooltip="A quantity that has magnitude, with no direction">scalar</intext>. The definition of a dot product is quite simple, being the following. See the two vectors below, and the angle they form.</p>
+<figure><img src="images/dot1.svg" fetchpriority="high"  alt="">
+<figcaption>Two vectors, and the angle between them.</figcaption></figure>
+<p>With these two vectors, we can compute the dot product between them, as shown below. We need the magnitude of the vectors and the angle between them.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>A</mi><mi>B</mi><mi>cos</mi><mi>(&phi;)</mi></math>
+</article>
+<section class="examples"><mark custom></mark>
+<h4>Exercise 1</h4>
+The angle between the two vectors is 60&deg;, and the magnitudes of the two vectors are 4 units and 5 units respectively. Compute for the dot product.<br><br>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We have the magnitudes of the vectors and the angle, so it should be quite easy to get the dot product.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>A</mi><mi>B</mi><mi>cos</mi><mi>(&phi;)</mi></math><br>
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(4)</mi><mi>(5)</mi><mi>cos</mi><mi>(60&deg;)</mi><mo>=</mo><mi>10</mi></math><br>
+</article>
+</section>
+</section>
+<p>Analyzing the equation, we may break down the dot product in two ways, focusing on either of the two vectors.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>A</mi><mo>(</mo><mi>B</mi><mi>cos</mi><mi>(&phi;)</mi><mo>)</mo><mo>=</mo><mi>B</mi><mo>(</mo><mi>A</mi><mi>cos</mi><mi>(&phi;)</mi><mo>)</mo></math>
+</article>
+<p>Recall in our study of two-dimensional vectors on how we get the components of the vector. We do the same here. We can tilt our view, and see that all we are doing is getting the product of the components of the two vectors.</p>
+<figure><img src="images/dot2.svg" alt="">
+<figcaption>The two vectors, and the component of the other vector parallel to it.</figcaption></figure>
+<p>This fact means that we can get the dot product of the two vectors just based on the components of the vector.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><msub><mi>B</mi><mi>y</mi></msub></math><br>
+</article>
+<p>Here is how we can use it in the above two vectors. Placing our coordinate system as parallel to the vector <math><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover></math>, it has no vertical component. The horizontal component of <math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover></math> can be collected via trigonometry, and thus we can get it via this equation.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><msub><mi>B</mi><mi>y</mi></msub></math><br>
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>A</mi><mi>cos</mi><mi>(&phi;)</mi><msub><mi>B</mi><mi>x</mi></msub></math><br>
+</article>
+<p>Which aligns with what we saw above.</p>
+<section class="examples"><mark custom></mark>
+<h4>Exercise 2</h4>
+<p>There are two vectors, being <math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(2.0î + 3.0ĵ)</mi></math> and <math><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(−4.0î + 3.0ĵ)</mi></math>. What is their dot product?</p>
+<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<section class="solution" id="sol4">
+<p>We will use the above definition to get the dot product, instead of finding the angle between them.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><msub><mi>B</mi><mi>y</mi></msub></math><br>
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(2.0)</mi><mi>(&minus;4.0)</mi><mo>+</mo><mi>(3.0)</mi><mi>(3.0)</mi><mo>=</mo><mi>1</mi></math><br>
+</article>
+</section>
+</section>
+<p>We can also use the above to get the angle between two vectors, which can be collected by rearranging the original equation for the dot product.</p>
+<section class="examples">
+<h4>Exercise 3</h4>
+<p>(HRK E11.7) Calculate the angle between the two vectors <math><mover accent="true"><mrow><mi>r</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(3î + 3ĵ)</mi></math> and <math><mover accent="true"><mrow><mi>s</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(2î + 1ĵ)</mi></math>.</p>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>We first get the dot product.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>r</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>s</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mi>r</mi><mi>x</mi></msub><msub><mi>s</mi><mi>x</mi></msub><mo>+</mo><msub><mi>r</mi><mi>y</mi></msub><msub><mi>s</mi><mi>y</mi></msub></math><br>
+	<math><mover accent="true"><mrow><mi>r</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>s</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(3.0)</mi><mi>(2.0)</mi><mo>+</mo><mi>(3.0)</mi><mi>(1.0)</mi><mo>=</mo><mi>9.0</mi></math><br>
+</article>
+<p>Now, we rearrange the original equation to get the angle.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>r</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>s</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>r</mi><mi>s</mi><mi>cos</mi><mi>(&phi;)</mi></math><br>
+	<math><mfrac><mrow><mover accent="true"><mrow><mi>r</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>s</mi></mrow><mo>&#x2192</mo></mover></mrow><mrow><mi>r</mi><mi>s</mi></mrow></mfrac><mo>=</mo><mi>cos</mi><mi>(&phi;)</mi></math><br>
+	<math><msup><mi>cos</mi><mn>&minus;1</mn></msup><mo>(</mo><mfrac><mrow><mover accent="true"><mrow><mi>r</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>s</mi></mrow><mo>&#x2192</mo></mover></mrow><mrow><mi>r</mi><mi>s</mi></mrow></mfrac><mo>)</mo><mo>=</mo><mi>&phi;</mi></math>
+</article>
+<p>We thus need the magnitudes of the two vectors, which we get via the pythagorean theorem.</p>
+<article class="equations">
+	<math><mrow><mi>r</mi><mo>=</mo><mrow><msqrt><mrow><mi>[3.0]²</mi><mo>+</mo><mi>[3.0]²</mi></mrow></msqrt><mo>=</mo><mi>4.24</mi></math><br>
+	<math><mrow><mi>s</mi><mo>=</mo><mrow><msqrt><mrow><mi>[2.0]²</mi><mo>+</mo><mi>[1.0]²</mi></mrow></msqrt><mo>=</mo><mi>2.24</mi></math><br>
+</article>
+<p>Plugging these values in, we have that the angle between them is around 18.43&deg;.</p>
+</section>
+</section>
+<section class="examples">
+<h4>Question 1</h4>
+<p>(LSM CQ2.23) If the dot product of two vectors vanishes, what
+can you say about their directions? </p>
+<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<section class="solution">
+<p>If the dot product of the two vectors is zero, that means one of the parts of this equation is zero.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>A</mi><mi>B</mi><mi>cos</mi><mi>(&phi;)</mi></math><br>
+</article>
+<p>Seeing as the two vectors can't have zero length, that means the cosine term must bring the value to zero. The value of cosine such that it is zero is when &phi; is 90&deg;. In other words, the two vectors are perpendicular.</p>
+</section>
+</section>
+<footer>
+<a unfinished>Work ></a>
+</footer>
+</body>
+</html>
