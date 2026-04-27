@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>momentum - forcetime</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Force-Time Graphs</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<main>
+<p>In the previous tutorial, we approximated the force over a certain time via using the average force, as we noted before that force over a period of time may not be constant.</p>
+<p>We also saw the first example of a force-time graph, which is shown below as well.</p>
+<figure><img src="images/impulse2.svg" alt="">
+<figcaption>Force over a period of time.</figcaption></figure>
+<p>A force-time graph shows the strength of a force over the period of time wherein the force is applied. Usually, it is highest at the point of collision and drops down heavily.</p>
+<p>Here, let's focus on one definition of the impulse, which is the average force times the duration of the force.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>ave</mi></msub><mi>&Delta;</mi><mi>t</mi></math><br>
+</article>
+<p>In the force-time graph above, we have the duration of the force &Delta;t labeled. If we set this as the length of time, we can set the value of the average force as the height, meaning that impulse is technically the area of the rectangle shown.</p>
+<figure><img src="images/forcetime1.svg" alt="">
+<figcaption>The impulse is the area of this rectangle.</figcaption></figure>
+<p>Of course, as we said before, the average force is just an approximation for the non-constant force on an object. If we extend this fact that the impulse is this "area under the force", we get this graph of the impulse.</p>
+<figure><img src="images/forcetime2.svg" alt="">
+<figcaption>The impulse is the area under the force, over this time.</figcaption></figure>
+<p>From this notion, we can see that the impulse is the <i>area under the graph of the force.</i> While usually we won't have a force-time graph, it is useful to note this fact in some cases.</p>
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(LSM P9.32) The x-component of a force on a 46-g golf ball by a
+7-iron versus time is plotted in the figure below. Find the x-component of the impulse during
+the intervals 0ms to 50ms and 50ms to 100ms.</p>
+<figure><img src="images/forcetime4.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will use the definition of impulse as the area under the graph of force over time. From 0ms to 50ms, we have a triangle of a base of 50ms (or 0.05s) and a height of 30N, which gives us 0.75N&sdot;s.</p>
+<p>The other interval, from 50ms to 100ms, is a rectangle with a length of 50ms (or 0.05s) and a height of 30N, which gives us 1.5N&sdot;s.</p>
+</section>
+</section>
+<section hard class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E6.9) The figure below shows an approximate representation of force
+versus time during the collision of a 58-g tennis ball with a
+wall. The initial velocity of the ball is 32 m/s perpendicular to
+the wall; it rebounds with the same speed, also perpendicular
+to the wall. What is the value of the maximum contact
+force during the collision?</p>
+<figure><img src="images/forcetime3.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Since impulse is the area under this graph, we have this equation, recalling the other quantity for impulse, which is the mass times the change the velocity.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>Area</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math><br>
+</article>
+<p>For the area, we will use geometry. The graph forms a trapezoid, with bases of 6ms and 2ms, or in seconds, 0.006s and 0.002s. Using the formula, we have this.</p>
+<article class="equations">
+	<math><mi>Area</mi><mo>=</mo><mfrac><mrow><msub><mi>b</mi><mi>1</mi></msub><mo>+</mo><msub><mi>b</mi><mi>2</mi></msub></mrow><mi>2</mi></mfrac><mi>h</mi></math><br>
+	<math><mi>Area</mi><mo>=</mo><mfrac><mrow><mi>(0.006s)</mi><mo>+</mo><mi>(0.002s)</mi></mrow><mi>2</mi></mfrac><msub><mi>F</mi><mi>max</mi></msub><mo>=</mo><mi>(0.004s)</mi><msub><mi>F</mi><mi>max</mi></msub></math><br>
+</article>
+<p>Since the ball rebounds (meaning it changes direction), we have a change in velocity of 64m/s. We now place it all into the equation.</p>
+<article class="equations">
+	<math><mi>Area</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>(0.004s)</mi><msub><mi>F</mi><mi>max</mi></msub><mo>=</mo><mi>(0.058kg)</mi><mi>(64m/s)</mi></math><br>
+	<math><msub><mi>F</mi><mi>max</mi></msub><mo>=</mo><mfrac><mrow><mi>(0.058kg)</mi><mi>(64m/s)</mi></mrow><mi>(0.004s)</mi></mfrac><mo>=</mo><mi>930N</mi></math><br>
+</article>
+</section>
+</section>
+</main>
+<footer>
+	<a unfinished> The Integral for Impulse ></a>
+</footer>
+</body>
+</html>

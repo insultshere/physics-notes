@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>dynamics - intro</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<style>#navigation {display:block;height:auto;width:50%;float:left;counter-reset: count 0;}#navigation > nav[reset] {counter-reset: count 0;}#navigation > nav {width:100%;margin-bottom:0.5em;}navlink {display:flex;text-align:left;counter-increment: count 1;}navlink::before {content:"(" counter(count,decimal) ")";float:left;margin-right:0.2em;}navlink[lower-alpha]::before {	content:"(" counter(count,lower-alpha) ")";	float:left;	margin-right:0.2em;}</style>
+	<style>:root {--redtowhite: linear-gradient(to right, #F5EAEA, #fff); --graytowhite: linear-gradient(to right, #eee, #fff, #fff); --invis: rgba(0,0,0,0);} #navigation {display:block;height:auto;width:50%;float:left;counter-reset: count 0;}#navigation > nav[reset] {counter-reset: count 0;}#navigation > nav {width:100%;margin-bottom:0.5em;}navlink {display:flex;text-align:left;counter-increment: count 1;}navlink::before {content:"(" counter(count,decimal) ")";float:left;margin-right:0.2em;}navlink[lower-alpha]::before {	content:"(" counter(count,lower-alpha) ")";	float:left;	margin-right:0.2em;} p[warn]{background-color: var(--invis);background-image: var(--redtowhite);} nav>h2{background-color: var(--invis);background-image: var(--graytowhite);}</style>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -13,12 +13,13 @@
 <header id="center">
 <a href="../index.html">Return to Menu</a>
 </header>
-<p><i>This branch has a prerequisite: <a href="../kinematics/index.html">Kinematics</a>.</i></p>
-Dynamics is the study of motion via analyzing the reason it happens: force. In this topic we analyze the laws of motion, the various types of forces, and how to solve problems involving force, mass, acceleration, and more complicated systems.<br><br>
+<main>
+<p warn><i>This branch has a prerequisite: <a href="../kinematics/index.html">Kinematics</a>.</i></p>
+Dynamics is the study of motion via analyzing the reason it happens: force. In this topic we analyze the laws of motion, the various types of forces, and how to solve problems using these forces.<br><br>
 <div style="display: flex;">
 <div id="navigation">
 <nav id="trio">
-<h4>Tutorials</h4>
+<h2>Tutorials</h2>
 <navlink><a href="force.html">Force</a><br></navlink>
 <navlink><a href="law-of-inertia.html">Law of Inertia</a><br></navlink>
 <navlink><a href="law-of-acceleration.html">Law of Acceleration</a><br></navlink>
@@ -37,24 +38,26 @@ Dynamics is the study of motion via analyzing the reason it happens: force. In t
 <navlink><a href="connected-masses.html">Connected Masses</a><br></navlink>
 </nav>
 <nav id="trio">
-<navlink><a href="circular-motion-revisited.html">Circular Motion Revisited</a><br></navlink>
+<navlink><a href="circular-motion-revisited.html">Circular Motion, Revisited</a><br></navlink>
+<navlink><a unfinished>Time-Dependent Force</a><br></navlink>
 </nav>
 </div>
 <div id="navigation">
 <nav id="duo">
-<h4>Additional</h4>
+<h2>Additional</h2>
 <navlink lower-alpha><a unfinished>Accelerated Reference Frames</a><br></navlink>
-<navlink lower-alpha><a unfinished>Time-Dependent Force</a><br></navlink>
+<navlink lower-alpha><a unfinished>The Coriolis Effect</a><br></navlink>
 </nav>
 <nav id="duo" reset>
-<h4>Appendices</h4>
+<h2>Appendices</h2>
 <navlink lower-alpha><a unfinished>Equations</a><br></navlink>
 <navlink lower-alpha><a unfinished>Problem Set</a><br></navlink>
 </nav>
 </div>
 </div>
+</main>
 <footer next>
-	Where to go next? See <a href="../work-and-energy/index.html">Work and Energy</a>.
+	Where to go next? See <a href="../momentum/index.html">Momentum</a>.
 </footer>
 </body>
 </html>

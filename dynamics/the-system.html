@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>dynamics - systems</title>
 	<meta name="description" content="A compilation of physics notes">
@@ -13,6 +13,7 @@
 <header>
 <a href="index.html">< Return</a>
 </header>
+<main>
 <p>From our previous studies of dynamics, we examined the motion of one object. For example, we examined the forces acting on a block, a box on a string, scales, and other particles that can be treated as one object.</p>
 <p>We can extend this approach by simplifying a group of objects as a singular object, wherein the motion of each of its parts is interdependent with each of its other parts.</p>
 <article class="terms">
@@ -30,7 +31,7 @@
 <p>While complicated, here is a basic answer: since the parts don't extend and/or compress, the displacement of each of its individual parts is the same; thus, the velocity of each of the parts is the same, and thus the magnitude of acceleration of each of its parts must also be the same.</p>
 <p>Of course, the above assumes that the parts <i>don't extend/compress</i>. In the real world, strings aren't always <intext tabindex="0" tooltip="fully extended">taut</intext>, blocks will compress if you push them too hard, or ropes can even stretch if you pull them hard enough. However, the above is enough for us to get accurate answers.</p>
 <section class="examples">
-<h4>Exercise 1</h4>
+<h2>Exercise 1</h2>
 (HRK E3.30) A 77-kg person is parachuting and experiencing a downward
 acceleration of 2.5m/s² shortly after opening the parachute.
 The mass of the parachute is 5.2kg. <br>(a) Find the upward
@@ -38,7 +39,7 @@ force exerted on the parachute by the air. <br>(b) Calculate the
 downward force exerted by the person on the parachute.
 <figure><img src="images/system3.svg" alt="">
 <figcaption>Exercise 1.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We note that the acceleration of &minus;2.5m/s² is on the entire system, and because the parachute and persn doesn't extend or compress, we can assume that the acceleration of each of its parts is also the same.</p>
 <p>For the entire system, we have the force of air pushing up and the weight of both objects pulling down.</p>
@@ -56,13 +57,13 @@ downward force exerted by the person on the parachute.
 </section>
 <p>If you're confused on how to get the magnitudes of certain forces, it might be useful to consult the free body diagrams of the individual parts of the system.</p>
 <section class="examples">
-<h4>Exercise 2a</h4>
+<h2>Exercise 2a</h2>
 (HRK P3.10a) Two blocks are in contact on a frictionless table. A horizontal
 force is applied to one block. If the masses of the boxes are 
 2.3kg and 1.2kg respectively, and the force is of magnitude 3.2N, find the force of
 contact between the two blocks. <figure><img src="images/interaction5.svg" alt="">
 <figcaption>Exercise 2.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>The total mass of the boxes is 3.5kg. We can get the acceleration by Newton's second law.</p>
 <article class="equations">
@@ -77,11 +78,11 @@ contact between the two blocks. <figure><img src="images/interaction5.svg" alt="
 </section>
 </section>
 <section class="examples">
-<h4>Exercise 2b</h4>
+<h2>Exercise 2b</h2>
 (HRK P3.10b) Show that if the same
 force is applied to the right block rather than on the left block, the force of contact
 between the blocks is 2.1N, which is not the same value derived in the previous problem. Explain.<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We still get the same acceleration of 0.91m/s². However, now we note that the left block is the one that is moved purely by the contact force. Thus, we use its mass now.</p>
 <article class="equations">
@@ -91,7 +92,7 @@ between the blocks is 2.1N, which is not the same value derived in the previous 
 </section>
 </section>
 <section class="examples">
-<h4>Exercise 3</h4>
+<h2>Exercise 3</h2>
 (HRK P3.7) The child’s toy below consists of three cars that are pulled in tandem
 on small frictionless rollers. Its cars have masses of 3.1 kg, 2.4 kg, and 1.2 kg respectively. They are
 pulled to the right with a horizontal force of 6.5 N.
@@ -100,7 +101,7 @@ middle car on the leftmost car? <br>(c) What is the force exerted by the
 rightmost car on the middle car?
 <figure><img src="images/acceleration6.svg" alt="">
 <figcaption>Exercise 3.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>The entire toy is affected by the force, so we need the entire mass of the toy. Afterwards, since we are given the force, we can use the Law of Acceleration to get the acceleration.</p>
 <article class="equations">
@@ -119,7 +120,7 @@ rightmost car on the middle car?
 </section>
 <p>Let's up the complexity a little by adding friction. The fundamental strategy still remains the same, however; choose the system you want to analyze, then analyze how the motion of the system affects each of its parts.</p>
 <section class="examples">
-<h4>Problem 1a</h4>
+<h2>Problem 1a</h2>
 (HRK P5.12a) A 4.40-kg block is put on top of a 5.50-kg block. In order to
 cause the top block to slip on the bottom one, held fixed, a
 horizontal force of 12.0 N must be applied to the top block.
@@ -127,7 +128,7 @@ The assembly of blocks is now placed on a horizontal, frictionless table. Find t
 the blocks will move together.
 <figure><img src="images/system5.svg" alt="">
 <figcaption>Problem 1.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>To keep them moving as a single object, the force applied on the top block must not exceed the maximum force of the static friction. Thankfully, we are given this force, being the amount needed to slip which is 12.0N.</p>
 <p>Now, we first analyze the acceleration for the whole system. The only force acting on it is just the force pushing as well.</p>
@@ -152,9 +153,9 @@ the blocks will move together.
 </section>
 </section>
 <section class="examples">
-<h4>Problem 1b</h4>
+<h2>Problem 1b</h2>
 (HRK P5.12c) Find the coefficient of static friction.<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>One doesn't need to compute anything but note that 12.0N is the maximum force.</p>
 <article class="equations">
@@ -165,12 +166,12 @@ the blocks will move together.
 </section>
 </section>
 <section class="examples" hard>
-<h4>Problem 2</h4>
+<h2>Problem 2</h2>
 (HRK P5.9) The two blocks, <math><mi>m</mi><mo>=</mo><mi>16kg</mi></math> and <math><mi>M</mi><mo>=</mo><mi>88kg</mi></math> respectively, shown below, are free to move. The coefficient of static friction between the blocks is <math><msub><mi>&mu;</mi><mi>s</mi></msub><mo>=</mo><mi>0.38</mi></math>, but the surface beneath <math><mi>M</mi></math> is
 frictionless. What is the magnitude of the force required to hold <math><mi>m</mi></math> against <math><mi>M</mi></math>?
 <figure><img src="images/system4.svg" alt="">
 <figcaption>Problem 2.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We first analyze the entire system. The force causes the whole system to accelerate. Since the massive block has no friction, the only net horizontal force is the force itself.</p>
 <article class="equations">
@@ -204,6 +205,7 @@ frictionless. What is the magnitude of the force required to hold <math><mi>m</m
 </article>	
 </section>
 </section>
+</main>
 <footer>
 	<a href="connected-masses.html"> Connected Masses ></a>
 </footer>

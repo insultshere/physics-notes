@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>kinematics - intro</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<style>#navigation {display:block;height:auto;width:50%;float:left;counter-reset: count 0;}#navigation > nav[reset] {counter-reset: count 0;}#navigation > nav {width:100%;margin-bottom:0.5em;}navlink {display:flex;text-align:left;counter-increment: count 1;}navlink::before {content:"(" counter(count,decimal) ")";float:left;margin-right:0.2em;}navlink[lower-alpha]::before {	content:"(" counter(count,lower-alpha) ")";	float:left;	margin-right:0.2em;}</style>
+	<style>:root {--redtowhite: linear-gradient(to right, #F5EAEA, #fff); --graytowhite: linear-gradient(to right, #eee, #fff, #fff); --invis: rgba(0,0,0,0);} #navigation {display:block;height:auto;width:50%;float:left;counter-reset: count 0;}#navigation > nav[reset] {counter-reset: count 0;}#navigation > nav {width:100%;margin-bottom:0.5em;}navlink {display:flex;text-align:left;counter-increment: count 1;}navlink::before {content:"(" counter(count,decimal) ")";float:left;margin-right:0.2em;}navlink[lower-alpha]::before {	content:"(" counter(count,lower-alpha) ")";	float:left;	margin-right:0.2em;} p[warn]{background-color: var(--invis);background-image: var(--redtowhite);} nav>h2{background-color: var(--invis);background-image: var(--graytowhite);}</style>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>Kinematics</h1>
 <header id="center">
+<h1>Kinematics</h1>
 <a href="../index.html">Return to Menu</a>
 </header>
-<p><i>This branch has no prerequisites. Good luck!</i></p>
+<main>
+<p warn><i>This branch has no prerequisites. Good luck!</i></p>
 Kinematics is the study of motion without the underlying causes of it (being force). In this topic, we tackle position, velocity, and acceleration, how they relate, and how to solve problems such as projectile motion and pursuit problems.<br><br>
 
 <div style="display:flex">
 <div id="navigation">
 <nav id="trio">
-<h4>Tutorials</h4>
+<h2>Tutorials</h2>
 <navlink><a href="quantities-of-motion.html">Quantities of Motion</a><br></navlink>
 <navlink><a href="motion-graphs-I.html">Motion Graphs I</a><br></navlink>
 <navlink><a href="motion-graphs-II.html">Motion Graphs II</a><br></navlink>
@@ -36,22 +37,24 @@ Kinematics is the study of motion without the underlying causes of it (being for
 <nav>
 <navlink><a href="projectiles.html">Projectiles</a><br></navlink>
 <navlink><a href="circular-motion.html">Circular Motion</a><br></navlink>
+<navlink><a unfinished>Variable Acceleration</a><br></navlink>
 </nav>
 </div>
 <div id="navigation" style="list-style:lower-alpha">
 <nav id="duo" >
-<h4>Additional</h4>
-<navlink lower-alpha><a unfinished>Variable Acceleration</a><br></navlink>
-<navlink lower-alpha><a unfinished>Trajectory of a Projectile</a><br></navlink>
+<h2>Additional</h2>
+<navlink lower-alpha><a unfinished>The Trajectory</a><br></navlink>
+<navlink lower-alpha><a unfinished>Position in Circular Motion</a><br></navlink>
 </nav>
 <nav id="duo" reset>
-<h4>Appendices</h4>
+<h2>Appendices</h2>
 <navlink lower-alpha><a href="equations.html">Equations</a><br></navlink>
 <navlink lower-alpha><a unfinished>Problem Set</a><br></navlink>
 </nav>
 </div>
 </div>
 
+</main>
 <footer next>
 	Where to go next? See <a href="../dynamics/index.html">Dynamics</a>.
 </footer>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>dynamics - angled</title>
 	<meta name="description" content="A compilation of physics notes">
@@ -13,6 +13,7 @@
 <header>
 <a href="index.html">< Return</a>
 </header>
+<main>
 <p>So far, all the forces we've been dealing with have all been vertical or horizontal. Further, all the surfaces we've dealt with have been completely horizontal and vertical.</p>
 <p>The first half of this sentence isn't that big of a deal; we've dealt with velocity at an angle before in our study of projectiles, so we just use the same strategy we did before to deal with problems of that sort.</p>
 <figure><img src="images/angled1.svg" alt="">
@@ -23,11 +24,11 @@
 <figcaption>The components of the angled force.</figcaption></figure>
 <p>Here, we can see that the force has been "crossed out". When we draw free body diagrams, you should cross out or squiggle out a force if you have broken it down into its components. Here, we can also see why the normal force is so high; the vertical component of the diagonal force pushes the box into the ground as well.</p>
 <section class="examples"> <mark custom></mark>
-<h4>Question 1</h4>
+<h2>Question 1</h2>
 Draw a free body diagram for the following box pushed against a rough surface. The box is at rest relative to the surface.
 <figure><img src="images/angled5.svg" alt="">
 <figcaption>Question 1.</figcaption></figure>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We first decompose the force at an angle. The horizontal component of the force pushes the box against the wall, so we draw the normal force of the wall to the box.</p>
 <p>The vertical component pushes the box down, adding to its weight. Given that the surface is rough and the box is at rest relative to the surface, this means the static friction has to have the same magnitude as the weight and vertical component combined.</p>
@@ -37,12 +38,12 @@ Draw a free body diagram for the following box pushed against a rough surface. T
 <p>Recall in kinematics how it was helpful to separate the horizontal and vertical velocities. In dynamics, we can use this same strategy to solve more complex problems with forces at an angle.</p>
 <p>This may feel like a leap in difficulty, however just recall what we recalled when we jumped from one-dimensional motion to two-dimensional motion; this is just two cases of one-dimensional dynamics.</p>
 <section class="examples">
-<h4>Exercise 1a</h4>
+<h2>Exercise 1a</h2>
 (HRK E4.7a) A 5.1-kg block is pulled along a frictionless floor by a cord that
 exerts a 12N force at an angle 25° above the horizontal. What is the horizontal acceleration of the block?
 <figure><img src="images/angled4.svg" alt="">
 <figcaption>Exercise 1.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We first decompose the force at an angle. We know the horizontal component is the adjacent side of the 25&deg;, so we use cosine.</p>
 <article class="equations">
@@ -59,9 +60,9 @@ exerts a 12N force at an angle 25° above the horizontal. What is the horizontal
 </section>
 </section>
 <section class="examples">
-<h4>Exercise 1b</h4>
+<h2>Exercise 1b</h2>
 (HRK E4.7b) In the exercise above, the force is slowly increased. What is the magnitude of the force just before the block is lifted off the floor? <br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>There are two vertical forces currently acting on the box; that is the normal force, and the weight. As we pull the string upwards, the normal forces relaxes and weakens (recall that the normal force is a lazy force). The block starts to lift off one the normal force is zero.</p>
 <article class="equations">
@@ -79,13 +80,13 @@ exerts a 12N force at an angle 25° above the horizontal. What is the horizontal
 <p>Since now there are functions such as the sine and cosine function which something give irrational numbers, it is helpful to do <i>all the algebraic manipulation first</i> and then plug in the values.</p>
 <p>This method reduces errors to mistyping numbers and is generally more flexible. We should try to adopt this method, instead of relying on solving each value on at a time. <br>Of course, sometimes, this method is harder in problems that can be solved easier with the actual value, like in kinematic problems.</p>
 <section class="examples">
-<h4>Exercise 2</h4>
+<h2>Exercise 2</h2>
 (LSM P6.62a) A contestant in a winter sporting event pushes a
 45.0-kg block of ice across a frozen lake, with a coefficient of static friction being 0.1, as shown in the figure below. Calculate the minimum force he
 must exert to get the block moving. 
 <figure><img src="images/angled6.svg" alt="">
 <figcaption>Exercise 3.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>There are three vertical forces acting on the box. We have the vertical component of the contestant, the weight, and the normal force balancing both. Thus, the normal force here is not just the weight. All in all, the net vertical force is zero.</p>
 <article class="equations">
@@ -112,7 +113,7 @@ must exert to get the block moving.
 </section>
 </section>
 <section class="examples" hard> <mark variable></mark>
-<h4>Problem 1</h4>
+<h2>Problem 1</h2>
 (HRK P5.7b) The handle of a floor mop makes an angle &theta; with
 the vertical direction. Let <math><msub><mi>&mu;</mi><mi>k</mi></msub></math> be the coefficient
 of kinetic friction between mop and floor and <math><msub><mi>&mu;</mi><mi>s</mi></msub></math> the coefficient of static friction between mop and floor. Neglect the mass of the handle. 
@@ -122,7 +123,7 @@ the floor no matter how great a force is directed along the
 handle. What is the angle &phi;?
 <figure><img src="images/angled7.svg" alt="">
 <figcaption>Problem 1.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Since we neglect the mass, the only vertical force causing the normal force is then the vertical component of the force pushing on the handle. Setting the net force to be zero, since the mop isn't moving upwards anyway, gives us this equation.</p>
 <article class="equations">
@@ -153,12 +154,12 @@ handle. What is the angle &phi;?
 </section>
 <p>With this knowledge, we can use dynamics to solve more complicated problems which relate to kinematics. We return once again to our kinematic equations.</p>
 <section class="examples">
-<h4>Problem 2a</h4>
+<h2>Problem 2a</h2>
 (HRK P4.3a) A rocket with mass 3030 kg is fired from rest from the ground
 at an elevation angle of 58.0°. The motor exerts a thrust of
 61.2 kN at a constant angle of 58.0° with the horizontal for
 48.0 s and then cuts out. Calculate the altitude of the rocket at motor cut-out. <br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>To get the altitude, we need the vertical force, which should give us the vertical acceleration. Given the constant acceleration, we then use the kinematic equations to get the vertical displacement.</p>
 <p>Given 58&deg; from the horizontal, the vertical force is opposite to the angle. We use sine. There are two vertical forces; the vertical force component and the weight.</p>
@@ -175,9 +176,9 @@ at an elevation angle of 58.0°. The motor exerts a thrust of
 </section>
 </section>
 <section class="examples" hard>
-<h4>Problem 2b</h4>
+<h2>Problem 2b</h2>
 (HRK P4.3b) Find the total distance from firing point to impact in the previous problem. <br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>The first portion of this problem is the distance travelled until motor cut-out. The second portion is a projectile motion problem with initial height.</p>
 <p>Let's begin by getting the horizontal acceleration.</p>
@@ -214,6 +215,7 @@ at an elevation angle of 58.0°. The motor exerts a thrust of
 <p>Giving us our answer of 58900m.</p>
 </section>
 </section>
+</main>
 <footer>
 	<a href="the-inclined-plane.html"> The Inclined Plane ></a>
 </footer>

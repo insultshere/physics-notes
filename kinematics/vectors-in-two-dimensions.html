@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>kinematics - vectors</title>
 	<meta name="description" content="A compilation of physics notes">
@@ -9,10 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>Vectors in Two Dimensions</h1>
 <header>
+<h1>Vectors in Two Dimensions</h1>
 <a href="index.html">< Return</a>
 </header>
+<main>
 <p>Now that we are moving in two-dimensions, we need to deal with how we treat direction. We know that most quantities need direction, like velocity and acceleration.</p>
 
 <figure><img src="images/twod1.svg" fetchpriority="high" alt="">
@@ -26,9 +27,9 @@
 
 <p>The figure above shows a person running around in a circle. We can see that their velocity is changing direction, and thus changes. However, the <intext tabindex="0" tooltip="the length of a vector">magnitude</intext> doesn't change, thus their speed is constant.</p>
 <section class="examples">
-<h4>Question 1</h4>
+<h2>Question 1</h2>
 (HRK Q2.6) Can the speed of a particle ever be negative? If so, give an example; if not, explain why.<br><br>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
 <section class="solution" id="sol1">
 No, it can't. Velocity can be negative, as we can either go left and right or go up and down, however speed must always be positive.
 </section>
@@ -52,11 +53,11 @@ No, it can't. Velocity can be negative, as we can either go left and right or go
 <p>We can also use these components to get the magnitude and the angle of the vector via the pythagorean theorem and using the <intext tabindex="0" tooltip="arctan() gives the measure of the angle of a certain ratio of the opposite and adjacent sides">arctan()</intext> function respectively.</p>
 
 <section class="examples">
-<h4>Exercise 1</h4>
+<h2>Exercise 1</h2>
 (HRK E2.4a) What are the components of a vector <math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover></math> in the xy plane if
 its direction is 252° counterclockwise from the positive x axis
 and its magnitude is 7.34 units?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution" id="sol2">
 The diagram below shows the vector. We then calculate its components.
 <figure><img src="images/vec4.svg" alt="">
@@ -71,9 +72,9 @@ The diagram below shows the vector. We then calculate its components.
 </section>
 
 <section class="examples">
-<h4>Exercise 2</h4>
+<h2>Exercise 2</h2>
 (HRK E2.3a) Vector <math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover></math> has a magnitude of 5.2 units and is directed east. Vector <math><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x2192</mo></mover></math> has a magnitude of 4.3 units and is directed 35° west of north. Find <math><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x2192</mo></mover></math>.<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution" id="sol3">
 <figure><img src="images/vec5.svg" alt="">
 <figcaption>The two vectors added up in the xy plane.</figcaption></figure>
@@ -97,9 +98,9 @@ The diagram below shows the vector. We then calculate its components.
 <figure><img src="images/vec6.svg" alt="">
 <figcaption>A vector, defined by its unit vectors.</figcaption></figure>
 <section class="examples">
-<h4>Exercise 3</h4>
+<h2>Exercise 3</h2>
 (LSM P4.18)  The position of a particle changes from <math><mover accent="true"><mrow><msub><mi>r</mi><mi>1</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(2.0î + 3.0ĵ)</mi></math> to <math><mover accent="true"><mrow><msub><mi>r</mi><mi>2</mi></msub></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(−4.0î + 3.0ĵ)</mi></math>. What is the particle’s displacement?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution" id="sol4">
 <p>We first parse what the two vectors mean. The first vector <math><mover accent="true"><mrow><msub><mi>r</mi><mi>1</mi></msub></mrow><mo>&#x2192</mo></mover></math> has a length of 2 going to the right and a height of 3 going up, while the other vector <math><mover accent="true"><mrow><msub><mi>r</mi><mi>2</mi></msub></mrow><mo>&#x2192</mo></mover></math>has a length of 4 going to the left (hence the negative sign) and a height of 3 going up also.</p>
 <figure><img src="images/vec7.svg" alt="">
@@ -116,9 +117,9 @@ The diagram below shows the vector. We then calculate its components.
 <p>We can now deal with some problems about motion in two dimensions, where we just have to break down the vectors into its components and work at it from there.</p>
 <p>Be warned; this may seem like a large jump in complexity as there looks to be a lot of information, however just remember one thing: <i>two-dimensional motion is two cases of one-dimensional motion.</i></p>
 <section class="examples">
-<h4>Problem 1</h4>
+<h2>Problem 1</h2>
 (LSM P4.28)  A boat heads out into a lake with an acceleration of <math><mi>(2.0î)</mi></math>m/s². A strong wind is pushing the boat, giving it an additional velocity of <math><mi>(2.0î + 1.0ĵ)</mi></math>m/s.<br>(a) What is the velocity of the boat at t = 10s? <br>(b) What is the position of the boat at t = 10s?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution" id="sol5">
 <p>The acceleration appears to only move in the x-axis, so the velocity's y-component will not be affected. We can calculate the velocity by just using our kinematic equations. To make it less confusing, let's add a subscript of <math><mi>x</mi></math> and <math><mi>y</mi></math> to determine what dimension we are using.</p>
 <article class="equations">
@@ -141,9 +142,9 @@ The diagram below shows the vector. We then calculate its components.
 </section>
 </section>
 <section class="examples">
-<h4>Problem 2</h4>
+<h2>Problem 2</h2>
 (LSM P4.30) The acceleration of a particle is a constant. At t = 0s, the velocity of the particle is <math><mi>(10î + 20ĵ)</mi></math>m/s. At t = 4s, the velocity is <math><mi>(10ĵ)</mi></math>m/s. What is the particle’s acceleration?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution" id="sol6">
 <p>The x-component of velocity has gone from 10m/s to 0m/s in four seconds. We can plug this into our second kinematic equation.</p>
 <article class="equations">
@@ -162,9 +163,9 @@ The diagram below shows the vector. We then calculate its components.
 </section>
 
 <section class="examples" hard>
-<h4>Problem 3</h4>
+<h2>Problem 3</h2>
 (LSM P4.27a) A particle’s acceleration is <math><mi>(4.0î + 3.0ĵ)</mi></math>m/s². At t = 0, its position and velocity are zero. What are the particle’s position and velocity as functions of time?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution" id="sol6">
 <p>We must use calculus to get the velocity and position functions. Since the initial velocity and position is zero, we may drop the arbitrary constant.</p>
 <p>Starting with the x-component, we first get the velocity then position function.</p>
@@ -183,13 +184,13 @@ The diagram below shows the vector. We then calculate its components.
 <p>This approach of vector addition also helps us deal with relative motion, a topic we dealt with in the last tutorial. This time, however, we deal with it in two dimensions, which still offers the same tricks we used.</p>
 <p>The same approach works for motion in two dimensions. However, of course, now we have to deal with composition and decomposition. Eitherway, the same strategy still works.</p>
 <section class="examples">
-<h4>Exercise 4</h4>
+<h2>Exercise 4</h2>
 (LSM P4.76a) A small plane flies at 200 km/h in still air. If the
 wind blows directly out of the west at 50 km/h, in what direction must the pilot head her
 plane to move directly north across land?
 <figure><img src="images/relative5.svg" alt="">
 <figcaption>Exercise 4.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Here, we have two dimensions; north and west. We know the speed of the wind with respect to earth, and the speed of the plane with respect to earth. We need the speed of the plane with respect to the wind.</p>
 <article class="equations">
@@ -205,12 +206,12 @@ plane to move directly north across land?
 </section>
 <p>The figure above was created by me. In reality, it may not be as clear cut on what is the hypotenuse or legs. We must read the problem carefully.</p>
 <section class="examples">
-<h4>Exercise 5a</h4>
+<h2>Exercise 5a</h2>
 (LSM P4.77a)  A cyclist traveling southeast along a road at 15
 km/h feels a wind blowing from the southwest at
 25 km/h. To a stationary observer, what is the
 speed of the wind?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>The velocity of the cyclist with respect to Earth is given, and the velocity of the wind with respect to the cyclist is given. We can then draw the following diagram.</p>
 <figure><img src="images/relative6.svg" alt=""></figure>
@@ -222,9 +223,9 @@ speed of the wind?<br><br>
 </section>
 </section>
 <section class="examples" hard>
-<h4>Exercise 5b</h4>
+<h2>Exercise 5b</h2>
 (LSM P4.77b) Find the direction of the wind above relative to the stationary observer.<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <figure><img src="images/relative7.svg" alt=""></figure>
 <p>Despite what the figure looks like, it isn't that complicated. First, we need to get the angle &theta;. This uses an inverse trigonometric function.</p>
@@ -234,6 +235,7 @@ speed of the wind?<br><br>
 <p>Subtracting this angle from 45&deg; gives us the actual angle 14&deg;. The wind is 14&deg; north from east.</p>
 </section>
 </section>
+</main>
 <footer>
 <a href="projectiles.html">Projectiles ></a>
 </footer>

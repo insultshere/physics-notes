@@ -1,5 +1,13 @@
-html {
+:root {
 	scroll-behavior:smooth;
+	--darkred: #990000;
+	--lightred: #F5EAEA;
+	--focusred: #d90000;
+	--white: #ffffff;
+	--gray: #eeeeee;
+	--redtowhite: linear-gradient(to right, #F5EAEA, #fff, #fff);
+	--whitetored: linear-gradient(to right, #fff, #fff, #F5EAEA);
+	--centergray: linear-gradient(to right, rgba(0,0,0,0), #eee, rgba(0,0,0,0));
 }
 
 body {
@@ -15,10 +23,20 @@ body {
 	text-align:center;
 }
 
+#center > a {
+	background-color: rgba(0,0,0,0);
+	background-image:linear-gradient(rgba(0,0,0,0));
+}
+
 header {
 	margin-bottom:2em;
 	text-align:left;
 	font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+header > a {
+	background-color:rgba(0,0,0,0);
+	background-image:var(--redtowhite);
 }
 
 body > footer {
@@ -26,6 +44,9 @@ body > footer {
 	text-align:right;
 	margin-bottom:2em;
 	font-family:Georgia, 'Times New Roman', Times, serif;
+	background-color:rgba(0,0,0,0);
+	background-image:var(--whitetored);
+	padding-right:0.1em;
 }
 
 nav {
@@ -33,7 +54,7 @@ nav {
 }
 
 h1 {
-	background-color:#EEEEEE;
+	background-color:var(--gray);
 	margin-top:1.5em;
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-size:1.5em;
@@ -42,7 +63,7 @@ h1 {
 	align-content:center;
 }
 
-h4 {
+h2 {
 	margin: 0px 0px 0.2em 0px;
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-size:1.1em;
@@ -53,18 +74,18 @@ h4 {
 	display:none;
 }
 
-h4 > button {
+h2 > button {
 	float:right;
-	background-color:#990000;
-	color:#FFFFFF;
+	background-color:var(--darkred);
+	color:var(--white);
 	border-radius:2px;
 	border-style:none;
 	cursor:pointer;
 }
 
-h4 > button:hover,
-h4 > button:focus  {
-	background-color:#d90000;
+h2 > button:hover,
+h2 > button:focus  {
+	background-color:var(--focusred);
 }
 
 figure {
@@ -80,28 +101,36 @@ figure > img {
 }
 
 figure > figcaption {
-	color:#900;
-	font-size:0.75em;
+	color:var(--darkred);
+	font-size:0.85em;
+	line-height: 1.1em;
 	text-align:center;
 	margin:auto;
 	display:block;
 	margin-bottom:1em;
+	background-color:rgba(0,0,0,0);
+	background-image:var(--centergray);
 }
 
 /*css for examples*/
 
+.examples > figure > figcaption {
+	background-color: rgba(0,0,0,0);
+	background-image:linear-gradient(rgba(0,0,0,0));
+}
+
 .examples {
 	display:block;
-	background-color:#EEEEEE;
+	background-color:var(--gray);
 	padding:6px;
 	margin: 0.75em 0px 0.75em 0px
 }
 
 .examples[hard] {
-	background-color:#F5EAEA;
+	background-color:var(--lightred);
 }
 
-.examples > h4 {
+.examples > h2 {
 	margin-bottom:0.3em;
 }
 
@@ -143,14 +172,20 @@ mark[variable]::before {
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-weight:bold;
 	background-color: rgba(0,0,0,0);
-	color:#900;
+	color:var(--darkred);
 }
 
 .terms {
 	margin: 0.5em 0 0.5em 0;
 	display:block;
 	text-align:left;
-	color:#900;
+	color:var(--darkred);
+	background-color: var(--white);
+	background-image: var(--redtowhite)
+}
+
+math {
+    math-style: normal;
 }
 
 .equations {
@@ -166,8 +201,8 @@ math:has(mfrac) {
 	margin: 0.3em 0 0.3em 0
 }
 
-body > .equations {
-	color:#900;
+main > .equations {
+	color:var(--darkred);
 }
 
 /* links */
@@ -177,16 +212,16 @@ a {
 }
 
 a:visited {
-	color:#990000;
+	color:var(--darkred);
 }
 
 a:link {
-	color:#990000;
+	color:var(--darkred);
 }
 
 a:hover,
 a:focus {
-	color:#d90000;
+	color:var(--focusred);
 }
 
 p {
@@ -197,11 +232,11 @@ p {
 
 intext:hover,
 intext:focus {
-	color:#d90000
+	color:var(--focusred)
 }
 
 intext {
-	color:#990000;
+	color:var(--darkred);
 	text-decoration: underline dotted;
 	cursor: help;
  	position:relative
@@ -214,11 +249,11 @@ intext[tooltip]:focus::after {
   left: 0px;
   width: 8em;
   text-align:left;
-  border: 2px #d90000 solid;
+  border: 2px var(--focusred) solid;
   border-radius: 3px;
-  background-color: #F5EAEA;
+  background-color: var(--lightred);
   padding: 0.2em;
-  color: #d90000;
+  color: var(--focusred);
   font-size: 1em;
   z-index: 1;
   top:1.5em;
@@ -247,7 +282,7 @@ footer[next]{
 	body{
 		width:90%;
 		font-size:0.9em;
-		line-height: 1.23em;
+		line-height: 1.3em;
 	}
 
 	intext[tooltip]:focus::after {
@@ -268,12 +303,12 @@ footer[next]{
 	}
 
 	#navigation {
-	display:block;
-	min-height:fit-content;
-	width:49%;
-	float:left;
-	margin-right:1%;
-	text-align:left;
+		display:block;
+		min-height:fit-content;
+		width:49%;
+		float:left;
+		margin-right:1%;
+		text-align:left;
 	}
 
 	math{

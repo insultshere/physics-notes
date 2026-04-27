@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>kinematics - projectiles</title>
 	<meta name="description" content="A compilation of physics notes">
@@ -9,10 +9,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>Projectiles</h1>
 <header>
+<h1>Projectiles</h1>
 <a href="index.html">< Return</a>
 </header>
+<main>
 <p>One common type of two-dimensional motion is <i>projectile motion,</i> where a particle (named a projectile) moves in the air.</p>
 <p>While there are two types of projectile motion, we choose to condense them into one general case. Projectile motion is the motion of a particle with an initial velocity, afterwards being only under <intext tabindex="0" tooltip="a fundamental force which pulls objects together">gravity</intext>.</p>
 <p>As we've seen, the motion of an object in two-dimensions can be separated into two parts; the x-component and the y-component. This can greatly simplify our approach to projectiles.</p>
@@ -34,12 +35,12 @@
 </article>
 
 <section class="examples">
-<h4>Question 1</h4>
+<h2>Question 1</h2>
 (LSM CQ4.7) Answer the following questions for projectile motion on level ground assuming negligible air resistance, with the initial angle being neither 0&deg; nor 90&deg;.<br>(a) Is the velocity ever zero?<br>(b) When is the velocity a minimum? A maximum?<br>(c) Can the velocity ever be the same as the initial
 velocity at a time other than at t = 0?<br>(d) Can the
 speed ever be the same as the initial speed at a
 time other than at t = 0? <br><br>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>As there is still a constant horizontal velocity, the velocity can never be zero, even at the apex, where the vertical velocity is zero. The velocity is at a minimum at the apex, as the vertical velocity is zero, and at a maximum at the start of the motion and the impact at the ground.</p>
 <p>The velocity at the start and at the impact differs as they have different directions. Meanwhile, the speed at the start and at the impact is the same. Recall that speed doesn't care about direction, so it only cares about magnitude.</p>
@@ -49,12 +50,12 @@ time other than at t = 0? <br><br>
 <p>For now, we analyze problems wherein there is no vertical velocity.</p>
 
 <section class="examples">
-<h4>Exercise 1</h4>
+<h2>Exercise 1</h2>
 (LSM P4.33) A bullet is shot horizontally from shoulder height (1.5 m) with an initial speed 200 m/s.<br>(a) How much time elapses before the bullet hits the
 ground? <br>(b) How far does the bullet travel horizontally?
 <figure><img src="images/proj4.svg" alt="">
 <figcaption>Exercise 1.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>There is no initial vertical velocity, so it is zero. We first need to know how long it takes to hit the ground, given the initial vertical position. The acceleration acting on the object is the gravitational acceleration, so we use that in our equation.</p>
 <article class="equations">
@@ -72,12 +73,12 @@ ground? <br>(b) How far does the bullet travel horizontally?
 </section>
 </section>
 <section class="examples">
-<h4>Exercise 2</h4>
+<h2>Exercise 2</h2>
 (HRK E4.13) A ball rolls off the edge of a horizontal tabletop, 4.23 ft (= 1.29m) high.
 It strikes the floor at a point 5.11 ft (= 1.56m) horizontally away from
 the edge of the table. <br>(a) For how long was the ball in the air?
 <br>(b) What was its speed at the instant it left the table?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We first need the time of flight, so we do the same thing as we did in the previous problem.</p>
 <article class="equations">
@@ -102,12 +103,12 @@ the edge of the table. <br>(a) For how long was the ball in the air?
 <p>This may change based on the problem, so be wary.</p>
 
 <section class="examples">
-<h4>Exercise 3</h4>
+<h2>Exercise 3</h2>
 (LSM E4.49a) An astronaut on Mars kicks a soccer ball at an angle of 45&deg; with an initial velocity of 15 m/s. If
 the acceleration of gravity on Mars is 3.7 m/s², what is the range of the soccer kick on a flat surface?
 <figure><img src="images/proj5.svg" alt="">
 <figcaption>Exercise 3.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We first need the initial horizontal and vertical velocity. Using trigonometry, we can get them quite easily.</p>
 <article class="equations">
@@ -157,9 +158,9 @@ the acceleration of gravity on Mars is 3.7 m/s², what is the range of the socce
 <p>One thing to note is that these equations <i>only work</i> if the floor is completely flat. Thankfully, most of our problems are on flat flooring.</p>
 
 <section class="examples" hard>
-<h4>Question 2</h4>
+<h2>Question 2</h2>
 (HRK Q4.13) A shot-putter heaves a shot from above ground level. The launch angle that will produce the longest range is less than 45°; that is, a flatter trajectory has a longer range. Explain why.<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>The reason why 45&deg; gives the highest range at flat floor is because it gives a balance to the horizontal and vertical velocity. With a given initial height, there need not be a balamce, as some of the vertical velocity can be substituted for horizontal velocity (given the height). Thus, the angle may be a little lower than 45&deg;.</p>
 </section>
@@ -167,10 +168,10 @@ the acceleration of gravity on Mars is 3.7 m/s², what is the range of the socce
 </section>
 <p>Here is a problem left for the most omniscient reader: Find the optimal angle for the farthest range given the initial height.</p>
 <section class="examples" hard>
-<h4>Problem 1</h4>
+<h2>Problem 1</h2>
 (HRK P4.8a) In Galileo’s Two New Sciences, the author states that “for elevations [angles of projection] which exceed or fall short of 45°
 by equal amounts, the ranges are equal.” Prove this statement.<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Since <math><mi>sin</mi><mi>(</mi><mi>2&theta;</mi><mi>)</mi></math> is symmetrical about 45&deg;, it follows that the range is symmetrical about 45&deg;. In other words, given an angle &theta;, the complement of that angle will also give the same range.
 <p>Mathematically,</p>
@@ -180,10 +181,10 @@ by equal amounts, the ranges are equal.” Prove this statement.<br><br>
 </section>
 </section>
 <section class="examples">
-<h4>Exercise 4</h4>
+<h2>Exercise 4</h2>
 (LSM P4.53) Drew Brees of the New Orleans Saints can throw a football 23.0 m/s (50 mph). If he angles the throw at 10&deg; from the horizontal, what distance
 does it go if it is to be caught at the same elevation as it was thrown?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>This is simply just the range of the projectile. We may use the formula we created.</p>
 <article class="equations">
@@ -194,10 +195,10 @@ does it go if it is to be caught at the same elevation as it was thrown?<br><br>
 </section>
 
 <section class="examples">
-<h4>Exercise 5</h4>
+<h2>Exercise 5</h2>
 (LSM P4.57) In 1999, Robbie Knievel was the first to jump the Grand Canyon on a motorcycle. At a narrow part of the canyon (69.0 m wide) and traveling 35.8
 m/s off the takeoff ramp, he reached the other side. What was his launch angle?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We are given the range and the initial velocity, and now we want the launch angle. To do this, we must use the inverse sine function. First, we solve for the sine.</p>
 <article class="equations">
@@ -212,12 +213,12 @@ m/s off the takeoff ramp, he reached the other side. What was his launch angle?<
 <p>We may also use a similar method to get the time until the maximum height, which is left as an exercise shown below.</p>
 
 <section class="examples" hard><mark variable></mark>
-<h4>Problem 2</h4>
+<h2>Problem 2</h2>
 (HRK E4.49a) Show that the maximum height reached by a projectile is
 <article class="equations">
 	<math><msub><mi>y</mi><mi>max</mi></msub><mo>=</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math>.
 </article><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Recall from our study of free falling objects that the maximum height is gained with velocity is zero. We use this fact again to get the time until the velocity is zero.</p>
 <article class="equations">
@@ -236,6 +237,7 @@ m/s off the takeoff ramp, he reached the other side. What was his launch angle?<
 <p>Which gives us the desired answer.</p>
 </section>
 </section>
+</main>
 <footer>
 <a href="circular-motion.html">Circular Motion ></a>
 </footer>

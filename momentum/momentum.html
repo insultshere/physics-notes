@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>momentum - momenta</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Momentum</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<main>
+<p>When Newton was writing his second Law of Motion, the Law of Acceleration, which we have used multiple times over, he wrote it not that a net force causes a change in an object's acceleration, but that a net force is the rate of change of an object's <i>momentum</i>.</p>
+<p>Of course, the more common version, <math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><mi>m</mi><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover></math>, is suitable for most of our problems. In fact, we solved an entire chapter based on its principle. However, to deal with problems involving collisions, we look back to his original definition.</p>
+<figure><img src="images/momentum1.svg" alt="">
+<figcaption>Force affects the rate of change of velocity.</figcaption></figure>
+<p>We define momentum as the following.</p>
+<article class="terms">
+	<mark>Momentum (<math><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover></math>)</mark> - a quantity of motion
+</article>
+<p>Moving objects have momentum. For example, a person walking has momentum. It is often said that objects with more momentum are harder to stop. For example, a moving boulder is much harder to stop than a snowball.</p>
+<p>This gives us two things which momentum is based off of; the velocity of the object, and the mass of the object. Recall that mass is a measure of inertia of an object; this aligns with what we know.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>m</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math>
+</article>
+<p>This equation gives us the numerical value for momentum, which is the product of mass and the velocity. Looking at the units, we have the following.</p>
+<article class="equations">
+	<math><mi>[</mi><mi>p</mi><mi>]</mi><mo>=</mo><mi>[</mi><mi>m</mi><mi>]</mi><mi>[</mi><mi>v</mi><mi>]</mi></math><br>
+	<math><mi>[</mi><mi>p</mi><mi>]</mi><mo>=</mo><mi>[kg]</mi><mi>[m/s]</mi></math>
+</article>
+<p>Unlike force which has the Newton, which is <math><mi>[kg]</mi><mi>[m/s²]</mi></math>, momentum doesn't have a specific unit.</p>
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(HRK E6.1a) How fast must an 816-kg Volkswagen travel to have the same
+momentum as a 2650-kg Cadillac going 16.0 km/h?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first convert the km/h to m/s.</p>
+<article class="equations">
+	<math><mi>16km/h</mi><mo>&#x22C5</mo><mfrac><mi>1000m</mi><mi>1km</mi></mfrac><mo>&#x22C5</mo><mfrac><mi>1h</mi><mi>3600s</mi></mfrac><mo>=</mo><mi>4.444m/s</mi></math>
+</article>
+<p>We need the velocity of the Volkswagen, and we know it is equal to the momentum of the Cadillac, so we set up the following equation. We use the subscript "V" and "C" for the two cars respectively.</p>
+<article class="equations">
+	<math><msub><mi>p</mi><mi>V</mi></msub><mo>=</mo><msub><mi>p</mi><mi>C</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>V</mi></msub><msub><mi>v</mi><mi>V</mi></msub><mo>=</mo><msub><mi>m</mi><mi>C</mi></msub><msub><mi>v</mi><mi>C</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>V</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>C</mi></msub><msub><mi>v</mi><mi>C</mi></msub></mrow><msub><mi>m</mi><mi>V</mi></msub></mfrac></math><br>
+</article>
+<p>We then substitute our values.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>V</mi></msub><mo>=</mo><mfrac><mrow><mi>(2650kg)</mi><mi>(4.444m/s)</mi></mrow><mi>(816kg)</mi></mfrac><mo>=</mo><mi>14.4m/s</mi></math><br>
+</article>
+</section>
+</section>
+<section class="examples">
+<h2>Exercise 2</h2>
+<p>(LSM P9.24) What is the average momentum of a 70.0-kg
+sprinter who runs the 100-m dash in 9.65 s?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first get the average velocity.</p>
+<article class="equations">
+<math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><mfrac><mrow><mi>&#x0394</mi><mi>x</mi></mrow><mrow><mi>&#x0394</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mi>100m</mi><mi>9.65s</mi></mfrac><mo>=</mo><mi>10.36m/s</mi></math>
+</article>
+<p>The average momentum is thus just the mass times the velocity of the runner.</p>
+<article class="equations">
+	<math><mi>p</mi><mo>=</mo><mi>m</mi><mi>v</mi></math><br>
+	<math><mi>p</mi><mo>=</mo><mi>(70.0kg)</mi><mi>(10.36m/s)</mi><mo>=</mo><mi>725.2 kg&sdot;m/s</mi></math>
+</article>
+</section>
+</section>
+<section class="examples"><mark custom></mark>
+<h2>Exercise 3</h2>
+<p>A 1.0kg rock is slung with a string in a radius of 1.0m, with a centripetal acceleration of 25m/s². What is the magnitude of its momentum?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first get the speed of the object. Recall that we only need the magnitude, so we only need the speed.</p>
+<article class="equations">
+	<math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>r</mi></mfrac></math><br>
+	<math><msqrt><mi>(</mi><msub><mi>a</mi><mi>c</mi></msub><mi>r</mi><mi>)</mi></msqrt><mo>=</mo><mi>v</mi></math>
+</article>
+<p>This gives us the speed is 5.0m/s. Now, the momentum is quite simple.</p>
+<article class="equations">
+	<math><mi>p</mi><mo>=</mo><mi>m</mi><mi>v</mi></math><br>
+	<math><mi>p</mi><mo>=</mo><mi>(1.0kg)</mi><mi>(5.0m/s)</mi><mo>=</mo><mi>5.0 kg&sdot;m/s</mi></math>
+</article>
+</section>
+</section>
+<p>Since we use velocity, momentum is also a vector. Momentum always points in the direction of where velocity points. For example, a ball going east has its momentum vector pointing towards east.</p>
+<figure><img src="images/momentum2.svg" alt="">
+<figcaption>Momentum points in the same direction as velocity.</figcaption></figure>
+<p>Further, since we use velocity, the reference frame is important to note. Usually, like before, we will choose to use a reference frame which is nearly stationary.</p>
+<section class="examples">
+<h2>Problem 1</h2>
+<p>(LSM P9.83) Two 70-kg canoers paddle in a single, 50-kg
+canoe. Their paddling moves the canoe at 1.2
+m/s with respect to the water, and the river
+they’re in flows at 4 m/s with respect to the
+land. What is their momentum with respect to
+the land? </p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first get the velocity of the canoers with respect to the land. Setting up the equation, we have the following.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>CL</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>CW</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>WL</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>CL</mi></msub><mo>=</mo><mi>(1.2m/s)</mi><mo>+</mo><mi>(4.0m/s)</mi></math><br>
+</article>
+<p>The momentum of the canoers is thus the two canoers' mass plus the mass of the canoe and their velocity.</p>
+<article class="equations">
+	<math><mi>p</mi><mo>=</mo><mi>m</mi><mi>v</mi></math><br>
+	<math><mi>p</mi><mo>=</mo><mi>(190kg)</mi><mi>(5.2m/s)</mi><mo>=</mo><mi>988N&sdot;s</mi></math>
+</article>
+</section>
+</section>
+</main>
+<footer>
+	<a unfinished> Momentum-Impulse Theorem ></a>
+</footer>
+</body>
+</html>

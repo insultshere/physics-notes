@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>momentum - integral</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>The Integral for Impulse</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<main>
+<p>We saw before that the area under the curve of force over time is the impulse. As we saw before, we know that we can mathematically represent this by taking the <intext tabindex="0" tooltip="the definite integral of a function gives the area under the graph">definite integral</intext> of the force with respect to time.</p>
+<p>Before using the integral, we first note some notation. First, the change in time &Delta;t is the same as the difference of the initial time and the final time, shown below.</p>
+<article class="equations">
+<math><mi>&#x0394</mi><mi>t</mi><mo>=</mo><mo>(</mo><msub><mi>t</mi><mi>f</mi></msub><mo>−</mo><msub><mi>t</mi><mi>0</mi></msub><mo>)</mo></math><br>
+</article>
+<p>Graphically, this corresponds to the starting point of our integral and the ending point of our integral.</p>
+<figure><img src="images/integral1.svg" alt="">
+<figcaption>The bounds of the integral is from the initial to final time.</figcaption></figure>
+<p>With this, we can now construct the integral. <i>The definite integral of force with respect to time over the initial time to the final time is the impulse.</i></p>
+<figure><img src="images/integral2.svg" alt="">
+<figcaption>The integral for impulse.</figcaption></figure>
+<p>This relation helps us deal with problems wherein the average force isn't given but a force-time graph is given. Of course, we need calculus here to use it.</p>
+<section hard class="examples"><mark custom></mark>
+<h2>Exercise 1</h2>
+<p>The force applied to an object of mass 5.00kg is given by the function <math><mi>F</mi><mi>(t)</mi><mo>=</mo><mi>3</mi><msup><mi>t</mi><mn>2</mn></msup></math>. The object starts at rest. <br>(a) What is the impulse generated after 3.00s?<br>(b) What is the final velocity of the object after 3.00s?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The impulse of a force can be zero. To see this, we equate both the equations for impulse, and see what needs to happen.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>ave</mi></msub><mi>&Delta;</mi><mi>t</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math><br>
+</article>
+<p>Now, since we are given that the force is not zero, and the mass certainly can't be zero, it implies that either the duration of the force &Delta;t or the change in velocity &Delta;v is zero. However, they both can't be zero either.</p>
+<p>The duration can't be zero, since that would imply that the force never happened. <br>However, the change in velocity can be zero. For example, in an object revolving around a circle, as it goes through one revolution, the centripetal force is nonzero; however, the velocity at the start and the end is the same; its change is zero.</p>
+</section>
+</section>
+</main>
+<footer>
+	<a href="momentum.html"> Momentum ></a>
+</footer>
+</body>
+</html>

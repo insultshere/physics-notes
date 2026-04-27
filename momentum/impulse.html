@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>momentum - impulse</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Impulse</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<main>
+<p>When we apply a force on something, we cause an acceleration, which changes its velocity.</p>
+<p>One thing we haven't noted is that we can vary the amount of time we apply force. A small force can do what a large force can do if we apply it for a long enough time.</p>
+<figure><img src="images/impulse1.svg" alt="">
+<figcaption>Force, and the amount of time it has been applied.</figcaption></figure>
+<p>For example, when we want to stop a car we are in, we can either apply a large amount of force over a short amount of time, or a small amount of force over a long amount of time. Both will lead to the same effect.</p>
+<article class="terms">
+	<mark>Impulse (<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover></math>)</mark> - a force applied over a time to change an object's velocity
+</article>
+<p>This definition of impulse shows us that force and the duration of when it is applied is interconnected in how the velocity changes; while a force causes acceleration, the acceleration needs time to change the velocity.</p>
+<p>However, one thing we need to note is that force doesn't need to be constant over that period of time. We saw this before with time-dependent forces. For example, we can push a box for a long time, but we will slowly start to weaken our push.</p>
+<figure><img src="images/impulse2.svg" alt="">
+<figcaption>Force over a period of time. It is rarely constant.</figcaption></figure>
+<p>To remedy this, we can use the average force instead. Because the average force over a period of time is constant, the acceleration is constant as well.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>ave</mi></msub><mo>=</mo><mi>m</mi><msub><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mi>ave</mi></msub></math>
+</article>
+<p>We can use the original equation we had for the average acceleration; which is the change in velocity over a period of time, which here is the duration of the force.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>ave</mi></msub><mo>=</mo><mi>m</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><msub><mi>F</mi><mi>ave</mi></msub><mrow><mi>&Delta;</mi><mi>t</mi></mrow><mo>=</mo><mi>m</mi><mrow><mi>&Delta;</mi><mi>v</mi></mrow></math>
+</article>
+<p>This gives us a relation between the average force, the duration of contact, and the change in velocity. We can equate the impulse to these two quantities, as shown below.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>ave</mi></msub><mi>&Delta;</mi><mi>t</mi></math><br>
+	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math><br>
+</article>
+<p>What are the units of impulse? We need only look at the second equation, which is mass times velocity, which is <math><mi>[kg]</mi><mi>[m/s]</mi></math>. We will use the first equation's units however, which is the <math><mi>[N]</mi><mi>[s]</mi></math>, or the Newton second.</p>
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q6.6) Can the impulse of a force be zero, even if the force is not
+zero? Explain why or why not.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The impulse of a force can be zero. To see this, we equate both the equations for impulse, and see what needs to happen.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>ave</mi></msub><mi>&Delta;</mi><mi>t</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math><br>
+</article>
+<p>Now, since we are given that the force is not zero, and the mass certainly can't be zero, it implies that either the duration of the force &Delta;t or the change in velocity &Delta;v is zero. However, they both can't be zero either.</p>
+<p>The duration can't be zero, since that would imply that the force never happened. <br>However, the change in velocity can be zero. For example, in an object revolving around a circle, as it goes through one revolution, the centripetal force is nonzero; however, the velocity at the start and the end is the same; its change is zero.</p>
+</section>
+</section>
+<section class="examples">
+<h2>Question 2</h2>
+<p>(HRK Q6.4) Explain how an airbag in an automobile may help to protect a
+passenger from serious injury in case of a collision.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>An airbag helps protect a passenger by increasing the time of contact, thereby increasing &Delta;t. To balance out this increase of &Delta;t, the average force must lower, which means there is a less amount of force that will be applied to the person.</p>
+</section>
+</section>
+<p>Usually, it isn't useful to get the impulse directly. Instead, we use the fact that we have two equations for the impulse to solve problems.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>ave</mi></msub><mrow><mi>&Delta;</mi><mi>t</mi></mrow><mo>=</mo><mi>m</mi><mrow><mi>&Delta;</mi><mi>v</mi></mrow></math>
+</article>
+<p>The above equation is quite powerful, as it can help us deal with some problems with collisions.</p>
+<section class="examples"><mark custom variable></mark>
+<h2>Exercise 1</h2>
+<p>An object has a constant force being applied to it over a certain time, causing a change in its velocity. What is the effect on the strength of the force in the following situations, given the impulse is kept constant across all situations: <br>(a) &Delta;t is tripled<br>(a) &Delta;v is halved<br>(c) &Delta;v is doubled, and &Delta;t is halved</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first rearrange the equation to get force all on one side.</p>
+<article class="equations">
+	<math><mi>F</mi><mo>=</mo><mi>m</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math>
+</article>
+<p>We can see that if we increase the time, the force decreases; it has an inverse relationship. If we increase the change in velocity, the force increases; it has a direct relationship.</p>
+<p>Thus for the following problems, we have the following.</p><ul>
+	<li>If &Delta;t is tripled, the force is cut in three (1/3x)</li>
+	<li>If &Delta;v is halved, force is also cut in half (1/2x).</li>
+	<li>If &Delta;v is doubled and &Delta;t is halved, it is overall quadrupled (4x), as it is doubled twice.</li>
+</ul>
+</section>
+</section>
+<section class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E6.4) The bumper of a new car is being tested. The 2300-kg vehicle, moving at 15 m/s, is allowed to collide with a bridge
+abutment, being brought to rest in a time of 0.54 s. Find the
+average force that acted on the car during impact.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Noting that the car goes from 15m/s to rest, we have the change in velocity, which is 15m/s. Thus, we have enough information. Rearranging, we have the following force.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>ave</mi></msub><mo>=</mo><mi>m</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>(2300kg)</mi><mfrac><mi>(15m/s)</mi><mi>(0.54s)</mi></mfrac><mo>=</mo><mi>64000N</mi></math><br>
+</article>
+</section>
+</section>
+<section hard class="examples">
+<h2>Exercise 3</h2>
+<p>(HRK E6.8) A force that averages 984 N is applied to a 420-g steel ball
+moving at 13.8 m/s by a collision lasting 27.0 ms. If the force
+is in a direction opposite to the initial velocity of the ball, find
+the final speed of the ball.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Noting that 27.0ms is 0.027s, it seems we have enough. However, we need to find the final speed instead. To do this, we break the change in velocity to what we used before, which is that its the final velocity minus the initial velocity.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</article>
+<p>We now solve for the final velocity.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>ave</mi></msub><mrow><mi>&Delta;</mi><mi>t</mi></mrow><mo>=</mo><mi>m</mi><mrow><mi>&Delta;</mi><mi>v</mi></mrow></math><br>
+	<math><mfrac><mrow><msub><mi>F</mi><mi>ave</mi></msub><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mrow><mi>m</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+	<math><mfrac><mrow><msub><mi>F</mi><mi>ave</mi></msub><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mrow><mi>m</mi></mfrac><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub></math><br>
+</article>
+<p>Now, since the force is in the opposite direction of the velocity of the ball, we set it as negative. We then substitute.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(&minus;984N)</mi><mi>(0.027s)</mi></mrow><mi>(0.420kg)</mi></mfrac><mo>+</mo><mi>(13.8m/s)</mi><mo>&approx;</mo><mi>&minus;49.5m/s</mi><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub></math><br>
+</article>
+<p>This is great, however we need the speed. Thus, we just take the magnitude of the velocity, so the speed is 49.5m/s.</p>
+</section>
+</section>
+<!--
+<section hard class="examples"><mark custom></mark>
+<h2>Problem 1</h2>
+<p>An important value in sports is that of the airtime, or the amount of time in air, of an athlete. An airtime of 1.0s is near-impossible to have. How much force must a 70.0-kg athlete impart on the floor for 0.30s to achieve such a feat, starting from rest?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Noting that 27.0ms is 0.027s, it seems we have enough. However, we need to find the final speed instead. To do this, we break the change in velocity to what we used before, which is that its the final velocity minus the initial velocity.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</article>
+<p>We now solve for the final velocity.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>ave</mi></msub><mrow><mi>&Delta;</mi><mi>t</mi></mrow><mo>=</mo><mi>m</mi><mrow><mi>&Delta;</mi><mi>v</mi></mrow></math><br>
+	<math><mfrac><mrow><msub><mi>F</mi><mi>ave</mi></msub><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mrow><mi>m</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+	<math><mfrac><mrow><msub><mi>F</mi><mi>ave</mi></msub><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mrow><mi>m</mi></mfrac><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub></math><br>
+</article>
+<p>Now, since the force is in the opposite direction of the velocity of the ball, we set it as negative. We then substitute.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(&minus;984N)</mi><mi>(0.027s)</mi></mrow><mi>(0.420kg)</mi></mfrac><mo>+</mo><mi>(13.8m/s)</mi><mo>&approx;</mo><mi>&minus;49.5m/s</mi><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub></math><br>
+</article>
+<p>This is great, however we need the speed. Thus, we just take the magnitude of the velocity, so the speed is 49.5m/s.</p>
+</section>
+</section>
+-->
+</main>
+<footer>
+	<a href="force-time-graphs.html"> Force-Time Graphs ></a>
+</footer>
+</body>
+</html>

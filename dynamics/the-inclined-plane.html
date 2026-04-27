@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>dynamics - inclined</title>
 	<meta name="description" content="A compilation of physics notes">
@@ -13,6 +13,7 @@
 <header>
 <a href="index.html">< Return</a>
 </header>
+<main>
 <p>Previously, we learned how to deal with forces at an angle. Now, we deal with surfaces at an angle.</p>
 <p>Generally, these are called inclined planes.</p>
 <figure><img src="images/inclined1.svg" alt="">
@@ -29,11 +30,11 @@
 <figure><img src="images/inclined4.svg" alt="">
 <figcaption>The free body diagram in the original coordinate system.</figcaption></figure>
 <section class="examples" hard> <mark custom variable></mark>
-<h4>Problem 1</h4>
+<h2>Problem 1</h2>
 Observe the box on an inclined plane below. Show that <math><mi>x</mi><mo>=</mo><mi>&theta;</mi></math>.
 <figure><img src="images/inclined5.svg" alt="">
 <figcaption>Problem 1.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Since the interior angles of a triangle add up to 180&deg;, we can solve for the value of &phi;.</p>
 <article class="equations">
@@ -56,13 +57,13 @@ Observe the box on an inclined plane below. Show that <math><mi>x</mi><mo>=</mo>
 <p>The above problem shows another problem that you may face. Be careful with which sides have what angles. Since the trigonometric equations (specifically here sine and cosine) specify which side is the opposite and adjacent side, you should take note of this and use the right trigonometric equation.</p>
 <p>Here is then our strategy for dealing with these problems; first, we tilt our coordinate system to be parallel to the incline, then deal with everything else as if they were forces at an angle.</p>
 <section class="examples"> <mark custom></mark>
-<h4>Exercise 1</h4>
+<h2>Exercise 1</h2>
 A 5.0kg box is placed on a frictionless inclined plane, angled at 30.0&deg;. 
 <br>(a) What is the acceleration of the box?
 <br>(b) What is the magnitude of the normal force?
 <figure><img src="images/inclined6.svg" alt="">
 <figcaption>Exercise 1.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Tilting the coordinate system, we see that the horizontal weight corresponds to the acceleration of the box along the inclined plane, and the vertical weight pushes on the surface, causing the normal force.</p>
 <figure><img src="images/inclined7.svg" alt="">
@@ -85,11 +86,11 @@ A 5.0kg box is placed on a frictionless inclined plane, angled at 30.0&deg;.
 </section>
 </section>
 <section class="examples">
-<h4>Exercise 2</h4>
+<h2>Exercise 2</h2>
 (LSM P5.66) What force must be applied to a 100.0-kg crate
 on a frictionless plane inclined at 30&deg; to cause
 an acceleration of 2.0m/s² up the plane?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>There are two horizontal forces acting in the tilted coordinate system; the force being applied, and the horizontal weight, which we set as negative as it pulls the crate down. Solving, we have the following.</p>
 <article class="equations">
@@ -103,13 +104,13 @@ an acceleration of 2.0m/s² up the plane?<br><br>
 </section>
 <p>Of course, inclined planes usually have friction as well. Since friction points perpendicular to the normal force, it points parallel to the surface; thus, there usually isn't any need to decompose friction.</p>
 <section class="examples">
-<h4>Exercise 3a</h4>
+<h2>Exercise 3a</h2>
 (HRK P5.5a) A 7.96-kg block rests on a plane inclined at 22.0° to the horizontal. The coefficient of static friction
 is 0.25. What minimum force, parallel to the plane, will
 prevent the block from slipping down the plane?
 <figure><img src="images/inclined8.svg" alt="">
 <figcaption>Exercise 5.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Before dealing with the horizontal forces, let's deal with the vertical forces, which balance out. Thus, the net vertical force, consisting of the normal force and the vertical weight, looks like this.</p>
 <article class="equations">
@@ -130,10 +131,10 @@ prevent the block from slipping down the plane?
 </section>
 </section>
 <section class="examples">
-<h4>Exercise 3b</h4>
+<h2>Exercise 3b</h2>
 (HRK P5.5b) What minimum force will start the block moving up the
 plane in the previous exercise?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Here, the friction is now an opposing force; it attempts to keep the block from moving up. Thus, now we set it as negative. We use the same procedures as last time.</p>
 <article class="equations">
@@ -146,13 +147,13 @@ plane in the previous exercise?<br><br>
 </section>
 </section>
 <section class="examples"> <mark variable></mark>
-<h4>Problem 2</h4>
+<h2>Problem 2</h2>
 (LSM P6.53) Show that the acceleration of any object down
 an incline with friction is given by this equation.
 <article class="equations">
 	<math><mi>a</mi><mo>=</mo><mi>g</mi><mi>(</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mi>)</mi></math>
 </article>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We note two forces which cause acceleration; the kinetic friction, and the weight of the object. Here, it is best to set the weight as positive and the kinetic friction as negative as this force attempts to stop the object from going down the plane.</p>
 <p>Thus, we can write out this equation. Another thing to note is that the normal force has the same magnitude as the vertical weight, so we substitute that in as well.</p>
@@ -175,12 +176,12 @@ an incline with friction is given by this equation.
 <figure><img src="images/inclined9.svg" alt="">
 <figcaption>Forces in our original coordinate system become angled forces.</figcaption></figure>
 <section class="examples">
-<h4>Exercise 4</h4>
+<h2>Exercise 4</h2>
 (HRK E4.10) A 110-kg crate is pushed at constant speed up the frictionless
 34° ramp. What is the magnitude of horizontal force shown?
 <figure><img src="images/inclined10.svg" alt="">
 <figcaption>Exercise 5.</figcaption></figure>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>To keep the box moving at constant speed, the horizontal forces (in the titled reference plane) have to cancel out to zero. The only net forces in the horizontal direction is the horizontal weight and the horizontal component of the force.</p>
 <p>Looking at the figure, we see that the horizontal force is adjacent to the angle, so we use cosine.</p>
@@ -197,10 +198,10 @@ an incline with friction is given by this equation.
 </section>
 </section>
 <section class="examples" hard>
-<h4>Exercise 5</h4>
+<h2>Exercise 5</h2>
 (HRK E5.23a) A 4.8-kg block on a 39° inclined plane is acted on by a horizontal force of 46 N. The coefficient of kinetic friction between block and plane is 0.33. What is
 the acceleration of the block if it is moving up the plane?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>The horizontal force exerts a vertical and horizontal component in our tilted coordinate system. The vertical component adds on to the normal force, so we compute that first. The vertical component is opposite to the angle, so we use sine.</p>
 <article class="equations">
@@ -220,16 +221,16 @@ the acceleration of the block if it is moving up the plane?<br><br>
 </section>
 </section>
 <section class="examples">
-<h4>Question 1</h4>
+<h2>Question 1</h2>
 (HRK Q5.6) Why do tires grip the road better on level ground than they do when going uphill or downhill?<br><br>
-<h4>Answer<button onclick="toggle(this)">v</button></h4>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>The normal force on an inclined plane is based on the angle of the incline; this usually causes it to be less than if the surface was completely level.</p>
 </section>
 </section>
 <p>To end this flyby of the inclined plane, let's try some problems which require the use of kinematics. The kinematics part is usually just some algebraic manipulation and plugging, like the dessert after the main course.</p>
 <section class="examples">
-<h4>Problem 3</h4>
+<h2>Problem 3</h2>
 (HRK E5.19) Frictional heat generated by the moving ski is the chief factor
 promoting sliding in skiing. The ski sticks at the start, but
 once in motion will melt the snow beneath it. Waxing the ski
@@ -239,7 +240,7 @@ even more water repellent and that, on a gentle 203-m slope
 in the Alps, a skier reduced his time from 61 to 42 s with the
 new skis. Assuming a 3.0° slope, compute the coefficient of
 kinetic friction for each case.<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We don't know the mass, so let's set it as <math><mi>M</mi></math>. Then, the net horizontal force is the horizontal weight and the kinetic friction.</p>
 <article class="equations">
@@ -266,11 +267,11 @@ kinetic friction for each case.<br><br>
 </section>
 </section>
 <section class="examples" hard> <mark variable></mark>
-<h4>Problem 4</h4>
+<h2>Problem 4</h2>
 (HRK E5.20) A block slides down an inclined plane of slope angle &theta; with
 constant velocity. It is then projected up the same plane with
 an initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>. <br>(a) How far up the incline will it move before coming to rest, given &theta; and initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>? <br>(b) Will it slide down again?<br><br>
-<h4>Solution<button onclick="toggle(this)">v</button></h4>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Given that the block slides down at constant velocity, that means that they have the same magnitude.</p>
 <article class="equations">
@@ -294,6 +295,7 @@ an initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>. <br>(a) How 
 <p>This is our answer. For the second question; no, as once it ends at rest, the kinetic friction and horizontal weight will balance out, causing no acceleration, and thus no movement (since the object is now at rest).</p>
 </section>
 </section>
+</main>
 <footer>
 	<a href="tension.html"> Tension ></a>
 </footer>

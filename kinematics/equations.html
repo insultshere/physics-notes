@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>kinematics - equations</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
-	<style>#navigation {display:block;height:auto;width:50%;float:left;counter-reset: count 0;}#navigation > nav[reset] {counter-reset: count 0;}#navigation > nav {width:100%;margin-bottom:0.5em;}navlink {display:flex;text-align:left;counter-increment: count 1;}navlink::before {content:"(" counter(count,decimal) ")";float:left;margin-right:0.2em;}navlink[lower-alpha]::before {	content:"(" counter(count,lower-alpha) ")";	float:left;	margin-right:0.2em;}</style>
+	<style>:root {--redtowhite: linear-gradient(to right, #F5EAEA, #fff); --graytowhite: linear-gradient(to right, #eee, #fff, #fff); --invis: rgba(0,0,0,0);} #navigation {display:block;height:auto;width:50%;float:left;counter-reset: count 0;}#navigation > nav[reset] {counter-reset: count 0;}#navigation > nav {width:100%;margin-bottom:0.5em;}navlink {display:flex;text-align:left;counter-increment: count 1;}navlink::before {content:"(" counter(count,decimal) ")";float:left;margin-right:0.2em;}navlink[lower-alpha]::before {	content:"(" counter(count,lower-alpha) ")";	float:left;	margin-right:0.2em;} p[warn]{background-color: var(--invis);background-image: var(--redtowhite);} h2{background-color: var(--invis);background-image: var(--graytowhite);}</style>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>Equations</h1>
 <header>
+<h1>Equations</h1>
 <a href="index.html">< Return</a>
 </header>
+<main>
 <p>Below is a list of useful equations for Kinematics.</p>
 <div style="display: flex" >
 <div id="navigation">
-<h4 style="margin-top:1em">Definitions</h4>
+<h2 style="margin-top:1em">Definitions</h2>
 <article class="equations">
 <math><mrow><mi>v</mi><mi>&#773;</mi></mrow><mo>=</mo><mfrac><mrow><mi>&#x0394</mi><mi>x</mi></mrow><mrow><mi>&#x0394</mi><mi>t</mi></mrow></mfrac></math><br>
 <math><mrow><mi>a</mi><mi>&#773;</mi></mrow><mo>=</mo><mfrac><mrow><mi>&#x0394</mi><mi>v</mi></mrow><mrow><mi>&#x0394</mi><mi>t</mi></mrow></mfrac></math>
 </article>
-<h4 style="margin-top:1em">UAM Equations</h4>
+<h2 style="margin-top:1em">UAM Equations</h2>
 <p>This is given acceleration is constant.</p>
 <article class="equations">
 	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><mi>v</mi><mi>&#773;</mi><msub><mi>t</mi></msub></math><br>
@@ -31,7 +32,7 @@
 </article>
 </div>
 <div id="navigation">
-<h4 style="margin-top:1em">Projectiles</h4>
+<h2 style="margin-top:1em">Projectiles</h2>
 <p>These work only if it is on a flat surface.</p>
 <article class="equations">
 	<math><msub><mi>T</mi><mi>tof</mi></msub><mo>=</mo><mfrac><mrow><mi>2</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac></math><br>
@@ -39,7 +40,7 @@
 	<math><msub><mi>T</mi><mi>max</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac></math><br>
 	<math><msub><mi>y</mi><mi>max</mi></msub><mo>=</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math>
 </article>
-<h4 style="margin-top:1em">Circular Motion</h4>
+<h2 style="margin-top:1em">Circular Motion</h2>
 <article class="equations">
 	<math><mi>T</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi><mi>r</mi></mrow><mi>v</mi></mfrac></math><br>
 	<math><mi>&omega;</mi><mo>=</mo><mfrac><mrow><mi>2</mi><mi>&pi;</mi></mrow><mi>T</mi></mfrac><mo>=</mo><mi>v</mi><mi>r</mi></math><br>
