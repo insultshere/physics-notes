@@ -100,6 +100,10 @@ figure > img {
 	min-width: 35%;
 }
 
+figure[grayout] > img {
+	filter: grayscale(1)
+}
+
 figure > figcaption {
 	color:var(--darkred);
 	font-size:0.85em;
@@ -166,6 +170,14 @@ mark[variable]::before {
 	rotate: -90deg;
 }
 
+mark[calc]::before {
+	display:block;
+	content:url(icons/calc.svg);
+	width:1.1em;
+	height:1.1em;
+	float:right;
+}
+
 /* terms and equations */
 
 .terms > mark {
@@ -184,10 +196,6 @@ mark[variable]::before {
 	background-image: var(--redtowhite)
 }
 
-math {
-    math-style: normal;
-}
-
 .equations {
 	text-align:center;
 	display:block;
@@ -195,14 +203,23 @@ math {
 	width:100%;
 	overflow-x:auto;
 	overflow-y:hidden;
+	cursor: default;
+}
+
+math {
+    math-style: normal;
 }
 
 math:has(mfrac) {
-	margin: 0.3em 0 0.3em 0
+	margin: 0.15em 0 0.15em 0
 }
 
 main > .equations {
 	color:var(--darkred);
+}
+
+main > .equations > math:hover {
+	color:var(--focusred);
 }
 
 /* links */
@@ -247,7 +264,7 @@ intext[tooltip]:focus::after {
   content: attr(tooltip);
   position: absolute;
   left: 0px;
-  width: 8em;
+  width: 10em;
   text-align:left;
   border: 2px var(--focusred) solid;
   border-radius: 3px;
@@ -313,7 +330,6 @@ footer[next]{
 
 	math{
 		font-size:1em;
-		font-family:Georgia, 'Times New Roman', Times, serif
 	}
 }
 

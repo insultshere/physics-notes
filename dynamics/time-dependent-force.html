@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>dynamics - timedepend</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Time-Dependent Force</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<main>
+<p>We ended off our tour of kinematics with circular motion and variable acceleration, or what we described as jerk. Now, we end our tour of dynamics with revisiting circular motion and variable force.</p>
+<p>Let's analyze the Law of Acceleration again, but instead we will let acceleration be a function of time; in other words, acceleration will vary over time. With this, force now depends on time, as well.</p>
+<article class="equations">
+	<math><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>m</mi><mn>a</mn><mi>(</mi><mi>t</mi><mi>)</mi></math>
+</article>
+<p>This is nice and all, but usually we want to get the position of an object over time. Thus, we rearrange to get the acceleration.</p>
+<article class="equations">
+	<math><mfrac><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>m</mi></mfrac><mo>=</mo><mn>a</mn><mi>(</mi><mi>t</mi><mi>)</mi></math>
+</article>
+<p>This is promising. Recall from our study of kinematics that acceleration is the derivative of velocity, so we substitute that in for the acceleration function.</p>
+<article class="equations">
+	<math><mfrac><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>m</mi></mfrac><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi>v</mi></math><br>
+	<math><mfrac><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>m</mi></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><mi>d</mi><mi>v</mi></math>
+</article>
+<p>We now integrate both sides. Since we generally want the velocity at any time <math><mi>t</mi></math>, we integrate from <math><mi>t</mi><mo>=</mo><mi>0</mi></math> to our chosen time. The right side also has the same treatment, going from the initial velocity to the velocity at the time we want.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mfrac><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>m</mi></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><munderover><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mi>d</mi><mi>v</mi></math><br>
+	<math><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mfrac><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>m</mi></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><munderover><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mi>d</mi><mi>v</mi></math><br>
+	<math><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mfrac><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>m</mi></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><mi>v</mi><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</article>
+<p>Here, we will make the assumption that the mass is constant. Of course, in more complicated systems, it isn't, but here it is a good enough approximation.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mo>&sdot;</mo><mfrac><mi>1</mi><mi>m</mi></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><mi>v</mi><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>d</mi><mi>t</mi><mo>=</mo><mi>v</mi><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>We can integrate this again to get the position, however we will leave that for an exercise below.</p>
+<section class="examples"><mark calc></mark>
+<h2>Exercise 1</h2>
+(HRK E5.48c) The position of a particle of mass 2.17 kg traveling in a
+straight line is given by the following equation.
+<article class="equations">	<math><mi>x</mi><mo>=</mo><mo>(</mo><mi>0.179</mi><mi>m/s⁴</mi><mo>)</mo><msup><mi>t</mi><mn>4</mn></msup><mo>&minus;</mo><mo>(</mo><mi>2.08</mi><mi>m/s&sup2;</mi><mo>)</mo><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mo>(</mo><mi>17.1</mi><mn>m</mn><mo>)</mo></math></article>
+Find the force on the particle at time <math><mi>t</mi><mo>=</mo><mi>7.18s</mi></math>. <br><br>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will first differentiate the position function to get the velocity and acceleration function. We will first drop all the units, but keep them in mind for later.</p>
+<article class="equations">	
+	<math><mi>v</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>(</mo><mi>0.179</mi><msup><mi>t</mi><mn>4</mn></msup><mo>&minus;</mo><mi>2.08</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>17.1</mi><mo>)</mo></math><br>
+	<math><mi>v</mi><mo>=</mo><mi>0.716</mi><msup><mi>t</mi><mn>3</mn></msup><mo>&minus;</mo><mi>4.16</mi><mi>t</mi></math>
+</article>
+<p>Again, we differentiate to get acceleration.</p>
+<article class="equations">	
+	<math><mi>a</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>(</mo><mi>0.716</mi><msup><mi>t</mi><mn>3</mn></msup><mo>&minus;</mo><mi>4.16</mi><mi>t</mi><mo>)</mo></math><br>
+	<math><mi>a</mi><mo>=</mo><mi>2.148</mi><msup><mi>t</mi><mn>2</mn></msup><mo>&minus;</mo><mi>4.16</mi></math>
+</article>
+<p>Now, we can substitute the time value here and multiply it with the mass, but we'll just get the force equation instead. Noting the Law of Acceleration, we have this.</p>
+<article class="equations">
+	<math><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>m</mi><mn>a</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>(2.17)</mi><mo>(</mo><mi>2.148</mi><msup><mi>t</mi><mn>2</mn></msup><mo>&minus;</mo><mi>4.16</mi><mo>)</mo></math><br>
+	<math><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>4.661</mi><msup><mi>t</mi><mn>2</mn></msup><mo>&minus;</mo><mi>9.027</mi></math>
+</article>
+<p>As we substitute, we get that the force is 231N.</p>
+</section>
+</section>
+<p>You may be surprised on the equations below. Here, the <intext tabindex="0" tooltip="a tool for integrals of polynomial functions">power rule</intext> may not be as useful. Instead, you may have to use other laws for integrals. You may also need to consult a table of integrals.</p>
+<section class="examples"><mark calc></mark>
+<h2>Exercise 2a</h2>
+<p>(HRK E5.49a) A particle is subjected to a net force given by <math><mn>F</mn><mo>=</mo><msub><mi>F</mi><mn>0</mn></msub><mo>(</mo><mi>1</mi><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac><mo>)</mo></math>. </p>
+<p>Show that at the instant the force vanishes at <math><mi>t</mi><mo>=</mo><mi>T</mi></math>, the speed of the particle is given by <math><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mo>+</mo><mfrac><mrow><msub><mi>a</mi><mi>0</mi></msub><mi>T</mi></mrow><mn>2</mn></mfrac></math>, where <math><mi>T</mi></math>, <math><msub><mi>v</mi><mi>0</mi></msub></math>, <math><msub><mi>F</mi><mi>0</mi></msub></math>, and <math><mi>m</mi></math> are constants where <math><msub><mi>a</mi><mi>0</mi></msub><mo>=</mo><mfrac><msub><mi>F</mi><mi>0</mi></msub><mi>m</mi></mfrac></math>.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will use the equation we made above.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mrow><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>We first substitute in the function for the force, and take out all the constants. We also note that <math><msub><mi>a</mi><mi>0</mi></msub><mo>=</mo><mfrac><msub><mi>F</mi><mi>0</mi></msub><mi>m</mi></mfrac></math>, so we substitute that in.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><msub><mi>F</mi><mn>0</mn></msub><mo>(</mo><mi>1</mi><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac><mo>)</mo><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mo>(</mo><mi>1</mi><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac><mo>)</mo><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mi>1</mi><mi>d</mi><mi>t</mi><mo>&minus;</mo><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mfrac><mi>t</mi><mi>T</mi></mfrac><mi>d</mi><mi>t</mi><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mi>d</mi><mi>t</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>T</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mi>t</mi><mi>d</mi><mi>t</mi><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>We now evaluate the two integrals.</p>
+<article class="equations">
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mi>t</mi><munderover><mo>|</mo><mn>0</mn><mi>t</mi></munderover><mo>&minus;</mo><mfrac><mi>1</mi><mi>T</mi></mfrac><mfrac><msup><mi>t</mi><mn>2</mn></msup><mi>2</mi></mfrac><munderover><mo>|</mo><mn>0</mn><mi>t</mi></munderover><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mi>[</mi><mi>t</mi><mo>&minus;</mo><mi>0</mi><mi>]</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>T</mi></mfrac><mi>[</mi><mfrac><msup><mi>t</mi><mi>2</mi></msup><mi>2</mi></mfrac><mo>&minus;</mo><mi>0</mi><mi>]</mi><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mi>t</mi><mo>&minus;</mo><mfrac><msup><mi>t</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>T</mi></mrow></mfrac><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>Now, we set <math><mi>t</mi><mo>=</mo><mi>T</mi></math>.</p>
+<article class="equations">
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mi>T</mi><mo>&minus;</mo><mfrac><msup><mi>T</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>T</mi></mrow></mfrac><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mi>T</mi><mo>&minus;</mo><mfrac><mi>T</mi><mrow><mi>2</mi></mrow></mfrac><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+	<math><mfrac><mrow><msub><mi>a</mi><mi>0</mi></msub><mi>T</mi></mrow><mrow><mi>2</mi></mrow></mfrac><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+</article>
+<p>This gives us the required equation.</p>
+</section>
+</section>
+<section class="examples"><mark calc></mark>
+<h2>Exercise 2b</h2>
+<p>(HRK E5.49b) Let the initial position of the particle be <math><msub><mi>x</mi><mi>0</mi></msub><mo>=</mo><mi>0</mi></math>. Thus, show that at <math><mi>t</mi><mo>=</mo><mi>T</mi></math>, the position of the particle is given by <math><mi>x</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub><mi>T</mi><mo>+</mo><mfrac><mrow><msub><mi>a</mi><mi>0</mi></msub><msup><mi>T</mi><mi>2</mi></msup></mrow><mn>3</mn></mfrac></math>.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will differentiate the general equation we got for the velocity.</p>
+<article class="equations">
+	<math><mo>&int;</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><mo>&int;</mo><mo>(</mo><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mi>t</mi><mo>&minus;</mo><mfrac><msup><mi>t</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>T</mi></mrow></mfrac><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo><mi>d</mi><mi>t</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><mo>&int;</mo><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mi>t</mi><mo>&minus;</mo><mfrac><msup><mi>t</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>T</mi></mrow></mfrac><mo>)</mo><mi>d</mi><mi>t</mi><mo>+</mo><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>d</mi><mi>t</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mo>&int;</mo><mo>(</mo><mi>t</mi><mo>&minus;</mo><mfrac><msup><mi>t</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>T</mi></mrow></mfrac><mo>)</mo><mi>d</mi><mi>t</mi><mo>)</mo><mo>+</mo><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>d</mi><mi>t</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mo>&int;</mo><mi>t</mi><mi>d</mi><mi>t</mi><mo>&minus;</mo><mo>&int;</mo><mfrac><msup><mi>t</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>T</mi></mrow></mfrac><mi>d</mi><mi>t</mi><mo>)</mo><mo>+</mo><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>d</mi><mi>t</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>We now integrate.</p>
+<article class="equations">
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mfrac><msup><mi>t</mi><mi>2</mi></msup><mi>2</mi></mfrac><mo>&minus;</mo><mfrac><msup><mi>t</mi><mi>3</mi></msup><mrow><mi>6</mi><mi>T</mi></mrow></mfrac><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>Now, we set <math><mi>t</mi><mo>=</mo><mi>T</mi></math>.</p>
+<article class="equations">
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mfrac><msup><mi>T</mi><mi>2</mi></msup><mi>2</mi></mfrac><mo>&minus;</mo><mfrac><msup><mi>T</mi><mi>3</mi></msup><mrow><mi>6</mi><mi>T</mi></mrow></mfrac><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>T</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mfrac><msup><mi>3T</mi><mi>2</mi></msup><mi>6</mi></mfrac><mo>&minus;</mo><mfrac><msup><mi>T</mi><mi>2</mi></msup><mrow><mi>6</mi></mrow></mfrac><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>T</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+	<math><msub><mi>a</mi><mi>0</mi></msub><mo>(</mo><mfrac><msup><mi>2T</mi><mi>2</mi></msup><mi>6</mi></mfrac><mo>)</mo><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>T</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+	<math><mfrac><mrow><msub><mi>a</mi><mi>0</mi></msub><msup><mi>T</mi><mi>2</mi></msup></mrow><mi>3</mi></mfrac><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>T</mi><mo>=</mo><mn>x</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+</article>
+<p>This gives us the required equation.</p>
+</section>
+</section>
+<p>Below is a helpful tidbit for the hard exercise below.</p>
+<article class="equations">
+	<math><mo>&int;</mo><msup><mi>e</mi><mi>x</mi></msup><mi>d</mi><mi>x</mi><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><mi>C</mi></math>
+</article>
+<p>You may also need to use a technique called <intext tabindex="0" tooltip="a technique wherein one lets a portion of an integral as another variable and changes the variable of integration to that variable">u-substitution</intext>. Another technique you can use is the chain rule, however the solution below will use u-sub.</p>
+<section class="examples" hard><mark calc></mark>
+<h2>Exercise 3</h2>
+<p>(HRK P5.20a) A force given by <math><mn>F</mn><mo>=</mo><msub><mi>F</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac></mrow></msup></math> is applied to a particle of mass <math><mi>m</mi></math> initially at rest. 
+When <math><mi>t</mi><mo>=</mo><mi>T</mi></math>, the force is removed. At this instance, what is the speed of the particle in terms of the constants <math><msub><mi>F</mi><mn>0</mn></msub></math>, <math><mi>T</mi></math>, and <math><mi>m</mi></math>?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will use the equation we concocted above.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mrow><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>Let's first substitute the force in. We also drop the initial velocity, seeing as it is at rest. Then, we take out the constant <math><msub><mn>F</mn><mn>0</mn></msub></math>.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><msub><mi>F</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac></mrow></msup><mi>d</mi><mi>t</mi><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><mfrac><msub><mi>F</mi><mn>0</mn></msub><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><msup><mi>e</mi><mrow><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac></mrow></msup><mi>d</mi><mi>t</mi><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>To solve the integral, we will use u-substitution. Here, setting <math><mi>u</mi><mo>=</mo><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac></math>.</p>
+<article class="equations">
+	<math><mi>u</mi><mo>=</mo><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac></math><br>
+	<math><mi>d</mi><mi>u</mi><mo>=</mo><mo>&minus;</mo><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mi>T</mi></mfrac></math><br>
+	<math><mo>&minus;</mo><mi>T</mi><mi>d</mi><mi>u</mi><mo>=</mo><mi>d</mi><mi>t</mi></math><br>
+</article>
+<p>Substituting back in, we have this. We also take out the constants brought by our u-substitution.</p>
+<article class="equations">
+	<math><mfrac><msub><mi>F</mi><mn>0</mn></msub><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><msup><mi>e</mi><mi>u</mi></msup><mi>(</mi><mo>&minus;</mo><mi>T</mi><mi>d</mi><mi>u</mi><mi>)</mi><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>T</mi><msub><mi>F</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><msup><mi>e</mi><mi>u</mi></msup><mi>d</mi><mi>u</mi><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>Finally, we can evaluate this integral.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mfrac><mrow><mi>T</mi><msub><mi>F</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac><msup><mi>e</mi><mi>u</mi></msup><munderover><mo>|</mo><mi>0</mi><mi>t</mi></munderover><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>T</mi><msub><mi>F</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac><msup><mi>e</mi><mrow><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac></mrow></msup><munderover><mo>|</mo><mi>0</mi><mi>t</mi></munderover><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>T</mi><msub><mi>F</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac><mi>[</mi><msup><mi>e</mi><mrow><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac></mrow></msup><mo>&minus;</mo><msup><mi>e</mi><mi>0</mi></msup><mi>]</mi><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>T</mi><msub><mi>F</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac><mi>[</mi><msup><mi>e</mi><mrow><mo>&minus;</mo><mfrac><mi>t</mi><mi>T</mi></mfrac></mrow></msup><mo>&minus;</mo><mi>1</mi><mi>]</mi><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<p>Now, we set <math><mi>t</mi><mo>=</mo><mi>T</mi></math>.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mfrac><mrow><mi>T</mi><msub><mi>F</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac><mi>[</mi><msup><mi>e</mi><mrow><mo>&minus;</mo><mi>1</mi></mrow></msup><mo>&minus;</mo><mi>1</mi><mi>]</mi><mo>=</mo><mn>v</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>T</mi><msub><mi>F</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac><mi>[</mi><mfrac><mi>1</mi><mi>e</mi></mfrac><mo>&minus;</mo><mi>1</mi><mi>]</mi><mo>=</mo><mn>v</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+	<math><mfrac><mrow><mi>T</mi><msub><mi>F</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac><mi>[</mi><mi>1</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>e</mi></mfrac><mi>]</mi><mo>=</mo><mn>v</mn><mi>(</mi><mi>T</mi><mi>)</mi></math><br>
+</article>
+<p>This is the equation for the velocity given the time when the force disappears.</p>
+</section>
+</section>
+</main>
+<footer style="color:#900">
+	&FilledSmallSquare;
+</footer>
+</body>
+</html>

@@ -26,18 +26,69 @@
 <figure><img src="images/integral2.svg" alt="">
 <figcaption>The integral for impulse.</figcaption></figure>
 <p>This relation helps us deal with problems wherein the average force isn't given but a force-time graph is given. Of course, we need calculus here to use it.</p>
-<section hard class="examples"><mark custom></mark>
+<section class="examples"><mark custom calc></mark>
 <h2>Exercise 1</h2>
-<p>The force applied to an object of mass 5.00kg is given by the function <math><mi>F</mi><mi>(t)</mi><mo>=</mo><mi>3</mi><msup><mi>t</mi><mn>2</mn></msup></math>. The object starts at rest. <br>(a) What is the impulse generated after 3.00s?<br>(b) What is the final velocity of the object after 3.00s?</p>
+<p>The force applied to an object of mass 5.00kg is given by <math><mi>F</mi><mo>=</mo><mi>3</mi><msup><mi>t</mi><mn>2</mn></msup></math> N/s&sup2;. The object starts at rest. <br>(a) What is the impulse generated after 3.00s?<br>(b) What is the final velocity of the object after 3.00s?</p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>The impulse of a force can be zero. To see this, we equate both the equations for impulse, and see what needs to happen.</p>
+<p>First, note the following equality, which we derived last time.</p>
 <article class="equations">
-	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover></math><br>
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>ave</mi></msub><mi>&Delta;</mi><mi>t</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math><br>
 </article>
-<p>Now, since we are given that the force is not zero, and the mass certainly can't be zero, it implies that either the duration of the force &Delta;t or the change in velocity &Delta;v is zero. However, they both can't be zero either.</p>
-<p>The duration can't be zero, since that would imply that the force never happened. <br>However, the change in velocity can be zero. For example, in an object revolving around a circle, as it goes through one revolution, the centripetal force is nonzero; however, the velocity at the start and the end is the same; its change is zero.</p>
+<p>Now, we substitute.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>3.00</mi></munderover><mi>3</mi><msup><mi>t</mi><mi>2</mi></msup><mi>d</mi><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
+	<math><msup><mi>t</mi><mi>3</mi></msup><munderover><mo>|</mo><mi>0</mi><mi>3.00</mi></munderover><mo>=</mo><mi>J</mi></math><br>
+	<math><mi>27.0N&sdot;s</mi><mo>=</mo><mi>J</mi></math><br>
+</article>
+<p>Now we use this to get the change in velocity, which should also be the final velocity given that the initial velocity was at rest.</p>
+<article class="equations">
+	<math><mi>27.0N&sdot;s</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mi>v</mi></math><br>
+	<math><mi>27.0N&sdot;s</mi><mo>=</mo><mi>(5.00kg)</mi><mi>&Delta;</mi><mi>v</mi></math><br>
+</article>
+<p>Giving us the final velocity is 5.40m/s.</p>
+</section>
+</section>
+<p>One thing to note is that if the force is constant, the integral will simply fall back to the equation that we used.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
+	<math><mi>F</mi><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>d</mi><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
+	<math><mi>F</mi><mi>[</mi><mi>t</mi><mo>&minus;</mo><mi>0</mi><mi>]</mi><mo>=</mo><mi>J</mi></math><br>
+	<math><mi>F</mi><mi>&Delta;</mi><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
+</article>
+<p>We can also use the integral for impulse to derive another integral we saw before when we dealt with time-dependent force.</p>
+<section class="examples"><mark custom calc></mark>
+<h2>Problem 1</h2>
+<p>Use the integral for impulse to derive the following relation.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mn>0</mn><mi>t</mi></munderover><mrow><mn>F</mn><mi>(</mi><mi>t</mi><mi>)</mi></mrow><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mn>v</mn><mi>(</mi><mi>t</mi><mi>)</mi></math><br>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first use one definition for the impulse, shown below, and we substitute it.</p>
+<article class="equations">
+	<math><mi>J</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mi>v</mi></math>
+</article>
+<p>Now, we manipulate the integral for impulse.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mi>v</mi></math><br>
+</article>
+<p>We divide the mass by both sides. Then, we substitute the alternate form for the change in velocity, being the final velocity minus the initial velocity.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>&Delta;</mi><mi>v</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>v</mi><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mi>v</mi></math><br>
+</article>
+<p>The following is now equivalent to the equation above.</p>
+</section>
+</section>
+<section class="examples"><mark custom></mark>
+<h2>Problem 2</h2>
+<p>What is the derivative of impulse with respect to time? In other words, what is <math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover></math>?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>It is the force. If impulse is the integral of force with respect to time, then force is the derivative of impulse with respect to time.</p>
 </section>
 </section>
 </main>
