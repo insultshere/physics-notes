@@ -35,6 +35,8 @@ header {
 }
 
 header > a {
+	padding-left:0.2em;
+	margin-right: auto;
 	background-color:rgba(0,0,0,0);
 	background-image:var(--redtowhite);
 }
@@ -83,9 +85,17 @@ h2 > button {
 	cursor:pointer;
 }
 
+.examples > h2:has(button) {
+	margin:0em;
+}
+
 h2 > button:hover,
 h2 > button:focus  {
 	background-color:var(--focusred);
+}
+
+.examples > figure {
+	margin: 1.3em 0 1.3em 0
 }
 
 figure {
@@ -96,12 +106,12 @@ figure {
 }
 
 figure > img {
-	max-width: 70%;
-	min-width: 35%;
+	min-width:50%;
+	width: auto;
 }
 
 figure[grayout] > img {
-	filter: grayscale(1)
+	filter: sepia(100%) saturate(3) hue-rotate(310deg) saturate(0.5);
 }
 
 figure > figcaption {
@@ -189,6 +199,7 @@ mark[calc]::before {
 
 .terms {
 	margin: 0.5em 0 0.5em 0;
+	padding-left:0.2em;
 	display:block;
 	text-align:left;
 	color:var(--darkred);
@@ -210,8 +221,21 @@ math {
     math-style: normal;
 }
 
-math:has(mfrac) {
-	margin: 0.15em 0 0.15em 0
+.solution > .equations {
+	margin-left: 7.5%;
+	margin-right: 7.5%;
+	width:85%;
+	text-align: left;
+	border-left: 0.05em dashed;
+	padding-left:0.5em;
+}
+
+.equations > math {
+	margin: 0.4em 0 0.4em 0
+}
+
+.equations > math:has(mfrac) {
+	margin: 0.6em 0 0.6em 0
 }
 
 main > .equations {
@@ -254,7 +278,7 @@ intext:focus {
 
 intext {
 	color:var(--darkred);
-	text-decoration: underline dotted;
+	text-decoration: underline wavy 0.5px;
 	cursor: help;
  	position:relative
 }
@@ -335,7 +359,12 @@ footer[next]{
 
 @media only screen and (max-width: 426px) {
 	figure > img {
-		max-width:100%;
+		width:90%;
+		height:auto;
+	}
+
+	figure[grayout]{
+		width:100%;
 	}
 
 	figure {

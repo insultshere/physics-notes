@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>momentum - conservation</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Conservation of Momentum</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<main>
+<p>We noted from the momentum-impulse theorem that a net force which causes a net impulse causes a change in impulse. However, what happens when there is no net force?</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mi>&Delta;</mi><mi>t</mi><mo>=</mo><mi>&Delta;</mi><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>&Delta;</mi><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover></math><br>
+</article>
+<p>This means that if there is no net force, then there is no change in momentum. In other words, <i>momentum is conserved if there is no net force acting on an object.</i> We can generalize this to more objects in a system.</p>
+
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q6.1)  Justify the following statement. "The law of conservation of
+linear momentum, as applied to a single particle, is equivalent
+to Newton's first law of motion."</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>This makes sense. If there is only one particle, there are no other particles for it to interact with; thus, we only care about the net force on the particle. If it is zero, then there is no change in velocity, which is identical to Newton's first law.</p>
+</section>
+</section>
+
+<p>For example, for two objects, they each have net forces on each other. If we set these as zero, then their momentum is conserved. Below, we note two objects which we will call <math><mi>M</mi></math> and <math><mi>m</mi></math>.</p>
+<figure><img src="images/conserve1.svg" alt="">
+<figcaption>Momentum is conserved before and after a collision, assuming no net force acts on them.</figcaption></figure>
+<p>We see here that the total momentum of the two objects in our system is constant before and after collision. We can say this because in our system above, there are no net forces, so no change in momentum occurs.</p>
+<p>However, how about the force that happens on collision? Well, by Newton's third law, the force acting on and to an object have the same magnitude but opposite directions.</p>
+<figure><img src="images/conserve2.svg" alt="">
+<figcaption>Momentum is conserved at a collision.</figcaption></figure>
+<p>We will use the momentum definition of the net force.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>M</mi></msub><mo>=</mo><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>m</mi></msub></math><br>
+	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>M</mi></msub><mo>=</mo><mo>&minus;</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>m</mi></msub></math><br>
+	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>M</mi></msub><mo>+</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>m</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>(</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>M</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>m</mi></msub><mo>)</mo><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>This basically means that "the rate of change of the <intext tabindex="0" tooltip="momenta is the plural form of momentum">momenta</intext> of both objects colliding is zero". In other words, it is constant; the rate of change is zero, so there is no change.</p>
+<p>Thus, we have shown that before, during, and after a collision, the total momentum in a system is conserved.</p>
+
+<section class="examples">
+<h2>Question 2</h2>
+<p>(HRK Q6.10) Explain how conservation of momentum applies to a handball
+bouncing off a wall.</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The collision here is inbetween the wall and the handball. When thrown against the wall, the handball exerts a force on the wall, and the wall exerts a force on the handball, causing it to rebound. However, this force against the wall causes it to change its momentum as well, however this change is imperceptible.</p>
+<p>The change in the momentum of the handball (rebound) and the imperceptible change of momentum of the wall, when added together as a single system, will be constant.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 3</h2>
+<p>(LSM CQ9.10) Can objects in a system have momentum while
+the momentum of the system is zero? Explain
+your answer.</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Yes. Imagine two objects with the same mass moving at the same speed but moving towards each other. The momentum vectors here, when added together, will become zero.</p>
+</section>
+</section>
+
+<p>Now, we will solve problems with one constraint: we only deal with problems in one-dimension, like we did in kinematics. We lift this constraint in the next tutorial.</p>
+<p>For two objects, mathematically, we can write out the law of conservation of momentum like so. We will use the two objects above, with masses <math><mi>M</mi></math> and <math><mi>m</mi></math>.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub></math><br>
+	<math><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub><mo>=</mo><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub></math><br>
+</article>
+
+<section class="examples">
+<h2>Exercise 1a</h2>
+<p>(HRK E6.20) The blocks in the figure below slide without friction. The top and bottom portions show the blocks' velocities before and after collision respectively. What is the velocity of the 1.6-kg block after the collision?</p>
+<figure><img src="images/conserve3.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will denote the more massive block (2.4kg) with <math><mi>M</mi></math> and the less massive block with <math><mi>m</mi></math>. Since there are no external net forces, momentum is conserved.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub></math><br>
+	<math><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub><mo>=</mo><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub></math><br>
+</article>
+<p>We solve for the final velocity of the less massive block.</p>
+<article class="equations">
+	<math><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub><mo>=</mo><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub></math><br>
+	<math><mfrac><mrow><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub></mrow><mi>m</mi></mfrac><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub></math><br>
+</article>
+<p>Substituting the values, we have the velocity.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(1.6kg)</mi><mi>(5.5m/s)</mi><mo>+</mo><mi>(2.4kg)</mi><mi>(2.5m/s)</mi><mo>&minus;</mo><mi>(2.4kg)</mi><mi>(4.9m/s)</mi></mrow><mi>(1.6kg)</mi></mfrac><mo>&approx;</mo><mi>1.9m/s</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples">
+<h2>Exercise 1b</h2>
+<p>(HRK E6.21) Suppose the initial velocity of the 2.4-kg
+block is reversed; it is headed directly toward the 1.6-kg
+block. What would be the velocity of the 1.6-kg block after
+the collision?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We still use the same equation for the final velocity of the less massive block.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub></mrow><mi>m</mi></mfrac><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub></math><br>
+</article>
+<p>Since the initial velocity is reversed, we make the velocity of it negative.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(1.6kg)</mi><mi>(5.5m/s)</mi><mo>&minus;</mo><mi>(2.4kg)</mi><mi>(2.5m/s)</mi><mo>&minus;</mo><mi>(2.4kg)</mi><mi>(4.9m/s)</mi></mrow><mi>(1.6kg)</mi></mfrac><mo>&approx;</mo><mi>&minus;5.6m/s</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E6.17) A 75.2-kg man is riding on a 38.6-kg cart traveling at a speed
+of 2.33 m/s. He jumps off in such a way as to land on the
+ground with zero horizontal speed. Find the resulting change
+in the speed of the cart.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The two objects in our system is the man and the cart. The momentum is conserved. We will use "m" and "c" subscripts for the initial and final velocities and mass of the man and cart respectively.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>c0</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>cf</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><msub><mi>m</mi><mi>c</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>c0</mi></msub><mo>=</mo><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub><mo>+</mo><msub><mi>m</mi><mi>c</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>cf</mi></msub></math><br>
+</article>
+<p>Since we want the change in speed of the cart, we want the final speed minus the initial speed of the cart. We manipulate the equation to get that.</p>
+<article class="equations">
+	<math><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub><mo>=</mo><msub><mi>m</mi><mi>c</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>cf</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>c</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>c0</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub><mo>=</mo><msub><mi>m</mi><mi>c</mi></msub><mo>(</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>cf</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>c0</mi></msub><mo>)</mo></math><br>
+	<math><mfrac><mrow><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub></mrow><msub><mi>m</mi><mi>c</mi></msub></mfrac><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>cf</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>c0</mi></msub></math><br>
+	<math><mfrac><mrow><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>m</mi></msub><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub></mrow><msub><mi>m</mi><mi>c</mi></msub></mfrac><mo>=</mo><mi>&Delta;</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>c</mi></msub></math><br>
+</article>
+<p>We now substitute the values we have.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(75.2kg)</mi><mi>(2.33m/s)</mi><mo>&minus;</mo><mi>(75.2kg)</mi><mi>(0m/s)</mi></mrow><mi>(38.6kg)</mi></mfrac><mo>&approx;</mo><mi>4.54m/s</mi><mo>=</mo><mi>&Delta;</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>c</mi></msub></math><br>
+</article>
+<p>Note that an alternate solution would be to solve for the final velocity of the cart after the man jumps off. If you did that, you would've gotten that the final speed would be ~6.869m/s, which when subtracted from the initial speed would still be 4.54m/s.</p>
+</section>
+</section>
+
+<p>Some interactions aren't as clear cut, as sometimes they may join together or break apart. We will analyze these in more depth later, however we can still solve them, by noting how they behave before and after a collision.</p>
+<p>For example, two objects can come together and move at the same speed, like the problem below.</p>
+<section class="examples">
+<h2>Problem 1</h2>
+<p>(HRK E6.32) A railroad freight car weighing 31.8 tons and traveling at
+5.20 ft/s overtakes one weighing 24.2 tons and traveling at
+2.90 ft/s in the same direction. Find the speeds of the cars
+after collision if the cars couple together.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will denote the more massive train with <math><mi>M</mi></math> and the less massive train with <math><mi>m</mi></math>. Since they couple together, it means that they will "join" together, meaning their masses will join together, and they will move as one.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+	<math><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub><mo>=</mo><mo>(</mo><mi>m</mi><mo>+</mo><mi>M</mi><mo>)</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+	<math><mfrac><mrow><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+</article>
+<p>We now substitute the values we have.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(24.2tons)</mi><mi>(2.90ft/s)</mi><mo>+</mo><mi>(31.8tons)</mi><mi>(5.20ft/s)</mi></mrow><mrow><mi>(24.2tons)</mi><mo>+</mo><mi>(31.8tons)</mi></mrow></mfrac><mo>&approx;</mo><mi>4.21ft/s</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples">
+<h2>Problem 2</h2>
+<p>(LSM P9.46) A 100-g firecracker is launched vertically into
+the air and explodes into two pieces at the peak
+of its trajectory. If a 72-g piece is projected
+horizontally to the left at 20 m/s, what is the
+speed and direction of the other piece? </p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We note that the initial velocity is zero, because it is stated to explode at the peak of its trajectory, so no vertical component; it is also stated to be launched vertically upward, so there is no horizontal component.</p>
+<p>We will use the same naming system as we did before, with <math><mi>M</mi></math> for the more massive 72g piece and <math><mi>m</mi></math> for the less massive 28g piece. We don't care about the vertical portion, since the more massive block is said to go straight to the left, so no vertical component is added.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+	<math><mi>0</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x2192</mo></mover><mi>f</mi></msub></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub><mo>+</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub><mo>=</mo><mi>m</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub></math><br>
+	<math><mfrac><mrow><mo>&minus;</mo><mi>M</mi><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub></mrow><mi>m</mi></mfrac><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>mf</mi></msub></math><br>
+</article>
+<p>If we set "going right" as positive, then the object going left gives it a negative velocity. We substitute in to get our answer.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(72g)</mi><mi>(&minus;20m/s)</mi></mrow><mi>(28g)</mi></mfrac><mo>&approx;</mo><mi>50m/s</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Mf</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+<p>Its important to note that despite the usability of the conservation of momentum, it can only be used if the net force acting on the system is zero. For example, in the above example, there is a net force of gravity; which means momentum is not conserved after the collision.</p>
+<p>However, at the instant the collision happens, we can apply the law of conservation of momentum as gravity hasn't done anything yet. In other words, its &Delta;t is basically zero, and thus we can ignore it.</p>
+
+</main>
+<footer>
+	<a href="collisions.html"> Collisions ></a>
+</footer>
+</body>
+</html>
