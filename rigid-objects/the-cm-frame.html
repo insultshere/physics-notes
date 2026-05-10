@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>rigid - cmframe</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>The CM Frame</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<main>
+<p>We noted before that we can do physics in any reference frame. So far, we have analyzed collisions all in a stationary reference frame. For example, an elastic collision is shown below.</p>
+<figure><video autoplay muted loop><source src="images/cm2.mp4" type="video/mp4"></video>
+<figcaption>An elastic collision of two objects of equal mass in the lab frame.</figcaption></figure>
+<p>This reference frame is called the "lab frame".</p>
+<article class="terms">
+	<mark>Lab Frame</mark> - a reference frame where the observer is stationary with respect to the ground<br>
+</article>
+<p>Obviously, it is completely alright to use this reference frame. In fact, it has served as well for the past few tutorials. However, in this tutorial, we will leave this reference frame and try another one, which may be more useful.</p>
+<p>One useful property we can do is setting the initial momentum to zero. If this is true, it simplifies our calculations a lot. So much so, that we have a special name for this reference frame.</p>
+<article class="terms">
+	<mark>CM Frame</mark> - a reference frame wherein the initial momentum of the system appears to be zero
+</article>
+<p>Below is a visual interpretation of what this frame would look like. Here, we can see that the two objects appear to have the same magnitude of momentum, but in opposite directions; meaning their initial momenta is zero.</p>
+<figure><video autoplay muted loop><source src="images/cm1.mp4" type="video/mp4"></video>
+<figcaption>An elastic collision of two objects of equal mass in the CM frame.</figcaption></figure>
+<p>We can analyze the two reference frames to see they have the same visual cues; at the stationary reference frame, if you focus at the top, the objects do appear to collide head on.</p>
+<p>Meanwhile, in the moving reference frame, it can be seen that before collision, the black object is half in front of the object, while the red object is in front after collision. The same phenomena appears.</p>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 1</h2>
+<p>In the CM frame, the initial momenta of the objects is zero. Below shows a collision in this CM frame, with the right object having more mass than the other object.</p>
+<figure><img src="images/cm3.svg" alt="">
+<figcaption>Question 1.</figcaption></figure>
+<p>In this reference frame, are the object's speeds equal? If not, which of the two speeds is larger?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first write out the equation for the initial momentum, which should be zero.</p>
+<article class="equations">
+	<math><msub><mi>p</mi><mi>0&prime;</mi></msub><mo>=</mo><msub><mi>p</mi><mi>f&prime;</mi></msub></math><br>
+	<math><msub><mi>p</mi><mi>0&prime;</mi></msub><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>Now, we can write out the equation for the initial momentum in terms of the masses and speeds.</p>
+<article class="equations">
+	<math><mi>m</mi><msub><mi>v</mi><mi>m0&prime;</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0&prime;</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><mi>m</mi><msub><mi>v</mi><mi>m0&prime;</mi></msub><mo>=</mo><mo>&minus;</mo><mi>M</mi><msub><mi>v</mi><mi>M0&prime;</mi></msub></math><br>
+</article>
+<p>Since <math><mi>M</mi><mo>></mo><mi>m</mi></math>, it must mean that the speeds must not be equal for this equality to hold. Further, this means the speed of the more massive object is less than the less massive object.</p>
+</section>
+</section>
+
+<p>To begin on how we can find this frame, we will first use its defining factor, which is the initial momentum is zero.</p>
+<article class="equations">
+	<math><msub><mi>p</mi><mi>0&prime;</mi></msub><mo>=</mo><msub><mi>p</mi><mi>f&prime;</mi></msub></math><br>
+	<math><msub><mi>p</mi><mi>0&prime;</mi></msub><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>To have this happen, we need to have the speed of the moving reference frame. Using our equation for relative motion, we have two equations for the speed. We will use our old syntax, with objects of masses <math><mi>m</mi></math> and <math><mi>M</mi></math>. We denote the speed of the reference frame with <math><msub><mi>v</mi><mi>cm</mi></msub></math>.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>m0</mi></msub><mo>=</mo><msub><mi>v</mi><mi>m0&prime;</mi></msub><mo>+</mo><msub><mi>v</mi><mi>cm</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>M0</mi></msub><mo>=</mo><msub><mi>v</mi><mi>M0&prime;</mi></msub><mo>+</mo><msub><mi>v</mi><mi>cm</mi></msub></math>
+</article>
+<p>Now, let's write the equation for the conservation of momentum in the CM frame, and then substitute in the values above.</p>
+<article class="equations">
+	<math><msub><mi>p</mi><mi>0&prime;</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><mi>m</mi><msub><mi>v</mi><mi>m0&prime;</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0&prime;</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><mi>m</mi><mo>(</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>cm</mi></msub><mo>)</mo><mo>+</mo><mi>M</mi><mo>(</mo><msub><mi>v</mi><mi>M0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>cm</mi></msub><mo>)</mo><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>Now, we can solve for the speed of the reference frame.</p>
+<article class="equations">
+	<math><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>&minus;</mo><mi>m</mi><msub><mi>v</mi><mi>cm</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0</mi></msub><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>cm</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>cm</mi></msub></math><br>
+	<math><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0</mi></msub><mo>=</mo><msub><mi>v</mi><mi>cm</mi></msub><mo>(</mo><mi>m</mi><mo>+</mo><mi>M</mi><mo>)</mo></math><br>
+	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math>
+</article>
+<p>Thus, if we move at this speed, it will appear that the initial momentum is zero. Consequently, by the conservation of momentum, it means that the final momentum after collision must also be zero.</p>
+<section hard class="examples"><mark custom></mark>
+<h2>Question 2</h2>
+<p>Show that the speed of the CM frame is constant before and after a head-on collision.
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first write out the equation for the speed of the CM frame.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math>
+</article>
+<p>Notice how the above is precisely the initial momentum of the two objects with respect to the lab frame. Thus, we can rewrite the equation like so.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><msub><mi>p</mi><mi>0</mi></msub><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math>
+</article>
+<p>Since momentum is conserved, this must be equal to the momentum of the objects with respect to the lab frame after collision; thus, they must be equal.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><msub><mi>p</mi><mi>f</mi></msub><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math>
+</article>
+</section>
+</section>
+</main>
+<footer style="color:#900">
+	&FilledSmallSquare;
+</footer>
+</body>
+</html>

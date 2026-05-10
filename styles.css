@@ -105,9 +105,15 @@ figure {
 	display:block;
 }
 
+
 figure > img {
 	min-width:50%;
 	width: auto;
+}
+
+figure > video {
+	max-width:30vw;
+	overflow:scroll;
 }
 
 figure[grayout] > img {
@@ -363,7 +369,7 @@ footer[next]{
 		height:auto;
 	}
 
-	figure[grayout]{
+	figure > video {
 		width:100%;
 	}
 

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>momentum - elastic</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Elastic Collisions</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<main>
+<p>We noted before that there is a type of collision called a rebound, where two objects collide and their velocities switch direction. One special case of a rebound, is when both of them rebound at the same speed they collide at.</p>
+<article class="terms">
+	<mark>Elastic collision</mark> - a collision where <math><mi>e</mi><mo>=</mo><mi>1</mi></math><br>
+</article>
+<p>We noted before that when <math><mi>e</mi><mo>=</mo><mi>1</mi></math>, the speed of approach and seperation is equal. Thus, we can rewrite the equation for the elastic collision. </p>
+<article class="equations">
+	<math><mi>1</mi><mo>=</mo><mfrac><mrow><mo>|</mo><msub><mi>v</mi><mi>mf</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>Mf</mi></msub><mo>|</mo></mrow><mrow><mo>|</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>M0</mi></msub><mo>|</mo></mrow></mfrac></math><br>
+	<math><mrow><mo>|</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>M0</mi></msub><mo>|</mo></mrow><mo>=</mo><mrow><mo>|</mo><msub><mi>v</mi><mi>mf</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>Mf</mi></msub><mo>|</mo></mrow></math><br>
+</article>
+<p>The above can mean the following two cases. Because of the absolute value, there are two cases, those being the following.</p>
+<ol>
+	<li>Both sides are positive / negative.</li>
+	<li>One side is positive and the other is positive.</li>
+</ol>
+<p>However, we will drop the first case because of the following implication. If we rewrite it as the speed of approach and seperation, it looks like the following.</p>
+<article class="equations">
+	<math><mrow><msub><mi>v</mi><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>M0</mi></msub></mrow><mo>=</mo><mrow><msub><mi>v</mi><mi>mf</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>Mf</mi></msub></mrow></math><br>
+	<math><mi>relative velocity of approach</mi><mo>=</mo><mi>relative velocity of seperation</mi></math>
+</article>
+<p>This would imply that the velocity of the two objects going into the collision and out of the collision are the same. In other words, they pass through each other. <i>That certainly isn't right, so we discard it.</i></p>
+<figure><img src="images/inter2.svg" alt="">
+<figcaption>A scary implication if the first equation is true.</figcaption></figure>
+<p>With this, we disregard the first case. The second case implies that the speed of approach is the same as the speed of seperation, but in opposite directions. This is much more physical. Mathematically, we can write it as below.</p>
+<article class="equations">
+	<math><mrow><msub><mi>v</mi><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>M0</mi></msub></mrow><mo>=</mo><mo>&minus;</mo><mo>(</mo><mrow><msub><mi>v</mi><mi>mf</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>Mf</mi></msub></mrow><mo>)</mo></math><br>
+	<math><mrow><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>mf</mi></msub></mrow><mo>=</mo><mrow><msub><mi>v</mi><mi>M0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>Mf</mi></msub></mrow></math><br>
+</article>
+<p>If we want the final velocity of one of the objects, we can just rearrange this.</p>
+<article class="equations">
+	<math><mrow><msub><mi>v</mi><mi>mf</mi></msub></mrow><mo>=</mo><mrow><msub><mi>v</mi><mi>M0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>Mf</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>m0</mi></msub></mrow></math><br>
+</article>
+<section hard class="examples"><mark custom variable></mark>
+<h2>Exercise 1</h2>
+<p style="margin:0">Two objects are moving and collide with velocities <math><msub><mi>v</mi><mi>m0</mi></msub></math> and <math><msub><mi>v</mi><mi>M0</mi></msub></math> with masses <math><mi>m</mi></math> and <math><mi>M</mi></math> respectively. They collide in an inelastic collision. Show that the final velocity of the object of mass <math><mi>M</mi></math> is computed by the following equation.</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mi>(</mi><mi>M</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first write out the conservation of momentum for the two objects.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><msub><mrow><mi>p</mi></mrow><mi>m0</mi></msub><mo>+</mo><msub><mrow><mi>p</mi></mrow><mi>M0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>mf</mi></msub><mo>+</mo><msub><mrow><mi>p</mi></mrow><mi>Mf</mi></msub></math><br>
+	<math><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>=</mo><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+</article>
+<p>We substitute in the equation above.</p>
+<article class="equations">
+	<math><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>=</mo><mi>m</mi><mo>(</mo><mrow><msub><mi>v</mi><mi>M0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>Mf</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>m0</mi></msub></mrow><mo>)</mo><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+	<math><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>=</mo><mi>m</mi><mrow><msub><mi>v</mi><mi>M0</mi></msub><mo>+</mo><mi>m</mi><msub><mi>v</mi><mi>Mf</mi></msub><mo>&minus;</mo><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub></mrow><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+	<math><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>&minus;</mo><mi>m</mi><mrow><msub><mi>v</mi><mi>M0</mi></msub><mo>+</mo><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>=</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub><mo>+</mo><mi>m</mi><msub><mi>v</mi><mi>Mf</mi></msub></math><br>
+	<math><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>+</mo><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>(</mo><mi>M</mi><mo>&minus;</mo><mi>m</mi><mo>)</mo><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub><mo>(</mo><mi>M</mi><mo>+</mo><mi>m</mi><mo>)</mo></math><br>
+	<math><mfrac><mrow><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mi>(</mi><mi>M</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mi>(</mi><mi>M</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+</article>
+</section>
+</section>
+<section class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E6.31) An object of 2.0-kg mass makes an elastic collision with another object at rest and continues to move in the original direction but with one-fourth of its original speed. What is the
+mass of the struck object?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will use the above equation.</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mi>(</mi><mi>M</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+</article>
+<p>We substitute in the known variables to the equation above.</p>
+<article class="equations">
+	<math><mi>v</mi><mo>&sdot;</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><mfrac><mi>v</mi><mi>4</mi></mfrac></math><br>
+	<math><mi>M</mi><mo>&minus;</mo><mi>m</mi><mo>=</mo><mfrac><mi>1</mi><mi>4</mi></mfrac><mo>(</mo><mi>M</mi><mo>+</mo><mi>m</mi><mo>)</mo></math><br>
+	<math><mi>4</mi><mi>M</mi><mo>&minus;</mo><mi>4</mi><mi>m</mi><mo>=</mo><mi>M</mi><mo>+</mo><mi>m</mi></math><br>
+	<math><mi>3</mi><mi>M</mi><mo>=</mo><mi>5</mi><mi>m</mi></math><br>
+	<math><mfrac><mi>3</mi><mi>5</mi></mfrac><mi>(2.0kg)</mi><mo>=</mo><mi>1.2kg</mi><mo>=</mo><mi>m</mi></math><br>
+</article>
+</section>
+</section>
+<p>More generally, the above can be written like below, with objects of mass <math><msub><mi>m</mi><mi>1</mi></msub></math> and <math><msub><mi>m</mi><mi>2</mi></msub></math>.</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>20</mi></msub><mi>(</mi><msub><mi>m</mi><mi>2</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>1</mi></msub><mi>)</mi><mo>+</mo><mi>2</mi><msub><mi>m</mi><mi>1</mi></msub><msub><mrow><mi>v</mi></mrow><mi>10</mi></msub></mrow><mrow><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>1</mi></msub></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>2f</mi></msub></math><br>
+</article>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>10</mi></msub><mi>(</mi><msub><mi>m</mi><mi>1</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>2</mi></msub><mi>)</mi><mo>+</mo><mi>2</mi><msub><mi>m</mi><mi>2</mi></msub><msub><mrow><mi>v</mi></mrow><mi>20</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>1f</mi></msub></math><br>
+</article>
+<p>We will now extend the use of the above equation to more complicated problems.</p>
+<figure><img src="images/inter1.svg" alt="">
+<figcaption>An elastic collision.</figcaption></figure>
+<section hard class="examples"><mark variable></mark>
+<h2>Problem 1a</h2>
+<p>(HRK P6.16a) The two spheres at the right in the figure below are slightly separated and initially at rest; the left sphere is incident with an initial speed <math><msub><mi>v</mi><mi>0</mi></msub></math>.</p>
+<figure><img src="images/inter5.svg" alt="">
+<figcaption>Problem 1.</figcaption></figure>
+<p>Assuming head-on elastic collisions, show that if <math><mi>M</mi><mo>&leq;</mo><mi>m</mi></math>, then there are two collisions, and thus find the speed of each object after each collision.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The first collision will be between object 1 and 2. For object 2,</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>20</mi></msub><mi>(</mi><mi>m</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>10</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>2f</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>10</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>2f</mi></msub></math><br>
+</article>
+<p>Now, for object 1,</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>10</mi></msub><mi>(</mi><mi>m</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>20</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>1f</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>20</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>1f</mi></msub></math><br>
+</article>
+<p>Thus, in the first collision, object 1 goes to rest and object 2 gets all of its speed, i.e., it moves at speed <math><msub><mi>v</mi><mi>0</mi></msub></math>. Now, the second collision.</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>30</mi></msub><mi>(</mi><mi>M</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>20</mi></msub></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>3f</mi></msub></math><br>
+	<math><mfrac><mrow><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>20</mi></msub></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>3f</mi></msub></math><br>
+</article>
+<p>Now, for object 2,</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>20</mi></msub><mi>(</mi><mi>m</mi><mo>&minus;</mo><mi>M</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>30</mi></msub></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>2f</mi></msub></math><br>
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>20</mi></msub><mi>(</mi><mi>m</mi><mo>&minus;</mo><mi>M</mi><mi>)</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>2f</mi></msub></math><br>
+</article>
+<p>Since <math><mi>M</mi><mo>&leq;</mo><mi>m</mi></math>, it means the above expression is positive. Thus, it will move away from object 1. This means no more collisions occur. Given this, the final velocities of the objects after all collisiosn are the following.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>1f</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><msub><mi>v</mi><mi>2f</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><mo>&minus;</mo><mi>M</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>3f</mi></msub><mo>=</mo><mfrac><mrow><mi>2</mi><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</article>
+</section>
+</section>
+<section class="examples"><mark variable></mark>
+<h2>Problem 1b</h2>
+<p>Show that if <math><mi>M</mi><mo>></mo><mi>m</mi></math>, then there are three collisions, and thus find the speed of each object after each collision.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The first collision goes the same. Now, for the second collision, we computed this equation.</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>20</mi></msub><mi>(</mi><mi>m</mi><mo>&minus;</mo><mi>M</mi><mi>)</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>2f</mi></msub></math><br>
+</article>
+<p>Since <math><mi>M</mi><mo>></mo><mi>m</mi></math>, it means the above expression is negative. Thus, it will collide again with object 1. This is the same collision as the first collision. Thus, we now write the velocities of the three objects.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>1f</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><mo>&minus;</mo><mi>M</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>2f</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><msub><mi>v</mi><mi>3f</mi></msub><mo>=</mo><mfrac><mrow><mi>2</mi><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</article>
+</section>
+</section>
+<p>This isn't the last time we will see these collisions. Later, we will analyze these based on a different conserved quantity. However, for now, with the coefficient of resitution, we can see how these collisions behave.</p>
+</main>
+<footer style="color:#900">
+	&FilledSmallSquare;
+</footer>
+</body>
+</html>
