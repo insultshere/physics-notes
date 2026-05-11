@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>momentum - collisions</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Collisions</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+	<section>
+	<h2>Summary</h2>
+	<p>A collision is any interaction wherein over a period of time, two objects exert forces on one another</p>
+	</article>
+</aside>
+<main>
+<p>So far, we have been using a general, intuitive term of collision, however we will generalize it as shown.</p>
+<article class="terms">
+	<mark>Collision </mark>- a period of time wherein two or more objects exert forces on one another
+</article>
+<p>This definition of a collision means that they need not collide physically but only need to exert forces. Further, we will assume before and after a collision that they don't interact anymore; no more force is exerted by any objects on any other objects in a collision.</p>
+<p>We've already dealt with problems involving these collisions in one dimension. Here, we increase the complexity a little more, and then we will jump into two-dimensional collisions, which function about the same way as two-dimensional motion.</p>
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(LSM E9.42) A 2000-kg railway freight car coasts at 4.4 m/s
+underneath a grain terminal, which dumps grain
+directly down into the freight car. If the speed of
+the loaded freight car must not go below 3.0 m/s, what is the maximum mass of grain that it can
+accept?  </p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will let <math><mi>M</mi></math> be the mass of the cart with grain and <math><mi>m</mi></math> be the mass without grain. Thus, to get the mass of the grain, we need <math><mi>M</mi><mo>&minus;</mo><mi>m</mi></math>. We set up the momentum conservation equation below.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>=</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mfrac><mrow><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub></mrow><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></mfrac><mo>=</mo><mi>M</mi></math><br>
+</article>
+<p>We substitute this value for <math><mi>M</mi></math>.</p>
+<article class="equations">	
+	<math><mi>M</mi><mo>&minus;</mo><mi>m</mi></math><br>
+	<math><mfrac><mrow><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub></mrow><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></mfrac><mo>&minus;</mo><mi>m</mi></math>
+</article>
+<p>Setting our final velocity to the minimum 3.0m/s, which gives us the maximum grain, we have this.</p>
+<article class="equations">	
+	<math><mfrac><mrow><mi>(2000kg)</mi><mi>(4.4m/s)</mi></mrow><mi>(3.0m/s)</mi></mfrac><mo>&minus;</mo><mi>(2000kg)</mi><mo>&approx;</mo><mi>900kg</mi></math>
+</article>
+</section>
+</section>
+<section class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E6.19) A space vehicle is traveling at 3860 km/h with respect to the
+Earth when the exhausted rocket motor is disengaged and sent
+backward with a speed of 125 km/h with respect to the command module. The mass of the motor is four times the mass
+of the module. What is the speed of the command module after the separation?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We let subscripts <math><mi>C</mi></math> be for the command module and <math><mi>M</mi></math> for the motor. Since the motor is four times as massive as the module, their masses are <math><mi>4</mi><mi>m</mi></math> and <math><mi>m</mi></math> respectively.</p>
+<p>They initially coast as one, so their total mass is <math><mi>5</mi><mi>m</mi></math>.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mi>5</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>=</mo><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>Cf</mi></msub><mo>+</mo><mi>4</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></math><br>
+	<math><mi>5</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Cf</mi></msub><mo>+</mo><mi>4</mi><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></math><br>
+</article>
+<p>We need the speed of the command module with respect to Earth, so we have to use relative motion.</p>
+<article class="equations">
+	<math><mi>5</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub><mo>+</mo><mi>4</mi><msub><mrow><mi>v</mi></mrow><mi>ME</mi></math><br>
+</article>
+<p>It is said that the motor was moved "125 km/h with respect to the command module", so that means its relative to the velocity of the command module. Setting up the relative motion, we have the following.</p>
+<article class="equations">	
+	<math><msub><mrow><mi>v</mi></mrow><mi>ME</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>MC</mi></msub><mo>+</mo><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub></math><br>
+	<math><msub><mrow><mi>v</mi></mrow><mi>ME</mi></msub><mo>=</mo><mi>(&minus;125 km/h)</mi><mo>+</mo><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub></math><br>
+	<math><msub><mrow><mi>v</mi></mrow><mi>ME</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub><mo>&minus;</mo><mi>125 km/h</mi></math><br>
+</article>
+<p>We now have everything we need to solve for the speed of the command module.</p>
+<article class="equations">	
+	<math><mi>5</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub><mo>+</mo><mi>4</mi><mo>(</mo><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub><mo>&minus;</mo><mi>125 km/h</mi><mo>)</mo></math><br>
+	<math><mi>5</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub><mo>+</mo><mi>4</mi><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub><mo>&minus;</mo><mi>500 km/h</mi></math><br>
+	<math><mi>5</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>+</mo><mi>500 km/h</mi><mo>=</mo><mi>5</mi><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub></math><br>
+	<math><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>+</mo><mi>100 km/h</mi><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>CE</mi></msub></math><br>
+</article>
+</section>
+</section>
+<section class="examples">
+<h2>Problem 1</h2>
+<p>(HRK P6.19) A 3.54-g bullet is fired horizontally at two blocks resting on a
+frictionless tabletop, as shown below. The bullet passes
+through the first block, with mass 1.22 kg, and embeds itself
+in the second, with mass 1.78 kg. Speeds of 0.630 m/s and
+1.48 m/s, respectively, are thereby imparted to the blocks.</p>
+<figure><img src="images/collision1.svg" alt="">
+<figcaption>Problem 1.</figcaption></figure>
+<p>For simplicity, assume the mass removed by the bullet is negligible. Thus, find the speed of the bullet immediately after emerging from the first block and the original
+speed of the bullet.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We let subscripts <math><mi>M</mi></math> be for the big box, <math><mi>m</mi></math> for the small box, and <math><mi>B</mi></math> for the bullet. To easily do calculations, we will use grams here, so the big and small box has masses 1780g and 1220g respectively.</p>
+<p>To get the speed of the bullet, we will use the fact that the bullet at the end is embedded in the block, which means they both move at the same velocity.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0</mi></msub><mo>+</mo><msub><mi>m</mi><mi>M</mi></msub><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>=</mo><mo>(</mo><msub><mi>m</mi><mi>B</mi></msub><mo>+</mo><msub><mi>m</mi><mi>M</mi></msub><mo>)</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0</mi></msub><mo>=</mo><mo>(</mo><msub><mi>m</mi><mi>B</mi></msub><mo>+</mo><msub><mi>m</mi><mi>M</mi></msub><mo>)</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+	<math><msub><mrow><mi>v</mi></mrow><mi>B0</mi></msub><mo>=</mo><mfrac><mrow><mo>(</mo><msub><mi>m</mi><mi>B</mi></msub><mo>+</mo><msub><mi>m</mi><mi>M</mi></msub><mo>)</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></mrow><msub><mi>m</mi><mi>B</mi></msub></mfrac></math><br>
+</article>
+<p>Now, we substitute to get the bullet's initial velocity; in other words, the velocity after going out of the small box.</p>
+<article class="equations">
+	<math><msub><mrow><mi>v</mi></mrow><mi>B0</mi></msub><mo>=</mo><mfrac><mrow><mo>(</mo><mi>3.54g</mi><mo>+</mo><mi>1780g</mi><mo>)</mo><mi>(1.48m/s)</mi></mrow><mi>(3.54g)</mi></mfrac><mo>=</mo><mi>745.7m/s</mi><mo>&approx;</mo><mi>746m/s</mi></math><br>
+</article>
+<p>Now, we do another equation to get the initial velocity of the bullet before it even goes in the small block. This initial velocity becomes the final velocity in this equation.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0</mi></msub><mo>+</mo><msub><mi>m</mi><mi>m</mi></msub><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>=</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>+</mo><msub><mi>m</mi><mi>m</mi></msub><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0</mi></msub><mo>=</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>+</mo><msub><mi>m</mi><mi>m</mi></msub><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></math><br>
+	<math><msub><mrow><mi>v</mi></mrow><mi>B0</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>+</mo><msub><mi>m</mi><mi>m</mi></msub><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></mrow><msub><mi>m</mi><mi>B</mi></msub></mfrac></math><br>
+</article>
+<p>Substituting the values, we have the following.</p>
+<article class="equations">
+	<math><msub><mrow><mi>v</mi></mrow><mi>B0</mi></msub><mo>=</mo><mfrac><mrow><mi>(3.54g)</mi><mi>(746m/s)</mi><mo>+</mo><mi>(1220g)</mi><mi>(0.630m/s)</mi></mrow><mi>(3.54g)</mi></mfrac><mo>&approx;</mo><mi>963m/s</mi></math><br>
+</article>
+</section>
+</section>
+<p>These problems below have a little kick to them.</p>
+<section hard class="examples">
+<h2>Problem 2</h2>
+<p>(HRK P6.20) A 2.0-kg block is released from rest at the top of a 22° frictionless inclined plane of height 0.65 m. At the
+bottom of the plane it collides with and sticks to a block of mass 3.5 kg. The two blocks together slide a distance of
+0.57 m across a horizontal plane before coming to rest. What
+is the coefficient of friction of the horizontal surface?</p>
+<figure><img src="images/collision2.svg" alt="">
+<figcaption>Problem 2.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>First, we need the acceleration down the plane. Then, we need the velocity of the box at the bottom of the plane. Then, we need to get the velocity of the two blocks together using conservation of momentum. Finally, we get the coefficient of friction by noting the deceleration of the blocks.</p>
+<p>The first part is simple enough, we've done this dance a lot of times before. The force acting on the block pushing it down the plane is the parallel component of the weight.</p>
+<article class="equations">
+	<math><msub><mrow><mi>F</mi></mrow><mi>netx</mi></msub><mo>=</mo><msub><mrow><mi>w</mi></mrow><mi>x</mi></msub></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><mi>g</mi><mi>sin</mi><mi>(22&deg;)</mi></math><br>
+</article>
+<p>Now, for the velocity at the bottom of the slope, we will first get the displacement of the block along the slope, which we will use trigonometry. The 22&deg; angle is opposite the height, thus we have the following relation.</p>
+<article class="equations">
+	<math><mi>sin</mi><mi>(22&deg;)</mi><mo>=</mo><mfrac><mi>h</mi><mrow><mi>&Delta;</mi><mi>x</mi></mrow></mfrac></math><br>
+	<math><mi>&Delta;</mi><mi>x</mi><mo>=</mo><mfrac><mi>h</mi><mrow><mi>sin</mi><mi>(22&deg;)</mi></mrow></mfrac></math><br>
+</article>
+<p>We now use the time-independent formula to get the final velocity, noting the initial velocity is at rest.</p>
+<article class="equations">
+	<math><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>a</mi><mi>&#x0394</mi><mi>x</mi></mrow></math><br>
+	<math><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>2</mi><mo>(</mo><mi>g</mi><mi>sin</mi><mi>(22&deg;)</mi><mo>)</mo><mo>(</mo><mfrac><mi>h</mi><mrow><mi>sin</mi><mi>(22&deg;)</mi></mrow></mfrac><mo>)</mo></mrow><mo>=</mo><mi>2</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mrow><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></math>
+</article>
+<p>Great, now we will use the conservation of momentum to get the initial velocity of the two blocks as they collide. We will call the bigger block as <math><mi>M</mi></math>, as usual.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mi>m</mi><mi>v</mi><mo>=</mo><mi>(</mi><mi>m</mi><mi>+</mi><mi>M</mi><mi>)</mi><msub><mi>v</mi><mi>f</mi></msub></math><br>
+	<math><mfrac><mrow><mi>m</mi><msqrt><mrow><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></mrow><mrow><mi>m</mi><mi>+</mi><mi>M</mi></mrow></mfrac><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub></math><br>
+</article>
+<p>Now, we will use the time-independent formula again to get the acceleration. Here, the initial velocity is the final velocity above, and the final velocity is at rest, so it drops out.</p>
+<article class="equations">
+	<math><msup><mi>0</mi><mn>2</mn></msup><mo>&minus;</mo><msup><msub><mi>v</mi><mi>f</mi></msub><mn>2</mn></msup><mo>=</mo><mrow><mi>2</mi><mi>a</mi><mi>&#x0394</mi><mi>x</mi></mrow></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>f</mi></msub><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>&Delta;</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mi>a</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>2</mi><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi><mi>h</mi></mrow><mrow><mi>2</mi><mi>&Delta;</mi><mi>x</mi><mi>(</mi><mi>m</mi><mi>+</mi><mi>M</mi><msup><mi>)</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>a</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi><mi>h</mi></mrow><mrow><mi>&Delta;</mi><mi>x</mi><mi>(</mi><mi>m</mi><mi>+</mi><mi>M</mi><msup><mi>)</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>a</mi></math><br>
+</article>
+<p>This acceleration is done by the friction force, which depends on the normal force. The normal force here is simply the sum of both of their masses times gravity. This force is retarding, so we set it as negative.</p>
+<article class="equations">
+	<math><msub><mrow><mi>F</mi></mrow><mi>net</mi></msub><mo>=</mo><mo>&minus;</mo><msub><mrow><mi>f</mi></mrow><mi>k</mi></msub></math><br>
+	<math><mi>(</mi><mi>m</mi><mi>+</mi><mi>M</mi><mi>)</mi><mi>a</mi><mo>=</mo><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>N</mi></math><br>
+	<math><mi>(</mi><mi>m</mi><mi>+</mi><mi>M</mi><mi>)</mi><mo>(</mo><mo>&minus;</mo><mfrac><mrow><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi><mi>h</mi></mrow><mrow><mi>&Delta;</mi><mi>x</mi><mi>(</mi><mi>m</mi><mi>+</mi><mi>M</mi><msup><mi>)</mi><mn>2</mn></msup></mrow></mfrac><mo>)</mo><mo>=</mo><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>(</mi><mi>m</mi><mi>+</mi><mi>M</mi><mi>)</mi><mi>g</mi></math><br>
+	<math><mfrac><mrow><msup><mi>m</mi><mn>2</mn></msup><mi>h</mi></mrow><mrow><mi>&Delta;</mi><mi>x</mi><mi>(</mi><mi>m</mi><mi>+</mi><mi>M</mi><msup><mi>)</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><msub><mi>&mu;</mi><mi>k</mi></msub></math><br>
+</article>
+<p>Finally, we have a somewhat simple expression. Plugging in, we get our value for the coefficient of friction.</p>
+<article class="equations">
+	<math><mfrac><mrow><msup><mi>(2.0kg)</mi><mn>2</mn></msup><mi>(0.65m)</mi></mrow><mrow><mi>(0.57m)</mi><mi>(</mi><mi>2.0kg</mi><mi>+</mi><mi>3.5kg</mi><msup><mi>)</mi><mn>2</mn></msup></mrow></mfrac><mo>&approx;</mo><mi>0.15</mi><mo>=</mo><msub><mi>&mu;</mi><mi>k</mi></msub></math><br>
+</article>
+<p>We will dryly note that the final velocity of the box on the ramp did not depend on the angle. Why is that? We will find out one day.</p>
+</section>
+</section>
+<section hard class="examples"> <mark variable></mark>
+<h2>Problem 3</h2>
+<p>(LSM P9.115) Two projectiles of mass <math><mi>M</mi></math> and <math><mi>m</mi></math> are fired at
+the same speed but in opposite directions from
+two launch sites separated by a distance <math><mi>D</mi></math>. They
+both reach the same spot in their highest point
+and strike there. As a result of the impact they
+stick together and move as a single body
+afterwards. Find the place they will land in terms of <math><mi>M</mi></math>, <math><mi>m</mi></math>, and <math><mi>D</mi></math>.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first state the formula for the time until the projectile reaches its apex. We will also note that this is the same time it takes to hit the ground.</p>
+<article class="equations">
+	<math><msub><mi>T</mi><mi>max</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mi>g</mi></mfrac></math><br>
+</article>
+<p>The two will hit in the middle and move as one. Without loss of generality, we let <math><mi>M</mi><mo>></mo><mi>m</mi></math> and thus it determines where the projectile will go, and also without loss of generality that <math><mi>M</mi></math> is shot going to the right.</p>
+<p>Thus, we have the following. We set one as positive and one as negative.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>0x</mi></msub><mo>&minus;</mo><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>0x</mi></msub><mo>=</mo><mo>(</mo><mi>M</mi><mo>+</mo><mi>m</mi><mo>)</mo><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mfrac><mrow><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>0x</mi></msub><mo>&minus;</mo><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>0x</mi></msub></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mfrac><mrow><msub><mi>v</mi><mi>0x</mi></msub><mo>(</mo><mi>M</mi><mo>&minus;</mo><mi>m</mi><mo>)</mo></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></math><br>
+</article>
+<p>We now multiply this velocity by the time it takes to go down to the ground, which is precisely the time we noted up there. This gives us the distance it travelled after collision.</p>
+<article class="equations">
+	<math><mi>d</mi><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><msub><mi>T</mi><mi>max</mi></msub></math><br>
+	<math><mi>d</mi><mo>=</mo><mo>(</mo><mfrac><mrow><msub><mi>v</mi><mi>0x</mi></msub><mo>(</mo><mi>M</mi><mo>&minus;</mo><mi>m</mi><mo>)</mo></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><msub><mi>T</mi><mi>max</mi></msub></math><br>
+	<math><mi>d</mi><mo>=</mo><mo>(</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><msub><mi>v</mi><mi>0x</mi></msub><msub><mi>T</mi><mi>max</mi></msub></math><br>
+</article>
+<p>To fix the fact there are lots of variables we don't know, we will note that in the time it takes to go to the apex, it goes half the distance.</p>
+<article class="equations">
+	<math><mfrac><mi>D</mi><mi>2</mi></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>0x</mi></msub><msub><mi>T</mi><mi>max</mi></msub></math><br>
+</article>
+<p>This is, surprisingly, exactly what is above. We substitute in to get this.</p>
+<article class="equations">
+	<math><mi>d</mi><mo>=</mo><mo>(</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><mo>(</mo><mfrac><mi>D</mi><mi>2</mi></mfrac><mo>)</mo></math><br>
+</article>
+<p>Now, this is nice, however it isn't over yet; this collision happens at <math><mfrac><mi>D</mi><mi>2</mi></mfrac></math>, so we will add that to get where the projectile landed.</p>
+<article class="equations">
+	<math><mi>x</mi><mo>=</mo><mfrac><mi>D</mi><mi>2</mi></mfrac><mo>+</mo><mo>(</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><mo>(</mo><mfrac><mi>D</mi><mi>2</mi></mfrac><mo>)</mo></math><br>
+	<math><mi>x</mi><mo>=</mo><mfrac><mi>D</mi><mi>2</mi></mfrac><mo>(</mo><mi>1</mi><mo>+</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>x</mi><mo>=</mo><mfrac><mi>D</mi><mi>2</mi></mfrac><mo>(</mo><mfrac><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>x</mi><mo>=</mo><mfrac><mi>D</mi><mi>2</mi></mfrac><mo>(</mo><mfrac><mrow><mi>2</mi><mi>M</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>x</mi><mo>=</mo><mfrac><mrow><mi>D</mi><mi>M</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac></math><br>
+</article>
+</section>
+</section>
+<p>In motion in two dimensions, we noted that we can separate motion into two cases of one-dimensional motion. We can do the same here.</p>
+<p>The conservation of momentum can be separated into the two cases, shown below. All we then need to do is compute for both cases and do trigonometry or use the pythagorean theorem to get the direction or magnitude of whatever it is we need to find.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0x</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fx</mi></msub></math><br>
+	<math><msub><mrow><mi>p</mi></mrow><mi>0y</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fy</mi></msub></math><br>
+</article>
+<p>Once again, we will have to deal with vector decomposition, but we've done this lots of times before so it isn't going to be that bad.</p>
+
+<section class="examples">
+<h2>Exercise 3a</h2>
+<p style="margin-bottom: 0.2em;">(HRK E6.25) Two objects, A and B, collide. A has mass 2.0 kg, and B has mass 3.0 kg. The velocities of the objects are the following.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>A0</mi></msub><mo>=</mo><mi>(15 m/s)</mi><mi>&icirc;</mi><mo>+</mo><mi>(30 m/s)</mi><mi>&jcirc;</mi></math><br>
+	<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>B0</mi></msub><mo>=</mo><mi>(&minus;10 m/s)</mi><mi>&icirc;</mi><mo>+</mo><mi>(5.0 m/s)</mi><mi>&jcirc;</mi></math><br>
+<math><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>Af</mi></msub><mo>=</mo><mi>(&minus;6.0 m/s)</mi><mi>&icirc;</mi><mo>+</mo><mi>(30 m/s)</mi><mi>&jcirc;</mi></math>
+</article>
+<p style="margin-top: 0.2em;">What is the final speed of object B?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first use conservation of momentum in the x-axis.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0x</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fx</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>A0x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0x</mi></msub><mo>=</mo><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Afx</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bfx</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>A0x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0x</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Afx</mi></msub><mo>=</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bfx</mi></msub></math><br>
+	<math><mfrac><mrow><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>A0x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0x</mi></msub><mo>&minus;</mo><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Afx</mi></msub></mrow><msub><mi>m</mi><mi>B</mi></msub></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Bfx</mi></msub></math><br>
+	<math><mfrac><mrow><mi>(2.0kg)</mi><mi>(15m/s)</mi><mo>+</mo><mi>(3.0kg)</mi><mi>(&minus;10m/s)</mi><mo>&minus;</mo><mi>(2.0kg)</mi><mi>(&minus;6.0m/s)</mi></mrow><mi>(3.0kg)</mi></mfrac><mo>=</mo><mi>4.00m/s</mi><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Bfx</mi></msub></math><br>
+</article>
+<p>We do the same thing for the y-axis. However, we note that the velocity of object A before and after collision is the same, so we drop them at both sides.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0y</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fy</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>A0y</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0y</mi></msub><mo>=</mo><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Afy</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bfy</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0y</mi></msub><mo>=</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bfy</mi></msub></math><br>
+	<math><msub><mrow><mi>v</mi></mrow><mi>B0y</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Bfy</mi></msub></math><br>
+</article>
+<p>We now use the pythagorean theorem to get the magnitude of velocity, or speed of object B.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>Bf</mi></msub><mo>=</mo><msqrt><mrow><mi>(4.00)&sup2;</mi><mo>+</mo><mi>(5.00)&sup2;</mi></mrow></msqrt><mo>&approx;</mo><mi>6.4m/s</mi></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples">
+<h2>Exercise 3b</h2>
+<p>(HRK E6.25) What is the direction of the final velocity of object B?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will use arctangent to get the angle.</p>
+<article class="equations">
+	<math><mi>&theta;</mi><mo>=</mo><msup><mi>tan</mi><mo>&minus;1</mo></msup><mo>(</mo><mfrac><mi>5.00m/s</mi><mi>4.00m/s</mi></mfrac><mo>)</mo><mo>&approx;</mo><mi>51&deg;</mi></math><br>
+</article>
+<p>Thus, the direction of the velocity is 51&deg; upwards from the +x axis.</p>
+</section>
+</section>
+<section class="examples">
+<h2>Exercise 4</h2>
+<p>(LSM P9.54) A billiard ball, labeled 1, moving horizontally
+strikes another billiard ball, labeled 2, at rest.
+Before impact, ball 1 was moving at a speed of
+3.00 m/s, and after impact it is moving at 0.50
+m/s at 50° from the original direction. If the two
+balls have equal masses of 300 g, what is the
+velocity of the ball 2 after the impact? </p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Since both balls have the same mass, we might as well drop the subscripts for them. We will start with the horizontal component of momentum first.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0x</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fx</mi></msub></math><br>
+	<math><mi>m</mi><msub><mi>v</mi><mi>10x</mi></msub><mo>+</mo><mi>m</mi><msub><mi>v</mi><mi>20x</mi></msub><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>1fx</mi></msub><mo>+</mo><mi>m</mi><msub><mi>v</mi><mi>2fx</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>10x</mi></msub><mo>=</mo><msub><mi>v</mi><mi>1fx</mi></msub><mo>+</mo><msub><mi>v</mi><mi>2fx</mi></msub></math><br>
+</article>
+<p>The 50&deg; angle is opposite and adjacent to the vertical and horizontal component of the final velocity of the first ball respectively. Thus, we can use trigonometry.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>10x</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>1fx</mi></msub><mo>=</mo><msub><mi>v</mi><mi>2fx</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>10x</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>1f</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><msub><mi>v</mi><mi>2fx</mi></msub></math><br>
+	<math><mi>(3.00m/s)</mi><mo>&minus;</mo><mi>(0.50m/s)</mi><mi>cos</mi><mi>(50&deg;)</mi><mo>&approx;</mo><mi>2.68m/s</mi><mo>=</mo><msub><mi>v</mi><mi>2fx</mi></msub></math><br>
+</article>
+<p>We now do the same thing with the vertical component.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0y</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fy</mi></msub></math><br>
+	<math><mi>m</mi><msub><mi>v</mi><mi>10y</mi></msub><mo>+</mo><mi>m</mi><msub><mi>v</mi><mi>20y</mi></msub><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>1fy</mi></msub><mo>+</mo><mi>m</mi><msub><mi>v</mi><mi>2fy</mi></msub></math><br>
+	<math><mi>0</mi><mo>=</mo><msub><mi>v</mi><mi>1fy</mi></msub><mo>+</mo><msub><mi>v</mi><mi>2fy</mi></msub></math><br>
+	<math><mo>&minus;</mo><msub><mi>v</mi><mi>1fy</mi></msub><mo>=</mo><msub><mi>v</mi><mi>2fy</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>(0.50m/s)</mi><mi>sin</mi><mi>(50&deg;)</mi><mo>&approx;</mo><mo>&minus;</mo><mi>0.383m/s</mi><mo>=</mo><msub><mi>v</mi><mi>2fy</mi></msub></math><br>
+</article>
+<p>We first get the magnitude of velocity.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>2f</mi></msub><mo>=</mo><msqrt><mrow><mi>(2.68m/s)&sup2;</mi><mo>+</mo><mi>(&minus;0.383)&sup2;</mi></mrow></msqrt><mo>&approx;</mo><mi>3m/s</mi></math><br>
+</article>
+<p>For the angle, we use arctangent, as usual.</p>
+<article class="equations">
+	<math><mi>&theta;</mi><mo>=</mo><msup><mi>tan</mi><mo>&minus;1</mo></msup><mo>(</mo><mo>&minus;</mo><mfrac><mi>0.383m/s</mi><mi>2.68m/s</mi></mfrac><mo>)</mo><mo>&approx;</mo><mo>&minus;</mo><mi>8&deg;</mi></math><br>
+</article>
+</section>
+</section>
+
+<p>The following problem below shows one detail that you may not notice.</p>
+
+<section hard class="examples"><mark variable></mark>
+<h2>Problem 4a</h2>
+<p>(HRK P6.12a) Two balls A and B, having different but unknown masses, collide. A is initially at rest and B has a speed v. After collision,
+B has a speed v/2 and moves at right angles to its original motion. Find the direction in which ball A moves after the
+collision.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will first set the initial velocity of B to be in the x-axis, then since it moves at a 90&deg; angle afterwards, it moves in the y-axis. We first get the horizontal component.</p>
+<p>Initially, B has a speed of v, but then moves only in the y-axis, so it has no velocity afterwards.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0x</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fx</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>A0x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0x</mi></msub><mo>=</mo><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Afx</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bfx</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>B</mi></msub><mi>v</mi><mo>=</mo><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Afx</mi></msub></math><br>
+	<math><mfrac><mrow><msub><mi>m</mi><mi>B</mi></msub><mi>v</mi></mrow><msub><mi>m</mi><mi>A</mi></msub></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Afx</mi></msub></math><br>
+</article>
+<p>We do the same thing for the y-axis.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0y</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fy</mi></msub></math><br>
+	<math><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>A0y</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>B0y</mi></msub><mo>=</mo><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Afy</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bfy</mi></msub></math><br>
+	<math><mi>0</mi><mo>=</mo><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Afy</mi></msub><mo>+</mo><msub><mi>m</mi><mi>B</mi></msub><mfrac><mi>v</mi><mi>2</mi></mfrac></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><msub><mi>m</mi><mi>B</mi></msub><mi>v</mi></mrow><mi>2</mi></mfrac><mo>=</mo><msub><mi>m</mi><mi>A</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Afy</mi></msub></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><msub><mi>m</mi><mi>B</mi></msub><mi>v</mi></mrow><mrow><msub><mi>m</mi><mi>A</mi></msub><mi>2</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Afy</mi></msub></math><br>
+</article>
+<p>We now use the arctangent function to get the direction.</p>
+<article class="equations">
+	<math><mi>&theta;</mi><mo>=</mo><msup><mi>tan</mi><mo>&minus;1</mo></msup><mo>(</mo><mfrac><msub><mi>v</mi><mi>Afy</mi></msub><msub><mi>v</mi><mi>Afx</mi></msub></mfrac><mo>)</mo><mo>=</mo><msup><mi>tan</mi><mo>&minus;1</mo></msup><mo>(</mo><mfrac><mrow><mo>&minus;</mo><mfrac><mrow><msub><mi>m</mi><mi>B</mi></msub><mi>v</mi></mrow><mrow><msub><mi>m</mi><mi>A</mi></msub><mi>2</mi></mrow></mfrac></mrow><mfrac><mrow><msub><mi>m</mi><mi>B</mi></msub><mi>v</mi></mrow><msub><mi>m</mi><mi>A</mi></msub></mfrac></mfrac><mo>)</mo><mo>=</mo><msup><mi>tan</mi><mo>&minus;1</mo></msup><mo>(</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mo>)</mo><mo>&approx;</mo><mi>&minus;26.57&deg;</mi></math><br>
+</article>
+<p>The angle is thus 26.57&deg; down from the original direction of motion. Surprisingly, the masses of the objects are not needed to compute this, just the direction where one object goes and their speeds.</p>
+</section>
+</section>
+<section class="examples"><mark variable></mark>
+<h2>Problem 4b</h2>
+<p>(HRK P6.12b) Can you determine the speed of A from the information given?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>No. Simply, we need the masses of the objects. I leave the more rigorous explanation why to the most omniscient reader.</p>
+</section>
+</section>
+
+</main>
+<footer>
+	<a href="coefficient-of-restitution.html"> Coefficient of Restitution ></a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>momentum - restitution</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Coefficient of Restitution</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+	<section>
+	<h2>Summary</h2>
+	<p>The coefficient of restitution is a unitless number that determines the elasticity or "bounciness" of a collision</p>
+	<p>It is always positive</p>
+	</section>
+	<section>
+	<h2>Equations</h2>
+	<math><mi>e</mi><mo>=</mo><mfrac><mrow><mo>|</mo><msub><mi>v</mi><mi>Af</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>Bf</mi></msub><mo>|</mo></mrow><mrow><mo>|</mo><msub><mi>v</mi><mi>A0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>B0</mi></msub><mo>|</mo></mrow></mfrac></math>
+	</section>
+	</article>
+</aside>
+<main>
+<p>We have seen that there are multiple ways that interactions can occur. Sometimes things stick together after colliding, sometimes they blow up, sometimes they rebound. These interactions can be described by one quantity.</p>
+<article class="terms">
+	<mark>Coefficient of Restitution (<math><mi>e</mi></math>)</mark> - a coefficient which determines the "elasticity" between two bodies in a collision
+</article>
+<p>This coefficient, like the coefficient of static and kinetic friction, is unitless. It was developed by Sir Isaac Newton.</p>
+<figure><img src="images/cor1.svg" alt="">
+<figcaption>The coefficient of restitution of a bouncing object.</figcaption></figure>
+<p>As said, it determines the "elasticity" or "bounciness" of two objects after colliding. Qualitatively, a low coefficient means that the objects have very low bounciness, while a high coefficient means that the objects have high bounciness.</p>
+<p>Above, we can see that the bounce with coefficient of restitution being one has the ball bounce all the way up to the same height, while the bounce with zero elasticity has the ball stick straight to the floor after the bounce.</p>
+<figure><img src="images/cor2.svg" alt="">
+<figcaption>A coefficient of restitution between zero and one has some height lost.</figcaption></figure>
+<p>Here, the coefficient of restitution is 0.5, and we can see that the height of the bounces slowly deminish, as with what would happen realistically in real life.</p>
+<p>We now give the equation for the coefficient of restitution, which is as follows. We will choose, without loss of generality, object <math><mi>A</mi></math> and <math><mi>B</mi></math>.</p>
+<article class="equations">
+	<math><mi>e</mi><mo>=</mo><mfrac><mrow><mo>|</mo><msub><mi>v</mi><mi>Af</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>Bf</mi></msub><mo>|</mo></mrow><mrow><mo>|</mo><msub><mi>v</mi><mi>A0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>B0</mi></msub><mo>|</mo></mrow></mfrac></math>
+</article>
+<p>The use of absolute value gives us that the coefficient of restitution is strictly non-negative. However, it can also be zero. The numerator is the difference of the final velocities, and the difference of the initial velocities.</p>
+<p>One way to interpret the equation is the following.</p>
+<article class="equations">
+	<math><mi>e</mi><mo>=</mo><mfrac><mrow><mo>|</mo><mi>relative velocity of separation</mi><mo>|</mo></mrow><mrow><mo>|</mo><mi>relative velocity of approach</mi><mo>|</mo></mrow></mfrac></math>
+</article>
+<p>Here are some remarks you may notice.</p>
+<ul>
+	<li>If the speed of seperation is equal to the speed of approach, <math><mi>e</mi><mo>=</mo><mi>1</mi></math>.</li>
+	<li>If the speed of seperation is equal to zero, <math><mi>e</mi><mo>=</mo><mi>0</mi></math>; this means the objects stick together.</li>
+</ul>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 1a</h2>
+<p>Newton's cradle (pictured below) is a physics toy which shows how momentum is conserved between collisions. As one ball is raised on one side, the ball on the opposite side swings to around the same height as where the first ball was raised.</p>
+<figure grayout><img style="min-width:5%" src="images/cor3.avif" alt="">
+<figcaption>Question 1.</figcaption></figure>
+<p>Are the collisions between the balls elastic or inelastic? In other words, do they have a high or low coefficient of restitution?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The velocity of the first ball hitting the row of other balls is transferred (almost completely) to the ball on the other side, causing it to reach the same height. Thus, the speed of approach and separation is around the same, so the collisions are quite elastic; the coefficient of restitution is high.</p>
+</section>
+</section>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 1b</h2>
+<p>After some time, the balls will stop clicking and slowly go to rest. Why?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>One explanation is via noting air resistance, however we will focus on that since <math><mi>e</mi><mo><</mo><mi>1</mi></math>, even if the coefficient is high, the velocity will slowly dwindle down until it is practically zero; at rest.</p>
+</section>
+</section>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 2</h2>
+<p>What would it mean if <math><mi>e</mi><mo>></mo><mi>1</mi></math>? Is this possible in real life?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>This would imply that the speeds of the two objects going into the collision is less than the speed going out. In other words, it would be like if you dropped a ball and it bounced higher than where you dropped it. It's impossible in real life.</p>
+</section>
+</section>
+
+<p>The computation for the coefficient of restitution in a collision is trivial (it is simply just finding the initial and final velocities in a collision, which we have done before). Thus, we will tackle more interesting problems instead.</p>
+
+<section hard class="examples"><mark custom variable></mark>
+<h2>Exercise 1</h2>
+<p style="margin:0">Show that in a rebound against a stationary object, given the initial and final velocities of the object rebounding, the coefficient of restitution is the following.</p>
+<article class="equations">
+	<math><mi>e</mi><mo>=</mo><mfrac><mrow><mo>|</mo><msub><mi>v</mi><mi>Rf</mi></msub><mo>|</mo></mrow><mrow><mo>|</mo><msub><mi>v</mi><mi>R0</mi></msub><mo>|</mo></mrow></mfrac></math>
+</article>
+<p>With this, compute for the coefficient of restitution given a superball rebounding at a speed of nine tenths of its original speed.</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Since the object remains stationary before and after the rebound, we can set its velocity as zero. This also works well with our other definition; the initial velocity of the object approaches the stationary object, then it rebounds and separates from it.</p>
+<article class="equations">
+	<math><mi>e</mi><mo>=</mo><mfrac><mrow><mo>|</mo><msub><mi>v</mi><mi>Rf</mi></msub><mo>&minus;</mo><mi>0</mi><mo>|</mo></mrow><mrow><mo>|</mo><msub><mi>v</mi><mi>R0</mi></msub><mo>&minus;</mo><mi>0</mi><mo>|</mo></mrow></mfrac></math><br>
+	<math><mi>e</mi><mo>=</mo><mfrac><mrow><mo>|</mo><msub><mi>v</mi><mi>Rf</mi></msub><mo>|</mo></mrow><mrow><mo>|</mo><msub><mi>v</mi><mi>R0</mi></msub><mo>|</mo></mrow></mfrac></math>
+</article>
+<p>We now do the second part. Let <math><mi>v</mi></math> be the initial velocity. Then, we have this.</p>
+<article class="equations">
+	<math><mi>e</mi><mo>=</mo><mfrac><mrow><mo>|</mo><mfrac><mi>9</mi><mi>10</mi></mfrac><mi>v</mi><mo>|</mo></mrow><mrow><mo>|</mo><mi>v</mi><mo>|</mo></mrow></mfrac><mo>=</mo><mfrac><mi>9</mi><mi>10</mi></mfrac><mo>&sdot;</mo><mfrac><mrow><mo>|</mo><mi>v</mi><mo>|</mo></mrow><mrow><mo>|</mo><mi>v</mi><mo>|</mo></mrow></mfrac><mo>=</mo><mfrac><mi>9</mi><mi>10</mi></mfrac></math>
+</article>
+</section>
+</section>
+<p>The above equation is useful since it gives us this relation between the velocity of an object before and after a rbeound with a stationary object given the coefficient of restitution.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>Rf</mi></msub><mo>=</mo><mi>e</mi><msub><mi>v</mi><mi>R0</mi></msub></math>
+</article>
+<p>We note that if the coefficient is set to zero, then the final velocity is zero; this makes sense, as this would mean the object would stick to the ground.</p>
+<section hard class="examples"><mark custom variable></mark>
+<h2>Exercise 2</h2>
+<p style="margin:0">An object is projected and reaches a height <math><msub><mi>h</mi><mi>1</mi></msub></math> on level ground. Afterwards, it rebounds off the floor and reaches a height <math><msub><mi>h</mi><mi>2</mi></msub></math>. Show that the following is true.</p>
+<article class="equations">
+	<math><mi>e</mi><mo>=</mo><msqrt><mrow><mo>(</mo><mfrac><msub><mi>h</mi><mi>2</mi></msub><msub><mi>h</mi><mi>1</mi></msub></mfrac><mo>)</mo></mrow></msqrt></math>
+</article>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first note this equation, which we derived some time ago.</p>
+<article class="equations">
+	<math><mrow><mi>h</mi></mrow><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math>
+</article>
+<p>We will first assume that the object is projected with an initial velocity. Thus, the initial height after the first bounce is the following.</p>
+<article class="equations">
+	<math><mrow><msub><mi>h</mi><mi>1</mi></msub></mrow><mo>=</mo><mfrac><msup><msub><mi>v</mi><mi>1</mi></msub><mn>2</mn></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math>
+</article>
+<p>Then, it rebounds off the floor. Thus, its velocity changes like above based on the coefficient of restitution.</p>
+<article class="equations">
+	<math><mrow><msub><mi>h</mi><mi>2</mi></msub></mrow><mo>=</mo><mfrac><msup><msub><mi>v</mi><mi>2</mi></msub><mn>2</mn></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>(</mi><mi>e</mi><msub><mi>v</mi><mi>1</mi></msub><msup><mi>)</mi><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>2</mi></msup><msup><msub><mi>v</mi><mi>1</mi></msub><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac><mo>=</mo><msup><mi>e</mi><mi>2</mi></msup><mfrac><msup><msub><mi>v</mi><mi>1</mi></msub><mn>2</mn></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></mfrac></math>
+</article>
+<p>We substitute in our value for initial height that is shown there.</p>
+<article class="equations">
+
+	<math><msqrt><mrow><mo>(</mo><mfrac><msub><mi>h</mi><mi>2</mi></msub><msub><mi>h</mi><mi>1</mi></msub></mfrac><mo>)</mo></mrow></msqrt><mo>=</mo><mi>e</mi></math>
+</article>
+</section>
+</section>
+
+<section class="examples"><mark custom></mark>
+<h2>Problem 1a</h2>
+<p>A ball is dropped onto a floor with coefficient of restitution <math><mi>e</mi><mo>=</mo><mi>0.500</mi></math> from a height of 10.0m. What is the distance it travels in one bounce, starting from when it hits the floor until it hits the floor again?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We use the above equation.</p>
+<article class="equations">
+	<math><msqrt><mrow><mo>(</mo><mfrac><msub><mi>h</mi><mi>1</mi></msub><msub><mi>h</mi><mi>0</mi></msub></mfrac><mo>)</mo></mrow></msqrt><mo>=</mo><mi>e</mi></math><br>
+	<math><mrow><msub><mi>h</mi><mi>1</mi></msub></mrow><mo>=</mo><msup><mi>e</mi><mi>2</mi></msup><msub><mi>h</mi><mi>0</mi></msub></math><br>
+</article>
+<p>We now plug in our values.</p>
+<article class="equations">
+	<math><mrow><msub><mi>h</mi><mi>1</mi></msub></mrow><mo>=</mo><msup><mi>(0.500)</mi><mi>2</mi></msup><mi>(10.0m)</mi><mo>=</mo><mi>0.25m</mi></math><br>
+</article>
+<p>We need to double this value since the ball goes up to this height than falls down the same height, so the total distance is 0.500m.</p>
+</section>
+</section>
+
+<p>Do you like mathematics? Below is an application of an <intext tabindex="0" tooltip="the sum of a geometric series which has an infinite number of terms, which may converge to a single value">infinite geometric series</intext>. Have a try at it; although you do need to know one formula, which we will note below.</p>
+<article class="equations">
+	<math><msub><mi>S</mi><mi>&infin;</mi></msub><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mi>1</mi></mrow><mi>&infin;</mi></munderover><mi>a</mi><msup><mi>r</mi><mrow><mi>n</mi><mo>&minus;</mo><mi>1</mi></mrow></msup><mo>=</mo><mfrac><mi>a</mi><mrow><mi>1</mi><mo>&minus;</mo><mi>r</mi></mrow></mfrac></math>
+</article>
+<section hard class="examples"><mark custom></mark>
+<h2>Problem 1b</h2>
+<p>The ball in the above problem actually bounces an infinite number of times. However, the distance it travels in these infinite number of bounces converges to a number. Thus, what is the total distance travelled by the ball, including the distance it initially fell?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>In the first bounce, we saw it went up <math><msup><mi>e</mi><mi>2</mi></msup><msub><mi>h</mi><mi>1</mi></msub></math>. In the second bounce, we have the following.</p>
+<article class="equations">
+	<math><mrow><msub><mi>h</mi><mi>2</mi></msub></mrow><mo>=</mo><msup><mi>e</mi><mi>2</mi></msup><msub><mi>h</mi><mi>1</mi></msub><mo>=</mo><msup><mi>e</mi><mi>4</mi></msup><msub><mi>h</mi><mi>0</mi></msub></math><br>
+</article>
+<p>We see that every bounce, the height decreases by <math><msup><mi>e</mi><mi>2</mi></msup></math>. The ball moves twice this distance every bounce, so we have this series.</p>
+<article class="equations">
+	<math><mi>d</mi><mo>=</mo><mi>2</mi><msup><mi>e</mi><mi>2</mi></msup><msub><mi>h</mi><mi>0</mi></msub><mo>+</mo><mi>2</mi><msup><mi>e</mi><mi>4</mi></msup><msub><mi>h</mi><mi>0</mi></msub><mo>+</mo><mi>2</mi><msup><mi>e</mi><mi>6</mi></msup><msub><mi>h</mi><mi>0</mi></msub><mo>+</mo><mi>&hellip;</mi></math><br>
+	<math><mi>d</mi><mo>=</mo><mi>2</mi><msup><mi>e</mi><mi>2</mi></msup><msub><mi>h</mi><mi>0</mi></msub><mo>(</mo><mi>1</mi><mo>+</mo><msup><mi>e</mi><mi>2</mi></msup><mo>+</mo><msup><mi>e</mi><mi>4</mi></msup><mo>+</mo><mi>&hellip;</mi><mo>)</mo></math>
+</article>
+<p>The right side of the equation is an infinite geometric series.</p>
+<article class="equations">
+	<math><mi>d</mi><mo>=</mo><mi>2</mi><msup><mi>e</mi><mi>2</mi></msup><msub><mi>h</mi><mi>0</mi></msub><mo>(</mo><mfrac><mi>1</mi><mrow><mi>1</mi><mo>&minus;</mo><msup><mi>e</mi><mi>2</mi></msup></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>d</mi><mo>=</mo><mfrac><mrow><mi>2</mi><msup><mi>e</mi><mi>2</mi></msup><msub><mi>h</mi><mi>0</mi></msub></mrow><mrow><mi>1</mi><mo>&minus;</mo><msup><mi>e</mi><mi>2</mi></msup></mrow></mfrac></math><br>
+	<math><mi>d</mi><mo>=</mo><mfrac><mrow><mi>2</mi><msup><mi>(0.500)</mi><mi>2</mi></msup><mi>(10.0m)</mi></mrow><mrow><mi>1</mi><mo>&minus;</mo><msup><mi>(0.500)</mi><mi>2</mi></msup></mrow></mfrac><mo>&approx;</mo><mi>6.67m</mi></math><br>
+</article>
+<mi>Adding on the ten meters it dropped previously, the total distance is 16.7m.</mi>
+</section>
+</section>
+
+</main>
+<footer>
+	<a href="inelastic-collisions.html"> Inelastic Collisions ></a>
+</footer>
+</body>
+</html>

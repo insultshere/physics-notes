@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>rigid - centerofmass</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1>Center of Mass</h1>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>A particle is an object with mass but negligible size</p>
+		<p>Particles can't rotate</p>
+		<p>In a rigid object, there is a point called the center of mass which is as if all the mass is centered at that point, and thus acts like a particle</p>
+		</section>
+	</article>
+</aside>
+<main>
+<p>So far, we have analyzed objects as if they were particles. We also haven't exactly defined what a particle is, so let's define it here.</p>
+<article class="terms">
+	<mark>Particle</mark> - an object which has mass but negligible size
+</article>
+<p>We have used particles as an approximation for most of our objects. For example, we analyzed how projectiles move in the air, how we push boxes on inclined planes, and how things collide as if they were particles.</p>
+<p>This approximation works because, generally, each portion of the object in general moves in the same way as any other portion. For example, in a ball thrown in the air, each part of the ball moves approximately the same as any other part.</p>
+<figure><img src="images/intro1.svg" alt="">
+<figcaption>We can appoximate objects like a particle.</figcaption></figure>
+<p>One limitation of this approach is that particles can't rotate since they have no radius. For example, in baton twirling, people throw batons and catch them. These batons rotate while they move in the air.</p>
+<figure><img src="images/intro2.svg" alt="">
+<figcaption>Two baton twirlers passing a baton.</figcaption></figure>
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK 3.38) Can you think of physical phenomena involving the Earth in
+which the Earth cannot be treated as a particle?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Here are two examples. The Earth casts a shadow on the moon during a lunar eclipse; this implies the Earth has size, which means it isn't a particle.</p>
+<p>Another example is considering the rotation of the Earth as an oblate spheroid. If we approximate the Earth as a particle in this case, it can't rotate.</p>
+</section>
+</section>
+<p>Let's return to those baton twirlers. Despite how complicated the motion looks, if we eyeball it, it seems that it still moves in a parabolic arc; just like how our particle approximation said it would do.</p>
+<p>In fact, we can pinpoint a single point on the baton, and note how it goes through this parabola precisely.</p>
+<figure><img src="images/intro3.svg" alt="">
+<figcaption>A point on the baton moves through a parabolic arc, unlike everything else.</figcaption></figure>
+<p>If, hypothetically, we can get this point, we could treat these rigid objects as particles and simplify their calculations heavily. Thankfully, we can. Thus, we define this point.</p>
+<article class="terms">
+	<mark>Center of Mass</mark> - a point on a rigid object which moves as if all the mass of the object were concentrated at that point
+</article>
+<p>We use the term "center of mass" to determine a point in the object which moves like if it were a particle. At this point, we can simplify our calculations by not caring about how the object rotates or other things which may affect the object.</p>
+</main>
+<footer>
+<a unfinished>Systems of Two Particles ></a>
+</footer>
+</body>
+</html>
