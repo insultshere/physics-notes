@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>rigid - rods</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1>Rods</h1>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>A solid object is a collection of infinite, infinitesimally small particles of infinitesimal mass</p>
+		<p>A thin rod is a solid object with length but negligible width</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<p>To use the equation, one must first convert the variable of integration and then choose the appropriate bounds of integration</p>
+		<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mrow><mi>d</mi><mi>m</mi></mrow></math><br>
+		</section>
+	</article>
+</aside>
+
+<main>
+<p>We first analyzed a system of two particles. Then, we noted a system of multiple particles. Now, we deal with a solid object.</p>
+<p>The simplest case of a solid object is the thin rod that we've used to connect two masses. Previously, we let this rod be massless, or with non-negligible mass, but now we will let the rod have a certain amount of mass <math><mi>M</mi></math> and length <math><mi>L</mi></math>.</p>
+<figure><img src="images/solid1.svg" alt="">
+<figcaption>A thin rod.</figcaption></figure>
+<p>Here, note the use of the word "thin". This means that we can approximate the rod as a line with negligible width.</p>
+<p>Let us first recall the equation we got for the position of the center of mass of a system of multiple objects.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&sum;</mo><mi>m</mi><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover></math><br>
+</article>
+<p>If we could break up this thin rod into multiple particles, we could use this equation. Thankfully, using calculus, we can.</p>
+<p>To deal with the thin rod, we cut its mass into smaller and smaller parts. For example, this small part has a mass which we set as <math><mi>&Delta;</mi><mi>m</mi></math>. In other words, this tiny slice of the rod has a portion of the whole mass <math><mi>M</mi></math>.</p>
+<figure><img src="images/solid2.svg" alt="">
+<figcaption>A small portion of the rod.</figcaption></figure>
+<p>Thus, in our equation, we would have it look something like this.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&sum;</mo><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mrow><mi>&Delta;</mi><mi>m</mi></mrow></math><br>
+</article>
+<p>Right now, this is but an approximation for the rod. In reality, there are infinitely many of these "small" portions. However, if we cut the mass of this rod into finer and finer parts, we will get closer and closer to the actual rod itself.</p>
+<figure><img src="images/solid3.svg" alt="">
+<figcaption>An infinitesimally small portion of the rod.</figcaption></figure>
+<p>Thus, as these portions become infinitesimally small, our approximation for the rod becomes closer and closer. We can now write the above equation as follows. However, a summation won't cut it for these infinitely many infinitesimally small parts; we must replace it with an integral!</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mrow><mi>d</mi><mi>m</mi></mrow></math><br>
+</article>
+<p>This equation now shows us how to get the center of mass of a solid object.</p>
+
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q7.10) Someone claims that when a skillful high jumper clears the
+bar, the jumper’s center of mass actually goes under the bar.
+Is this possible?</p>
+<figure grayout><img src="images/solid4.avif" alt="">
+<figcaption>Question 1.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The above shows the fosbury flop. In this maneuver, the person's center of mass actually goes below the bar. This is because the person's legs help contribute to the center of mass of the athlete, causing it to go below where their torso is.</p>
+</section>
+</section>
+<p>For any mathematically small length <math><mi>d</mi><mi>x</mi></math>, it has a <math><mi>d</mi><mi>m</mi></math>. However, we don't know how these two relate to each other.</p>
+<p>For example, in a baton built with different metals, each infinitesimal length could have a different infinitesimal mass. To remedy this, we will first approximate that the entire mass of the baton is distributed equally throughout the baton.</p>
+<article class="equations">
+	<math><mfrac><mi>M</mi><mi>L</mi></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mi>m</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math>
+</article>
+<p>Mathematically, the mass <math><mi>M</mi></math> is divided throughout the entire length <math><mi>L</mi></math> of the rod, and thus for a tiny length <math><mi>d</mi><mi>x</mi></math> it must have an equal part of the mass <math><mi>d</mi><mi>m</mi></math>.</p>
+<p>Thus, our steps are the following:</p>
+<ol>
+	<li>Convert the <intext tabindex="0" tooltip="the infinitesimally small value that an integral is summing up">variable of integration</intext> to an appropriate other variable</li>
+	<li>Choose appropriate <intext tabindex="0" tooltip="the portion in which the definite integral will sum up">bounds of integration</intext></li>
+	<li>Solve and evaluate the integral</li>
+</ol>
+<p>We will first deal with rods lying flat on the x-axis, and thus we can drop the vector notation.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mrow><mi>d</mi><mi>m</mi></mrow></math><br>
+</article>
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 1a</h2>
+<p>Let one portion of the baton be at the origin. The mass of the entire baton is <math><mi>M</mi></math>, distributed evenly along its length <math><mi>L</mi></math>. The entire baton is on the x-axis. Where is the center of mass?</p>
+<figure><img src="images/solid5.svg" alt="">
+<figcaption>Exercise 1a.</figcaption></figure>
+
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will first write out our formula.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mrow><mi>d</mi><mi>m</mi></mrow></math><br>
+</article>
+<p>Now, we need to change this variable of integration so we can use the position. We use the fact that the density is uniform to do this.</p>
+<article class="equations">
+	<math><mfrac><mi>M</mi><mi>L</mi></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mi>m</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math><br>
+	<math><mfrac><mi>M</mi><mi>L</mi></mfrac><mi>d</mi><mi>x</mi><mo>=</mo><mrow><mi>d</mi><mi>m</mi></mrow></math>
+</article>
+<p>Let's now substitute this for our variable of integration. We pull some of it out as they are constant.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mo>(</mo><mfrac><mi>M</mi><mi>L</mi></mfrac><mi>d</mi><mi>x</mi><mo>)</mo></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&middot;</mo><mfrac><mi>M</mi><mi>L</mi></mfrac><mo>&int;</mo><mi>x</mi><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><mo>&int;</mo><mi>x</mi><mi>d</mi><mi>x</mi></math><br>
+</article>
+<p>Great; we now have a usable integral. The right integral basically means we will integrate over every infinitesimal length of the rod; in other words, we are adding up all the infinitesimally small lengths.</p>
+<p>Thus, to get the whole rod back, we integrate from the start of the rod at the origin to the end of the rod.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>x</mi><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><mfrac><msup><mi>x</mi><mn>2</mn></msup><mi>2</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>L</mi></munderover></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><mo>[</mo><mfrac><msup><mi>L</mi><mn>2</mn></msup><mi>2</mi></mfrac><mo>&minus;</mo><mfrac><mi>0</mi><mi>2</mi></mfrac><mo>]</mo></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>2</mi></mfrac></math><br>
+</article>
+<p>This result shows us that the center of mass of the rod is placed at the halfway point between its two ends; in other words, its center.</p>
+</section>
+</section>
+
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 1b</h2>
+<p>The same baton is shown below, but this time the origin is set to be the center of the baton. In this coordinate system, where is the center of mass?</p>
+<figure><img src="images/solid6.svg" alt="">
+<figcaption>Exercise 1b.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We return to this equation.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><mo>&int;</mo><mi>x</mi><mi>d</mi><mi>x</mi></math><br>
+</article>
+<p>We have different bounds of integration. We start one half of the length to the left, then end one half of the length to the right.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><munderover><mo>&int;</mo><mrow><mo>&minus;</mo><mfrac><mi>L</mi><mi>2</mi></mfrac></mrow><mfrac><mi>L</mi><mi>2</mi></mfrac></munderover><mi>x</mi><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><mfrac><msup><mi>x</mi><mn>2</mn></msup><mi>2</mi></mfrac><munderover><mo>|</mo><mrow><mo>&minus;</mo><mfrac><mi>L</mi><mi>2</mi></mfrac></mrow><mfrac><mi>L</mi><mi>2</mi></mfrac></munderover></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><mo>[</mo><mfrac><mrow><mi>(</mi><mfrac><mi>L</mi><mi>2</mi></mfrac><msup><mi>)</mi><mn>2</mn></msup></mrow><mi>2</mi></mfrac><mo>&minus;</mo><mfrac><mrow><mi>(</mi><mo>&minus;</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><msup><mi>)</mi><mn>2</mn></msup></mrow><mi>2</mi></mfrac><mo>]</mo></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>0</mi></mfrac></math><br>
+</article>
+<p>Following what we saw before, since we let the origin be the center of the rod, this means that the center of mass of the rod is still in the center, like we saw before.</p>
+</section>
+</section>
+</main>
+<footer>
+<a href="the-composite-object.html">The Composite Object > </a>
+</footer>
+</body>
+</html>

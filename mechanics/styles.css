@@ -3,11 +3,14 @@
 	--darkred: #990000;
 	--lightred: #F5EAEA;
 	--focusred: #d90000;
-	--white: #ffffff;
-	--gray: #eeeeee;
 	--redtowhite: linear-gradient(to right, #F5EAEA, #fff, #fff);
 	--whitetored: linear-gradient(to right, #fff, #fff, #F5EAEA);
-	--centergray: linear-gradient(to right, rgba(0,0,0,0), #eee, rgba(0,0,0,0));
+	--centergray: linear-gradient(to right, rgba(0,0,0,0), WhiteSmoke, rgba(0,0,0,0));
+}
+
+body[darkmode] {
+	filter: invert(1) saturate(5) hue-rotate(180deg) saturate(0.5) brightness(1.1);
+	background-color: #000;
 }
 
 body {
@@ -22,7 +25,8 @@ body:not([index])>main::first-letter {
 }
 
 aside {
-	background-color: var(--gray);
+	font-size: 0.975em;
+	background-color: WhiteSmoke;
 	float:left;
 	padding:1em 0.5em;
 	width:calc(21.5% - 1.5em);
@@ -102,7 +106,7 @@ nav {
 }
 
 h1 {
-	background-color:var(--gray);
+	background-color:WhiteSmoke;
 	margin-top:1.5em;
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-size:1.5em;
@@ -125,7 +129,7 @@ h2 {
 h2 > button {
 	float:right;
 	background-color:var(--darkred);
-	color:var(--white);
+	color:white;
 	border-radius:2px;
 	border-style:none;
 	cursor:pointer;
@@ -164,6 +168,7 @@ figure > video {
 
 figure[grayout] > img {
 	filter: sepia(100%) saturate(3) hue-rotate(310deg) saturate(0.5);
+	max-width: 60%;
 }
 
 figure > figcaption {
@@ -187,7 +192,7 @@ figure > figcaption {
 
 .examples {
 	display:block;
-	background-color:var(--gray);
+	background-color:WhiteSmoke;
 	padding:6px;
 	margin: 0.75em 0px 0.75em 0px
 }
@@ -255,7 +260,7 @@ mark[calc]::before {
 	display:block;
 	text-align:left;
 	color:var(--darkred);
-	background-color: var(--white);
+	background-color: white;
 	background-image: var(--redtowhite)
 }
 
@@ -278,6 +283,8 @@ aside > article > section > math {
 	border-left: 0.05em dashed;
 	padding: 0.2em 0 0.2em 0.5em;
 	margin-bottom:0.5em;
+	font-size: 0.9em;
+	width:100%;
 }
 
 .solution > .equations {
@@ -379,6 +386,7 @@ footer[next]{
 
 @media only screen and (max-width: 1024px) {
 	
+	body[index],
 	body{
 		width:90%;
 		font-size:0.9em;
@@ -414,17 +422,16 @@ footer[next]{
 	math{
 		font-size:1em;
 	}
-
+	
 }
 
 @media only screen and (max-width: 426px) {
 	body {
 		width:95%;
-		margin:auto;
 	}
 
 	aside { 
-		display: none;
+		display:none;
 	}
 
 	main {
@@ -440,10 +447,5 @@ footer[next]{
 	figure > video {
 		max-width: 100%;
 		width:100%;
-	}
-
-	figure {
-		width:85%;
-		margin:0 7.5% 0 7.5%;
 	}
 }

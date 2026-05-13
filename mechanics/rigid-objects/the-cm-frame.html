@@ -20,13 +20,10 @@
 		<p>In the CM frame, a collision appears to be head-on with zero initial and final momentum</p>
 		<p>The speed of the CM frame is constant before and after collision</p>
 		</section>
-		<section>
-		<h2>Equations</h2>
-		<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math>
-		</section>
 	</article>
 </aside>
 <main>
+<p>In this side tutorial, we will see another use of the center of mass. This time, we will observe its motion during a collision.</p>
 <p>We noted before that we can do physics in any reference frame. So far, we have analyzed collisions all in a stationary reference frame. For example, an elastic collision is shown below.</p>
 <figure><video autoplay muted loop><source src="images/cm2.mp4" type="video/mp4"></video>
 <figcaption>An elastic collision of two objects of equal mass in the lab frame.</figcaption></figure>
@@ -91,8 +88,23 @@
 	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math>
 </article>
 <p>Thus, if we move at this speed, it will appear that the initial momentum is zero. Consequently, by the conservation of momentum, it means that the final momentum after collision must also be zero.</p>
-<section hard class="examples"><mark custom></mark>
+<p>It may help to notice that the "CM" frame is precisely the center-of-mass of a system. In other words, if we use the reference frame of the center of mass, it will appear as if the initial momenta of the system is zero.</p>
+<p>Further, the equation we derived is precisely the same as the one we derived last time.</p>
+
+<section class="examples"><mark custom></mark>
 <h2>Question 2</h2>
+<p>You are on a firework date, and see the fireworks explode, like below. Your friend tells you that the center of mass of the firework, even after exploding, continues to move in a parabolic arc. How do you respond?</p>
+<figure grayout><img src="images/cm4.avif" alt="">
+<figcaption>Question 2.</figcaption></figure>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>After the explosion, the only net force acting on the system is gravity. Thus, the net force acting on the center of mass is gravity, and thus it is in free fall. If it was projected at an angle, it means it continues to trace a parabolic arc.</p>
+<p>The reason why the explosion doesn't change the motion of the CM is because it is an internal force.</p>
+</section>
+</section>
+
+<section hard class="examples"><mark custom></mark>
+<h2>Question 3</h2>
 <p>Show that the speed of the CM frame is constant before and after a head-on collision.
 <h2>Answer<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
@@ -110,9 +122,37 @@
 </article>
 </section>
 </section>
+<p>Here, we derived the equation for the speed of the CM frame for two particles. However, using the formula we got for multiple particles, we can extend this fact to deal with collisions involving multiple particles.</p>
+<p>Sadly, unlike for two particle collisions, there is no set equation for the final velocity of any of the particles given the initial momenta, even if we use the CM frame. Nevertheless, the CM frame can prove useful to simplify these situations.</p>
+<section hard class="examples">
+<h2>Problem 1</h2>
+<p>(HRK E7.18) A railway flat car is rushing along a level frictionless track at a
+speed of 45 m/s. Mounted on the car and aimed forward is a
+cannon that fires 65-kg cannon balls with a muzzle speed of
+625 m/s. The total mass of the car, the cannon, and the large
+supply of cannon balls on the car is 3500 kg. How many cannon
+balls must be fired to bring the car as close to rest as possible?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We take the entire system to be the car, the cannon, and the cannonballs, even when they are in the air. Now, we can first treat the entire system as a particle, and thus the CM of that system moves at the same speed as the particle, or 45m/s.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><msub><mi>p</mi><mi>0</mi></msub><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><msub><mi>v</mi><mi>0</mi></msub></mrow><mi>M</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math>
+</article>
+<p>With this system, we need not care about how the cannonball is shot out since that is an internal force. Now, let's let <math><mi>N</mi></math> be the number of cannonballs thrown out, and <math><mi>M</mi></math> be the total mass of the system.</p>
+<p>Now, since there are no external forces, the velocity of the center of mass must still be 45 m/s. Here, we write out at the left the momentum of the cannonballs and on the right the momentum of the car, which is zero since we want it at rest.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><msub><mi>p</mi><mi>f</mi></msub><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>N</mi><mi>m</mi><msub><mi>v</mi><mi>bf</mi></msub><mo>+</mo><mo>(</mo><mi>M</mi><mo>&minus;</mo><mi>N</mi><mi>m</mi><mo>)</mo><msub><mi>v</mi><mi>cf</mi></msub></mrow><mi>M</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+	<math><mfrac><mrow><mi>N</mi><mi>m</mi><msub><mi>v</mi><mi>bf</mi></msub></mrow><mi>M</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+	<math><mi>N</mi><mo>=</mo><mfrac><mrow><mi>M</mi><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><mi>m</mi><msub><mi>v</mi><mi>bf</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>(3500kg)</mi><mi>(45m/s)</mi></mrow><mrow><mi>(65kg)</mi><mi>(625m/s)</mi></mrow></mfrac><mo>&approx;</mo><mi>3.88</mi></math><br>
+</article>
+<p>Thus, four cannonballs need to be shot out.</p>
+</section>
+</section>
 </main>
-<footer style="color:#900">
-	&FilledSmallSquare;
+<footer>
+<a href="rods.html">Rods ></a>
 </footer>
 </body>
 </html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>rigid - composite</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1>The Composite Object</h1>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>The center of mass of a thin rod with uniform mass is at its midpoint</p>
+		<p>In dealing with a composite object, it is often helpful to get the center of masses of each of its parts first and then treat those as a multiple particle system</p>
+		</section>
+		<section>
+	</article>
+</aside>
+
+<main>
+<p>Surprisingly, with just the integral at hand, we can get the center of mass of any composite object. Of course, we will start simple. Below is a composite object, consisting of a thin rod and a mass on one end.</p>
+<figure><img src="images/comp1.svg" alt="">
+<figcaption>A composite object.</figcaption></figure>
+<p>To deal with this composite object, we will note the definition of the center of mass. We defined it such that it is a particle wherein all the mass of the object is at. Thus, if we have the center of mass of a solid object, it can be used as a particle.</p>
+<p>So, to get the center of mass of a composite object, it is like breaking it down into simpler, more bitesized rigid objects, getting the center of masses of those, and then putting it all together.</p>
+
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 1</h2>
+<p>A composite object is shown below, showing a thin rod of length <math><mi>L</mi></math> and uniformly distributed mass <math><mi>M</mi></math>. A particle of same mass <math><mi>M</mi></math> is placed onto the end of the object. Let the end without the mass be at the origin. Where is the center of mass?</p>
+<figure><img src="images/comp2.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Here, it is useful to first find the center of mass of the rod itself, and then use that to find the center of mass of the entire composite object. For the rod, we have done this before. We once again note the uniformly distributed mass, so we can change the variable of integration. </p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mrow><mi>d</mi><mi>m</mi></mrow></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mo>(</mo><mfrac><mi>M</mi><mi>L</mi></mfrac><mi>d</mi><mi>x</mi><mo>)</mo></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&middot;</mo><mfrac><mi>M</mi><mi>L</mi></mfrac><mo>&int;</mo><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><mo>&int;</mo><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>d</mi><mi>x</mi></math><br>
+</article>
+<p>We will integrate from the origin to the end of the rod.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><mfrac><msup><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mn>2</mn></msup><mi>2</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>L</mi></munderover></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi></math><br>
+</article>
+<p>Now, we get the center of mass of the entire system. The rod can now be approximated as a single particle, and the mass is also a single particle, so we can effectively just use the formula we collected for the center of mass of two particles.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-rod</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-rod</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><mi>L</mi><mi>&icirc;</mi><mo>+</mo><mi>M</mi><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi></mrow><mrow><mi>2</mi><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><mo>(</mo><mi>L</mi><mi>&icirc;</mi><mo>+</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi><mo>)</mo></mrow><mrow><mi>2</mi><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>3</mi><mi>L</mi></mrow><mi>4</mi></mfrac><mi>&icirc;</mi></math><br>
+</article>
+</section>
+</section>
+<p>This approach is surprisingly quite versatile. Of course, for now, we can only deal with thin rods, but later we can extend our knowledge to deal with more difficult problems.</p>
+
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 2</h2>
+<p>Two identical thin rods of length <math><mi>L</mi></math> and uniformly distributed mass <math><mi>M</mi></math> are welded together, their corner placed at the origin. One thin rod lies on the x-axis, while the other lies on the y-axis. Where is the center of mass of the object?</p>
+<figure><img src="images/comp3.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>This composite object is made, as said, of two thin rods. To get the center of mass of the object, we first get the centers of masses of the two rods separately, treat them as particles, then get the center of mass of the whole system.</p>
+<p>We will skip the derivation of the horizontal thin rod as we have done it before. Without proof, it is shown below.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-hrod</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi></math><br>
+</article>
+<p>For the rod in the vertical direction, it follows basically the same procedure. However, instead of the x-component, we are using the y-component instead, since it is vertical. Thus, its center of mass is shown below, without full solution.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-vrod</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-vrod</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>L</mi></mfrac><mfrac><msup><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mn>2</mn></msup><mi>2</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>L</mi></munderover></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-vrod</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&jcirc;</mi></math><br>
+</article>
+<p>Now, since we are working in two dimensions, we have to consider the horizontal and the vertical components seperately. Starting with the horizontal component, we have the following.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>cm-hrod</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-hrodx</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-vrod</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-vrodx</mi></msub></mrow><mrow><msub><mi>m</mi><mi>cm-hrod</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-vrod</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi></mrow><mrow><mi>2</mi><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><mi>L</mi></mrow><mi>4</mi></mfrac><mi>&icirc;</mi></math><br>
+</article>
+<p>The vertical-component goes the same way.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>cm-hrod</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-hrody</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-vrod</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-vrody</mi></msub></mrow><mrow><msub><mi>m</mi><mi>cm-hrod</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-vrod</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&jcirc;</mi></mrow><mrow><mi>2</mi><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><mi>L</mi></mrow><mi>4</mi></mfrac><mi>&jcirc;</mi></math><br>
+</article>
+<p>Thus, the center of mass of the object is at <math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>4</mi></mfrac><mi>&icirc;</mi><mo>+</mo><mfrac><mi>L</mi><mi>4</mi></mfrac><mi>&jcirc;</mi></math>.</p>
+</section>
+</section>
+<p>The above shows another fact that we saw for a system of multiple particles, and that is that the center of mass need not lie on the composite object that we make.</p>
+
+<section class="examples"><mark calc></mark>
+<h2>Exercise 3</h2>
+<p>(HRK E7.13) Three thin rods each of length <math><mi>L</mi></math> are arranged in an inverted U,
+as shown below. The two rods on the arms of the each
+have mass <math><mi>M</mi></math>; the third rod has mass <math><mi>3</mi><mi>M</mi></math>. Where is the center
+of mass of the assembly?</p>
+<figure><img src="images/comp4.svg" alt="">
+<figcaption>Exercise 3.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We have three thin rods, so we will note their three centers of masses. We will set our coordinate system to be at the top left corner of the assembly, so the two vertical rods extend downwards into the negative y-direction.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-vrod1</mi></msub><mo>=</mo><mo>&minus;</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&jcirc;</mi></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-vrod2</mi></msub><mo>=</mo><mi>L</mi><mi>&icirc;</mi><mo>&minus;</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&jcirc;</mi></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-hrod</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi></math><br>
+</article>
+<p>With the three centers of masses, we can now get the center of mass of the entire system. We will start with the x-component.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>1x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>2x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3x</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><mi>3</mi><mi>M</mi><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi><mo>+</mo><mi>M</mi><mi>L</mi><mi>&icirc;</mi></mrow><mrow><mi>5</mi><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><mfrac><mrow><mi>3</mi><mi>L</mi></mrow><mi>2</mi></mfrac><mi>&icirc;</mi><mo>+</mo><mfrac><mrow><mi>2</mi><mi>L</mi></mrow><mi>2</mi></mfrac><mi>&icirc;</mi></mrow><mrow><mi>5</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi></math><br>
+</article>
+<p>For the y-component, we have this.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>1y</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>2y</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3y</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><mo>&minus;</mo><mi>M</mi><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&jcirc;</mi><mo>&minus;</mo><mi>M</mi><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&jcirc;</mi></mrow><mrow><mi>5</mi><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mo>&minus;</mo><mfrac><mi>L</mi><mi>5</mi></mfrac><mi>&jcirc;</mi></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples"><mark calc custom></mark>
+<h2>Problem 1</h2>
+<p>An equilateral triangle shaped assembly is made up of three identical thin rods of length <math><mi>L</mi></math> and uniformly distributed mass <math><mi>M</mi></math>. Where is the center of mass?</p>
+<figure><img src="images/comp5.svg" alt="">
+<figcaption>Problem 1.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The centers of masses of the three thin rods are at their midpoints, given they have uniform mass distribution. The midpoint of the horizontal rod at the x-axis is simple enough.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-hrod</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi></math><br>
+</article>
+<p>Now, the height of the triangle is, by special right triangles, <math><mfrac><mrow><mi>L</mi><msqrt><mi>3</mi></msqrt></mrow><mi>2</mi></mfrac></math>. We leave this fact to be proven by the most omniscient reader. Eitherway, we now note the two midpoints of the rods.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod1</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>4</mi></mfrac><mi>&icirc;</mi><mo>+</mo><mfrac><mrow><mi>L</mi><msqrt><mi>3</mi></msqrt></mrow><mi>4</mi></mfrac><mi>&jcirc;</mi></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-rod2</mi></msub><mo>=</mo><mfrac><mrow><mi>3</mi><mi>L</mi></mrow><mi>4</mi></mfrac><mi>&icirc;</mi><mo>+</mo><mfrac><mrow><mi>L</mi><msqrt><mi>3</mi></msqrt></mrow><mi>4</mi></mfrac><mi>&jcirc;</mi></math><br>
+</article>
+<p>Great; now, we deal with the x-component of the entire system.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>1x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>2x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3x</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi><mo>+</mo><mi>M</mi><mfrac><mi>L</mi><mi>4</mi></mfrac><mi>&icirc;</mi><mo>+</mo><mi>M</mi><mfrac><mrow><mi>3</mi><mi>L</mi></mrow><mi>4</mi></mfrac><mi>&icirc;</mi></mrow><mrow><mi>3</mi><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><mfrac><mrow><mi>2</mi><mi>L</mi></mrow><mi>4</mi></mfrac><mi>&icirc;</mi><mo>+</mo><mfrac><mi>L</mi><mi>4</mi></mfrac><mi>&icirc;</mi><mo>+</mo><mfrac><mrow><mi>3</mi><mi>L</mi></mrow><mi>4</mi></mfrac><mi>&icirc;</mi></mrow><mrow><mi>3</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mi>L</mi><mi>2</mi></mfrac><mi>&icirc;</mi></math><br>
+</article>
+<p>For the y-component of the center of mass, we have the following.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>1y</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>2y</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3y</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><mfrac><mrow><mi>L</mi><msqrt><mi>3</mi></msqrt></mrow><mi>4</mi></mfrac><mi>&jcirc;</mi><mo>+</mo><mi>M</mi><mfrac><mrow><mi>L</mi><msqrt><mi>3</mi></msqrt></mrow><mi>4</mi></mfrac><mi>&jcirc;</mi></mrow><mrow><mi>3</mi><mi>M</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><mi>L</mi><msqrt><mi>3</mi></msqrt></mrow><mi>6</mi></mfrac><mi>&jcirc;</mi></math><br>
+</article>
+</section>
+</section>
+<p>One fun fact about the above problem is that the center of mass of the equilateral triangle actually lies on what is called its <intext tabindex="0" tooltip="the point of intersection of the three medians of a triangle">centroid</intext> of the triangle. It is also sometimes called the geometric center of the object.</p>
+<figure><img src="images/comp6.svg" alt="">
+<figcaption>The centroid of the above figure, which just so happens to also be its CM.</figcaption></figure>
+<p>One thing to note is that usually the CM will be the centroid or geometric center of an object. We saw this in a rod; its CM is at the midpoint. Sometimes, however, it isnt the case, such as when the mass is not evenly distributed across the object.</p>
+</main>
+<footer>
+<a href="linear-mass-density.html">Linear Mass Density > </a>
+</footer>
+</body>
+</html>

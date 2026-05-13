@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>rigid - systmult</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1>System of Multiple Particles</h1>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>You may break down finding parts of the center of mass into its components, as it is a vector</p>
+		<p>You may get the center of mass of a portion of a system and then treat that portion of a system as a particle</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&sum;</mo><mi>m</mi><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover></math><br>
+		</section>
+	</article>
+</aside>
+
+<main>
+<p>Let's now generalize for any system of multiple particles. We will begin with what we said before.</p>
+<p>For a net external force in a system, each particle in the system has a force acted upon it. Each particle in this system thus then has an acceleration. Writing this out, we have the following.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>F</mi><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mi>F</mi><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mover accent="true"><mi>F</mi><mo>&#x2192</mo></mover><mi>2</mi></msub><mo>+</mo><msub><mover accent="true"><mi>F</mi><mo>&#x2192</mo></mover><mi>3</mi></msub><mo>+</mo><mo>&hellip;</mo></math><br>
+	<math><msub><mi>m</mi><mi>cm</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>3</mi></msub><mo>+</mo><mo>&hellip;</mo></math>
+</article>
+<p>We know the total mass of the system as well, so let's substitute that in.</p>
+<article class="equations">
+	<math><mo>(</mo><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><mo>+</mo><mo>&hellip;</mo><mo>)</mo><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>3</mi></msub><mo>+</mo><mo>&hellip;</mo></math><br>
+	<math><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>3</mi></msub><mo>+</mo><mo>&hellip;</mo></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><mo>+</mo><mo>&hellip;</mo></mrow></mfrac></math><br>
+</article>
+<p>Now, we will use summation notation to tidy this expression. The above is the sum of all the masses times their acceleration, while the bottom is the sum of all the masses. We will let that use the symbol <math><mi>M</mi></math>.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mo>&sum;</mo><mi>m</mi><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover></mrow><mi>M</mi></mfrac><mo>=</mo><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&sum;</mo><mi>m</mi><mover accent="true"><mi>a</mi><mo>&#x2192</mo></mover></math><br>
+</article>
+<p>If we differentiate this, we get the equation for the velocity and position of the center of mass of any system of multiple particles.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>v</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&sum;</mo><mi>m</mi><mover accent="true"><mi>v</mi><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&sum;</mo><mi>m</mi><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover></math><br>
+</article>
+
+<section class="examples"><mark custom></mark>
+<h2>Exercise 1a</h2>
+<p>A modified baton, shown below, is made of three identical 1.0kg point masses. The length between the mass at the origin to the closest mass to it is 10.0m, and the full length of the baton is 15.0m. Where is the center of mass?</p>
+<figure><img src="images/sysmult1.svg" alt="">
+<figcaption>Exercise 1a.</figcaption></figure>
+
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will use our formula directly.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mo>&sum;</mo><mi>m</mi><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover></mrow><mi>M</mi></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>(1kg)</mi><mi>(0&icirc;)</mi><mo>+</mo><mi>(1kg)</mi><mi>(10&icirc;)</mi><mo>+</mo><mi>(1kg)</mi><mi>(15&icirc;)</mi></mrow><mrow><mi>(1kg)</mi><mo>+</mo><mi>(1kg)</mi><mo>+</mo><mi>(1kg)</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm</mi></msub><mo>=</mo><mfrac><mi>25&icirc;</mi><mi>3</mi></mfrac><mo>&approx;</mo><mi>8.33&icirc;</mi></math><br>
+</article>
+<p>Given the full length of the baton, the center of mass is <math><mfrac><mi>8.33</mi><mi>15</mi></mfrac><mo>=</mo><mi>55%</mi></math> away from the mass at the origin.</p>
+</section>
+</section>
+
+<p>So far, we have only dealt with masses all in one line. Since position is a vector, and vectors can be decomposed, we can find the center of mass in the x-component and the y-component separately.</p>
+
+<section class="examples"><mark custom></mark>
+<h2>Exercise 2a</h2>
+<p>The baton above is fixed such that one of its ends is bent at a right angle, as shown. Now, where is the center of mass?</p>
+<figure><img src="images/sysmult2.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The part above has a position of <math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3</mi></msub><mo>=</mo><mi>10&icirc;</mi><mo>+</mo><mi>5&jcirc;</mi></math>. We will first solve for the x-component.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>1x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>2x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3x</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><mi>(1kg)</mi><mi>(0&icirc;)</mi><mo>+</mo><mi>(1kg)</mi><mi>(10&icirc;)</mi><mo>+</mo><mi>(1kg)</mi><mi>(10&icirc;)</mi></mrow><mrow><mi>(1kg)</mi><mo>+</mo><mi>(1kg)</mi><mo>+</mo><mi>(1kg)</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mi>20&icirc;</mi><mi>3</mi></mfrac><mo>&approx;</mo><mi>6.67&icirc;</mi></math><br>
+</article>
+<p>Now, for the y-component.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>1y</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>2y</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3y</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><mi>(1kg)</mi><mi>(0&jcirc;)</mi><mo>+</mo><mi>(1kg)</mi><mi>(0&jcirc;)</mi><mo>+</mo><mi>(1kg)</mi><mi>(5&jcirc;)</mi></mrow><mrow><mi>(1kg)</mi><mo>+</mo><mi>(1kg)</mi><mo>+</mo><mi>(1kg)</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mi>5&jcirc;</mi><mi>3</mi></mfrac><mo>&approx;</mo><mi>1.67&icirc;</mi></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples"><mark custom></mark>
+<h2>Exercise 2b</h2>
+<p>Examine the baton used in the above exercise once more. Find the center of mass of the two masses on the x-axis, then find the center of mass of the entire baton.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The first part is simple enough.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-1,2</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>2</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-1,2</mi></msub><mo>=</mo><mfrac><mrow><mi>(1kg)</mi><mi>(0&icirc;)</mi><mo>+</mo><mi>(1kg)</mi><mi>(10&icirc;)</mi></mrow><mrow><mi>2kg</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-1,2</mi></msub><mo>=</mo><mfrac><mi>5&icirc;</mi></math><br>
+</article>
+<p>The mass of this center of mass is just the sum of the two masses it has, so it is 2kg. Now, we use this equation again to get the center of mass of the entire system. First, in the x-component.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-1,2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-1,2x</mi></msub></mrow><mrow><msub><mi>m</mi><mi>3</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-1,2</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><mi>(1kg)</mi><mi>(10&icirc;)</mi><mo>+</mo><mi>(2kg)</mi><mi>(5&icirc;)</mi></mrow><mrow><mi>3kg</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mi>20&icirc;</mi><mi>3</mi></mfrac></math><br>
+</article>
+<p>Notice how it is the same as the one we calculated before. Now, for the y-component.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>3y</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-1,2</mi></msub><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cm-1,2y</mi></msub></mrow><mrow><msub><mi>m</mi><mi>3</mi></msub><mo>+</mo><msub><mi>m</mi><mi>cm-1,2</mi></msub></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mrow><mi>(1kg)</mi><mi>(5&jcirc;)</mi><mo>+</mo><mi>(2kg)</mi><mi>(0&jcirc;)</mi></mrow><mrow><mi>3kg</mi></mrow></mfrac></math><br>
+	<math><msub><mover accent="true"><mi>r</mi><mo>&#x2192</mo></mover><mi>cmy</mi></msub><mo>=</mo><mfrac><mi>5&jcirc;</mi><mi>3</mi></mfrac></math><br>
+</article>
+<p>We see that we got the same center of mass. This means that we can get the center of mass of portions of a system, then overall get the center of mass of the entire system.</p>
+</section>
+</section>
+
+<p>The above exercise shows one counterintuitive fact about the center of mass. If we plot it, we can see that it lands nowhere inside the baton.</p>
+<figure><img src="images/sysmult3.svg" alt="">
+<figcaption>The CM is not on the baton.</figcaption></figure>
+<p>In other words, the center of mass need not be on the object that we are examining. In fact, it can point to a place wherein no mass is there at all.</p>
+<p>Once again, the velocity of the center of mass only changes with an external force. Internal forces do not change the velocity.</p>
+<section class="examples">
+<h2>Problem 1a</h2>
+<p>(HRK E7.17) A vessel at rest explodes, breaking into three pieces. Two
+pieces, one with twice the mass of the other, fly off perpendicular to one another with the same speed of 31.4 m/s. The
+third piece has three times the mass of the lightest piece.
+Find the speed immediately after the explosion.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We use conservation of momentum for three objects. We have the masses of the three objects, and their initial velocities. We first solve for the x-component. We will, without loss of generality, let the lightest piece be the one going in the x-direction.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0x</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fx</mi></msub></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>m</mi><mi>(31.4m/s)</mi><mo>+</mo><mi>3</mi><mi>m</mi><msub><mi>v</mi><mi>fx</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>31.4m/s</mi><mo>=</mo><mi>3</mi><msub><mi>v</mi><mi>fx</mi></msub></math><br>
+	<math><mo>&minus;</mo><mfrac><mi>31.4m/s</mi><mi>3</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>fx</mi></msub></math>
+</article>
+<p>Now, for the y-component.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0y</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>fy</mi></msub></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>2</mi><mi>m</mi><mi>(31.4m/s)</mi><mo>+</mo><mi>3</mi><mi>m</mi><msub><mi>v</mi><mi>fy</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>62.8m/s</mi><mo>=</mo><mi>3</mi><msub><mi>v</mi><mi>fy</mi></msub></math><br>
+	<math><mo>&minus;</mo><mfrac><mi>62.8m/s</mi><mi>3</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>fy</mi></msub></math>
+</article>
+<p>Now, we use the pythagorean theorem to get the magnitude.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>f</mi></msub><mo>&approx;</mo><mn>23.4m/s</mn></math>
+</article>
+</section>
+</section>
+<section class="examples"><mark custom></mark>
+<h2>Problem 1b</h2>
+<p>What is the velocity of the center of mass before and after the explosion? Afterwards, show that the horizontal component is equal to the one calculated above.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Before the explosion, it is at rest. Immediately after the explosion, before the net force of gravity has done an impulse, there are no net forces. Since the explosion is an internal force, the center of mass will continue to be at rest immediately after the explosion. We can use this fact. First, the horizontal component of the velocity.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mi>v</mi><mo>&#x2192</mo></mover><mi>cmx</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mover accent="true"><mi>v</mi><mo>&#x2192</mo></mover><mi>1x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><msub><mover accent="true"><mi>v</mi><mo>&#x2192</mo></mover><mi>2x</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub><msub><mover accent="true"><mi>v</mi><mo>&#x2192</mo></mover><mi>3x</mi></msub></mrow><mrow><msub><mi>m</mi><mi>1</mi></msub><mo>+</mo><msub><mi>m</mi><mi>2</mi></msub><mo>+</mo><msub><mi>m</mi><mi>3</mi></msub></mrow></mfrac></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><mi>m</mi><mi>(31.4m/s)</mi><mo>+</mo><mi>2</mi><mi>m</mi><mi>(0m/s)</mi><mo>+</mo><mi>3</mi><mi>m</mi><msub><mi>v</mi><mi>fx</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>2</mi><mi>m</mi><mo>+</mo><mi>3</mi><mi>m</mi></mrow></mfrac></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><mi>m</mi><mo>(</mo><mi>31.4m/s</mi><mo>+</mo><mi>3</mi><msub><mi>v</mi><mi>fx</mi></msub><mo>)</mo></mrow><mrow><mi>6</mi><mi>m</mi></mrow></mfrac></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><mi>31.4m/s</mi><mo>+</mo><mi>3</mi><msub><mi>v</mi><mi>fx</mi></msub></mrow><mrow><mi>6</mi></mrow></mfrac></math><br>
+</article>
+<p>Simplifying, this gives us the exact same velocity as shown above. The same can be done for the vertical component. In other words, this is an equivalent method to use.</p>
+</section>
+</section>
+</main>
+<footer>
+<a href="the-cm-frame.html">The CM Frame ></a>
+</footer>
+</body>
+</html>

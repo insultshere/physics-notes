@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>rigid - linmass</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1>Linear Mass Density</h1>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>The linear mass density of a rigid object is the mass distributed to each infinitesimal length</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>d</mi><mi>m</mi></math><br>
+		<math><mi>M</mi><mo>=</mo><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>&lambda;</mi><mi>d</mi><mi>x</mi></math>
+		</section>
+	</article>
+</aside>
+
+<main>
+<p>So far, we have used the following relation to simplify our work. We've used it in thin rods were we set the mass to be evenly distributed along the entire rod.</p>
+<article class="equations">
+	<math><mfrac><mi>M</mi><mi>L</mi></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mi>m</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></math><br>
+	<math><mfrac><mi>M</mi><mi>L</mi></mfrac><mi>d</mi><mi>x</mi><mo>=</mo><mi>d</mi><mi>m</mi></math><br>
+</article>
+<p>The left side of the equation has a special name. It is called the linear mass density. Intuitively, it is how the mass is distributed over the length of the entire rod.</p>
+<article class="terms">
+	<mark>Linear Mass Density (&lambda;)</mark> - the mass per unit length of a thin rod
+</article>
+<p>In a rod with uniform linear mass density, like the ones we've tackled, it is as if each tiny infinitesimal length has the same cut of the entire mass; in other words, it is evenly distributed. If we use this symbol, we can write out our relation as the following below.</p>
+<article class="equations">
+	<math><mfrac><mi>M</mi><mi>L</mi></mfrac><mi>d</mi><mi>x</mi><mo>=</mo><mi>d</mi><mi>m</mi></math><br>
+	<math><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>d</mi><mi>m</mi></math>
+</article>
+<p>This relation may now be useful for thin rods with non-linear mass density. Such rods can occur because of various compounds inside, which can end up on one side.</p>
+<p>In such rods, it may be that the total mass is not given. For example, let's take for example a rod with a non uniform mass density. Rewriting, we can get the total mass by integrating.</p>
+<article class="equations">
+	<math><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>d</mi><mi>m</mi></math><br>
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><munderover><mo>&int;</mo><mi>0</mi><mi>M</mi></munderover><mi>d</mi><mi>m</mi>0</math><br>
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math>
+</article>
+<p>The above physically means taking the mass of each of the tiny slices of the rod and adding them all up, which intuitively gives the whole mass.</p>
+<section class="examples"><mark calc custom></mark>
+<h2>Exercise 1</h2>
+<p>A thin rod of length <math><mi>L</mi></math> has a constant mass uniformly distributed, with its linear mass density <math><mi>&lambda;</mi></math> being constant. What is its mass?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We use the above equation. Since the linear mass density is constant, we can take it out.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+	<math><mi>&lambda;</mi><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+	<math><mi>&lambda;</mi><mi>L</mi><mo>=</mo><mi>M</mi></math><br>
+</article>
+<p>This makes sense. If we rearrange it, we get the expression above.</p>
+<article class="equations">
+	<math><mi>&lambda;</mi><mo>=</mo><mfrac><mi>M</mi><mi>L</mi></mfrac></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples"><mark calc custom></mark>
+<h2>Exercise 2a</h2>
+<p>A thin rod of length <math><mi>L</mi></math> with non-uniform mass density given by <math><mi>&lambda;</mi><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mi>c</mi><mi>x</mi></math> is placed on the x-axis on the origin. What is the mass of the rod? Express your answer in terms of the constant <math><mi>c</mi></math> and the length of the rod.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We substitute in the function above, noting for a small slice <math><mi>d</mi><mi>x</mi></math> on the x-axis it will be <math><mi>&lambda;</mi><mi>(</mi><mi>L</mi><mi>)</mi><mo>=</mo><mi>c</mi><mi>L</mi></math>.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>c</mi><mi>x</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+	<math><mi>c</mi><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>x</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+</article>
+<p>All we need to do now is integrate that.</p>
+<article class="equations">
+	<math><mi>c</mi><mfrac><msup><mi>x</mi><mn>2</mn></msup><mi>2</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>L</mi></munderover><mo>=</mo><mi>M</mi></math><br>
+	<math><mfrac><mrow><mi>c</mi><msup><mi>L</mi><mn>2</mn></msup></mrow><mi>2</mi></mfrac><mo>=</mo><mi>M</mi></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples"><mark calc custom></mark>
+<h2>Exercise 2b</h2>
+<p>What is the center of mass of the thin rod above? Express your answer only in terms of the length of the rod. These rods, as shown below, are sometimes used as juggling clubs, with one end heavier than the other.</p>
+<figure grayout><img src="images/lin1.avif" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Once again, we return to our original equation.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mrow><mi>d</mi><mi>m</mi></mrow></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mrow><mi>&lambda;</mi><mi>d</mi><mi>x</mi></mrow></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mrow><mi>c</mi><mi>x</mi><mi>d</mi><mi>x</mi></mrow></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>c</mi><mi>M</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><msup><mi>x</mi><mi>2</mi></msup><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>c</mi><mi>M</mi></mfrac><mfrac><msup><mi>x</mi><mi>3</mi></msup><mi>3</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>L</mi></munderover></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>c</mi><msup><mi>L</mi><mi>3</mi></msup></mrow><mrow><mi>3</mi><mi>M</mi></mrow></mfrac></math><br>
+</article>
+<p>Now, we will substitute in the equation we found for the total mass of the rod, <math><mfrac><mrow><mi>c</mi><msup><mi>L</mi><mn>2</mn></msup></mrow><mi>2</mi></mfrac><mo>=</mo><mi>M</mi></math>.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>c</mi><msup><mi>L</mi><mi>3</mi></msup></mrow><mrow><mi>3</mi><mo>(</mo><mfrac><mrow><mi>c</mi><msup><mi>L</mi><mn>2</mn></msup></mrow><mi>2</mi></mfrac><mo>)</mo></mrow></mfrac></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>2</mi><mi>3</mi></mfrac><mi>L</mi></math><br>
+</article>
+</section>
+</section>
+<p>Thankfully, usually, we will let the mass be uniformly distributed. In that case, we have a very simple relation between the mass, length, and linear mass density.</p>
+<article class="equations">
+	<math><mi>&lambda;</mi><mo>=</mo><mfrac><mi>M</mi><mi>L</mi></mfrac></math><br>
+</article>
+<section hard class="examples"><mark calc></mark>
+<h2>Problem 1</h2>
+<p style="margin:0">(LSM P9.69) Find the center of mass of a rod of length <math><mi>L</mi></math>
+whose mass density changes from one end to
+the other quadratically. That is, if the rod is laid
+out along the x-axis with one end at the origin
+and the other end at <math><mi>x</mi><mo>=</mo><mi>L</mi></math>, the density is given
+by the following equation:</p>
+<article class="equations">
+<math><mi>&lambda;</mi><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><msub><mi>c</mi><mi>0</mi></msub><mo>+</mo><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi><mi>(</mi><mfrac><mi>x</mi><mi>L</mi></mfrac><msup><mi>)</mi><mi>2</mi></msup></math>
+</article>
+<p>Where <math><msub><mi>c</mi><mi>0</mi></msub></math> and <math><msub><mi>c</mi><mi>f</mi></msub></math> are constant values.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The first thing to find is the total mass of the rod.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mo>(</mo><msub><mi>c</mi><mi>0</mi></msub><mo>+</mo><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi><mi>(</mi><mfrac><mi>x</mi><mi>L</mi></mfrac><msup><mi>)</mi><mi>2</mi></msup><mo>)</mo><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><msub><mi>c</mi><mi>0</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi><mi>(</mi><mfrac><mi>x</mi><mi>L</mi></mfrac><msup><mi>)</mi><mi>2</mi></msup><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+	<math><msub><mi>c</mi><mi>0</mi></msub><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>d</mi><mi>x</mi><mo>+</mo><mfrac><mrow><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi></mrow><msup><mi>L</mi><mi>2</mi></msup></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><msup><mi>x</mi><mi>2</mi></msup><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+	<math><msub><mi>c</mi><mi>0</mi></msub><mi>1</mi><munderover><mo>|</mo><mi>0</mi><mi>L</mi></munderover><mo>+</mo><mfrac><mrow><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi></mrow><msup><mi>L</mi><mi>2</mi></msup></mfrac><mfrac><msup><mi>x</mi><mi>3</mi></msup><mi>3</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>L</mi></munderover><mo>=</mo><mi>M</mi></math><br>
+	<math><msub><mi>c</mi><mi>0</mi></msub><mi>L</mi><mo>+</mo><mfrac><mrow><mi>L</mi><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi></mrow><mi>3</mi></mfrac><mo>=</mo><mi>M</mi></math><br>
+	<math><mfrac><mrow><mi>L</mi><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><mi>2</mi><mi>L</mi><msub><mi>c</mi><mi>0</mi></msub></mrow><mi>3</mi></mfrac><mo>=</mo><mi>M</mi></math><br>
+</article>
+<p>Alright, now we have to do all that again but this time for the center of mass.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mrow><mi>d</mi><mi>m</mi></mrow></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mi>&lambda;</mi><mi>d</mi><mi>x</mi></math><br>
+</article>
+<p>We note that the integral on the right is basically the one at the top but with an extra <math><mi>x</mi></math>.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>(</mo><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><msub><mi>c</mi><mi>0</mi></msub><mi>x</mi><mi>d</mi><mi>x</mi><mo>+</mo><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi><mi>(</mi><mfrac><mi>x</mi><mi>L</mi></mfrac><msup><mi>)</mi><mi>2</mi></msup><mi>x</mi><mi>d</mi><mi>x</mi><mo>)</mo></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>(</mo><msub><mi>c</mi><mi>0</mi></msub><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>x</mi><mi>d</mi><mi>x</mi><mo>+</mo><mfrac><mrow><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi></mrow><msup><mi>L</mi><mi>2</mi></msup></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><msup><mi>x</mi><mi>3</mi></msup><mi>d</mi><mi>x</mi><mo>)</mo></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>(</mo><msub><mi>c</mi><mi>0</mi></msub><mfrac><msup><mi>x</mi><mi>2</mi></msup><mi>2</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>L</mi></munderover><mo>+</mo><mfrac><mrow><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi></mrow><msup><mi>L</mi><mi>2</mi></msup></mfrac><mfrac><msup><mi>x</mi><mi>4</mi></msup><mi>4</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>L</mi></munderover><mo>)</mo></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>(</mo><mfrac><mrow><msub><mi>c</mi><mi>0</mi></msub><msup><mi>L</mi><mi>2</mi></msup></mrow><mi>2</mi></mfrac><mo>+</mo><mfrac><mrow><msup><mi>L</mi><mi>2</mi></msup><mi>(</mi><msub><mi>c</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>c</mi><mi>0</mi></msub><mi>)</mi></mrow><mi>4</mi></mfrac><mo>)</mo></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>(</mo><mfrac><mrow><msup><mi>L</mi><mi>2</mi></msup><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><msup><mi>L</mi><mi>2</mi></msup><msub><mi>c</mi><mi>0</mi></msub></mrow><mi>4</mi></mfrac><mo>)</mo></math><br>
+</article>
+<p>Okay, now we will substitute in the mass.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mfrac><mrow><mi>L</mi><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><mi>2</mi><mi>L</mi><msub><mi>c</mi><mi>0</mi></msub></mrow><mi>3</mi></mfrac></mfrac><mo>(</mo><mfrac><mrow><msup><mi>L</mi><mi>2</mi></msup><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><msup><mi>L</mi><mi>2</mi></msup><msub><mi>c</mi><mi>0</mi></msub></mrow><mi>4</mi></mfrac><mo>)</mo></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>3</mi><mrow><mi>L</mi><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><mi>2</mi><mi>L</mi><msub><mi>c</mi><mi>0</mi></msub></mrow></mfrac><mo>(</mo><mfrac><mrow><msup><mi>L</mi><mi>2</mi></msup><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><msup><mi>L</mi><mi>2</mi></msup><msub><mi>c</mi><mi>0</mi></msub></mrow><mi>4</mi></mfrac><mo>)</mo></math><br>
+</article>
+<p>This seems horrific to simplify. However, it is actually quite simple. If we factor it correctly, it simplifies quite nicely.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>3</mi><mi>L</mi></mfrac><mfrac><mi>1</mi><mrow><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><mi>2</mi><msub><mi>c</mi><mi>0</mi></msub></mrow></mfrac><mo>&middot;</mo><mfrac><msup><mi>L</mi><mi>2</mi></msup><mi>4</mi></mfrac><mfrac><mrow><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><msub><mi>c</mi><mi>0</mi></msub></mrow><mi>1</mi></mfrac></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>3</mi><mi>L</mi></mrow><mi>4</mi></mfrac><mfrac><mrow><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><msub><mi>c</mi><mi>0</mi></msub></mrow><mrow><msub><mi>c</mi><mi>f</mi></msub><mo>+</mo><mi>2</mi><msub><mi>c</mi><mi>0</mi></msub></mrow></mfrac></math><br>
+</article>
+<p>The above is the final answer.</p>
+</section>
+</section>
+<p>If you have been following, you may have noticed that for the past problems that we have written the following integral.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mi>&lambda;</mi><mi>d</mi><mi>x</mi></math><br>
+</article>
+<p>We can use integration by parts here, instead of having to distribute. This may save some time, however the latter method still works quite well.</p>
+<section class="examples"><mark calc custom></mark>
+<h2>Problem 2</h2>
+<p style="margin:0">Show that for a thin rod of length <math><mi>L</mi></math>, with one end at the origin and placed on the x-axis, when the linear mass density varies as a function of <math><mi>x</mi></math>, that the following holds true.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mi>L</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>m</mi><mi>d</mi><mi>x</mi></math><br>
+</article>
+<p style="margin:0">Here, <math><mi>m</mi></math> represents the following integral, which can be taken as the cumulative mass from 0 to <math><mi>x</mi></math>.</p>
+<article class="equations">
+	<math><mo>&int;</mo><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>m</mi></math><br>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will integrate from 0 to <math><mi>L</mi></math>. We use integration by parts to split the integral.</p>
+	<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>x</mi><mi>&lambda;</mi><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>(</mo><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>1</mi><mi>d</mi><mi>x</mi><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>&minus;</mo><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mo>(</mo><mo>&int;</mo><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>)</mo><mi>d</mi><mi>x</mi><mo>)</mo></math><br>
+</article>
+<p>This ugly expression makes it seem like we did this for nothing. However, we note the following two relations we found.</p>
+<article class="equations">
+	<math><mo>&int;</mo><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>m</mi></math><br>
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>&lambda;</mi><mi>d</mi><mi>x</mi><mo>=</mo><mi>M</mi></math><br>
+</article>
+<p>This is exactly what is above! Thus, substituting in, we have the following equation.</p>
+<article class="equations">
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>(</mo><mi>L</mi><mi>M</mi><mo>&minus;</mo><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>m</mi><mi>d</mi><mi>x</mi><mo>)</mo></math><br>
+	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mi>L</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>m</mi><mi>d</mi><mi>x</mi></math><br>
+</article>
+</section>
+</section>
+</main>
+<footer>
+<a unfinished>Laminas ></a>
+</footer>
+</body>
+</html>

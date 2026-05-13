@@ -7,5 +7,9 @@ function toggle(button) {
 		elem.style.display="none"
 		button.innerHTML="v"
 	}
-	
+}
+
+if (sessionStorage.getItem("colorScheme") != null) {
+	console.log("current colorScheme: "+sessionStorage.getItem("colorScheme"))
+	document.body.setAttribute("style","filter: hue-rotate("+sessionStorage.getItem("colorScheme")+"deg);");	
 }
