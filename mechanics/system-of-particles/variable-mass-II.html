@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>system - varmassI</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Variable Mass II</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+	<section>
+	<h2>Equations</h2>
+	<math><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>F</mi><mi>ext</mi></msub><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mi>ext</mi></msub></mrow><mi>M</mi></mfrac><mi>&Delta;</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo></math><br>
+	</section>
+	</article>
+</aside>
+<main>
+<p>Previously, we derived the following equation for the force acting on an object with variable mass.</p>
+<article class="equations">
+	<math><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>F</mi><mi>ext</mi></msub><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>We can write the above equation like the following as well, noting that the derivative of velocity with respect to time is acceleration.</p>
+<article class="equations">
+	<math><mi>M</mi><mi>a</mi><mo>=</mo><msub><mi>F</mi><mi>ext</mi></msub><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><msub><mi>F</mi><mi>net</mi></msub><mo>=</mo><msub><mi>F</mi><mi>ext</mi></msub><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>Here, this force has various names. We will note two here.</p>
+<article class="terms">
+	<mark>Thrust</mark> - the force on a rocket due to the ejection of propellant<br>
+	<mark>Recoil</mark> - a force on an object by the ejection of mass from it
+</article>
+<p>Thrust is the more common term used for rocket propulsion, while recoil can be used for ballistic purposes such as when firing a gun or a cannon. In those instances, a huge mass is thrown out, causing the assembly to jolt backward.</p>
+
+<section class="examples">
+<h2>Exercise 1a</h2>
+<p>(HRK E7.20a) A rocket engine in deep space, where there is virtually no gravity, consumes fuel at the rate of 480 kg/s, and the exhaust speed is 3.27 km/s. Find the thrust of the rocket engine.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We use the equation above directly. We note no external forces; there is virtually no gravity.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>thrust</mi></msub><mo>=</mo><msub><mi>F</mi><mi>ext</mi></msub><mo>+</mo><msub><mi>v</mi><mi>rp</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><msub><mi>F</mi><mi>thrust</mi></msub><mo>=</mo><msub><mi>v</mi><mi>rp</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><msub><mi>F</mi><mi>thrust</mi></msub><mo>=</mo><mi>(3.27km/s)</mi><mi>(480kg/s)</mi></math><br>
+</article>
+<p>However, to express this in Newtons, we do have to convert the kilometers to meters.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>thrust</mi></msub><mo>=</mo><mi>(32700m/s)</mi><mi>(480kg/s)</mi><mo>=</mo><mi>156960000N</mi></math><br>
+</article>
+<p>This is approximately <math><mi>1.60</mi><mo>&times;</mo><msup><mi>10</mi><mi>8</mi></msup></math>N.</p>
+</section>
+</section>
+
+<p>We can also use the original equation to get the change in velocity of an object after losing/gaining fuel.</p>
+<article class="equations">
+	<math><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>F</mi><mi>ext</mi></msub><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><msub><mi>F</mi><mi>ext</mi></msub><mi>M</mi></mfrac><mo>+</mo><mfrac><msub><mi>v</mi><mi>rel</mi></msub><mi>M</mi></mfrac><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>Here, we will multiply both sides by <math><mi>d</mi><mi>t</mi></math> to clean everything up.</p>
+<article class="equations">
+	<math><mrow><mi>d</mi><mi>v</mi></mrow><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mi>ext</mi></msub></mrow><mi>M</mi></mfrac><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mi>M</mi></mfrac></math><br>
+</article>
+<p>Now, we integrate all sides with respect to time. We choose the <intext tabindex="0" tooltip="the portion in which the definite integral will sum up">bounds of integration</intext> from initial time to final time. Further, we will make the assumption that there is a constant external force (e.g. gravity near the Earth's surface).</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mrow><mi>d</mi><mi>v</mi></mrow><mo>=</mo><munderover><mo>&int;</mo><msub><mi>t</mi><mi>0</mi></msub><mi>t</mi></munderover><mfrac><mrow><msub><mi>F</mi><mi>ext</mi></msub></mrow><mi>M</mi></mfrac><mi>d</mi><mi>t</mi><mo>+</mo><munderover><mo>&int;</mo><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></munderover><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mi>M</mi></mfrac></math><br>
+	<math><munderover><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mrow><mi>d</mi><mi>v</mi></mrow><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mi>ext</mi></msub></mrow><mi>M</mi></mfrac><munderover><mo>&int;</mo><msub><mi>t</mi><mi>0</mi></msub><mi>t</mi></munderover><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><munderover><mo>&int;</mo><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></munderover><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mi>M</mi></mfrac></math><br>
+</article>
+<p>We now evaluate the integrals. We will note the following result from calculus, that <math><mo>&int;</mo><mfrac><mi>1</mi><mi>x</mi></mfrac><mo>=</mo><mi>ln</mi><mi>(</mi><mi>x</mi><mi>)</mi><mo>+</mo><mi>C</mi></math>.</p>
+<article class="equations">
+	<math><mi>1</mi><munderover><mo>|</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mi>ext</mi></msub></mrow><mi>M</mi></mfrac><mi>1</mi><munderover><mo>|</mo><msub><mi>t</mi><mi>0</mi></msub><mi>t</mi></munderover><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mi>(</mi><mi>M</mi><mi>)</mi><munderover><mo>|</mo><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></munderover></math><br>
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mi>ext</mi></msub></mrow><mi>M</mi></mfrac><mi>&Delta;</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mo>[</mo><mi>ln</mi><mi>(</mi><mi>M</mi><mi>)</mi><mo>&minus;</mo><mi>ln</mi><mi>(</mi><msub><mi>M</mi><mi>0</mi></msub><mi>)</mi><mo>]</mo></math><br>
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mi>ext</mi></msub></mrow><mi>M</mi></mfrac><mi>&Delta;</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo></math><br>
+</article>
+<p>If we drop out the external force (let's say in deep space, where gravity is negligible), we have the following equation, found by Konstantin Tsiolkovsky in 1987. It is sometimes called the rocket equation.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo></math><br>
+</article>
+
+<section class="examples">
+<h2>Exercise 1b</h2>
+<p>(HRK E7.20c) The rocket engine above starts at rest and has a mass of <math><mi>2.55</mi><mo>&times;</mo><msup><mi>10</mi><mi>5</mi></msup></math> kg, of which <math><mi>1.81</mi><mo>&times;</mo><msup><mi>10</mi><mi>5</mi></msup></math> kg is fuel.
+The engine is fired for 250 s. What is the final speed attained?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Since there is no gravity, we can use the rocket equation directly.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo></math><br>
+</article>
+<p>We have the initial mass, but now we need the mass removed after 250 s of burning. Thankfully, we can get that, noting that 480kg is burned every second.</p>
+<article class="equations">
+	<math><mi>m</mi><mo>=</mo><msub><mi>M</mi><mi>0f</mi></msub><mo>&minus;</mo><mi>&Delta;</mi><mi>t</mi><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><mi>m</mi><mo>=</mo><mi>(250s)</mi><mi>(480kg/s)</mi><mo>=</mo><mi>1.20</mi><mo>&times;</mo><msup><mi>10</mi><mi>5</mi></msup><mi>kg</mi></math><br>
+</article>
+<p>Now, we can use the formula.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><mi>(3.27km/s)</mi><mi>ln</mi><mo>(</mo><mfrac><mrow><mi>2.55</mi><mo>&times;</mo><msup><mi>10</mi><mi>5</mi></msup></mrow><mrow><mi>2.55</mi><mo>&times;</mo><msup><mi>10</mi><mi>5</mi></msup><mo>&minus;</mo><mi>1.20</mi><mo>&times;</mo><msup><mi>10</mi><mi>5</mi></msup></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><mi>(3.27km/s)</mi><mi>ln</mi><mo>(</mo><mfrac><mrow><mi>2.55</mi></mrow><mrow><mi>1.35</mi></mrow></mfrac><mo>)</mo><mo>=</mo><mi>2.08km/s</mi></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples"> <mark variable></mark>
+<h2>Exercise 2</h2>
+<p>(HRK E7.21a) Consider a rocket at rest in empty space. What must be its
+mass ratio (ratio of initial to final mass) in order that, after firing its engine, the rocket's speed is equal to the exhaust
+speed?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>In empty space, there is no gravity. Thus, we use this version of the equation.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo></math><br>
+</article>
+<p>We set the change in velocity to be equal to the speed of exhaust.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>rel</mi></msub><mo>=</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo></math><br>
+	<math><mi>1</mi><mo>=</mo><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo></math><br>
+	<math><mi>e</mi><mo>=</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples">
+<h2>Problem 1</h2>
+<p>(HRK P7.8) A rocket sled with a mass of 2870 kg moves at 252 m/s on a
+set of rails. At a certain point, a scoop on the sled dips into a
+trough of water located between the tracks and scoops water into an empty tank on the sled. Determine the speed of the
+sled after 917 kg of water have been scooped up.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Be careful! You should not use the rocket equation here. The relative velocity of propulsion is zero here since the water is at rest. Thus, instead of using that, we will just note that this is an inelastic collision. Using our equation:</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mfrac><mrow><mi>(2870kg)</mi><mi>(252m/s)</mi></mrow><mrow><mi>917kg</mi><mo>+</mo><mi>2870kg</mi></mrow></mfrac><mo>=</mo><mi>191m/s</mi></math><br>
+</article>
+</section>
+</section>
+
+<p>One such example of a problem where there is an external force are rockets which need to launch. Here, the thrust has to surpass the weight of the rocket. Plugging in, we have the following relation:</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><mo>&minus;</mo><mfrac><mrow><mi>w</mi></mrow><mi>M</mi></mfrac><mi>&Delta;</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo></math><br>
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo><mo>&minus;</mo><mfrac><mrow><mi>M</mi><mi>g</mi></mrow><mi>M</mi></mfrac><mi>&Delta;</mi><mi>t</mi></math><br>
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo><mo>&minus;</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></math><br>
+</article>
+
+<section class="examples">
+<h2>Exercise 3</h2>
+<p>(HRK P7.10b) A 5860-kg rocket is set for vertical firing. The exhaust speed
+is 1.17 km/s. How much gas must be ejected each second to
+supply the thrust needed to give the rocket an initial upward acceleration of 18.3 m/s&sup2;?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Note here that the rocket is still on Earth; thus, the force of weight has to be account for.</p>
+<article class="equations">
+	<math><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>F</mi><mi>ext</mi></msub><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mo>&minus;</mo><mi>w</mi><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mo>&minus;</mo><mi>M</mi><mi>g</mi><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>We solve for <math><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>.</p>
+<article class="equations">
+	<math><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>M</mi><mi>g</mi><mo>=</mo><mo>+</mo><msub><mi>v</mi><mi>rel</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><mfrac><mrow><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>M</mi><mi>g</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>Plug in known values.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>(5860kg)</mi><mi>(18.3m/s&sup2;)</mi><mo>+</mo><mi>(5860kg)</mi><mi>(9.8m/s&sup2;)</mi></mrow><mi>(1170m/s)</mi></mfrac><mo>&approx;</mo><mi>141kg/s</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples">
+<h2>Exercise 4</h2>
+<p>(LSM P9.78) A rocket takes off from Earth and reaches a
+speed of 100 m/s in 10.0 s. If the exhaust speed
+is 1500 m/s and the mass of fuel burned is 100
+kg, what was the initial mass of the rocket?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Gravity plays a role here, so we have to account for it.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mi>M</mi></mfrac><mo>)</mo><mo>&minus;</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></math><br>
+</article>
+<p>Here, we note that the burned mass is 100 kg, so now we can solve for the initial mass.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mrow><msub><mi>M</mi><mi>0</mi></msub><mo>&minus;</mo><mi>100</mi></mrow></mfrac><mo>)</mo><mo>&minus;</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></math><br>
+	<math><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi><mo>=</mo><msub><mi>v</mi><mi>rel</mi></msub><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mrow><msub><mi>M</mi><mi>0</mi></msub><mo>&minus;</mo><mi>100</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac><mo>=</mo><mi>ln</mi><mo>(</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mrow><msub><mi>M</mi><mi>0</mi></msub><mo>&minus;</mo><mi>100</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup><mo>=</mo><mfrac><msub><mi>M</mi><mi>0</mi></msub><mrow><msub><mi>M</mi><mi>0</mi></msub><mo>&minus;</mo><mi>100</mi></mrow></mfrac></math><br>
+	<math><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup><mo>(</mo><mrow><msub><mi>M</mi><mi>0</mi></msub><mo>&minus;</mo><mi>100</mi></mrow><mo>)</mo><mo>=</mo><msub><mi>M</mi><mi>0</mi></msub></math><br>
+	<math><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup><mrow><msub><mi>M</mi><mi>0</mi></msub><mo>&minus;</mo><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup><mi>100</mi></mrow><mo>=</mo><msub><mi>M</mi><mi>0</mi></msub></math><br>
+	<math><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup><mrow><msub><mi>M</mi><mi>0</mi></msub><mo>&minus;</mo><msub><mi>M</mi><mi>0</mi></msub><mo>=</mo><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup><mi>100</mi></mrow></math><br>
+	<math><msub><mi>M</mi><mi>0</mi></msub><mo>(</mo><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup><mo>&minus;</mo><mi>1</mi><mo>)</mo><mo>=</mo><mi>100</mi><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup></math><br>
+	<math><msub><mi>M</mi><mi>0</mi></msub><mo>=</mo><mfrac><mrow><mi>100</mi><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup></mrow><mrow><msup><mi>e</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>g</mi><mi>&Delta;</mi><mi>t</mi></mrow><msub><mi>v</mi><mi>rel</mi></msub></mfrac></msup><mo>&minus;</mo><mi>1</mi></mrow></mfrac></math><br>
+</article>
+<p>Finally, we now just plug in the values we have.</p>
+<article class="equations">
+	<math><msub><mi>M</mi><mi>0</mi></msub><mo>=</mo><mfrac><mrow><mi>100</mi><msup><mi>e</mi><mfrac><mrow><mi>(100m/s)</mi><mo>+</mo><mi>(9.8m/s&sup2;)</mi><mi>(10.0s)</mi></mrow><mi>(1500m/s)</mi></mfrac></msup></mrow><mrow><msup><mi>e</mi><mfrac><mrow><mi>(100m/s)</mi><mo>+</mo><mi>(9.8m/s&sup2;)</mi><mi>(10.0s)</mi></mrow><mi>(1500m/s)</mi></mfrac></msup><mo>&minus;</mo><mi>1</mi></mrow></mfrac></math><br>
+	<math><msub><mi>M</mi><mi>0</mi></msub><mo>&approx;</mo><mi>800kg</mi></math><br>
+</article>
+</section>
+</section>
+</main>
+<footer>
+	<a href="rods.html"> Rods ></a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>system - varmassI</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Variable Mass I</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>In a system with variable mass, it is often helpful to consider the system losing/gaining mass combined with the system of the lost/gained mass</p>
+		<p>The above system described has constant mass, and thus momentum is conserved</p>
+		<p>Force on the system depends on the external force, rate of mass removed/gained, and the speed at which the mass is propelled</p>
+		<p>A rocket often does reach speeds greater than that of the propellant, all due to the conservation of momentum</p>
+		</section>
+	</article>
+</aside>
+<main>
+<p>We noted some time ago the way a rocket is propelled is because it throws out mass (called propellant) out, and by Newton's third law, the mass applies a force on the rocket, throwing it up.</p>
+<p>If we analyze the system of the rocket and propellant, we can see that its mass is constant. However, if we analyze the system of just the rocket, its mass is not constant; in fact, it is losing mass.</p>
+<figure><img src="images/varmass1.svg" alt="">
+<figcaption>Two systems of interest in a rocket.</figcaption></figure>
+<p>Here, we only really care about the system of the rocket; we don't care about whatever the propellant is doing. However, if we take the system of the rocket and propellant, it has constant mass. Thus, we can use momentum conservation in that system.</p>
+<p>First, we note the initial and final momenta of that system. If let's say the system is moving at an initial velocity <math><msub><mi>v</mi><mi>rE</mi></msub></math> and with a full mass <math><mi>M</mi></math>, we have this initial momenta.</p>
+<article class="equations">
+	<math><msub><mi>p</mi><mi>0</mi></msub><mo>=</mo><mi>M</mi><msub><mi>v</mi><mi>rE</mi></msub></math><br>
+</article>
+<p>Now, after ejection, we have two systems; the system of the propellant, and the system of the rocket. After some <math><mi>&Delta;</mi><mi>t</mi></math>, we can say that <math><mi>&Delta;</mi><mi>M</mi></math> propellant has been thrown out of the rocket. The rocket also has its mass changed by this amount.</p>
+<figure><img src="images/varmass2.svg" alt="">
+<figcaption>The two systems within the bigger system of rocket + propellant.</figcaption></figure>
+<p>We also note that the propellant has a velocity <math><msub><mi>v</mi><mi>pf</mi></msub></math>, and the rocket is given a velocity an increase in velocity <math><mi>&Delta;</mi><mi>v</mi></math>. Thus, we write out the final momenta as follows.</p>
+<article class="equations">
+	<math><msub><mi>p</mi><mi>f</mi></msub><mo>=</mo><msub><mi>m</mi><mi>r</mi></msub><msub><mi>v</mi><mi>r</mi></msub><mo>+</mo><msub><mi>m</mi><mi>p</mi></msub><msub><mi>v</mi><mi>pE</mi></msub></math><br>
+	<math><msub><mi>p</mi><mi>f</mi></msub><mo>=</mo><mo>(</mo><mi>M</mi><mo>+</mo><mi>&Delta;</mi><mi>M</mi><mo>)</mo><mo>(</mo><msub><mi>v</mi><mi>rE</mi></msub><mo>+</mo><mi>&Delta;</mi><mi>v</mi><mo>)</mo><mo>&minus;</mo><mi>&Delta;</mi><mi>M</mi><msub><mi>v</mi><mi>pE</mi></msub></math><br>
+</article>
+<p>With this, we can get the change in momentum of a system.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>p</mi><mo>=</mo><msub><mi>p</mi><mi>f</mi></msub><mo>&minus;</mo><msub><mi>p</mi><mi>0</mi></msub></math><br>
+	<math><mi>&Delta;</mi><mi>p</mi><mo>=</mo><mo>(</mo><mi>M</mi><mo>+</mo><mi>&Delta;</mi><mi>M</mi><mo>)</mo><mo>(</mo><msub><mi>v</mi><mi>rE</mi></msub><mo>+</mo><mi>&Delta;</mi><mi>v</mi><mo>)</mo><mo>&minus;</mo><mi>&Delta;</mi><mi>M</mi><msub><mi>v</mi><mi>pE</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mi>v</mi><mi>rE</mi></msub></math><br>
+</article>
+<p>Recall that the change in momentum of a system is equal to the impulse delivered onto it; we will now invoke the momentum-impulse theorem. In particular, we will use it to get the net force over that time <math><mi>&Delta;</mi><mi>t</mi></math>.</p>
+<article class="equations">
+	<math><mi>J</mi><mo>=</mo><mo>(</mo><mi>M</mi><mo>+</mo><mi>&Delta;</mi><mi>M</mi><mo>)</mo><mo>(</mo><msub><mi>v</mi><mi>rE</mi></msub><mo>+</mo><mi>&Delta;</mi><mi>v</mi><mo>)</mo><mo>&minus;</mo><mi>&Delta;</mi><mi>M</mi><msub><mi>v</mi><mi>pE</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mi>v</mi><mi>rE</mi></msub></math><br>
+	<math><msub><mi>F</mi><mi>net</mi></msub><mi>&Delta;</mi><mi>t</mi><mo>=</mo><mo>(</mo><mi>M</mi><mo>+</mo><mi>&Delta;</mi><mi>M</mi><mo>)</mo><mo>(</mo><msub><mi>v</mi><mi>rE</mi></msub><mo>+</mo><mi>&Delta;</mi><mi>v</mi><mo>)</mo><mo>&minus;</mo><mi>&Delta;</mi><mi>M</mi><msub><mi>v</mi><mi>pE</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mi>v</mi><mi>rE</mi></msub></math><br>
+	<math><msub><mi>F</mi><mi>net</mi></msub><mo>=</mo><mfrac><mrow><mo>(</mo><mi>M</mi><mo>+</mo><mi>&Delta;</mi><mi>M</mi><mo>)</mo><mo>(</mo><msub><mi>v</mi><mi>rE</mi></msub><mo>+</mo><mi>&Delta;</mi><mi>v</mi><mo>)</mo><mo>&minus;</mo><mi>&Delta;</mi><mi>M</mi><msub><mi>v</mi><mi>pE</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mi>v</mi><mi>rE</mi></msub></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>Let's now try distributing out the expression.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>net</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><msub><mi>v</mi><mi>rE</mi></msub><mo>+</mo><mi>M</mi><mi>&Delta;</mi><mi>v</mi><mo>+</mo><mi>&Delta;</mi><mi>M</mi><msub><mi>v</mi><mi>rE</mi></msub><mo>+</mo><mi>&Delta;</mi><mi>M</mi><mi>&Delta;</mi><mi>v</mi><mo>&minus;</mo><mi>&Delta;</mi><mi>M</mi><msub><mi>v</mi><mi>pE</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mi>v</mi><mi>rE</mi></msub></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><msub><mi>F</mi><mi>net</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>&Delta;</mi><mi>M</mi><msub><mi>v</mi><mi>rE</mi></msub><mo>&minus;</mo><mi>&Delta;</mi><mi>M</mi><msub><mi>v</mi><mi>pE</mi></msub></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac><mo>&minus;</mo><mfrac><mrow><mi>&Delta;</mi><mi>M</mi><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><msub><mi>F</mi><mi>net</mi></msub><mo>=</mo><mi>M</mi><mfrac><mrow><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>(</mi><msub><mi>v</mi><mi>rE</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>pE</mi></msub><mi>)</mi><mfrac><mrow><mi>&Delta;</mi><mi>M</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac><mo>&minus;</mo><mfrac><mrow><mi>&Delta;</mi><mi>M</mi><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>Now, to get the force at any time, we let <math><mi>&Delta;</mi><mi>t</mi></math> approach zero, which effectively is taking the derivative. One thing to note is that the rightmost expression disappears, as the change in velocity <math><mi>&Delta;</mi><mi>v</mi></math> approaches zero as <math><mi>&Delta;</mi><mi>t</mi></math> approaches zero, so it altogether becomes zero.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>net</mi></msub><mo>=</mo><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>(</mi><msub><mi>v</mi><mi>rE</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>pE</mi></msub><mi>)</mi><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>Noting that the only way to change the momentum of a system is via an external force, this means that <math><msub><mi>F</mi><mi>net</mi></msub></math> is an external force. In terms of our rocket system, this is the reaction force of throwing the propellant out.</p>
+<p>Now, to simplify further, we note that <math><msub><mi>v</mi><mi>rE</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>pE</mi></msub></math> is the relative velocity of the propellant to the rocket. This is useful since if we were to only note the motion of the rocket then we need not consult any other reference frame other than it.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>pE</mi></msub><mo>=</mo><msub><mi>v</mi><mi>pr</mi></msub><mo>+</mo><msub><mi>v</mi><mi>rE</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>pE</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>rE</mi></msub><mo>=</mo><msub><mi>v</mi><mi>rp</mi></msub></math><br>
+	<math><msub><mi>v</mi><mi>rE</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>pE</mi></msub><mo>=</mo><mo>&minus;</mo><msub><mi>v</mi><mi>rp</mi></msub></math>
+</article>
+<p>Thus, we can write it as the following.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>ext</mi></msub><mo>=</mo><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>&minus;</mo><msub><mi>v</mi><mi>rp</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+	<math><mi>M</mi><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>F</mi><mi>ext</mi></msub><mo>+</mo><msub><mi>v</mi><mi>rp</mi></msub><mfrac><mrow><mi>d</mi><mi>M</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>This surprising equation is very useful for us. Reading, it says that the force on an object is given by the external forces acting on it and the product of how fast the propellant is being thrown and the speed of the thrown propellant. Great!</p>
+
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q7.20) In 1920 a prominent newspaper editorialized as follows about
+the pioneering rocket experiments of Robert H. Goddard, dismissing the notion that a rocket could operate in a vacuum:</p>
+<p><i>"That Professor Goddard, with his 'chair' in Clark College
+and the countenancing of the Smithsonian Institution, does
+not know the relation of action to reaction, and of the need to
+have something better than a vacuum against which to react—to say that would be absurd. Of course, he seems only
+to lack the knowledge ladled out daily in high schools."</i></p>
+<p>What is wrong with this argument?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The crux of the argument is that a rocket can't work in a vacuum because there would be no action-reaction force, presumably because there would be nothing for the propellant to push against. This is wrong. The action-reaction pair happens solely in the rocket thruster, and it occurs by pushing a large amount of mass, which in turn, pushes the rocket back.</p>
+<p>For reference, the above newspaper was The New York Times. They released an addendum around 50 years later, at the time of the Apollo 11.</p>
+<article style="line-height:1.2em" class="equations">
+<p><i>"Further investigation and experimentation have confirmed the findings of Isaac Newton in the 17th century and it is now definitely established that a rocket can function in a vacuum as well as in an atmosphere. The Times regrets the error."</i></p>
+</article>
+</section>
+</section>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 2</h2>
+<p>Shown below is a solar sail, a type of device which can theoretically propel objects in outer space. It could serve as a replacement for rocket engines. How does it work, and why isn't this device used?</p>
+<figure grayout><img src="images/varmass3.avif" alt="">
+<figcaption>Question 2.</figcaption></figure>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>It works via having the light from the sun hit the sail, giving it a very tiny force. This force is negligible compared to that generated by a rocket engine.</p>
+</section>
+</section>
+
+<p>For now, we postpone the use of the above equation and settle for more conceptual understanding of it. There is actually a lot to glean from it!</p>
+
+<section class="examples">
+<h2>Question 3a</h2>
+<p>(HRK Q7.22) Can a rocket reach a speed greater than the speed of the exhaust gases that propel it? Explain why or why not.</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Yes. Given enough time and fuel, the velocity of the rocket will become faster than that of the gases propelling it. The equation gives the acceleration of the rocket; thus, after enough time, the rocket will outspeed the gas propelling it.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 3b</h2>
+<p>(LSM CQ9.17) It is possible for the velocity of a rocket to be
+greater than the exhaust velocity of the gases it
+ejects. When that is the case, the gas velocity
+and gas momentum are in the same direction as
+that of the rocket. How is the rocket still able to
+obtain thrust by ejecting the gases? </p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Looking at our equation, the force on the rocket is dependent on the velocity of the gases relative to the rocket. The above observation is true, but the momenta are measured relative to a reference frame that is not the rocket.</p>
+<p>It is still able to gain thrust because, in the reference frame of the rocket, the rocket and gas system has to have momentum conserved. Gas is thrown back, and thus to conserve momentum, the rocket is thrown forward.</p>
+</section>
+</section>
+<p>Another explanation is the following. In the CM frame for the rocket and propellant system, it must be at constant velocity given there are no external forces. In that reference frame, the gas would appear to be moving backwards; and thus the rocket has to move forwards to keep the center of mass at constant velocity.</p>
+<p>We can generalize all the above for a system of variable mass, such as the diagram below.</p>
+<figure><img src="images/varmass4.svg" alt="">
+<figcaption>A generalized diagram for a system of variable mass.</figcaption></figure>
+<p>Another example of such a system that aren't rockets is the problem before with a cannon, cannonball, and cart; the system of variable mass there is the cannonball and cart system.</p>
+</main>
+<footer>
+	<a href="variable-mass-II.html"> Variable Mass II ></a>
+</footer>
+</body>
+</html>

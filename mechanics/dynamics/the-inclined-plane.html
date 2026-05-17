@@ -30,7 +30,7 @@
 <p>Here is a technique one can do. Usually, we set the coordinate system such that the x-component is completely horizontal and the y-component as completely vertical. However, this time, it might be better to "tilt" our coordinate system to be parallel to the incline. This is the same as "tilting" your view, like in the figure below.</p>
 <figure><img src="images/inclined2.svg" alt="">
 <figcaption>Tilting our coordinate system makes the inclined plane become a horizontal surface.</figcaption></figure>
-<p>With this, we now have a flat surface and forces at an angle; what we've done before. We decompose force into its tilted x-component and y-component.</p>
+<p>With this, we now have a flat surface and forces at an angle; what we've done before. We decompose force into its tilted components, which we label as <math><msub><mi>w</mi><mi>&perp;</mi></msub></math> for the force perpendicular to the slope and <math><msub><mi>w</mi><mi>&parallel;</mi></msub></math> for the force parallel to it.</p>
 <figure><img src="images/inclined3.svg" alt="">
 <figcaption>Resolving the weight.</figcaption></figure>
 <p>You may wonder where the angle for the tilted degree system came from. To find out, we must use our knowledge of geometry and angle-chasing. It is left as a problem below.</p>
@@ -66,27 +66,27 @@ Observe the box on an inclined plane below. Show that <math><mi>x</mi><mo>=</mo>
 <p>Here is then our strategy for dealing with these problems; first, we tilt our coordinate system to be parallel to the incline, then deal with everything else as if they were forces at an angle.</p>
 <section class="examples"> <mark custom></mark>
 <h2>Exercise 1</h2>
-A 5.0kg box is placed on a frictionless inclined plane, angled at 30.0&deg;. 
+<p>A 5.0kg box is placed on a frictionless inclined plane, angled at 30.0&deg;. 
 <br>(a) What is the acceleration of the box?
-<br>(b) What is the magnitude of the normal force?
+<br>(b) What is the magnitude of the normal force?</p>
 <figure><img src="images/inclined6.svg" alt="">
 <figcaption>Exercise 1.</figcaption></figure>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>Tilting the coordinate system, we see that the horizontal weight corresponds to the acceleration of the box along the inclined plane, and the vertical weight pushes on the surface, causing the normal force.</p>
+<p>Tilting the coordinate system, we see that the parallel weight corresponds to the acceleration of the box along the inclined plane, and the perpendicular weight pushes on the surface, causing the normal force.</p>
 <figure><img src="images/inclined7.svg" alt=""></figure>
-<p>We deal with the acceleration first. Seeing as the plane is frictionless, this means the only horizontal force is the weight, and thus this is the net force.</p>
+<p>We deal with the acceleration first. Seeing as the plane is frictionless, this means the only force parallel to the plane is the weight, and thus this is the net force.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
-	<math><mi>m</mi><msub><mi>a</mi><mi>x</mi></msub><mo>=</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
-	<math><mi>m</mi><msub><mi>a</mi><mi>x</mi></msub><mo>=</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
-	<math><msub><mi>a</mi><mi>x</mi></msub><mo>=</mo><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
+	<math><mi>m</mi><msub><mi>a</mi><mi>&parallel;</mi></msub><mo>=</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>m</mi><msub><mi>a</mi><mi>&parallel;</mi></msub><mo>=</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><msub><mi>a</mi><mi>&parallel;</mi></msub><mo>=</mo><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 </article>
-<p>We use sine here as horizontal weight is opposite to the 30&deg; angle (see problem above). Thus, solving for acceleration, we get that it is 4.9m/s².</p>
-<p>For the normal force, we note that the two vertical forces contributing to the vertical net force is the normal force itself and the vertical weight. We set the net vertical force as zero.</p>
+<p>We use sine here as parallel weight is opposite to the 30&deg; angle (see problem above). Thus, solving for acceleration, we get that it is 4.9m/s².</p>
+<p>For the normal force, we note that the two perpendicular forces contributing to the perpendicular net force is the normal force itself and the perpendicular weight. We set the net perpendicular force as zero.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub></math><br>
-	<math><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&perp;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>w</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>N</mi></math><br>
 	<math><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>N</mi></math><br>
 </article>
@@ -95,15 +95,15 @@ A 5.0kg box is placed on a frictionless inclined plane, angled at 30.0&deg;.
 </section>
 <section class="examples">
 <h2>Exercise 2</h2>
-(LSM P5.66) What force must be applied to a 100.0-kg crate
+<p>(LSM P5.66) What force must be applied to a 100.0-kg crate
 on a frictionless plane inclined at 30&deg; to cause
-an acceleration of 2.0m/s² up the plane?<br><br>
+an acceleration of 2.0m/s² up the plane?</p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>There are two horizontal forces acting in the tilted coordinate system; the force being applied, and the horizontal weight, which we set as negative as it pulls the crate down. Solving, we have the following.</p>
+<p>There are two parallel forces acting in the tilted coordinate system; the force being applied, and the parallel weight, which we set as negative as it pulls the crate down. Solving, we have the following.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>+</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover></math><br>
 </article>
@@ -113,24 +113,24 @@ an acceleration of 2.0m/s² up the plane?<br><br>
 <p>Of course, inclined planes usually have friction as well. Since friction points perpendicular to the normal force, it points parallel to the surface; thus, there usually isn't any need to decompose friction.</p>
 <section class="examples">
 <h2>Exercise 3a</h2>
-(HRK P5.5a) A 7.96-kg block rests on a plane inclined at 22.0° to the horizontal. The coefficient of static friction
+<p>(HRK P5.5a) A 7.96-kg block rests on a plane inclined at 22.0° to the horizontal. The coefficient of static friction
 is 0.25. What minimum force, parallel to the plane, will
-prevent the block from slipping down the plane?
+prevent the block from slipping down the plane?</p>
 <figure><img src="images/inclined8.svg" alt="">
-<figcaption>Exercise 5.</figcaption></figure>
+<figcaption>Exercise 3.</figcaption></figure>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>Before dealing with the horizontal forces, let's deal with the vertical forces, which balance out. Thus, the net vertical force, consisting of the normal force and the vertical weight, looks like this.</p>
+<p>Before dealing with the parallel forces, let's deal with the perpendicular forces, which balance out. Thus, the net perpendicular force, consisting of the normal force and the perpendicular weight, looks like this.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub></math><br>
-	<math><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&perp;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>w</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>N</mi></math><br>
 	<math><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>N</mi></math><br>
 </article>
-<p>Now, the horizontal net force is built out of three forces; the horizontal weight, which we set as negative, the parallel force, and the friction.</p>
+<p>Now, the parallel net force is built out of three forces; the parallel weight, which we set as negative, the parallel force, and the friction.</p>
 <p>Here, we must be wary of the friction; this time, we set the friction as positive. We note that the weight attempts to pull the block down the plane, while friction attempts to keep it up. Thus, here, it is a helping force.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
 	<math><mi>0N</mi><mo>=</mo><mi>F</mi><mo>+</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi><mo>&minus;</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mi>0N</mi><mo>=</mo><mi>F</mi><mo>+</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>(</mi><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mi>)</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>F</mi></math><br>
@@ -138,15 +138,16 @@ prevent the block from slipping down the plane?
 <p>Plugging in our values gives us a strength needed of approximately 11N.</p>
 </section>
 </section>
+
 <section class="examples">
 <h2>Exercise 3b</h2>
-(HRK P5.5b) What minimum force will start the block moving up the
-plane in the previous exercise?<br><br>
+<p>(HRK P5.5b) What minimum force will start the block moving up the
+plane in the previous exercise?</p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>Here, the friction is now an opposing force; it attempts to keep the block from moving up. Thus, now we set it as negative. We use the same procedures as last time.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>−</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
 	<math><mi>0N</mi><mo>=</mo><mi>F</mi><mo>−</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>N</mi><mo>&minus;</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mi>0N</mi><mo>=</mo><mi>F</mi><mo>−</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>(</mi><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mi>)</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>+</mo><msub><mi>&mu;</mi><mi>s</mi></msub><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>F</mi></math><br>
@@ -156,17 +157,17 @@ plane in the previous exercise?<br><br>
 </section>
 <section class="examples"> <mark variable></mark>
 <h2>Problem 2</h2>
-(LSM P6.53) Show that the acceleration of any object down
-an incline with friction is given by this equation.
+<p>(LSM P6.53) Show that the acceleration of any object down
+an incline with friction is given by this equation.</p>
 <article class="equations">
 	<math><mi>a</mi><mo>=</mo><mi>g</mi><mi>(</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mi>)</mi></math>
 </article>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>We note two forces which cause acceleration; the kinetic friction, and the weight of the object. Here, it is best to set the weight as positive and the kinetic friction as negative as this force attempts to stop the object from going down the plane.</p>
-<p>Thus, we can write out this equation. Another thing to note is that the normal force has the same magnitude as the vertical weight, so we substitute that in as well.</p>
+<p>Thus, we can write out this equation. Another thing to note is that the normal force has the same magnitude as the perpendicular weight, so we substitute that in as well.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>N</mi></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><msub><mi>w</mi><mi>y</mi></msub></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>w</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
@@ -185,17 +186,17 @@ an incline with friction is given by this equation.
 <figcaption>Forces in our original coordinate system become angled forces.</figcaption></figure>
 <section class="examples">
 <h2>Exercise 4</h2>
-(HRK E4.10) A 110-kg crate is pushed at constant speed up the frictionless
-34° ramp. What is the magnitude of horizontal force shown?
+<p>(HRK E4.10) A 110-kg crate is pushed at constant speed up the frictionless
+34° ramp. What is the magnitude of horizontal force shown?</p>
 <figure><img src="images/inclined10.svg" alt="">
-<figcaption>Exercise 5.</figcaption></figure>
+<figcaption>Exercise 4.</figcaption></figure>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>To keep the box moving at constant speed, the horizontal forces (in the titled reference plane) have to cancel out to zero. The only net forces in the horizontal direction is the horizontal weight and the horizontal component of the force.</p>
+<p>To keep the box moving at constant speed, the parallel forces (in the titled reference plane) have to cancel out to zero. The only net forces in the parallel direction is the parallel weight and the parallel component of the force.</p>
 <p>Looking at the figure, we see that the horizontal force is adjacent to the angle, so we use cosine.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
-	<math><mi>0N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
+	<math><mi>0N</mi><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
 	<math><mi>0N</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mfrac><mrow><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac><mo>=</mo><mi>m</mi><mi>g</mi><mi>tan</mi><mi>(&theta;)</mi><mo>=</mo><mi>F</mi></math><br>
 </article>
@@ -211,16 +212,16 @@ an incline with friction is given by this equation.
 the acceleration of the block if it is moving up the plane?<br><br>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>The horizontal force exerts a vertical and horizontal component in our tilted coordinate system. The vertical component adds on to the normal force, so we compute that first. The vertical component is opposite to the angle, so we use sine.</p>
+<p>The horizontal force exerts a perpendicular and parallel component in our tilted coordinate system. The perpendicular component adds on to the normal force, so we compute that first. The perpendicular component is opposite to the angle, so we use sine.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>nety</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub></math><br>
-	<math><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&perp;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>y</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
 	<math><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mi>N</mi></math><br>
 </article>
-<p>There are three forces acting on the horizontal direction, with the horizontal weight and the kinetic friction both opposing the acceleration.</p>
-<p>Noting the normal force is the same as the vertical weight, we make the equation for the net horizontal force.</p>
+<p>There are three forces acting on the parallel direction, with the parallel weight and the kinetic friction both opposing the acceleration.</p>
+<p>Noting the normal force is the same as the perpendicular weight, we make the equation for the net parallel force.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>N</mi></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mo>(</mo><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>)</mo></math><br>
 	<math><mi>a</mi><mo>=</mo><mfrac><mrow><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mi>m</mi></mfrac></math><br>
@@ -250,9 +251,9 @@ new skis. Assuming a 3.0° slope, compute the coefficient of
 kinetic friction for each case.<br><br>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>We don't know the mass, so let's set it as <math><mi>M</mi></math>. Then, the net horizontal force is the horizontal weight and the kinetic friction.</p>
+<p>We don't know the mass, so let's set it as <math><mi>M</mi></math>. Then, the net parallel force is the parallel weight and the kinetic friction.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
 	<math><mi>M</mi><mi>a</mi><mo>=</mo><mi>M</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>M</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
 	<math><mi>a</mi><mo>=</mo><mi>g</mi><mi>(</mi><mi>sin</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mi>)</mi></math><br>
 </article>
@@ -283,13 +284,13 @@ an initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>. <br>(a) How 
 <section class="solution">
 <p>Given that the block slides down at constant velocity, that means that they have the same magnitude.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
 </article>
-<p>As the block is projected up, the net horizontal force is made up of the horizontal weight and the kinetic friction; both pointing downwards. The kinetic friction attempts to stop the movement going up.</p>
+<p>As the block is projected up, the net parallel force is made up of the parallel weight and the kinetic friction; both pointing downwards. The kinetic friction attempts to stop the movement going up.</p>
 <p>We set both values then as negative.</p>
 <article class="equations">
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
-	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>netx</mi></msub><mo>=</mo><mo>&minus;</mo><mi>2</mi><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><mo>&minus;</mo><mi>2</mi><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
 	<math><mi>m</mi><mi>a</mi><mo>=</mo><mo>&minus;</mo><mi>2</mi><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mi>a</mi><mo>=</mo><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 </article>
@@ -300,7 +301,7 @@ an initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>. <br>(a) How 
 	<math><mo>&minus;</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mo>=</mo><mo>&minus;</mo><mrow><mi>4</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mi>&#x0394</mi><mi>x</mi></mrow></math><br>
 	<math><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup></mrow><mrow><mi>4</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac><mo>=</mo><mi>&#x0394</mi><mi>x</mi></math><br>
 </article>
-<p>This is our answer. For the second question; no, as once it ends at rest, the kinetic friction and horizontal weight will balance out, causing no acceleration, and thus no movement (since the object is now at rest).</p>
+<p>This is our answer. For the second question; no, as once it ends at rest, the kinetic friction and parallel weight will balance out, causing no acceleration, and thus no movement (since the object is now at rest).</p>
 </section>
 </section>
 </main>

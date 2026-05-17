@@ -24,7 +24,7 @@ body:not([index])>main::first-letter {
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-aside {
+body > aside {
 	font-size: 0.975em;
 	background-color: WhiteSmoke;
 	float:left;
@@ -37,16 +37,16 @@ aside {
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
-aside > article {
+body > aside > article {
 	position: sticky;
 	top:1em;
 }
 
-aside > article > section {
+body > aside > article > section {
 	margin-bottom:1em;
 }
 
-aside > article > section > p {
+body > aside > article > section > p {
 	border-left: 1.5px dashed black;
 	padding-left:0.5em;
 }
@@ -278,7 +278,7 @@ math {
     math-style: normal;
 }
 
-aside > article > section > math {
+body > aside > article > section > math {
 	line-height:2em;
 	border-left: 0.05em dashed;
 	padding: 0.2em 0 0.2em 0.5em;
@@ -297,7 +297,7 @@ aside > article > section > math {
 }
 
 .equations > math {
-	margin: 0.4em 0 0.4em 0
+	margin: 0.4em 0 0.4em 0;
 }
 
 .equations > math:has(mfrac) {
@@ -389,7 +389,7 @@ footer[next]{
 	body[index],
 	body{
 		width:90%;
-		font-size:0.9em;
+		font-size:0.875em;
 		line-height: 1.3em;
 	}
 
@@ -430,7 +430,7 @@ footer[next]{
 		width:95%;
 	}
 
-	aside { 
+	body > aside { 
 		display:none;
 	}
 

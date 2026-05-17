@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>rigid - linmass</title>
+	<title>system - linmass</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
 	<script defer src="../script.js"></script>
@@ -164,13 +164,38 @@ by the following equation:</p>
 <p>The above is the final answer.</p>
 </section>
 </section>
+<section hard class="examples"><mark variable></mark>
+<h2>Problem 2</h2>
+<p>(HRK P7.3) A uniform flexible chain of length L, with weight per unit
+length <math><mi>&lambda;</mi></math>, passes over a small, frictionless peg. It is released from a rest position with a length of chain <math><mi>x</mi></math> hanging from one side and a length <math><mi>L</mi><mo>&minus;</mo><mi>x</mi></math> from the other
+side. Find the acceleration of the system as a function of x.</p>
+<figure><img src="images/lin2.svg" alt="">
+<figcaption>Problem 2.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Instead of dealing with the whole chain, we just deal with it like it is two masses on each side of the pulley. In other words, it is an Atwood's machine.</p>
+<p>Since we are given the weight per unit length, we can get the mass of each side. We will assume that <math><mi>L</mi><mo><</mo><mi>2</mi><mi>x</mi></math>, or that the side with <math><mi>x</mi></math> length is more massive.</p>
+<article class="equations">
+	<math><mi>M</mi><mo>=</mo><mi>&lambda;</mi><mi>x</mi></math><br>
+	<math><mi>m</mi><mo>=</mo><mi>&lambda;</mi><mo>(</mo><mi>L</mi><mo>&minus;</mo><mi>x</mi><mo>)</mo></math><br>
+</article>
+<p>Now, let's recall the acceleration we got for an Atwood's machine.</p>
+<article class="equations">
+	<math><mi>g</mi><mo>(</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><mo>=</mo><mi>a</mi></math><br>
+	<math><mi>g</mi><mo>(</mo><mfrac><mrow><mi>&lambda;</mi><mi>x</mi><mo>&minus;</mo><mi>&lambda;</mi><mo>(</mo><mi>L</mi><mo>&minus;</mo><mi>x</mi><mo>)</mo></mrow><mrow><mi>&lambda;</mi><mi>x</mi><mo>+</mo><mi>&lambda;</mi><mo>(</mo><mi>L</mi><mo>&minus;</mo><mi>x</mi><mo>)</mo></mrow></mfrac><mo>)</mo><mo>=</mo><mi>a</mi></math><br>
+	<math><mi>g</mi><mo>(</mo><mfrac><mrow><mi>x</mi><mo>&minus;</mo><mi>L</mi><mo>+</mo><mi>x</mi></mrow><mrow><mi>x</mi><mo>+</mo><mi>L</mi><mo>&minus;</mo><mi>x</mi></mrow></mfrac><mo>)</mo><mo>=</mo><mi>a</mi></math><br>
+	<math><mi>g</mi><mo>(</mo><mfrac><mrow><mi>2</mi><mi>x</mi><mo>&minus;</mo><mi>L</mi></mrow><mi>L</mi></mfrac><mo>)</mo><mo>=</mo><mi>a</mi></math><br>
+</article>	
+</section>
+</section>
+
 <p>If you have been following, you may have noticed that for the past problems that we have written the following integral.</p>
 <article class="equations">
 	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><mo>&int;</mo><mi>x</mi><mi>&lambda;</mi><mi>d</mi><mi>x</mi></math><br>
 </article>
 <p>We can use integration by parts here, instead of having to distribute. This may save some time, however the latter method still works quite well.</p>
 <section class="examples"><mark calc custom></mark>
-<h2>Problem 2</h2>
+<h2>Problem 3</h2>
 <p style="margin:0">Show that for a thin rod of length <math><mi>L</mi></math>, with one end at the origin and placed on the x-axis, when the linear mass density varies as a function of <math><mi>x</mi></math>, that the following holds true.</p>
 <article class="equations">
 	<math><msub><mi>x</mi><mi>cm</mi></msub><mo>=</mo><mi>L</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>M</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>m</mi><mi>d</mi><mi>x</mi></math><br>
@@ -198,9 +223,10 @@ by the following equation:</p>
 </article>
 </section>
 </section>
+<p>So far, we have only dealt with the one-dimensional thin rod. In the additional tutorials, we deal with the two-dimensional lamina, and also deal with rods that have curves, called hoops.</p>
 </main>
-<footer>
-<a unfinished>Laminas ></a>
+<footer style="color:#900">
+	&FilledSmallSquare;
 </footer>
 </body>
 </html>
