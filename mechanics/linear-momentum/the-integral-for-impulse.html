@@ -103,6 +103,20 @@
 <p>It is the force. If impulse is the integral of force with respect to time, then force is the derivative of impulse with respect to time.</p>
 </section>
 </section>
+<p>We will end this tutorial with the formal way to prove this fact. First, we cut each of the portions of the force-time graph into small portions &delta;t.</p>
+<p>Thus, we have cut up the graph into tiny rectangles, each with a tiny area &delta;J. This area is given by the product of the length and height of the rectangle. The length is set as &delta;t, and the height is given by the force at that &delta;t.</p>
+<figure><img src="images/integral3.svg" alt="">
+<figcaption>Tiny parts of the graph.</figcaption></figure>
+<p>We can then add up all of these tiny &delta;J to get the total impulse.</p>
+<article class="equations">
+	<math><mi>J</mi><mo>=</mo><mo>&sum;</mo><mi>&delta;</mi><mi>J</mi></math><br>
+	<math><mi>J</mi><mo>=</mo><mo>&sum;</mo><mi>F</mi><mi>(&delta;t)</mi><mi>&delta;</mi><mi>t</mi></math>
+</article>
+<p>Now, this is just an approximation. However, as the small parts &delta;J approach zero, the tiny rectangles will perfectly encapsulate the area of the entire graph. Thus, we rewrite the sum into an integral.</p>
+<article class="equations">
+	<math><mi>J</mi><mo>=</mo><mo>&int;</mo><mi>d</mi><mi>J</mi></math><br>
+	<math><mi>J</mi><mo>=</mo><mo>&int;</mo><mi>F</mi><mi>d</mi><mi>t</mi></math>
+</article>
 </main>
 <footer>
 	<a href="momentum.html"> Momentum ></a>

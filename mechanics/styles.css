@@ -5,7 +5,7 @@
 	--focusred: #d90000;
 	--redtowhite: linear-gradient(to right, #F5EAEA, #fff, #fff);
 	--whitetored: linear-gradient(to right, #fff, #fff, #F5EAEA);
-	--centergray: linear-gradient(to right, rgba(0,0,0,0), WhiteSmoke, rgba(0,0,0,0));
+	--centergray: linear-gradient(to right, transparent, #eee, transparent);
 }
 
 body[darkmode] {
@@ -14,7 +14,7 @@ body[darkmode] {
 }
 
 body {
-	width:60%;
+	width:65%;
 	margin:auto;
 }
 
@@ -26,10 +26,10 @@ body:not([index])>main::first-letter {
 
 body > aside {
 	font-size: 0.975em;
-	background-color: WhiteSmoke;
+	background-color: #eee;
 	float:left;
 	padding:1em 0.5em;
-	width:calc(21.5% - 1.5em);
+	width:calc(23% - 1.5em);
 	height:calc(100vh - 2em);
 	display:block;
 	position:sticky;
@@ -52,8 +52,8 @@ body > aside > article > section > p {
 }
 
 main {
-	width:78.5%;
-	margin-left:21.5%;
+	width:77%;
+	margin-left:23%;
 	font-family:Tahoma, Geneva, Verdana, sans-serif;
 	text-align:justify;
 	text-justify:inter-word;
@@ -74,8 +74,8 @@ body[index] > main {
 }
 
 #center > a {
-	background-color: rgba(0,0,0,0);
-	background-image:linear-gradient(rgba(0,0,0,0));
+	background-color: transparent;
+	background-image:linear-gradient(transparent);
 }
 
 header {
@@ -87,7 +87,7 @@ header {
 header > a {
 	padding-left:0.2em;
 	margin-right: auto;
-	background-color:rgba(0,0,0,0);
+	background-color:transparent;
 	background-image:var(--redtowhite);
 }
 
@@ -96,7 +96,7 @@ body > footer {
 	text-align:right;
 	margin-bottom:2em;
 	font-family:Georgia, 'Times New Roman', Times, serif;
-	background-color:rgba(0,0,0,0);
+	background-color:transparent;
 	background-image:var(--whitetored);
 	padding-right:0.1em;
 }
@@ -106,7 +106,7 @@ nav {
 }
 
 h1 {
-	background-color:WhiteSmoke;
+	background-color:#eee;
 	margin-top:1.5em;
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-size:1.5em;
@@ -129,7 +129,7 @@ h2 {
 h2 > button {
 	float:right;
 	background-color:var(--darkred);
-	color:white;
+	color:#fff;
 	border-radius:2px;
 	border-style:none;
 	cursor:pointer;
@@ -179,20 +179,20 @@ figure > figcaption {
 	margin:auto;
 	display:block;
 	margin-bottom:1em;
-	background-color:rgba(0,0,0,0);
+	background-color:transparent;
 	background-image:var(--centergray);
 }
 
 /*css for examples*/
 
 .examples > figure > figcaption {
-	background-color: rgba(0,0,0,0);
-	background-image:linear-gradient(rgba(0,0,0,0));
+	background-color: transparent;
+	background-image:linear-gradient(transparent);
 }
 
 .examples {
 	display:block;
-	background-color:WhiteSmoke;
+	background-color:#eee;
 	padding:6px;
 	margin: 0.75em 0px 0.75em 0px
 }
@@ -208,7 +208,7 @@ figure > figcaption {
 .examples > mark {
 	float:right;
 	display:block;
-	background-color:rgba(0,0,0,0);
+	background-color:transparent;
 	width:2.4em;
 	height:1.1em;
 }
@@ -250,7 +250,7 @@ mark[calc]::before {
 .terms > mark {
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-weight:bold;
-	background-color: rgba(0,0,0,0);
+	background-color: transparent;
 	color:var(--darkred);
 }
 
@@ -260,7 +260,7 @@ mark[calc]::before {
 	display:block;
 	text-align:left;
 	color:var(--darkred);
-	background-color: white;
+	background-color: #fff;
 	background-image: var(--redtowhite)
 }
 

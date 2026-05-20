@@ -13,6 +13,21 @@
 <header>
 <a href="index.html">< Return</a>
 </header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>The dot product gives a scalar</p>
+		<p>It is the same as multiplying the magnitude of a vector projected along the magnitude of another vector</p>
+		<p>It is commutative</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>A</mi><mi>B</mi><mi>cos</mi><mi>(&phi;)</mi></math>
+		<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><msub><mi>B</mi><mi>y</mi></msub></math><br>
+		</section>
+	</article>
+</aside>
 <main>
 <p>So far, we have only dealt with adding and subtracting vectors. This process has worked well for us so far, however to deal with work and energy we'll need to introduce a new operation, called the dot product.</p>
 <article class="terms">
@@ -58,7 +73,7 @@ The angle between the two vectors is 60&deg;, and the magnitudes of the two vect
 <h2>Exercise 2</h2>
 <p>There are two vectors, being <math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(2.0î + 3.0ĵ)</mi></math> and <math><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>(−4.0î + 3.0ĵ)</mi></math>. What is their dot product?</p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
-<section class="solution" id="sol4">
+<section class="solution">
 <p>We will use the above definition to get the dot product, instead of finding the angle between them.</p>
 <article class="equations">
 	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mo>+</mo><msub><mi>A</mi><mi>y</mi></msub><msub><mi>B</mi><mi>y</mi></msub></math><br>
@@ -104,6 +119,19 @@ can you say about their directions? </p>
 <p>Seeing as the two vectors can't have zero length, that means the cosine term must bring the value to zero. The value of cosine such that it is zero is when &phi; is 90&deg;. In other words, the two vectors are perpendicular.</p>
 </section>
 </section>
+<p>One thing to note about the dot product is that it is commutative. In other words, like addition, the following holds true:</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover></math><br>
+</article>
+<p>Here is a short proof of this fact. We first write out the two dot products for the vectors.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mover accent="true"><mrow><mi>B</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>A</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>A</mi><mi>B</mi><mi>cos</mi><mi>(&phi;)</mi><mo>=</mo><mi>B</mi><mi>A</mi><mi>cos</mi><mi>(&phi;)</mi></math><br>
+</article>
+<p>Noting that multiplication is commutative, that is, <math><mi>A</mi><mi>B</mi><mo>=</mo><mi>B</mi><mi>A</mi></math>, we can rewrite the right side of the equation to be the left. Thus, we have shown it is commutative.</p>
+<article class="equations">
+	<math><mi>A</mi><mi>B</mi><mi>cos</mi><mi>(&phi;)</mi><mo>=</mo><mi>A</mi><mi>B</mi><mi>cos</mi><mi>(&phi;)</mi></math><br>
+</article>
 </main>
 <footer>
 <a href="work.html">Work ></a>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - workvar</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Work by Various Forces</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>The net work of an object can be zero, but the work of the individual forces can be nonzero</p>
+		<p>Weight does negative work when moving an object upwards, and positive work when moving an object downwards</p>
+		<p>The normal force and static friction do no work unless if the surface is moving in a certain direction in a certain reference frame</p>
+		<p>Kinetic friction points opposite the direction of motion, so it is often negative</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><msub><mn>W</mn><mi>1</mi></msub><mo>+</mo><msub><mn>W</mn><mi>2</mi></msub><mo>+</mo><mo>&hellip;</mo></math><br>
+		<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><msub><mi>F</mi><mi>net</mi></msub><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+		</section>
+	</article>
+</aside>
+<main>
+<p>In our brief introduction to work, we only dealt with one force at a time. As we saw before, multiple forces can act on an object. Each of these forces could exert work on the object as well. Thus, we need a new quantity to show the total work done by these forces.</p>
+<article class="terms">
+	<mark>Net Work (<math><msub><mn>W</mn><mi>net</mi></msub></math>)</mark> - the work done by a net force
+</article>
+<p>We define, like we did for the net force, that the net work is the work done by each of the forces acting on an object. If we write out the work for each of these forces like before, we hav the following relation.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><msub><mn>W</mn><mi>1</mi></msub><mo>+</mo><msub><mn>W</mn><mi>2</mi></msub><mo>+</mo><mo>&hellip;</mo></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><msub><mi>F</mi><mi>1</mi></msub><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><msub><mi>F</mi><mi>2</mi></msub><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mo>&hellip;</mo></math><br>
+</article>
+<p>If we factor out <math><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math>, we see that the other portion is the net force.</p>
+<article class="equations">	
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mo>(</mo><msub><mi>F</mi><mi>1</mi></msub><mo>+</mo><msub><mi>F</mi><mi>2</mi></msub><mo>+</mo><mo>&hellip;</mo><mo>)</mo><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><msub><mi>F</mi><mi>net</mi></msub><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+</article>
+<p>One common misconception is that if there is no net work, there is no work being exerted on the object. This is analogous to saying that since there is no net force, there are no forces acting on the object. In reality, the forces acting on the object each individually could exert work, but overall they may cancel out.</p>
+<figure><img src="images/workvar1.svg" alt="">
+<figcaption>Forces in pushing a box; net force is zero.</figcaption></figure>
+<p>For example, imagine pushing a box with a constant velocity. You exert a force to push the box, and kinetic friction opposes this motion. The net force is zero since it is moving at constant velocity, and thus no net work occurs. However, you still do work.</p>
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q11.8) You slowly lift a bowling ball, moving it at constant velocity, from the floor and put it on a
+table. Two forces act on the ball: its weight and your upward force. These two
+forces add to zero so that it would seem that no work is done.
+On the other hand, you know that you have done some work.
+What is wrong?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>If you examine the net force, it is indeed zero; thus, no net work is done. However, individually, your force moving up does work, and the weight of the object does work as well; albeit the weight does negative work, since it is opposite the direction of displacement.</p>
+</section>
+</section>
+<p>Now, we will slowly introduce the common forces we have discussed. Since we have dealt with them before in our study of dynamics, we won't waste any time with simpler problems.</p>
+<p>The above question shows one force, being the weight. We noted that weight points towards the Earth, or in our problems, will point downwards. Thus, anytime we move anything upwards, we exert work against gravity.</p>
+<figure><img src="images/workvar2.svg" alt="">
+<figcaption>The weight points downward.</figcaption></figure>
+<p>Likewise, the force of weight does negative work when an object is displaced upwards.</p>
+
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(HRK E11.3b) To push a 25-kg crate up a 27° incline, a worker exerts a force
+of 120 N, parallel to the incline. As the crate slides 3.6 m,
+how much work is done on the crate by the
+force of gravity?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The box is pushed upwards, opposite the direction of gravity. Thus, gravity does negative work on the object.</p>
+<p>We can either resolve the 3.6m to be parallel to the weight or resolve the weight to be parallel to the incline. We choose the latter. Thus, the cosine term drops out.</p>
+<article class="equations">	
+	<math><mn>W</mn><mo>=</mo><mo>(</mo><mo>&minus;</mo><msub><mi>w</mi><mi>&parallel;</mi></msub><mo>)</mo><mi>d</mi><mi>cos</mi><mi>(0&deg;)</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi><mi>d</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>d</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+</article>
+<p>Note that the cosine term automatically aligns the weight to be along the direction of displacement (or vice versa). Plugging in, we have the following.</p>
+<article class="equations">	
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>(25kg)</mi><mi>(9.8m/s&sup2;)</mi><mi>(3.6m)</mi><mi>sin</mi><mi>(27&deg;)</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>&minus;</mi><mi>4.0</mi><mo>&times;</mo><msup><mi>10</mi><mi>2</mi></msup><mn>J</mn></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples"><mark variable></mark>
+<h2>Problem 1a</h2>
+<p>(HRK P11.2a) A cord is used to lower vertically a block of mass <math><mi>M</mi></math> a distance <math><mi>d</mi></math> at a constant downward acceleration of <math><mi>g/4</mi></math>. Find
+the work done by the cord on the block.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The net force on the object is given by its weight and the tension. We know its acceleration, which we set as negative, going down, so we can get its net force by the Law of Acceleration.</p>
+<article class="equations">	
+	<math><msub><mi>F</mi><mi>net</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>M</mi><mi>g</mi></mrow><mi>4</mi></mfrac><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>M</mi><mi>g</mi></math><br>
+	<math><mi>M</mi><mi>g</mi><mo>&minus;</mo><mfrac><mrow><mi>M</mi><mi>g</mi></mrow><mi>4</mi></mfrac><mo>=</mo><mi>T</mi></math><br>
+	<math><mfrac><mrow><mi>3</mi><mi>M</mi><mi>g</mi></mrow><mi>4</mi></mfrac><mo>=</mo><mi>T</mi></math><br>
+</article>
+<p>This tension is already pointing in the direction of motion. However, it does negative work since it is going down and it is pointing up. The cosine term here drops out.</p>
+<article class="equations">	
+	<math><mn>W</mn><mo>=</mo><mo>(</mo><mo>&minus;</mo><mi>T</mi><mo>)</mo><mi>d</mi><mi>cos</mi><mi>(0&deg;)</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mfrac><mrow><mi>3</mi><mi>M</mi><mi>g</mi><mi>d</mi></mrow><mi>4</mi></mfrac></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples"><mark variable></mark>
+<h2>Problem 1b</h2>
+<p>(HRK P11.2b) Find the work done by force of gravity on the block.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>This one is much simpler. We know the force of gravity, and we know it is positive pointing in the direction of displacement. Thus, the cosine term drops out.</p>
+<article class="equations">	
+	<math><mn>W</mn><mo>=</mo><mi>w</mi><mi>d</mi><mi>cos</mi><mi>(0&deg;)</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>M</mi><mi>g</mi><mi>d</mi></math><br>
+</article>
+</section>
+</section>
+
+<p>Of course, if we zoom out, the force of weight doesn't inherently pull things straight down, but towards each other. This fact is because of the inherent nature of gravity, that we will discuss in a later topic.</p>
+
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q11.8) Suppose that the Earth revolves around the Sun in a perfectly
+circular orbit. Does the Sun do any work on the Earth?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The force that the sun exerts on the Earth is gravity, and that force is a centripetal force. The centripetal force is, as we discussed, perpendicular to the velocity of the object; thus, when the object moves a displacement, it does no work.</p>
+</section>
+</section>
+
+<p>Following our discussion previously, weight pushes objects into other objects, which causes the normal force. The normal force, as discussed, points perpendicular to the surface. </p>
+<p>In the case where the object is displaced parallel to the surface, the angle between the normal force and the displacement is 90&deg;, and thus no work is done by the normal force.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(90&deg;)</mi><mo>=</mo><mi>0</mi></math>
+</article>
+<p>Hypothetically, if there was a vertical displacement, it could either be going up or down relative to the surface. If it went up, that means it is no longer in contact with the surface, and thus there is no normal force to do work.</p>
+<p>On the other hand, if it went down, it would imply the box went into the surface. That is unphysical, so we disregard that case.</p>
+<figure><img src="images/workvar4.svg" alt="">
+<figcaption>No work is done; the first has no displacement, the second has no force. The third is unphysical.</figcaption></figure>
+
+<section hard class="examples"><mark custom></mark>
+<h2>Question 2</h2>
+<p>Following the above proposition, does this mean the normal force can never do work? If it can do work, how, and in what conditions?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>To make the normal force do work, one should put it on a moving surface. For example, in an elevator, the object can go up a vertical displacement and since the normal force will point in the direction of the displacement, it does work.</p>
+<p>Another choice is to be in a moving reference frame. If you are in an elevator and see a block on a rigid surface, it can appear such that the block is moving a vertical displacement; thus, the normal force appears to do work here.</p>
+</section>
+</section>
+
+<section hard class="examples"><mark custom></mark>
+<h2>Problem 2a</h2>
+<p>The figure below shows a 2.00kg box kept at rest by static friction on an incline of 30.0&deg;. It is placed in an elevator which moves the object up 5.00m at constant velocity. How much work has the normal force done?</p>
+<figure><img src="images/workvar3.svg" alt="">
+<figcaption>Problem 2.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Here, the normal force does work as the displacement is vertical. We first need the magnitude of the force, which is equal to the perpendicular component of the weight, given that no net force in that direction.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&perp;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>N</mi></math><br>
+</article>
+<p>Now, we want to project this to be in the direction of the displacement. To convert it to the vertical component, we multiply it by cosine. We substitute it into our formula.</p>
+<article class="equations">	
+	<math><mn>W</mn><mo>=</mo><msub><mi>N</mi><mi>y</mi></msub><mi>d</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>N</mi><mi>cos</mi><mi>(&theta;)</mi><mi>d</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>m</mi><mi>g</mi><msup><mi>cos</mi><mi>2</mi></msup><mi>(&theta;)</mi><mi>d</mi></math><br>
+</article>
+<p>Now, lets substitute in our values.</p>
+<article class="equations">	
+	<math><mn>W</mn><mo>=</mo><mi>(2.00kg)</mi><mi>(9.8m/s&sup2;)</mi><msup><mi>cos</mi><mi>2</mi></msup><mi>(30&deg;)</mi><mi>(5.00m)</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>73.5J</mi></math><br>
+</article>
+</section>
+</section>
+
+<p>Now, the surface exerts a force onto the object, and this causes friction. Recall that when we studied friction, there were two kinds, being static and kinetic friction.</p>
+<p>Since static friction only occurs between two objects relatively at rest to one another, it can't do any work on a stationary surface, like the normal force. On a moving surface, however, it can do work.</p>
+
+<section class="examples"><mark custom></mark>
+<h2>Problem 2b</h2>
+<p>How much work has been done by static friction in the problem above?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Since the block is kept at rest by static friction, it must equal the parallel component of the weight to have no net force in the parallel component.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>s</mi></msub></math><br>
+	<math><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><msub><mi>f</mi><mi>s</mi></msub></math><br>
+</article>
+<p>Now, we once again have to align this to the direction of displacement. To get the vertical component of the static friction, we use sine.</p>
+<article class="equations">	
+	<math><mn>W</mn><mo>=</mo><msub><mi>f</mi><mi>sy</mi></msub><mi>d</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><msub><mi>f</mi><mi>s</mi></msub><mi>sin</mi><mi>(&theta;)</mi><mi>d</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>m</mi><mi>g</mi><msup><mi>sin</mi><mi>2</mi></msup><mi>(&theta;)</mi><mi>d</mi></math><br>
+</article>
+<p>Now, lets substitute in our values.</p>
+<article class="equations">	
+	<math><mn>W</mn><mo>=</mo><mi>(2.00kg)</mi><mi>(9.8m/s&sup2;)</mi><msup><mi>sin</mi><mi>2</mi></msup><mi>(30&deg;)</mi><mi>(5.00m)</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>24.5J</mi></math><br>
+</article>
+</section>
+</section>
+<p>We now deal with kinetic friction. Because it opposes the direction of relative motion, it will almost always do negative work. For example, in the figure below, the relative motion of the object is move downwards relative to the slope; thus, kinetic friction attempts to push it upwards, opposite the direction of displacement.</p>
+<figure><img src="images/workvar5.svg" alt="">
+<figcaption>Kinetic friction opposes the direction of relative motion; thus, it almost always does negative work.</figcaption></figure>
+
+<section class="examples">
+<h2>Exercise 3a</h2>
+<p>(LSM P7.29a) A shopper pushes a grocery cart 20.0 m at
+constant speed on level ground, against a 35.0 N
+frictional force. He pushes in a direction 25.0&deg;
+below the horizontal. What is the work done
+on the cart by friction?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>In the horizontal direction, there is no net force; the cart is at constant speed. Thus, the force of kinetic friction must equal the horizontal component of the shopper.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>x</mi></msub></math><br>
+	<math><msub><mi>f</mi><mi>k</mi></msub><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+</article>
+<p>Now, the kinetic friction does negative work since it points opposite to where the cart is going. It also is in the same axis as the displacement, so the cosine term drops out.</p>
+<article class="equations">	
+	<math><mn>W</mn><mo>=</mo><mo>(</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mo>)</mo><mi>d</mi><mi>cos</mi><mi>(0&deg;)</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mi>d</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>(35.0N)</mi><mi>cos</mi><mi>(25.0&deg;)</mi><mi>(20.0m)</mi><mo>&approx;</mo><mi>634J</mi></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples">
+<h2>Exercise 3b</h2>
+<p>(LSM P7.29e) What is the total work done
+on the cart?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Since the cart is moving at constant velocity, no work is being done since there is no force.</p>
+<p>If you want to see another reason why, we will use the definition of net work. Given that the displacement is purely horizontal, forces like gravity or the normal don't do any work.</p>
+<p>Thus, the only two forces doing work are the friction and the force applied by the shopper.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><msub><mn>W</mn><mi>1</mi></msub><mo>+</mo><msub><mn>W</mn><mi>2</mi></msub></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>d</mi><mi>cos</mi><mi>(0&deg;)</mi></math><br>
+</article>
+<p>However, in the above, we have found a value for the kinetic friction. Subtituting it here, we have the following.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mi>d</mi></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>0</mi></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples">
+<h2>Exercise 4</h2>
+<p>(HRK E11.5a) A 52.3-kg trunk is pushed 5.95 m at constant speed up a
+28.0° incline by a constant horizontal force. The coefficient of
+kinetic friction between the trunk and the incline is 0.19. Calculate the work done by the applied force.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Since the object moves at constant velocity up the incline, it means that the parallel component of the weight and kinetic friction balances out the parallel component of the horizontal force.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>f</mi></mrow><mo>&#x2192</mo></mover><mi>k</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub><mo>=</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
+	<math><msub><mi>&mu;</mi><mi>k</mi></msub><mi>N</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+</article>
+<p>Now, we need the normal force, which is equal to the perpendicular weight and the perpendicular component of the horizontal force.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&perp;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub></math><br>
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub><mo>+</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&perp;</mi></msub><mo>=</mo><mover accent="true"><mrow><mi>N</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mi>N</mi></math><br>
+</article>
+<p>We substitute this for the normal force above.</p>
+<article class="equations">
+	<math><msub><mi>&mu;</mi><mi>k</mi></msub><mo>(</mo><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>)</mo><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><msub><mi>&mu;</mi><mi>k</mi></msub><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>+</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>F</mi><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>F</mi><mo>(</mo><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>sin</mi><mi>(&theta;)</mi><mo>)</mo><mo>=</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>F</mi><mo>=</mo><mfrac><mrow><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+</article>
+<p>Now we will do a little trick, multiplying both sides by cosine to get the parallel component of the force, which goes in the same direction as the displacement.</p>
+<article class="equations">
+	<math><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mo>=</mo><mfrac><mrow><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><msub><mi>F</mi><mi>&parallel;</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><msup><mi>cos</mi><mi>2</mi></msup><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mi>cos</mi><mi>(&theta;)</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+</article>
+<p>Lastly, let's just multiply both sides by the displacement to get the work. Then, we substitute in everything. The resulting equation is so large that it escapes the bounds of the box, so we just leave the answer instead.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>&parallel;</mi></msub><mi>d</mi><mo>=</mo><mfrac><mrow><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><msup><mi>cos</mi><mi>2</mi></msup><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mi>cos</mi><mi>(&theta;)</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac><mi>d</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mrow><msub><mi>&mu;</mi><mi>k</mi></msub><mi>m</mi><mi>g</mi><mi>d</mi><msup><mi>cos</mi><mi>2</mi></msup><mi>(&theta;)</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>d</mi><mi>sin</mi><mi>(&theta;)</mi><mi>cos</mi><mi>(&theta;)</mi></mrow><mrow><mi>cos</mi><mi>(&theta;)</mi><mo>&minus;</mo><msub><mi>&mu;</mi><mi>k</mi></msub><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>2160J</mi></math><br>
+</article>
+</section>
+</section>
+
+<p>Of the four forces we have discussed, being weight, the normal force, friction, and tension, they all mostly don't depend on position. The only one that (slightly) depends on position is weight, but in our current problems, we can let it not depend on position.</p>
+<p>In the next tutorial, we will see how to deal with forces that change based on position.</p>
+
+</main>
+<footer>
+<a href="force-position-graphs.html">Force-Position Graphs ></a>
+</footer>
+</body>
+</html>

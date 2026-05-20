@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - forcepos</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Force-Position Graphs</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>A force-position graph graphs the component of the force along a certain displacement</p>
+		<p>Work is the area under the force-position graph</p>
+		</section>
+	</article>
+</aside>
+<main>
+<p>We've learned a new force that varies based on the position of the object; in other words, we can't use our equation for the work since the displacement changes. Thus, we need to find a new way to analyze work.</p>
+<p>When something changes based on something else, it is often helpful to use a graph, just like how we dealt with variable force over time with impulse. This time, a force-position graph. To drive the point home, the graph below is the same as the one we used before, just with renamed axes.</p>
+<figure><img src="images/forcepos1.svg" alt="">
+<figcaption>Force over a displacement.</figcaption></figure>
+<p>A force-position graph shows the strength of a force over the displacement wherein the force is applied. One thing to note is that in a force-position graph, the force here is the component of the force in the direction of displacement; in other words, the cosine term in work drops out.</p>
+<article class="equations">
+		<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(0&deg;)</mi></math><br>
+		<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi></math>
+</article>
+<p>If, say, the force were constant, the force-position graph would look like the following.</p>
+<figure><img src="images/forcepos2.svg" alt="">
+<figcaption>A constant force over a displacement.</figcaption></figure>
+<p>We can see that, just like impulse, which was the area under the force-time graph, work is analogous such that it is the area under the force-position graph.</p>
+
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(HRK E11.21) A 10-kg object moves along the x axis. Its acceleration as a
+function of its position is shown below. What is the net
+work performed on the object as it is displaced 8.0m?</p>
+<figure><img src="images/forcepos3.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>This is, quite obviously, not a force-time graph. However, we can easily make it one by just using the Law of Acceleration. Thus, we get the total area under the graph, which is a triangle.</p>
+<article class="equations">
+	<math><mi>Area</mi><mo>=</mo><mfrac><mi>F</mi><mi>m</mi></mfrac><mo>=</mo><mi>a</mi><mo>=</mo><mfrac><mrow><mi>b</mi><mi>h</mi></mrow><mi>2</mi></mfrac></math><br>
+</article>
+<p>Then, we multiply it by the mass to get the force. When we do that, the area now becomes the work.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>m</mi><mi>a</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mrow><mi>m</mi><mi>b</mi><mi>h</mi></mrow><mi>2</mi></mfrac></math><br>
+</article>
+<p>We now plug in everything we know.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mfrac><mrow><mi>(10kg)</mi><mi>(8.0m)</mi><mi>(20.0m/s&sup2;)</mi></mrow><mi>2</mi></mfrac><mo>=</mo><mi>800J</mi></math><br>
+</article>
+</section>
+</section>
+
+<p>Note that since force is a vector, it can be negative; this occurs because the force faces the opposite direction of the displacement.</p>
+
+<section class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E11.22) A 5.0-kg block moves in a straight line on a horizontal frictionless surface under the influence of a force that varies with
+position as shown below. How much work is done by
+the force as the block is displaced 8.0m?</p>
+<figure><img src="images/forcepos4.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Be careful here; the graph contains both positive and negative force. Thus, we only get the area bounded above and below the 0N line.</p>
+<p>The positive force is a trapezoid with base lengths two and four with height of 10. The negative force is a triangle with base 4 and height 5.</p>
+<article class="equations">
+	<math><mi>Area</mi><mo>=</mo><mn>W</mn><mo>=</mo><mfrac><mrow><mi>(2m)</mi><mo>+</mo><mi>(4m)</mi></mrow><mi>2</mi></mfrac><mi>(10N)</mi><mo>&minus;</mo><mfrac><mrow><mi>(4m)</mi><mi>(5N)</mi></mrow><mi>2</mi></mfrac></math><br>
+	<math><mi>Area</mi><mo>=</mo><mn>W</mn><mo>=</mo><mi>20J</mi></math><br>
+</article>
+</section>
+</section>
+</main>
+<footer>
+<a href="the-integral-for-work.html">The Integral for Work ></a>
+</footer>
+</body>
+</html>

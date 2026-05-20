@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>kinematics - trajectory</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1>The Trajectory</h1>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+	<section>
+	<h2>Summary</h2>
+	<p>In projectile motion, the horizontal component moves at constant velocity while the vertical component is in freefall</p>
+	<p>Use trigonometry to get the initial horizontal and vertical component based on the angle and magnitude of initial velocity</p>
+	</section>
+	<section>
+	<h2>Equations</h2>
+	<math><mi>&Delta;</mi><mi>y</mi><mo>=</mo><mi>tan</mi><mi>(&theta;)</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mn>2</mn></msup><mi>(&theta;)</mi></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+	</section>
+	</article>
+</aside>
+<main>
+<p>In our study of projectile motion, we get the vertical position of the object in motion as a function of time. While this is very useful, sometimes it is easier to get the vertical position based on where the object is.</p>
+<p>Simply, we want the vertical position as a function of the horizontal position of the object. In this way, if we plot out the position of the object, we trace out its trajectory.</p>
+<article class="terms">
+	<mark>Trajectory</mark> - a graph or visual representation of where the object is at any given time
+</article>
+<p>Here is how we will get the vertical position of the object as a function of the horizontal position. First, we set our coordinate system such that going up is positive, so gravitational acceleration is negative.</p>
+<article class="equations">
+	<math><mi>y</mi><mo>=</mo><mi>h</mi><mo>+</mo><msub><mi>v</mi><mi>0y</mi></msub><mi>t</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></math>	
+</article>
+<p>Now, we want to replace all of the <math><mi>t</mi></math> with something else. Thankfully, we noted that the horizontal velocity is constant throughout projectile motion, so we can solve for that.</p>
+<article class="equations">
+	<math><mi>x</mi><mo>=</mo><msub><mi>v</mi><mi>0x</mi></msub><mi>t</mi></math><br>
+	<math><mfrac><mi>x</mi><msub><mi>v</mi><mi>0x</mi></msub></mfrac><mo>=</mo><mi>t</mi></math>	
+</article>
+<p>We now substitute this all into the above.</p>
+<article class="equations">
+	<math><mi>y</mi><mo>=</mo><mi>h</mi><mo>+</mo><msub><mi>v</mi><mi>0y</mi></msub><mo>(</mo><mfrac><mi>x</mi><msub><mi>v</mi><mi>0x</mi></msub></mfrac><mo>)</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mo>(</mo><mfrac><mi>x</mi><msub><mi>v</mi><mi>0x</mi></msub></mfrac><mo>)</mo><mi>&sup2;</mi></math><br>
+	<math><mi>y</mi><mo>=</mo><mi>h</mi><mo>+</mo><mfrac><msub><mi>v</mi><mi>0y</mi></msub><msub><mi>v</mi><mi>0x</mi></msub></mfrac><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0x</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+</article>
+<p>This now gives the vertical position as a function of the horizontal position. We can see here that it is quadratic in nature; thus, it forms a parabolic arc. This aligns with what we knew previously; the vertical position of objects in free fall follow a parabolic arc.</p>
+<p>Now, we will simplify a little. Using trigonometry, we can break the initial velocity into its horizontal and vertical components, like so.</p>
+<article class="equations">
+	<math><mi>y</mi><mo>=</mo><mi>h</mi><mo>+</mo><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(&theta;)</mi></mrow><mrow><msub><mi>v</mi><mi>0</mi></msub><mi>cos</mi><mi>(&theta;)</mi></mrow></mfrac><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mn>2</mn></msup><mi>(&theta;)</mi></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+	<math><mi>y</mi><mo>=</mo><mi>h</mi><mo>+</mo><mi>tan</mi><mi>(&theta;)</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mn>2</mn></msup><mi>(&theta;)</mi></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+</article>
+<section class="examples"><mark custom></mark>
+<h2>Exercise 1a</h2>
+<p>A remote-controlled explosive is shot out a cannon at 50.0m/s at a 60.0&deg; angle relative to the horizontal. After it has travelled 10.0m horizontally, it explodes. What is the vertical displacement of the explosive at the time of explosion?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will first simplify the equation for the trajectory before substituting.</p>
+<article class="equations">
+	<math><mi>y</mi><mo>=</mo><mi>tan</mi><mi>(60.0&deg;)</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mn>2</mn></msup><mi>(60.0&deg;)</mi></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+	<math><mi>y</mi><mo>=</mo><mi>x</mi><msqrt><mi>3</mi></msqrt><mo>&minus;</mo><mfrac><mrow><mi>3</mi><mi>g</mi></mrow><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+</article>
+<p>Now, we just subtitute in.</p>
+<article class="equations">
+	<math><mi>y</mi><mo>=</mo><mi>(10.0m)</mi><msqrt><mi>3</mi></msqrt><mo>&minus;</mo><mfrac><mrow><mi>3</mi><mi>(9.8m/s&sup2;)</mi></mrow><mrow><mi>2</mi><msup><mi>(60.0m)</mi><mi>2</mi></msup></mrow></mfrac><msup><mi>(10.0m)</mi><mi>2</mi></msup></math><br>
+	<math><mi>y</mi><mo>&approx;</mo><mi>16.9m</mi></math><br>
+</article>
+</section>
+</section>
+<section class="examples"><mark custom></mark>
+<h2>Exercise 1b</h2>
+<p>What is the total displacement of the projectile at the time of explosion? That is, from the original position, how far is the position at explosion?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We just use the pythagorean theorem to get the displacement.</p>
+<article class="equations">
+	<math><mi>d</mi><mo>=</mo><msqrt><mrow><mi>(10.0m)&sup2;</mi><mo>+</mo><mi>(16.91m)&sup2;</mi></mrow></msqrt></math><br>
+	<math><mi>d</mi><mo>&approx;</mo><mi>19.6m</mi></math><br>
+</article>
+</section>
+</section>
+
+<p>Unlike our other equations that we derived, this one is applicable for any situations, even on non-level ground.</p>
+<p>Of course, you need to use an appropriate coordinate system to do such problems. It is often helpful to set the original position at the origin.</p>
+
+<section hard class="examples"><mark custom></mark>
+<h2>Exercise 2</h2>
+<p>A projectile is thrown at a 45&deg; angle relative to the horizontal at a speed of 20.0m/s. It is thrown at the very edge of a 45&deg; slope, slanting downward, as shown in the figure.</p>
+<figure><img src="images/traj1.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<p>Assume that the slope is long enough such that the projectile lands on the slope. How far is it horizontally from the initial position?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>To make it simple, we have the initial position be at the origin. We first model the slope. Because it is at a 45&deg; angle, it means that its slope is one, pointing downwards.</p>
+<article class="equations">
+	<math><mi>y</mi><mo>=</mo><mi>tan</mi><mi>(&minus;45&deg;)</mi><mi>x</mi></math><br>
+	<math><mi>y</mi><mo>=</mo><mo>&minus;</mo><mi>x</mi></math>
+</article>
+<p>Now, for the projectile, we will first simplify its equation.</p>
+<article class="equations">
+	<math><mi>y</mi><mo>=</mo><mi>tan</mi><mi>(45.0&deg;)</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mn>2</mn></msup><mi>(45.0&deg;)</mi></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+	<math><mi>y</mi><mo>=</mo><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+</article>
+<p>Now, the point where they will intersect is where the ball lands. Thus, we solve for that.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mi>x</mi><mo>=</mo><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>2</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>x</mi><mo>(</mo><mi>2</mi><mo>&minus;</mo><mfrac><mi>g</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mfrac><mi>x</mi><mo>)</mo></math><br>
+</article>
+<p>We disregard the first solution since that's just the initial position.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mi>2</mi><mo>&minus;</mo><mfrac><mi>g</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mfrac><mi>x</mi></math><br>
+	<math><mfrac><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow><mi>g</mi></mfrac><mo>=</mo><mi>x</mi></math><br>
+	<math><mfrac><mrow><mi>2</mi><msup><mi>(20.0m/s)</mi><mi>2</mi></msup></mrow><mi>(9.8m/s&sup2;)</mi></mfrac><mo>&approx;</mo><mi>81.633m</mi><mo>=</mo><mi>x</mi></math><br>
+</article>
+</section>
+</section>
+
+<p>We can even use this equation to prove the optimal angle for the longest range, both on a flat surface and a non-level surface.</p>
+
+<section hard class="examples"><mark custom></mark>
+<h2>Problem 1</h2>
+<p>Show that, for an object at a given initial height <math><mi>h</mi></math>, the optimal angle is given by the following equation. You do not need to use calculus for this question.</p>
+<article class="equations">
+	<math><mi>&theta;</mi><mo>=</mo><msup><mi>tan</mi><mi>&minus;1</mi></msup><mo>(</mo><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><msqrt><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></mrow></mfrac><mo>)</mo></math><br>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We can write the displacement of the object at a given time as follows.</p>
+<article class="equations">
+	<math><mi>y</mi><mo>=</mo><mi>h</mi><mo>+</mo><mi>tan</mi><mi>(&theta;)</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mn>2</mn></msup><mi>(&theta;)</mi></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>h</mi><mo>+</mo><mi>tan</mi><mi>(&theta;)</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mn>2</mn></msup><mi>(&theta;)</mi></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+</article>
+<p>Now, we could solve for <math><mi>x</mi></math> here in terms of <math><mi>&theta;</mi></math>, then differentiate with respect to <math><mi>&theta;</mi></math>. However, frankly, that is near impossible to do. Instead, we will do a little trick.</p>
+<p>First, we note this identity.</p>
+<article class="equations">
+	<math><msup><mi>cos</mi><mn>2</mn></msup><mi>(&theta;)</mi><mo>=</mo><mfrac><mi>1</mi><mrow><mi>1</mi><mo>+</mo><msup><mi>tan</mi><mn>2</mn></msup><mi>(&theta;)</mi></mrow></mfrac></math>
+</article>
+<p>Plugging that in gives us this equation.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mi>h</mi><mo>+</mo><mi>tan</mi><mi>(&theta;)</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><mi>(</mi><mi>1</mi><mo>+</mo><msup><mi>tan</mi><mn>2</mn></msup><mi>(&theta;)</mi><mi>)</mi><msup><mi>x</mi><mi>2</mi></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>h</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup><mo>+</mo><mi>tan</mi><mi>(&theta;)</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>tan</mi><mn>2</mn></msup><mi>(&theta;)</mi><msup><mi>x</mi><mi>2</mi></msup></math><br>
+</article>
+<p>This is now a quadratic in terms of <math><mi>tan</mi><mi>(&theta;)</mi></math>. If we let <math><mi>u</mi><mo>=</mo><mi>tan</mi><mi>(&theta;)</mi></math>, we have the following.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mi>h</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup><mo>+</mo><mi>u</mi><mi>x</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>u</mi><mn>2</mn></msup><msup><mi>x</mi><mi>2</mi></msup></math><br>
+</article>
+<p>Now, we know that there is only one optimal angle; thus, this quadratic must have only one solution. We now use its discriminant to get that solution in terms of <math><mi>x</mi></math>.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><msup><mi>b</mi><mi>2</mi></msup><mo>&minus;</mo><mi>4</mi><mi>a</mi><mi>c</mi></math><br>
+	<math><mi>0</mi><mo>=</mo><msup><mi>x</mi><mi>2</mi></msup><mo>&minus;</mo><mi>4</mi><mo>(</mo><mi>h</mi><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup><mo>)</mo><mo>(</mo><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><msup><mi>x</mi><mi>2</mi></msup><mo>+</mo><mi>4</mi><mo>(</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><mi>h</mi><msup><mi>x</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><msup><mi>g</mi><mi>2</mi></msup><mrow><mi>4</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>4</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>4</mi></msup><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><msup><mi>x</mi><mi>2</mi></msup><mo>+</mo><mfrac><mrow><mi>2</mi><mi>g</mi><mi>h</mi></mrow><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><msup><mi>g</mi><mi>2</mi></msup><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>4</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>4</mi></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><msup><mi>x</mi><mi>2</mi></msup><mo>(</mo><mi>1</mi><mo>+</mo><mfrac><mrow><mi>2</mi><mi>g</mi><mi>h</mi></mrow><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><mo>)</mo><mo>&minus;</mo><mfrac><msup><mi>g</mi><mi>2</mi></msup><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>4</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>4</mi></msup></math><br>
+</article>
+<p>This is a quadratic equation for <math><msup><mi>x</mi><mi>2</mi></msup></math>. To simplify, we divide everything by <math><msup><mi>x</mi><mi>2</mi></msup></math>, noting that <math><mi>x</mi><mo>&NotEqual;</mo><mi>0</mi></math>.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mi>1</mi><mo>+</mo><mfrac><mrow><mi>2</mi><mi>g</mi><mi>h</mi></mrow><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><mo>&minus;</mo><mfrac><msup><mi>g</mi><mi>2</mi></msup><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>4</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup></math><br>
+	<math><mfrac><msup><mi>g</mi><mi>2</mi></msup><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>4</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac></math><br>
+	<math><msup><mi>x</mi><mi>2</mi></msup><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>4</mi></msup></mrow><msup><mi>g</mi><mi>2</mi></msup></mfrac><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac></math><br>
+</article>
+<p>Take the square root, disregarding the negative solution:</p>
+<article class="equations">
+	<math><mi>x</mi><mo>=</mo><msqrt><mrow><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>4</mi></msup></mrow><msup><mi>g</mi><mi>2</mi></msup></mfrac><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac></mrow></msqrt></math><br>
+	<math><mi>x</mi><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow><mi>g</mi></mfrac><msqrt><mrow><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac></mrow></msqrt></math><br>
+	<math><mi>x</mi><mo>=</mo><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub><msqrt><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></mrow><mrow><mi>g</mi></mrow></mfrac></math><br>
+</article>
+<p>This gives us the maximum range of the projectile. Now, we use this to get the angle. Noting that this is for when the discriminant is zero, the only real solution in the quadratic then is such that it is the vertex.</p>
+<article class="equations">
+	<math><mi>u</mi><mo>=</mo><mi>0</mi><mo>=</mo><mfrac><mrow><mi>&minus;</mi><mi>b</mi></mrow><mrow><mi>2</mi><mi>a</mi></mrow></mfrac></math><br>
+	<math><mi>u</mi><mo>=</mo><mfrac><mrow><mi>&minus;</mi><mi>x</mi></mrow><mrow><mi>2</mi><mo>(</mo><mo>&minus;</mo><mfrac><mi>g</mi><mrow><mi>2</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow></mfrac><msup><mi>x</mi><mi>2</mi></msup><mo>)</mo></mrow></mfrac></math><br>
+	<math><mi>u</mi><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow><mrow><mi>g</mi><mi>x</mi></mrow></mfrac></math><br>
+</article>
+<p>We substitute the value above.</p>
+<article class="equations">
+	<math><mi>u</mi><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow><mrow><mi>g</mi><mo>(</mo><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub><msqrt><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></mrow><mrow><mi>g</mi></mrow></mfrac><mo>)</mo></mrow></mfrac></math><br>
+	<math><mi>u</mi><mo>=</mo><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><msqrt><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></mrow></mfrac></math><br>
+</article>
+<p>Finally, we substitute back in <math><mi>u</mi><mo>=</mo><mi>tan</mi><mi>(&theta;)</mi></math>.</p>
+<article class="equations">
+	<math><mi>tan</mi><mi>(&theta;)</mi><mo>=</mo><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><msqrt><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></mrow></mfrac></math><br>
+	<math><mi>&theta;</mi><mo>=</mo><msup><mi>tan</mi><mi>&minus;1</mi></msup><mo>(</mo><mfrac><mrow><msub><mi>v</mi><mi>0</mi></msub></mrow><mrow><msqrt><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></mrow></mfrac><mo>)</mo></math><br>
+</article>
+</section>
+</section>
+
+</main>
+<footer style="color:#900">
+	&FilledSmallSquare;
+</footer>
+</body>
+</html>

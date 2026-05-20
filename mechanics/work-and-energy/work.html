@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - work</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Work</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>You need a force and a displacement for work to be exerted; displacement without a force or force without displacement has no work occuring</p>
+		<p>Work is only done in the direction of the force / direction of displacement</p>
+		<p>It is a dot product of force and displacement; thus, it is a scalar</p>
+		<p>No work can occur if the force and displacement is perpendicular to one another; negative work can occur if force points opposite the displacement</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+		</section>
+	</article>
+</aside>
+<main>
+<p>If you've ever pushed a box, you know that it is physically tiring. This is because you are doing work when you exert a force to push a box along a distance.</p>
+<article class="terms">
+	<mark>Work (<math><mn>W</mn></math>)</mark> - the transfer of energy
+</article>
+<p>Here, we define energy as the "the capacity to do work". Obviously, that gives a circular definition; however, we can still make a little sense out of it. In the example above, energy from you (probably from the food you eat) is transferred to the box, allowing it to move.</p>
+<p>Another example of a force doing work is when we use a pulley to move a box up. Here, the force of tension is doing work, moving the box up a distance.</p>
+<figure><img src="images/work1.svg" alt="">
+<figcaption>Work being done by a force. The box is moved up a distance using tension.</figcaption></figure>
+<p>Here, we put the pulley system onto a machine that pulls it up for us. Once the box is at the required height, we can turn the machine off. While the machine is on, it uses electricity. Once it is off, it doesn't use anymore electricity. Electricity, in the form of energy, is transferred to get the box moving up.</p>
+<p>We can conclude here that electricity usage is only needed for pulling the box a distance up. Once it is still, there is still tension in the rope, but it doesn't do anymore work; no electricity or energy usage is needed to keep it still.</p>
+<p>We write our working definition of work below. As noted, <i>work is done by a force if it displaces an object</i>. Here, we write displacement as <math><mi>d</mi></math>.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi></math>
+</article>
+<p>One consequence of defining work like this is that if the force does not cause a displacement, it doesn't do any work. This is quite counterintuitive, but it is a caveat that we must accept.</p>
+
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q11.2)  Explain why you become physically tired when you push
+against a wall, fail to move it, and therefore do no work on
+the wall.</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>While it is true that you do no work against the wall, your muscles still do work; they extend in order to push the box into the wall. This extension is a force that displaces your muscles, and thus does work. This is why you feel tired.</p>
+<p>Where does this energy for contracting / extending muscles come from? It comes from the food that you eat.</p>
+</section>
+</section>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 2</h2>
+<p>A friend is holding you and is walking at constant velocity. You tell your friend, who is clearly struggling, that they have done no work. Is your claim true? Why or why not?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>If your friend is moving at constant velocity, then they are not accelerating. Thus, they do not exert a force to move you. In this regard, since there is no force acting to move you, even if you were displaced, they have done no work to you.</p>
+<p>Note that your friend is struggling because of the answers said above; their muscles still do work in holding you and moving, so while their muscles do work, they don't do any work to move you.</p>
+</section>
+</section>
+
+<p>Analyzing the units of work, we note that it is force times displacement. Thus, it means it is <math><mi>[N]</mi><mi>[m]</mi></math>. Here, we have a special unit for work (unlike momentum) which is the joule, symbolized with J.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi></math><br>
+	<math><mi>[J]</mi><mo>=</mo><mi>[N]</mi><mi>[m]</mi></math><br>
+	<math><mi>[J]</mi><mo>=</mo><mi>[kg]</mi><mi>[m/s&sup2;]</mi><mi>[m]</mi></math>
+</article>
+
+<section class="examples"><mark custom></mark>
+<h2>Exercise 1</h2>
+<p>You push a box a horizontal distance of 5.00m on the ground at a strength of 25.0N, parallel to the ground. How much work did you do to the box?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We substitute directly into our formula.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>(25N)</mi><mi>(5.0m)</mi><mo>=</mo><mi>125J</mi></math>
+</article>
+</section>
+</section>
+
+<p>Let's analyze one more situation. Here, a machine is pulling a box again, but this time the tension is at an angle. Here, we assume the box stays on the ground throughout the whole motion.</p>
+<figure><img src="images/work2.svg" alt="">
+<figcaption>Work by a force at an angle. It is displaced a horizontal distance.</figcaption></figure>
+<p>In this scenario, the force is still doing work. However, it is quite inefficient. If you think about it, only the horizontal component of the tension is doing actual work. The vertical component doesn't do anything assuming the box stays flat on the ground.</p>
+<p>This second scenario shows us that a force only does work in the direction of displacement. The vertical component of tension does no work; no displacement happens in the vertical component.</p>
+<figure><img src="images/work3.svg" alt="">
+<figcaption>Only the horizontal component of the tension does work.</figcaption></figure>
+<p>More generally, we can write the above with this expression. Given the angle between displacement and the force &theta;, we can compute for the work done by a force as follows.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+</article>
+<p>This new term now allows us to deal with any force at any angle.</p>
+
+<section class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E11.1a) To push a 52-kg crate across a floor, a worker applies a force
+of 190 N, directed 22° below the horizontal. As the crate
+moves 3.3 m, how much work is done on the crate by the worker?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will directly substitute into our formula.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+	<math><mn>W</mn><mo>=</mo><mi>(190N)</mi><mi>(3.3m)</mi><mi>cos</mi><mi>(22&deg;)</mi><mo>&approx;</mo><mi>580J</mi></math>
+</article>
+
+</section>
+</section>
+
+<section class="examples">
+<h2>Exercise 3</h2>
+<p>(HRK E11.3a) To push a 25-kg crate up a 27° incline, a worker exerts a force
+of 120 N, parallel to the incline. As the crate slides 3.6 m,
+how much work is done on the crate by the worker?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Even if it is on an incline, we note that the displacement and the force lie on the same direction; thus, the angle between them is 0&deg;.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+	<math><mn>W</mn><mo>=</mo><mi>(120N)</mi><mi>(3.6m)</mi><mi>cos</mi><mi>(0&deg;)</mi><mo>&approx;</mo><mi>430J</mi></math>
+</article>
+</section>
+</section>
+
+<p>One thing to note with the above definition for work is that work can be negative.</p>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 4</h2>
+<p>What would it mean if a force does negative work? How could this be possible?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first write out the equation for work that we have created.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+</article>
+<p>If we note that force and displacement are positive, this means only the cosine term will bring it to be negative.</p>
+<p>We note that cosine is negative if it is between 90&deg; to 180&deg;. This means the force points opposite the displacement. This is possible if, for example, you attempt to keep a box up an inclined plane but it only ends up sliding backward.</p>
+</section>
+</section>
+<p>If we analyze the equation for work, you may notice that it is exactly the formula for the dot product between the force vector and displacement vector.</p>
+<article class="equations">
+	<math><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>d</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+</article>
+<p>This makes sense. We have defined it such that work is done by a force if it displaces an object in the direction of the force. Thus, it is as if we project the force vector onto the displacement vector (or vice versa, as we have shown before).</p>
+<figure><img src="images/work4.svg" alt="">
+<figcaption>Work is a dot product between force and its displacement.</figcaption></figure>
+<p>This also shows another fact, which is that a force perpendicular to the displacement does no work, since we know that the dot product between perpendicular vectors is 0.</p>
+<p>Further, if the angle between the two vectors is greater than 90&deg;, we see that the dot product is negative. This makes sense with what we predicted above.</p>
+</main>
+<footer>
+<a href="force-position-graphs.html">Force-Position Graphs ></a>
+</footer>
+</body>
+</html>
