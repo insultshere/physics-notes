@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>The Integral for Work</h1>
+<h1>An Integral for Work</h1>
 <header>
 <a href="index.html">< Return</a>
 </header>
@@ -18,26 +18,24 @@
 		<section>
 		<h2>Summary</h2>
 		<p>Work is the integral of force over a displacement with respect to position</p>
-		<p>The work done by gravity depends solely on the mass, gravity, and vertical displacement; thus, horizontal displacement has no effect</p>
 		</section>
 		<section>
 		<h2>Equations</h2>
 		<math><munderover><mo>&int;</mo><msub><mi>x</mi><mi>0</mi></msub><mi>x</mi></munderover><mi>F</mi><mi>d</mi><mi>x</mi><mo>=</mo><mn>W</mn></math>
-		<math><mi>m</mi><mi>g</mi><mi>&Delta;</mi><mi>y</mi><mo>=</mo><mn>W</mn></math>
 		</section>
 	</article>
 </aside>
 <main>
 <p>We will now generalize our findings in the last tutorial to deal with any function of force over a distance. We saw that work is the area under the force-position graph; thus, it corresponds to its definite integral.</p>
-<p>Here, we replace the <math><mi>d</mi></math> term and instead use a generic <math><mi>&Delta;</mi><mi>x</mi></math> term. This gives us this equation, that we noted a long time ago. Note that the use of <math><mi>x</mi></math> is arbitrary; we could've used <math><mi>y</mi></math> if need be.</p>
+<p>First, note that the displacement, which here we will write as &Delta;x is the same as the difference of the initial position and the final position, shown below.</p>
 <article class="equations">
-<math><mi>&#x0394</mi><mi>x</mi><mo>=</mo><mo>(</mo><msub><mi>x</mi><mi>f</mi></msub><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></math><br>
+<math><mi>&#x0394</mi><mi>t</mi><mo>=</mo><mo>(</mo><msub><mi>x</mi><mi>f</mi></msub><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></math><br>
 </article>
-<p>On the graph, this corresponds to the initial position to the final position.</p>
+<p>Graphically, this corresponds to the starting point of our integral and the ending point of our integral.</p>
 <figure><img src="images/integral1.svg" alt="">
-<figcaption>A force-position graph, and the initial and final position.</figcaption></figure>
-<p>Here, like we saw before, the graph of force over position can be negative; this is because, as we said, the component of the force in the direction of the displacement can be negative if the force points away from the displacement.</p>
-<p>Now, we can write out the integral given these bounds. Thus, the integral of the force from initial to final position with respect to position is equal to the work done by the force.</p>
+<figcaption>The bounds of the integral is from the initial to final position.</figcaption></figure>
+<p>Notice how here the force can be negative. This just means that force can sometimes be pointing opposite the direction of displacement.</p>
+<p>This also gives us the bounds for our integral. Thus, we get that work is the integral of force with respect to time from the initial to the final position.</p>
 <figure><img src="images/integral2.svg" alt="">
 <figcaption>The integral for work.</figcaption></figure>
 <p>Specifically, the integral gives us the sum of the signed area of the graph; negative force gives us negative area while positive force gives us positive area. This makes sense; if a force is negative, or points away from the displacement, it does negative work.</p>
@@ -60,7 +58,7 @@
 </section>
 </section>
 
-<p>This exercise gives us a unique type of force that we will not explicitly go too indepth into for now, since it is best to introduce it later. It has quite a peculiar force-position graph.</p>
+<p>This exercise gives us a unique type of force that we will analyze throughout this topic. We will give it a nickname, calling it the "spring force". Of course, here, we won't deal too much with its dynamics, but just how it plays with work.</p>
 <p>Here, we will let the force be a more general form, <math><msub><mi>F</mi><mi>s</mi></msub><mo>=</mo><mo>&minus;</mo><mi>k</mi><mi>x</mi></math>. The reasoning for this formation is said in the above exercise; the <math><mi>k</mi></math> is the coefficient said, which gives the "springiness" of the spring. The higher this constant, the more the stiff the spring is.</p>
 <figure><img src="images/forcepos5.svg" alt="">
 <figcaption>The force-position graph of the above force.</figcaption></figure>
@@ -116,49 +114,23 @@ much work is required to extend the spring from <math><mi>d</mi></math> to the l
 </article>
 </section>
 </section>
-
-<p>One interesting thing pops out when we integrate to get the work done by weight. Since we know the weight is a purely vertical force, we integrate with respect to <math><mi>d</mi><mi>y</mi></math> instead.</p>
+<p>We end this formally, like we did with the integral for impulse. We once again divide the graph into tiny portions of &delta;x, or small positions of the displacement.</p>
+<p>Thus, we have cut up the graph into tiny rectangles, each with a tiny area &delta;W. This area is given by the product of the length and height of the rectangle. The length is set as &delta;x, and the height is given by the force at that position &delta;x.</p>
+<figure><img src="images/integral3.svg" alt="">
+<figcaption>Tiny parts of the graph.</figcaption></figure>
+<p>We can then add up all of these tiny &delta;W to get the total work.</p>
 <article class="equations">
-	<math><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><mi>w</mi><mi>d</mi><mi>y</mi><mo>=</mo><mn>W</mn></math><br>
-	<math><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><mi>m</mi><mi>g</mi><mi>d</mi><mi>y</mi><mo>=</mo><mn>W</mn></math><br>
-	<math><mi>m</mi><mi>g</mi><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><mi>d</mi><mi>y</mi><mo>=</mo><mn>W</mn></math><br>
-	<math><mi>m</mi><mi>g</mi><mo>(</mo><mi>y</mi><mo>&minus;</mo><msub><mi>y</mi><mi>0</mi></msub><mo>)</mo><mo>=</mo><mn>W</mn></math><br>
-	<math><mi>m</mi><mi>g</mi><mi>&Delta;</mi><mi>y</mi><mo>=</mo><mn>W</mn></math><br>
+	<math><mi>W</mi><mo>=</mo><mo>&sum;</mo><mi>&delta;</mi><mi>W</mi></math><br>
+	<math><mi>W</mi><mo>=</mo><mo>&sum;</mo><mi>F</mi><mi>(&delta;x)</mi><mi>&delta;</mi><mi>x</mi></math>
 </article>
-<p>This integral basically means that the work done by weight is only affected by the mass, gravity, and change in vertical position. This was shown conceptually when we analyzed the weight of work; but here it is made explicitly clear.</p>
-<p>Another benefit of using this method is that it also explicitly shows us that if the initial position and the final position is the same, the total work by gravity is zero.</p>
-
-<section class="examples">
-<h2>Question 1</h2>
-<p>(HRK Q11.11) You lift some library books from a lower to a higher shelf in
-time &Delta;t. Does the work that you do depend on the mass of
-the books, the weight of the books, the height of the
-upper shelf above the floor, the time &Delta;t, and whether
-you lift the books sideways or directly upward?</p>
-<h2>Solution<button onclick="toggle(this)">v</button></h2>
-<section class="solution">
-<p>Conceptually, the only things that affect the amount of work done here is the mass, the weight, and the displacement upwards. Thus, the answer here is the mass, the weight (which depends on mass and gravity), and the height of the upper shelf.</p>
-<p>In the equation for the work done by weight, this corresponds to the mass <math><mi>m</mi></math>, the weight <math><mi>m</mi><mi>g</mi></math>, and the displacement <math><mi>&Delta;</mi><mi>y</mi></math> respectively.</p>
-</section>
-</section>
-
-<section class="examples">
-<h2>Question 2</h2>
-<p>(LSM CQ7.7) As a young man, Tarzan climbed up a vine to
-reach his tree house. As he got older, he decided
-to build and use a staircase instead. Note that the work done by weight is equal in both climbing the vine and using the stairs. Thus, what did the King of the Apes gain
-in using stairs? </p>
-<h2>Solution<button onclick="toggle(this)">v</button></h2>
-<section class="solution">
-<p>Despite the work still being the same, Tarzan has to exert less force against gravity using the stairs than on the vine. On the stairs, which is sort of like an inclined plane, the weight pulling Tarzan down is only that in the parallel component; this is less than if he were to go straight up, where his entire weight pulls him down, instead of a fraction of it.</p>
-</section>
-</section>
-
-<p></p>
-
+<p>Now, this is just an approximation. However, as the small parts &delta;W approach zero, the tiny rectangles will perfectly encapsulate the area of the entire graph. Thus, we rewrite the sum into an integral.</p>
+<article class="equations">
+	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mi>d</mi><mi>W</mi></math><br>
+	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mi>F</mi><mi>d</mi><mi>x</mi></math>
+</article>
 </main>
 <footer>
-<a unfinished>Kinetic Energy ></a>
+<a href="kinetic-energy.html">Kinetic Energy ></a>
 </footer>
 </body>
 </html>

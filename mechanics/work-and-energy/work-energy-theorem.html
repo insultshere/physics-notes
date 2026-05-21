@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - workenergy</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Work-Energy Theorem</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>The net work causes a change in the kinetic energy of an object</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>		
+		</section>
+	</article>
+</aside>
+<main>
+<p>Let's analyze the equation we got again.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+</article>
+<p>Notice how this is the change of kinetic energy; the first term is the final kinetic energy (using final speed), while the second term is the initial kinetic energy. Thus, we can write the above as such.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mn>K</mn><mo>&minus;</mo><msub><mn>K</mn><mi>0</mi></msub></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>
+</article>
+<p>The above is known as the work-energy theorem. It tells us that the work on an object is the change in kinetic energy of the object. Looking back at our definition for work, it makes sense; work here is the transfer of kinetic energy.</p>
+<p>This equation is analogous to the impulse-momentum theorem. If we write out the work as the component of the force over a displacement, we can write it as such.</p>
+<article class="equations">
+	<math><mi>F</mi><mi>&Delta;</mi><mi>x</mi><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>
+	<math><mover><mn>F</mn><mo>&rightarrow;</mo></mover><mi>&Delta;</mi><mi>t</mi><mo>=</mo><mi>&Delta;</mi><mover><mn>p</mn><mo>&rightarrow;</mo></mover></math><br>
+</article>
+
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q11.22) Comment on these statements: In a car collision, the force the
+car exerts on being stopped can be determined either from its
+momentum or its kinetic energy. In one case the time of stopping
+and in the other the distance of stopping also need to be known.</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Both statements are true. The first case using momentum uses the momentum-impulse theorem. Since the average force is constant, we can approximate it such as the following.</p>
+<article class="equations">
+	<math><msub><mover><mn>F</mn><mo>&rightarrow;</mo></mover><mi>ave</mi></msub><mo>=</mo><mfrac><mrow><mi>&Delta;</mi><mover><mn>p</mn><mo>&rightarrow;</mo></mover></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math><br>
+</article>
+<p>On the other hand, we can use the work-energy theorem, noting that work is force times displacement.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>ave</mi></msub><mo>=</mo><mfrac><mrow><mi>&Delta;</mi><mn>K</mn></mrow><mrow><mi>&Delta;</mi><mi>x</mi></mrow></mfrac></math><br>
+</article>
+<p>Either way, for the first we need the amount of time the force is applied, while the other we need the displacement of the object.</p>
+</section>
+</section>
+
+<section hard class="examples">
+<h2>Question 2</h2>
+<p>(HRK Q11.21) An object of mass <math><mi>m</mi></math> is traveling with an initial speed <math><mi>v</mi></math>. The
+object is brought to a rest by a variable force that acts over a
+distance <math><mi>d</mi></math> for a time <math><mi>t</mi></math>. There are two ways to calculate the
+magnitude of the "average" force, shown below.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>ave</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></mrow><mrow><mi>2</mi><mi>d</mi></mrow></mfrac><mo>&emsp;</mo><mi>or</mi><mo>&emsp;</mo><msub><mi>F</mi><mi>ave</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><mi>v</mi></mrow><mi>t</mi></mfrac></math><br>
+</article>
+<p style="margin-top:0.5em">Are the two methods equivalent? Under what conditions, if
+any, will they yield the same average? Will one method tend
+to produce a larger result, and, if so, which method?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The first equation is the work-energy theorem, solved for force, while the second equation is the impulse-momentum theorem. They will be equal if the force is constant, however it isn't here.</p>
+<p>In this case, the force taken from the work-energy theorem will be higher. Imagine an object with a force acting against its motion, weakening over time. At the start of the motion, the distance covered is great while the force is large; however, as it slows down, the distance also lowers as the speed decreases. At this point of slowing down, the force is lower.</p>
+<p>Thus, for the work-energy theorem derived force, displacement is high when force is high, and displacement is low when force is low, unlike the momentum-impulse theorem derived equation, where time doesn't depend on the speed of the object, and thus the magnitude of force is treated "equally" throughout the whole motion.</p>
+</section>
+</section>
+<section hard class="examples"><mark variable></mark>
+<h2>Problem 1</h2>
+<p style="margin-bottom:0">(HRK Q11.21) A force exerts an impulse <math><mi>J</mi></math> on an object of mass <math><mi>m</mi></math>, changing
+its speed from <math><msub><mi>v</mi><mi>0</mi></msub></math> to <math><mi>v</mi></math>. The force and the object's motion are
+along the same straight line. Show that the work done by the force is given by the following.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>J</mi><mo>(</mo><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo></math>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We write out the work-energy theorem.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><mo>(</mo><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>)</mo></math><br>
+</article>
+<p>We will factor out the right side; it is a difference of two squares.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><mo>(</mo><mi>v</mi><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo><mo>(</mo><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo></math><br>
+</article>
+<p>Now, let's distribute the mass over the first term of the factored difference of two squares. Note that it becomes the initial and final magnitude of momentum.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mo>(</mo><mi>m</mi><mi>v</mi><mo>&minus;</mo><mi>m</mi><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo><mo>(</mo><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mo>(</mo><mi>p</mi><mo>&minus;</mo><msub><mi>p</mi><mi>0</mi></msub><mo>)</mo><mo>(</mo><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mo>(</mo><mi>&Delta;</mi><mi>p</mi><mo>)</mo><mo>(</mo><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo></math><br>
+</article>
+<p>Recall that the change in momentum is the impulse. Thus, we get the equation above.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>J</mi><mo>(</mo><mi>v</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>)</mo></math>
+</article>
+</section>
+</section>
+
+
+<p>Now, we will derive the work-energy theorem for an arbitary net force, which causes a net work. We write out the integral for work. Here, we will assume, as usual, that the mass is constant.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mo>&int;</mo><mi>d</mi><mi>W</mi></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mo>&int;</mo><msub><mn>F</mn><mi>net</mi></msub><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mo>&int;</mo><mi>m</mi><msub><mi>a</mi><mi>net</mi></msub><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><mo>&int;</mo><msub><mi>a</mi><mi>net</mi></msub><mi>d</mi><mi>x</mi></math><br>
+</article>
+<p>Now, the integral is quite annoying, since we don't exactly know what it means to integrate acceleration with respect to position. Here is one way to fix that. To compute this, we will use <intext tabindex=0 tooltip="a technique to change the variable in which a function is being differentiated with respect to">chain rule.</intext></p>
+<p>Note that we can write out acceleration as the rate of change of velocity over time, and by chain rule, it is equal to the rate of change of velocity with respect to position, times the rate of change of position over time. Then, note that the rate of change of position over time is precisely the velocity.</p>
+<article class="equations">
+	<math><msub><mi>a</mi><mi>net</mi></msub><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mi>v</mi></math><br>
+</article>
+<p>Substitute this in to the above integral.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><mo>&int;</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mi>v</mi><mi>d</mi><mi>x</mi></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><mo>&int;</mo><mi>v</mi><mi>d</mi><mi>v</mi></math><br>
+</article>
+<p>This is now solvable, as the <intext tabindex="0" tooltip="the infinitesimally small value that an integral is summing up">variable of integration</intext> aligns with what is inside the integral. Now, we will integrate from the initial velocity of the object to the final velocity of the object after going that displacement.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><munderover><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mi>v</mi><mi>d</mi><mi>v</mi></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><mfrac><msup><mi>v</mi><mi>2</mi></msup><mi>2</mi></mfrac><munderover><mo>|</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mo>=</mo><mi>m</mi><mo>[</mo><mfrac><msup><mi>v</mi><mi>2</mi></msup><mi>2</mi></mfrac><mo>&minus;</mo><mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mi>2</mi></mfrac><mo>]</mo></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>
+</article>
+<p>Thus, we have shown that for a net force on an object causing a net work, it is exactly equal to the change in kinetic energy of that object.</p>
+</main>
+<footer>
+<a unfinished>Line Integrals for Work ></a>
+</footer>
+</body>
+</html>

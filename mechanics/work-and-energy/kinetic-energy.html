@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - kinetic</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Kinetic Energy</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>The kinetic energy of an object is the energy of motion</p>
+		<p>It is a scalar</p>
+		<p>It depends on speed, not velocity, and thus has no direction</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><mn>K</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+		<math><mn>K</mn><mo>=</mo><mfrac><msup><mi>p</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>m</mi></mrow></mfrac></math><br>
+		</section>
+	</article>
+</aside>
+<main>
+<p>We said that work is the transfer of energy. In a collision, you may have noticed that it could be considered a sort-of transfer of speed. For example, when a fast moving particle hits a particle at rest, some of its speed could be transferred to it to make that particle move.</p>
+<p>In this regard, it was decided that this movement could be considered a form of energy that could be transferred from one object to another. Previously, such an energy was called the "living" energy or in Latin "vis viva". Now, this form of energy is called the kinetic energy.</p>
+<article class="terms">
+	<mark>Kinetic Energy (<math><mn>K</mn></math>)</mark> - the energy of motion
+</article>
+<p>Let's see how to derive such; in a collision, we noted that they exert forces on each other. At that period, those forces do work as they transfer some of the kinetic energy from one object to the other.</p>
+<figure><img src="images/kine1.svg" alt="">
+<figcaption>Force during a collision, which does work.</figcaption></figure>
+<p>We can't assume that the force and the displacement it does is in the same direction, and we don't know the angle between those two, so we'll use the dot product definition of work instead.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>d</mi></mrow><mo>&#x2192</mo></mover></math>
+</article>
+<p>Now, this is great and all, but we are concerned here with how fast the objects are going, so force and displacement aren't really that useful. However, we can use the law of acceleration to get a little closer to what we want.</p>
+<p>Then, we note acceleration is the change in velocity over time, and displacement under constant acceleration (note the constant force) is the average velocity times the change in time.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mi>m</mi><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>d</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>m</mi><mfrac><mrow><mo>(</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>)</mo></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac><mo>&sdot;</mo><mfrac><mrow><mo>(</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>)</mo></mrow><mi>2</mi></mfrac><mi>&Delta;</mi><mi>t</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><mo>(</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>)</mo><mo>&sdot;</mo><mo>(</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>)</mo></math>
+</article>
+<p>Now, we just have to do that ugly dot product on the right. Thankfully, since the dot product is commutative, it is as simple as <intext tabindex="0" tooltip="multiplying two binomials can be done via multiplying its first, outer, inner, and last terms then adding them up">foiling</intext> it.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><mo>[</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>+</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>&minus;</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>&sdot;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>]</mo></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><mo>[</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>&sdot;</mo><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>&sdot;</mo><msub><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover><mi>0</mi></msub><mo>]</mo></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><mo>[</mo><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>]</mo></math><br>
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+</article>
+<p>With this, we can see what energy is being transferred throughout a collision. Thus, we define the kinetic energy as the following.</p>
+<article class="equations">
+	<math><mn>K</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+</article>
+<p>One thing to notice is that the <math><mi>v</mi></math> here is the speed of the object, not the velocity. It lost its direction once we computed the dot product, which as before returns a scalar. This means that overall, the kinetic energy is a scalar quantity.</p>
+<p>Another thing to notice is the unit of kinetic energy, which is also the Joule.</p>
+<article class="equations">
+	<math><mn>K</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mi>[J]</mi><mo>=</mo><mi>[1]</mi><mi>[kg]</mi><mi>[m/s]&sup2;</mi></math><br>
+	<math><mi>[J]</mi><mo>=</mo><mi>[kg]</mi><mi>[m]&sup2;</mi><mi>[s]&#8315;&sup2;</mi></math><br>
+</article>
+
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(HRK E11.28a) Calculate the kinetic energy of a 110-kg football linebacker running
+at 8.1 m/s.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will just use our formula above.</p>
+<article class="equations">
+	<math><mn>K</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mn>K</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(110kg)</mi><msup><mi>(8.1m/s)</mi><mi>2</mi></msup></math><br>
+	<math><mn>K</mn><mo>=</mo><mi>3600J</mi></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples"><mark custom variable></mark>
+<h2>Exercise 2</h2>
+<p>An object of mass <math><mi>m</mi></math> moving at a speed <math><mi>v</mi></math> has kinetic energy. How will the kinetic energy change in the following situations?<br>
+(a) The speed is doubled<br>
+(b) The speed is halved<br>
+(c) The mass is doubled</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Looking at the formula, we see that kinetic energy varies proportionally to speed squared. Thus, if speed changes, the kinetic energy changes quadratically. Further, it is proportional to mass, so if it changes, kinetic energy changes linearly.</p>
+<p>With this, if speed is doubled and halved, kinetic energy is quadrupled (4x) and cut into four (1/4x) respectively, and if mass is doubled, kinetic energy doubles as well (2x).</p>
+</section>
+</section>
+
+<section hard class="examples">
+<h2>Problem 1</h2>
+<p>(HRK P11.17) A running man has half the kinetic energy that a boy of half
+his mass has. The man speeds up by 1.00 m/s and then has
+the same kinetic energy as the boy. What were the original
+speeds of man and boy?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Let's write out the kinetic energies of the man and the boy below. We let the man have mass <math><mi>2</mi><mi>M</mi></math>.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>m0</mi></msub><mo>=</mo><mi>M</mi><msup><msub><mi>v</mi><mi>m</mi></msub><mi>2</mi></msup></math><br>
+	<math><msub><mn>K</mn><mi>b0</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>M</mi><msup><msub><mi>v</mi><mi>b</mi></msub><mi>2</mi></msup></math><br>
+</article>
+<p>We know here that right now, the man's kinetic energy is half that of the boy. Thus, we write the following out.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>m0</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mn>K</mn><mi>b0</mi></msub></math><br>
+	<math><mi>M</mi><msup><msub><mi>v</mi><mi>m</mi></msub><mi>2</mi></msup><mo>=</mo><mfrac><mi>1</mi><mi>4</mi></mfrac><mi>M</mi><msup><msub><mi>v</mi><mi>b</mi></msub><mi>2</mi></msup></math><br>
+	<math><mi>2</mi><msup><msub><mi>v</mi><mi>m</mi></msub><mi>2</mi></msup><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><msub><mi>v</mi><mi>b</mi></msub><mi>2</mi></msup></math><br>
+</article>
+<p>We leave this for later. Now, we do the other condition.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>mf</mi></msub><mo>=</mo><msub><mn>K</mn><mi>bf</mi></msub></math><br>
+	<math><mi>M</mi><mi>(</mi><msub><mi>v</mi><mi>m</mi></msub><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>2</mi></msup><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>M</mi><msup><msub><mi>v</mi><mi>b</mi></msub><mi>2</mi></msup></math><br>
+	<math><msup><msub><mi>v</mi><mi>m</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><msub><mi>v</mi><mi>m</mi></msub><mo>+</mo><mi>1</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><msub><mi>v</mi><mi>b</mi></msub><mi>2</mi></msup></math><br>
+</article>
+<p>Substitute the above relation to get the following.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><msup><msub><mi>v</mi><mi>m</mi></msub><mi>2</mi></msup><mo>+</mo><mi>2</mi><msub><mi>v</mi><mi>m</mi></msub><mo>+</mo><mi>1</mi><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>Solving this using the quadratic equation, we get that the initial speed of the man is about 2.414m/s. Substituting above, we get that the boy is running at 4.828m/s.</p>
+</section>
+</section>
+
+<p>If we introduce momentum again, since we are talking about a collision after all, then we can write kinetic energy in terms of momentum. We first note the following.</p>
+<article class="equations">
+	<math><mi>p</mi><mo>=</mo><mi>m</mi><mi>v</mi></math><br>
+	<math><mfrac><mi>p</mi><mi>m</mi></mfrac><mo>=</mo><mi>v</mi></math>
+</article>
+<p>Now, substituting that in for the speed, we have this.</p>
+<article class="equations">
+	<math><mn>K</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mn>K</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><mi>(</mi><mfrac><mi>p</mi><mi>m</mi></mfrac><msup><mi>)</mi><mi>2</mi></msup></math><br>
+	<math><mn>K</mn><mo>=</mo><mfrac><msup><mi>p</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>m</mi></mrow></mfrac></math><br>
+</article>
+<p>Once again, the momenta here is the magnitude of momentum; momentum is a vector, kinetic energy is a scalar.</p>
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q11.19) A light object and a heavy object have equal kinetic energies
+of translation. Which one has the larger momentum?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will solve for the momentum in terms of the kinetic energy.</p>
+<article class="equations">
+	<math><mn>K</mn><mo>=</mo><mfrac><msup><mi>p</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>m</mi></mrow></mfrac></math><br>
+	<math><mi>2</mi><mi>m</mi><mn>K</mn><mo>=</mo><msup><mi>p</mi><mi>2</mi></msup></math><br>
+</article>
+<p>Here, we see that mass is proportional to the momenta. Thus, the heavier object has more momenta.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 2</h2>
+<p>(HRK Q11.20) Can a body have kinetic energy without having momentum?
+Can a body have momentum without having kinetic energy?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Both answers are no. For the first, if there is no momentum, there is no velocity; thus, there is no speed, so no kinetic energy. For the second, if there is no speed, it means the object is at rest, no momentum.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 3</h2>
+<p>(HRK Q11.30) Does kinetic energy depend on the direction of the motion involved? Can it be negative? Does its value depend on the reference frame of the observer?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>For the first two, no. Kinetic energy is a scalar, so it shouldn't matter in what direction the speed is. Further, since speed is strictly positive as the magnitude of velocity, and mass is certainly positive, it is always positive.</p>
+<p>For the last question, yes. Since the reference frame of an observer can change what velocity an object appears to be moving at, it also changes the speed; for example, an object moving in one reference frame can appear to be stationary in another.</p>
+</section>
+</section>
+
+</main>
+<footer>
+<a unfinished>Work-Energy Theorem ></a>
+</footer>
+</body>
+</html>
