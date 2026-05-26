@@ -18,32 +18,223 @@
 		<section>
 		<h2>Summary</h2>
 		<p>The net work causes a change in the kinetic energy of an object</p>
+		<p>It is very similar to that of the momentum-impulse theorem, down to the structure</p>
+		<p>The work-energy theorem gives us an alternate way to do problems that could be solvable using kinematics and dynamics</p>
 		</section>
 		<section>
 		<h2>Equations</h2>
 		<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>		
-		</section>
+		<math><msub><mn>W</mn><mi>w</mi></msub><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>&Delta;</mi><mi>y</mi></math>
+	</section>
 	</article>
 </aside>
 <main>
-<p>Let's analyze the equation we got again.</p>
+<p>To properly use the work-energy theorem, we must know the net work, which implies we must know what net force is doing the work. Usually in kinematics and dynamics, that net force is gravity. Recall that we computed the work done by weight before, noting the line-integral formation for work. We write out a shortened version of what we did below.</p>
 <article class="equations">
-	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><msub><mn>W</mn><mi>w</mi></msub><mo>=</mo><mo>&int;</mo><mover><mi>w</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><msub><mn>W</mn><mi>w</mi></msub><mo>=</mo><mo>&minus;</mo><mo>(</mo><mo>&int;</mo><msub><mi>w</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>)</mo></math>
 </article>
-<p>Notice how this is the change of kinetic energy; the first term is the final kinetic energy (using final speed), while the second term is the initial kinetic energy. Thus, we can write the above as such.</p>
+<p>Notice that at this point, we've broken down weight into its horizontal and vertical components. However, since weight doesn't have a horizontal component, it drops out. Then, we integrate from initial to final vertical position.</p>
 <article class="equations">
-	<math><mn>W</mn><mo>=</mo><mn>K</mn><mo>&minus;</mo><msub><mn>K</mn><mi>0</mi></msub></math><br>
-	<math><mn>W</mn><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>
+	<math><msub><mn>W</mn><mi>w</mi></msub><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math><br>
+	<math><msub><mn>W</mn><mi>w</mi></msub><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><mi>m</mi><mi>g</mi><mi>d</mi><mi>y</mi></math><br>
+	<math><msub><mn>W</mn><mi>w</mi></msub><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><mi>d</mi><mi>y</mi></math><br>
+	<math><msub><mn>W</mn><mi>w</mi></msub><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>&Delta;</mi><mi>y</mi></math>
 </article>
-<p>The above is known as the work-energy theorem. It tells us that the work on an object is the change in kinetic energy of the object. Looking back at our definition for work, it makes sense; work here is the transfer of kinetic energy.</p>
-<p>This equation is analogous to the impulse-momentum theorem. If we write out the work as the component of the force over a displacement, we can write it as such.</p>
+<p>Notice something wonderful. This expression for the work done by weight only depends on the vertical displacement. Recall that the line integral for work integrates over the path; if the work depended on this path, we could have vastly different values for the work based on how we got from the initial to the final position.</p>
+<figure><img src="images/integral4.svg" alt="">
+<figcaption>There are multiple paths from initial to final position, each with different path lengths and distance.</figcaption></figure>
+<p>The work done by weight, which is based only on the vertical displacement, only cares about where the object starts and ends; it doesn't care about where it went or how it got there. This property is called <i>path-independency</i>.</p>
+<p>Another thing this formation gives us that is that it does not care about the horizontal position whatsoever; so, for example, if a projectile moves a range <math><mi>R</mi></math> and reaches a height <math><mi>h</mi></math>, the work done by weight doesn't care about how far it went, just how high it went.</p>
+<section class="examples"><mark custom variable></mark>
+<h2>Exercise 1a</h2>
+<p style="margin-bottom: 0;">An object of mass <math><mi>m</mi></math> is thrown upward at a speed <math><msub><mi>v</mi><mi>0</mi></msub></math>. Show that the maximum height it can reach, independent of its mass, is given by the following.</p>
+<article class="equations">
+	<math><mi>h</mi><mo>=</mo><mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math><br>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We set up the work-energy theorem again. Here, note that the final kinetic energy is zero, as we have seen before that the object reaches its maximum height once its velocity is zero.</p>
+<p>The net force here then is just the weight, so it does all the work. It is displaced up a positive <math><mi>h</mi></math>, which becomes our maximum height.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><mi>h</mi><mo>=</mo><mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math><br>
+</article>
+</section>
+</section>
+<section hard class="examples"><mark custom></mark>
+<h2>Exercise 1b</h2>
+<p style="margin-bottom: 0;">Previously, we dealt with an object of mass <math><mi>m</mi></math> thrown vertically upward at a speed <math><msub><mi>v</mi><mi>0</mi></msub></math>. Now, we throw the ball with the same initial speed, but at an angle <math><mi>&theta;</mi></math>. Show that the maximum height it can reach, independent of its mass, is given by the following.</p>
+<article class="equations">
+	<math><mi>h</mi><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>sin</mi><mi>2</mi></msup><mi>(&theta;)</mi></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math><br>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We set up the work-energy theorem again. Here, the final kinetic energy must then just be only the horizontal component of the velocity, since the vertical component is zero at maximum height. We use trigonometry to get this, noting it is adjacent, so we use cosine.</p>
+<p>The net force here then is just the weight, so it does all the work. It is displaced up a positive <math><mi>h</mi></math>, which becomes our maximum height; we don't care about whatever the direction of throwing is, since kinetic energy only cares about the speed.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>cos</mi><mi>(&theta;)</mi><msup><mi>)</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><mi>g</mi><mi>h</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mi>2</mi></msup><mi>(&theta;)</mi></math><br>
+	<math><mi>h</mi><mo>=</mo><mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math><br>
+	<math><mi>h</mi><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mi>(</mi><mi>1</mi><mo>&minus;</mo><msup><mi>cos</mi><mi>2</mi></msup><mi>(&theta;)</mi><mi>)</mi></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math><br>
+</article>
+<p>Substituting in the cosine squared term for sine squared via the pythagorean identity, we get the desired result.</p>
+<article class="equations">
+	<math><mi>h</mi><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>sin</mi><mi>2</mi></msup><mi>(&theta;)</mi></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math><br>
+</article>
+</section>
+</section>
+<section class="examples"><mark custom variable></mark>
+<h2>Exercise 2a</h2>
+<p style="margin-bottom: 0;">An object of mass <math><mi>m</mi></math> initially at rest goes down an incline of angle <math><mi>&theta;</mi></math> and height <math><mi>h</mi></math>. Show that, at the bottom of the incline, the speed of the box is given by the following.</p>
+<article class="equations">
+	<math><mi>v</mi><mo>=</mo><msqrt><mrow><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></math><br>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The net work on the object is done by its weight; further, since work doesn't depend on the horizontal displacement, we only care about the height the object is displaced.</p>
+<p>Writing out the work-energy theorem, we remove the initial kinetic energy as the object is said to be initially at rest.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+</article>
+<p>The net force is the weight, so we set that as the force doing the net work. It falls down a height of <math><mo>&minus;</mo><mi>h</mi></math>; note the negative sign, as we set going up as positive, thus going down is negative. We set that as the displacement.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>(</mi><mo>&minus;</mo><mi>h</mi><mi>)</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mi>g</mi><mi>h</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mi>2</mi><mi>g</mi><mi>h</mi><mo>=</mo><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><msqrt><mi>2</mi><mi>g</mi><mi>h</mi></msqrt><mo>=</mo><mi>v</mi></math><br>
+</article>
+</section>
+</section>
+<p>The above problem shouldn't be new to you. In fact, we could've solved it using dynamics. To see this, we note that the force acting on the object is the parallel component of the weight.</p>
+<article class="equations">
+	<math><msub><mrow><mi>F</mi></mrow><mi>net&parallel;</mi></msub><mo>=</mo><msub><mrow><mi>w</mi></mrow><mi>&parallel;</mi></msub></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+</article>
+<p>Now, for the velocity at the bottom of the slope, we will first get the displacement of the block along the slope, which we will use trigonometry. &theta; is opposite the height, thus we have the following relation.</p>
+<article class="equations">
+	<math><mi>sin</mi><mi>(&theta;)</mi><mo>=</mo><mfrac><mi>h</mi><mrow><mi>&Delta;</mi><mi>x</mi></mrow></mfrac></math><br>
+	<math><mi>&Delta;</mi><mi>x</mi><mo>=</mo><mfrac><mi>h</mi><mrow><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac></math><br>
+</article>
+<p>We now use the time-independent formula to get the final velocity, noting the initial velocity is at rest.</p>
+<article class="equations">
+	<math><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>a</mi><mi>&#x0394</mi><mi>x</mi></mrow></math><br>
+	<math><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>2</mi><mo>(</mo><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mo>)</mo><mo>(</mo><mfrac><mi>h</mi><mrow><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac><mo>)</mo></mrow><mo>=</mo><mi>2</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mrow><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></math>
+</article>
+<p>As we've seen, we have arrived at the same equation via dynamics. However, there are some limitations to the above method. Most importantly, it assumes the slope is straight and flat. Because of that, the parallel component of weight is constant, and thus acceleration down the slope is constant; our kinematic equations hold.</p>
+<p>If, say, the incline was curved, the slope of the incline varies continuously, and acceleration isn't constant anymore; it is now practically impossible to use dynamics. However, using the work-energy theorem, and the work done by gravity, we don't make any assumptions that the incline is straight.</p>
+<section class="examples"><mark custom></mark>
+<h2>Exercise 2b</h2>
+<p>An object initially at rest at the top of a track shown below goes through the curved track, ending up at its final position. What is its final velocity at its final position?</p>
+<figure><img src="images/line1.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The net force is the weight only; we only care about the vertical displacement, so the path taken by the object going up and down the curve doesn't matter.</p>
+<p>Writing out the work-energy theorem, we remove the initial kinetic energy as the object is said to be initially at rest.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mi>g</mi><mi>h</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mi>2</mi><mi>g</mi><mi>h</mi><mo>=</mo><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><msqrt><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>h</mi></msqrt><mo>=</mo><mi>v</mi></math><br>
+</article>
+<p>The displacement is from 10.0m up to 5.0m, which means it is displaced a total of &minus;5.0m.</p>
+<article class="equations">
+	<math><msqrt><mo>&minus;</mo><mi>2</mi><mi>(9.8m/s&sup2;)</mi><mi>(&minus;5.0m)</mi></msqrt><mo>=</mo><mi>v</mi></math><br>
+	<math><mi>9.90m/s</mi><mo>=</mo><mi>v</mi></math><br>
+</article>
+</section>
+</section>
+<section class="examples">
+<h2>Exercise 3</h2>
+<p>(HRK P11.16a) An 1100-kg car is traveling at 46 km/h on a level road. The
+brakes are applied long enough to remove 51 kJ of kinetic energy. What is the final speed of the car?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will write out the work-energy theorem.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mn>K</mn><mo>&minus;</mo><msub><mn>K</mn><mi>0</mi></msub></math><br>
+</article>
+<p>Now, we want to solve for the final speed. Thus, we will break the two kinetic energies apart.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mfrac><mrow><mi>2</mi><msub><mn>W</mn><mi>net</mi></msub></mrow><mi>m</mi></mfrac><mo>+</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>=</mo><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><msqrt><mfrac><mrow><mi>2</mi><msub><mn>W</mn><mi>net</mi></msub></mrow><mi>m</mi></mfrac><mo>+</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></msqrt><mo>=</mo><mi>v</mi></math><br>
+</article>
+<p>Here, notice how the net work is the 51kJ lost due to friction. In other words, the net work is negative. Plugging everything in, we have the following. Note that 46km/h is around 12.78m/s.</p>
+<article class="equations">
+	<math><msqrt><mfrac><mrow><mi>2</mi><mi>(51000J)</mi></mrow><mi>(1100kg)</mi></mfrac><mo>+</mo><msup><mi>(12.78m/s)</mi><mi>2</mi></msup></msqrt><mo>=</mo><mi>v</mi></math><br>
+	<math><mi>8.4m/s</mi><mo>=</mo><mi>v</mi></math><br>
+</article>
+</section>
+</section>
+<section hard class="examples">
+<h2>Exercise 4a</h2>
+<p>(HRK 11.18a) A 0.550-kg projectile is launched from the edge of a cliff with
+an initial kinetic energy of 1550 J and at its highest point is
+140 m above the launch point. What is the horizontal component of its velocity?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Recall that in projectile motion the horizontal velocity is constant. Thus, at its highest point, where vertical velocity is zero, only the horizontal velocity contributes to the kinetic energy.</p>
+<p>Thus, since we are given the displacement of 140m up, and the initial kinetic energy, we can get the horizontal velocity. The net work is only done by weight.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>x</mi></msub><mi>2</mi></msup><mo>&minus;</mo><msub><mn>K</mn><mi>0</mi></msub></math><br>
+	<math><msub><mn>K</mn><mi>0</mi></msub><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>x</mi></msub><mi>2</mi></msup></math><br>
+	<math><mfrac><mrow><mi>2</mi><msub><mn>K</mn><mi>0</mi></msub></mrow><mi>m</mi></mfrac><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>h</mi><mo>=</mo><msup><msub><mi>v</mi><mi>x</mi></msub><mi>2</mi></msup></math><br>
+	<math><msqrt><mfrac><mrow><mi>2</mi><msub><mn>K</mn><mi>0</mi></msub></mrow><mi>m</mi></mfrac><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>h</mi></msqrt><mo>=</mo><msub><mi>v</mi><mi>x</mi></msub></math><br>
+</article>
+<p>Let's now substitute.</p>
+<article class="equations">
+	<math><msqrt><mfrac><mrow><mi>2</mi><mi>(1550J)</mi></mrow><mi>0.550kg</mi></mfrac><mo>&minus;</mo><mi>2</mi><mi>(9.8m/s&sup2;)</mi><mi>(140m)</mi></msqrt><mo>=</mo><msub><mi>v</mi><mi>x</mi></msub></math><br>
+	<math><mi>54m/s</mi><mo>=</mo><msub><mi>v</mi><mi>x</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples">
+<h2>Exercise 4b</h2>
+<p>(HRK 11.18c) At one instant during its flight
+the vertical component of its velocity is found to be 65.0 m/s.
+At that time, how far is it above or below the launch point?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first get the total speed at that point via using the pythagorean theorem. Note here that we will use the horizontal component, which is constant, of 53.78m/s.</p>
+<article class="equations">
+	<math><mi>v</mi><mo>=</mo><msqrt><mrow><mi>[65.0m/s]&sup2;</mi><mo>+</mo><mi>[53.78m/s]&sup2;</mi></mrow></msqrt></math><br>
+	<math><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mi>[65.0m/s]&sup2;</mi><mo>+</mo><mi>[53.78m/s]&sup2;</mi></math>
+</article>
+<p>Since we will square it anyway when we use it in the work-energy theorem, we just do it here. Anyways, we keep the initial kinetic energy and we solve for the height.
+<article class="equations">
+	<math><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>&minus;</mo><msub><mn>K</mn><mi>0</mi></msub></math><br>
+	<math><mi>h</mi><mo>=</mo><mfrac><msub><mn>K</mn><mi>0</mi></msub><mrow><mi>m</mi><mi>g</mi></mrow></mfrac><mo>&minus;</mo><mfrac><msup><mi>v</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math><br>
+</article>
+<p>Let's now substitute.</p>
+<article class="equations">
+	<math><mi>h</mi><mo>=</mo><mfrac><mi>(1550J)</mi><mrow><mi>(0.550kg)</mi><mi>(9.8m/s&sup2;)</mi></mrow></mfrac><mo>&minus;</mo><mfrac><mrow><mi>[65.0m/s]&sup2;</mi><mo>+</mo><mi>[53.78m/s]&sup2;</mi></mrow><mrow><mi>2</mi><mi>(9.8m/s&sup2;)</mi></mrow></mfrac></math><br>
+	<math><mi>h</mi><mo>=</mo><mi>&minus;76m</mi></math><br>
+</article>
+<p>The negative sign here means that it is actually 76 meters below the starting point.</p>
+</section>
+</section>
+<p>One thing to notice is that the equation for the work-energy theorem is analogous to that of the impulse-momentum theorem. If we write out the work as the component of the force over a displacement, we can write it as such.</p>
 <article class="equations">
 	<math><mi>F</mi><mi>&Delta;</mi><mi>x</mi><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>
 	<math><mover><mn>F</mn><mo>&rightarrow;</mo></mover><mi>&Delta;</mi><mi>t</mi><mo>=</mo><mi>&Delta;</mi><mover><mn>p</mn><mo>&rightarrow;</mo></mover></math><br>
 </article>
-
+<p>They even have roughly the same structure; a net force times the change in a certain variable (displacement and time for work and impulse respectively) which changes a certain aspect of the object (kinetic energy and momentum respectively).</p>
 <section class="examples">
-<h2>Question 1</h2>
+<h2>Question 1a</h2>
 <p>(HRK Q11.22) Comment on these statements: In a car collision, the force the
 car exerts on being stopped can be determined either from its
 momentum or its kinetic energy. In one case the time of stopping
@@ -63,7 +254,7 @@ and in the other the distance of stopping also need to be known.</p>
 </section>
 
 <section hard class="examples">
-<h2>Question 2</h2>
+<h2>Question 1b</h2>
 <p>(HRK Q11.21) An object of mass <math><mi>m</mi></math> is traveling with an initial speed <math><mi>v</mi></math>. The
 object is brought to a rest by a variable force that acts over a
 distance <math><mi>d</mi></math> for a time <math><mi>t</mi></math>. There are two ways to calculate the
@@ -77,13 +268,13 @@ to produce a larger result, and, if so, which method?</p>
 <h2>Answer<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>The first equation is the work-energy theorem, solved for force, while the second equation is the impulse-momentum theorem. They will be equal if the force is constant, however it isn't here.</p>
-<p>In this case, the force taken from the work-energy theorem will be higher. Imagine an object with a force acting against its motion, weakening over time. At the start of the motion, the distance covered is great while the force is large; however, as it slows down, the distance also lowers as the speed decreases. At this point of slowing down, the force is lower.</p>
+<p>In this case, the force taken from the work-energy theorem will almost always be higher. Imagine an object with a force acting against its motion, weakening over time. At the start of the motion, the distance covered is great while the force is large; however, as it slows down, the distance also lowers as the speed decreases. At this point of slowing down, the force is lower.</p>
 <p>Thus, for the work-energy theorem derived force, displacement is high when force is high, and displacement is low when force is low, unlike the momentum-impulse theorem derived equation, where time doesn't depend on the speed of the object, and thus the magnitude of force is treated "equally" throughout the whole motion.</p>
 </section>
 </section>
 <section hard class="examples"><mark variable></mark>
 <h2>Problem 1</h2>
-<p style="margin-bottom:0">(HRK Q11.21) A force exerts an impulse <math><mi>J</mi></math> on an object of mass <math><mi>m</mi></math>, changing
+<p style="margin-bottom:0">(HRK E11.29) A force exerts an impulse <math><mi>J</mi></math> on an object of mass <math><mi>m</mi></math>, changing
 its speed from <math><msub><mi>v</mi><mi>0</mi></msub></math> to <math><mi>v</mi></math>. The force and the object's motion are
 along the same straight line. Show that the work done by the force is given by the following.</p>
 <article class="equations">
@@ -115,33 +306,9 @@ along the same straight line. Show that the work done by the force is given by t
 </section>
 
 
-<p>Now, we will derive the work-energy theorem for an arbitary net force, which causes a net work. We write out the integral for work. Here, we will assume, as usual, that the mass is constant.</p>
-<article class="equations">
-	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mo>&int;</mo><mi>d</mi><mi>W</mi></math><br>
-	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mo>&int;</mo><msub><mn>F</mn><mi>net</mi></msub><mi>d</mi><mi>x</mi></math><br>
-	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mo>&int;</mo><mi>m</mi><msub><mi>a</mi><mi>net</mi></msub><mi>d</mi><mi>x</mi></math><br>
-	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><mo>&int;</mo><msub><mi>a</mi><mi>net</mi></msub><mi>d</mi><mi>x</mi></math><br>
-</article>
-<p>Now, the integral is quite annoying, since we don't exactly know what it means to integrate acceleration with respect to position. Here is one way to fix that. To compute this, we will use <intext tabindex=0 tooltip="a technique to change the variable in which a function is being differentiated with respect to">chain rule.</intext></p>
-<p>Note that we can write out acceleration as the rate of change of velocity over time, and by chain rule, it is equal to the rate of change of velocity with respect to position, times the rate of change of position over time. Then, note that the rate of change of position over time is precisely the velocity.</p>
-<article class="equations">
-	<math><msub><mi>a</mi><mi>net</mi></msub><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mi>v</mi></math><br>
-</article>
-<p>Substitute this in to the above integral.</p>
-<article class="equations">
-	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><mo>&int;</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mi>v</mi><mi>d</mi><mi>x</mi></math><br>
-	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><mo>&int;</mo><mi>v</mi><mi>d</mi><mi>v</mi></math><br>
-</article>
-<p>This is now solvable, as the <intext tabindex="0" tooltip="the infinitesimally small value that an integral is summing up">variable of integration</intext> aligns with what is inside the integral. Now, we will integrate from the initial velocity of the object to the final velocity of the object after going that displacement.</p>
-<article class="equations">
-	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><munderover><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mi>v</mi><mi>d</mi><mi>v</mi></math><br>
-	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>m</mi><mfrac><msup><mi>v</mi><mi>2</mi></msup><mi>2</mi></mfrac><munderover><mo>|</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mo>=</mo><mi>m</mi><mo>[</mo><mfrac><msup><mi>v</mi><mi>2</mi></msup><mi>2</mi></mfrac><mo>&minus;</mo><mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mi>2</mi></mfrac><mo>]</mo></math><br>
-	<math><msub><mn>W</mn><mi>net</mi></msub><mo>=</mo><mi>&Delta;</mi><mn>K</mn></math><br>
-</article>
-<p>Thus, we have shown that for a net force on an object causing a net work, it is exactly equal to the change in kinetic energy of that object.</p>
 </main>
 <footer>
-<a unfinished>Line Integrals for Work ></a>
+<a href="collisions-revisited.html">Collisions, Revisited ></a>
 </footer>
 </body>
 </html>

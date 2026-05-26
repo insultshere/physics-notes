@@ -229,14 +229,6 @@ the acceleration of the block if it is moving up the plane?<br><br>
 <p>Substituting the values, we get the acceleration, which is about &minus;3.2m/s².</p>
 </section>
 </section>
-<section class="examples">
-<h2>Question 1</h2>
-(HRK Q5.6) Why do tires grip the road better on level ground than they do when going uphill or downhill?<br><br>
-<h2>Answer<button onclick="toggle(this)">v</button></h2>
-<section class="solution">
-<p>The normal force on an inclined plane is based on the angle of the incline; this usually causes it to be less than if the surface was completely level.</p>
-</section>
-</section>
 <p>To end this flyby of the inclined plane, let's try some problems which require the use of kinematics. The kinematics part is usually just some algebraic manipulation and plugging, like the dessert after the main course.</p>
 <section class="examples">
 <h2>Problem 3</h2>
@@ -275,8 +267,33 @@ kinetic friction for each case.<br><br>
 </article>
 </section>
 </section>
-<section class="examples" hard> <mark variable></mark>
+<section class="examples"><mark custom></mark>
 <h2>Problem 4</h2>
+<p>A hollow, frictionless, tightly-fitted cylinder, open at both ends, has five balls of radius 0.50m stacked on top of each other. The person, holding the cylinder at 60 degrees relative to the horizontal, lets go of the bottom, and the balls fall down. If they are able to put back their hand such that exactly three balls stay in the cylinder, they win a chicken burger.</p>
+<figure><img style="min-width: 40%;" src="images/inclined11.svg" alt="">
+<figcaption>Problem 4.</figcaption></figure>
+<p>Once the center of a ball escapes the bottom of the cylinder, it is effectively outside the cylinder, as it can't be saved even if the person places their hand back in. Thus, assuming they can slide their hand back in and block the cylinder in negligible time, what is the range of time the person can wait so that they win?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The net force acting on the balls is the weight parallel to the incline, which is the inside of the cylinder.</p>
+<article class="equations">
+	<math><msub><mover accent="true"><mrow><mi>F</mi></mrow><mo>&#x2192</mo></mover><mi>net&parallel;</mi></msub><mo>=</mo><mo>&minus;</mo><msub><mover accent="true"><mrow><mi>w</mi></mrow><mo>&#x2192</mo></mover><mi>&parallel;</mi></msub></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>a</mi><mo>=</mo><mo>&minus;</mo><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+</article>
+<p>Now, the three balls remain when the second ball leaves after travelling 1.5m, or before the third ball leaves after travelling 2.5m.</p>
+<article class="equations">
+	<math><mrow><mi>x</mi></mrow><mo>=</mo><msub><mi>x</mi><mi>0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mi>&Delta;</mi><mi>x</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>a</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><msqrt><mfrac><mrow><mi>2</mi><mi>&Delta;</mi><mi>x</mi></mrow><mrow><mi>a</mi></mrow></mfrac></msqrt><mo>=</mo><mi>t</mi></math><br>
+	<math><msqrt><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>&Delta;</mi><mi>x</mi></mrow><mrow><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></mrow></mfrac></msqrt><mo>=</mo><mi>t</mi></math><br>
+</article>
+<p>This gives us that the time taken should be between 0.59s and 0.77s.</p>
+</section>
+</section>
+
+<section class="examples" hard> <mark variable></mark>
+<h2>Problem 5</h2>
 (HRK E5.20) A block slides down an inclined plane of slope angle &theta; with
 constant velocity. It is then projected up the same plane with
 an initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>. <br>(a) How far up the incline will it move before coming to rest, given &theta; and initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>? <br>(b) Will it slide down again?<br><br>
@@ -294,7 +311,7 @@ an initial velocity <math><msub><mi>v</mi><mn>0</mn></msub></math>. <br>(a) How 
 	<math><mi>m</mi><mi>a</mi><mo>=</mo><mo>&minus;</mo><mi>2</mi><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 	<math><mi>a</mi><mo>=</mo><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
 </article>
-<p>How do we then use this equation? We use our time-independent equation, noting the initial velocity and the final velocity as zero.</p>
+<p>How do we then use this equation? We use our time-independent equation, noting the final velocity as zero.</p>
 <article class="equations">
 	<math><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>a</mi><mi>&#x0394</mi><mi>x</mi></mrow></math><br>
 	<math><mi>(0m/s)</mi><mo>=</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mn>2</mn></msup><mo>+</mo><mrow><mi>2</mi><mi>(</mi><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi><mi>)</mi><mi>&#x0394</mi><mi>x</mi></mrow></math><br>

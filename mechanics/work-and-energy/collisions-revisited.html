@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - collisionsrev</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Collisions, Revisited</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>Kinetic energy is conserved in an elastic collision</p>
+		<p>A "loss" in kinetic energy occurs in an inelastic collision, with the maximum "loss" occuring at a perfectly inelastic collision</p>
+		<p>A "gain" in kinetic energy occurs in an explosion</p>
+		</section>
+	</article>
+</aside>
+<main>
+<p>Previously, we dealt with collisions using the coefficient of restitution. Now, we revisit these collisions under the lens of kinetic energy.</p>
+<p>We noted before that collisions transfer kinetic energy. However, clearly, not all the kinetic energy is transferred sometimes. For example, in an inelastic collision, two objects moving at the same speed towards each other move together at half the speed. Thus, it might be helpful to analyze the kinetic energy of the system involved in the collision before and after the collision.</p>
+<figure><img src="images/coll1.svg" alt="">
+<figcaption>The kinetic energy of the system before and after collision.</figcaption></figure>
+<p>Now, to begin our analysis of collisions using kinetic energy, it is helpful to write out the initial and final kinetic energy of the system, so let's do so here.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><msub><mn>K</mn><mi>m0</mi></msub><mo>+</mo><msub><mn>K</mn><mi>M0</mi></msub></math><br>
+	<math><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>m0</mi></msub><mi>2</mi></msup><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>M</mi><msup><msub><mi>v</mi><mi>M0</mi></msub><mi>2</mi></msup></math>
+</article>
+<p>For the final kinetic energy, we have the following.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>mf</mi></msub><mo>+</mo><msub><mn>K</mn><mi>Mf</mi></msub></math><br>
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>mf</mi></msub><mi>2</mi></msup><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>M</mi><msup><msub><mi>v</mi><mi>Mf</mi></msub><mi>2</mi></msup></math>
+</article>
+<p>We started our analysis of the various types of interactions via noting the special cases. Thus, let's first examine what will happen if the kinetic energy of the system remains constant; in other words, the initial and final kinetic energy is equal. Of course, this is a special case, so it might lead us to an interaction that we know!</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><msub><mn>K</mn><mi>f</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>m</mi><msup><msub><mi>v</mi><mi>m0</mi></msub><mi>2</mi></msup><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>M</mi><msup><msub><mi>v</mi><mi>M0</mi></msub><mi>2</mi></msup></mrow><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mrow><mi>m</mi><msup><msub><mi>v</mi><mi>mf</mi></msub><mi>2</mi></msup><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>M</mi><msup><msub><mi>v</mi><mi>Mf</mi></msub><mi>2</mi></msup></mrow></math><br>
+	<math><mrow><mi>m</mi><msup><msub><mi>v</mi><mi>m0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>M</mi><msup><msub><mi>v</mi><mi>M0</mi></msub><mi>2</mi></msup></mrow><mo>=</mo><mrow><mi>m</mi><msup><msub><mi>v</mi><mi>mf</mi></msub><mi>2</mi></msup><mo>+</mo><mi>M</mi><msup><msub><mi>v</mi><mi>Mf</mi></msub><mi>2</mi></msup></mrow></math><br>
+</article>
+<p>Now, to make more sense of it, we can move the initial and final velocities of each mass to one side, then factor out the square via using the difference of two squares.</p>
+<article class="equations">
+	<math><mrow><mi>m</mi><msup><msub><mi>v</mi><mi>m0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>m</mi><msup><msub><mi>v</mi><mi>mf</mi></msub><mi>2</mi></msup></mrow><mo>=</mo><mrow><mi>M</mi><msup><msub><mi>v</mi><mi>mf</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>M</mi><msup><msub><mi>v</mi><mi>M0</mi></msub><mi>2</mi></msup></mrow></math><br>
+	<math><mrow><mi>m</mi><mo>(</mo><msup><msub><mi>v</mi><mi>m0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><msup><msub><mi>v</mi><mi>mf</mi></msub><mi>2</mi></msup><mo>)</mo></mrow><mo>=</mo><mrow><mi>M</mi><mo>(</mo><msup><msub><mi>v</mi><mi>Mf</mi></msub><mi>2</mi></msup><mo>&minus;</mo><msup><msub><mi>v</mi><mi>M0</mi></msub><mi>2</mi></msup><mo>)</mo></mrow></math><br>
+	<math><mrow><mi>m</mi><mo>(</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>mf</mi></msub><mo>)</mo><mo>(</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>mf</mi></msub><mo>)</mo></mrow><mo>=</mo><mrow><mi>M</mi><mo>(</mo><msub><mi>v</mi><mi>Mf</mi></msub><mo>+</mo><msub><mi>v</mi><mi>M0</mi></msub><mo>)</mo><mo>(</mo><msub><mi>v</mi><mi>Mf</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>M0</mi></msub><mo>)</mo></mrow></math><br>
+</article>
+<p>Right now, the above equation is too complicated for us to parse; there are way too many variables, and too little information. However, we can gain one more bit of information by returning back to the conservation of momentum. If we do the same thing as we did, pairing up the initial and final velocities, we arrive at this expression.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><msub><mrow><mi>p</mi></mrow><mi>m0</mi></msub><mo>+</mo><msub><mrow><mi>p</mi></mrow><mi>M0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>mf</mi></msub><mo>+</mo><msub><mrow><mi>p</mi></mrow><mi>Mf</mi></msub></math><br>
+	<math><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>=</mo><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+	<math><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>&minus;</mo><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub><mo>=</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub></math><br>
+	<math><mi>m</mi><mo>(</mo><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>&minus;</mo><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub><mo>)</mo><mo>=</mo><mi>M</mi><mo>(</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub><mo>&minus;</mo><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>)</mo></math><br>
+</article>
+<p>Notice that the above has the exact same terms! Thus, we can cancel them out, and we are left with this familiar looking formula.</p>
+<article class="equations">
+	<math><mrow><mi>m</mi><mo>(</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>mf</mi></msub><mo>)</mo><mo>(</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>mf</mi></msub><mo>)</mo></mrow><mo>=</mo><mrow><mi>M</mi><mo>(</mo><msub><mi>v</mi><mi>Mf</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>M0</mi></msub><mo>)</mo><mo>(</mo><msub><mi>v</mi><mi>Mf</mi></msub><mo>+</mo><msub><mi>v</mi><mi>M0</mi></msub><mo>)</mo></mrow></math><br>
+	<math><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><msub><mi>v</mi><mi>mf</mi></msub><mo>=</mo><msub><mi>v</mi><mi>Mf</mi></msub><mo>+</mo><msub><mi>v</mi><mi>M0</mi></msub></math><br>
+</article>
+<p>When we studied the coefficient of restitution, we noted that this equation came up when we dealt with elastic collisions. Thus, we have shown here that the initial and final kinetic energy of a system is equal if and only if the collision is elastic.</p>
+<figure><img src="images/coll2.svg" alt="">
+<figcaption>Kinetic energy is conserved in an elastic collision.</figcaption></figure>
+<p>To further characterize this, we can imagine the two objects doing work on one another; when they collide, they do work on one another, transferring some of their kinetic energy to the other object. Of course, this transfer is usually not perfect; some of the kinetic energy is lost. However, in an elastic collision, this transfer is perfect.</p>
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q11.26) The following statement was taken from an exam paper: "The
+collision between two helium atoms is perfectly elastic, so
+that momentum is conserved." What do you think of this
+statement?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>It is true that in any interaction the momentum is conserved. However, saying that momentum is conserved because the collision is elastic attributes a fact about any interaction to happening only within a specific class of collisions, which certainly isn't right.</p>
+<p>A more logical conclusion would be that since the collision is elastic, kinetic energy is conserved.</p>
+</section>
+</section>
+
+<section hard class="examples"><mark variable></mark>
+<h2>Problem 1a</h2>
+<p>(HRK Q11.28a)  Consider a one-dimensional elastic collision between a moving object A and an object B initially at rest. How would you
+choose the mass of B, in comparison to the mass of A, in order that B should recoil with the greatest speed?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Momentum conservation gives us the following. We choose the mass of object B to depend on a coefficient <math><mi>b</mi></math> which we can choose, relative to the mass of A which we let as <math><mi>m</mi></math>.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mo>=</mo><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>Af</mi></msub><mo>+</mo><mi>b</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub></math><br>
+	<math><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Af</mi></msub><mo>+</mo><mi>b</mi><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub></math><br>
+</article>
+<p>We don't care about the final velocity of A, so we choose to solve for that so we can eliminate it later.</p>
+<article class="equations">
+	<math><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mo>&minus;</mo><mi>b</mi><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Af</mi></msub></math><br>
+	<math><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>2</mi><mi>b</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>+</mo><msup><mi>b</mi><mi>2</mi></msup><msup><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mi>2</mi></msup><mo>=</mo><msup><msub><mrow><mi>v</mi></mrow><mi>Af</mi></msub><mi>2</mi></msup></math><br>
+</article>
+<p>Lets now write the conservation of kinetic energy, given that the collision is elastic.</p>
+<article class="equations">
+	<math><msub><mrow><mn>K</mn></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mn>K</mn></mrow><mi>f</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>Af</mi></msub><mi>2</mi></msup><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>b</mi><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mi>2</mi></msup></math><br>
+	<math><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup><mo>=</mo><msup><msub><mrow><mi>v</mi></mrow><mi>Af</mi></msub><mi>2</mi></msup><mo>+</mo><mi>b</mi><msup><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mi>2</mi></msup></math><br>
+	<math><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup><mo>=</mo><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>2</mi><mi>b</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>+</mo><msup><mi>b</mi><mi>2</mi></msup><msup><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mi>2</mi></msup><mo>+</mo><mi>b</mi><msup><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mi>2</mi></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>0</mi><msup><mi>b</mi><mi>2</mi></msup><msup><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mi>2</mi></msup><mo>+</mo><mi>b</mi><msup><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>2</mi><mi>b</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub></math><br>
+</article>
+<p>If we factor out a <math><mi>b</mi><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub></math>, we have a curious equation. Here, we can throw out the solution where the final speed is zero; that would imply that object A just rebounds, and it certainly doesnt maximize its speed.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mi>b</mi><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>(</mo><mi>b</mi><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>+</mo><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>&minus;</mo><mi>2</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>b</mi><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>+</mo><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>&minus;</mo><mi>2</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub></math><br>
+	<math><mi>2</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub><mo>(</mo><mi>b</mi><mo>+</mo><mi>1</mi><mo>)</mo></math><br>
+	<math><mfrac><mrow><mi>2</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub></mrow><mrow><mi>b</mi><mo>+</mo><mi>1</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub></math><br>
+</article>
+<p>Now, what does this mean? It shows us that the speed of B is proportional the speed of A, that makes sense; but it is also inversely proportional the factor that we set for the mass. Thus, if the mass gets closer and closer to zero, the speed of B will increase and increase. If B were practically massless, or when our factor is zero, the maximum it could reach is the following.</p>
+<article class="equations">
+	<math><mi>2</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples"><mark variable></mark>
+<h2>Problem 1b</h2>
+<p>(HRK Q11.28b)  How would you choose the mass of B, in comparison to the mass of A, in order that B should recoil with the greatest momentum?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We got this equation from the previous question.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>2</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub></mrow><mrow><mi>b</mi><mo>+</mo><mi>1</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub></math><br>
+</article>
+<p>Now, the momentum of B is given by the following.</p>
+<article class="equations">
+	<math><msub><mi>p</mi><mi>Bf</mi></msub><mo>=</mo><mi>b</mi><mi>m</mi><msub><mi>v</mi><mi>Bf</mi></msub></math><br>
+	<math><msub><mi>p</mi><mi>Bf</mi></msub><mo>=</mo><mfrac><mrow><mi>2</mi><mi>b</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub></mrow><mrow><mi>b</mi><mo>+</mo><mi>1</mi></mrow></mfrac></math><br>
+</article>
+<p>This sort of formation is not that useful; the factor we are examining is on both the denominator and numerator. If, say, it was in the denominator, we could do the same analysis as before. We can do that by dividing the top and bottom by the factor.</p>
+<article class="equations">
+	<math><msub><mi>p</mi><mi>Bf</mi></msub><mo>=</mo><mfrac><mrow><mi>2</mi><mi>b</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub></mrow><mrow><mi>b</mi><mo>+</mo><mi>1</mi></mrow></mfrac><mo>&sdot;</mo><mfrac><mfrac><mi>1</mi><mi>b</mi></mfrac><mfrac><mi>1</mi><mi>b</mi></mfrac></math><br>
+	<math><msub><mi>p</mi><mi>Bf</mi></msub><mo>=</mo><mfrac><mrow><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub></mrow><mrow><mi>1</mi><mo>+</mo><mfrac><mi>1</mi><mi>b</mi></mfrac></mrow></mfrac></math><br>
+</article>
+<p>Now, let's interpret. We see that as mass goes to zero, the momentum goes to zero; clearly, that isn't good. Now, as mass increases, the bottom fraction goes to zero, and thus its reaches a maximum. This is what we want. Thus, we say that to maximize momentum, we let the mass of B approach infinity, with the maximum possible momentum being the following.</p>
+<article class="equations">
+	<math><msub><mi>p</mi><mi>Bf</mi></msub><mo>=</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+<p>Like how the initial and final momenta of a singular object may not be constant, the initial and final kinetic energy of an object can also vary; however, the total kinetic energy is conserved in an elastic collision. Thus, the following question asks how to maximize the kinetic energy. While the above two were solved using limiting cases, the question below requires calculus.</p>
+
+<section hard class="examples"><mark calc></mark>
+<h2>Problem 1c</h2>
+<p>(HRK Q11.28c)  How would you choose the mass of B, in comparison to the mass of A, in order that B should recoil with the greatest kinetic energy?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We reuse the same equation we got from the previous two questions.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>2</mi><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub></mrow><mrow><mi>b</mi><mo>+</mo><mi>1</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Bf</mi></msub></math><br>
+</article>
+<p>We write out the final kinetic energy of B as the following.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>Bf</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>b</mi><mi>m</mi><msup><msub><mi>v</mi><mi>Bf</mi></msub><mi>2</mi></msup></math><br>
+	<math><msub><mn>K</mn><mi>Bf</mi></msub><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>b</mi><mi>m</mi><mo>(</mo><mfrac><mrow><mi>4</mi><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup></mrow><mrow><msup><mi>b</mi><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>b</mi><mo>+</mo><mi>1</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><msub><mn>K</mn><mi>Bf</mi></msub><mo>=</mo><mfrac><mrow><mi>2</mi><mi>b</mi><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup></mrow><mrow><msup><mi>b</mi><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>b</mi><mo>+</mo><mi>1</mi></mrow></mfrac></math><br>
+</article>
+<p>Now, let's try to get the maximum via using calculus. To do this, we differentiate with respect to <math><mi>b</mi></math>; once this rate is equal to zero, we have reached a maximum.</p>
+<article class="equations">
+	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>b</mi></mrow></mfrac><msub><mn>K</mn><mi>Bf</mi></msub><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>b</mi></mrow></mfrac><mo>(</mo><mfrac><mrow><mi>2</mi><mi>b</mi><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup></mrow><mrow><msup><mi>b</mi><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>b</mi><mo>+</mo><mi>1</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>b</mi></mrow></mfrac><msub><mn>K</mn><mi>Bf</mi></msub><mo>=</mo><mi>2</mi><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup><mfrac><mi>d</mi><mrow><mi>d</mi><mi>b</mi></mrow></mfrac><mo>(</mo><mfrac><mrow><mi>b</mi></mrow><mrow><msup><mi>b</mi><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>b</mi><mo>+</mo><mi>1</mi></mrow></mfrac><mo>)</mo></math><br>
+</article>
+<p>We set the left hand side to zero, and discard all the constants. Then, all we have to do is differentiate. We will have to use product rule and chain rule for this.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>b</mi></mrow></mfrac><mo>(</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>2</mi></msup></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>b</mi></mrow></mfrac><mo>(</mo><mi>b</mi><mo>&sdot;</mo><mfrac><mrow><mi>1</mi></mrow><mrow><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>2</mi></msup></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><mi>1</mi></mrow><mrow><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>2</mi></msup></mrow></mfrac><mo>&sdot;</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>b</mi></mrow></mfrac><mi>b</mi><mo>+</mo><mi>b</mi><mo>&sdot;</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>b</mi></mrow></mfrac><mfrac><mrow><mi>1</mi></mrow><mrow><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>2</mi></msup></mrow></mfrac></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><mi>1</mi></mrow><mrow><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>2</mi></msup></mrow></mfrac><mo>+</mo><mi>b</mi><mo>&sdot;</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>b</mi></mrow></mfrac><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>&minus;2</mi></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><mi>1</mi></mrow><mrow><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>2</mi></msup></mrow></mfrac><mo>+</mo><mi>b</mi><mo>(</mo><mo>&minus;</mo><mi>2</mi><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>&minus;3</mi></msup><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><mi>1</mi></mrow><mrow><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>2</mi></msup></mrow></mfrac><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>b</mi></mrow><mrow><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>3</mi></msup></mrow></mfrac></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><mi>1</mi><mo>&minus;</mo><mi>b</mi></mrow><mrow><mi>(</mi><mi>b</mi><mo>+</mo><mi>1</mi><msup><mi>)</mi><mi>3</mi></msup></mrow></mfrac></math><br>
+</article>
+<p>This shows us that the maximum is attained when the mass of B is equal to that of A. For fun, we can also get what this maximum kinetic energy is.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>Bf</mi></msub><mo>=</mo><mfrac><mrow><mi>2</mi><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup></mrow><mrow><mi>3</mi></mrow></mfrac></math><br>
+	<math><msub><mn>K</mn><mi>Bf</mi></msub><mo>=</mo><mfrac><mi>2</mi><mi>3</mi></mfrac><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>A0</mi></msub><mi>2</mi></msup></math><br>
+</article>
+</section>
+</section>
+
+<p>If in an elastic collision all the kinetic energy is transferred without any loss, then that means in an inelastic collision there is some loss of kinetic energy. This makes sense in terms of the coefficient of restitution as well; since the speed of seperation is less than that of approach, it means some speed is "lost" after collision.</p>
+<figure><img src="images/coll3.svg" alt="">
+<figcaption>Some kinetic energy is "lost" in an inelastic collision.</figcaption></figure>
+<p>We know that as the coefficient of restitution gets lower and lower, the speed "lost" gets greater and greater; thus the kinetic energy "loss" gets higher and higher as well. Thus, the maximum amount of kinetic energy is lost in a perfectly inelastic collision.</p>
+
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(HRK E11.41) A <math><mi>35.0</mi><mo>&sdot;</mo><msup><mi>10</mi><mi>3</mi></msup></math> kg railroad freight car collides with a stationary caboose car. They couple together and 27.0% of the initial kinetic energy is dissipated as heat, sound, vibrations, and so
+on. Find the mass of the caboose.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first write out the conservation of momentum for an inelastic collision. We will let the mass of the caboose car be <math><mi>m</mi></math>.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>=</mo><mo>(</mo><mi>m</mi><mo>+</mo><mi>M</mi><mo>)</mo><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>=</mo><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mo>&minus;</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mo>=</mo><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mfrac><mrow><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub></mrow><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></mfrac><mo>&minus;</mo><mi>M</mi><mo>=</mo><mi>m</mi></math><br>
+</article>
+<p>This would be great but we have no idea what the initial and final velocity is. However, we can use the second part of the sentence to it. We are given the ratio of that 27.0% of the initial kinetic energy is lost, so that means 73.0% is kept.</p>
+<article class="equations">
+	<math><mi>0.73</mi><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><msub><mn>K</mn><mi>f</mi></msub></math><br>
+	<math><mi>0.73</mi><mo>(</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>M</mi><msup><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mi>2</mi></msup><mo>)</mo><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mo>(</mo><mi>m</mi><mo>+</mo><mi>M</mi><mo>)</mo><msup><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mi>2</mi></msup></math><br>
+	<math><mi>0.73</mi><mi>M</mi><msup><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mi>2</mi></msup><mo>=</mo><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mi>2</mi></msup><mo>+</mo><mi>M</mi><msup><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mi>2</mi></msup></math><br>
+	<math><mi>0.73</mi><mi>M</mi><msup><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>M</mi><msup><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mi>2</mi></msup><mo>=</mo><mi>m</mi><msup><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mi>2</mi></msup></math><br>
+	<math><mfrac><mrow><mi>0.73</mi><mi>M</mi><msup><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mi>2</mi></msup></mrow><mrow><msup><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mi>2</mi></msup></mrow></mfrac><mo>=</mo><mi>M</mi><mo>+</mo><mi>m</mi></math><br>
+	<math><mfrac><mrow><msup><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mi>2</mi></msup></mrow><mrow><msup><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mi>2</mi></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>0.73</mi><mi>M</mi></mrow></mfrac></math><br>
+</article>
+<p>Notice how the above equation we got from momentum conservation is similar to that below. If we could get the square of the ratio of the initial to final velocity, we could solve for the mass quite easily. Let's do that, then.</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub></mrow><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow><mi>M</mi></mfrac></math><br>
+	<math><mfrac><mrow><msup><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub><mi>2</mi></msup></mrow><msup><msub><mrow><mi>v</mi></mrow><mi>f</mi></msub><mi>2</mi></msup></mfrac><mo>=</mo><mfrac><mrow><msup><mi>m</mi><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>m</mi><mi>M</mi><mo>+</mo><msup><mi>M</mi><mi>2</mi></msup></mrow><msup><mi>M</mi><mi>2</mi></msup></mfrac></math><br>
+</article>
+<p>Let's now subtitute in and solve for the mass.</p>
+<article class="equations">
+	<math><mfrac><mrow><msup><mi>m</mi><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>m</mi><mi>M</mi><mo>+</mo><msup><mi>M</mi><mi>2</mi></msup></mrow><msup><mi>M</mi><mi>2</mi></msup></mfrac><mo>=</mo><mfrac><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>0.73</mi><mi>M</mi></mrow></mfrac></math><br>
+	<math><mfrac><mrow><mi>0.73</mi><msup><mi>m</mi><mi>2</mi></msup><mo>+</mo><mi>0.73</mi><mo>&sdot;</mo><mi>2</mi><mi>m</mi><mi>M</mi><mo>+</mo><mi>0.73</mi><msup><mi>M</mi><mi>2</mi></msup></mrow><mi>M</mi></mfrac><mo>=</mo><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></math><br>
+	<math><mfrac><mi>0.73</mi><mi>M</mi></mfrac><mrow><msup><mi>m</mi><mi>2</mi></msup><mo>+</mo><mi>0.46</mi><mi>m</mi><mo>&minus;</mo><mi>0.27</mi><mi>M</mi></mrow><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>This is a quadratic equation, now. Discarding the negative solution from the quadratic equation, we get that the mass of the caboose is around 12900kg.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 2</h2>
+<p>(HRK Q11.25)  We have seen that the conservation of momentum may apply
+whether kinetic energy is conserved or not. What about the
+reverse; that is, does the conservation of kinetic energy imply
+the conservation of momentum in classical physics?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Yes. If kinetic energy is conserved, it means that the interaction is elastic. However, since kinetic energy is a scalar, it doesn't necessarily imply that momentum is conserved in more than one dimension.</p>
+</section>
+</section>
+<p>The last kind of interaction that we skimmed is that of explosions, where coefficient of restitution is greater than one. These superelastic collisions have greater final kinetic energy than initial kinetic energy.</p>
+<figure><img src="images/coll4.svg" alt="">
+<figcaption>More kinetic energy "appears" in an explosion.</figcaption></figure>
+
+<section class="examples">
+<h2>Question 3</h2>
+<p>(HRK Q11.29) In commenting on the fact that kinetic energy is not conserved in a totally inelastic collision, a student observed that
+kinetic energy is not conserved in an explosion and that a totally inelastic collision is merely the reverse of an explosion.
+Is this a useful or valid observation?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>It is valid, noting that an explosion has coefficient of restitution greater than one, which is opposite that of an inelastic collision. Of course, its usefulness depends on the reader.</p>
+</section>
+</section>
+
+<p>One lingering question is where does kinetic energy go during an inelastic collision? Where does kinetic energy come from in an explosion?</p>
+<p>When we analyzed the CM frame, we noted that the only way to change the speed of such a frame is if there was a net external force on the object; an impulse occurs, thus there is change in momentum. With this in mind, maybe we can apply this logic to kinetic energy.</p>
+</main>
+<footer>
+<a unfinished>Work by External Forces ></a>
+</footer>
+</body>
+</html>

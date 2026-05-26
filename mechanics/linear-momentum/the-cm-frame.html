@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>system - special</title>
+	<title>linmoment - special</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
 	<script defer src="../script.js"></script>
@@ -18,12 +18,17 @@
 		<section>
 		<h2>Summary</h2>
 		<p>In the CM frame, a collision appears to be head-on with zero initial and final momentum</p>
-		<p>The speed of the CM frame is constant before and after collision</p>
+		<p>The speed of the CM frame is constant before and after collision, as the forces within the chosen system are internal</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math>
+		<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><msub><mi>p</mi><mi>0</mi></msub><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math>
 		</section>
 	</article>
 </aside>
 <main>
-<p>We noted before that we can do physics in any reference frame. So far, we have analyzed collisions all in a stationary reference frame. For example, an elastic collision is shown below.</p>
+<p>Now that we are comfortable with collisions, we now look for ways to simplify them. One such way is via changing our reference frame. We noted before that we can do physics in any reference frame. So far, we have analyzed collisions all in a stationary reference frame. For example, an elastic collision is shown below.</p>
 <figure><video autoplay muted loop><source src="images/cm2.mp4" type="video/mp4"></video>
 <figcaption>An elastic collision of two objects of equal mass in the lab frame.</figcaption></figure>
 <p>This reference frame is called the "lab frame".</p>
@@ -87,8 +92,6 @@
 	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math>
 </article>
 <p>Thus, if we move at this speed, it will appear that the initial momentum is zero. Consequently, by the conservation of momentum, it means that the final momentum after collision must also be zero.</p>
-<p>It may help to notice that the "CM" frame is precisely the center-of-mass of a system. In other words, if we use the reference frame of the center of mass, it will appear as if the initial momenta of the system is zero.</p>
-<p>Further, the equation we derived is precisely the same as the one we derived last time.</p>
 
 <section class="examples"><mark custom></mark>
 <h2>Question 2</h2>
@@ -121,8 +124,11 @@
 </article>
 </section>
 </section>
-<p>Here, we derived the equation for the speed of the CM frame for two particles. However, using the formula we got for multiple particles, we can extend this fact to deal with collisions involving multiple particles.</p>
-<p>Sadly, unlike for two particle collisions, there is no set equation for the final velocity of any of the particles given the initial momenta, even if we use the CM frame. Nevertheless, the CM frame can prove useful to simplify these situations.</p>
+<p>One question remains: why does the CM frame stay constant during a collision? Clearly, the momentum must change because there is force happening between the two objects in collision. This force should generate an impulse as well, and an impulse changes momentum; thus, shouldn't the overall momentum change?</p>
+<p>To answer this question: no. Recall in our study of systems that we noted that only external forces can change the motion of a system. Here, we set the system to be the two particles that we are observing in the CM frame.</p>
+<figure><img src="images/cm5.svg" alt="">
+<figcaption>The internal forces that occur during the collision do not affect the movement of the CM frame.</figcaption></figure>
+<p>We can thus see that the two objects exerting forces on one-another are but internal forces.</p>
 <section hard class="examples">
 <h2>Problem 1</h2>
 <p>(HRK E7.18) A railway flat car is rushing along a level frictionless track at a
@@ -133,7 +139,7 @@ supply of cannon balls on the car is 3500 kg. How many cannon
 balls must be fired to bring the car as close to rest as possible?</p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>We take the entire system to be the car, the cannon, and the cannonballs, even when they are in the air. Now, we can first treat the entire system as a particle, and thus the CM of that system moves at the same speed as the particle, or 45m/s.</p>
+<p>We take the entire system to be the car, the cannon, and the cannonballs, even when they are in the air. Now, we can first treat the entire system as a particle, and thus in the CM frame of that system moves at the same speed as the particle, or 45m/s.</p>
 <article class="equations">
 	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><msub><mi>p</mi><mi>0</mi></msub><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac></math><br>
 	<math><msub><mi>v</mi><mi>cm</mi></msub><mo>=</mo><mfrac><mrow><mi>M</mi><msub><mi>v</mi><mi>0</mi></msub></mrow><mi>M</mi></mfrac><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math>
@@ -149,7 +155,7 @@ balls must be fired to bring the car as close to rest as possible?</p>
 <p>Thus, four cannonballs need to be shot out.</p>
 </section>
 </section>
-<p>One thing to note about the above two problems is that we take a system wherein mass is constant. In this system, momentum is conserved, and we can waive the internal forces, and thus the center of mass of the system does not move.</p>
+<p>One thing to note about the above two problems is that we take a system wherein mass is constant. In this system, momentum is conserved, and we can waive the internal forces, and thus we can follow the CM frame as it moves at constant speed.</p>
 </main>
 <footer>
 <a href="variable-mass-I.html">Variable Mass I ></a>

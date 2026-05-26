@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>workenergy - lineints</title>
+	<title>workenergy - integral</title>
 	<meta name="description" content="A compilation of physics notes">
 	<link rel="stylesheet" href="../styles.css">
 	<script defer src="../script.js"></script>
@@ -17,107 +17,144 @@
 	<article>
 		<section>
 		<h2>Summary</h2>
-		<p>You need a force and a displacement for work to be exerted; displacement without a force or force without displacement has no work occuring</p>
-		<p>Work is only done in the direction of the force / direction of displacement</p>
-		<p>It is a dot product of force and displacement; thus, it is a scalar</p>
-		<p>No work can occur if the force and displacement is perpendicular to one another; negative work can occur if force points opposite the displacement</p>
+		<p>Work is the line integral of the dot product of the force and infinitesimal displacement vectors over a path from initial to final position</p>
+		<p>The more general line integral for work integrates over the path taken, not the displacement</p>
 		</section>
 		<section>
 		<h2>Equations</h2>
-		<math><mn>W</mn><mo>=</mo><mi>F</mi><mi>d</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+		<math><mn>W</mn><mo>=</mo><mo>&int;</mo><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>		
+		<p>The following two formations are acceptable, and are usable in different scenarios</p>
+		<math><mn>W</mn><mo>=</mo><mo>&int;</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mi>d</mi><mi>r</mi></math><br>
+		<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mi>F</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><mo>&int;</mo><msub><mi>F</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math><br>
 		</section>
 	</article>
 </aside>
 <main>
-<p>In this topic, we will extend our knowledge of work to two dimensions. So far, we have only dealt with displacement in one-dimension; horizontally, vertically, or parallel to an incline. Now, we drop that requirement.</p>
-<p>Unlike the integral for impulse, which integrates over time, which is one-dimensional, position can be expressed in two dimensions, the x-component and the y-component.</p>
-<p>To deal with such, we will return to the dot product definition for work.</p>
+<p>Unlike the integral for impulse, which integrates over the time, which is a one-dimensional scalar, position can be expressed in two dimensions; it is a vector, after all.</p>
+<p>Thus, to deal with two-dimensional displacement, we will revert back to the coordinate system with the x-component and the y-component of position. Then, we plot the initial and final position, then we can connect them to get the displacement.</p>
+<figure><img src="images/lineint1.svg" alt="">
+<figcaption>The initial and final position, and the displacement between them.</figcaption></figure>
+<p>However, since we are moving in two dimensions now, notice there are an infinite number of paths from initial to final position. Since distance is not displacement, every path from initial to final position could have varying path lengths.</p>
+<p>Thus, to make this integral truly general, we have to deal with as if we are on a general path, instead of a straight line from initial to final position.</p>
+<figure><img src="images/lineint2.svg" alt="">
+<figcaption>A general path from initial to final position, with distance <math><mi>L</mi></math>.</figcaption></figure>
+<p>Now, to get the work, let's zoom in on a little portion of that path between the initial and final position. Within this infinitesimal position, a small infinitesimal part of work is done. This infinitesimal work is done by the force at that position and the direction of displacement.</p>
+<p>Thus, we can write out the total work done on the object via adding all these infinitesimal work elements.</p>
 <article class="equations">
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mi>d</mi><mi>W</mi></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><mi>d</mi><mn>W</mn></math><br>
 </article>
-<p>Here, notice the use of <math><mi>d</mi><mi>r</mi></math>; this is just a generic position somewhere. Now, we will use one definition of the dot product, being that the dot product is the sum of the products of the two vectors in their component forms, to get this integral.</p>
+<p>Another caveat of being in two dimensions is that we can't just assume that they are parallel to one another; thus, we have to use the dot product formation of work. This formation allows us to convert these vectors into scalars, which don't have direction and thus are in some sense always parallel. We write it out as follows.</p>
 <article class="equations">
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><msub><mi>F</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><msub><mi>F</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><msub><mi>F</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><mo>&int;</mo><msub><mi>F</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
 </article>
-<p>In this formulation, we have separated it into the work done by the horizontal component of the force and the vertical component of the force along the horizontal and vertical displacement.</p>
-<section hard class="examples"><mark custom calc></mark>
-<h2>Problem 1a</h2>
-<p style="margin-bottom:0">Show that the work done on an object of mass <math><mi>m</mi></math> by the weight, starting at an original position <math><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub></math> displacing it to the point <math><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math>, is the following equation. </p>
+<p>Now, as we discussed before, there are two ways to deal with this. We can either just multiply it by the cosine of the angle between the two, which aligns it correctly, or we can break both of them into components. Both formulations are useful in their own right; we will use them both later. Thus, we start with the first formation.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mi>d</mi><mi>r</mi></math><br>
+</article>
+<p>What this formation says is that the total work done on an object is the sum of the product of the magnitude of the force and the angle between the force and displacement along every position along the path.</p>
+<p>This formation is useful if, for example, you know the magnitude of the force and the angle between the force and displacement along every position.</p>
+<figure><img src="images/lineint3.svg" alt="">
+<figcaption>The first formation for the work.</figcaption></figure>
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 1</h2>
+<p>Show that the work done by the centripetal force, which points perpendicular to the displacement, displacing an object in a circle is zero.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Recall that the centripetal force always points perpendicular to the displacement. Thus, &theta; is 90&deg; for the entire displacement. Note that we can say this because, at any given position along the path, this fact holds true; the displacement vector will point perpendicular to that of the force vector.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><mi>d</mi><mn>W</mn></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mi>c</mi></msub><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mi>F</mi><mi>c</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mi>d</mi><mi>r</mi></math><br>
+</article>
+<p>Since the cosine of 90 degrees is zero, it brings the entire work to zero.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mi>F</mi><mi>c</mi></msub><mi>cos</mi><mi>(90&deg;)</mi><mi>d</mi><mi>r</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mi>0</mi></math><br>
+</article>
+</section>
+</section>
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 2</h2>
+<p style="margin: 0;">Show that the work done by the force of kinetic friction, which points opposite of the displacement, is given by the following, with <math><mi>L</mi></math> being the length of the path taken.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>L</mi></math><br>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Here, &theta; is 180&deg; for the entire displacement, as kinetic friction always points opposite that of the displacement.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><mi>d</mi><mn>W</mn></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mover><mi>f</mi><mo>&rightarrow;</mo></mover><mi>k</mi></msub><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mi>d</mi><mi>r</mi></math><br>
+</article>
+<p>Since the cosine of 180 degrees is negative one, it makes the entire thing negative. Then, we take out the constant magnitude kinetic friction.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>cos</mi><mi>(180&deg;)</mi><mi>d</mi><mi>r</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>d</mi><mi>r</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mo>&int;</mo><mi>d</mi><mi>r</mi></math><br>
+</article>
+<p>Now, we have to choose how to evaluate the integral. Clearly, we want to evaluate from the start of the path to the end of it. Thus, we choose to evaluate from the initial to the final posiiton.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><munderover><mo>&int;</mo><msub><mi>r</mi><mi>0</mi></msub><mi>r</mi></munderover><mi>d</mi><mi>r</mi></math><br>
+</article>
+<p>This is basically telling us then to just sum up all the positions along the path, which gives us the path length.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>L</mi></math><br>
+</article>
+</section>
+</section>
+<p>For the alternate definition, we break the dot product into two components. Like before, we can choose these two components freely. Here, we choose them to be parallel to the axes.</p>
+<figure><img src="images/lineint4.svg" alt="">
+<figcaption>The second formation for work.</figcaption></figure>
+<p>This formation is useful if, say, the force only acts on a certain direction, such as perpendicular to a surface. Overall, these formulations for the integral for work are called line integrals, as they integrate over a path.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mi>F</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><msub><mi>F</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mi>F</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><mo>&int;</mo><msub><mi>F</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math><br>
+</article>
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 3</h2>
+<p style="margin-bottom:0">Show that the work done on an object of mass <math><mi>m</mi></math> by its weight, starting at an original position <math><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub></math> displacing it to the point <math><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math>, is the following equation. </p>
 <article class="equations">
 		<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>&Delta;</mi><mi>y</mi></math>
 </article>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>We note that the weight only has a vertical component. Thus, writing our the integral for work, we have the following. We let going up as positive, so weight will point negative.</p>
+<p>We note that the weight only has a vertical component. Thus, writing out the integral for work, we have the following. We let going up as positive, so weight will point negative.</p>
 <article class="equations">
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mo>&minus;</mo><mover><mi>w</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><mover><mi>w</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><msub><mi>w</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>&minus;</mo><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><mover><mi>w</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mo>(</mo><mo>&int;</mo><msub><mi>w</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>)</mo></math>
 </article>
-<p>Here, the horizontal component of the weight is basically useless, and drops out.</p>
+<p>Here, the horizontal component of the weight drops out, as weight has no horizontal component.</p>
 <article class="equations">
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><mi>m</mi><mi>g</mi><mi>d</mi><mi>y</mi></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mo>&int;</mo><mi>d</mi><mi>y</mi></math>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><mi>m</mi><mi>g</mi><mi>d</mi><mi>y</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mo>&int;</mo><mi>d</mi><mi>y</mi></math>
 </article>
-<p>Now, we will integrate from the initial to the final position; thankfully, this is just the initial vertical position to the final vertical position.</p>
+<p>Now, we will integrate from the initial to the final position; these correspond to the initial vertical and final vertical position respectively.</p>
 <article class="equations">
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><mi>d</mi><mi>y</mi></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mo>[</mo><mi>y</mi><mo>&minus;</mo><msub><mi>y</mi><mi>0</mi></msub><mo>]</mo></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><mi>d</mi><mi>y</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mo>[</mo><mi>y</mi><mo>&minus;</mo><msub><mi>y</mi><mi>0</mi></msub><mo>]</mo></math><br>
 	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>&Delta;</mi><mi>y</mi></math>
 </article>
 </section>
 </section>
-
-<p>For the other definition for the dot product, we have this formulation.</p>
-<article class="equations">
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mi>F</mi><mi>cos</mi><mi>(&theta;)</mi><mi>d</mi><mi>s</mi></math>
-</article>
-<p>Here, we use the variable <math><mi>d</mi><mi>s</mi></math>. This is because, unlike for the above integral, which deals with the displacement in one component, this integral has to deal with every path that could be taken by the object, all at once.</p>
-<p>Recall that distance and displacement are not the same; distance is the length of the path taken, while displacement is just the change in initial to final position.</p>
-<figure><img src="images/integral4.svg" alt="">
-<figcaption>There are multiple paths from initial to final position, each with different path lengths and distance.</figcaption></figure>
-<p>We can use the above formulation if we know, for every single position along the path of distance, the magnitude of the force and the angle between that and of the infinitesimal distance. This is usually a pipe dream.</p>
-<section class="examples"><mark custom></mark>
-<h2>Problem 1b</h2>
-<p>What can be said about the equation for the work done by weight? Does it depend on the path of the object? What factors does it depend on?</p>
-<h2>Solution<button onclick="toggle(this)">v</button></h2>
-<section class="solution">
-<p>The above confirms what we have seen earlier; the work done by weight only depends on the vertical displacement. This means that, for example, when moving a box upstairs, it doesn't matter how long the stairs are; it only matters how high you go.</p>
-<p>Another thing to note is that it is path-independent; in other words, it only depends on the initial and final position of the object. Thus, if you move a box up and then move it down to where it started, the weight does not do any work.</p>
-</section>
-</section>
-
 <section hard class="examples"><mark custom calc></mark>
-<h2>Problem 2</h2>
-<p style="margin-bottom:0">Show that the work done on an object of mass <math><mi>m</mi></math> by the kinetic friction, starting at an original position <math><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub></math> displacing it to the point <math><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math>, is the following equation. Let the length of the path taken for the object be <math><mi>L</mi></math>.</p>
-<article class="equations">
-		<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>L</mi></math>
-</article>
+<h2>Exercise 4</h2>
+<p>Show that the work done on an object of mass <math><mi>m</mi></math> by the normal force, displaced a distance <math><mi>d</mi></math> parallel to the surface, is zero in a reference frame wherein the surface it is on is stationary.</p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>This time, we actually know the angle between the force and the displacement for every single position; friction always points opposite the direction of motion, thus &theta; is always 180&deg;.</p>
+<p>Noting that the normal force points perpendicular to the surface, it is right to decompose the dot product into perpendicular and parallel to the surface components.</p>
 <article class="equations">
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><msub><mover><mi>f</mi><mo>&rightarrow;</mo></mover><mi>k</mi></msub><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>cos</mi><mi>(180&deg;)</mi><mi>d</mi><mi>s</mi></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>d</mi><mi>s</mi></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mo>&int;</mo><mi>d</mi><mi>s</mi></math>
+	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mover><mi>N</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><msub><mi>N</mi><mi>&parallel;</mi></msub><mi>d</mi><msub><mi>r</mi><mi>&parallel;</mi></msub><mo>+</mo><mo>&int;</mo><msub><mi>N</mi><mi>&perp;</mi></msub><mi>d</mi><msub><mi>r</mi><mi>&perp;</mi></msub></math><br>
 </article>
-<p>What should the bounds of integration be? Well, we started at the start of the path, let's say 0, then we have travelled a distance <math><mi>L</mi></math>. Thus, we integrate from the start of the path to the entire length of the path.</p>
-<article class="equations">
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><munderover><mo>&int;</mo><mi>0</mi><mi>L</mi></munderover><mi>d</mi><mi>s</mi></math><br>
-	<math><mi>W</mi><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>L</mi></math>
-</article>
+<p>Here, the parallel component of the normal force is zero; it has no parallel component. Further, perpendicular componant of the displacement is zero; it has no component. Thus, overall, the work evaluates to zero.</p>
 </section>
 </section>
-
+<p>Notice how the forces we have been integrating are the common forces that we have discussed, with the exception of tension and static friction. Later on, these equations that we have computed will prove useful to us when we examine how these forces doing work affect the motion of an object.</p>
 </main>
 <footer>
-<a href="force-position-graphs.html">Force-Position Graphs ></a>
+<a href="kinetic-energy.html">Kinetic Energy ></a>
 </footer>
 </body>
 </html>

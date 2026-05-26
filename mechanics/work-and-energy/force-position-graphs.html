@@ -19,6 +19,11 @@
 		<h2>Summary</h2>
 		<p>A force-position graph graphs the component of the force along a certain displacement</p>
 		<p>Work is the area under the force-position graph</p>
+		<p>Work is the integral of force over a displacement with respect to position</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mi>F</mi><mi>d</mi><mi>x</mi></math>
 		</section>
 	</article>
 </aside>
@@ -82,9 +87,109 @@ the force as the block is displaced 8.0m?</p>
 </article>
 </section>
 </section>
+
+<p>Like with the integral for impulse, we can generate an integral here for work. Here, we show how to do such.</p>
+<p>First, note that the displacement, which here we will write as &Delta;x is the same as the difference of the initial position and the final position, shown below.</p>
+<article class="equations">
+<math><mi>&#x0394</mi><mi>t</mi><mo>=</mo><mo>(</mo><msub><mi>x</mi><mi>f</mi></msub><mo>−</mo><msub><mi>x</mi><mi>0</mi></msub><mo>)</mo></math><br>
+</article>
+<p>Graphically, this corresponds to the starting point of our integral and the ending point of our integral. This gives us the bounds for our integral. Thus, we get that work is the integral of force with respect to time from the initial to the final position.</p>
+<figure><img src="images/integral2.svg" alt="">
+<figcaption>The integral for work.</figcaption></figure>
+<p>Specifically, the integral gives us the sum of the signed area of the graph; negative force gives us negative area while positive force gives us positive area. This makes sense; if a force is negative, or points away from the displacement, it does negative work.</p>
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 1a</h2>
+<p>A force varies based on <math><msub><mi>F</mi><mi>s</mi></msub><mo>=</mo><mo>&minus;</mo><mi>2</mi><mi>x</mi></math>. What is the work done by the force in displacing an object 5.00 meters from its initial position?</p>
+<figure><img src="images/spring1.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
+<p>Such a force is used by a spring. The negative sign is used such that the force goes opposite the displacement, allowing it to return to its initial position; the coefficient is used to determine the "springiness" of the spring.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We are given the force, so we will just use the integral.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>0.00</mi><mi>5.00</mi></munderover><msub><mi>F</mi><mi>s</mi></msub><mi>d</mi><mi>x</mi><mo>=</mo><mn>W</mn></math><br>
+	<math><munderover><mo>&int;</mo><mi>0.00</mi><mi>5.00</mi></munderover><mo>&minus;</mo><mi>2</mi><mi>x</mi><mi>d</mi><mi>x</mi><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>2</mi><munderover><mo>&int;</mo><mi>0.00</mi><mi>5.00</mi></munderover><mi>x</mi><mi>d</mi><mi>x</mi><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>2</mi><mfrac><msup><mi>x</mi><mi>2</mi></msup><mi>2</mi></mfrac><munderover><mo>|</mo><mi>0.00</mi><mi>5.00</mi></munderover><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>2</mi><mfrac><msup><mi>(5)</mi><mi>2</mi></msup><mi>2</mi></mfrac><mo>=</mo><mo>&minus;</mo><mi>6.25J</mi><mo>=</mo><mn>W</mn></math><br>
+</article>
+</section>
+</section>
+
+<p>This exercise gives us a unique type of force that we will analyze throughout this topic. We will give it a nickname, calling it the "spring force". Of course, here, we won't deal too much with its dynamics, but just how it plays with work.</p>
+<p>Here, we will let the force be a more general form, <math><msub><mi>F</mi><mi>s</mi></msub><mo>=</mo><mo>&minus;</mo><mi>k</mi><mi>x</mi></math>. The reasoning for this formation is said in the above exercise; the <math><mi>k</mi></math> is the coefficient said, which gives the "springiness" of the spring. The higher this constant, the more the stiff the spring is.</p>
+<figure><img src="images/forcepos5.svg" alt="">
+<figcaption>The force-position graph of the above force.</figcaption></figure>
+<p>As seen, the graph forms a triangle with base <math><mi>d</mi></math> and height <math><mo>&minus;</mo><mi>k</mi><mi>d</mi></math>, which if we use the description of work such that it is the area under the graph, will give the same as above.</p>
+
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 1b</h2>
+<p>Compute for the work done by the spring force, <math><msub><mi>F</mi><mi>s</mi></msub><mo>=</mo><mo>&minus;</mo><mi>k</mi><mi>x</mi></math>, displaced a distance <math><mi>d</mi></math> from its initial position. Let <math><mi>k</mi></math> be a positive constant.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will use the integral method first.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>d</mi></munderover><mo>&minus;</mo><mi>k</mi><mi>x</mi><mi>d</mi><mi>x</mi><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><munderover><mo>&int;</mo><mi>0</mi><mi>d</mi></munderover><mi>x</mi><mi>d</mi><mi>x</mi><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><mfrac><msup><mi>x</mi><mi>2</mi></msup><mi>2</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>d</mi></munderover><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><mfrac><msup><mi>d</mi><mi>2</mi></msup><mi>2</mi></mfrac><mo>=</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>k</mi><msup><mi>d</mi><mi>2</mi></msup><mo>=</mo><mn>W</mn></math><br>
+</article>
+<p>An alternate approach is just to use the area definition. It is, as said, a triangle.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>b</mi><mi>h</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>d</mi><mi>k</mi><mi>d</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>k</mi><msup><mi>d</mi><mi>2</mi></msup></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples"><mark calc></mark>
+<h2>Exercise 2</h2>
+<p>(HRK P11.13) A "stiff" spring has a force law given by <math><msub><mi>F</mi><mi>s</mi></msub><mo>=</mo><mo>&minus;</mo><mi>k</mi><msup><mi>x</mi><mi>3</mi></msup></math>. The work required to stretch the spring a distance <math><mi>d</mi></math> from the initial position is <math><msub><mn>W</mn><mi>0</mi></msub></math>. In terms of <math><msub><mn>W</mn><mi>0</mi></msub></math>, how
+much work is required to extend the spring from <math><mi>d</mi></math> to the length <math><mi>2</mi><mi>d</mi></math>?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>First, let's see what <math><msub><mn>W</mn><mi>0</mi></msub></math> is in terms of <math><mi>d</mi></math>. Setting up the integral, we have the following.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>d</mi></munderover><mo>&minus;</mo><mi>k</mi><msup><mi>x</mi><mi>3</mi></msup><mi>d</mi><mi>x</mi><mo>=</mo><msub><mn>W</mn><mi>0</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><munderover><mo>&int;</mo><mi>0</mi><mi>d</mi></munderover><msup><mi>x</mi><mi>3</mi></msup><mi>d</mi><mi>x</mi><mo>=</mo><msub><mn>W</mn><mi>0</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><mfrac><msup><mi>x</mi><mi>4</mi></msup><mi>4</mi></mfrac><munderover><mo>|</mo><mi>0</mi><mi>d</mi></munderover><mo>=</mo><msub><mn>W</mn><mi>0</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><mfrac><msup><mi>d</mi><mi>4</mi></msup><mi>4</mi></mfrac><mo>=</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>4</mi></mfrac><mi>k</mi><msup><mi>d</mi><mi>4</mi></msup><mo>=</mo><msub><mn>W</mn><mi>0</mi></msub></math><br>
+</article>
+<p>Now, we change the bounds of integration to see how much is needed to stretch it to <math><mi>2</mi><mi>d</mi></math>.</p>
+<article class="equations">
+	<math><munderover><mo>&int;</mo><mi>d</mi><mrow><mi>2</mi><mi>d</mi></mrow></munderover><mo>&minus;</mo><mi>k</mi><msup><mi>x</mi><mi>3</mi></msup><mi>d</mi><mi>x</mi><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><munderover><mo>&int;</mo><mi>d</mi><mrow><mi>2</mi><mi>d</mi></mrow></munderover><msup><mi>x</mi><mi>3</mi></msup><mi>d</mi><mi>x</mi><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><mfrac><msup><mi>x</mi><mi>4</mi></msup><mi>4</mi></mfrac><munderover><mo>|</mo><mi>d</mi><mrow><mi>2</mi><mi>d</mi></mrow></munderover><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><mo>[</mo><mfrac><msup><mrow><mi>(</mi><mi>2</mi><mi>d</mi><mi>)</mi></mrow><mi>4</mi></msup><mi>4</mi></mfrac><mo>&minus;</mo><mfrac><msup><mi>d</mi><mi>4</mi></msup><mi>4</mi></mfrac><mo>]</mo><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><mo>[</mo><mfrac><mrow><mi>16</mi><msup><mi>d</mi><mi>4</mi></msup></mrow><mi>4</mi></mfrac><mo>&minus;</mo><mfrac><msup><mi>d</mi><mi>4</mi></msup><mi>4</mi></mfrac><mo>]</mo><mo>=</mo><mn>W</mn></math><br>
+	<math><mo>&minus;</mo><mi>k</mi><mfrac><mrow><mi>15</mi><msup><mi>d</mi><mi>4</mi></msup></mrow><mi>4</mi></mfrac><mo>=</mo><mn>W</mn></math><br>
+</article>
+<p>If we factor out the 15, we can see that it is exactly such that of <math><msub><mn>W</mn><mi>0</mi></msub></math>.</p>
+<article class="equations">
+	<math><mi>15</mi><mo>(</mo><mo>&minus;</mo><mfrac><mrow><mi>1</mi></mrow><mi>4</mi></mfrac><mi>k</mi><msup><mi>d</mi><mi>4</mi></msup><mo>)</mo><mo>=</mo><mn>W</mn></math><br>
+	<math><mi>15</mi><msub><mn>W</mn><mi>0</mi></msub><mo>=</mo><mn>W</mn></math><br>
+</article>
+</section>
+</section>
+
+<p>We end this formally, like we did with the integral for impulse. We once again divide the graph into tiny portions of &delta;x, or small positions of the displacement.</p>
+<p>Thus, we have cut up the graph into tiny rectangles, each with a tiny area &delta;W. This area is given by the product of the length and height of the rectangle. The length is set as &delta;x, and the height is given by the force at that position &delta;x.</p>
+<figure><img src="images/integral3.svg" alt="">
+<figcaption>Tiny parts of the graph.</figcaption></figure>
+<p>We can then add up all of these tiny &delta;W to get the total work.</p>
+<article class="equations">
+	<math><mi>W</mi><mo>=</mo><mo>&sum;</mo><mi>&delta;</mi><mi>W</mi></math><br>
+	<math><mi>W</mi><mo>=</mo><mo>&sum;</mo><mi>F</mi><mi>(&delta;x)</mi><mi>&delta;</mi><mi>x</mi></math>
+</article>
+<p>Now, this is just an approximation. However, as the small parts &delta;W approach zero, the tiny rectangles will perfectly encapsulate the area of the entire graph. Thus, we rewrite the sum into an integral.</p>
+<article class="equations">
+	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mi>d</mi><mi>W</mi></math><br>
+	<math><mi>W</mi><mo>=</mo><mo>&int;</mo><mi>F</mi><mi>d</mi><mi>x</mi></math>
+</article>
 </main>
 <footer>
-<a href="an-integral-for-work.html">An Integral for Work ></a>
+<a href="line-integrals-for-work.html">Line Integrals for Work ></a>
 </footer>
 </body>
 </html>
