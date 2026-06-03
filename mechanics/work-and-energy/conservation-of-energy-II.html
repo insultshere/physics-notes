@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - conservationII</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Conservation of Energy II</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>If one knows the mechanical energy for a single position along the motion of an object under conservative forces, one can reasonably find various other properties along the entire motion via the conservation of energy</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<math><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+		<p>Only for systems wherein the only thing acting on them are conservative forces, like weight</p>
+		<math><mi>&Delta;</mi><mn>E</mn><mo>=</mo><mi>0</mi></math><br>
+		<math><mi>&Delta;</mi><mi>(</mi><mn>K</mn><mo>+</mo><mn>U</mn><mi>)</mi><mo>=</mo><mi>0</mi></math><br>
+
+	</section>		
+	</article>
+</aside>
+<main>
+<p>Previously, we used the work-energy theorem and solved problems where dynamics and kinematics are impractical to use. Now, let's use the (admittedly incomplete) conservation of mechanical energy to solve more complicated problems.</p>
+<p>It's important to note two things, however; first, we should be sure to follow the coordinate system and respect the initial position and potential energy that we set. For example, if an object goes below the initial position, we set it as negative.</p>
+<p>Further, we should be careful that all the forces acting on the object are conservative; here, we will only deal with the work by weight. We also note that gravitational potential energy, which we derived last time.</p>
+<article class="equations">
+	<math><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+</article>
+<p>Once again, we have the freedom to choose the initial potential energy and position. We should make sure to state this at the beginning of any problems we have.</p>
+
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(HRK E12.7) A very small ice cube is released from the edge of a hemispherical frictionless bowl whose radius is 23.6 cm. How fast is the cube moving at the bottom of the
+bowl?</p>
+<figure><img src="images/conservaprob1.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Neglecting friction, the only force acting on the ice cube is weight; thus, mechanical energy is conserved. We write it out, letting the initial position be at the rim of the bowl. Thus, the bottom is just a radius down from the rim.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mn>E</mn><mo>=</mo><mi>0</mi></math><br>
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+</article>
+<p>We set initial potential energy is zero, and the initial kinetic energy drops out. Thus, the entire initial side is zero. We break the final kinetic and potential energy, and solve for the speed.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>+</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>=</mo><mi>0</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>y</mi></math><br>
+	<math><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>y</mi></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>y</mi></msqrt></math><br>
+</article>
+<p>Now, plug in values. With our coordinate system, the vertical position is below the initial position, so we set it as negative. Note also to convert centimeters to meters.</p>
+<article class="equations">
+	<math><mi>v</mi><mo>=</mo><msqrt><mo>&minus;</mo><mi>2</mi><mi>(9.8m/s&sup2;)</mi><mi>(0.236m)</mi></msqrt></math><br>
+	<math><mi>v</mi><mo>=</mo><mi>2.15m/s</mi></math><br>
+</article>
+</section>
+</section>
+
+<section class="examples"><mark variable></mark>
+<h2>Exercise 2</h2>
+<p>(HRK P12.2)  A ball of mass <math><mi>m</mi></math> is attached to the end of a very light rod of
+length <math><mi>L</mi></math>. The other end of the rod is pivoted so that the ball
+can move in a vertical circle.</p>
+<figure><img src="images/conservaprob2.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<p>The rod is pulled aside to the
+horizontal and given a downward push as shown below
+so that the rod swings down and just reaches the vertically upward position. What initial speed was imparted to the ball?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Notice that the ball "just reaches" the vertically upward position. This means that the speed at the top must be zero, as it has lost all its speed going up. Thus, we write out the conservation of mechanical energy, noting that the net work is done by weight.</p>
+<p>We set initial potential energy as zero, and the final kinetic energy drops out. Thus, the entire initial side is zero. We break the final kinetic and potential energy, and solve for the speed.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mi>m</mi><mi>g</mi><mi>y</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><msqrt><mi>2</mi><mi>g</mi><mi>y</mi></msqrt><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</article>
+<p>With our coordinate system, the vertical position is above the initial position, so we set it as position. Thus, the equation for the speed is as follows.</p>
+<article class="equations">
+	<math><msqrt><mi>2</mi><mi>g</mi><mi>L</mi></msqrt><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+<p>One thing to notice is that while these problems involve circular motion, there is one caveat; the speed of the object is not constant. Thus, the centripetal acceleration and indirectly the force isn't constant either. Thankfully, the conservation of energy helps us solve these problems.</p>
+<p>Still, some lessons that we learned from kinematics and dynamics are useful to apply here. After all, physics is most powerful when we combine the knowledge we attained from multiple sources.</p>
+
+<section class="examples"><mark variable></mark>
+<h2>Exercise 3a</h2>
+<p>(HRK P12.5b) A small block of mass <math><mi>m</mi></math> slides along the frictionless loop-the-loop track shown below. At what height above the bottom of the loop should the
+block be released from rest so that it is on the verge of losing contact
+with the track at the top of the loop?</p>
+<figure><img src="images/conservaprob3.svg" alt="">
+<figcaption>Exercise 3a.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The only force acting on the block is weight, so mechanical energy is conserved. Further, since it is "on the verge of losing contact", that means that it is moving at the minimum speed possible. Consequently, it means that the centripetal acceleration is at its minimum, and ultimately the centripetal force is at its minimum.</p>
+<p>The minimum centripetal force is when only the weight of the object acts on it (higher speeds would mean that the normal force helps). Thus, we solve for the speed given these conditions.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>w</mi></math><br>
+	<math><mi>m</mi><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mi>m</mi><mi>g</mi></math><br>
+	<math><mfrac><msup><mi>v</mi><mi>2</mi></msup><mi>r</mi></mfrac><mo>=</mo><mi>g</mi></math><br>
+	<math><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mi>r</mi><mi>g</mi></math>
+</article>
+<p>We keep it squared since it'll appear squared in the conservation of energy equation anyway. Now, let's set the coordinate system such that the initial position is at the ground, and let's set the initial potential energy as zero. We write out the conservation of energy, dropping out the initial kinetic energy.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>+</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mfrac><mrow><mi>r</mi><mi>g</mi></mrow><mi>2</mi></mfrac><mo>+</mo><mi>g</mi><mi>y</mi><mo>=</mo><mi>g</mi><mi>h</mi></math><br>
+	<math><mfrac><mrow><mi>r</mi></mrow><mi>2</mi></mfrac><mo>+</mo><mi>y</mi><mo>=</mo><mi>h</mi></math><br>
+</article>
+<p>The final height is just twice the radius, so we substitute that in.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>r</mi></mrow><mi>2</mi></mfrac><mo>+</mo><mi>2</mi><mi>r</mi><mo>=</mo><mi>h</mi></math><br>
+	<math><mfrac><mrow><mi>5</mi><mi>r</mi></mrow><mi>2</mi></mfrac><mo>=</mo><mi>h</mi></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples"><mark variable></mark>
+<h2>Exercise 3b</h2>
+<p>(HRK P12.5b) The string below has a length <math><mi>L</mi></math>, and the
+distance <math><mi>d</mi></math> to a fixed peg. When the ball is released from rest in the position shown, it will follow the arc
+shown in the figure.</p>
+<figure><img src="images/conservaprob4.svg" alt="">
+<figcaption>Exercise 3b.</figcaption></figure>
+<p>Show that, if the ball is to swing completely
+around the fixed peg, then <math><mi>d</mi><mo>></mo><mfrac><mrow><mi>3</mi><mi>L</mi></mrow><mi>5</mi></mfrac></math>.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We define a new variable <math><mi>r</mi></math> corresponding to the radius of the circle that the ball passes through after the string gets stuck. We can solve it as following.</p>
+<article class="equations">
+	<math><mi>L</mi><mo>=</mo><mi>d</mi><mo>+</mo><mi>r</mi></math><br>
+</article>
+<p>Once again, to keep the ball swinging completely around, the minimum centripetal force required is the weight. If it goes faster, the tension will help.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>></mo><mi>w</mi></math><br>
+	<math><mi>m</mi><msub><mi>a</mi><mi>c</mi></msub><mo>></mo><mi>m</mi><mi>g</mi></math><br>
+	<math><mfrac><msup><mi>v</mi><mi>2</mi></msup><mi>r</mi></mfrac><mo>></mo><mi>g</mi></math><br>
+	<math><msup><mi>v</mi><mi>2</mi></msup><mo>></mo><mi>r</mi><mi>g</mi></math>
+</article>
+<p>Let's keep this in mind. Now, from conservation of energy (given that the only force is weight), we set the initial position to be at the very bottom position that the ball will pass through. The position we are interested in is the very top that the ball will reach after snagging on the peg. The initial kinetic energy drops out, leaving us with this expression.</p>
+<p>We solve for the speed squared, then we plan to substitute this back in above.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>+</mo><mi>2</mi><mi>m</mi><mi>g</mi><mi>r</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>L</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mi>g</mi><mi>L</mi><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>r</mi></math><br>
+	<math><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mi>2</mi><mi>g</mi><mo>(</mo><mi>L</mi><mo>&minus;</mo><mi>2</mi><mi>r</mi><mo>)</mo></math><br>
+</article>
+<p>Substituting in, we have this.</p>
+<article class="equations">
+	<math><mi>2</mi><mi>g</mi><mo>(</mo><mi>L</mi><mo>&minus;</mo><mi>2</mi><mi>r</mi><mo>)</mo><mo>></mo><mi>r</mi><mi>g</mi></math><br>
+	<math><mi>2</mi><mi>L</mi><mo>&minus;</mo><mi>4</mi><mi>r</mi><mo>></mo><mi>r</mi></math><br>
+	<math><mi>2</mi><mi>L</mi><mo>&minus;</mo><mi>2</mi><mi>r</mi><mo>></mo><mi>3</mi><mi>r</mi></math><br>
+	<math><mi>2</mi><mo>(</mo><mi>L</mi><mo>&minus;</mo><mi>r</mi><mo>)</mo><mo>></mo><mi>3</mi><mo>(</mo><mi>L</mi><mo>&minus;</mo><mi>d</mi><mo>)</mo></math><br>
+</article>
+<p>Notice here that we factored out so that we can solve for the distance from the peg, since thats what we want.</p>
+<article class="equations">
+	<math><mi>2</mi><mi>d</mi><mo>></mo><mi>3</mi><mi>L</mi><mo>&minus;</mo><mi>3</mi><mi>d</mi></math><br>
+	<math><mi>5</mi><mi>d</mi><mo>></mo><mi>3</mi><mi>L</mi></math><br>
+	<math><mi>d</mi><mo>></mo><mfrac><mi>3</mi><mi>5</mi></mfrac><mi>L</mi></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples"><mark variable></mark>
+<h2>Exercise 4</h2>
+<p>(HRK P12.5b) A small block is placed on the top of a hemispherical mound of ice. It is given a very small push and starts sliding
+down the ice.</p>
+<figure><img src="images/conservaprob6.svg" alt="">
+<figcaption>Exercise 4.</figcaption></figure>
+<p> Show that it leaves the ice at a point whose
+height is <math><mfrac><mrow><mi>2</mi><mi>r</mi></mrow><mi>3</mi></mfrac></math> if the ice is frictionless. What centripetal force acts on the object?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We define two new variables; one being the angle &theta;, and also the height. This looks similar to an inclined plane; in fact, we can treat it like that it is an inclined plane, just with the components vary by the angle.</p>
+<figure><img src="images/conservaprob5.svg" alt=""></figure>
+<p>The centripetal force acting on the object is the normal force (which we set as negative, pointing away from the center) and a component of the weight. This component is perpendicular to the surface of the hemisphere.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><msub><mi>w</mi><mi>&perp;</mi></msub><mo>&minus;</mo><mi>N</mi></math><br>
+</article>
+<p>Recall that the normal force will disappear as the object leaves the surface; this is just a fact of the normal force that we discussed. Thus, dropping that, we have this equation.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><msub><mi>w</mi><mi>&perp;</mi></msub></math><br>
+	<math><mi>m</mi><mfrac><msup><mi>v</mi><mi>2</mi></msup><mi>r</mi></mfrac><mo>=</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mi>g</mi><mi>r</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+</article>
+<p>We keep it like that. Now, from conservation of energy, we have the following; we set the initial position at the ground, and thus everything is measured based on the height from that. We want the height where the above holds true. We set the initial potential as zero.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>+</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>r</mi></math><br>
+	<math><mi>g</mi><mi>h</mi><mo>=</mo><mi>g</mi><mi>r</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><mi>v</mi><mi>2</mi></msup></math><br>
+	<math><mi>g</mi><mi>h</mi><mo>=</mo><mi>g</mi><mi>r</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mi>r</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>h</mi><mo>=</mo><mi>r</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>r</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+</article>
+<p>Now, notice that <math><mi>r</mi><mi>sin</mi><mi>(&theta;)</mi></math> is the vertical position. </p>
+<article class="equations">
+	<math><mi>h</mi><mo>=</mo><mi>r</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>h</mi></math><br>
+	<math><mfrac><mi>3</mi><mi>2</mi></mfrac><mi>h</mi><mo>=</mo><mi>r</mi></math><br>
+	<math><mi>h</mi><mo>=</mo><mfrac><mi>2</mi><mi>3</mi></mfrac><mi>r</mi></math><br>
+</article>
+</section>
+</section>
+
+
+</main>
+<footer>
+<a unfinished>The Potential Energy Diagram ></a>
+</footer>
+</body>
+</html>

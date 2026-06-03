@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - potential</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Potential Energy</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>Potential energy is the stored energy based on the configuration of parts in a system which can be converted into work</p>
+		<p>The potential energy is related to the system, not any of its parts</p>
+		<p>We can choose the value of the initial potential energy via choosing where our initial position is</p>
+		</section>
+	</article>
+</aside>
+<main>
+<p>In an interaction, kinetic energy is rarely conserved, unlike momentum which is always conserved. In fact, even for other interactions, like that of a ball falling down, kinetic energy isn't conserved; it changes because the work by the weight of the ball changes the kinetic energy.</p>
+<figure><img src="images/pot1.svg" alt="">
+<figcaption>A ball is thrown up. Work is done by gravity, changing its kinetic energy as it goes up and down.</figcaption></figure>
+<p>However, one thing we could do is add a new term that "counters" this work. In other words, if we add this new term and kinetic energy, they both add to some new term, that we will state will remain constant; thus their change is zero. Let's symbolize this new term with <math><mi>U</mi></math>.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mn>K</mn><mo>+</mo><mi>&Delta;</mi><mn>U</mn><mo>=</mo><mi>0</mi></math><br>		
+</article>
+<p>Substituting in the value of the change of kinetic energy as the net work done, we have this relation. We use the example of the ball, so the net work on that is done by the weight only.</p>
+<article class="equations">
+	<math><msub><mn>W</mn><mi>w</mi></msub><mo>+</mo><mi>&Delta;</mi><mn>U</mn><mo>=</mo><mi>0</mi></math><br>		
+	<math><mi>&Delta;</mi><mn>U</mn><mo>=</mo><mo>&minus;</mo><msub><mn>W</mn><mi>w</mi></msub></math><br>		
+</article>
+<p>This peculiar equation shows us that this new term is the negative of the work done on the object. This makes sense with what we wanted to define it as; now, let's flesh out this term. We first break down the equation into its components.</p>
+<article class="equations">
+	<math><mo>(</mo><msub><mn>U</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>0</mi></msub><mo>)</mo><mo>=</mo><mo>&minus;</mo><msub><mn>W</mn><mi>w</mi></msub></math><br>
+	<math><mo>(</mo><msub><mn>U</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>0</mi></msub><mo>)</mo><mo>=</mo><mo>&minus;</mo><mo>(</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>)</mo></math><br>
+	<math><msub><mn>U</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>0</mi></msub><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>		
+</article>
+<p>This shows that it is probably important that we set where we what the "final" and "initial" values of this term is. In a concrete example, let's look at the ball falling down.</p>
+<p>We note two positions of the ball, one being at its highest point and one at its lowest. At the lowest point, weight can't do any more work as there is no more vertical displacement to be done. At the top, weight can do a lot of work; there's a lot of displacement possible.</p>
+<figure><img src="images/pot2.svg" alt="">
+<figcaption>A ball is thrown up. At the top, it has the highest work that could be done.</figcaption></figure>
+<p>Thus, at the top, we can say that weight has a lot of "possible" work that could be done. In other words, it has the potential to do work, unlike at the bottom. This leads us to the name for this new term.</p>
+<article class="terms">
+	<mark>Potential Energy (<math><mn>U</mn></math>)</mark> - the energy based on the configuration of a system
+</article>
+<p>Notice the wording here. Why didn't we let potential energy just be named "stored energy"? One thing to notice with the ball being thrown up is that we are actually looking at the position of the ball relative to the Earth, which causes the weight of the ball.</p>
+<p>Here, we found a value for the initial and final potential energy. However, notice that we made one arbitrary decision, which is to measure the height relative to the ground. This works, and our formula does arrive at the correct result.</p>
+<article class="equations">
+	<math><msub><mn>U</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>0</mi></msub><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mo>(</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>)</mo><mo>&minus;</mo><mo>(</mo><mi>0</mi><mo>)</mo><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>		
+</article>
+<p>The choice of where to start measuring aligns with where we put where the potential energy is zero. For example, since we placed where we start measuring to be at the ground, the ground has no potential energy. Thus, we can say that this "arbitrary choice of measurement" corresponds to where we want to set the potential energy to zero.</p>
+<p>For example, consider setting the zero-potential-energy position to be halfway between the initial and final position.</p>
+<figure><img src="images/pot3.svg" alt="">
+<figcaption>A ball is thrown up. The choice where to measure is arbitrary, corresponding to where potential energy is zero.</figcaption></figure>
+<p>Note, however, that the total possible work done by gravity still remains the same; it is just that we have changed where we measured the positions of the initial and final potential energy. Now, the positions reside half the height from the zero-potential-energy position.</p>
+<article class="equations">
+	<math><msub><mn>U</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>0</mi></msub><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mo>(</mo><mfrac><mrow><mi>m</mi><mi>g</mi><mi>h</mi></mrow><mi>2</mi></mfrac><mo>)</mo><mo>&minus;</mo><mo>(</mo><mfrac><mrow><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi></mrow><mi>2</mi></mfrac><mo>)</mo><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>		
+</article>
+<p>Since we can choose basically any position on where to measure, the values for the potential energy can take on any value we please. Indirectly, the act of being able to choose where to measure allows us to choose the values of the potential energy.</p>
+<p>Of course, we can't just choose the value of both the initial and final potential energy. Once we choose one value, the other is locked into place. The obvious thing to do then is to choose the most convenient choice for the initial potential energy, and then we measure the final potential energy based on that.</p>
+<section class="examples">
+<h2>Question 1</h2>
+<p>(LSM CQ8.1) The kinetic energy of a system must always be
+positive or zero. Explain whether this is true for
+the potential energy of a system. </p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>No, this is not always true. Since the choice of measurement is arbitrary, the potential energy can be basically any value measured from that point of measurement; thus, it can also be negative if we so please.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 2a</h2>
+<p>(LSM CQ8.6b) Two people observe a leaf falling from a tree.
+One person is standing on a ladder and the other
+is on the ground. If each person were to
+compare the energy of the leaf observed, would the change in potential energy be different or the same for each person as the leaf hits the ground? </p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>They would not calculate a different change in potential energy; since the height is fixed relative to the Earth, no matter where the two people stand, this height is the same. The height determines the total possible work done, and thus since it is the same for both observers, the total change will be the same.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 2b</h2>
+<p>(LSM CQ8.6c) How about the potential energy as the leaf hits the ground? Would they measure the same or different values? </p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>They would measure different final potential energies; one of them would measure it to be zero, relative to them, and the other would measure it to be negative relative to their point of view.</p>
+</section>
+</section>
+
+<p>Further, since this choice is mandatory, it further shows how potential energy is based on the configuration of the system; here, we measure based on the two elements in the system: the ball and the Earth. If, say, we only had the ball, we would have no other point of reference.</p>
+<figure><img src="images/pot4.svg" alt="">
+<figcaption>The ball and Earth system.</figcaption></figure>
+<p>In other words, the potential energy is connected to the <i>system</i>, and not to any of its individual parts.</p>
+<p>More mathematically, we can write out the potential energy as a function of position (sort of like a force-position diagram). Thus, if we have the final and initial positions, we can write out the above relation as follows.</p>
+<article class="equations">
+	<math><msub><mn>U</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>0</mi></msub><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>&minus;</mo><mn>U</mn><mi>(</mi><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+</article>
+<p>Where the positions are, like above, are measured from any point that we so desire. For example, the first scenario unfolds via setting the initial position at the origin, where the vertical displacement is zero. In that way, the final position is at a height <math><mi>h</mi></math> upwards, displacing it the same height.</p>
+<article class="equations">
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>&minus;</mo><mn>U</mn><mi>(</mi><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mn>U</mn><mi>(</mi><mi>h</mi><mi>)</mi><mo>&minus;</mo><mn>U</mn><mi>(</mi><mi>0</mi><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+</article>
+<p>However, one peculiar thing occurs if we set the initial and final position to be the same. We investigate this phenomenon in the next tutorial.</p>
+</main>
+<footer>
+<a href="conservative-force.html">Conservative Force ></a>
+</footer>
+</body>
+</html>

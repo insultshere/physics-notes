@@ -72,7 +72,7 @@ m apart. Assuming both trains have the same acceleration, what must this acceler
 </section>
 
 <section class="examples">
-<h2>Problem 1</h2>
+<h2>Exercise 3a</h2>
 <p>(LSM P3.112) In a 100-m race, the winner is timed at 11.2 s. The second-place finisher’s time is 11.6 s. How far is the second-place finisher behind the
 winner when she crosses the finish line? Assume the velocity of each runner is constant throughout the race.
 </p>
@@ -90,7 +90,7 @@ winner when she crosses the finish line? Assume the velocity of each runner is c
 <p>The next problem is a variation of the previous problem.</p>
 
 <section class="examples" hard>
-<h2>Problem 2</h2>
+<h2>Exercise 3b</h2>
 <p>(HRK Q2.11) Bob beats Judy by 10 m in a 100-m dash. Bob, claiming to give Judy an equal chance, agrees to race her again but to start from 10 m behind the starting line. Does this really give Judy an equal chance?
 </p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
@@ -108,12 +108,12 @@ In those 11s, Judy should be able to run <math><mrow><mi>(9m/s)(11s)</mi><mo>=</
 </section>
 
 <section class="examples">
-<h2>Problem 3</h2>
+<h2>Problem 1</h2>
 <p>(HRK P2.20) While thinking of Isaac Newton, a person standing on a bridge overlooking a highway inadvertently drops an apple over the railing just as the front end of a truck passes directly
 below the railing. If the vehicle is moving at 55 km/h and is 12 m long, how far above the truck must the railing be if the apple just misses hitting the rear end of the truck?
 </p>
 <figure><img src="images/mult2.svg" alt="">
-<figcaption>Problem 3.</figcaption></figure>
+<figcaption>Problem 1.</figcaption></figure>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
 <p>The first thing we need to find out is how long it takes for the truck to go 12m, or its entire length. Since it isn't accelerating, we can find it quite easily. We just need to convert 55km/h to m/s first.</p>
@@ -131,11 +131,12 @@ below the railing. If the vehicle is moving at 55 km/h and is 12 m long, how far
 <p>We get that the railing must be 3.1m from the top of the truck.</p>
 </section>
 </section>
+
 <section class="examples"><mark custom></mark>
-<h2>Problem 4</h2>
+<h2>Problem 2</h2>
 <p>A hollow cylinder, open at both ends, has five balls of radius 0.50m stacked on top of each other. The width of the cylinder is such that the balls stack perfectly on top of each other. The person holding the cylinder perfectly upright lets go of the bottom, and the balls fall down. If they are able to put back their hand such that exactly three balls stay in the cylinder, they win a chicken burger.</p>
 <figure><img style="min-width: 40%;" src="images/mult3.svg" alt="">
-<figcaption>Problem 4.</figcaption></figure>
+<figcaption>Problem 2.</figcaption></figure>
 <p>Once the center of a ball escapes the bottom of the cylinder, it is effectively outside the cylinder, as it can't be saved even if the person places their hand back in. Thus, assuming they can slide their hand back in and block the cylinder in negligible time, what is the range of time the person can wait so that they win?</p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
@@ -149,10 +150,62 @@ below the railing. If the vehicle is moving at 55 km/h and is 12 m long, how far
 </section>
 </section>
 
+<p>The following two are problems from David Morin. His book is full of these sorts of nice problems; if you want to read more, you should find a copy of his book. It is a great read, and there's lots of problems to challenge you.</p>
+
+<section class="examples"><mark variable></mark>
+<h2>Problem 3a</h2>
+<p>(Morin P2.10) A ball is dropped from rest at height <math><mi>h</mi></math>. Another ball is simultaneously thrown downward
+with speed <math><mi>v</mi></math> from height <math><mi>2</mi><mi>h</mi></math>. What should <math><mi>v</mi></math> be so that the two balls hit the ground at the
+same time?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first get the time taken for the ball to reach the ground.</p>
+<article class="equations">
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>h</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><msqrt><mfrac><mrow><mi>2</mi><mi>h</mi></mrow><mi>g</mi></mfrac></msqrt><mo>=</mo><mi>t</mi></math>
+</article>
+<p>We then plug this in for the second ball dropped at twice the height.</p>
+<article class="equations">
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>2</mi><mi>h</mi><mo>+</mo><mi>v</mi><mi>t</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>2</mi><mi>h</mi><mo>+</mo><mi>v</mi><mo>(</mo><msqrt><mfrac><mrow><mi>2</mi><mi>h</mi></mrow><mi>g</mi></mfrac></msqrt><mo>)</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mo>(</mo><mfrac><mrow><mi>2</mi><mi>h</mi></mrow><mi>g</mi></mfrac><mo>)</mo></math><br>
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>2</mi><mi>h</mi><mo>+</mo><mi>v</mi><msqrt><mfrac><mrow><mi>2</mi><mi>h</mi></mrow><mi>g</mi></mfrac></msqrt><mo>&minus;</mo><mi>h</mi></math><br>
+	<math><mo>&minus;</mo><mi>h</mi><mo>=</mo><mi>v</mi><msqrt><mfrac><mrow><mi>2</mi><mi>h</mi></mrow><mi>g</mi></mfrac></msqrt></math><br>
+	<math><mo>&minus;</mo><mi>h</mi><msqrt><mfrac><mrow><mi>g</mi></mrow><mrow><mi>2</mi><mi>h</mi></mrow></mfrac></msqrt><mo>=</mo><mi>v</mi></math><br>
+</article>
+<p>We can simplify this if we rationalize it, giving us this equation.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mfrac><mrow><msqrt><mi>2</mi><mi>g</mi><mi>h</mi></msqrt></mrow><mi>2</mi></mfrac><mo>=</mo><mi>v</mi></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples"><mark variable></mark>
+<h2>Problem 3b</h2>
+<p>(Morin P2.11) A ball is dropped from rest at height <math><mi>4</mi><mi>h</mi></math>. After it has fallen a distance <math><mi>d</mi></math>, a second ball is
+dropped from rest at height <math><mi>h</mi></math>. What should <math><mi>d</mi></math> be (in terms of <math><mi>h</mi></math>) so that the balls hit the
+ground at the same time?
+</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We reuse the previous problem's result on the time spent to drop a height <math><mi>h</mi></math>.</p>
+<article class="equations">
+	<math><mrow><mi>0</mi></mrow><mo>=</mo><mi>h</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><msub><mi>t</mi><mi>h</mi></msub><mn>2</mn></msup></math><br>
+	<math><msqrt><mfrac><mrow><mi>2</mi><mi>h</mi></mrow><mi>g</mi></mfrac></msqrt><mo>=</mo><msub><mi>t</mi><mi>h</mi></msub></math>
+</article>
+<p>Now, we can get the time taken for the other ball to drop its height.</p>
+<article class="equations">
+	<math><msqrt><mfrac><mrow><mi>8</mi><mi>h</mi></mrow><mi>g</mi></mfrac></msqrt><mo>=</mo><msub><mi>t</mi><mrow><mi>4</mi><mi>h</mi></mrow></msub></math><br>
+	<math><mi>2</mi><msqrt><mfrac><mrow><mi>2</mi><mi>h</mi></mrow><mi>g</mi></mfrac></msqrt><mo>=</mo><msub><mi>t</mi><mrow><mi>4</mi><mi>h</mi></mrow></msub></math><br>
+	<math><mi>2</mi><msub><mi>t</mi><mi>h</mi></msub><mo>=</mo><msub><mi>t</mi><mrow><mi>4</mi><mi>h</mi></mrow></msub></math>
+</article>
+<p>We can actually stop all our calculations here. Noting that the time spent for the larger height is exactly twice that of the shorter height, and we know that that time is the time spent to fall one <math><mi>h</mi></math>, then that means we drop the lower ball once the upper ball drops a distance <math><mi>d</mi><mo>=</mo><mi>h</mi></math>.</p>
+</section>
+</section>
+
 <p>This question may seem familiar, however it is more complicated than Exercise 2. One technique you can employ is to try to digest the problem first; what things could be useful?</p>
 
-<section class="examples" hard>
-<h2>Problem 5</h2>
+<section class="examples">
+<h2>Problem 4</h2>
 <p>(HRK P2.7b) Two trains, each having a speed of 34 km/h, are headed toward each other on the same straight track. A bird that can fly 58 km/h flies off the front of one train when they are 102 km apart
 and heads directly for the other train. On reaching the other train it flies directly back to the first train, and so forth. What is the total distance the bird travels?</p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>

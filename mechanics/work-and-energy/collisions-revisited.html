@@ -18,8 +18,8 @@
 		<section>
 		<h2>Summary</h2>
 		<p>Kinetic energy is conserved in an elastic collision</p>
-		<p>A "loss" in kinetic energy occurs in an inelastic collision, with the maximum "loss" occuring at a perfectly inelastic collision</p>
-		<p>A "gain" in kinetic energy occurs in an explosion</p>
+		<p>A loss in kinetic energy occurs in an inelastic collision, with the maximum loss occuring at a perfectly inelastic collision</p>
+		<p>A gain in kinetic energy occurs in an explosion</p>
 		</section>
 	</article>
 </aside>
@@ -228,6 +228,37 @@ on. Find the mass of the caboose.</p>
 </section>
 </section>
 
+<section hard class="examples"><mark custom variable></mark>
+<h2>Exercise 2</h2>
+<p>A ballistic pendulum is a device that was used to measure the speed of a bullet, but has been largely superseded by more modern devices such as the chronograph.</p>
+<figure><img src="images/coll5.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<p>Above is a diagram of such a pendulum. A bullet of mass <math><mi>m</mi></math> embeds itself to a block of mass <math><mi>M</mi></math>, its center just barely reaching a height <math><mi>h</mi></math> above its resting position. Assuming the string of the pendulum remains taut throughout the motion, solve for the speed of the bullet <math><mi>v</mi></math> in terms of the masses of the bullet and block as well as the height reached.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The two move as one mass up to the height; noting the only net force on the object is weight, we invoke the work-energy theorem. The displacement is the height raised.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mn>K</mn><mo>=</mo><msub><mn>W</mn><mi>w</mi></msub></math><br>
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><mo>&minus;</mo><mo>(</mo><mi>M</mi><mo>+</mo><mi>m</mi><mo>)</mo><mi>g</mi><mi>h</mi></math>
+</article>
+<p>The problem states that the center "just barely reaches" the height, meaning that at that height the speed must be zero; thus the final kinetic energy will drop out.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><mo>&minus;</mo><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mi>2</mi><mi>g</mi><mi>h</mi></msqrt></math>
+</article>
+<p>This must be the final speed imparted on the inelastic collision between the bullet and the block, so we solve for that next.</p>
+<article class="equations">
+	<math><mfrac><mrow><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mo>+</mo><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac><mo>=</mo><mi>v</mi></math><br>
+	<math><mfrac><mrow><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac><mo>=</mo><mi>v</mi></math><br>
+	<math><msub><mi>v</mi><mi>m0</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow><mi>m</mi></mfrac><mi>v</mi></math><br>
+	<math><msub><mi>v</mi><mi>m0</mi></msub><mo>=</mo><mfrac><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow><mi>m</mi></mfrac><msqrt><mi>2</mi><mi>g</mi><mi>h</mi></msqrt></math><br>
+</article>
+</section>
+</section>
+
+<p>Notice how in the previous exercise, if we tried to solve it with the work-energy theorem it would be incredibly difficult, if not impossible. Surprisingly, despite the power of the energy approach that we've built, there are still some situations that it can't handle.</p>
+
 <section class="examples">
 <h2>Question 2</h2>
 <p>(HRK Q11.25)  We have seen that the conservation of momentum may apply
@@ -254,11 +285,11 @@ Is this a useful or valid observation?</p>
 </section>
 </section>
 
-<p>One lingering question is where does kinetic energy go during an inelastic collision? Where does kinetic energy come from in an explosion?</p>
-<p>When we analyzed the CM frame, we noted that the only way to change the speed of such a frame is if there was a net external force on the object; an impulse occurs, thus there is change in momentum. With this in mind, maybe we can apply this logic to kinetic energy.</p>
+<p>We've seen here that kinetic energy is not always constant during a collision, unlike momentum. However, it would be nice if, for example, we can construct a new unit based on kinetic energy that is constant during any interaction like momentum.</p>
+
 </main>
 <footer>
-<a unfinished>Work by External Forces ></a>
+<a href="potential-energy.html">Potential Energy ></a>
 </footer>
 </body>
 </html>

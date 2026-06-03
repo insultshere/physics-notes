@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - conservationI</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Conservation of Energy I</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>Mechanical energy is the sum of the total kinetic energy and the potential energy of a system</p>
+		<p>In a system where only conservative forces act on its elements, the mechanical energy is conserved</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+		<p>Only for systems wherein the only thing acting on them are conservative forces, like weight</p>
+		<math><mi>&Delta;</mi><mn>E</mn><mo>=</mo><mi>0</mi></math><br>
+		<math><mi>&Delta;</mi><mi>(</mi><mn>K</mn><mo>+</mo><mn>U</mn><mi>)</mi><mo>=</mo><mi>0</mi></math><br>
+		</section>		
+	</article>
+</aside>
+<main>
+<p>We've shown that only conservative forces have a corresponding potential energy function related to it. More generally, any negative work done by a conservative force is equal to that of the change of potential energy.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mn>U</mn><mo>=</mo><mo>&minus;</mo><msub><mn>W</mn><mi>con</mi></msub></math><br>
+</article>
+<p>By the work-energy theorem, the net work is the change in kinetic energy. Thus, if the only work done on the object is by conservative forces, we have this equation.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mn>K</mn><mo>=</mo><msub><mn>W</mn><mi>con</mi></msub></math><br>
+</article>
+<p>Thus, if we add them together, the work cancels out, giving us what we want.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mn>K</mn><mo>+</mo><mi>&Delta;</mi><mn>U</mn><mo>=</mo><msub><mn>W</mn><mi>con</mi></msub><mo>&minus;</mo><msub><mn>W</mn><mi>con</mi></msub></math><br>
+	<math><mi>&Delta;</mi><mn>K</mn><mo>+</mo><mi>&Delta;</mi><mn>U</mn><mo>=</mo><mi>0</mi></math><br>
+	<math><mi>&Delta;</mi><mi>(</mi><mn>K</mn><mo>+</mo><mn>U</mn><mi>)</mi><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>If we break the change in kinetic and potential energy, we have the following.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>0</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+</article>
+<p>This means that the sum of the kinetic and potential energy of a system is constant. Right now, this works; however, we can streamline it to make it even better if we make a new term to indicate this sum. That way, we can write it out all in terms of one variable.</p>
+<p>Thus, we define the sum of the kinetic and potential energy of a system to be equal to the mechanical energy.</p>
+<article class="terms">
+	<mark>Mechanical Energy (<math><mn>E</mn></math>)</mark> - the sum of the potential energy of a system and the kinetic energy of the system
+</article>
+<p>With this definition, we can write out the equation we have constructed cleanly as shown below. This is a part of the Law of Conservation of Energy, which is widespread all throughout physics. Here, we have found a part of it.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>(</mi><mn>K</mn><mo>+</mo><mn>U</mn><mi>)</mi><mo>=</mo><mi>0</mi></math><br>
+	<math><mi>&Delta;</mi><mn>E</mn><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>We can interpret this result as the following: the mechanical energy of a system, where the only work done on it is by conservative forces, will remain constant.</p>
+<p>Note the caveat here that the mechanical energy of a system is only conserved when the work is done only be non-conservative forces. Thus, we still have some work cut-out for us in fully generalizing this law. However, this law is already powerful as-is in this form.</p>
+<section class="examples">
+<h2>Question 1</h2>
+<p>(LSM CQ8.9) An external force acts on a particle during a trip
+from one point to another and back to that same
+point. This particle is only affected by conservative forces. Does this particle’s kinetic
+energy and potential energy change as a result
+of this trip? </p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>If the only work is being done by conservative forces and the object goes in a closed loop, then the total work done is zero; thus, there is no change in kinetic energy by the work-energy theorem. Likewise, by the definition of potential energy, there is no change in that either. Overall, there is no change.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 2</h2>
+<p>(HRK Q12.9) The total mechanical energy of a certain isolated system of
+particles remains constant. If the individual kinetic energies of the particles are also constant, then what can be concluded
+about the forces that act in this system?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We use that fact that the potential energy function is zero at infinity, so we set our initial position there. Since the function only has a horizontal component, we break down the dot product to its components.</p>
+<p>Note also that since this is an attractive force, the sign of the function must be negative.</p>
+<article class="equations">
+	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><mo>(</mo><munderover><mo>&int;</mo><mi>&infin;</mi><mi>x</mi></munderover><msub><mi>F</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><munderover><mo>&int;</mo><mi>&infin;</mi><mi>y</mi></munderover><msub><mi>F</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>)</mo><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><munderover><mo>&int;</mo><mi>&infin;</mi><mi>x</mi></munderover><msub><mi>F</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><munderover><mo>&int;</mo><mi>&infin;</mi><mi>x</mi></munderover><mo>(</mo><mo>&minus;</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub></mrow><msup><mi>x</mi><mi>2</mi></msup></mfrac><mo>)</mo><mi>d</mi><mi>x</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mi>G</mi><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub><munderover><mo>&int;</mo><mi>&infin;</mi><mi>x</mi></munderover><mfrac><mi>1</mi><msup><mi>x</mi><mi>2</mi></msup></mfrac><mi>d</mi><mi>x</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub></mrow><mi>x</mi></mfrac><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+</article>
+<p>One thing to do is note the final sentence, saying that this approaches zero as the distance approaches infinity. If distance approaches infinity, then the first term drops out.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mo>&minus;</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub></mrow><mi>&infin;</mi></mfrac><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mi>0</mi><mo>=</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+</article>
+<p>This gives a value for the initial potential energy. Thus, we have the following potential energy function.</p>
+<article class="equations">
+	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub></mrow><mi>x</mi></mfrac></math><br>
+</article>
+</section>
+</section>
+<p>To see this law in action, let's analyze a familiar scenario in action, being that of projectile motion. To make the calculations clear, let's set the initial position at the origin.</p>
+<figure><img src="images/conserva2.svg" alt="">
+<figcaption>The horizontal and vertical velocity throughout the flight of the projectile.</figcaption></figure>
+<p>We first note the kinetic energy of the object. From our previous study, we know that the minimum speed of the projectile is at the top; this is where the vertical velocity is zero, and since the horizontal velocity is constant, the speed must be minimum at the top.</p>
+<p>Likewise, the maximum kinetic energy occurs at the beginning and at the end, where the vertical velocity is at its maximum and minimum. Further, if the object continues downward below the initial height, the kinetic energy will continue to go higher and higher.</p>
+<p>To visualize the conservation of mechanical energy, we will draw tiny bars at the bottom row. The higher the bar, the higher the value; further, this allows us to account for negative values, via drawing the bar below the desginated line. Thus, the kinetic energy for each position is shown below.</p>
+<figure><img src="images/conserva3.svg" alt="">
+<figcaption>A visualization of the kinetic energy for each position.</figcaption></figure>
+<p>Now, the potential energy. Since the only force acting on the object is its weight, it is the net work. We've shown it is conservative; thus, it has a potential energy function. We solve for it via recalling the definition of the potential energy that it is the negative work done by conservative force.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mn>U</mn><mo>=</mo><mo>&minus;</mo><msub><mn>W</mn><mi>con</mi></msub></math><br>
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>&minus;</mo><mn>U</mn><mi>(</mi><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><mi>)</mi><mo>=</mo><mo>&minus;</mo><msub><mn>W</mn><mi>w</mi></msub></math><br>
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>&minus;</mo><mn>U</mn><mi>(</mi><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>&Delta;</mi><mi>y</mi></math><br>
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>&minus;</mo><mo>(</mo><mi>0</mi><mo>)</mo><mo>=</mo><mi>m</mi><mi>g</mi><mo>(</mo><mi>y</mi><mo>&minus;</mo><msub><mi>y</mi><mi>0</mi></msub><mo>)</mo></math><br>
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mo>(</mo><mi>h</mi><mo>&minus;</mo><mi>0</mi><mo>)</mo></math><br>
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+</article>
+<p>Notice that the x-coordinate of the final position does not matter; in fact, the only thing that matters is the displacement from the initial position (which we've set at the origin for convenience). Thus, we can write out the equation as the following, keeping the potential energy at the initial position zero.</p>
+<article class="equations">
+	<math><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>&minus;</mo><mn>U</mn><mi>(</mi><msub><mi>y</mi><mi>0</mi></msub><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mo>(</mo><mi>y</mi><mo>&minus;</mo><msub><mi>y</mi><mi>0</mi></msub><mo>)</mo></math><br>
+	<math><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>y</mi></math><br>
+</article>
+<p>This is sometimes called the <i>gravitational potential energy</i> of a system. Notice how this is a function of the vertical position of the object; this is why we chose to draw where the object is at certain heights. Also note that this allows for the potential energy function to be negative.</p>
+<p>Thus, drawing the bars for the potential energy, since we've set the initial potential energy at the ground to be zero, the potential energy at the two ground-positions are zero. The potential energy at the peak is positive, since it is a positive displacement from the ground, while the potential energy at the dropoff is negative as it is a negative displacement from the ground.</p>
+<figure><img src="images/conserva4.svg" alt="">
+<figcaption>A visualization of the kinetic and potential energy for each position.</figcaption></figure>
+<p>Once again, since the only work being done is by weight, which is conservative, this means that adding both the kinetic and potential energy for any position must remain constant; the change in mechanical energy is zero. We can see that if we add and subtract the bars, it all is constant.</p>
+<figure><img src="images/conserva5.svg" alt="">
+<figcaption>The total mechanical energy remains constant throughout the flight.</figcaption></figure>
+<p>Notice how this property, the mechanical energy being constant, applies for the entire flight, and not just between two positions; in other words, if we can find out the mechanical energy at one point in the flight, we can get properties of the object throughout any position during its flight (such as its speed or height).</p>
+<p>One thing to notice is that our choice of what the value of the initial potential energy is does not change this result. If we add back the term into the gravitational potential energy, we have this function.</p>
+<article class="equations">
+	<math><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+</article>
+<p>Visually, this is the same as just adding an arbitrary value to each of the bars in the potential energy. Eitherway, it doesn't matter; adding a value to everything just changes the already constant mechanical energy. It still remains constant! Thus, we can just choose the initial potential energy as any value that we please. Usually, it is zero.</p>
+<figure><img src="images/conserva6.svg" alt="">
+<figcaption>Our choice of the initial potential energy does not matter; mechanical energy still remains constant.</figcaption></figure>
+
+<section class="examples"><mark custom></mark>
+<h2>Exercise 1a</h2>
+<p>A 1.00kg projectile is fired at an initial speed of 7.07m/s, being launched horizontally and vertically at 5.0m/s. It reaches a maximum height of 1.28m. Show that the mechanical energy at the peak and at the initial position is equal. Notice that the choice of where the potential energy is zero is irrelevant.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We set the coordinate system such that the initial position is at the origin. Let's write out the conservation of mechanical energy, noting that the only work done is by weight which is conservative, meaning that mechanical energy is conserved.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mn>E</mn><mo>=</mo><mi>0</mi></math><br>
+	<math><mi>&Delta;</mi><mi>(</mi><mn>K</mn><mo>+</mo><mn>U</mn><mi>)</mi><mo>=</mo><mi>0</mi></math><br>
+	<math><mi>&Delta;</mi><mn>K</mn><mo>+</mo><mi>&Delta;</mi><mn>U</mn><mo>=</mo><mi>0</mi></math><br>
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>0</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+</article>
+<p>Now, we substitute in the final potential energy for the potential energy function for weight and the definitions of the kinetic energy. At the peak, the only speed is horizontal.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>f</mi></msub><mi>2</mi></msup><mo>+</mo><mo>(</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub><mo>)</mo><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>f</mi></msub><mi>2</mi></msup><mo>+</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+</article>
+<p>Notice how the initial potential energy cancelled out; this shows that whatever we would've chosen, it wouldn't matter. Now, we just substitute in.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(1.00kg)</mi><msup><mi>(5.00m/s)</mi><mi>2</mi></msup><mo>+</mo><mi>(1.00kg)</mi><mi>(9.8m/s&sup2;)</mi><mi>(1.28m)</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>(1.00kg)</mi><msup><mi>(7.07m/s)</mi><mi>2</mi></msup></math><br>
+	<math><mi>25.0J</mi><mo>=</mo><mi>25.0J</mi></math><br>
+</article>
+<p>Thus, it has been shown that the mechanical energy is equal at these two positions.</p>
+</section>
+</section>
+
+<section class="examples"><mark custom></mark>
+<h2>Exercise 1b</h2>
+<p>What is the speed of the object as it reaches a height of 1.00m?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We keep the same coordinate system where the initial position is at the origin. Now, we write out the conservation of energy again.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>f</mi></msub><mi>2</mi></msup><mo>+</mo><mo>(</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub><mo>)</mo><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><msub><mi>v</mi><mi>f</mi></msub><mi>2</mi></msup><mo>+</mo><mi>g</mi><mi>y</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+</article>
+<p>Notice that the mass disappears; this makes sense, because we could've solved this using kinematics, where mass isn't needed. We are solving for the final speed, so let's isolate that.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><msub><mi>v</mi><mi>f</mi></msub><mi>2</mi></msup><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>g</mi><mi>y</mi></math><br>
+	<math><msup><msub><mi>v</mi><mi>f</mi></msub><mi>2</mi></msup><mo>=</mo><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>y</mi></math><br>
+	<math><msub><mi>v</mi><mi>f</mi></msub><mo>=</mo><msqrt><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>y</mi></msqrt></math><br>
+</article>
+<p>Now we just substitute.</p>
+<article class="equations">
+	<math><msub><mi>v</mi><mi>f</mi></msub><mo>=</mo><msqrt><msup><mi>(7.07m/s)</mi><mi>2</mi></msup><mo>&minus;</mo><mi>2</mi><mi>(9.8m/s&sup2;)</mi><mi>(1.00m)</mi></msqrt></math><br>
+	<math><msub><mi>v</mi><mi>f</mi></msub><mo>=</mo><mi>5.51m/s</mi></math><br>
+</article>
+</section>
+</section>
+
+</main>
+<footer>
+<a href="conservation-of-energy-II.html">Conservation of Energy II ></a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - conservative</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Conservative Force</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>Potential energy can only be described for a conservative force</p>
+		<p>Conservative forces are path-independent</p>
+		<p>For a conservative force, the work done in a path from initial to final position is the same for any path</p>
+		</section>
+	</article>
+</aside>
+<main>
+<p>Previously, we noted that the change in potential energy is equal to the negative work done by a force.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mn>U</mn><mo>=</mo><mo>&minus;</mo><mn>W</mn></math><br>
+	<math><msub><mn>U</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>0</mi></msub><mo>=</mo><mo>&minus;</mo><mn>W</mn></math><br>
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>&minus;</mo><mn>U</mn><mi>(</mi><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><mi>)</mi><mo>=</mo><mo>&minus;</mo><mn>W</mn></math>
+</article>
+<p>A special case occurs when the initial and final position end up at the same place. For instance, take that of a projectile being projected straight upwards, landing back at where it started, here, the initial and final position are at the same position.</p>
+<figure><img src="images/cons2.svg" alt="">
+<figcaption>A projectile thrown straight upwards. The initial and final position of the ball is the same.</figcaption></figure>
+<p>Recall that we made the potential energy as a function of position. Since we input the same value (because the initial and final position are the same) two times, this must be equal to zero. However, this also means that the work done must also be zero.</p>
+<article class="equations">
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>&minus;</mo><mn>U</mn><mi>(</mi><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><mi>)</mi><mo>=</mo><mi>0</mi><mo>=</mo><mo>&minus;</mo><mn>W</mn></math><br>
+	<math><mi>0</mi><mo>=</mo><mo>&minus;</mo><mn>W</mn></math><br>
+</article>
+<p>This property must arise from the work, and not of the potential energy. More specifically, the force doing said work. Thus, if the force does not hold this property, there can be no potential energy function that can be created for that force. Such a force that satisfies this is a conservative force.</p>
+<article class="terms">
+	<mark>Conservative Force</mark> - a force in which a potential energy function can be created
+</article>
+<p>To further investigate this, let's return to the line integral definition for work. Recall that this integrates over the path of distance; thus, it accounts for the infinitely many paths between initial to final position.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><mi>0</mi><mo>=</mo><mo>&int;</mo><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+</article>
+<p>This is the characteristic we want to investigate. Now, we will break the integral into two parts. First, let's consider the trip of the object from initial to final position. Then, we consider its trip from final to initial position. Of course, we don't assume that it follows the same path for the first and second trip. In fact, there are infinitely many.</p>
+<figure><img src="images/cons3.svg" alt="">
+<figcaption>Two paths the object can take from initial to final, then final to initial position.</figcaption></figure>
+<p>Mathematically, we write down the two trips as follows. The first integral represents the first trip from initial to final position, integrating over some path from those two positions, then the second integral does the same for the final to initial position.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><munderover><mo>&int;</mo><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub></munderover><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><mi>0</mi><mo>=</mo><munderover><mo>&int;</mo><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover></munderover><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mo>+</mo><munderover><mo>&int;</mo><mover><mi>r</mi><mo>&rightarrow;</mo></mover><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub></munderover><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><mo>&minus;</mo><munderover><mo>&int;</mo><mover><mi>r</mi><mo>&rightarrow;</mo></mover><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub></munderover><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mo>=</mo><munderover><mo>&int;</mo><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover></munderover><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+</article>
+<p>This means that the work done during the return trip must equal that to the work done in the initial trip.</p>
+<section hard class="examples"><mark custom calc></mark>
+<h2>Problem 1a</h2>
+<p>Show that weight is a conservative force.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We write out the bottom formula, then we will use the component form of the dot product.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><munderover><mo>&int;</mo><mover><mi>r</mi><mo>&rightarrow;</mo></mover><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub></munderover><mover><mi>w</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mo>=</mo><munderover><mo>&int;</mo><msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>0</mi></msub><mover><mi>r</mi><mo>&rightarrow;</mo></mover></munderover><mover><mi>w</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><mo>&minus;</mo><mo>(</mo><mo>&minus;</mo><mo>(</mo><munderover><mo>&int;</mo><msub><mi>x</mi><mi>0</mi></msub><mi>x</mi></munderover><msub><mi>w</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>)</mo><mo>)</mo><mo>=</mo><mo>&minus;</mo><mo>(</mo><munderover><mo>&int;</mo><mi>x</mi><msub><mi>x</mi><mi>0</mi></msub></munderover><msub><mi>w</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><munderover><mo>&int;</mo><mi>y</mi><msub><mi>y</mi><mi>0</mi></msub></munderover><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>)</mo></math><br>
+	<math><mo>&minus;</mo><mo>(</mo><munderover><mo>&int;</mo><msub><mi>x</mi><mi>0</mi></msub><mi>x</mi></munderover><msub><mi>w</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>)</mo><mo>=</mo><munderover><mo>&int;</mo><msub><mi>x</mi><mi>0</mi></msub><mi>x</mi></munderover><msub><mi>w</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math><br>
+</article>
+<p>Once again, the horizontal component of the weight drops out, as weight has no horizontal component.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>=</mo><munderover><mo>&int;</mo><mi>y</mi><msub><mi>y</mi><mi>0</mi></msub></munderover><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi></math><br>
+	<math><mo>&minus;</mo><msub><mi>w</mi><mi>y</mi></msub><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><mi>d</mi><mi>y</mi><mo>=</mo><msub><mi>w</mi><mi>y</mi></msub><munderover><mo>&int;</mo><mi>y</mi><msub><mi>y</mi><mi>0</mi></msub></munderover><mi>d</mi><mi>y</mi></math><br>
+	<math><mo>&minus;</mo><munderover><mo>&int;</mo><msub><mi>y</mi><mi>0</mi></msub><mi>y</mi></munderover><mi>d</mi><mi>y</mi><mo>=</mo><munderover><mo>&int;</mo><mi>y</mi><msub><mi>y</mi><mi>0</mi></msub></munderover><mi>d</mi><mi>y</mi></math><br>
+</article>
+<p>Evaluating the integral, we arrive that they are equal. This shows that weight is a conservative force.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mo>[</mo><msub><mi>y</mi><mi>0</mi></msub><mo>&minus;</mo><mi>y</mi><mo>]</mo><mo>=</mo><mo>[</mo><mi>y</mi><mo>&minus;</mo><msub><mi>y</mi><mi>0</mi></msub><mo>]</mo></math><br>
+	<math><mi>y</mi><mo>&minus;</mo><msub><mi>y</mi><mi>0</mi></msub><mo>=</mo><mi>y</mi><mo>&minus;</mo><msub><mi>y</mi><mi>0</mi></msub></math><br>
+</article>
+</section>
+</section>
+<p>Thus, given a conservative force, we can write that the integral of the force over a closed loop is zero; the work is zero over a path which starts and ends where it begins. We have a special symbol for this, shown below.</p>
+<article class="equations">
+	<math><mo>&oint;</mo><msub><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mi>con</mi></msub><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mo>=</mo><mi>0</mi></math><br>
+</article>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 1</h2>
+<p style="margin-bottom:0">An object is acted upon by two conservative forces, ending where it started. Thus, what is the value of the work done by the two forces? In other words, what work is done in the following equation?</p>
+<article class="equations">
+	<math><mo>&oint;</mo><mo>(</mo><msub><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mi>1</mi></msub><mo>+</mo><msub><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mi>2</mi></msub><mo>)</mo><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mo>=</mo><mn>W</mn></math><br>
+</article>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We break the integral into two.</p>
+<article class="equations">
+	<math><mo>&oint;</mo><msub><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mi>1</mi></msub><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mo>+</mo><mo>&oint;</mo><msub><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mi>2</mi></msub><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mo>=</mo><mn>W</mn></math><br>
+</article>
+<p>Notice how this is basically asking us to evaluate the work done by a force over a closed loop. Since these two are conservative, the entire thing becomes zero.</p>
+</section>
+</section>
+
+<p>Another thing we can glean from this fact is the following. Let's say that the object takes two different paths to go to the final position but takes the same path to return. In that case, it follows that the work done over the two different paths are equal.</p>
+<p>In other words, the work done by a conservative force does not depend on the path taken. We've seen this property before, and we've given a name to it. These types of forces are path-independent.</p>
+
+
+<section hard class="examples"><mark custom calc></mark>
+<h2>Problem 1b</h2>
+<p>Show that the force of kinetic friction is not a conservative force. Note that the work done is based on the path length, given by <math><mn>W</mn><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>L</mi></math>.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We will first derive the work done by kinetic friction again. Note that we've done this before when we first discussed the line integral for work.</p>
+<p>We use the definition of the dot product given the angle between force and displacement since we always know that kinetic friction points away from the displacement, so &theta; = 180&deg;.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><mi>d</mi><mn>W</mn></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mover><mi>f</mi><mo>&rightarrow;</mo></mover><mi>k</mi></msub><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>cos</mi><mi>(&theta;)</mi><mi>d</mi><mi>r</mi></math><br>
+</article>
+<p>Since the cosine of 180 degrees is negative one, it makes the entire thing negative. Then, we take out the constant magnitude kinetic friction.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&int;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>cos</mi><mi>(180&deg;)</mi><mi>d</mi><mi>r</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>d</mi><mi>r</mi></math><br>
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mo>&int;</mo><mi>d</mi><mi>r</mi></math><br>
+</article>
+<p>We then evaluate from the initial to the final position.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><munderover><mo>&int;</mo><msub><mi>r</mi><mi>0</mi></msub><mi>r</mi></munderover><mi>d</mi><mi>r</mi></math><br>
+</article>
+<p>This is basically telling us then to just sum up all the positions along the path, which gives us the path length.</p>
+<article class="equations">
+	<math><mn>W</mn><mo>=</mo><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>L</mi></math><br>
+</article>
+<p>We've arrived at this result before. Now, to interpret it, note that since the length of any two paths from the initial to final position can vary, the work of the kinetic friction changes based on the length. Thus, it is non-conservative.</p>
+</section>
+</section>
+
+<p>Another way to put it is that kinetic friction varies based on distance, and not the displacement. Kinetic friction varies based on the path length, as shown above. In the experiment below, a disk is rotated in a circle of radius <math><mi>r</mi></math>.</p>
+<figure><img src="images/noncon2.svg" alt="">
+<figcaption>Kinetic friction is a non-conservative force.</figcaption></figure>
+<p>After one whole rotation, the potential energy tells us it should be zero; the initial and final position are the same. However, the work done by kinetic friction isn't zero. Thus, we can't make a potential energy function for kinetic friction; it is a non-conservative force.</p>
+
+<section class="examples">
+<h2>Question 2a</h2>
+<p style="margin-bottom:0">(HRK Q12.1) Consider the one-dimensional force shown below, where its magnitude is given by a function <math><mi>f</mi><mi>(</mi><mi>x</mi><mi>)</mi></math>. Is it possible to determine whether this is
+a conservative force without any additional information? If
+so, is it conservative?</p>
+<article class="equations">
+	<math><mi>F</mi><mo>=</mo><mi>f</mi><mi>(</mi><mi>x</mi><mi>)</mi><mi>&icirc;</mi></math>
+</article>
+
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>All forces that act only in one dimension are conservative; in one dimension, the only way to go from initial to final position is via going straight there. Of course, the distance can go backwards but ultimately it will end up traversing the same path.</p>
+<p>Thus, without any more information, we can conclude that such a force is conservative.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 2b</h2>
+<p style="margin-bottom:0">(HRK Q12.2) Consider the two-dimensional force shown below, where its magnitude in the x-component and y-component are given by the functions <math><mi>f</mi><mi>(</mi><mi>x</mi><mi>,</mi><mi>y</mi><mi>)</mi></math> and <math><mi>g</mi><mi>(</mi><mi>x</mi><mi>,</mi><mi>y</mi><mi>)</mi></math>. Is it possible to determine whether this is
+a conservative force without any additional information? If
+so, is it conservative?</p>
+<article class="equations">
+	<math><mi>F</mi><mo>=</mo><mi>f</mi><mi>(</mi><mi>x</mi><mi>,</mi><mi>y</mi><mi>)</mi><mi>&icirc;</mi><mo>+</mo><mi>g</mi><mi>(</mi><mi>x</mi><mi>,</mi><mi>y</mi><mi>)</mi><mi>&jcirc;</mi></math>
+</article>
+
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We do not have enough information. There are an infinite amount of paths from initial to final position in two-dimensions, so we can't say for certain that the given force is conservative.</p>
+</section>
+</section>
+</main>
+<footer>
+<a href="conservation-of-energy-I.html">Conservation of Energy I ></a>
+</footer>
+</body>
+</html>
