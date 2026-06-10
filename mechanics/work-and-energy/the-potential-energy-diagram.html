@@ -17,10 +17,12 @@
 	<article>
 		<section>
 		<h2>Summary</h2>
-		<p>Kinetic energy is conserved in an elastic collision</p>
-		<p>A loss in kinetic energy occurs in an inelastic collision, with the maximum loss occuring at a perfectly inelastic collision</p>
-		<p>A gain in kinetic energy occurs in an explosion</p>
-		</section>
+		<p>A potential energy diagram plots out the potential energy function of a conservative force over the position of the object</p>
+		<p>Adding the initial potential energy shifts the potential energy diagram up or down</p>
+		<p>Adding the kinetic energy function with respect to the position of the object to the potential energy will result in a constant value; the mechanical energy</p>
+		<p>The conservative force is the negative derivative of the function with respect to position, or the negative slope</p>
+		<h2>Equations</h2>
+		<math><mo>&minus;</mo><mfrac><mrow><mi>d</mi><mn>U</mn></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mi>F</mi></math><br>
 	</article>
 </aside>
 <main>
@@ -85,13 +87,89 @@ attraction between a particle of mass <math><msub><mi>m</mi><mi>1</mi></msub></m
 </section>
 </section>
 <p>One thing to note is that since we have a function, we can actually plot out the potential energy with respect to position. This gives us what is called a potential energy diagram. For example, let's draw the potential energy diagram for the gravitational potential energy.</p>
-<p>Since we only care about the vertical position, we will just consider a projectile thrown straight up, falling back down.</p>
-<figure><img src="images/poted1.svg" alt="">
-<figcaption>A potential energy diagram of the gravitational potential energy.</figcaption></figure>
+<article class="equations">
+	<math><mn>U</mn><mi>(</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mi>)</mi><mo>=</mo><mo>&minus;</mo><mo>&int;</mo><mover><mi>F</mi><mo>&rightarrow;</mo></mover><mo>&sdot;</mo><mi>d</mi><mover><mi>r</mi><mo>&rightarrow;</mo></mover><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math>
+</article>
+<p>Since we only care about the vertical position, let's consider the same projectile which we considered when we first analyzed the conservation of energy. We also plot the kinetic energy of the projectile. Note that we have chosen to plot it with respect to the x-position; if we plotted it with respect to the y-position, it would look like a straight line. See Exercise 2 below for that graph.</p>
+<figure><img src="images/poted2.svg" alt="">
+<figcaption>A plot of the potential and kinetic energy over position.</figcaption></figure>
+<p>If we add the two graphs together, notice that they add up to the mechanical energy; this makes sense based on what we saw before. Further, adding an initial potential energy just shifts the graph up and down like adding a constant to a graph, which overall doesnt change the constant mechanical energy.</p>
+<p>This interaction gives us some hope that these potential energy diagrams do have some sort of relation to the motion of the object; we can see this even more if we manipulate the equation we have for the potential energy given a conservative force. We know that forces cause motion, so let's try to isolate the force.</p>
+<p>Let's assume that, for now, the force is one dimensional; let's say weight, for example. When we break it down, the horizontal component drops out.</p>
+<article class="equations">
+	<math><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><mo>(</mo><mo>&int;</mo><msub><mi>w</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>)</mo><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mo>&minus;</mo><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+</article>
+<p>Now, let's try differentiating with respect to position; this remove the integral and just leaves us with a description of the force. Further, notice how the constant initial potential energy drops out. We are then left with this expression.</p>
+<article class="equations">
+	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mo>(</mo><mo>&minus;</mo><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>)</mo><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mo>(</mo><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub><mo>)</mo></math><br>
+	<math><mo>&minus;</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mo>&int;</mo><msub><mi>w</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>+</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mo>&minus;</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mn>U</mn><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><msub><mi>w</mi><mi>y</mi></msub></math><br>
+</article>
+<p>We see here that the negative derivative with respect to position of the potential energy function is equal to the conservative force. If we generalize this to any one-dimensional conservative force, we see that the following holds, then. The negative derivative of the potential energy function for a conservative force is equal to that conservative force.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mi>F</mi><mi>(</mi><mi>x</mi><mi>)</mi></math><br>
+</article>
+<p>This relation is very, very powerful; it helps us visualize what a potential energy diagram is telling us. It tells us that the negative slope of the potential energy function at any point corresponds to the force acting on the object.</p>
 
+<section class="examples"><mark custom calc></mark>
+<h2>Exercise 2</h2>
+<p>Below is the potential energy diagram for the gravitational potential energy of a ball thrown up, reaching a maximum height <math><mi>h</mi></math> with respect to the y-component of its position.</p>
+<figure><img src="images/poted3.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<p>Show, using calculus and via the graph, that the force of weight is constant throughout the motion, and it has a magnitude of <math><mi>m</mi><mi>g</mi></math>.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Looking at the graph, it is a linear function with slope <math><mi>m</mi><mi>g</mi></math>. This tells us the slope is constant, and thus the force creating the potential energy function, the force, is constant.</p>
+<p>If we differentiate it with respect to position and negate it, we get the force itself, which resolves to the same properties.</p>
+<article class="equations">
+	<math><mo>&minus;</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mo>(</mo><mi>m</mi><mi>g</mi><mi>y</mi><mo>)</mo><mo>=</mo><msub><mi>w</mi><mi>y</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>m</mi><mi>g</mi><mo>=</mo><msub><mi>w</mi><mi>y</mi></msub></math><br>
+</article>
+<p>Note the negative sign out front, which implies that we set the gravity to point downwards. This is a quirk of our coordinate system, that we set "going up" as positive.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Exercise 3a</h2>
+<p>(HRK E12.29a) A particle of mass 2.0 kg moves along the x axis through a region in which its potential energy <math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi></math> varies as shown below.</p>
+<figure><img src="images/poted4.svg" alt="">
+<figcaption>Exercise 3.</figcaption></figure>
+<p>Calculate the force acting on the particle at <math><mi>x</mi><mo>=</mo><mi>2.0m</mi></math>.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The force acting on the object at that position is the negative slope of the function at that point. Given that its a line, we just get the slope normally. Its slope goes down 14, and then goes right 3 units. This gives us a slope of <math><mo>&minus;</mo><mfrac><mi>14</mi><mi>3</mi></mfrac></math>.</p>
+<p>The force acting on it then is <math><mfrac><mi>14</mi><mi>3</mi></mfrac></math>N, or 4.7N.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Exercise 3b</h2>
+<p>(HRK E12.29c) When the particle is at <math><mi>x</mi><mo>=</mo><mi>2.0m</mi></math>, its velocity is
+2.0 m/s. How fast is it moving when it is at <math><mi>x</mi><mo>=</mo><mi>7.0m</mi></math>?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We compute for the kinetic energy at that position, becoming the initial kinetic energy. The final kinetic energy will give us the velocity at the final position.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><mn>4.0J</mn></math>
+</article>
+<p>Now, we can use the conservation of energy to find the final kinetic energy, which will give us the final velocity. We have the initial and final potential energy, after all.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>f</mi></msub></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mfrac><mrow><mi>2</mi><mo>(</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub><mo>&minus;</mo><msub><mn>U</mn><mi>f</mi></msub><mo>)</mo></mrow><mi>m</mi></mfrac></msqrt></math><br>
+</article>
+<p>Let's now just plug in.</p>
+<article class="equations">
+	<math><mi>v</mi><mo>=</mo><msqrt><mfrac><mrow><mi>2</mi><mo>(</mo><mi>(4J)</mi><mo>+</mo><mi>(&minus;7J)</mi><mo>&minus;</mo><mi>(&minus;17J)</mi><mo>)</mo></mrow><mi>(2kg)</mi></mfrac></msqrt></math><br>
+	<math><mi>v</mi><mo>=</mo><mi>3.7m/s</mi></math><br>
+</article>
+</section>
+</section>
 </main>
 <footer>
-<a unfinished>Non-Conservative Force ></a>
+<a href="equlibrium-positions.html">Equlibrium Positions ></a>
 </footer>
 </body>
 </html>

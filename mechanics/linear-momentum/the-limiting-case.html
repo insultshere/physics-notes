@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>linmoment - limiting</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>The Limiting Case</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+	<section>
+	<h2>Summary</h2>
+	<p>If something is much bigger than another thing, adding a small thing to it essentially does not change its value</p>
+	</article>
+</aside>
+<main>
+<p>Recall when we were analyzing impulse done by an impulsive force that we made an estimation that the impulsive force is much greater than that of the other forces done, such as the weight or friction. Such an approximation works if we assume that one thing is much, much greater than or much, much less than another.</p>
+<p>Take, for example, a 1.0kg box and the Earth. Clearly, the Earth is much, much more massive than the box. So much so, that if you add the mass of the Earth and the mass of the box, it will be about the same mass as the Earth.</p>
+<figure><img src="images/lim1.svg" alt="">
+<figcaption>Since the mass of the big box is much greater than the smaller box, the mass of the small box is negligible.</figcaption></figure>
+<p>Mathematically, if there is a mass <math><mi>M</mi></math> and a mass <math><mi>m</mi></math> where <math><mi>M</mi><mo>&Gt;</mo><mi>m</mi></math>, we can make the following approximation. Such is called a limiting case, or an asymptotic approximation.</p>
+<article class="equations">
+	<math><mi>M</mi><mo>&pm;</mo><mi>m</mi><mo>&approx;</mo><mi>M</mi></math>
+</article>
+<p>Notice the approximate symbol; this symbolizes that this is an approximation. However, as <math><mi>M</mi></math> gets larger and larger or <math><mi>m</mi></math> gets smaller and smaller, the approximation will get better and better.</p>
+
+<section class="examples"><mark variable custom></mark>
+<h2>Exercise 1</h2>
+<p style="margin-bottom:0">Below is the general equation for the final velocity of a block of mass <math><mi>m</mi></math> undergoing an elastic collision.</p>
+<article class="equations" style="margin:1em 0">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mi>(</mi><mi>m</mi><mo>&minus;</mo><mi>M</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></math><br>
+</article>
+<p style="margin-bottom:0">Show that, in the limiting case where <math><mi>M</mi><mo>&Gt;</mo><mi>m</mi></math>, it simplifies to the following approximation.</p>
+<article class="equations" style="margin-bottom:0.7em">
+	<math><mi>2</mi><msub><mi>v</mi><mi>M0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>&approx;</mo><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></math><br>
+</article>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Adding or subtracting the small <math><mi>m</mi></math> thus will approximately just be the mass <math><mi>M</mi></math>.</p>
+<article class="equations">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub><mi>(</mi><mi>m</mi><mo>&minus;</mo><mi>M</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub></mrow><mrow><mi>m</mi><mo>+</mo><mi>M</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></math><br>
+	<math><mfrac><mrow><msub><mrow><mo>&minus;</mo><mi>M</mi><mi>v</mi></mrow><mi>m0</mi></msub><mo>+</mo><mi>2</mi><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub></mrow><mrow><mi>M</mi></mrow></mfrac><mo>&approx;</mo><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></math><br>
+	<math><mi>2</mi><msub><mi>v</mi><mi>M0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>&approx;</mo><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></math><br>
+</article>
+<p>Note that if the more massive object is at rest, then this is essentially a rebound; which makes sense. Rebounding off of a wall is like hitting a very large object.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E6.28) A hovering fly is approached by an enraged elephant charging
+at 2.1 m/s. Assuming that the collision is elastic, at what
+speed does the fly rebound?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The fly is much, much less massive than the elephant. We write out the approximation then below.</p>
+<article class="equations" style="margin-bottom:0.7em">
+	<math><mi>2</mi><msub><mi>v</mi><mi>M0</mi></msub><mo>&minus;</mo><msub><mi>v</mi><mi>m0</mi></msub><mo>&approx;</mo><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></math><br>
+	<math><mi>2</mi><mi>(2.1m/s)</mi><mo>&approx;</mo><msub><mrow><mi>v</mi></mrow><mi>mf</mi></msub></math><br>
+</article>
+<p>Giving us a speed of around 4.2m/s.</p>
+</section>
+</section>
+
+<p>The limiting case is quite useful for checking our results. For example, if we know intuitively that something will occur if, say, sometimes was massless or something was incredibly massive, then we can check that by looking at the limiting case.</p>
+<p>Take, for example, a ball elastically rebounding with the Earth. We know by intuition that the ball will rebound at about the same speed. From the limiting case, we know that the Earth is much more massive than the ball, and thus the limiting case holds. Note, however, that the ball does impart some of its momentum to the Earth; however, this is negligible.</p>
+
+<section hard class="examples"><mark variable custom></mark>
+<h2>Problem 1a</h2>
+<p>Below is the Atwood's machine. Show that, when <math><mi>M</mi><mo>&Gt;</mo><mi>m</mi></math>, the larger mass falls as if in free fall. Alternatively, show that as the smaller mass becomes massless (<math><mi>m</mi><mo>&rightarrow;</mo><mi>0</mi></math>), we arrive at the same result.</p>
+<figure><img src="images/lim2.svg" alt="">
+<figcaption>Problem 1.</figcaption></figure>
+
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We go through the same solution as before, however noting the approximation. First, we assume that the bigger mass will go down (by intuition). Thus, its acceleration is negative. There are no net horizontal forces, so we only care about the vertical direction. For the smaller mass, its acceleration is positive, with the two net forces being the tension and the weight itself.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netm,y</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi></math><br>
+	<math><mi>m</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>g</mi><mo>=</mo><mi>T</mi></math><br>
+</article>	
+<p>Now, we have an equation for the tension. For the bigger mass, it has the same two forces, but it has a negative acceleration.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>netM,y</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>w</mi></math><br>
+	<math><mo>&minus;</mo><mi>M</mi><mi>a</mi><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>M</mi><mi>g</mi></math><br>
+	<math><mi>M</mi><mi>g</mi><mo>=</mo><mi>T</mi><mo>+</mo><mi>M</mi><mi>a</mi></math><br>
+</article>	
+<p>Now, we substitute in the value of tension that we found.</p>
+<article class="equations">
+	<math><mi>M</mi><mi>g</mi><mo>=</mo><mi>(</mi><mi>m</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>)</mi><mo>+</mo><mi>M</mi><mi>a</mi></math><br>
+	<math><mi>M</mi><mi>g</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi><mo>=</mo><mi>M</mi><mi>a</mi><mo>+</mo><mi>m</mi><mi>a</mi></math><br>
+	<math><mi>g</mi><mi>(</mi><mi>M</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi><mo>=</mo><mi>a</mi><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi></math><br>
+	<math><mi>g</mi><mo>(</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><mo>=</mo><mi>a</mi></math><br>
+</article>	
+<p>The denominator and numerator both approach <math><mi>M</mi></math> assuming the limiting case (or the alternative), so they cancel out, leaving that the acceleration is simply that of gravity; free fall!</p>
+</section>
+</section>
+
+<p>When can we not apply this approximation? One example is in multiplying a small number by a big number. For example, here we multiply a big number by a small number.</p>
+<article class="equations">
+	<math><mi>1000000</mi><mo>&sdot;</mo><mfrac><mi>1</mi><mi>10</mi></mfrac><mo>=</mo><mi>100000</mi></math>
+</article>	
+<p>This has cut the value by a factor of ten! This is clearly a huge decrease, and thus we can't waive it off. If we added or subtracted it instead, we would have the following.</p>
+<article class="equations">
+	<math><mi>1000000</mi><mo>+</mo><mfrac><mi>1</mi><mi>10</mi></mfrac><mo>=</mo><mi>1000000.1</mi></math>
+</article>	
+<p>Here, the value is essentially the same, so we can waive it off. Thus, we have to be careful when applying the limiting case approximation.</p>
+
+
+<section class="examples"><mark variable custom></mark>
+<h2>Problem 1b</h2>
+<p>What happens to the tension in the string in the limiting case?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Substituting in the value for the acceleration into the equation for the tension, we arrive at the following.</p>
+<article class="equations">
+	<math><mi>m</mi><mi>g</mi><mo>(</mo><mfrac><mrow><mi>M</mi><mo>&minus;</mo><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><mo>+</mo><mi>m</mi><mi>g</mi><mo>=</mo><mi>T</mi></math><br>
+	<math><mfrac><mrow><mi>M</mi><mi>m</mi><mi>g</mi><mo>&minus;</mo><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>m</mi><mi>g</mi><mi>(</mi><mi>M</mi><mo>+</mo><mi>m</mi><mi>)</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><mi>T</mi></math><br>
+	<math><mfrac><mrow><mi>M</mi><mi>m</mi><mi>g</mi><mo>&minus;</mo><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>M</mi><mi>m</mi><mi>g</mi><mo>+</mo><msup><mi>m</mi><mn>2</mn></msup><mi>g</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><mi>T</mi></math><br>
+	<math><mi>g</mi><mo>(</mo><mfrac><mrow><mi>2</mi><mi>M</mi><mi>m</mi></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>)</mo><mo>=</mo><mi>T</mi></math><br>
+</article>	
+<p>The denominator approximates to be just <math><mi>M</mi></math>, so we have the following approximation.</p>
+<article class="equations">
+	<math><mi>g</mi><mo>(</mo><mfrac><mrow><mi>2</mi><mi>M</mi><mi>m</mi></mrow><mi>M</mi></mfrac><mo>)</mo><mo>&approx;</mo><mi>T</mi></math><br>
+	<math><mi>2</mi><mi>m</mi><mi>g</mi><mo>&approx;</mo><mi>T</mi></math><br>
+</article>	
+<p>What does this mean? Intuitively, the bigger mass is moving in free fall, and the smaller mass moves at the same acceleration. Thus, the tension has to overcome the weight of the smaller object and then accelerate it further, leaving us with the result. </p>
+</section>
+</section>
+
+<section class="examples"><mark variable></mark>
+<h2>Problem 2a</h2>
+<p>(Morin P6.13a) A block with large mass <math><mi>M</mi></math> moves with initial speed <math><msub><mi>v</mi><mi>0</mi></msub></math> across frictionless ice. It encounters a long row of stationary balls, each with small mass <math><mi>m</mi></math>, and it collides elastically with each ball, one after the other.</p>
+<figure><img src="images/lim3.svg" alt="">
+<figcaption>Problem 2.</figcaption></figure>
+<p>Assume that the balls are displaced away after collision such that they don't collide with any other balls; the distance between each ball is negligible, and <math><mi>M</mi><mo>&Gt;</mo><mi>m</mi></math>. Find the speed of the block after a collision.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Let's see how each collision affects the speed. We have the following relation, from our study of elastic collisions.</p>
+<article class="equations" style="margin-bottom:0.7em">
+	<math><mfrac><mrow><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mi>(</mi><mi>M</mi><mo>&minus;</mo><mi>m</mi><mi>)</mi><mo>+</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub></mrow><mrow><mi>M</mi><mo>+</mo><mi>m</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+</article>
+<p>Applying the limiting approximation, we have the following.</p>
+<article class="equations" style="margin-bottom:0.7em">
+	<math><mfrac><mrow><mi>M</mi><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>+</mo><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub></mrow><mi>M</mi></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+	<math><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>+</mo><mfrac><mrow><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub></mrow><mi>M</mi></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+</article>
+<p>Notice that this means that for every collision, the term <math><mfrac><mrow><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>m0</mi></msub></mrow><mi>M</mi></mfrac></math> is added. One way to simplify this is to look in the frame of the block; in this frame, the block starts at rest and each of the balls moves at rate <math><mo>&minus;</mo><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub></math>. This gives us this equation.</p>
+<article class="equations" style="margin-bottom:0.7em">
+	<math><msub><mrow><mi>v</mi></mrow><mi>M0</mi></msub><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>m</mi><msub><mrow><mi>v</mi></mrow><mi>0</mi></msub></mrow><mi>M</mi></mfrac><mo>=</mo><msub><mrow><mi>v</mi></mrow><mi>Mf</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+
+
+<section hard class="examples"><mark calc></mark>
+<h2>Problem 2b</h2>
+<p>(Morin P6.13c) The balls are continuously distributed, with mass density <math><mi>&lambda;</mi></math>. That is, each infinitesimal length <math><mi>d</mi><mi>x</mi></math> has an infinitesimal mass <math><mi>d</mi><mi>m</mi></math>. Find its velocity as a function of time <math><mi>v</mi><mi>(</mi><mi>t</mi><mi>)</mi></math>, assuming that the initial time corresponds to the time right before the first collision; <math><mi>v</mi><mi>(</mi><mi>0</mi><mi>)</mi><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math>.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We found the following equation in the previous part to this problem. After some collisions, it moves at a speed, let's say <math><mi>v</mi></math>. Over an infinitesimal portion <math><mi>d</mi><mi>t</mi></math>, the current speed has a new speed <math><mi>d</mi><mi>v</mi></math> added to it.</p>
+<article class="equations" style="margin-bottom:0.7em">
+	<math><mi>v</mi><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>m</mi><mi>v</mi></mrow><mi>M</mi></mfrac><mo>=</mo><mi>v</mi><mo>+</mo><mi>d</mi><mi>v</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>m</mi><mi>v</mi></mrow><mi>M</mi></mfrac><mo>=</mo><mi>d</mi><mi>v</mi></math><br>
+</article>
+<p>Continuing to stay in the frame of the block, over time, the amount of balls which hit the object is given by <math><mi>d</mi><mi>x</mi><mo>=</mo><mi>v</mi><mi>d</mi><mi>t</mi></math>. The total mass of these objects is given by the mass density, so we have <math><mi>&lambda;</mi><mi>v</mi><mi>d</mi><mi>t</mi></math>.</p>
+<article class="equations" style="margin-bottom:0.7em">
+	<math><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>&lambda;</mi><mi>v</mi><mi>d</mi><mi>t</mi><mi>v</mi></mrow><mi>M</mi></mfrac><mo>=</mo><mi>d</mi><mi>v</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>&lambda;</mi><msup><mi>v</mi><mi>2</mi></msup></mrow><mi>M</mi></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><mi>d</mi><mi>v</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>&lambda;</mi></mrow><mi>M</mi></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><mfrac><mi>1</mi><msup><mi>v</mi><mi>2</mi></msup></mfrac><mi>d</mi><mi>v</mi></math><br>
+</article>
+<p>We now integrate from initial to final time.</p>
+<article class="equations" style="margin-bottom:0.7em">
+	<math><mo>&minus;</mo><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mfrac><mrow><mi>2</mi><mi>&lambda;</mi></mrow><mi>M</mi></mfrac><mi>d</mi><mi>t</mi><mo>=</mo><munderover><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mfrac><mi>1</mi><msup><mi>v</mi><mi>2</mi></msup></mfrac><mi>d</mi><mi>v</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>&lambda;</mi></mrow><mi>M</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>d</mi><mi>t</mi><mo>=</mo><munderover><mo>&int;</mo><msub><mi>v</mi><mi>0</mi></msub><mi>v</mi></munderover><mfrac><mi>1</mi><msup><mi>v</mi><mi>2</mi></msup></mfrac><mi>d</mi><mi>v</mi></math><br>
+	<math><mo>&minus;</mo><mfrac><mrow><mi>2</mi><mi>&lambda;</mi></mrow><mi>M</mi></mfrac><mi>t</mi><mo>=</mo><mfrac><mi>1</mi><msub><mi>v</mi><mi>0</mi></msub></mfrac><mo>&minus;</mo><mfrac><mi>1</mi><mi>v</mi></mfrac></math><br>
+</article>
+<p>Solve for the variable <math><mi>v</mi></math>.</p>
+<article class="equations" style="margin-bottom:0.7em">
+	<math><mfrac><mrow><mi>2</mi><mi>&lambda;</mi></mrow><mi>M</mi></mfrac><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><msub><mi>v</mi><mi>0</mi></msub></mfrac><mo>=</mo><mfrac><mi>1</mi><mi>v</mi></mfrac></math><br>
+	<math><mfrac><mi>1</mi><mrow><mfrac><mrow><mi>2</mi><mi>&lambda;</mi></mrow><mi>M</mi></mfrac><mi>t</mi><mo>+</mo><mfrac><mi>1</mi><msub><mi>v</mi><mi>0</mi></msub></mfrac></mrow></mfrac><mo>=</mo><mi>v</mi></math><br>
+
+</article>
+</section>
+</section>
+
+
+
+</main>
+<footer>
+	<a href="the-cm-frame.html"> The CM Frame ></a>
+</footer>
+</body>
+</html>

@@ -20,12 +20,6 @@
 		<p>Mechanical energy is the sum of the total kinetic energy and the potential energy of a system</p>
 		<p>In a system where only conservative forces act on its elements, the mechanical energy is conserved</p>
 		</section>
-		<section>
-		<h2>Equations</h2>
-		<p>Only for systems wherein the only thing acting on them are conservative forces, like weight</p>
-		<math><mi>&Delta;</mi><mn>E</mn><mo>=</mo><mi>0</mi></math><br>
-		<math><mi>&Delta;</mi><mi>(</mi><mn>K</mn><mo>+</mo><mn>U</mn><mi>)</mi><mo>=</mo><mi>0</mi></math><br>
-		</section>		
 	</article>
 </aside>
 <main>
@@ -80,24 +74,7 @@ particles remains constant. If the individual kinetic energies of the particles 
 about the forces that act in this system?</p>
 <h2>Solution<button onclick="toggle(this)">v</button></h2>
 <section class="solution">
-<p>We use that fact that the potential energy function is zero at infinity, so we set our initial position there. Since the function only has a horizontal component, we break down the dot product to its components.</p>
-<p>Note also that since this is an attractive force, the sign of the function must be negative.</p>
-<article class="equations">
-	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><mo>(</mo><munderover><mo>&int;</mo><mi>&infin;</mi><mi>x</mi></munderover><msub><mi>F</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><munderover><mo>&int;</mo><mi>&infin;</mi><mi>y</mi></munderover><msub><mi>F</mi><mi>y</mi></msub><mi>d</mi><mi>y</mi><mo>)</mo><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
-	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><munderover><mo>&int;</mo><mi>&infin;</mi><mi>x</mi></munderover><msub><mi>F</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
-	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><munderover><mo>&int;</mo><mi>&infin;</mi><mi>x</mi></munderover><mo>(</mo><mo>&minus;</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub></mrow><msup><mi>x</mi><mi>2</mi></msup></mfrac><mo>)</mo><mi>d</mi><mi>x</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
-	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mi>G</mi><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub><munderover><mo>&int;</mo><mi>&infin;</mi><mi>x</mi></munderover><mfrac><mi>1</mi><msup><mi>x</mi><mi>2</mi></msup></mfrac><mi>d</mi><mi>x</mi><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
-	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub></mrow><mi>x</mi></mfrac><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
-</article>
-<p>One thing to do is note the final sentence, saying that this approaches zero as the distance approaches infinity. If distance approaches infinity, then the first term drops out.</p>
-<article class="equations">
-	<math><mi>0</mi><mo>=</mo><mo>&minus;</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub></mrow><mi>&infin;</mi></mfrac><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
-	<math><mi>0</mi><mo>=</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
-</article>
-<p>This gives a value for the initial potential energy. Thus, we have the following potential energy function.</p>
-<article class="equations">
-	<math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi><mo>=</mo><mo>&minus;</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mi>1</mi></msub><msub><mi>m</mi><mi>2</mi></msub></mrow><mi>x</mi></mfrac></math><br>
-</article>
+<p>If the kinetic energy of the particles don't change, it means that there is no net work done on the system.</p>
 </section>
 </section>
 <p>To see this law in action, let's analyze a familiar scenario in action, being that of projectile motion. To make the calculations clear, let's set the initial position at the origin.</p>

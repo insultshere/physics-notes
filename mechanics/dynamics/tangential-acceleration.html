@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>kinematics - circular</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1>Tangential Acceleration</h1>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+	<section>
+	<h2>Summary</h2>
+	<p>In non-uniform circular motion, there is tangential acceleration</p>
+	<p>The centripetal force is affected by the speed of an object that can vary based on the tangential acceleration</p>
+	</section>
+	</article>
+</aside>
+<main>
+<p>Most objects don't move at the same speed throughout a circle. For example, a pendulum moves in circular motion; however, it clearly isn't uniform. Released from rest horizontally, the bob speeds up near the bottom then comes to rest at the top again.</p>
+<p>Clearly, this means that the speed of the object changes throughout the motion. Since it changes, that means there must be an acceleration acting on the object aside from the centripetal acceleration.</p>
+<figure><img src="images/tangacc1.svg" alt="">
+<figcaption>A pendulum. The bob speeds up, then slows down.</figcaption></figure>
+<p>We can see in the pendulum example above what this looks like visually. The direction of velocity changes based on the centripetal acceleration; however, the magnitude of it, or the speed, also changes; it is at rest at the two highest positions but is moving fastest at the lowest position.</p>
+<p>Since the velocity of the object is perpendicular to the circle (or tangential), we define this acceleration which changes the magnitude of the velocity of the object to be the tangential acceleration. Note that because the centripetal acceleration is based on the speed of the object, and the speed of the object changes, the magnitude of the centripetal acceleration also changes.</p>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 1a</h2> 
+<p>A car uniformly speeds up across a circular turn, with its velocities drawn at certain points along the curve below, the magnitude proportional to the length. For each position, what would the centripetal acceleration look like?</p>
+<figure><img src="images/tangacc2.svg" alt="">
+<figcaption>Question 1.</figcaption></figure>
+
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The centripetal acceleration points to the center, so we atleast know the direction. The magnitude we also know, so we can draw it as follows. Note that since the speed changes, the centripetal acceleration's magnitude also changes. </p>
+<figure><img src="images/tangacc3.svg" alt=""></figure>
+</section>
+</section>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 1b</h2> 
+<p>What would the tangential acceleration look like?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Given the problem states that the car "uniformly speeds up", that means that the tangential acceleration is constant throughout the motion. The direction is, as said, tangential to the circle, so it is in the same direction as the velocity.</p>
+	<figure><img src="images/tangacc4.svg" alt=""></figure>
+</section>
+</section>
+
+<p>Since we have an acceleration in the tangential and centripetal direction, we can say that the total acceleration is when we add both of these together. In the case where there is no tangential velocity, like before, the total acceleration on the object is just the centripetal acceleration.</p>
+<p>In the case where there is some tangential acceleration, the total acceleration will stray from the centripetal acceleration.</p>
+
+<section class="examples"><mark custom></mark>
+<h2>Question 1c</h2> 
+<p>Combining the answers from the past two questions, what would the total acceleration look like for each position?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We can add the two vectors graphically to achieve this diagram. Notice how the acceleration does not point directly at the center anymore; this is because the tangential acceleration "shifts" the direction of acceleration away from the center. Still, there is a centripetal component to the acceleration.</p>
+	<figure><img src="images/tangacc5.svg" alt=""></figure>
+</section>
+</section>
+
+<p>As we've noted time and time again, if there's an acceleration, there should be a force relating to it. This force must point in the direction of the acceleration, so we call this the "tangential" force. Just like the centripetal force, this force only determines the direction of the force; any force can act as the tangential force, if need be.</p>
+<figure><img src="images/tangacc7.svg" alt="">
+<figcaption>There are two forces acting on the object, being the tension and the weight.</figcaption></figure>
+<p>Given that the centripetal force has to point towards the center, it can't generate the tangential force; thus, the only other force is weight, where a component of it must make the tangential force. We break the weight into components perpendicular and parallel to the string. Since the tangential force is perpendicular to the centripetal force, the perpendicular component must be the one we are looking for.</p>
+<figure><img src="images/tangacc8.svg" alt=""></figure>
+<p>Since the weight is parallel to the vertical, the angle is still <math><mi>&theta;</mi></math>. Thus, from trigonometry, we can get the following relation for the tangential force.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>t</mi></msub><mo>=</mo><msub><mi>w</mi><mi>&perp;</mi></msub></math><br>
+	<math><msub><mi>F</mi><mi>t</mi></msub><mo>=</mo><mi>w</mi><mi>sin</mi><mi>(&theta;)</mi></math><br>
+	<math><msub><mi>F</mi><mi>t</mi></msub><mo>=</mo><mi>m</mi><mi>g</mi><mi>sin</mi><mi>(&theta;)</mi></math>
+</article>
+<p>Another thing to notice is the parallel component of the weight. Clearly, this affects the centripetal force. It points away from the center, thus the tension has to be greater than it so that the centripetal force is enough. In other words, we can write out the equation for the centripetal force as follows.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><msub><mi>w</mi><mi>&parallel;</mi></msub></math><br>
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>T</mi><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+</article>
+<p>One thing you may wonder is why this does not show up in the other examples we did, such as the conical pendulum. This is because the circle travelled in a conical pendulum is in a plane perpendicular to the weight; in other words, the weight does not contribute at all to the centripetal force. In the pendulum above, the weight and the circle travelled are in the same plane.</p>
+<p>Also note that this means that, for example, the highest centripetal force occurs when <math><mi>cos</mi><mi>(&theta;)</mi></math> is at its largest. This occurs at the bottom of the pendulum, where &theta; is zero.</p>
+<section class="examples"><mark custom variable></mark>
+<h2>Exercise 1a</h2>
+<p>Astra is holding a ball attached to a string in a vertical circle of radius <math><mi>r</mi></math>. While she is able to rotate the ball at any angular speed she likes, the string will go slack if the speed of the object is slow enough, causing the ball to fall.</p>
+<figure><img src="images/circular9.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
+<p>What is the minimum angular speed <math><msub><mi>&omega;</mi><mi>0</mi></msub></math> so that the ball will continuously go in circular motion?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>To keep the water in the bucket, there has to be a centripetal force acting on the bucket and the water.</p>
+<p>At the bottom half of the circle, the tension from the rope applies the centripetal force. At the top of the circle, however, both the tension of the rope and the component of the weight parallel to the string apply a centripetal force.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>T</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+</article>
+<p>The weight of the object can't go away; however, the tension can. If, say, the tension went away, that means the string goes slack. Thus, the only force acting as the centripetal force would be the weight of the object.</p>
+<p>At any point at the upper half then, the maximum strength of the centripetal force by the weight would determine the minimum speed possible. This occurs at the top.</p>
+<article class="equations">
+<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>w</mi></math><br>
+<math><mi>m</mi><mi>r</mi><msup><msub><mi>&omega;</mi><mi>0</mi></msub><mn>2</mn></msup><mo>=</mo><mi>m</mi><mi>g</mi></math><br>
+<math><mi>r</mi><msup><msub><mi>&omega;</mi><mi>0</mi></msub><mn>2</mn></msup><mo>=</mo><mi>g</mi></math><br>
+<math><msub><mi>&omega;</mi><mi>0</mi></msub><mo>=</mo><msqrt><mfrac><mi>g</mi><mi>r</mi></mfrac></msqrt></math>
+</article>
+</section>
+</section>
+
+<section hard class="examples"><mark custom variable></mark>
+<h2>Exercise 1b</h2>
+<p>Fern now spins the ball, but is now only able to spin it at a maximum angular speed of <math><mi>0.75</mi><msub><mi>&omega;</mi><mi>0</mi></msub></math>. However, his spinning is cut short as the string goes slack at some point. At what maximum angle, measured from the horizontal, going counterclockwise, will the string go slack? He rotates the ball counterclockwise.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The centripetal force for any given position on the upper half of the circle is as follows.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>T</mi><mo>+</mo><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi></math>
+</article>
+<p>The point where the string goes slack is when the tension drops out.</p>
+<article class="equations">
+	<math><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>m</mi><mi>r</mi><mi>(</mi><mi>0.75</mi><msub><mi>&omega;</mi><mi>0</mi></msub><msup><mi>)</mi><mn>2</mn></msup><mo>=</mo><mi>m</mi><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><mi>r</mi><mi>(</mi><mi>0.75</mi><msqrt><mfrac><mi>g</mi><mi>r</mi></mfrac></msqrt><msup><mi>)</mi><mn>2</mn></msup><mo>=</mo><mi>g</mi><mi>cos</mi><mi>(&theta;)</mi></math><br>
+	<math><msup><mi>0.75</mi><mi>2</mi></msup><mo>=</mo><mi>cos</mi><mi>(&theta;)</mi></math><br>
+</article>
+<p>Applying inverse cosine, we get that the angle is at 55.77&deg;.</p>
+</section>
+</section>
+
+</main>
+<footer>
+	<navlink><a href="time-dependent-force.html">Time-Dependent Force ></a><br></navlink>
+</footer>
+</body>
+</html>

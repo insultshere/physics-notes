@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>workenergy - equilpos</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../styles.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Equilibrium Positions</h1>
+<header>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>A stable equilibrium position occurs at a local minimum of the potential energy diagram, where a displacement causes the object to return</p>
+		<p>An unstable equilibrium position occurs at a local maximum of the potential energy diagram, where a displacement causes the object to continuously go farther from the original position</p>
+		<p>Some equilibrium positions are not stable nor unstable, and are neutral</p>
+
+	</article>
+</aside>
+<main>
+<p>Let's analyze a more complicated potential energy function, which we show below. This one is still one-dimensional, depending on the x-component of the position. We set here that going right is positive; this is usually quite a mundane thing to notice, but here it is important.</p>
+<figure><img src="images/poted5.svg" alt="">
+<figcaption>A more complicated potential energy function, with crests and dikes.</figcaption></figure>
+<p>We can see here that there are multiple portions where the function reaches a high and low point. From calculus, we know that the slope at these points, called <intext tabindex=0 tooltip="a point where a graph changes direction">turning points</intext>, have a slope of zero, and thus its derivative is zero. From our relation, it means that the <i>magnitude of the conservative force at these points are zero.</i></p>
+<figure><img src="images/poted6.svg" alt="">
+<figcaption>Each turning point has no net conservative force acting on the object.</figcaption></figure>
+
+<p>Further, we can see at the right that it levels off. At this portion, the slope is visually zero, meaning that the magnitude of the conservative force acting on it is also zero. If we imagine an object at these positions, they can either be at rest or moving at constant velocity via the Law of Inertia; it is in equilibrium.</p>
+<article class="terms">
+	<mark>Equilibrium position</mark> - a position wherein the net force on an object is zero
+</article>
+<p>Since the strength and direction of the conservative force is the negative slope of the function at any point, a negative slope means the object moves to the right, and vice versa. Thus, we can plot out the force for each position as well.</p>
+<p>For the low point in the graph, the force acts toward it, while at the high point, the force acts away from it; meanwhile, at the two horizontal ends, no force acts on it and thus at that point the object coasts forever.</p>
+<figure><img src="images/poted8.svg" alt="">
+<figcaption>Forces at certain positions of the graph.</figcaption></figure>
+<p>If we imagine an object at, say, a low point, if we apply a force onto it to move it out of its equilibrium position, the force pulls it back to it. Meanwhile, if we apply a force to an object in a high point, the force pushes it away from it.</p>
+<p>This means that, despite these two having the same property that they are equilibrium positions, they differ in how the object acts after it is moved out of it; the former brings it back to equilibrium, while the other actively pushes it away from it.</p>
+<article class="terms">
+	<mark>Stable equilibrium position</mark> - an equlibrium position where the object naturally returns back to equilibrium after being displaced<br>
+	<mark>Unstable equilibrium position</mark> - an equlibrium position where the object does not naturally return to the original position after being displaced
+</article>
+<p>A classic example of these two is that of a marble and a bowl. The first setup involves placing the marble within the bowl such that it rolls into the middle. Applying a force onto it will cause it to roll back to the middle; that point becomes its equilibrium position.</p>
+<p>If we place the marble on top of an upside down bowl, if we push the marble now it will roll off the bowl, getting displaced farther and farther away from it. This is unstable.</p>
+<figure><img src="images/equipos1.svg" alt="">
+<figcaption>Two types of equilibrium positions: stable and unstable.</figcaption></figure>
+<p>Another consequence of the above is that it shows that motion will always seek a lower possible potential energy, and once it reaches the lowest possible it will stay there unless it finds another.</p>
+
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q12.17) A marble can be balanced on the edge of a bowl so that with a
+small push it could either roll into the bowl and oscillate
+back and forth inside it or roll off the bowl, land on the
+floor, and break. Is this balanced position a point of stable or
+unstable equilibrium?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>It is a point of unstable equilibrium. In the first scenario it won't return back to its original position (think like the potential energy diagram above, where if you displace the object left it will go down to the stable equilibrium point below).</p>
+<p>The second scenario also has the same property where it will continuously get farther and farther from its initial equilibrium position.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 2</h2>
+<p>(HRK Q12.18)  Is it possible to have an equilibrium point that is both unstable
+and stable?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>In one dimension, no. In more dimensions however, yes. Here is one example. A marble is balanced on the middle of a saddle (think that of a horse) and is pushed. In one direction, the saddle curves like a bowl, and it goes back to its original position. In the other, it acts like an upside down bowl, and will continuously get farther and farther.</p>
+</section>
+</section>
+
+<p>Another thing we can do with the above graph is note that we haven't actually set any kinetic energy for the object. If we add kinetic energy to the system (such as imparting a force onto the object) we overall raise the mechanical energy within the system (we expand on this later in our topics on external work).</p>
+<p>For example, for the object in the bowl, if we impart enough kinetic energy into it is possible that we can reach higher and higher heights. Thus, for this diagram, we can arbitrarily choose the mechanical energy of the system.</p>
+<figure><img src="images/equipos2.svg" alt="">
+<figcaption>Three different, arbitrary choices for the total mechanical energy of the system.</figcaption></figure>
+<p>Starting from bottom to top, the lowest possible mechanic energy occurs at the bottom of the graph. Here, the object remains at rest at the lowest point; think that of the marble in the bowl. We then impart a force onto it, bringing its mechanical energy up. It is able to reach a higher height, but it is not enough to clear the left or right side.</p>
+<p>If we impart enough force, however, it is able to clear it; think the marble has escaped the bowl. It can go left, where it goes off to infinity, or it can pass the unstable equilibrium point and go right, going off to infinity as well.</p>
+
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(HRK E12.29b) A particle of mass 2.0 kg moves along the x axis through a region in which its potential energy <math><mn>U</mn><mi>(</mi><mi>x</mi><mi>)</mi></math> varies as shown below.</p>
+<figure><img src="images/poted4.svg" alt="">
+<figcaption>Exercise 1.</figcaption></figure>
+<p>When the particle is at <math><mi>x</mi><mo>=</mo><mi>2.0m</mi></math>, its velocity is
+2.0 m/s. What are the limits of its motion?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We compute for the kinetic energy at that position, becoming the initial kinetic energy. This will allow us to get the mechanical energy at that position as well.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></math><br>
+	<math><msub><mn>K</mn><mi>0</mi></msub><mo>=</mo><mn>4.0J</mn></math>
+</article>
+<p>This gives us that the total mechanical energy of the system is &minus;3.0J. Given this, the object can only move from the positions 2m to 13m, or <math><mi>2m</mi><mo>&leq;</mo><mi>x</mi><mo>&leq;</mo><mi>13m</mi></math>.</p>
+</section>
+</section>
+
+<section hard class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E12.29b) An alpha particle (helium nucleus) inside a large nucleus is
+bound by a potential energy like that shown in the figure below.  Describe the
+possible motions.</p>
+<figure><img src="images/equipos3.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Let <math><mn>E</mn></math> be the total mechanical energy of the system. If <math><mn>E</mn><mo><</mo><msub><mn>U</mn><mi>1</mi></msub></math>, the object will oscillate between the two maximum potential energies.</p>
+<p>When it is at the level of the maximum potential energy, it is able to escape the dike, and it will continue to move away to infinity for forever in both the positive and negative directions.</p>
+</section>
+</section>
+<p>Using calculus, we can tell when an equilibrium position is stable or unstable. Taking the <intext tabindex=0 tooltip="the second derivative of a function gives its concavity; positive means concave up and negative means concave down">second derivative</intext> of the potential energy function allows us to check if the function is a local maximum or minimum point; if it is concave up, it means that its a minimum point. Meanwhile, if its concave down, its a maximum point.</p>
+<article class="equations">
+	<p>If <math><mfrac><mrow><msup><mi>d</mi><mi>2</mi></msup><mn>U</mn></mrow><mrow><mi>d</mi><msup><mi>x</mi><mi>2</mi></msup></mrow></mfrac><mo>></mo><mi>0</mi></math>, the object is in stable equilibrium</p>
+	<p>If <math><mfrac><mrow><msup><mi>d</mi><mi>2</mi></msup><mn>U</mn></mrow><mrow><mi>d</mi><msup><mi>x</mi><mi>2</mi></msup></mrow></mfrac><mo><</mo><mi>0</mi></math>, the object is in unstable equilibrium</p>
+</article>
+<p>Looking at the function, a local minimum means that it is a stable equilibrium position. Meanwhile, a local maximum means that it is an unstable equilibrium position.</p>
+</main>
+<footer style="color:#900">
+	&FilledSmallSquare;
+</footer>
+</body>
+</html>

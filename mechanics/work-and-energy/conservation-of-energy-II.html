@@ -60,19 +60,19 @@ bowl?</p>
 </article>
 <p>Now, plug in values. With our coordinate system, the vertical position is below the initial position, so we set it as negative. Note also to convert centimeters to meters.</p>
 <article class="equations">
-	<math><mi>v</mi><mo>=</mo><msqrt><mo>&minus;</mo><mi>2</mi><mi>(9.8m/s&sup2;)</mi><mi>(0.236m)</mi></msqrt></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mo>&minus;</mo><mi>2</mi><mi>(9.8m/s&sup2;)</mi><mi>(&minus;0.236m)</mi></msqrt></math><br>
 	<math><mi>v</mi><mo>=</mo><mi>2.15m/s</mi></math><br>
 </article>
 </section>
 </section>
 
 <section class="examples"><mark variable></mark>
-<h2>Exercise 2</h2>
+<h2>Exercise 2a</h2>
 <p>(HRK P12.2)  A ball of mass <math><mi>m</mi></math> is attached to the end of a very light rod of
 length <math><mi>L</mi></math>. The other end of the rod is pivoted so that the ball
 can move in a vertical circle.</p>
 <figure><img src="images/conservaprob2.svg" alt="">
-<figcaption>Exercise 2.</figcaption></figure>
+<figcaption>Exercise 2a.</figcaption></figure>
 <p>The rod is pulled aside to the
 horizontal and given a downward push as shown below
 so that the rod swings down and just reaches the vertically upward position. What initial speed was imparted to the ball?</p>
@@ -88,6 +88,34 @@ so that the rod swings down and just reaches the vertically upward position. Wha
 <p>With our coordinate system, the vertical position is above the initial position, so we set it as position. Thus, the equation for the speed is as follows.</p>
 <article class="equations">
 	<math><msqrt><mi>2</mi><mi>g</mi><mi>L</mi></msqrt><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</article>
+</section>
+</section>
+
+<section hard class="examples"><mark variable></mark>
+<h2>Exercise 2b</h2>
+<p>(HRK P12.15) A particle is projected horizontally along the interior of a frictionless hemispherical bowl of radius <math><mi>r</mi></math>, which is kept at rest.</p>
+<figure><img src="images/conservaprob7.svg" alt="">
+<figcaption>Exercise 2b.</figcaption></figure>
+<p>We wish to find the initial speed <math><msub><mi>v</mi><mi>0</mi></msub></math> required for
+the particle to just reach the top of the bowl. Find <math><msub><mi>v</mi><mi>0</mi></msub></math> as a function of <math><msub><mi>&theta;</mi><mi>0</mi></msub></math>, the initial angular position of the particle.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We set the initial potential energy to be zero at the rim of the bowl, and set the initial height there as well. Thus, the final potential energy will drop out.</p>
+<p>Note that we set the height as negative as we measure relative to the initial position, which is above. Since it just reaches the top, it must be at rest; the final kinetic energy will drop out as well.</p>
+<article class="equations">
+	<math><msub><mn>K</mn><mi>f</mi></msub><mo>+</mo><msub><mn>U</mn><mi>f</mi></msub><mo>=</mo><msub><mn>K</mn><mi>0</mi></msub><mo>+</mo><msub><mn>U</mn><mi>0</mi></msub></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>+</mo><mi>m</mi><mi>g</mi><mi>(</mi><mo>&minus;</mo><mi>h</mi><mi>)</mi></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><mo>&minus;</mo><mi>g</mi><mi>h</mi></math><br>
+	<math><msqrt><mi>2</mi><mi>g</mi><mi>h</mi></msqrt><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
+</article>
+<p>The initial height of the particle can be found via using trigonometry. Noting that the radius of the bowl becomes the hypotenuse, we can use cosine to get the height.</p>
+<article class="equations">
+	<math><mi>h</mi><mo>=</mo><mi>r</mi><mi>cos</mi><mi>(</mi><msub><mi>&theta;</mi><mi>0</mi></msub><mi>)</mi></math><br>
+</article>
+<p>Giving us this answer.</p>
+<article class="equations">
+	<math><msqrt><mi>2</mi><mi>g</mi><mi>r</mi><mi>cos</mi><mi>(</mi><msub><mi>&theta;</mi><mi>0</mi></msub><mi>)</mi></msqrt><mo>=</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
 </article>
 </section>
 </section>
@@ -129,7 +157,7 @@ with the track at the top of the loop?</p>
 
 <section hard class="examples"><mark variable></mark>
 <h2>Exercise 3b</h2>
-<p>(HRK P12.5b) The string below has a length <math><mi>L</mi></math>, and the
+<p>(HRK P12.8b) The string below has a length <math><mi>L</mi></math>, and the
 distance <math><mi>d</mi></math> to a fixed peg. When the ball is released from rest in the position shown, it will follow the arc
 shown in the figure.</p>
 <figure><img src="images/conservaprob4.svg" alt="">
@@ -175,7 +203,7 @@ around the fixed peg, then <math><mi>d</mi><mo>></mo><mfrac><mrow><mi>3</mi><mi>
 
 <section hard class="examples"><mark variable></mark>
 <h2>Exercise 4</h2>
-<p>(HRK P12.5b) A small block is placed on the top of a hemispherical mound of ice. It is given a very small push and starts sliding
+<p>(HRK P12.11) A small block is placed on the top of a hemispherical mound of ice. It is given a very small push and starts sliding
 down the ice.</p>
 <figure><img src="images/conservaprob6.svg" alt="">
 <figcaption>Exercise 4.</figcaption></figure>
@@ -212,10 +240,9 @@ height is <math><mfrac><mrow><mi>2</mi><mi>r</mi></mrow><mi>3</mi></mfrac></math
 </section>
 </section>
 
-
 </main>
 <footer>
-<a unfinished>The Potential Energy Diagram ></a>
+<a href="the-potential-energy-diagram.html">The Potential Energy Diagram ></a>
 </footer>
 </body>
 </html>
