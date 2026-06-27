@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>kinematics - sundry</title>
+	<meta name="description" content="A compilation of physics notes">
+	<script defer src="../script.js"></script>
+	<link rel="stylesheet" href="../appendices.css">
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body index>
+<header>
+<h1>Sundry Problems</h1>
+<a href="index.html">< Return</a>
+</header>
+<main>
+	<p>Below are <i>sundry problems</i>, which refer to a variety of problems in kinematics. More will be added, and they are generally more challenging than those in the tutorials.</p>
+	<p>They are marked based on difficulty, colored in green, orange, and red for easy, medium, and hard respectively. They are also <i>unmarked</i>, meaning that each question can take concepts from anything within kinematics.</p>
+<section medium class="examples"><mark calc></mark>
+<h2>Problem 1</h2>
+<p>(Morin P3.9) A wheel is stuck in the mud, spinning in place. The radius is <math><mi>R</mi></math>, and the points on the rim are moving with speed <math><mi>v</mi></math>. Bits of the mud depart from the wheel at various random
+locations. In particular, some bits become unstuck from the rim in the upper left quadrant, as shown below.</p>
+<figure><img src="images/sundry1.svg" alt="">
+	<figcaption>Problem 1.</figcaption>
+</figure>
+<p>What should <math><mi>&theta;</mi></math> be so that the mud reaches the maximum possible height (above the ground) as it flies through the air? Assume <math><msup><mi>v</mi><mi>2</mi></msup><mo>></mo><mi>g</mi><mi>R</mi></math>, meaning that the mud flies off the wheel.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We know from projectiles that the maximum height given speed and angle is given by the following. Noting that the angle of launch is complementary to theta, we change it a little.</p>
+<article class="equations">
+	<math><mi>h</mi><mo>=</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>sin</mi><mi>(</mi><mi>90</mi><mo>&minus;</mo><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math><br>
+	<math><mi>h</mi><mo>=</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac></math>
+</article>
+<p>We then add on the initial height from the wheel, which is equal to the radius plus the initial vertical position.</p>
+<article class="equations">
+	<math><msub><mi>y</mi><mi>0</mi></msub><mo>=</mo><mi>R</mi><mo>+</mo><mi>R</mi><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math><br>
+</article>
+<p>The maximum height then given the angle is given by the following function.</p>
+<article class="equations">
+	<math><mi>h</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>=</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac><mo>+</mo><mi>R</mi><mo>+</mo><mi>R</mi><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math><br>
+	<math><mi>h</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mi>2</mi></msup><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac><mo>+</mo><mi>R</mi><mo>+</mo><mi>R</mi><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math><br>
+</article>
+<p>We now take the derivative with respect to the angle to get the angle which gives the maximum height once the derivative equals zero.</p>
+<article class="equations">
+	<math><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&theta;</mi></mrow></mfrac><mi>h</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&theta;</mi></mrow></mfrac><mo>(</mo><mfrac><mrow><mi>(</mi><msub><mi>v</mi><mi>0</mi></msub><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><msup><mi>)</mi><mn>2</mn></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac><mo>+</mo><mi>R</mi><mo>+</mo><mi>R</mi><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&theta;</mi></mrow></mfrac><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup><msup><mi>cos</mi><mi>2</mi></msup><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac><mo>+</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&theta;</mi></mrow></mfrac><mi>R</mi><mo>+</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&theta;</mi></mrow></mfrac><mi>R</mi><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow><mrow><mi>2</mi><mi>g</mi></mrow></mfrac><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&theta;</mi></mrow></mfrac><msup><mi>cos</mi><mi>2</mi></msup><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>+</mo><mi>R</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>&theta;</mi></mrow></mfrac><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math><br>
+	<math><mi>0</mi><mo>=</mo><mo>&minus;</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow><mrow><mi>g</mi></mrow></mfrac><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>+</mo><mi>R</mi><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>(</mo><mo>&minus;</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow><mrow><mi>g</mi></mrow></mfrac><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>+</mo><mi>R</mi><mo>)</mo></math><br>
+</article>
+<p>If we factor out cosine, we note that cosine is zero at 90 degrees; the other solution occurs if the right side is zero.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mo>&minus;</mo><mfrac><mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mrow><mrow><mi>g</mi></mrow></mfrac><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>+</mo><mi>R</mi></math><br>
+	<math><mfrac><mrow><mi>R</mi><mi>g</mi></mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mfrac><mo>=</mo><mi>sin</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math><br>
+	<math><msup><mi>sin</mi><mi>&minus;1</mi></msup><mo>(</mo><mfrac><mrow><mi>R</mi><mi>g</mi></mrow><msup><msub><mi>v</mi><mi>0</mi></msub><mi>2</mi></msup></mfrac><mo>)</mo><mo>=</mo><mi>&theta;</mi></math><br>
+</article>
+<p>Note that we can disregard the solution at 90 degrees, given that since the mud flies off the wheel, this solution means that the mud sticks to the wheel (wherein its maximum height is twice the radius).</p>
+</section>
+</section>
+
+<section easy class="examples"><mark calc></mark>
+<h2>Problem 2</h2>
+<p>(Morin P3.12) A ball is dropped from rest at height <math><mi>h</mi></math>. At height <math><mi>y</mi></math>, it bounces elastically (that is, without
+losing any speed) off a board. The board is inclined at the angle (which happens to be 45&deg;) that makes the ball bounce off horizontally. In terms of <math><mi>h</mi></math>, what should <math><mi>y</mi></math> be so that the ball
+hits the ground as far off to the side as possible?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The height the ball free falls is <math><mi>h</mi><mo>&minus;</mo><mi>y</mi></math>, with its speed at impact given at <math><msqrt><mrow><mi>2</mi><mi>g</mi><mi>(</mi><mi>h</mi><mo>&minus;</mo><mi>y</mi><mi>)</mi></mrow></msqrt></math>. The time taken then to fall the remaining <math><mi>y</mi></math> height is <math><msqrt><mfrac><mrow><mi>2</mi><mi>y</mi></mrow><mi>g</mi></mfrac></msqrt></math>. We then thus set up the following.</p>
+<article class="equations">
+	<math><mi>R</mi><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><mo>(</mo><msqrt><mfrac><mrow><mi>2</mi><mi>y</mi></mrow><mi>g</mi></mfrac></msqrt><mo>)</mo><mo>(</mo><msqrt><mrow><mi>2</mi><mi>g</mi><mi>(</mi><mi>h</mi><mo>&minus;</mo><mi>y</mi><mi>)</mi></mrow></msqrt><mo>)</mo></math><br>
+	<math><mi>R</mi><mi>(</mi><mi>y</mi><mi>)</mi><mo>=</mo><msqrt><mrow><mi>4</mi><mi>y</mi><mi>(</mi><mi>h</mi><mo>&minus;</mo><mi>y</mi><mi>)</mi></mrow></msqrt></math><br>
+</article>
+<p>Given that this distance will always be positive, we might as well square it so that we can get rid of the square root.</p>
+<article class="equations">
+	<math><mi>(</mi><mi>R</mi><mi>(</mi><mi>y</mi><mi>)</mi><msup><mi>)</mi><mi>2</mi></msup><mo>=</mo><mrow><mi>4</mi><mi>y</mi><mi>(</mi><mi>h</mi><mo>&minus;</mo><mi>y</mi><mi>)</mi></mrow></math><br>
+	<math><mi>(</mi><mi>R</mi><mi>(</mi><mi>y</mi><mi>)</mi><msup><mi>)</mi><mi>2</mi></msup><mo>=</mo><mrow><mi>4</mi><mi>y</mi><mi>h</mi><mo>&minus;</mo><mi>4</mi><msup><mi>y</mi><mi>2</mi></msup></math><br>
+</article>
+<p>We now take the derivative with respect to <math><mi>y</mi></math>, setting it to zero to get the maximum range.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mo>(</mo><mi>4</mi><mi>y</mi><mi>h</mi><mo>&minus;</mo><mi>4</mi><msup><mi>y</mi><mi>2</mi></msup><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mi>4</mi><mi>y</mi><mi>h</mi><mo>&minus;</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mi>4</mi><msup><mi>y</mi><mi>2</mi></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>4</mi><mi>h</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><mi>y</mi><mo>&minus;</mo><mi>4</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>y</mi></mrow></mfrac><msup><mi>y</mi><mi>2</mi></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>4</mi><mi>h</mi><mo>&minus;</mo><mi>8</mi><mi>y</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>h</mi><mo>=</mo><mi>y</mi></math><br>
+</article>
+</section>
+</section>
+
+<section medium class="examples"><mark calc></mark>
+<h2>Problem 3</h2>
+<p>(Morin P3.18) You throw a ball from a plane inclined at angle <math><mi>&theta;</mi></math>. The initial velocity is perpendicular to
+the plane, as shown below. Consider the point <math><mi>P</mi></math> on the trajectory that is farthest from the plane.</p>
+<figure><img src="images/sundry2.svg" alt="">
+	<figcaption>Problem 3.</figcaption>
+</figure>
+<p>For what angle <math><mi>&theta;</mi></math> does <math><mi>P</mi></math> have the same height as the starting point? In getting a handle on where (and when) <math><mi>P</mi></math> is, it is helpful to use a tilted
+coordinate system and to isolate what is happening in the direction perpendicular to
+the plane.</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Taking the hint into account, we first only deal with the component perpendicular to the plane given that the parallel component doesn't matter in terms of how far the ball goes. In this tilted reference frame then, the ball is moving in freefall with a component of gravity pulling it down.</p>
+<p>This component is given by <math><mi>g</mi><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math>. We thus have the following equation.</p>
+<article class="equations">
+	<math><mi>d</mi><mi>(</mi><mi>t</mi><mi>)</mi><mo>=</mo><mi>v</mi><mi>t</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>t</mi><mi>2</mi></msup><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math><br>
+</article>
+<p>Taking the derivative with respect to time to get the time at which it reaches the maximum height, we have the following.</p>
+<article class="equations">
+	<math><mi>0</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>(</mo><mi>v</mi><mi>t</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>t</mi><mi>2</mi></msup><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>v</mi><mo>&minus;</mo><mi>g</mi><mi>t</mi><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></math><br>
+	<math><mfrac><mi>v</mi><mrow><mi>g</mi><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow></mfrac><mo>=</mo><mi>t</mi></math><br>
+</article>
+<p>Now, we plug this in to get the height at that time. Given that the initial and final height must be equal, the displacement must be zero. Noting that the angle thrown is complementary, we deal with that too.</p>
+<article class="equations">
+	<math><mi>&Delta;</mi><mi>y</mi><mo>=</mo><msub><mi>v</mi><mi>y</mi></msub><mi>t</mi><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>v</mi><mi>sin</mi><mi>(</mi><mi>90</mi><mo>&minus;</mo><mi>&theta;</mi><mi>)</mi><mo>(</mo><mfrac><mi>v</mi><mrow><mi>g</mi><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow></mfrac><mo>)</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mo>(</mo><mfrac><msup><mi>v</mi><mi>2</mi></msup><mrow><msup><mi>g</mi><mi>2</mi></msup><msup><mi>cos</mi><mi>2</mi></msup><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><mi>v</mi><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>(</mo><mfrac><mi>v</mi><mrow><mi>g</mi><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow></mfrac><mo>)</mo><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mo>(</mo><mfrac><msup><mi>v</mi><mi>2</mi></msup><mrow><msup><mi>g</mi><mi>2</mi></msup><msup><mi>cos</mi><mi>2</mi></msup><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>0</mi><mo>=</mo><mfrac><msup><mi>v</mi><mi>2</mi></msup><mi>g</mi></mfrac><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>g</mi><mo>(</mo><mfrac><msup><mi>v</mi><mi>2</mi></msup><mrow><msup><mi>g</mi><mi>2</mi></msup><msup><mi>cos</mi><mi>2</mi></msup><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><mo>&minus;</mo><mfrac><msup><mi>v</mi><mi>2</mi></msup><mi>g</mi></mfrac><mo>=</mo><mo>&minus;</mo><mfrac><msup><mi>v</mi><mi>2</mi></msup><mrow><mi>2</mi><mi>g</mi><msup><mi>cos</mi><mi>2</mi></msup><mi>(</mi><mi>&theta;</mi><mi>)</mi></mrow></mfrac></math><br>
+	<math><msup><mi>cos</mi><mi>2</mi></msup><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac></math><br>
+	<math><mi>cos</mi><mi>(</mi><mi>&theta;</mi><mi>)</mi><mo>=</mo><mfrac><msqrt><mi>2</mi></msqrt><mi>2</mi></mfrac></math><br>
+</article>
+<p>This is given at 45&deg;.</p>
+</section>
+</section>
+
+</main>
+</body>
+</html>
