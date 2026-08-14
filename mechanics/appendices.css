@@ -61,6 +61,7 @@ h1 {
 	line-height: 0.8em;
 	text-align: center;
 	align-content: center;
+	padding: 0.12em 0;
 }
 
 h2 {
@@ -337,6 +338,12 @@ footer[next] {
 	margin-top: 0.5em;
 	font-style: italic;
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.examples,
+aside,
+h1 {
+	box-shadow: 0 2px 2px -1.5px #666;
 }
 
 @media only screen and (max-width: 1024px) {

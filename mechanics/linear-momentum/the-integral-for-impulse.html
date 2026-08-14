@@ -45,7 +45,7 @@
 <section class="solution">
 <p>First, note the following equality, which we derived last time.</p>
 <article class="equations">
-	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math><br>
+	<math><mover accent="true"><mrow><mi>J</mi></mrow><mo>&#x2192</mo></mover><mo>=</mo><mi>m</mi><mn>&Delta;</mn><mover accent="true"><mrow><mi>v</mi></mrow><mo>&#x2192</mo></mover></math><br>
 </article>
 <p>Now, we substitute.</p>
 <article class="equations">
@@ -55,8 +55,8 @@
 </article>
 <p>Now we use this to get the change in velocity, which should also be the final velocity given that the initial velocity was at rest.</p>
 <article class="equations">
-	<math><mi>27.0N&sdot;s</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mi>v</mi></math><br>
-	<math><mi>27.0N&sdot;s</mi><mo>=</mo><mi>(5.00kg)</mi><mi>&Delta;</mi><mi>v</mi></math><br>
+	<math><mi>27.0N&sdot;s</mi><mo>=</mo><mi>m</mi><mn>&Delta;</mn><mi>v</mi></math><br>
+	<math><mi>27.0N&sdot;s</mi><mo>=</mo><mi>(5.00kg)</mi><mn>&Delta;</mn><mi>v</mi></math><br>
 </article>
 <p>Giving us the final velocity is 5.40m/s.</p>
 </section>
@@ -66,7 +66,7 @@
 	<math><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
 	<math><mi>F</mi><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>d</mi><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
 	<math><mi>F</mi><mi>[</mi><mi>t</mi><mo>&minus;</mo><mi>0</mi><mi>]</mi><mo>=</mo><mi>J</mi></math><br>
-	<math><mi>F</mi><mi>&Delta;</mi><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
+	<math><mi>F</mi><mn>&Delta;</mn><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
 </article>
 <p>We can also use the integral for impulse to derive another integral we saw before when we dealt with time-dependent force.</p>
 <section class="examples"><mark custom calc></mark>
@@ -79,16 +79,16 @@
 <section class="solution">
 <p>We first use one definition for the impulse, shown below, and we substitute it.</p>
 <article class="equations">
-	<math><mi>J</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mi>v</mi></math>
+	<math><mi>J</mi><mo>=</mo><mi>m</mi><mn>&Delta;</mn><mi>v</mi></math>
 </article>
 <p>Now, we manipulate the integral for impulse.</p>
 <article class="equations">
 	<math><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>J</mi></math><br>
-	<math><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>m</mi><mi>&Delta;</mi><mi>v</mi></math><br>
+	<math><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>m</mi><mn>&Delta;</mn><mi>v</mi></math><br>
 </article>
 <p>We divide the mass by both sides. Then, we substitute the alternate form for the change in velocity, being the final velocity minus the initial velocity.</p>
 <article class="equations">
-	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>&Delta;</mi><mi>v</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mn>&Delta;</mn><mi>v</mi></math><br>
 	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>=</mo><mi>v</mi><mo>&minus;</mo><msub><mi>v</mi><mi>0</mi></msub></math><br>
 	<math><mfrac><mi>1</mi><mi>m</mi></mfrac><munderover><mo>&int;</mo><mi>0</mi><mi>t</mi></munderover><mi>F</mi><mi>(</mi><mi>t</mi><mi>)</mi><mi>d</mi><mi>t</mi><mo>+</mo><msub><mi>v</mi><mi>0</mi></msub><mo>=</mo><mi>v</mi></math><br>
 </article>
@@ -109,8 +109,8 @@
 <figcaption>Tiny parts of the graph.</figcaption></figure>
 <p>We can then add up all of these tiny &delta;J to get the total impulse.</p>
 <article class="equations">
-	<math><mi>J</mi><mo>=</mo><mo>&sum;</mo><mi>&delta;</mi><mi>J</mi></math><br>
-	<math><mi>J</mi><mo>=</mo><mo>&sum;</mo><mi>F</mi><mi>(&delta;t)</mi><mi>&delta;</mi><mi>t</mi></math>
+	<math><mi>J</mi><mo>=</mo><mo>&sum;</mo><mn>&Delta;</mn><mi>J</mi></math><br>
+	<math><mi>J</mi><mo>=</mo><mo>&sum;</mo><mi>F</mi><mi>(&delta;t)</mi><mn>&Delta;</mn><mi>t</mi></math>
 </article>
 <p>Now, this is just an approximation. However, as the small parts &delta;J approach zero, the tiny rectangles will perfectly encapsulate the area of the entire graph. Thus, we rewrite the sum into an integral.</p>
 <article class="equations">

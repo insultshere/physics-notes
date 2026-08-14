@@ -77,7 +77,7 @@ With constant acceleration?</p>
 <p>As said, the direction of the velocity of the particle changes over time. What is the direction of this velocity at any given time? We go back to how we defined <intext tabindex="0" tooltip="velocity at a given instance of time; not an average">instantaneous</intext> velocity: let's analyze the velocity at two given positions, changing over time.</p>
 <figure><img src="images/circ2.svg" alt="">
 <figcaption>A particle and the direction of its velocity.</figcaption></figure>
-<p>As we can see, the velocity of the particle seems to go tangent to the circle as the time between the two instances (<math><mi>&Delta;</mi><mi>t</mi></math>) approaches zero. Thus, at any given instance, we can draw the velocity as tangent to the circle.</p>
+<p>As we can see, the velocity of the particle seems to go tangent to the circle as the time between the two instances (<math><mn>&Delta;</mn><mi>t</mi></math>) approaches zero. Thus, at any given instance, we can draw the velocity as tangent to the circle.</p>
 <p>Now, how does this direction change? Since the velocity changes, that means there is an acceleration; this acceleration causes the direction change.</p>
 <p>Now, we also want to know where this acceleration points at any given time, so let's do what we did again, but with velocity again.</p>
 <figure><img src="images/circ3.svg" alt="">
@@ -90,22 +90,22 @@ With constant acceleration?</p>
 <p>Since we've got the direction down, we only now care about the magnitude of the acceleration. Thus, we can disregard the direction of each of the vectors.</p>
 <figure><img src="images/circ4.svg" alt="">
 <figcaption>A particle, and its position and velocity at two separate instances of time.</figcaption></figure>
-<p>Looking at the figure, the left side shows how over a period <math><mi>&Delta;</mi><mi>t</mi></math>, the particle makes an angle &theta;. Further, since we rotated the velocity vector to just be tangent to the circle (adding 90&deg; to both angles), this angle &theta; also shows up when we analyze both velocities at the same time, on the right side.</p>
+<p>Looking at the figure, the left side shows how over a period <math><mn>&Delta;</mn><mi>t</mi></math>, the particle makes an angle &theta;. Further, since we rotated the velocity vector to just be tangent to the circle (adding 90&deg; to both angles), this angle &theta; also shows up when we analyze both velocities at the same time, on the right side.</p>
 <p>Also note one property of the circle: the two position vectors are just <intext tabindex="0" tooltip="the length of any radii of a circle is the same">radii</intext>. We also noted the speed is constant. This means the "position triangle" and the "velocity triangle" are <intext tabindex="0" tooltip="a triangle with two sides being the same length">isosceles</intext>.</p>
 <p>Via <intext tabindex="0" tooltip="in two triangles, if an angle is congruent and the sides making up that angle are proportional, then the two triangles are similar">SAS</intext> or Side-Angle-Side theorem, we then know that the two triangles are similar.</p>
 <figure><img src="images/circ5.svg" alt="">
 <figcaption>Two similar triangles via SAS theorem.</figcaption></figure>
 <p>Writing out the proportions of the triangle gives us a useful thing to note. Noting that the &Delta;v and &Delta;r sides correspond to each other,</p>
 <article class="equations">
-<math><mfrac><mrow><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>r</mi></mrow></mfrac><mo>=</mo><mfrac><mi>v</mi><mi>r</mi></mfrac></math><br>
-<math><mi>&Delta;</mi><mi>v</mi><mo>=</mo><mi>(</mi><mi>&Delta;</mi><mi>r</mi><mi>)</mi><mfrac><mi>v</mi><mi>r</mi></mfrac></math>
+<math><mfrac><mrow><mn>&Delta;</mn><mi>v</mi></mrow><mrow><mn>&Delta;</mn><mi>r</mi></mrow></mfrac><mo>=</mo><mfrac><mi>v</mi><mi>r</mi></mfrac></math><br>
+<math><mn>&Delta;</mn><mi>v</mi><mo>=</mo><mi>(</mi><mn>&Delta;</mn><mi>r</mi><mi>)</mi><mfrac><mi>v</mi><mi>r</mi></mfrac></math>
 </article>
 <p>Now, recall the original definition we had for acceleration. We can substitute in our newfound value for &Delta;v to get a new value.</p>
 <article class="equations">
-<math><mi>a</mi><mo>=</mo><mfrac><mrow><mi>&Delta;</mi><mi>v</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math><br>
-<math><mi>a</mi><mo>=</mo><mo>(</mo><mfrac><mi>v</mi><mi>r</mi></mfrac><mo>)</mo><mo>(</mo><mfrac><mrow><mi>&Delta;</mi><mi>r</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac><mo>)</mo></math>
+<math><mi>a</mi><mo>=</mo><mfrac><mrow><mn>&Delta;</mn><mi>v</mi></mrow><mrow><mn>&Delta;</mn><mi>t</mi></mrow></mfrac></math><br>
+<math><mi>a</mi><mo>=</mo><mo>(</mo><mfrac><mi>v</mi><mi>r</mi></mfrac><mo>)</mo><mo>(</mo><mfrac><mrow><mn>&Delta;</mn><mi>r</mi></mrow><mrow><mn>&Delta;</mn><mi>t</mi></mrow></mfrac><mo>)</mo></math>
 </article>
-<p>Notice the <math><mfrac><mrow><mi>&Delta;</mi><mi>r</mi></mrow><mrow><mi>&Delta;</mi><mi>t</mi></mrow></mfrac></math>; as &Delta;t approaches zero, this becomes the instantaneous velocity, as we saw previously. This is the same as taking the derivative of position with respect to time, which is velocity. Thus, the centripetal acceleration can be computed via the following equation.</p>
+<p>Notice the <math><mfrac><mrow><mn>&Delta;</mn><mi>r</mi></mrow><mrow><mn>&Delta;</mn><mi>t</mi></mrow></mfrac></math>; as &Delta;t approaches zero, this becomes the instantaneous velocity, as we saw previously. This is the same as taking the derivative of position with respect to time, which is velocity. Thus, the centripetal acceleration can be computed via the following equation.</p>
 <article class="equations">
 <math><msub><mi>a</mi><mi>c</mi></msub><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>r</mi></mfrac></math>
 </article>

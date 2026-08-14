@@ -1,5 +1,4 @@
 :root {
-	scroll-behavior: smooth;
 	--darkred: #990000;
 	--lightred: #F5EAEA;
 	--focusred: #d90000;
@@ -104,6 +103,7 @@ h1 {
 	line-height: 0.8em;
 	text-align: center;
 	align-content: center;
+	padding: 0.12em 0;
 }
 
 h2 {
@@ -115,6 +115,11 @@ h2 {
 
 .solution {
 	display: none;
+}
+
+#darkmode {
+	filter: invert() hue-rotate(60deg) saturate(1.1) brightness(0.95);
+	background-color: #000;
 }
 
 h2>button {
@@ -332,7 +337,7 @@ a:focus {
 }
 
 p {
-	margin: 0 0 0.6em 0;
+	margin: 0.3em 0 0.3em 0;
 }
 
 /* for tooltips */
@@ -382,11 +387,17 @@ footer[next] {
 	font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.examples,
+aside,
+h1 {
+	box-shadow: 0 2px 2px -1.5px #666;
+}
+
 @media only screen and (max-width: 1024px) {
 
 	body {
-		width: 90%;
-		font-size: 0.84em;
+		width: 95%;
+		font-size: 0.9em;
 	}
 
 	p {
@@ -403,7 +414,8 @@ footer[next] {
 		padding: 0.2em;
 		top: 1.5em;
 		opacity: 1;
-		transition: opacity 0.2s;
+		transition: opacity 0.3s;
+		box-shadow: 0 4px 2px -3px #999;
 	}
 
 	intext[tooltip]::after {
@@ -414,21 +426,41 @@ footer[next] {
 		font-size: 1em;
 	}
 
+	main {
+		width: 100%;
+		margin: auto;
+	}
+
+	body>aside {
+		position: static;
+		border-radius: 5px;
+		border: solid #900 1px;
+		width: calc(100% - 1em);
+		height: auto;
+		padding: 0.5em 0.5em 0 0.5em;
+		margin-bottom: 1em;
+		top: 1em;
+		background-color: #F5EAEA;
+	}
+
+	body>aside>article>section {
+		margin-bottom: 0.5em;
+	}
+
+	body>aside>article {
+		color: #900;
+	}
+
+	body>aside>article>section>p {
+		border-left: 1.5px dashed #900;
+	}
+
 }
 
 @media only screen and (max-width: 426px) {
 
 	body {
 		width: 95%;
-	}
-
-	body>aside {
-		display: none;
-	}
-
-	main {
-		width: 100%;
-		margin: auto;
 	}
 
 	figure>img {
@@ -471,11 +503,14 @@ footer[next] {
 		font-size: 1.6em;
 	}
 
-	.examples,
 	header>a,
 	footer,
-	body>aside {
+	.examples {
 		display: none;
+	}
+
+	.solution {
+		display: block;
 	}
 
 	main {
@@ -492,4 +527,29 @@ footer[next] {
 		max-width: 100%;
 		width: 100%;
 	}
+
+	body>aside {
+		position: static;
+		border-radius: 5px;
+		border: solid #900 1px;
+		width: calc(100% - 1em);
+		height: auto;
+		padding: 0.5em 0.5em 0 0.5em;
+		margin-bottom: 1em;
+		top: 1em;
+		background-color: #F5EAEA;
+	}
+
+	body>aside>article>section {
+		margin-bottom: 0.5em;
+	}
+
+	body>aside>article {
+		color: #900;
+	}
+
+	body>aside>article>section>p {
+		border-left: 1.5px dashed #900;
+	}
+
 }

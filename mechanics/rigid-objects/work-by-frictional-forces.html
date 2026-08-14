@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>rigid - frictwork</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../tutorials.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1>Work by Frictional Forces</h1>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>The work done by frictional force on a single object in a system can't be computed easily as it also causes a change in the internal energy of the system</p>
+		<p>In other words, the change in internal energy of each separate system can't be computed easily</p>
+		<p>The solution is to use the system such that friction is an internal force and thus only changes the internal energy of the whole system</p>
+		</section>
+	</article>
+</aside>
+<main>
+<p>Previously, we have derived and proven that friction (specifically kinetic friction) is a non-conservative force. In other words, there is no potential energy associated with friction. Even then, it can still do work in the form of external work acting on a system.</p>
+<p>We first analyze a specific scenario, let's say that of a box being pushed by some force <math><mover accent="true"><mi>F</mi><mo>&rightarrow;</mo></mover></math> at constant velocity. There are three systems of note, being that of the box, the ground, and the system containing the two.</p>
+<figure><img src="images/frict1.svg" alt="">
+<figcaption>Three systems in the above.</figcaption></figure>
+<p>We first analyze the system of the box. There is no net force acting on the box, given that it is moving at constant velocity, so there should be no net work. This means there is no change in kinetic energy by the Work-Energy theorem. There is also no potential energy within the system.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+</article>
+<p>Here, the external work is done by two forces, being the work of the force and that of kinetic friction.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mn>F</mn></msub><mo>+</mo><msub><mn>W</mn><mi>fr</mi></msub></math><br>
+</article>
+<p>Let the box move a displacement <math><mi>d</mi></math>. We only care about finding the value of the work done by friction here, so we solve for it.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>&minus;</mo><msub><mn>W</mn><mn>F</mn></msub><mo>=</mo><msub><mn>W</mn><mi>fr</mi></msub></math><br>
+	<math><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>&minus;</mo><mi>F</mi><mi>d</mi><mo>=</mo><msub><mn>W</mn><mi>fr</mi></msub></math><br>
+</article>
+<p>Now, note that the force <math><mi>F</mi></math>'s magnitude must be equal to that of kinetic friction since there is no net force. Thus, we have the following equation.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>&minus;</mo><msub><mi>f</mi><mi>k</mi></msub><mi>d</mi><mo>=</mo><msub><mn>W</mn><mi>fr</mi></msub></math><br>
+</article>
+<p>Notice that this means that for a system, the definition of work as the force times distance outputs the wrong answer. This is because that definition only works for a particle, without internal energy.</p>
+<p>In reality, friction causes a change in internal energy which can be attributed to the heating of the box. This change in internal energy can't be calculated unless we have a more complicated version of the frictional force.</p>
+
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q13.9) An automobile accelerates from rest to a speed v, under conditions such that no slipping of the driving wheels occurs.
+From where does the mechanical energy of the car come? In
+particular, is it true that it is provided by the (static) frictional
+force exerted by the road on the car?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Take the system of the automobile alone. There is a net external force acting on the car, being the friction on the wheels.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><mn>E</mn><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub><mo>&minus;</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub></math><br>
+</article>
+<p>The external work here is frictional work.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>E</mn><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub><mo>&minus;</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub></math><br>
+</article>
+<p>We can't exactly rule out the work by friction given that it isn't exactly equal to the displacement of the wheels time the frictional force; some portion of the internal energy is lost. However, generally, the mechanical energy here mainly comes from the loss of internal energy (by the combustion of fuel, for example).</p>
+</section>
+</section>
+
+<p>The same problem arises in the system of the ground only. Here, since the ground doesn't move, the only two parts are the internal energy and the frictional work.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>fr</mi></msub></math><br>
+</article>
+<p>The above work done by friction is exactly equal to the work done by friction in the system of the box, which we can't calculate. We have to resort to the system of the box and the ground, where the force done by friction is just an internal force.</p>
+<p>There is no potential energy related to the nonconservative external force, so it does work; further, the kinetic energy of the system doesn't change given that the object remains at constant velocity.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mn>F</mn></msub></math><br>
+</article>
+
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(HRK E13.11) A 4.26-kg block starts up a 33.0° incline at 7.81 m/s. How far
+will it slide if it loses 34.6 J of mechanical energy due to friction?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Take the system of the block and incline. There is potential energy, and it reaches its peak when it goes to rest. The mechanical energy lost in the internal energy of the system; no external forces act on the system.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mo>(</mo><msub><mn>K</mn><mi>f</mi></msub><mo>&minus;</mo><msub><mn>K</mn><mi>i</mi></msub><mo>)</mo><mo>+</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><mi>0</mi></math><br>
+	<math><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><msub><mn>K</mn><mi>i</mi></msub><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub></math><br>
+	<math><mi>h</mi><mo>=</mo><mfrac><mrow><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub></mrow><mrow><mi>m</mi><mi>g</mi></mrow></mfrac></math><br>
+</article>
+<p>Plugging in the values, we have a maximum height of 2.283m. Using trigonometry, we get that the distance along the incline is 4.19m.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Problem 1</h2>
+<p>(HRK P13.2) A small object of mass <math><mi>m</mi></math> = 234 g slides along a track with
+elevated ends and a central flat part, as shown below.
+The flat part has a length <math><mi>L</mi></math> = 2.16 m. The curved portions of
+the track are frictionless; but in traversing the flat part, the object loses 688 mJ of mechanical energy, due to friction.</p>
+<figure><img src="images/frict2.svg" alt="">
+<figcaption>Problem 1.</figcaption></figure>
+
+<p>The object is released at a height <math><mi>h</mi></math> = 1.05 m
+above the flat part of the track. Where does the object finally
+come to rest?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Take the system of the object and track. We first compute for the total initial mechanical energy.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+</article>
+<p>Computing the initial mechanical energy, the amount of energy is 2.41J. Given that 0.688J is lost, a total of 3.50 trips will occur. This meas the object will stop in the center of the rough flat surface.</p>
+</section>
+</section>
+<section hard class="examples">
+<h2>Exercise 2</h2>
+<p>(HRK E13.15) A steel ball of mass 0.514 kg is fastened to a cord 68.7 cm
+long and is released when the cord is horizontal. At the bottom of its path, the ball strikes a 2.63-kg steel block initially
+at rest on a frictionless surface.</p>
+<figure><img src="images/frict3.svg" alt="">
+<figcaption>Exercise 2.</figcaption></figure>
+<p>On collision, one-half the mechanical kinetic energy is converted to internal energy and sound energy. Find the final speeds.</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Take the system of the block, ball, ground, and Earth. Set initial potential energy as zero at the height where the collision occurs. The first thing we need to do is get the speed of the ball just before it hits the mass. Using the conservation of energy, we have the following.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><msub><mn>K</mn><mn>0</mn></msub><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>L</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>L</mi></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>L</mi></msqrt></math><br>
+</article>
+<p>We write the law of conservation of momentum. Let <math><mi>M</mi></math> be the bigger mass.</p>
+<article class="equations">
+	<math><mi>m</mi><msub><mi>v</mi><mi>m0</mi></msub><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>mf</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>Mf</mi></msub></math><br>
+	<math><mi>m</mi><msqrt><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>L</mi></msqrt><mo>=</mo><mi>m</mi><msub><mi>v</mi><mi>mf</mi></msub><mo>+</mo><mi>M</mi><msub><mi>v</mi><mi>Mf</mi></msub></math>
+</article>
+<p>Now, the final energy of the system (which is the kinetic energy of the two parts) afterwards is equal to half of the initial kinetic energy.</p>
+<article class="equations">
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><msub><mn>K</mn><mn>0</mn></msub><mo>=</mo><msub><mn>K</mn><mn>f</mn></msub></math><br>
+	<math><mo>&minus;</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><mi>g</mi><mi>L</mi><mo>=</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><msub><mi>v</mi><mi>mf</mi></msub><mi>2</mi></msup><mo>+</mo><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>M</mi><msup><msub><mi>v</mi><mi>Mf</mi></msub><mi>2</mi></msup></math><br>
+	<math><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>L</mi><mo>=</mo><mi>m</mi><msup><msub><mi>v</mi><mi>mf</mi></msub><mi>2</mi></msup><mo>+</mo><mi>M</mi><msup><msub><mi>v</mi><mi>Mf</mi></msub><mi>2</mi></msup></math><br>
+</article>
+<p>We now have two equations and two unknowns, so we can solve for them. This is quite brutal algebra, and has been left to the omniscient reader. We get that the answer is 0.219m/s and 0.981m/s for the block and ball respectively.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Problem 2</h2>
+<p>(HRK P6.20) A 2.0-kg block is released from rest at the top of a frictionless inclined plane of height 0.65 m. At the
+bottom of the plane it collides with and sticks to a block of mass 3.5 kg. The two blocks together slide a distance of
+0.57 m across a horizontal plane before coming to rest. What is the coefficient of friction of the horizontal surface?</p>
+<figure><img src="images/frict4.svg" alt="">
+<figcaption>Problem 2.</figcaption></figure>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We first get the speed of the block on the ramp as it reaches the bottom. Let the system be of the block and the Earth, the potential energy be zero at the ground.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><msub><mn>K</mn><mn>0</mn></msub><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mi>m</mi><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+	<math><mi>v</mi><mo>=</mo><msqrt><mo>&minus;</mo><mi>2</mi><mi>g</mi><mi>h</mi></msqrt></math><br>
+</article>
+<p>Great, now we will use the conservation of momentum to get the initial velocity of the two blocks as they collide. We will call the bigger block as <math><mi>M</mi></math>, as usual.</p>
+<article class="equations">
+	<math><msub><mrow><mi>p</mi></mrow><mi>0</mi></msub><mo>=</mo><msub><mrow><mi>p</mi></mrow><mi>f</mi></msub></math><br>
+	<math><mi>m</mi><mi>v</mi><mo>=</mo><mi>(</mi><mi>m</mi><mi>+</mi><mi>M</mi><mi>)</mi><msub><mi>v</mi><mi>f</mi></msub></math><br>
+	<math><mfrac><mrow><mi>m</mi><msqrt><mrow><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></mrow><mrow><mi>m</mi><mi>+</mi><mi>M</mi></mrow></mfrac><mo>=</mo><msub><mi>v</mi><mi>f</mi></msub></math><br>
+</article>
+<p>The speed above effectively transforms the two masses into one particle, and thus the work-energy theorem holds. We can then find the coefficient of friction, noting that the work done by friction causes the particle to go to rest.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>=</mo><msub><mn>W</mn><mi>f</mi></msub></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mo>(</mo><mi>m</mi><mo>+</mo><mi>M</mi><mo>)</mo><msup><mi>v</mi><mi>2</mi></msup><mo>=</mo><msub><mi>f</mi><mi>k</mi></msub><mi>d</mi></math><br>
+	<math><mfrac><mi>1</mi><mi>2</mi></mfrac><mo>(</mo><mi>m</mi><mo>+</mo><mi>M</mi><mo>)</mo><mo>(</mo><mfrac><mrow><mi>m</mi><msqrt><mrow><mi>2</mi><mi>g</mi><mi>h</mi></mrow></msqrt></mrow><mrow><mi>m</mi><mi>+</mi><mi>M</mi></mrow></mfrac><mo>)</mo><mi>&sup2;</mi><mo>=</mo><mi>&mu;</mi><mo>(</mo><mi>m</mi><mo>+</mo><mi>M</mi><mo>)</mo><mi>g</mi><mi>d</mi></math><br>
+	<math><mfrac><mrow><msup><mi>m</mi><mi>2</mi></msup><mi>h</mi></mrow><mrow><mi>d</mi><mo>(</mo><mi>m</mi><mi>+</mi><mi>M</mi><mo>)</mo><mi>&sup2;</mi></mrow></mfrac><mo>=</mo><mi>&mu;</mi></math><br>
+</article>
+<p>Giving a coefficient of friction of 0.15.</p>
+</section>
+</section>
+
+
+</main>
+<footer>
+<a unfinished>Energy of the Center of Mass ></a>
+</footer>
+</body>
+</html>

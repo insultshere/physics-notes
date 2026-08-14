@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>rigid - intenergy</title>
+	<meta name="description" content="A compilation of physics notes">
+	<link rel="stylesheet" href="../tutorials.css">
+	<script defer src="../script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1>Internal Energy</h1>
+<a href="index.html">< Return</a>
+</header>
+<aside>
+	<article>
+		<section>
+		<h2>Summary</h2>
+		<p>External work changes the total mechanical energy of a system</p>
+		<p>Internal energy is a measure of the movement of the tiny particles within a system</p>
+		<p>A change in internal energy is usually attributed to a change in temperature of the system</p>
+		</section>
+		<section>
+		<h2>Equations</h2>
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+		</section>
+	</article>
+</aside>
+<main>
+<p>Now that we deal with not one object but multiple, we now have to deal with the energy of a system of objects. As of now, we currently have one equation for energy, that we (naïvely) called the "conservation of energy".</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mi>(</mi><mn>K</mn><mo>+</mo><mn>U</mn><mi>)</mi><mo>=</mo><mi>0</mi></math><br>
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>This potential and kinetic energy refers to the energy of the system we are analyzing. This assumes that there are no forces that change the energy of the system. However, if there were a force that changed the energy, it would do work onto it. This force would be external to the system.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+</article>
+<p>Note that this definition depends, as usual, on the system chosen. For example, imagine a ball and the Earth. As the ball falls to Earth, there are two systems of note, being of the ball and Earth and of the ball itself.</p>
+<figure><img src="images/inten1.svg" alt="">
+<figcaption>Two systems in a falling ball.</figcaption></figure>
+<p>In the first system, there are no external forces, and there is a potential energy present, being that of the gravitational potential energy between the Earth and the ball. Though, there is no external work on the system. Weight here is an internal force.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><mn>K</mn><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><mi>0</mi></math><br>
+	<math><mn>&Delta;</mn><mn>K</mn><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+</article>
+<p>In the second system, there is no potential energy; recall that it is the arrangement of the objects in a system, and being only one object there is nothing to arrange. However, there is an external force acting on the system, now being of the weight of the object.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><mn>K</mn><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></math><br>
+</article>
+<p>There is, however, a third system that is quite unconventional, being that of the Earth. By the Law of Interaction, the ball exerts a force itself onto the Earth. This causes a net external work to be done onto the system of the Earth.</p>
+
+<section class="examples">
+<h2>Question 1</h2>
+<p>(HRK Q13.1) At the highest point of its trajectory a vertically tossed ball
+has zero kinetic energy. Where has the energy gone? Has external work been done on the ball? Is the energy now in the
+form of potential energy in the ball? Potential energy in the Earth?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>The energy has gone nowhere. In the system of the Earth and ball, it has been transferred in the form of potential energy, however in the separate systems of the Earth and ball, it has been transferred via external work.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Exercise 1</h2>
+<p>(HRK E13.1) A projectile whose mass is 9.4 kg is fired vertically upward.
+On its upward flight, 68 kJ of mechanical energy is dissipated
+because of air drag. How much higher would it have gone if
+the air drag had been made negligible (for example, by
+streamlining the projectile)?</p>
+<h2>Solution<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>We take the system to be of the projectile and Earth. This does not include the air, which means that the air drag is an external force, causing an external work on the system. We first solve for height with the external work, and then solve for it without it.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mo>&minus;</mo><mi>m</mi><mi>g</mi><mi>h</mi><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub><mo>&minus;</mo><mn>&Delta;</mn><mn>K</mn></math><br>
+	<math><mi>h</mi><mo>=</mo><mfrac><mrow><mn>&Delta;</mn><mn>K</mn></mrow><mrow><mi>m</mi><mi>g</mi></mrow></mfrac><mo>&minus;</mo><mfrac><msub><mn>W</mn><mi>ext</mi></msub><mrow><mi>m</mi><mi>g</mi></mrow></mfrac></math><br>
+</article>
+<p>Notice that when subtracting the larger height by the lower height, the change in kinetic energy term drops out.</p>
+<article class="equations">
+	<math><mi>H</mi><mo>&minus;</mo><mi>h</mi><mo>=</mo><mo>(</mo><mfrac><mrow><mn>&Delta;</mn><mn>K</mn></mrow><mrow><mi>m</mi><mi>g</mi></mrow></mfrac><mo>)</mo><mo>&minus;</mo><mo>(</mo><mfrac><mrow><mn>&Delta;</mn><mn>K</mn></mrow><mrow><mi>m</mi><mi>g</mi></mrow></mfrac><mo>&minus;</mo><mfrac><msub><mn>W</mn><mi>ext</mi></msub><mrow><mi>m</mi><mi>g</mi></mrow></mfrac><mo>)</mo></math><br>
+	<math><mi>H</mi><mo>&minus;</mo><mi>h</mi><mo>=</mo><mfrac><msub><mn>W</mn><mi>ext</mi></msub><mrow><mi>m</mi><mi>g</mi></mrow></mfrac></math><br>
+</article>
+<p>Substituting in, we get the answer of 740m.</p>
+</section>
+</section>
+
+<p>Now, consider the energy of the Joule's apparatus. It involves a motor placed inside of a container of water, which is spinned.</p>
+<figure grayout><img src="images/inten3.avif" alt="">
+<figcaption>A diagram of Joule's apparatus. A container of water is spinned via two masses which fall down.</figcaption></figure>
+<p>We take the system of the water, masses, and Earth. At some point, after stirring the water, the water will stop accelerating and will move at a constant velocity, and thus the change in kinetic energy as it hits that point is zero. There is no external force acting on the system.</p>
+<p>The potential energy of the system is then just the two masses which can move. With our formula, however, it implies that there is no change in potential energy. This is clearly wrong.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><mn>U</mn><mo>=</mo><mi>0</mi></math><br>
+</article>
+<p>If you recall from the branch of chemistry however, water is made out of tiny molecules, each moved via the stirrer in a different way. This causes the kinetic energy of those tiny molecules to change, which causes the water to become hotter. This must be where the energy is transferred into. We call this energy the internal energy of the system.</p>
+<article class="terms">
+	<mark>Internal Energy (<math><msub><mn>E</mn><mi>int</mi></msub></math>)</mark> - the energy associated with the movement of the tiny molecules within a system
+</article>
+<p>In other words, the change in potential energy of the two masses causes a change in the internal energy of the system. This change in internal energy can be attributed to the temperature of the water increasing.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><mn>U</mn><mo>=</mo><mo>&minus;</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub></math><br>
+</article>
+
+<section class="examples">
+<h2>Question 2</h2>
+<p>(HRK Q13.4) What happens to
+the internal energy of an ice skater when she skates up to the railing and then
+pushes herself to a stop?</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Take the system of the ice skater. There is no potential energy in the system, and the force the railing applies on the skater does not cause a movement, so there is no external work.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><mn>K</mn><mo>=</mo><mo>&minus;</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub></math><br>
+</article>
+<p>The kinetic energy of the ice skater decreases as she goes to rest, so that means that the internal energy of the skater increases. Biologically, this could be related to how her muscles don't need to contract or extend that far anymore as she rests.</p>
+</section>
+</section>
+
+<section class="examples">
+<h2>Question 3</h2>
+<p>(HRK Q13.27) A screwdriver is held
+tightly against a rotating grinding wheel. External work
+is done but the kinetic energy of the screwdriver does not
+change. Explain this apparent contradiction.</p>
+<h2>Answer<button onclick="toggle(this)">v</button></h2>
+<section class="solution">
+<p>Take the system of the screwdriver. No potential energy is found in the system, and it thus note there is no change in speed and thus no change in kinetic energy.</p>
+<article class="equations">
+	<math><mn>&Delta;</mn><mn>K</mn><mo>+</mo><mn>&Delta;</mn><mn>U</mn><mo>+</mo><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+	<math><mn>&Delta;</mn><msub><mn>E</mn><mi>int</mi></msub><mo>=</mo><msub><mn>W</mn><mi>ext</mi></msub></math><br>
+</article>
+<p>This can be interpreted that the net work causes a change in the internal energy of the system. This can be attributed to the screwdriver heating up as the microscopic molcules within it heating up.</p>
+</section>
+</section>
+
+</main>
+<footer>
+<a href="work-by-frictional-forces.html">Work by Frictional Forces ></a>
+</footer>
+</body>
+</html>
